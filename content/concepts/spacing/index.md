@@ -1,0 +1,19 @@
+# Spacing
+
+Canonical concept stub generated from repository inventory.
+
+## Related Documents
+
+- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
+- Architecture_as_a_Foundation_for_Composition_Science.md
+- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
+- Composition_Science_Research_Library_v0.1.md
+- Composition_Science_Research_Library_v0.2 2.md
+- Composition_Science_Research_Library_v0.2.md
+- Composition_Science_Research_Library_v0.4.md
+- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
+- Project_Atlas_Applied_Case_Study_001_Account_Settings_Form.md
+- Project_Atlas_Autonomous_Research_Report_001_Relational_Legibility.md
+- Project_Atlas_Rosetta_Stone_Cross_System_Design_Mechanism_Map_v0.1.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1.md

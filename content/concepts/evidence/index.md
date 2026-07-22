@@ -1,0 +1,26 @@
+# Evidence
+
+Canonical concept stub generated from repository inventory.
+
+## Related Documents
+
+- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
+- Architecture_as_a_Foundation_for_Composition_Science.md
+- Composition_Genome_v1.md
+- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
+- Composition_Science_Markdown_Template_v1.md
+- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
+- Composition_Science_Project_Constitution_v1.md
+- Composition_Science_Research_Library_v0.1.md
+- Composition_Science_Research_Library_v0.2 2.md
+- Composition_Science_Research_Library_v0.2.md
+- Composition_Science_Research_Library_v0.4.md
+- Product_Genome_Autonomous_Research_Run_01.md
+- Project_Atlas_Autonomous_Research_Itten_Seven_Contrasts_v0.1.md
+- Project_Atlas_Autonomous_Research_Report_001_Relational_Legibility.md
+- Project_Atlas_Color_Evidence_Registry_v0.1.md
+- Project_Atlas_Evidence_Gallery_v0.1.md
+- Project_Atlas_Foundational_Documents_and_Ribbon_Evidence_Collection_001.md
+- Project_Atlas_Letter_Confusion_Data_Audit_v1.md
+- Project_Atlas_Project_Charter_v0.1.md
+- Project_Atlas_Research_Methodology_v0.2.md

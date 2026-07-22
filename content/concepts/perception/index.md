@@ -1,0 +1,20 @@
+# Perception
+
+Canonical concept stub generated from repository inventory.
+
+## Related Documents
+
+- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
+- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
+- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
+- GN-100_Perception_Autonomous_Research_Report_v1.md
+- Product_Genome_Project_Atlas_v1.md
+- Project_Atlas_Color_Evidence_Registry_v0.1.md
+- Project_Atlas_Color_Vocabulary_and_Mechanism_Taxonomy.md
+- Project_Atlas_Comparative_Color_Framework_v0.1.md
+- Project_Atlas_Foundation_Research_Plan.md
+- Project_Atlas_Masters_vs_Modern_Science_01_Chevreul_v0.1.md
+- Project_Atlas_Perceptual_Color_Genome.md
+- Project_Atlas_Project_Charter_v0.1.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1.md

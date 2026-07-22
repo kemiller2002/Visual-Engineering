@@ -1,0 +1,13 @@
+# Typography
+
+Canonical concept stub generated from repository inventory.
+
+## Related Documents
+
+- Composition_Science_Knowledge_Graph_Specification_v1.md
+- Project_Atlas_Color_Vocabulary_and_Mechanism_Taxonomy.md
+- Project_Atlas_Foundational_Documents_and_Ribbon_Evidence_Collection_001.md
+- Project_Atlas_Letter_Confusion_Data_Audit_v1.md
+- Project_Atlas_Typography_Autonomous_Research_Report_v1.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
