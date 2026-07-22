@@ -4,23 +4,23 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Genome_v1.md
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Knowledge_Graph_Specification_v1.md
-- Composition_Science_Ontology_v1.md
-- Composition_Science_Phase_2_Visual_Hierarchy_and_Wayfinding.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
-- Composition_Science_Project_Constitution_v1.md
-- Composition_Science_Research_Library_v0.1.md
-- Composition_Science_Research_Library_v0.2 2.md
 - Composition_Science_Research_Library_v0.2.md
-- Composition_Science_Research_Library_v0.4.md
-- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
-- GN-100_Perception_Autonomous_Research_Report_v1.md
-- Product_Genome_Project_Atlas_v1.md
-- Project_Atlas_Applied_Case_Study_001_Account_Settings_Form.md
-- Project_Atlas_Color_Evidence_Registry_v0.1.md
-- Project_Atlas_Evidence_Gallery_v0.1.md
-- Project_Atlas_Foundation_Research_Plan.md
+- Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- architecture-as-a-foundation-for-composition-science.md
+- atlas-0001-proximity-and-relative-separation-v0-1.md
+- component-library-foundations-research-report.md
+- composition-genome-v1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-atlas-research-framework-v1.md
+- composition-science-knowledge-graph-specification-v1.md
+- composition-science-ontology-v1.md
+- composition-science-phase-2-visual-hierarchy-and-wayfinding.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- composition-science-project-constitution-v1.md
+- composition-science-repository-governance-specification-v1.md
+- composition-science-research-library-v0-1.md
+- composition-science-research-library-v0-2-2.md
+- composition-science-research-library-v0-4.md
+- composition-science-visual-density-crowding-and-perceptual-separation.md
+- gn-100-perception-autonomous-research-report-v1.md
+- intuitive-is-just-familiar-predictive-fit-rep-v2.md

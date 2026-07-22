@@ -1,3 +1,3 @@
 # Intake Preservation
 
-Cleanup is non-destructive. `input-documents` remains the historical intake area, and `content/` is the normalized layer used for future navigation, registries, and site generation.
+Processed files are relocated into `content/`. Future unprocessed documents should land in `input-documents` until they are classified and moved.

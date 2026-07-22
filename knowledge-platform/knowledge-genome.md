@@ -1,21 +1,21 @@
 # Knowledge Genome
 
-Generated: 2026-07-21T15:32:33+00:00
+Generated: 2026-07-22T15:10:59+00:00
 
 ## Major Concepts
 
-- composition (26)
-- evidence (23)
-- perception (14)
-- spacing (13)
-- knowledge graph (10)
-- architecture (9)
-- cognition (8)
-- typography (7)
-- color (7)
-- attention (6)
-- wayfinding (5)
-- hierarchy (5)
+- composition (31)
+- evidence (28)
+- perception (17)
+- spacing (15)
+- architecture (12)
+- knowledge graph (11)
+- cognition (9)
+- typography (9)
+- color (9)
+- attention (7)
+- learning (6)
+- wayfinding (6)
 
 ## Concept Relationships
 
@@ -35,16 +35,18 @@ Generated: 2026-07-21T15:32:33+00:00
 
 ### Foundational
 
-- composition (26 documents)
-- evidence (23 documents)
-- perception (14 documents)
-- spacing (13 documents)
-- knowledge graph (10 documents)
-- architecture (9 documents)
-- cognition (8 documents)
-- typography (7 documents)
-- color (7 documents)
-- attention (6 documents)
+- composition (31 documents)
+- evidence (28 documents)
+- perception (17 documents)
+- spacing (15 documents)
+- architecture (12 documents)
+- knowledge graph (11 documents)
+- cognition (9 documents)
+- typography (9 documents)
+- color (9 documents)
+- attention (7 documents)
+- learning (6 documents)
+- wayfinding (6 documents)
 
 ### Isolated
 
@@ -52,23 +54,22 @@ Generated: 2026-07-21T15:32:33+00:00
 
 ## Knowledge Lineage
 
-- Composition_Science_Research_Library: Composition_Science_Research_Library_v0.1.md -> Composition_Science_Research_Library_v0.2 2.md -> Composition_Science_Research_Library_v0.2.md -> Composition_Science_Research_Library_v0.4.md
-- Project_Atlas_Visual_Information_Transfer_Foundations: Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md -> Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+
 
 ## Recommended Canonical Concept Pages
 
-- architecture: Product_Genome_Project_Atlas_v1.md
-- attention: Project_Atlas_Perceptual_Color_Genome.md
-- cognition: Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
-- color: Project_Atlas_Perceptual_Color_Genome.md
-- component architecture: Project_Atlas_Perceptual_Color_Genome.md
-- composition: Composition_Science_Project_Constitution_v1.md
-- evidence: Composition_Science_Project_Constitution_v1.md
-- hierarchy: Composition_Science_Project_Constitution_v1.md
-- human factors: Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- knowledge graph: Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
-- learning: Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
-- ontology: Composition_Science_Ontology_v1.md
+- architecture: product-genome-project-atlas-v1.md
+- attention: project-atlas-perceptual-color-genome.md
+- cognition: Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- color: project-atlas-perceptual-color-genome.md
+- component architecture: project-atlas-perceptual-color-genome.md
+- composition: composition-science-project-constitution-v1.md
+- evidence: composition-science-project-constitution-v1.md
+- hierarchy: composition-science-project-constitution-v1.md
+- human factors: composition-science-architecture-human-scale-and-proportion-research.md
+- knowledge graph: Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- learning: Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- ontology: composition-science-ontology-v1.md
 
 ## Interpretation
 

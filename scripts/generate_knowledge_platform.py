@@ -16,7 +16,9 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_DIR = ROOT / "input-documents"
+INTAKE_DIR = ROOT / "input-documents"
+CONTENT_PROJECTS_DIR = ROOT / "content" / "projects"
+CONTENT_ARCHIVE_DIR = ROOT / "content" / "archive"
 OUTPUT_DIR = ROOT / "knowledge-platform"
 GENERATED_AT = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
@@ -57,6 +59,7 @@ DISCIPLINE_HINTS = {
 
 DOCUMENT_TYPE_RULES = [
     ("constitution", "governance"),
+    ("governance specification", "governance"),
     ("charter", "governance"),
     ("ontology", "ontology"),
     ("genome", "knowledge-model"),
@@ -70,6 +73,8 @@ DOCUMENT_TYPE_RULES = [
     ("cross-system design mechanism map", "crosswalk"),
     ("comparative study", "comparative-study"),
     ("foundational documents", "evidence-collection"),
+    ("execution package", "research-execution-package"),
+    ("framework", "research-framework"),
     ("phase", "phase-report"),
     ("report", "research-report"),
     ("plan", "research-plan"),
@@ -265,17 +270,29 @@ def first_nonempty_paragraph(body: str) -> str:
 
 def infer_project(meta: dict[str, Any], filename: str, text: str) -> str:
     project = meta.get("project")
+    related_projects = meta.get("related_projects", [])
+    title = str(meta.get("title", ""))
+    research_area = str(meta.get("research_area", ""))
+
+    joined_related = " ".join(related_projects) if isinstance(related_projects, list) else str(related_projects)
+    haystack = " ".join([filename, text[:1000], title, research_area, joined_related])
+
+    if any(token in haystack for token in ["Design Library", "Component Library", "RP-CLF-", "semantic durability"]):
+        return "Design Library"
+    if any(token in haystack for token in ["Product_Genome", "Product Genome", "RP-PROD-"]):
+        return "Product Genome"
+    if any(token in haystack for token in ["Project_Atlas", "Project Atlas", "ATLAS-", "REP-ATLAS", "DF-ATLAS", "RP-ATLAS"]):
+        return "Project Atlas"
+
     if isinstance(project, str) and project.strip():
         value = project.strip()
         if value.startswith("Project Atlas"):
             return "Project Atlas"
+        if value.startswith("Product Genome"):
+            return "Product Genome"
         return value
-    if "Project Atlas" in filename or "Project Atlas" in text:
-        return "Project Atlas"
     if "Composition" in filename or "Composition Science" in text:
         return "Composition Science"
-    if "Product_Genome" in filename or "Product Genome" in text:
-        return "Product Genome"
     return "Unclassified"
 
 
@@ -399,8 +416,8 @@ def detect_parent(filename: str, groups: dict[str, list[str]]) -> str | None:
 
 def suggested_location(project: str, doc_type: str, canonical: bool, filename: str) -> str:
     project_slug = slugify(project)
-    area = "canonical" if canonical else doc_type
-    return f"content/{project_slug}/{area}/{slugify(filename.rsplit('.', 1)[0])}.md"
+    area = "canonical" if canonical else slugify(doc_type)
+    return f"content/projects/{project_slug}/{area}/{slugify(filename.rsplit('.', 1)[0])}.md"
 
 
 def migration_action_for(doc: Document) -> tuple[str, str]:
@@ -416,7 +433,17 @@ def migration_action_for(doc: Document) -> tuple[str, str]:
 
 
 def build_documents() -> list[Document]:
-    paths = sorted(p for p in SOURCE_DIR.rglob("*") if p.is_file())
+    paths: list[Path] = []
+    for root in [INTAKE_DIR, CONTENT_PROJECTS_DIR, CONTENT_ARCHIVE_DIR]:
+        if root.exists():
+            paths.extend(
+                p
+                for p in root.rglob("*")
+                if p.is_file()
+                and p.suffix.lower() == ".md"
+                and not (p.parent == INTAKE_DIR and p.name == "README.md")
+            )
+    paths = sorted(set(paths))
     known_paths = [str(p.relative_to(ROOT)) for p in paths]
     known_names = [p.name for p in paths]
     text_cache = {p: p.read_text(encoding="utf-8") for p in paths}
@@ -712,7 +739,9 @@ def write_repository_json(docs: list[Document], stats: dict[str, Any], health: d
         "repository_summary": {
             "generated_at": GENERATED_AT,
             "root": str(ROOT),
-            "source_directory": str(SOURCE_DIR.relative_to(ROOT)),
+            "source_directory": "repository corpus",
+            "intake_directory": str(INTAKE_DIR.relative_to(ROOT)),
+            "content_directory": str(CONTENT_PROJECTS_DIR.relative_to(ROOT)),
         },
         "statistics": normalize(stats),
         "catalog": [normalize(doc.__dict__) for doc in docs],

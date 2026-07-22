@@ -1,6 +1,6 @@
 # Repository Architecture
 
-Generated: 2026-07-21T15:32:33+00:00
+Generated: 2026-07-22T15:10:59+00:00
 
 ## Recommendation
 
@@ -13,7 +13,7 @@ Use a hybrid architecture:
 
 ## Why This Fits The Evidence
 
-The repository has 40 files but already spans multiple projects, document types, and maturity levels. A discipline-first tree would fragment shared concepts. A project-first tree would hide cross-project laws and evidence. An artifact-first tree would optimize storage at the expense of reasoning. A hybrid model keeps canonical concepts stable while allowing projects and derived artifacts to evolve independently.
+The repository has 49 files but already spans multiple projects, document types, and maturity levels. A discipline-first tree would fragment shared concepts. A project-first tree would hide cross-project laws and evidence. An artifact-first tree would optimize storage at the expense of reasoning. A hybrid model keeps canonical concepts stable while allowing projects and derived artifacts to evolve independently.
 
 ## Target Structure
 

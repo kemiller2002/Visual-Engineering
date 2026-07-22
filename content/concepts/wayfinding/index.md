@@ -4,8 +4,9 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Genome_v1.md
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Phase_2_Visual_Hierarchy_and_Wayfinding.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
+- architecture-as-a-foundation-for-composition-science.md
+- composition-genome-v1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-phase-2-visual-hierarchy-and-wayfinding.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- rp-atlas-typo-transfer-001.md

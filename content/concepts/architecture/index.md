@@ -4,12 +4,15 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Genome_v1.md
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Ontology_v1.md
-- Composition_Science_Phase_2_Visual_Hierarchy_and_Wayfinding.md
-- Product_Genome_Project_Atlas_v1.md
-- Project_Atlas_Comparative_Color_Framework_v0.1.md
-- Project_Atlas_Foundational_Documents_and_Ribbon_Evidence_Collection_001.md
+- architecture-as-a-foundation-for-composition-science.md
 - component-library-foundations-research-report.md
+- composition-genome-v1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-ontology-v1.md
+- composition-science-phase-2-visual-hierarchy-and-wayfinding.md
+- df-atlas-color-005-perceptual-measurement-layer.md
+- product-genome-project-atlas-v1.md
+- product-genome-research-execution-package-run-02.md
+- project-atlas-comparative-color-framework-v0-1.md
+- project-atlas-foundational-documents-and-ribbon-evidence-collection-001.md
+- rep-atlas-0002-relational-legibility-envelope.md

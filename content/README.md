@@ -1,11 +1,12 @@
 # Structured Content Layer
 
-This directory is the promoted, structured content layer generated from `input-documents`.
+This directory is the canonical structured content layer for processed research artifacts.
 
-The original intake files remain unchanged in `input-documents`.
+`input-documents` is reserved for unprocessed intake only.
 
 ## Projects
 
-- Composition Science: 21 documents promoted
-- Project Atlas: 18 documents promoted
-- Design Library: 1 documents promoted
+- Project Atlas: 26 documents organized
+- Composition Science: 18 documents organized
+- Product Genome: 3 documents organized
+- Design Library: 2 documents organized

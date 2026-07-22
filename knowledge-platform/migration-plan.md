@@ -1,6 +1,6 @@
 # Migration Plan
 
-Generated: 2026-07-21T15:32:33+00:00
+Generated: 2026-07-22T15:10:59+00:00
 
 ## Principles
 
@@ -23,45 +23,50 @@ Generated: 2026-07-21T15:32:33+00:00
 ## Phase C: Resolve Duplicates And Lineage
 
 - Merge exact duplicates:
-- Composition_Science_Research_Library_v0.2 2.md
 - Composition_Science_Research_Library_v0.2.md
-- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
 - Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- composition-science-research-library-v0-2-2.md
+- project-atlas-visual-information-transfer-foundations-v1-2.md
 
 ## Phase D: Move Derived Research
 
 - Move derived reports and case studies into project collections:
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Phase_2_Visual_Hierarchy_and_Wayfinding.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
-- Composition_Science_Research_Library_v0.1.md
-- Composition_Science_Research_Library_v0.4.md
-- Project_Atlas_Applied_Case_Study_001_Account_Settings_Form.md
-- Project_Atlas_Autonomous_Research_Itten_Seven_Contrasts_v0.1.md
-- Project_Atlas_Autonomous_Research_Report_001_Relational_Legibility.md
-- Project_Atlas_Color_Vocabulary_and_Mechanism_Taxonomy.md
-- Project_Atlas_Evidence_Gallery_v0.1.md
-- Project_Atlas_Foundation_Research_Plan.md
-- Project_Atlas_Letter_Confusion_Data_Audit_v1.md
-- Project_Atlas_Masters_vs_Modern_Science_02_Josef_Albers_v0.1.md
-- Project_Atlas_Perceptual_Color_Genome.md
-- Project_Atlas_Project_Charter_v0.1.md
-- Project_Atlas_Research_Methodology_v0.2.md
+- composition-science-research-library-v0-1.md
+- composition-science-research-library-v0-4.md
+- composition-science-phase-2-visual-hierarchy-and-wayfinding.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-repository-governance-specification-v1.md
+- intuitive-is-just-familiar-research-report.md
+- component-library-foundations-research-report.md
+- project-atlas-letter-confusion-data-audit-v1.md
+- project-atlas-color-vocabulary-and-mechanism-taxonomy.md
+- project-atlas-perceptual-color-genome.md
+- project-atlas-project-charter-v0-1.md
+- project-atlas-research-methodology-v0-2.md
+- project-atlas-applied-case-study-001-account-settings-form.md
+- project-atlas-ribbon-comparative-study-v0-1.md
+- project-atlas-evidence-gallery-v0-1.md
 
 ## Phase E: Normalize Names
 
 - Rename inconsistent intake files into slug and ID-backed forms:
-- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Science_Markdown_Template_v1.md
-- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
-- GN-100_Perception_Autonomous_Research_Report_v1.md
-- Product_Genome_Autonomous_Research_Run_01.md
-- Project_Atlas_Color_Evidence_Registry_v0.1.md
-- Project_Atlas_Comparative_Color_Framework_v0.1.md
-- Project_Atlas_Foundational_Documents_and_Ribbon_Evidence_Collection_001.md
-- Project_Atlas_Masters_vs_Modern_Science_01_Chevreul_v0.1.md
-- Project_Atlas_Rosetta_Stone_Cross_System_Design_Mechanism_Map_v0.1.md
+- project-atlas-color-evidence-registry-v0-1.md
+- product-genome-autonomous-research-run-01.md
+- rep-atlas-0002-relational-legibility-envelope.md
+- architecture-as-a-foundation-for-composition-science.md
+- atlas-0001-proximity-and-relative-separation-v0-1.md
+- composition-science-atlas-research-framework-v1.md
+- composition-science-visual-density-crowding-and-perceptual-separation.md
+- intuitive-is-just-familiar-predictive-fit-rep-v2.md
+- project-atlas-comparative-color-framework-v0-1.md
+- gn-100-perception-autonomous-research-report-v1.md
+- composition-science-markdown-template-v1.md
+- project-atlas-rosetta-stone-cross-system-design-mechanism-map-v0-1.md
+- project-atlas-foundational-documents-and-ribbon-evidence-collection-001.md
+- df-atlas-color-005-perceptual-measurement-layer.md
+- project-atlas-masters-vs-modern-science-01-chevreul-v0-1.md
+- rp-atlas-color-004-munsell-vs-modern-perceptual-color-spaces.md
 
 ## Phase F: Generate Registries And Site
 

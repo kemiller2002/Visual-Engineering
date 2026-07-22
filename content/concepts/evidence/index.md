@@ -4,23 +4,23 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Genome_v1.md
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Markdown_Template_v1.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
-- Composition_Science_Project_Constitution_v1.md
-- Composition_Science_Research_Library_v0.1.md
-- Composition_Science_Research_Library_v0.2 2.md
+- 2026-07-21-semantic-durability-research-execution-package.md
 - Composition_Science_Research_Library_v0.2.md
-- Composition_Science_Research_Library_v0.4.md
-- Product_Genome_Autonomous_Research_Run_01.md
-- Project_Atlas_Autonomous_Research_Itten_Seven_Contrasts_v0.1.md
-- Project_Atlas_Autonomous_Research_Report_001_Relational_Legibility.md
-- Project_Atlas_Color_Evidence_Registry_v0.1.md
-- Project_Atlas_Evidence_Gallery_v0.1.md
-- Project_Atlas_Foundational_Documents_and_Ribbon_Evidence_Collection_001.md
-- Project_Atlas_Letter_Confusion_Data_Audit_v1.md
-- Project_Atlas_Project_Charter_v0.1.md
-- Project_Atlas_Research_Methodology_v0.2.md
+- architecture-as-a-foundation-for-composition-science.md
+- atlas-0001-proximity-and-relative-separation-v0-1.md
+- component-library-foundations-research-report.md
+- composition-genome-v1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-atlas-research-framework-v1.md
+- composition-science-markdown-template-v1.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- composition-science-project-constitution-v1.md
+- composition-science-research-library-v0-1.md
+- composition-science-research-library-v0-2-2.md
+- composition-science-research-library-v0-4.md
+- df-atlas-color-005-perceptual-measurement-layer.md
+- intuitive-is-just-familiar-predictive-fit-rep-v2.md
+- intuitive-is-just-familiar-research-report.md
+- product-genome-autonomous-research-run-01.md
+- product-genome-research-execution-package-run-02.md
+- project-atlas-autonomous-research-itten-seven-contrasts-v0-1.md

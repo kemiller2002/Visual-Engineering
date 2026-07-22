@@ -4,17 +4,20 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
-- GN-100_Perception_Autonomous_Research_Report_v1.md
-- Product_Genome_Project_Atlas_v1.md
-- Project_Atlas_Color_Evidence_Registry_v0.1.md
-- Project_Atlas_Color_Vocabulary_and_Mechanism_Taxonomy.md
-- Project_Atlas_Comparative_Color_Framework_v0.1.md
-- Project_Atlas_Foundation_Research_Plan.md
-- Project_Atlas_Masters_vs_Modern_Science_01_Chevreul_v0.1.md
-- Project_Atlas_Perceptual_Color_Genome.md
-- Project_Atlas_Project_Charter_v0.1.md
-- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
 - Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- atlas-0001-proximity-and-relative-separation-v0-1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-visual-density-crowding-and-perceptual-separation.md
+- df-atlas-color-005-perceptual-measurement-layer.md
+- gn-100-perception-autonomous-research-report-v1.md
+- product-genome-project-atlas-v1.md
+- project-atlas-color-evidence-registry-v0-1.md
+- project-atlas-color-vocabulary-and-mechanism-taxonomy.md
+- project-atlas-comparative-color-framework-v0-1.md
+- project-atlas-foundation-research-plan.md
+- project-atlas-masters-vs-modern-science-01-chevreul-v0-1.md
+- project-atlas-perceptual-color-genome.md
+- project-atlas-project-charter-v0-1.md
+- project-atlas-visual-information-transfer-foundations-v1-2.md
+- rp-atlas-color-004-munsell-vs-modern-perceptual-color-spaces.md
+- rp-atlas-typo-transfer-001.md

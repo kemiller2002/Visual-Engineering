@@ -4,16 +4,18 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- ATLAS-0001_Proximity_and_Relative_Separation_v0.1.md
-- Architecture_as_a_Foundation_for_Composition_Science.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
-- Composition_Science_Research_Library_v0.1.md
-- Composition_Science_Research_Library_v0.2 2.md
 - Composition_Science_Research_Library_v0.2.md
-- Composition_Science_Research_Library_v0.4.md
-- Composition_Science_Visual_Density_Crowding_and_Perceptual_Separation.md
-- Project_Atlas_Applied_Case_Study_001_Account_Settings_Form.md
-- Project_Atlas_Autonomous_Research_Report_001_Relational_Legibility.md
-- Project_Atlas_Rosetta_Stone_Cross_System_Design_Mechanism_Map_v0.1.md
-- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
 - Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- architecture-as-a-foundation-for-composition-science.md
+- atlas-0001-proximity-and-relative-separation-v0-1.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- composition-science-research-library-v0-1.md
+- composition-science-research-library-v0-2-2.md
+- composition-science-research-library-v0-4.md
+- composition-science-visual-density-crowding-and-perceptual-separation.md
+- project-atlas-applied-case-study-001-account-settings-form.md
+- project-atlas-autonomous-research-report-001-relational-legibility.md
+- project-atlas-rosetta-stone-cross-system-design-mechanism-map-v0-1.md
+- project-atlas-visual-information-transfer-foundations-v1-2.md
+- rep-atlas-0002-relational-legibility-envelope.md
+- rp-atlas-typo-transfer-001.md

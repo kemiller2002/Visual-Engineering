@@ -4,11 +4,12 @@ Canonical concept stub generated from repository inventory.
 
 ## Related Documents
 
-- Composition_Science_Architecture_Human_Scale_and_Proportion_Research.md
-- Composition_Science_Phase_2_Visual_Hierarchy_and_Wayfinding.md
-- Composition_Science_Phase_3_Evidence_Review_Attention_Wayfinding.md
-- GN-100_Perception_Autonomous_Research_Report_v1.md
-- Project_Atlas_Color_Vocabulary_and_Mechanism_Taxonomy.md
-- Project_Atlas_Letter_Confusion_Data_Audit_v1.md
-- Project_Atlas_Visual_Information_Transfer_Foundations_v1 2.md
 - Project_Atlas_Visual_Information_Transfer_Foundations_v1.md
+- composition-science-architecture-human-scale-and-proportion-research.md
+- composition-science-phase-2-visual-hierarchy-and-wayfinding.md
+- composition-science-phase-3-evidence-review-attention-wayfinding.md
+- gn-100-perception-autonomous-research-report-v1.md
+- project-atlas-color-vocabulary-and-mechanism-taxonomy.md
+- project-atlas-letter-confusion-data-audit-v1.md
+- project-atlas-visual-information-transfer-foundations-v1-2.md
+- rp-atlas-typo-transfer-001.md
