@@ -1,0 +1,482 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Atlas Perceptual Measurement Layer | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">Architecture and Decision Framework</span> <span data-pagefind-meta="stableId">DF-ATLAS-COLOR-005</span> </p> <h1 data-pagefind-meta="title">Atlas Perceptual Measurement Layer</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>DF-ATLAS-COLOR-005</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">Proposed Canonical Foundation</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/project-atlas/research-note/df-atlas-color-005-perceptual-measurement-layer.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#purpose">Purpose</a></li><li><a href="#foundational-rule">Foundational Rule</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#layer-definitions">Layer Definitions</a></li><li><a href="#1-source-record">1. Source Record</a></li><li><a href="#2-colorimetric-normalization">2. Colorimetric Normalization</a></li><li><a href="#3-viewing-condition-profile">3. Viewing-Condition Profile</a></li><li><a href="#4-derived-perceptual-views">4. Derived Perceptual Views</a></li><li><a href="#munsell">Munsell</a></li><li><a href="#cielab-cielch">CIELAB / CIELCh</a></li><li><a href="#cam16">CAM16</a></li><li><a href="#cam16-ucs">CAM16-UCS</a></li><li><a href="#oklab-oklch">Oklab / OKLCH</a></li><li><a href="#default-operation-matrix">Default Operation Matrix</a></li><li><a href="#canonical-color-record">Canonical Color Record</a></li><li><a href="#color-relationship-record">Color Relationship Record</a></li><li><a href="#metric-rules">Metric Rules</a></li><li><a href="#rule-pm-001">Rule PM-001</a></li><li><a href="#rule-pm-002">Rule PM-002</a></li><li><a href="#rule-pm-003">Rule PM-003</a></li><li><a href="#rule-pm-004">Rule PM-004</a></li><li><a href="#rule-pm-005">Rule PM-005</a></li><li><a href="#rule-pm-006">Rule PM-006</a></li><li><a href="#rule-pm-007">Rule PM-007</a></li><li><a href="#rule-pm-008">Rule PM-008</a></li><li><a href="#confidence-model">Confidence Model</a></li><li><a href="#gamut-policy">Gamut Policy</a></li><li><a href="#implementation-sequence">Implementation Sequence</a></li><li><a href="#phase-1-metadata-and-conversion">Phase 1 — Metadata and Conversion</a></li><li><a href="#phase-2-measurement">Phase 2 — Measurement</a></li><li><a href="#phase-3-context">Phase 3 — Context</a></li><li><a href="#phase-4-research-validation">Phase 4 — Research Validation</a></li><li><a href="#required-tests">Required Tests</a></li><li><a href="#conversion-tests">Conversion tests</a></li><li><a href="#decision-tests">Decision tests</a></li><li><a href="#non-goals">Non-Goals</a></li><li><a href="#candidate-laws">Candidate Laws</a></li><li><a href="#th-atlas-color-017-weakest-layer-confidence">TH-ATLAS-COLOR-017 — Weakest-Layer Confidence</a></li><li><a href="#th-atlas-color-018-derived-view-non-authority">TH-ATLAS-COLOR-018 — Derived-View Non-Authority</a></li><li><a href="#th-atlas-color-019-operation-specific-representation">TH-ATLAS-COLOR-019 — Operation-Specific Representation</a></li><li><a href="#th-atlas-color-020-delivered-color-priority">TH-ATLAS-COLOR-020 — Delivered-Color Priority</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#immediate-repository-actions">Immediate Repository Actions</a></li><li><a href="#agent-handoff">Agent Handoff</a></li> </ol> </aside> <section class="document-body"><h1 id="purpose">Purpose</h1>
+<p>Define how Project Atlas records, transforms, compares, validates, and
+communicates color measurements without pretending that one color space solves
+every problem.</p>
+<p>The layer is designed to support:</p>
+<ul>
+<li>design tokens</li>
+<li>web components</li>
+<li>visual research</li>
+<li>accessibility</li>
+<li>material and architectural color</li>
+<li>image and display workflows</li>
+<li>future predictive composition models</li>
+</ul>
+<hr>
+<h1 id="foundational-rule">Foundational Rule</h1>
+<blockquote>
+<p>Preserve the least-derived reliable source representation, then generate
+task-specific perceptual views with explicit assumptions.</p>
+</blockquote>
+<p>No derived coordinate becomes the sole permanent truth.</p>
+<hr>
+<h1 id="architecture">Architecture</h1>
+<pre><code class="language-text">┌──────────────────────────────────────────────────────┐
+│  1. Source Record                                    │
+│  spectrum, XYZ, measured Lab, encoded RGB, material  │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  2. Physical / Colorimetric Normalization            │
+│  illuminant, observer, white point, luminance, alpha │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  3. Viewing-Condition Profile                        │
+│  surround, adapting luminance, background, medium    │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  4. Derived Perceptual Views                         │
+│  Munsell, Lab/LCh, CAM16, CAM16-UCS, Oklab/OKLCH    │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  5. Task Metrics                                     │
+│  ΔE, interpolation, luminance contrast, gamut loss   │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  6. Context Validation                               │
+│  adjacency, area, hierarchy, semantics, observer     │
+└──────────────────────────┬───────────────────────────┘
+                           ↓
+┌──────────────────────────────────────────────────────┐
+│  7. Decision Record                                  │
+│  accepted use, limits, failures, confidence          │
+└──────────────────────────────────────────────────────┘
+</code></pre>
+<hr>
+<h1 id="layer-definitions">Layer Definitions</h1>
+<h2 id="1-source-record">1. Source Record</h2>
+<p>Preferred source order:</p>
+<ol>
+<li>spectral reflectance or emission data</li>
+<li>measured XYZ with measurement metadata</li>
+<li>measured CIELAB with illuminant and observer</li>
+<li>encoded device-independent color</li>
+<li>encoded RGB with complete profile</li>
+<li>unprofiled hex value</li>
+</ol>
+<p>Unprofiled hex is accepted only as a low-confidence web input.</p>
+<h2 id="2-colorimetric-normalization">2. Colorimetric Normalization</h2>
+<p>Required fields when applicable:</p>
+<pre><code class="language-yaml">color_space:
+transfer_function:
+primaries:
+white_point:
+observer:
+illuminant:
+luminance_cd_m2:
+measurement_geometry:
+measurement_device:
+bit_depth:
+alpha:
+</code></pre>
+<h2 id="3-viewing-condition-profile">3. Viewing-Condition Profile</h2>
+<pre><code class="language-yaml">viewing_profile_id:
+medium: emissive | reflective | transmissive
+adapting_luminance:
+background_luminance:
+surround: dark | dim | average | custom
+discounting_illuminant:
+reference_white:
+ambient_illuminance:
+display_peak_luminance:
+display_black_luminance:
+</code></pre>
+<p>Unknown values must be marked unknown, not silently defaulted.</p>
+<h2 id="4-derived-perceptual-views">4. Derived Perceptual Views</h2>
+<h3 id="munsell">Munsell</h3>
+<p>Use for:</p>
+<ul>
+<li>historical comparison</li>
+<li>material and soil references</li>
+<li>human-facing hue/value/chroma ordering</li>
+<li>comparison to classical theories</li>
+</ul>
+<p>Do not use as the primary computational interchange format.</p>
+<h3 id="cielab--cielch">CIELAB / CIELCh</h3>
+<p>Use for:</p>
+<ul>
+<li>standards interoperability</li>
+<li>legacy measurement systems</li>
+<li>material and print workflows</li>
+<li>CIEDE2000 calculations</li>
+</ul>
+<p>Do not assume Euclidean Lab distance is uniformly perceptual.</p>
+<h3 id="cam16">CAM16</h3>
+<p>Use for:</p>
+<ul>
+<li>appearance prediction</li>
+<li>adapting between viewing conditions</li>
+<li>explicit brightness, lightness, chroma, colorfulness, saturation, and hue
+correlates</li>
+</ul>
+<p>Do not use without recording input viewing assumptions.</p>
+<h3 id="cam16-ucs">CAM16-UCS</h3>
+<p>Use for:</p>
+<ul>
+<li>research-grade color-difference analysis</li>
+<li>wide-gamut comparison</li>
+<li>datasets where CAM16-UCS has demonstrated fit</li>
+</ul>
+<p>Do not assume superiority for every attribute or UI task.</p>
+<h3 id="oklab--oklch">Oklab / OKLCH</h3>
+<p>Use for:</p>
+<ul>
+<li>CSS authoring</li>
+<li>palette generation</li>
+<li>design-token manipulation</li>
+<li>gradients and interpolation</li>
+<li>intuitive lightness/chroma/hue controls</li>
+</ul>
+<p>Do not use raw Euclidean Oklab distance as the sole validation metric for
+critical color matching.</p>
+<hr>
+<h1 id="default-operation-matrix">Default Operation Matrix</h1>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Default</th>
+<th>Secondary validation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web token authoring</td>
+<td>OKLCH</td>
+<td>gamut and context validation</td>
+</tr>
+<tr>
+<td>CSS interpolation</td>
+<td>Oklab or OKLCH, path-dependent</td>
+<td>rendered gradient review</td>
+</tr>
+<tr>
+<td>Material difference</td>
+<td>CIELAB + CIEDE2000</td>
+<td>instrument and illuminant record</td>
+</tr>
+<tr>
+<td>Viewing-condition change</td>
+<td>CAM16</td>
+<td>representative observer test</td>
+</tr>
+<tr>
+<td>General perceptual difference research</td>
+<td>CAM16-UCS</td>
+<td>compare against CIEDE2000</td>
+</tr>
+<tr>
+<td>Text accessibility</td>
+<td>applicable luminance-based standard</td>
+<td>real component testing</td>
+</tr>
+<tr>
+<td>Categorical palette spacing</td>
+<td>OKLCH initial construction</td>
+<td>CAM16-UCS and CVD simulation</td>
+</tr>
+<tr>
+<td>Historical palette reconstruction</td>
+<td>Munsell where available</td>
+<td>spectral or XYZ conversion</td>
+</tr>
+<tr>
+<td>Cross-device identity</td>
+<td>profile-managed XYZ/Lab pipeline</td>
+<td>rendered device measurements</td>
+</tr>
+<tr>
+<td>Gamut mapping</td>
+<td>explicit algorithm in perceptual space</td>
+<td>before/after difference record</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="canonical-color-record">Canonical Color Record</h1>
+<pre><code class="language-yaml">color_id: CLR-EXAMPLE-001
+name: example-accent
+
+source:
+  type: encoded-rgb
+  value: "#E5484D"
+  color_space: srgb
+  transfer_function: srgb
+  white_point: D65
+  confidence: medium
+
+derived:
+  oklch:
+    value: [null, null, null]
+    method_version:
+  cielab:
+    value: [null, null, null]
+    illuminant: D65
+    observer: 2deg
+    method_version:
+  cam16:
+    viewing_profile_id:
+    J:
+    C:
+    h:
+    Q:
+    M:
+    s:
+  cam16_ucs:
+    J_prime:
+    a_prime:
+    b_prime:
+
+gamut:
+  source_gamut: srgb
+  target_gamuts:
+    srgb: in-gamut
+    display-p3: in-gamut
+
+functional_roles:
+  - accent
+
+validated_contexts: []
+failed_contexts: []
+
+provenance:
+  created_by:
+  created_at:
+  source_document:
+  conversion_library:
+  conversion_version:
+</code></pre>
+<hr>
+<h1 id="color-relationship-record">Color Relationship Record</h1>
+<p>A color is not validated alone.</p>
+<pre><code class="language-yaml">relationship_id: REL-COLOR-001
+foreground_color_id:
+background_color_id:
+adjacent_color_ids: []
+viewing_profile_id:
+component_type:
+area_ratio:
+boundary:
+spatial_frequency:
+semantic_roles:
+metrics:
+  relative_luminance_ratio:
+  delta_e_2000:
+  delta_e_cam16_ucs:
+  delta_e_oklab:
+  gamut_mapping_loss:
+observer_profiles:
+  - standard
+outcomes:
+  legibility:
+  discriminability:
+  hierarchy:
+  identity_preservation:
+  aesthetic_fit:
+confidence:
+evidence_ids: []
+</code></pre>
+<hr>
+<h1 id="metric-rules">Metric Rules</h1>
+<h2 id="rule-pm-001">Rule PM-001</h2>
+<p>Never report “Delta E” without naming the formula and reference conditions.</p>
+<h2 id="rule-pm-002">Rule PM-002</h2>
+<p>Never report “contrast” without naming the dimension and functional outcome.</p>
+<h2 id="rule-pm-003">Rule PM-003</h2>
+<p>Never compare chroma values from different spaces as though they share a unit.</p>
+<h2 id="rule-pm-004">Rule PM-004</h2>
+<p>Never compare hue angles from different spaces without conversion and
+validation.</p>
+<h2 id="rule-pm-005">Rule PM-005</h2>
+<p>Never use a color-difference score as a proxy for preference, harmony, or
+meaning.</p>
+<h2 id="rule-pm-006">Rule PM-006</h2>
+<p>Record gamut mapping before measuring the delivered color.</p>
+<h2 id="rule-pm-007">Rule PM-007</h2>
+<p>Accessibility validation is a separate decision path from perceptual-uniformity
+validation.</p>
+<h2 id="rule-pm-008">Rule PM-008</h2>
+<p>Contextual appearance tests override isolated-coordinate confidence when the
+final use is compositional.</p>
+<hr>
+<h1 id="confidence-model">Confidence Model</h1>
+<pre><code class="language-yaml">measurement_confidence:
+  high: spectral or calibrated instrument record
+  medium: profiled numerical source
+  low: unprofiled encoded value
+
+appearance_confidence:
+  high: explicit viewing conditions and validated model
+  medium: representative profile
+  low: assumed or unknown context
+
+functional_confidence:
+  high: tested in representative component and observer conditions
+  medium: metric-supported but not field-tested
+  low: inferred from coordinates alone
+</code></pre>
+<p>The final confidence is never higher than the weakest critical layer.</p>
+<hr>
+<h1 id="gamut-policy">Gamut Policy</h1>
+<p>Every transformation must classify the color as:</p>
+<ul>
+<li>in gamut</li>
+<li>near boundary</li>
+<li>out of gamut</li>
+<li>mapped</li>
+<li>clipped</li>
+<li>unknown</li>
+</ul>
+<p>For mapped colors record:</p>
+<pre><code class="language-yaml">mapping:
+  source_space:
+  target_gamut:
+  algorithm:
+  intent:
+  pre_mapping_coordinates:
+  post_mapping_coordinates:
+  perceptual_difference_metric:
+  perceptual_difference:
+  hue_shift:
+  lightness_shift:
+  chroma_loss:
+</code></pre>
+<hr>
+<h1 id="implementation-sequence">Implementation Sequence</h1>
+<h2 id="phase-1--metadata-and-conversion">Phase 1 — Metadata and Conversion</h2>
+<ul>
+<li>define canonical YAML schemas</li>
+<li>retain source color profile</li>
+<li>add Oklab/OKLCH, Lab/LCh, XYZ conversions</li>
+<li>record library and version</li>
+<li>add gamut status</li>
+</ul>
+<h2 id="phase-2--measurement">Phase 2 — Measurement</h2>
+<ul>
+<li>add named Delta E metrics</li>
+<li>add relative luminance calculations</li>
+<li>add CAM16 and CAM16-UCS with viewing profiles</li>
+<li>add round-trip and edge-case tests</li>
+</ul>
+<h2 id="phase-3--context">Phase 3 — Context</h2>
+<ul>
+<li>add color relationship records</li>
+<li>add area and boundary metadata</li>
+<li>add component screenshots or references</li>
+<li>add color-vision-deficiency simulations</li>
+<li>record validated and failed contexts</li>
+</ul>
+<h2 id="phase-4--research-validation">Phase 4 — Research Validation</h2>
+<ul>
+<li>construct UI-native color-pair dataset</li>
+<li>compare metric predictions with observer judgments</li>
+<li>calibrate dark-mode and wide-gamut profiles</li>
+<li>publish evidence-backed decision thresholds</li>
+</ul>
+<hr>
+<h1 id="required-tests">Required Tests</h1>
+<h2 id="conversion-tests">Conversion tests</h2>
+<ul>
+<li>neutral axis remains neutral</li>
+<li>white and black endpoints</li>
+<li>known reference colors</li>
+<li>round-trip error</li>
+<li>adaptation round trips</li>
+<li>NaN and undefined hue handling</li>
+<li>out-of-gamut values</li>
+<li>high-chroma blue and yellow</li>
+<li>near-black behavior</li>
+</ul>
+<h2 id="decision-tests">Decision tests</h2>
+<ul>
+<li>same token on light and dark surfaces</li>
+<li>equal OKLCH spacing compared with CAM16-UCS</li>
+<li>gamut-mapped brand color</li>
+<li>status colors under color-vision deficiencies</li>
+<li>small icon versus large surface area</li>
+<li>ambient and display luminance variation</li>
+</ul>
+<hr>
+<h1 id="non-goals">Non-Goals</h1>
+<p>The measurement layer does not by itself predict:</p>
+<ul>
+<li>harmony</li>
+<li>beauty</li>
+<li>emotion</li>
+<li>cultural meaning</li>
+<li>brand suitability</li>
+<li>narrative role</li>
+<li>visual balance</li>
+<li>attention in complex scenes</li>
+</ul>
+<p>It supplies controlled variables and evidence for those later models.</p>
+<hr>
+<h1 id="candidate-laws">Candidate Laws</h1>
+<h2 id="th-atlas-color-017--weakest-layer-confidence">TH-ATLAS-COLOR-017 — Weakest-Layer Confidence</h2>
+<p>The reliability of a color decision cannot exceed the least reliable critical
+layer in its measurement-to-context pipeline.</p>
+<h2 id="th-atlas-color-018--derived-view-non-authority">TH-ATLAS-COLOR-018 — Derived-View Non-Authority</h2>
+<p>No derived perceptual coordinate should overwrite the canonical source record.</p>
+<h2 id="th-atlas-color-019--operation-specific-representation">TH-ATLAS-COLOR-019 — Operation-Specific Representation</h2>
+<p>The correct representation of color is determined by the operation, not by a
+universal preferred space.</p>
+<h2 id="th-atlas-color-020--delivered-color-priority">TH-ATLAS-COLOR-020 — Delivered-Color Priority</h2>
+<p>Design validation must measure or estimate the delivered, gamut-mapped color,
+not only the authored coordinate.</p>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<ol>
+<li>Which metric best predicts UI-level suprathreshold discrimination?</li>
+<li>How should viewing profiles be estimated on uncontrolled consumer devices?</li>
+<li>Should Atlas store spectral approximations for branded material colors?</li>
+<li>How should area alter color-difference interpretation?</li>
+<li>What confidence penalty applies to unprofiled screenshots?</li>
+<li>How should HDR and wide-gamut tokens be represented?</li>
+<li>How should individual observer variation be stored?</li>
+<li>Which gamut-mapping method best preserves identity and hierarchy?</li>
+<li>Can a common context schema serve screens, print, paint, and architecture?</li>
+<li>Which parts should become web-component tooling?</li>
+</ol>
+<hr>
+<h1 id="immediate-repository-actions">Immediate Repository Actions</h1>
+<pre><code class="language-text">/color/
+  /research/
+    RP-ATLAS-COLOR-004-Munsell-Modern-Spaces.md
+  /frameworks/
+    DF-ATLAS-COLOR-005-Perceptual-Measurement-Layer.md
+  /schemas/
+    color-record.schema.yaml
+    color-relationship.schema.yaml
+    viewing-profile.schema.yaml
+  /registries/
+    color-evidence-registry.md
+    color-theory-registry.md
+</code></pre>
+<hr>
+<h1 id="agent-handoff">Agent Handoff</h1>
+<p>Future agents must:</p>
+<ol>
+<li>preserve source metadata</li>
+<li>identify the task before selecting a space</li>
+<li>name every metric</li>
+<li>record viewing assumptions</li>
+<li>distinguish authored from delivered color</li>
+<li>validate relationships rather than isolated swatches</li>
+<li>preserve failed contexts</li>
+<li>never strengthen “perceptual” into “universally perceptual”</li>
+</ol></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

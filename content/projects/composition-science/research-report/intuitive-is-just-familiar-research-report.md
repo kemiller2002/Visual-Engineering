@@ -1,4 +1,5 @@
 ---
+slug: intuitive-is-just-familiar-research-report
 authors:
 - OpenAI autonomous research agent
 confidence: High for the central model; Moderate for proposed quantitative laws

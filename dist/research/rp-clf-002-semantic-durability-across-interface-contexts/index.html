@@ -1,0 +1,1216 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Semantic Durability Across Interface Contexts | Visual Engineering Research</title><meta name="description" content="This package defines the next foundational investigation for the component
+library: whether one durable semantic content model can support substantially
+different editorial, application, mobile, marketing, low-vision, and print
+presentations without inaccessible reordering, presentation-specific markup,
+or variant proliferation. Preliminary standards evidence supports semantic
+stability only when meaning and interaction remain stable. The package
+therefore treats stable markup as a bounded hypothesis, establishes competing
+models, measurable failure thresholds, evidence schemas, and handoff instructions
+for executing the study before production component APIs are designed."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-package</span> <span data-pagefind-meta="stableId">RP-CLF-002</span> </p> <h1 data-pagefind-meta="title">Semantic Durability Across Interface Contexts</h1> <p class="lede" data-pagefind-meta="summary">This package defines the next foundational investigation for the component
+library: whether one durable semantic content model can support substantially
+different editorial, application, mobile, marketing, low-vision, and print
+presentations without inaccessible reordering, presentation-specific markup,
+or variant proliferation. Preliminary standards evidence supports semantic
+stability only when meaning and interaction remain stable. The package
+therefore treats stable markup as a bounded hypothesis, establishes competing
+models, measurable failure thresholds, evidence schemas, and handoff instructions
+for executing the study before production component APIs are designed.</p> <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>RP-CLF-002</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">Component Library Foundations</dd></div> <div><dt>Discipline</dt><dd data-pagefind-meta="discipline">Web Architecture, Accessibility Engineering, Information Architecture, Design Systems</dd></div> <div><dt>Status</dt><dd data-pagefind-meta="status">active-research-package</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>Critical</dd></div> <div><dt>Tags</dt><dd data-pagefind-meta="tags">semantic-html, component-boundaries, stable-markup, accessibility, information-architecture, progressive-enhancement</dd></div> <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/design-library/research-note/2026-07-21-semantic-durability-research-execution-package.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#semantic-durability-across-interface-contexts">Semantic Durability Across Interface Contexts</a></li><li><a href="#research-state-snapshot">Research State Snapshot</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#original-objective">Original Objective</a></li><li><a href="#scope">Scope</a></li><li><a href="#included">Included</a></li><li><a href="#excluded">Excluded</a></li><li><a href="#boundary-condition">Boundary condition</a></li><li><a href="#repository-context">Repository Context</a></li><li><a href="#current-understanding">Current Understanding</a></li><li><a href="#observation-obs-clf-001">Observation OBS-CLF-001</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#observation-obs-clf-002">Observation OBS-CLF-002</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#observation-obs-clf-003">Observation OBS-CLF-003</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#observation-obs-clf-004">Observation OBS-CLF-004</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#observation-obs-clf-005">Observation OBS-CLF-005</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#key-discoveries">Key Discoveries</a></li><li><a href="#kd-clf-001-stable-markup-is-a-constrained-optimization-target">KD-CLF-001: Stable markup is a constrained optimization target</a></li><li><a href="#kd-clf-002-a-semantic-core-may-be-more-durable-than-a-complete-anatomy">KD-CLF-002: A semantic core may be more durable than a complete anatomy</a></li><li><a href="#kd-clf-003-information-priority-and-information-sequence-are-related-but-not-identical">KD-CLF-003: Information priority and information sequence are related but not identical</a></li><li><a href="#kd-clf-004-the-durable-unit-is-likely-a-domain-record-not-a-card">KD-CLF-004: The durable unit is likely a domain record, not a card</a></li><li><a href="#kd-clf-005-reuse-must-be-measured-at-more-than-one-layer">KD-CLF-005: Reuse must be measured at more than one layer</a></li><li><a href="#hypothesis-registry">Hypothesis Registry</a></li><li><a href="#hy-clf-001-universal-semantic-record">HY-CLF-001: Universal Semantic Record</a></li><li><a href="#hy-clf-002-core-plus-context-model">HY-CLF-002: Core-Plus-Context Model</a></li><li><a href="#hy-clf-003-specialized-semantic-models">HY-CLF-003: Specialized Semantic Models</a></li><li><a href="#hy-clf-004-css-only-hierarchy-transformation">HY-CLF-004: CSS-Only Hierarchy Transformation</a></li><li><a href="#hy-clf-005-visual-card-is-not-a-durable-component-boundary">HY-CLF-005: Visual Card Is Not a Durable Component Boundary</a></li><li><a href="#hy-clf-006-dom-order-can-remain-task-neutral">HY-CLF-006: DOM Order Can Remain Task-Neutral</a></li><li><a href="#experimental-program">Experimental Program</a></li><li><a href="#ex-clf-001-semantic-transformation-matrix">EX-CLF-001: Semantic Transformation Matrix</a></li><li><a href="#research-question">Research question</a></li><li><a href="#inputs">Inputs</a></li><li><a href="#predefined-semantic-candidates">Predefined semantic candidates</a></li><li><a href="#competing-models">Competing models</a></li><li><a href="#context-transformations">Context transformations</a></li><li><a href="#measurements">Measurements</a></li><li><a href="#failure-thresholds">Failure thresholds</a></li><li><a href="#success-criteria">Success criteria</a></li><li><a href="#manual-evaluation">Manual evaluation</a></li><li><a href="#automated-evaluation">Automated evaluation</a></li><li><a href="#output">Output</a></li><li><a href="#evidence-registry">Evidence Registry</a></li><li><a href="#ev-clf-001-meaningful-sequence-permits-styling-but-constrains-order">EV-CLF-001: Meaningful sequence permits styling but constrains order</a></li><li><a href="#ev-clf-002-css-positioning-can-fail-meaningful-sequence">EV-CLF-002: CSS positioning can fail meaningful sequence</a></li><li><a href="#ev-clf-003-focus-order-must-preserve-visual-meaning-and-operation">EV-CLF-003: Focus order must preserve visual meaning and operation</a></li><li><a href="#ev-clf-004-component-anatomy-precedes-behavior-standardization">EV-CLF-004: Component anatomy precedes behavior standardization</a></li><li><a href="#ev-clf-005-card-anatomy-is-inconsistent-across-design-systems">EV-CLF-005: Card anatomy is inconsistent across design systems</a></li><li><a href="#ev-clf-006-accessible-components-do-not-guarantee-accessible-products">EV-CLF-006: Accessible components do not guarantee accessible products</a></li><li><a href="#ev-clf-007-user-text-overrides-are-a-structural-stressor">EV-CLF-007: User text overrides are a structural stressor</a></li><li><a href="#failed-assumptions">Failed Assumptions</a></li><li><a href="#fa-clf-001-zero-markup-change-is-the-success-criterion">FA-CLF-001: Zero markup change is the success criterion</a></li><li><a href="#fa-clf-002-a-visually-repeated-container-is-necessarily-a-reusable-component">FA-CLF-002: A visually repeated container is necessarily a reusable component</a></li><li><a href="#fa-clf-003-css-can-absorb-every-hierarchy-change">FA-CLF-003: CSS can absorb every hierarchy change</a></li><li><a href="#architectural-comparisons">Architectural Comparisons</a></li><li><a href="#comparison-1-universal-anatomy-versus-core-plus-context">Comparison 1: Universal anatomy versus core-plus-context</a></li><li><a href="#comparison-2-shared-markup-versus-shared-data">Comparison 2: Shared markup versus shared data</a></li><li><a href="#comparison-3-generic-card-versus-domain-record">Comparison 3: Generic card versus domain record</a></li><li><a href="#theory-impact-assessment">Theory Impact Assessment</a></li><li><a href="#affected-theory-records">Affected theory records</a></li><li><a href="#new-principle-candidates">New principle candidates</a></li><li><a href="#th-clf-001-semantic-stability-boundary">TH-CLF-001: Semantic Stability Boundary</a></li><li><a href="#th-clf-002-layered-reuse-principle">TH-CLF-002: Layered Reuse Principle</a></li><li><a href="#th-clf-003-visual-container-non-equivalence">TH-CLF-003: Visual Container Non-Equivalence</a></li><li><a href="#deprecated-principles">Deprecated principles</a></li><li><a href="#confidence-changes">Confidence changes</a></li><li><a href="#predictions-created">Predictions created</a></li><li><a href="#predictions-invalidated">Predictions invalidated</a></li><li><a href="#required-theory-registry-updates">Required theory registry updates</a></li><li><a href="#decision-log">Decision Log</a></li><li><a href="#df-clf-001-test-a-domain-record-before-a-generic-card">DF-CLF-001: Test a domain record before a generic card</a></li><li><a href="#df-clf-002-compare-three-models-rather-than-defend-one">DF-CLF-002: Compare three models rather than defend one</a></li><li><a href="#df-clf-003-treat-accessibility-conflicts-as-falsification">DF-CLF-003: Treat accessibility conflicts as falsification</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#recommended-next-research">Recommended Next Research</a></li><li><a href="#priority-1-execute-ex-clf-001">Priority 1 — Execute EX-CLF-001</a></li><li><a href="#priority-2-component-taxonomy-based-on-discovered-invariants">Priority 2 — Component taxonomy based on discovered invariants</a></li><li><a href="#priority-3-encapsulation-experiment-using-the-winning-semantic-model">Priority 3 — Encapsulation experiment using the winning semantic model</a></li><li><a href="#priority-4-native-control-substitution-criteria">Priority 4 — Native control substitution criteria</a></li><li><a href="#research-backlog">Research Backlog</a></li><li><a href="#suggested-specialized-research-agents">Suggested Specialized Research Agents</a></li><li><a href="#agent-sra-clf-sem">Agent SRA-CLF-SEM</a></li><li><a href="#agent-sra-clf-a11y">Agent SRA-CLF-A11Y</a></li><li><a href="#agent-sra-clf-sys">Agent SRA-CLF-SYS</a></li><li><a href="#agent-sra-clf-i18n">Agent SRA-CLF-I18N</a></li><li><a href="#parallel-research-opportunities">Parallel Research Opportunities</a></li><li><a href="#risks">Risks</a></li><li><a href="#r-clf-001-domain-overfitting">R-CLF-001: Domain overfitting</a></li><li><a href="#r-clf-002-visual-design-bias">R-CLF-002: Visual design bias</a></li><li><a href="#r-clf-003-retrofitted-criteria">R-CLF-003: Retrofitted criteria</a></li><li><a href="#r-clf-004-accessibility-reduced-to-automation">R-CLF-004: Accessibility reduced to automation</a></li><li><a href="#r-clf-005-core-plus-context-becomes-slot-sprawl">R-CLF-005: Core-plus-context becomes slot sprawl</a></li><li><a href="#r-clf-006-confusing-data-reuse-with-component-reuse">R-CLF-006: Confusing data reuse with component reuse</a></li><li><a href="#cross-discipline-opportunities">Cross-Discipline Opportunities</a></li><li><a href="#information-architecture">Information architecture</a></li><li><a href="#cognitive-psychology">Cognitive psychology</a></li><li><a href="#typography">Typography</a></li><li><a href="#gestalt-psychology">Gestalt psychology</a></li><li><a href="#human-factors">Human factors</a></li><li><a href="#scientific-communication">Scientific communication</a></li><li><a href="#knowledge-relationships">Knowledge Relationships</a></li><li><a href="#repository-updates">Repository Updates</a></li><li><a href="#website-updates">Website Updates</a></li><li><a href="#ai-consumption-notes">AI Consumption Notes</a></li><li><a href="#handoff-instructions">Handoff Instructions</a></li><li><a href="#research-journal">Research Journal</a></li><li><a href="#jr-clf-002-001-2026-07-21">JR-CLF-002-001 — 2026-07-21</a></li><li><a href="#question">Question</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#decision">Decision</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#jr-clf-002-002-2026-07-21">JR-CLF-002-002 — 2026-07-21</a></li><li><a href="#question">Question</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#decision">Decision</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#jr-clf-002-003-2026-07-21">JR-CLF-002-003 — 2026-07-21</a></li><li><a href="#question">Question</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#decision">Decision</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#research-quality-metrics">Research Quality Metrics</a></li><li><a href="#research-debt">Research Debt</a></li><li><a href="#missing-evidence">Missing evidence</a></li><li><a href="#missing-experiments">Missing experiments</a></li><li><a href="#missing-disciplines">Missing disciplines</a></li><li><a href="#replication-needed">Replication needed</a></li><li><a href="#tool-limitations">Tool limitations</a></li><li><a href="#assumptions-awaiting-evidence">Assumptions awaiting evidence</a></li><li><a href="#appendix-a-source-register">Appendix A — Source Register</a></li><li><a href="#standards-and-platform-research">Standards and platform research</a></li><li><a href="#mature-design-system-evidence">Mature design-system evidence</a></li><li><a href="#appendix-b-completion-checklist">Appendix B — Completion Checklist</a></li><li><a href="#revision-history">Revision History</a></li> </ol> </aside> <section class="document-body"><h1 id="semantic-durability-across-interface-contexts">Semantic Durability Across Interface Contexts</h1>
+<h2 id="research-state-snapshot">Research State Snapshot</h2>
+<p><strong>Theory Version:</strong> Pre-theory; foundational report version 0.1<br>
+<strong>Knowledge Base Version:</strong> CLF-KB-0.2<br>
+<strong>Highest Confidence Areas:</strong> Native-first controls; meaningful DOM sequence; contextual layout ownership<br>
+<strong>Lowest Confidence Areas:</strong> Durability of composite content anatomy; limits of one semantic model across product contexts<br>
+<strong>Largest Remaining Unknown:</strong> Whether a shared semantic structure survives major changes in visual hierarchy, interaction, and information density<br>
+<strong>Active Research Streams:</strong> Semantic durability; encapsulation by category; token boundaries; native-control substitution criteria<br>
+<strong>Recently Invalidated Ideas:</strong> Universal custom-element strategy; default Shadow DOM; immutable markup as a goal<br>
+<strong>Priority Changes:</strong> Semantic durability moved ahead of token architecture because an incorrect content model cannot be repaired by tokens or CSS</p>
+<hr>
+<h1 id="executive-summary">Executive Summary</h1>
+<p>The foundational report concluded that semantic HTML can remain relatively stable across visual redesign, but only when the markup represents durable meaning rather than a current visual grouping. That conclusion is plausible and standards-aligned, but it has not yet been tested against the project’s actual range of interface contexts.</p>
+<p>This package converts that broad conclusion into an executable investigation.</p>
+<p>The central hypothesis is:</p>
+<blockquote>
+<p>A domain-oriented content model can support six structurally different presentations without changing its essential semantic relationships, while presentation-only differences remain in CSS and parent composition.</p>
+</blockquote>
+<p>The investigation must not define production component APIs. It must compare alternative information structures and determine which relationships are truly invariant. It will use one complex domain object rather than a generic card, because “card” is a visual container and may conceal the real semantic unit.</p>
+<p>The recommended test object is a <strong>research evidence record</strong> containing:</p>
+<ul>
+<li>identity,</li>
+<li>proposition or finding,</li>
+<li>explanatory summary,</li>
+<li>confidence,</li>
+<li>status,</li>
+<li>provenance,</li>
+<li>supporting relationships,</li>
+<li>contradicting relationships,</li>
+<li>limitations,</li>
+<li>and optional actions.</li>
+</ul>
+<p>The same information must be modeled in six contexts:</p>
+<ol>
+<li>Minimal editorial narrative</li>
+<li>Dense analytical registry</li>
+<li>Expressive overview or marketing presentation</li>
+<li>Mobile-first inspection flow</li>
+<li>High-accessibility or low-vision presentation</li>
+<li>Print-oriented research report</li>
+</ol>
+<p>Three competing semantic models should be evaluated:</p>
+<ul>
+<li><strong>M1: Universal record model</strong> — one canonical sequence and anatomy in every context.</li>
+<li><strong>M2: Core-plus-context model</strong> — invariant semantic core with explicitly contextual supplementary regions.</li>
+<li><strong>M3: Specialized semantic models</strong> — separate editorial, registry, and action-oriented structures sharing data but not markup.</li>
+</ul>
+<p>The likely answer is not total stability or total specialization. Preliminary evidence favors M2: a small invariant semantic core combined with context-owned composition and, where interaction meaning changes, specialized structures. This remains a hypothesis until the transformations are modeled and tested.</p>
+<p>No implementation should begin from a generic card API until this study establishes whether “card,” “record,” “finding,” or another domain concept is the durable boundary.</p>
+<hr>
+<h1 id="original-objective">Original Objective</h1>
+<p>Determine what semantic and structural foundation the future component library can safely rely on before production implementation begins.</p>
+<p>Specifically:</p>
+<ul>
+<li>identify which content relationships remain stable across radically different visual systems;</li>
+<li>distinguish visual rearrangement from semantic change;</li>
+<li>determine when CSS and parent composition are sufficient;</li>
+<li>determine when markup must change to preserve meaning or interaction;</li>
+<li>detect whether a generic visual abstraction such as a card conceals several incompatible semantic models;</li>
+<li>and produce evidence that can guide later component boundaries without prematurely designing APIs.</li>
+</ul>
+<hr>
+<h1 id="scope">Scope</h1>
+<h2 id="included">Included</h2>
+<ul>
+<li>semantic content relationships;</li>
+<li>document order and meaningful sequence;</li>
+<li>visual hierarchy versus reading hierarchy;</li>
+<li>focus order when optional actions are present;</li>
+<li>content anatomy across six contrasting contexts;</li>
+<li>progressive enhancement and no-JavaScript comprehension;</li>
+<li>localization, right-to-left writing, text enlargement, and print implications;</li>
+<li>comparison of universal, core-plus-context, and specialized models;</li>
+<li>measurable redesign blast radius at the structural level.</li>
+</ul>
+<h2 id="excluded">Excluded</h2>
+<ul>
+<li>production custom elements;</li>
+<li>naming conventions;</li>
+<li>final attributes, properties, events, slots, or parts;</li>
+<li>token implementation;</li>
+<li>final CSS architecture;</li>
+<li>framework adapters;</li>
+<li>build tooling;</li>
+<li>visual polish;</li>
+<li>final component catalog.</li>
+</ul>
+<h2 id="boundary-condition">Boundary condition</h2>
+<p>Small throwaway semantic diagrams and non-production prototypes may be used as experimental instruments. They must not be treated as library implementation or carried forward without a separate architectural decision.</p>
+<hr>
+<h1 id="repository-context">Repository Context</h1>
+<p>This research follows <code>component-library-foundations-research-report.md</code>, which established a hybrid, native-first, category-specific direction. The report identified semantic durability as a high-value unresolved assumption:</p>
+<ul>
+<li>CSS can radically alter presentation but cannot repair missing or incorrect semantics.</li>
+<li>Visual reordering may conflict with reading and focus order.</li>
+<li>A component boundary based on visual similarity may be unstable.</li>
+<li>Contextual layout should generally belong to the parent.</li>
+<li>Accessibility is shared between library and consumer.</li>
+</ul>
+<p>This package is the first focused validation cycle beneath that report.</p>
+<p>Recommended repository placement:</p>
+<pre><code class="language-text">research/
+  packages/
+    RP-CLF-002-semantic-durability.md
+  journals/
+    JR-CLF-002-*.md
+  evidence/
+    EV-CLF-*.md
+  hypotheses/
+    HY-CLF-*.md
+  experiments/
+    EX-CLF-001-semantic-transformations/
+      README.md
+      content-inventory.md
+      context-models.md
+      test-matrix.md
+      results.md
+</code></pre>
+<hr>
+<h1 id="current-understanding">Current Understanding</h1>
+<h2 id="observation-obs-clf-001">Observation OBS-CLF-001</h2>
+<h3 id="observation">Observation</h3>
+<p>WCAG requires content whose sequence affects meaning to retain a programmatically determinable correct reading sequence. W3C technique G57 demonstrates that CSS may position elements freely when the underlying sequence remains meaningful. Failure F1 identifies CSS positioning that changes meaning as a failure of WCAG 1.3.2.</p>
+<h3 id="interpretation">Interpretation</h3>
+<p>CSS rearrangement is not inherently inaccessible. It becomes unsafe when visual placement implies a relationship or sequence that differs from the DOM, or when keyboard focus no longer follows a logical interaction sequence.</p>
+<h3 id="confidence">Confidence</h3>
+<p>High.</p>
+<h2 id="observation-obs-clf-002">Observation OBS-CLF-002</h2>
+<h3 id="observation-1">Observation</h3>
+<p>WCAG focus-order guidance states that focus order need not exactly match visual layout, but it must remain logical and preserve the meaning and operation implied by the visual presentation.</p>
+<h3 id="interpretation-1">Interpretation</h3>
+<p>A component can tolerate some visual rearrangement, but not arbitrary reordering of interactive regions. A design transformation that promotes a secondary action ahead of the primary proposition may require semantic or structural change, not merely CSS order.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High.</p>
+<h2 id="observation-obs-clf-003">Observation OBS-CLF-003</h2>
+<h3 id="observation-2">Observation</h3>
+<p>Open UI studies component anatomies before standardizing behavior, states, and events. Its working process treats anatomy as the foundation from which behavior is defined, and its card research shows broad disagreement among systems about what a card contains.</p>
+<h3 id="interpretation-2">Interpretation</h3>
+<p>Component anatomy is not a neutral implementation detail. A premature anatomy can encode assumptions that later constrain behavior and redesign. The diversity of card anatomies weakens the idea that “card” itself is a stable semantic object.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>Moderate to high.</p>
+<h2 id="observation-obs-clf-004">Observation OBS-CLF-004</h2>
+<h3 id="observation-3">Observation</h3>
+<p>Carbon distinguishes productive and expressive typography strategies and allows them to be blended according to context. It also warns that accessible components do not guarantee an accessible product because content-owner changes can affect compliance.</p>
+<h3 id="interpretation-3">Interpretation</h3>
+<p>Mature systems explicitly support contextual presentation differences while retaining shared foundations, but they do not claim that the component alone controls all semantic or accessibility outcomes.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>Moderate.</p>
+<h2 id="observation-obs-clf-005">Observation OBS-CLF-005</h2>
+<h3 id="observation-4">Observation</h3>
+<p>The HTML standard allows autonomous custom elements to contain broadly author-defined content, while semantics supplied by the custom element author are not equivalent to the built-in semantics of native elements.</p>
+<h3 id="interpretation-4">Interpretation</h3>
+<p>A custom-element boundary does not validate the content model. The semantic structure must be designed independently of whether it later receives a custom-element wrapper.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>High.</p>
+<hr>
+<h1 id="key-discoveries">Key Discoveries</h1>
+<h2 id="kd-clf-001-stable-markup-is-a-constrained-optimization-target">KD-CLF-001: Stable markup is a constrained optimization target</h2>
+<p>The correct goal is not immutable DOM. It is minimizing structural change <strong>without sacrificing meaning, operation, or accessibility</strong>.</p>
+<p>A redesign requiring markup changes is evidence of one of four conditions:</p>
+<ol>
+<li>The original markup encoded presentation rather than meaning.</li>
+<li>The new design introduces a genuinely different interaction model.</li>
+<li>The visual design conflicts with a meaningful sequence and should be rejected or revised.</li>
+<li>The domain contains multiple semantic objects that were incorrectly merged.</li>
+</ol>
+<p>Only the first represents a clear architectural failure. The others may justify change.</p>
+<h2 id="kd-clf-002-a-semantic-core-may-be-more-durable-than-a-complete-anatomy">KD-CLF-002: A semantic core may be more durable than a complete anatomy</h2>
+<p>Identity, proposition, status, confidence, and provenance may remain invariant while metadata placement, supporting detail, actions, and relationship navigation vary by context.</p>
+<p>This suggests distinguishing:</p>
+<ul>
+<li><strong>semantic invariants</strong> — relationships that must survive every representation;</li>
+<li><strong>contextual content</strong> — information required only for a particular task;</li>
+<li><strong>presentation choices</strong> — emphasis, grouping, density, alignment, and decoration;</li>
+<li><strong>interaction transformations</strong> — disclosures, navigation, selection, editing, or comparison.</li>
+</ul>
+<h2 id="kd-clf-003-information-priority-and-information-sequence-are-related-but-not-identical">KD-CLF-003: Information priority and information sequence are related but not identical</h2>
+<p>A title can become visually less prominent without moving in the DOM. Conversely, moving provenance ahead of a finding may alter interpretation in a scientific report even when all content remains present. Visual hierarchy can often change safely; explanatory sequence sometimes cannot.</p>
+<h2 id="kd-clf-004-the-durable-unit-is-likely-a-domain-record-not-a-card">KD-CLF-004: The durable unit is likely a domain record, not a card</h2>
+<p>A card is commonly a visual grouping mechanism. Editorial prose, registry rows, print blocks, and mobile disclosures may all represent the same evidence record without all being cards. The library may eventually need a domain-oriented structure plus separate presentation compositions rather than a universal card component.</p>
+<h2 id="kd-clf-005-reuse-must-be-measured-at-more-than-one-layer">KD-CLF-005: Reuse must be measured at more than one layer</h2>
+<p>The same data can be reused while markup differs. The same semantic core can be reused while contextual wrappers differ. The same behavior can be reused without sharing the entire visual component. Therefore, “markup reuse” is only one kind of reuse and should not be maximized at the expense of clarity.</p>
+<hr>
+<h1 id="hypothesis-registry">Hypothesis Registry</h1>
+<h2 id="hy-clf-001-universal-semantic-record">HY-CLF-001: Universal Semantic Record</h2>
+<p><strong>Statement:</strong> One canonical semantic sequence for an evidence record can serve all six contexts without changing the relative order of required regions.</p>
+<p><strong>Rationale:</strong> Durable meaning should permit presentation changes through CSS and parent composition.</p>
+<p><strong>Supporting evidence:</strong> WCAG allows CSS positioning when the programmatic sequence remains meaningful; editorial and print views often share a narrative sequence.</p>
+<p><strong>Contradicting evidence:</strong> Dense registries prioritize scanning; mobile views may require progressive disclosure; action-oriented contexts may need controls earlier; scientific interpretation may require provenance before conclusions.</p>
+<p><strong>Status:</strong> Testing.</p>
+<p><strong>Confidence:</strong> Low to moderate.</p>
+<p><strong>Next falsification attempt:</strong> Model the six contexts with one sequence and identify any context where visual order, focus order, or task flow becomes misleading.</p>
+<h2 id="hy-clf-002-core-plus-context-model">HY-CLF-002: Core-Plus-Context Model</h2>
+<p><strong>Statement:</strong> A small invariant semantic core can remain stable while supplementary regions and interaction wrappers vary by context.</p>
+<p><strong>Rationale:</strong> Domain meaning may be stable even when task-specific details and controls differ.</p>
+<p><strong>Supporting evidence:</strong> Mature systems separate foundations from patterns; accessibility is shared with consumers; Open UI separates anatomy, states, and behaviors.</p>
+<p><strong>Contradicting evidence:</strong> Too small a core may provide little practical reuse; contextual regions may become undocumented escape hatches.</p>
+<p><strong>Status:</strong> Testing.</p>
+<p><strong>Confidence:</strong> Moderate.</p>
+<p><strong>Next falsification attempt:</strong> Define the minimum core before transformations, then test whether every context can use it without duplicating or contradicting information.</p>
+<h2 id="hy-clf-003-specialized-semantic-models">HY-CLF-003: Specialized Semantic Models</h2>
+<p><strong>Statement:</strong> Editorial, registry, and action-oriented contexts require separate semantic structures even when they share underlying data.</p>
+<p><strong>Rationale:</strong> Task and reading sequence may change enough that one anatomy becomes artificial.</p>
+<p><strong>Supporting evidence:</strong> Visual grouping labels such as card span many incompatible anatomies; focus and reading order must preserve task meaning.</p>
+<p><strong>Contradicting evidence:</strong> Separate models may duplicate markup and accessibility logic and increase migration burden.</p>
+<p><strong>Status:</strong> Testing.</p>
+<p><strong>Confidence:</strong> Moderate.</p>
+<p><strong>Next falsification attempt:</strong> Identify whether differences are genuinely semantic or can be expressed as parent composition and optional contextual content.</p>
+<h2 id="hy-clf-004-css-only-hierarchy-transformation">HY-CLF-004: CSS-Only Hierarchy Transformation</h2>
+<p><strong>Statement:</strong> Typography, spacing, geometry, grouping, and responsive behavior can create all six visual hierarchies without changing semantic region order.</p>
+<p><strong>Rationale:</strong> CSS is designed to control rendering across media.</p>
+<p><strong>Supporting evidence:</strong> Modern CSS supports grid, flex, logical properties, container queries, media queries, and print styling.</p>
+<p><strong>Contradicting evidence:</strong> CSS cannot create missing semantics or safely resolve every order conflict.</p>
+<p><strong>Status:</strong> Testing.</p>
+<p><strong>Confidence:</strong> Moderate within non-interactive contexts; low across interaction changes.</p>
+<p><strong>Next falsification attempt:</strong> Require a mobile action-first flow and a provenance-first print flow while preserving the same DOM order.</p>
+<h2 id="hy-clf-005-visual-card-is-not-a-durable-component-boundary">HY-CLF-005: Visual Card Is Not a Durable Component Boundary</h2>
+<p><strong>Statement:</strong> A generic card abstraction will accumulate presentation modes because it groups unrelated semantic objects by appearance.</p>
+<p><strong>Rationale:</strong> Open UI card research shows wide anatomical variation; cards are used for navigation, summaries, commerce, media, status, and actions.</p>
+<p><strong>Supporting evidence:</strong> Existing design systems document many card types and anatomies.</p>
+<p><strong>Contradicting evidence:</strong> A deliberately minimal surface/container abstraction may remain useful if it claims no domain semantics.</p>
+<p><strong>Status:</strong> Provisionally supported.</p>
+<p><strong>Confidence:</strong> Moderate.</p>
+<p><strong>Next falsification attempt:</strong> Compare a purely visual surface composition with a domain evidence record and determine which public obligations each would need.</p>
+<h2 id="hy-clf-006-dom-order-can-remain-task-neutral">HY-CLF-006: DOM Order Can Remain Task-Neutral</h2>
+<p><strong>Statement:</strong> A single DOM sequence can remain logical for reading, keyboard navigation, and comprehension across all six contexts.</p>
+<p><strong>Rationale:</strong> A strong semantic sequence may outlive presentation changes.</p>
+<p><strong>Supporting evidence:</strong> Meaningful sequence can remain stable while CSS changes placement.</p>
+<p><strong>Contradicting evidence:</strong> Tasks differ between reading, scanning, comparing, navigating, and acting.</p>
+<p><strong>Status:</strong> Testing.</p>
+<p><strong>Confidence:</strong> Low.</p>
+<p><strong>Next falsification attempt:</strong> Conduct task walkthroughs and screen-reader linearization for every context.</p>
+<hr>
+<h1 id="experimental-program">Experimental Program</h1>
+<h2 id="ex-clf-001-semantic-transformation-matrix">EX-CLF-001: Semantic Transformation Matrix</h2>
+<h3 id="research-question">Research question</h3>
+<p>Which relationships in an evidence record remain invariant across editorial, registry, expressive, mobile, low-vision, and print contexts?</p>
+<h3 id="inputs">Inputs</h3>
+<p>Create a content corpus with at least twelve evidence records exhibiting:</p>
+<ul>
+<li>short and very long titles;</li>
+<li>no summary and multi-paragraph summaries;</li>
+<li>low, moderate, and high confidence;</li>
+<li>supported, challenged, and superseded status;</li>
+<li>zero, one, and many sources;</li>
+<li>supporting and contradicting relationships;</li>
+<li>missing optional metadata;</li>
+<li>long translated labels;</li>
+<li>right-to-left text;</li>
+<li>actionable and non-actionable records;</li>
+<li>asynchronous status updates;</li>
+<li>and malformed or incomplete imported data.</li>
+</ul>
+<h3 id="predefined-semantic-candidates">Predefined semantic candidates</h3>
+<p>Before visual modeling, inventory candidate relationships without assigning markup:</p>
+<ul>
+<li>record identity;</li>
+<li>proposition heading;</li>
+<li>explanatory body;</li>
+<li>confidence qualifier;</li>
+<li>lifecycle status;</li>
+<li>provenance/source relation;</li>
+<li>support relation;</li>
+<li>contradiction relation;</li>
+<li>limitation/caveat;</li>
+<li>action set;</li>
+<li>collection membership;</li>
+<li>chronology.</li>
+</ul>
+<p>For each relationship, classify it as:</p>
+<ul>
+<li>invariant;</li>
+<li>context-required;</li>
+<li>optional;</li>
+<li>derived;</li>
+<li>presentation-only;</li>
+<li>or unresolved.</li>
+</ul>
+<h3 id="competing-models">Competing models</h3>
+<h4 id="model-m1--universal-record">Model M1 — Universal record</h4>
+<p>One complete semantic sequence is used in every context. CSS and parent composition perform all transformations.</p>
+<h4 id="model-m2--core-plus-contextual-regions">Model M2 — Core plus contextual regions</h4>
+<p>A stable core is preserved; task-specific supplementary content and controls are supplied by contextual compositions.</p>
+<h4 id="model-m3--specialized-models">Model M3 — Specialized models</h4>
+<p>Separate structures are used for narrative evidence, registry evidence, and actionable evidence, sharing only data contracts and lower-level behaviors.</p>
+<h3 id="context-transformations">Context transformations</h3>
+<h4 id="c1-minimal-editorial">C1 Minimal editorial</h4>
+<p>Primary task: understand an argument in narrative flow.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>prose integration;</li>
+<li>narrow measure;</li>
+<li>low visual chrome;</li>
+<li>source citations near claims;</li>
+<li>optional actions visually quiet.</li>
+</ul>
+<h4 id="c2-dense-analytical-registry">C2 Dense analytical registry</h4>
+<p>Primary task: scan, sort, compare, and inspect many records.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>high density;</li>
+<li>repeated columns or aligned fields;</li>
+<li>truncated summaries;</li>
+<li>status and confidence visible at a glance;</li>
+<li>batch selection may be present.</li>
+</ul>
+<h4 id="c3-expressive-overview">C3 Expressive overview</h4>
+<p>Primary task: orient and persuade without losing research integrity.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>dramatic scale differences;</li>
+<li>selective metadata;</li>
+<li>imagery or illustration adjacency;</li>
+<li>asymmetrical composition;</li>
+<li>limited initial detail.</li>
+</ul>
+<h4 id="c4-mobile-inspection-flow">C4 Mobile inspection flow</h4>
+<p>Primary task: review one record and take an action in a narrow viewport.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>progressive disclosure;</li>
+<li>persistent or prominent actions;</li>
+<li>long touch targets;</li>
+<li>uncertain network and delayed JavaScript;</li>
+<li>one-column reading sequence.</li>
+</ul>
+<h4 id="c5-low-vision-presentation">C5 Low-vision presentation</h4>
+<p>Primary task: read and understand with enlarged text, strong contrast, and reduced visual complexity.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>200% text size;</li>
+<li>user text-spacing overrides;</li>
+<li>strong focus indication;</li>
+<li>no information encoded only by color;</li>
+<li>minimal motion;</li>
+<li>content reflow without two-dimensional scrolling except where essential.</li>
+</ul>
+<h4 id="c6-print-research-report">C6 Print research report</h4>
+<p>Primary task: preserve argument, provenance, and stable references on paper or PDF.</p>
+<p>Pressure applied:</p>
+<ul>
+<li>no interactive disclosure;</li>
+<li>visible URLs or reference identifiers where required;</li>
+<li>pagination;</li>
+<li>orphan/widow pressure;</li>
+<li>grayscale legibility;</li>
+<li>repeated contextual headings.</li>
+</ul>
+<h3 id="measurements">Measurements</h3>
+<p>For each model and context, record:</p>
+<ol>
+<li>Required semantic relationships retained</li>
+<li>Required relationship changes</li>
+<li>Region-order changes</li>
+<li>Interactive-order changes</li>
+<li>Duplicated information</li>
+<li>Omitted information</li>
+<li>Context-specific wrappers</li>
+<li>Presentation-specific fields or switches</li>
+<li>CSS visual reordering operations</li>
+<li>Cases where visual and DOM sequence diverge</li>
+<li>Screen-reader linearization defects</li>
+<li>Keyboard focus-order defects</li>
+<li>No-JavaScript comprehension failures</li>
+<li>Localization or RTL defects</li>
+<li>Print-only structural changes</li>
+<li>Author explanation steps required</li>
+<li>Number of exceptions to the model</li>
+</ol>
+<h3 id="failure-thresholds">Failure thresholds</h3>
+<p>A model is weakened when any of the following occurs:</p>
+<ul>
+<li>more than two contexts require a different meaningful sequence;</li>
+<li>visual reordering creates a conflict with reading or focus order;</li>
+<li>more than two presentation-specific switches are required to make the anatomy usable;</li>
+<li>a context needs duplicate hidden content to preserve accessibility;</li>
+<li>consumers must know undocumented internal ordering assumptions;</li>
+<li>optional regions create contradictory or nonsensical combinations;</li>
+<li>no-JavaScript output becomes materially incomplete;</li>
+<li>the same field has different semantic meaning across contexts;</li>
+<li>or more than 20% of records require one-off exceptions.</li>
+</ul>
+<p>A model is falsified for universal use when:</p>
+<ul>
+<li>a required context cannot preserve correct meaning and operation without structural change;</li>
+<li>or preserving the model requires an accessibility failure.</li>
+</ul>
+<h3 id="success-criteria">Success criteria</h3>
+<p>A model is provisionally supported when:</p>
+<ul>
+<li>all invariant relationships remain programmatically available;</li>
+<li>no context produces a meaningful-sequence or focus-order conflict;</li>
+<li>presentation changes do not require hidden duplicate content;</li>
+<li>context-specific additions are explicit and bounded;</li>
+<li>no more than one semantic structure change is required across six contexts;</li>
+<li>and authors can explain the model without knowledge of implementation internals.</li>
+</ul>
+<h3 id="manual-evaluation">Manual evaluation</h3>
+<ul>
+<li>Linear reading review with styles disabled</li>
+<li>Keyboard-only walkthrough</li>
+<li>Screen-reader review in at least VoiceOver/Safari and NVDA/Firefox or Chrome</li>
+<li>200% browser zoom</li>
+<li>WCAG text-spacing override</li>
+<li>Forced-colors mode</li>
+<li>Print preview and generated PDF inspection</li>
+<li>Right-to-left review</li>
+<li>Translation expansion review</li>
+<li>No-JavaScript review</li>
+</ul>
+<h3 id="automated-evaluation">Automated evaluation</h3>
+<ul>
+<li>HTML validation</li>
+<li>Accessibility scanning</li>
+<li>heading and landmark structure assertions</li>
+<li>focusable-element order extraction</li>
+<li>duplicate-ID detection</li>
+<li>DOM sequence snapshots</li>
+<li>content-completeness assertions</li>
+<li>generated model-combination checks</li>
+<li>print overflow checks where tooling permits</li>
+</ul>
+<h3 id="output">Output</h3>
+<ul>
+<li><code>content-inventory.md</code></li>
+<li><code>semantic-invariants.md</code></li>
+<li><code>context-models.md</code></li>
+<li><code>transformation-matrix.csv</code></li>
+<li><code>accessibility-results.md</code></li>
+<li><code>exceptions.md</code></li>
+<li><code>decision-record.md</code></li>
+<li>updated evidence and hypothesis registries</li>
+</ul>
+<hr>
+<h1 id="evidence-registry">Evidence Registry</h1>
+<h2 id="ev-clf-001-meaningful-sequence-permits-styling-but-constrains-order">EV-CLF-001: Meaningful sequence permits styling but constrains order</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Standards review<br>
+<strong>Observation:</strong> WCAG technique G57 permits CSS positioning when the underlying sequence remains meaningful.<br>
+<strong>Measurement:</strong> Normative accessibility requirement supported by W3C guidance.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-001, HY-CLF-004, HY-CLF-006<br>
+<strong>Effect:</strong> Supports bounded semantic stability; contradicts arbitrary visual reordering.<br>
+<strong>Confidence:</strong> High<br>
+<strong>Limitations:</strong> Does not determine the best sequence for this project’s domain records.<br>
+<strong>Reproduction:</strong> Review WCAG 2.2 technique G57 and compare the DOM sequence with visual positioning.<br>
+<strong>Source:</strong> <a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G57">https://www.w3.org/WAI/WCAG22/Techniques/general/G57</a></p>
+<h2 id="ev-clf-002-css-positioning-can-fail-meaningful-sequence">EV-CLF-002: CSS positioning can fail meaningful sequence</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Standards counterexample review<br>
+<strong>Observation:</strong> W3C failure F1 identifies content whose meaning changes because CSS positioning differs from programmatic order.<br>
+<strong>Measurement:</strong> Explicit documented WCAG failure.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-004, HY-CLF-006<br>
+<strong>Effect:</strong> Weakens CSS-only transformation as a universal strategy.<br>
+<strong>Confidence:</strong> High<br>
+<strong>Limitations:</strong> Requires project-specific judgment about when meaning changes.<br>
+<strong>Reproduction:</strong> Review failure examples and linearize proposed context models.<br>
+<strong>Source:</strong> <a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F1">https://www.w3.org/WAI/WCAG22/Techniques/failures/F1</a></p>
+<h2 id="ev-clf-003-focus-order-must-preserve-visual-meaning-and-operation">EV-CLF-003: Focus order must preserve visual meaning and operation</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Accessibility standards review<br>
+<strong>Observation:</strong> Focus order may differ from visual layout but must remain logical and preserve the meaning and operation conveyed by the visual presentation.<br>
+<strong>Measurement:</strong> WCAG 2.4.3 understanding guidance.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-001, HY-CLF-006<br>
+<strong>Effect:</strong> Establishes a hard constraint on action and control rearrangement.<br>
+<strong>Confidence:</strong> High<br>
+<strong>Limitations:</strong> Logical order still requires human evaluation.<br>
+<strong>Reproduction:</strong> Tab through each model and compare focus progression with visual and semantic hierarchy.<br>
+<strong>Source:</strong> <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html">https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html</a></p>
+<h2 id="ev-clf-004-component-anatomy-precedes-behavior-standardization">EV-CLF-004: Component anatomy precedes behavior standardization</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Open UI process review<br>
+<strong>Observation:</strong> Open UI treats anatomy as the foundation for defining behavior, states, and events.<br>
+<strong>Measurement:</strong> Repeated process guidance across Open UI documentation.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-001, HY-CLF-002, HY-CLF-003<br>
+<strong>Effect:</strong> Supports researching semantic structure before API or behavior design.<br>
+<strong>Confidence:</strong> Moderate to high<br>
+<strong>Limitations:</strong> Open UI focuses primarily on common controls, not all domain composites.<br>
+<strong>Reproduction:</strong> Review Open UI working mode, glossary, and contribution guidance.<br>
+<strong>Sources:</strong> <a href="https://open-ui.org/working-mode/">https://open-ui.org/working-mode/</a> ; <a href="https://open-ui.org/get-involved/">https://open-ui.org/get-involved/</a> ; <a href="https://open-ui.org/glossary/">https://open-ui.org/glossary/</a></p>
+<h2 id="ev-clf-005-card-anatomy-is-inconsistent-across-design-systems">EV-CLF-005: Card anatomy is inconsistent across design systems</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Cross-system anatomy review<br>
+<strong>Observation:</strong> Open UI’s card research catalogs divergent card concepts and parts, including basic, media, image, illustration, metadata, and overlay forms.<br>
+<strong>Measurement:</strong> Multiple independent design systems use the same name for different anatomical and behavioral concepts.<br>
+<strong>Relevant hypothesis:</strong> HY-CLF-005<br>
+<strong>Effect:</strong> Supports treating card as a visual pattern rather than assuming a universal domain component.<br>
+<strong>Confidence:</strong> Moderate<br>
+<strong>Limitations:</strong> Divergence does not prove a minimal surface abstraction is useless.<br>
+<strong>Reproduction:</strong> Compare the systems listed in Open UI card research.<br>
+<strong>Source:</strong> <a href="https://open-ui.org/components/card.research/">https://open-ui.org/components/card.research/</a></p>
+<h2 id="ev-clf-006-accessible-components-do-not-guarantee-accessible-products">EV-CLF-006: Accessible components do not guarantee accessible products</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Mature-system guidance review<br>
+<strong>Observation:</strong> Carbon states that individually accessible components are only part of building accessible products, and content-owner changes can affect compliance.<br>
+<strong>Measurement:</strong> Explicit architecture and governance guidance from a mature production system.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-002, HY-CLF-003<br>
+<strong>Effect:</strong> Supports a shared accessibility contract and contextual evaluation.<br>
+<strong>Confidence:</strong> Moderate<br>
+<strong>Limitations:</strong> Carbon guidance is not a browser standard.<br>
+<strong>Reproduction:</strong> Review Carbon accessibility overview and component accessibility guidance.<br>
+<strong>Sources:</strong> <a href="https://carbondesignsystem.com/guidelines/accessibility/overview/">https://carbondesignsystem.com/guidelines/accessibility/overview/</a> ; <a href="https://v10.carbondesignsystem.com/components/list/accessibility/">https://v10.carbondesignsystem.com/components/list/accessibility/</a></p>
+<h2 id="ev-clf-007-user-text-overrides-are-a-structural-stressor">EV-CLF-007: User text overrides are a structural stressor</h2>
+<p><strong>Date:</strong> 2026-07-21<br>
+<strong>Experiment:</strong> Accessibility adaptability review<br>
+<strong>Observation:</strong> WCAG text-spacing guidance requires content to adapt when users override line, word, letter, and paragraph spacing.<br>
+<strong>Measurement:</strong> WCAG 1.4.12 understanding guidance.<br>
+<strong>Relevant hypotheses:</strong> HY-CLF-001, HY-CLF-004<br>
+<strong>Effect:</strong> Requires models to survive content expansion and user formatting, not only design-system CSS.<br>
+<strong>Confidence:</strong> High<br>
+<strong>Limitations:</strong> Does not directly settle semantic anatomy.<br>
+<strong>Reproduction:</strong> Apply the WCAG text-spacing values to each context model.<br>
+<strong>Source:</strong> <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html">https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html</a></p>
+<hr>
+<h1 id="failed-assumptions">Failed Assumptions</h1>
+<h2 id="fa-clf-001-zero-markup-change-is-the-success-criterion">FA-CLF-001: Zero markup change is the success criterion</h2>
+<p><strong>Why it seemed reasonable:</strong> Markup stability appears to minimize redesign cost and improve reuse.</p>
+<p><strong>Why it fails:</strong> It rewards preserving a structure even when interaction, reading sequence, or meaning has changed. It can encourage CSS reordering, duplicate hidden content, and overloaded variants.</p>
+<p><strong>Replacement:</strong> Minimize semantic-model churn while allowing evidence-backed structural change.</p>
+<h2 id="fa-clf-002-a-visually-repeated-container-is-necessarily-a-reusable-component">FA-CLF-002: A visually repeated container is necessarily a reusable component</h2>
+<p><strong>Why it seemed reasonable:</strong> Cards and panels recur throughout interfaces and appear to offer easy standardization.</p>
+<p><strong>Why it fails:</strong> Similar surfaces may represent navigation, evidence, commerce, status, selection, or actions. Their semantics and accessibility obligations differ.</p>
+<p><strong>Replacement:</strong> Separate surface composition from domain semantics and behavior.</p>
+<h2 id="fa-clf-003-css-can-absorb-every-hierarchy-change">FA-CLF-003: CSS can absorb every hierarchy change</h2>
+<p><strong>Why it seemed reasonable:</strong> Modern CSS can alter layout, typography, density, and responsive behavior extensively.</p>
+<p><strong>Why it fails:</strong> CSS cannot safely manufacture missing semantics or repair a meaningful-sequence conflict. Interactive order remains constrained.</p>
+<p><strong>Replacement:</strong> CSS owns presentation until a transformation changes meaning or operation.</p>
+<hr>
+<h1 id="architectural-comparisons">Architectural Comparisons</h1>
+<h2 id="comparison-1-universal-anatomy-versus-core-plus-context">Comparison 1: Universal anatomy versus core-plus-context</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Universal anatomy</th>
+<th>Core plus context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Markup reuse</td>
+<td>Highest initially</td>
+<td>High for invariant core</td>
+</tr>
+<tr>
+<td>Semantic clarity</td>
+<td>Strong if sequence is truly universal</td>
+<td>Strong if contextual boundaries are explicit</td>
+</tr>
+<tr>
+<td>Variant pressure</td>
+<td>High when contexts diverge</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Authoring complexity</td>
+<td>Low at first, rises with exceptions</td>
+<td>Moderate but more explicit</td>
+</tr>
+<tr>
+<td>Accessibility risk</td>
+<td>Reordering and hidden duplication</td>
+<td>Misuse of optional contextual regions</td>
+</tr>
+<tr>
+<td>Replaceability</td>
+<td>Lower if consumers depend on complete anatomy</td>
+<td>Higher if core contract remains small</td>
+</tr>
+<tr>
+<td>Likely fit</td>
+<td>Narrowly similar contexts</td>
+<td>Broad but related contexts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preliminary judgment:</strong> Core-plus-context is the leading candidate, but must be protected from becoming an unbounded slot or escape-hatch system.</p>
+<h2 id="comparison-2-shared-markup-versus-shared-data">Comparison 2: Shared markup versus shared data</h2>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Benefit</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shared markup</td>
+<td>Fewer templates; consistent semantics</td>
+<td>Artificial universality and variants</td>
+</tr>
+<tr>
+<td>Shared data model</td>
+<td>Context-specific semantics possible</td>
+<td>Multiple renderers and duplicated accessibility work</td>
+</tr>
+<tr>
+<td>Shared semantic core plus specialized renderers</td>
+<td>Balanced reuse</td>
+<td>More governance and explicit boundaries required</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preliminary judgment:</strong> The architecture should permit reuse at data, semantic-core, behavior, and presentation layers independently.</p>
+<h2 id="comparison-3-generic-card-versus-domain-record">Comparison 3: Generic card versus domain record</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Generic card</th>
+<th>Domain record</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Meaning</td>
+<td>Usually unspecified</td>
+<td>Explicit</td>
+</tr>
+<tr>
+<td>Reuse breadth</td>
+<td>Visually broad</td>
+<td>Domain-bounded</td>
+</tr>
+<tr>
+<td>API pressure</td>
+<td>Presentation switches</td>
+<td>Domain states and relationships</td>
+</tr>
+<tr>
+<td>Styling freedom</td>
+<td>High if purely presentational</td>
+<td>High if content remains open</td>
+</tr>
+<tr>
+<td>Accessibility contract</td>
+<td>Depends on contents</td>
+<td>Can document required relationships</td>
+</tr>
+<tr>
+<td>Failure mode</td>
+<td>Becomes giant variant container</td>
+<td>Becomes too domain-specific</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Preliminary judgment:</strong> Retain “surface/card” only as a composition concept unless later evidence demonstrates stable behavior. Use domain records when the domain relationship itself is reusable.</p>
+<hr>
+<h1 id="theory-impact-assessment">Theory Impact Assessment</h1>
+<h2 id="affected-theory-records">Affected theory records</h2>
+<p>No canonical theory registry exists yet. This package proposes the following candidates.</p>
+<h2 id="new-principle-candidates">New principle candidates</h2>
+<h3 id="th-clf-001-semantic-stability-boundary">TH-CLF-001: Semantic Stability Boundary</h3>
+<p>A structure should remain stable only while its meaning, required reading sequence, and interaction model remain stable.</p>
+<p><strong>Prediction:</strong> Redesigns that alter only typography, spacing, geometry, and grouping can retain semantic structure; redesigns that alter task sequence or information relationships will require contextual composition or structural change.</p>
+<h3 id="th-clf-002-layered-reuse-principle">TH-CLF-002: Layered Reuse Principle</h3>
+<p>Reuse should be evaluated independently at the data, semantic, behavioral, compositional, and visual layers.</p>
+<p><strong>Prediction:</strong> Systems that demand whole-component reuse will accumulate more variants than systems that permit reuse at narrower layers.</p>
+<h3 id="th-clf-003-visual-container-non-equivalence">TH-CLF-003: Visual Container Non-Equivalence</h3>
+<p>Repeated visual containment is insufficient evidence that contained objects share a component boundary.</p>
+<p><strong>Prediction:</strong> Generic card APIs will accumulate domain and presentation modes unless restricted to a minimal surface role.</p>
+<h2 id="deprecated-principles">Deprecated principles</h2>
+<ul>
+<li>Immutable markup as an architectural objective.</li>
+<li>Visual recurrence as sufficient evidence for componentization.</li>
+</ul>
+<h2 id="confidence-changes">Confidence changes</h2>
+<ul>
+<li>Semantic stability: Moderate → Moderate with narrower scope.</li>
+<li>CSS redesignability: High for presentation → unchanged.</li>
+<li>Universal card abstraction: Uncertain → weakened.</li>
+</ul>
+<h2 id="predictions-created">Predictions created</h2>
+<ol>
+<li>At least one of the six contexts will require a different interaction sequence.</li>
+<li>A universal complete anatomy will produce more exceptions than a core-plus-context model.</li>
+<li>The invariant semantic core will contain fewer regions than the first proposed evidence component.</li>
+<li>Print and dense registry contexts will expose the most significant sequence tension.</li>
+</ol>
+<h2 id="predictions-invalidated">Predictions invalidated</h2>
+<p>None yet; empirical execution is pending.</p>
+<h2 id="required-theory-registry-updates">Required theory registry updates</h2>
+<p>Create TH-CLF-001 through TH-CLF-003 as candidate records, not accepted theory.</p>
+<hr>
+<h1 id="decision-log">Decision Log</h1>
+<h2 id="df-clf-001-test-a-domain-record-before-a-generic-card">DF-CLF-001: Test a domain record before a generic card</h2>
+<p><strong>Context:</strong> A generic card is visually familiar but semantically ambiguous.</p>
+<p><strong>Options considered:</strong> Generic card first; native article/section examples; evidence record; multiple unrelated components.</p>
+<p><strong>Evidence:</strong> EV-CLF-004 and EV-CLF-005 show that anatomy matters and card definitions vary widely.</p>
+<p><strong>Decision:</strong> Use a complex evidence record as the primary semantic-durability test object. Include a minimal surface/card abstraction only as a comparison.</p>
+<p><strong>Tradeoffs:</strong> Domain specificity may underrepresent other products, but it exposes richer semantic pressure than a decorative container.</p>
+<p><strong>Risks:</strong> Findings may not generalize to controls or commerce objects.</p>
+<p><strong>Reversal condition:</strong> If the evidence record’s relationships are too unique to expose general component-boundary principles, repeat with a resource or actionable task record.</p>
+<h2 id="df-clf-002-compare-three-models-rather-than-defend-one">DF-CLF-002: Compare three models rather than defend one</h2>
+<p><strong>Context:</strong> The foundational report tentatively favored stable semantic markup.</p>
+<p><strong>Options considered:</strong> Validate one canonical structure; compare universal and specialized models; compare universal, core-plus-context, and specialized models.</p>
+<p><strong>Evidence:</strong> Current standards establish constraints but do not select the correct domain model.</p>
+<p><strong>Decision:</strong> Compare all three serious models.</p>
+<p><strong>Tradeoffs:</strong> More evaluation work, but substantially better falsification value.</p>
+<p><strong>Risks:</strong> Evaluators may unintentionally make one model weaker through poor modeling.</p>
+<p><strong>Reversal condition:</strong> None; competing implementation is part of the scientific method for this research stream.</p>
+<h2 id="df-clf-003-treat-accessibility-conflicts-as-falsification">DF-CLF-003: Treat accessibility conflicts as falsification</h2>
+<p><strong>Context:</strong> Stable markup could be preserved through visual reordering even when sequence becomes confusing.</p>
+<p><strong>Evidence:</strong> EV-CLF-001 through EV-CLF-003.</p>
+<p><strong>Decision:</strong> Any model requiring an accessibility regression to remain universal is falsified for universal use.</p>
+<p><strong>Tradeoffs:</strong> Reduces superficial markup reuse.</p>
+<p><strong>Risks:</strong> Human judgments of logical sequence may differ.</p>
+<p><strong>Reversal condition:</strong> Only stronger accessibility evidence showing the flagged sequence is logical and correctly conveyed.</p>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<ol>
+<li>Which evidence-record relationships are truly invariant rather than merely common?</li>
+<li>Does confidence semantically qualify the proposition, the source base, or the overall record?</li>
+<li>Is status part of identity, metadata, or task state?</li>
+<li>Must provenance precede interpretation in research contexts?</li>
+<li>Can actions remain after descriptive content in every interactive context?</li>
+<li>Does progressive disclosure preserve enough meaning without JavaScript?</li>
+<li>When is a collection a semantic list, table, feed, or set of independent articles?</li>
+<li>Should dense comparison use a fundamentally different semantic model from narrative reading?</li>
+<li>What information must print reveal that interactive interfaces may defer?</li>
+<li>How should contextual additions be constrained so M2 does not become arbitrary slots?</li>
+<li>Which relationships should be represented in visible content versus machine-readable metadata?</li>
+<li>Can a domain record remain useful outside the research repository, or is it intentionally domain-specific?</li>
+</ol>
+<hr>
+<h1 id="recommended-next-research">Recommended Next Research</h1>
+<h2 id="priority-1--execute-ex-clf-001">Priority 1 — Execute EX-CLF-001</h2>
+<p><strong>Information gain:</strong> Very high<br>
+<strong>Architectural risk addressed:</strong> Incorrect semantic foundation<br>
+<strong>Effort:</strong> Moderate<br>
+<strong>Urgency:</strong> Immediate</p>
+<h2 id="priority-2--component-taxonomy-based-on-discovered-invariants">Priority 2 — Component taxonomy based on discovered invariants</h2>
+<p>Classify candidate library entries only after EX-CLF-001 distinguishes:</p>
+<ul>
+<li>native semantics;</li>
+<li>styling conventions;</li>
+<li>behavioral enhancements;</li>
+<li>semantic wrappers;</li>
+<li>domain composites;</li>
+<li>contextual compositions;</li>
+<li>and rejected visual abstractions.</li>
+</ul>
+<p><strong>Information gain:</strong> High<br>
+<strong>Risk:</strong> Component-boundary error<br>
+<strong>Effort:</strong> Moderate</p>
+<h2 id="priority-3--encapsulation-experiment-using-the-winning-semantic-model">Priority 3 — Encapsulation experiment using the winning semantic model</h2>
+<p>Compare light DOM, Shadow DOM with slots/parts, and behavior-only enhancement after anatomy is understood.</p>
+<p><strong>Information gain:</strong> High<br>
+<strong>Risk:</strong> Styling and accessibility coupling<br>
+<strong>Effort:</strong> Moderate</p>
+<h2 id="priority-4--native-control-substitution-criteria">Priority 4 — Native control substitution criteria</h2>
+<p>Build a decision framework for when native elements may be enhanced or replaced, drawing from Open UI and accessibility evidence.</p>
+<p><strong>Information gain:</strong> High<br>
+<strong>Risk:</strong> Rebuilding inaccessible controls<br>
+<strong>Effort:</strong> Moderate</p>
+<hr>
+<h1 id="research-backlog">Research Backlog</h1>
+<table>
+<thead>
+<tr>
+<th align="right">Rank</th>
+<th>Research item</th>
+<th>Expected information gain</th>
+<th>Risk addressed</th>
+<th>Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td>Semantic transformation matrix</td>
+<td>Very high</td>
+<td>Wrong content model</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td>Light DOM vs Shadow DOM by category</td>
+<td>High</td>
+<td>Encapsulation lock-in</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>Native controls decision framework</td>
+<td>High</td>
+<td>Accessibility and behavior debt</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>Token dependency and override model</td>
+<td>High</td>
+<td>Theme coupling</td>
+<td>Medium-high</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>Parent-owned vs intrinsic layout study</td>
+<td>High</td>
+<td>Variant explosion</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>Server rendering and upgrade timing</td>
+<td>Medium-high</td>
+<td>Progressive enhancement</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>Cross-framework authoring ergonomics</td>
+<td>Medium</td>
+<td>Integration friction</td>
+<td>Medium-high</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>Long-term design-system migration cases</td>
+<td>Medium</td>
+<td>Governance debt</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="suggested-specialized-research-agents">Suggested Specialized Research Agents</h1>
+<h2 id="agent-sra-clf-sem">Agent SRA-CLF-SEM</h2>
+<p><strong>Specialty:</strong> Information architecture and semantic HTML<br>
+<strong>Task:</strong> Execute content inventory, semantic invariants, and model comparison.</p>
+<h2 id="agent-sra-clf-a11y">Agent SRA-CLF-A11Y</h2>
+<p><strong>Specialty:</strong> Accessibility engineering<br>
+<strong>Task:</strong> Evaluate meaningful sequence, focus order, screen-reader linearization, zoom, text spacing, forced colors, and no-JavaScript behavior.</p>
+<h2 id="agent-sra-clf-sys">Agent SRA-CLF-SYS</h2>
+<p><strong>Specialty:</strong> Design-system comparative analysis<br>
+<strong>Task:</strong> Compare how mature systems model cards, structured lists, data rows, status, and metadata.</p>
+<h2 id="agent-sra-clf-i18n">Agent SRA-CLF-I18N</h2>
+<p><strong>Specialty:</strong> Internationalization<br>
+<strong>Task:</strong> Stress test translated content, bidirectional text, logical properties, and culturally variable reading conventions.</p>
+<hr>
+<h1 id="parallel-research-opportunities">Parallel Research Opportunities</h1>
+<p>The following can proceed without contaminating EX-CLF-001:</p>
+<ul>
+<li>catalog native HTML capabilities relevant to the first component slice;</li>
+<li>document browser support and platform trajectory for custom elements, declarative Shadow DOM, popover, dialog, and form-associated custom elements;</li>
+<li>analyze token migration histories in Material, Carbon, Spectrum, and FAST;</li>
+<li>define research repository schemas and automated evidence traceability.</li>
+</ul>
+<p>Do not design component APIs in these parallel streams.</p>
+<hr>
+<h1 id="risks">Risks</h1>
+<h2 id="r-clf-001-domain-overfitting">R-CLF-001: Domain overfitting</h2>
+<p>The evidence record may be too specialized. Mitigation: extract general laws cautiously and repeat later with one action-oriented domain object.</p>
+<h2 id="r-clf-002-visual-design-bias">R-CLF-002: Visual design bias</h2>
+<p>A weak transformation may falsely support universal markup. Mitigation: require six structurally contrasting contexts and independent review.</p>
+<h2 id="r-clf-003-retrofitted-criteria">R-CLF-003: Retrofitted criteria</h2>
+<p>Researchers may move failure thresholds after seeing results. Mitigation: preserve this package and record every threshold change with rationale.</p>
+<h2 id="r-clf-004-accessibility-reduced-to-automation">R-CLF-004: Accessibility reduced to automation</h2>
+<p>Automated tools cannot judge meaningful sequence reliably. Mitigation: require manual linearization, keyboard, and screen-reader evaluation.</p>
+<h2 id="r-clf-005-core-plus-context-becomes-slot-sprawl">R-CLF-005: Core-plus-context becomes slot sprawl</h2>
+<p>The leading model could absorb every difference through arbitrary extension points. Mitigation: count contextual regions and require a semantic reason for each.</p>
+<h2 id="r-clf-006-confusing-data-reuse-with-component-reuse">R-CLF-006: Confusing data reuse with component reuse</h2>
+<p>A shared schema may be mistaken for proof of shared markup. Mitigation: report reuse independently by layer.</p>
+<hr>
+<h1 id="cross-discipline-opportunities">Cross-Discipline Opportunities</h1>
+<h2 id="information-architecture">Information architecture</h2>
+<p>Provides methods for identifying entities, relationships, hierarchy, sequence, and task-dependent views.</p>
+<h2 id="cognitive-psychology">Cognitive psychology</h2>
+<p>Can test whether altered sequence changes comprehension, confidence judgments, or recall.</p>
+<h2 id="typography">Typography</h2>
+<p>Can determine how much visual hierarchy can change without changing semantic sequence.</p>
+<h2 id="gestalt-psychology">Gestalt psychology</h2>
+<p>Can identify when proximity and enclosure imply relationships absent from the DOM.</p>
+<h2 id="human-factors">Human factors</h2>
+<p>Can evaluate scanning, action placement, error likelihood, and low-vision adaptation.</p>
+<h2 id="scientific-communication">Scientific communication</h2>
+<p>Can determine when provenance, uncertainty, and counterevidence must appear relative to claims.</p>
+<hr>
+<h1 id="knowledge-relationships">Knowledge Relationships</h1>
+<pre><code class="language-text">TH-CLF-001 Semantic Stability Boundary
+  supported by EV-CLF-001, EV-CLF-002, EV-CLF-003
+  tested by EX-CLF-001
+  constrains future component anatomy decisions
+
+TH-CLF-002 Layered Reuse Principle
+  supported by KD-CLF-002, KD-CLF-005
+  tested by M1/M2/M3 comparison
+  affects library taxonomy and migration strategy
+
+TH-CLF-003 Visual Container Non-Equivalence
+  supported by EV-CLF-004, EV-CLF-005
+  tested by generic-card vs evidence-record comparison
+  affects whether card becomes component or composition
+</code></pre>
+<hr>
+<h1 id="repository-updates">Repository Updates</h1>
+<p>Add this package as the active research handoff. Create empty registries only if the repository does not already contain canonical ones. Do not duplicate existing registries.</p>
+<p>Required updates after execution:</p>
+<ul>
+<li>append new EV records rather than renumbering;</li>
+<li>update HY status and confidence;</li>
+<li>create the experiment result document;</li>
+<li>create decision records for accepted and rejected semantic models;</li>
+<li>link the foundational report to this REP;</li>
+<li>record any new assumptions discovered during modeling.</li>
+</ul>
+<hr>
+<h1 id="website-updates">Website Updates</h1>
+<p>When the research website exists, expose:</p>
+<ul>
+<li>package metadata;</li>
+<li>current hypotheses and confidence;</li>
+<li>transformation matrix;</li>
+<li>evidence relationships;</li>
+<li>failed models;</li>
+<li>remaining unknowns;</li>
+<li>reproduction instructions.</li>
+</ul>
+<p>Do not publish preliminary conclusions as settled architectural guidance.</p>
+<hr>
+<h1 id="ai-consumption-notes">AI Consumption Notes</h1>
+<p>An agent continuing this work should interpret “stable markup” as a hypothesis with accessibility boundaries, not as a command to preserve DOM at all costs.</p>
+<p>Important distinctions:</p>
+<ul>
+<li>Data model is not markup model.</li>
+<li>Visual container is not semantic component.</li>
+<li>Presentation hierarchy is not always reading sequence.</li>
+<li>Contextual composition is not necessarily component variation.</li>
+<li>Structural change is not automatically architectural failure.</li>
+<li>Accessibility regression is a hard failure, not a tradeoff to hide.</li>
+</ul>
+<p>Before adding any region to a model, the agent must state:</p>
+<ol>
+<li>the semantic relationship represented;</li>
+<li>whether it is invariant or contextual;</li>
+<li>the evidence for its position;</li>
+<li>what happens when it is absent;</li>
+<li>and whether it affects focus or reading order.</li>
+</ol>
+<hr>
+<h1 id="handoff-instructions">Handoff Instructions</h1>
+<p>The next agent should:</p>
+<ol>
+<li>Read <code>component-library-foundations-research-report.md</code> in full.</li>
+<li>Read this package in full.</li>
+<li>Create the twelve-record stress corpus before proposing markup.</li>
+<li>Inventory semantic relationships without using component names such as card, header, footer, or sidebar.</li>
+<li>Freeze the initial success and failure criteria.</li>
+<li>Model M1, M2, and M3 seriously.</li>
+<li>Transform each model into all six contexts.</li>
+<li>Run manual accessibility and content-sequence reviews.</li>
+<li>Record exceptions and failures, including those that undermine the preferred model.</li>
+<li>Update evidence, hypotheses, theory candidates, and decision records.</li>
+<li>Produce RP-CLF-003 with results and the next highest-value research question.</li>
+</ol>
+<p>The next agent must not:</p>
+<ul>
+<li>design production APIs;</li>
+<li>adopt a custom element merely to make the prototype feel realistic;</li>
+<li>use CSS visual order to conceal an invalid sequence;</li>
+<li>declare M2 successful because it is the current leading hypothesis;</li>
+<li>or collapse different semantic models solely to maximize reuse.</li>
+</ul>
+<hr>
+<h1 id="research-journal">Research Journal</h1>
+<h2 id="jr-clf-002-001--2026-07-21">JR-CLF-002-001 — 2026-07-21</h2>
+<h3 id="question">Question</h3>
+<p>What is the highest-risk unresolved assumption after the foundation report?</p>
+<h3 id="observation-5">Observation</h3>
+<p>Token, encapsulation, and API decisions all depend on having a defensible semantic structure. If the content model is wrong, later mechanisms merely stabilize the wrong boundary.</p>
+<h3 id="interpretation-5">Interpretation</h3>
+<p>Semantic durability should be tested before detailed Shadow DOM or token experiments.</p>
+<h3 id="decision">Decision</h3>
+<p>Promote semantic durability to the next critical research stream.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>High.</p>
+<h2 id="jr-clf-002-002--2026-07-21">JR-CLF-002-002 — 2026-07-21</h2>
+<h3 id="question-1">Question</h3>
+<p>Should the first subject be a generic card?</p>
+<h3 id="observation-6">Observation</h3>
+<p>Card anatomy varies substantially across design systems, and the term often identifies a surface rather than a stable semantic entity.</p>
+<h3 id="interpretation-6">Interpretation</h3>
+<p>A generic card could produce misleadingly shallow evidence.</p>
+<h3 id="decision-1">Decision</h3>
+<p>Use a domain evidence record and retain a minimal card/surface only as a competing abstraction.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>Moderate to high.</p>
+<h2 id="jr-clf-002-003--2026-07-21">JR-CLF-002-003 — 2026-07-21</h2>
+<h3 id="question-2">Question</h3>
+<p>What would falsify stable markup?</p>
+<h3 id="observation-7">Observation</h3>
+<p>Standards permit visual positioning but reject sequence changes that alter meaning; focus order must preserve operation and implied relationships.</p>
+<h3 id="interpretation-7">Interpretation</h3>
+<p>An accessibility conflict is not merely a weakness. It falsifies that semantic model for universal use.</p>
+<h3 id="decision-2">Decision</h3>
+<p>Make meaningful-sequence and focus-order conflicts hard failure criteria.</p>
+<h3 id="confidence-7">Confidence</h3>
+<p>High.</p>
+<hr>
+<h1 id="research-quality-metrics">Research Quality Metrics</h1>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th align="right">Current value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary standards sources</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>Mature-system sources</td>
+<td align="right">2</td>
+</tr>
+<tr>
+<td>Independent source organizations</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>Counterexamples reviewed</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Competing viewpoints/models defined</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Hypotheses active</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>Failed assumptions documented</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Empirical experiments completed</td>
+<td align="right">0</td>
+</tr>
+<tr>
+<td>Research completeness</td>
+<td align="right">45%</td>
+</tr>
+<tr>
+<td>Confidence gain</td>
+<td align="right">Moderate narrowing, no empirical confirmation</td>
+</tr>
+<tr>
+<td>Open questions reduced</td>
+<td align="right">2 broad questions converted into 12 testable questions</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="research-debt">Research Debt</h1>
+<h2 id="missing-evidence">Missing evidence</h2>
+<ul>
+<li>empirical transformation results;</li>
+<li>screen-reader observations;</li>
+<li>authoring usability results;</li>
+<li>real product content beyond research records;</li>
+<li>long-term maintenance evidence.</li>
+</ul>
+<h2 id="missing-experiments">Missing experiments</h2>
+<ul>
+<li>M1/M2/M3 implementation as throwaway semantic models;</li>
+<li>nested contextual composition;</li>
+<li>dynamic updates;</li>
+<li>removal and replacement test;</li>
+<li>cross-framework rendering, deferred until later.</li>
+</ul>
+<h2 id="missing-disciplines">Missing disciplines</h2>
+<ul>
+<li>professional information architecture review;</li>
+<li>localization review;</li>
+<li>low-vision user evaluation;</li>
+<li>scientific communication review.</li>
+</ul>
+<h2 id="replication-needed">Replication needed</h2>
+<p>Repeat semantic-durability testing later with an action-oriented object such as a task, notification, or approval request.</p>
+<h2 id="tool-limitations">Tool limitations</h2>
+<p>Automated accessibility scanners cannot determine whether content order preserves meaning. Manual review is mandatory.</p>
+<h2 id="assumptions-awaiting-evidence">Assumptions awaiting evidence</h2>
+<ul>
+<li>M2 is better than M1 and M3;</li>
+<li>evidence record is representative enough;</li>
+<li>one semantic core can remain useful across product families;</li>
+<li>contextual composition can remain bounded.</li>
+</ul>
+<hr>
+<h1 id="appendix-a--source-register">Appendix A — Source Register</h1>
+<h2 id="standards-and-platform-research">Standards and platform research</h2>
+<ol>
+<li>
+<p>W3C, “G57: Ordering the content in a meaningful sequence.”<br>
+<a href="https://www.w3.org/WAI/WCAG22/Techniques/general/G57">https://www.w3.org/WAI/WCAG22/Techniques/general/G57</a></p>
+</li>
+<li>
+<p>W3C, “F1: Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS.”<br>
+<a href="https://www.w3.org/WAI/WCAG22/Techniques/failures/F1">https://www.w3.org/WAI/WCAG22/Techniques/failures/F1</a></p>
+</li>
+<li>
+<p>W3C, “Understanding Success Criterion 2.4.3: Focus Order.”<br>
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html">https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html</a></p>
+</li>
+<li>
+<p>W3C, “Understanding Success Criterion 1.4.12: Text Spacing.”<br>
+<a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html">https://www.w3.org/WAI/WCAG22/Understanding/text-spacing.html</a></p>
+</li>
+<li>
+<p>WHATWG, “HTML Living Standard.”<br>
+<a href="https://html.spec.whatwg.org/">https://html.spec.whatwg.org/</a></p>
+</li>
+<li>
+<p>Open UI, “Working Mode.”<br>
+<a href="https://open-ui.org/working-mode/">https://open-ui.org/working-mode/</a></p>
+</li>
+<li>
+<p>Open UI, “Getting Involved.”<br>
+<a href="https://open-ui.org/get-involved/">https://open-ui.org/get-involved/</a></p>
+</li>
+<li>
+<p>Open UI, “Glossary.”<br>
+<a href="https://open-ui.org/glossary/">https://open-ui.org/glossary/</a></p>
+</li>
+<li>
+<p>Open UI, “Card Research.”<br>
+<a href="https://open-ui.org/components/card.research/">https://open-ui.org/components/card.research/</a></p>
+</li>
+</ol>
+<h2 id="mature-design-system-evidence">Mature design-system evidence</h2>
+<ol start="10">
+<li>
+<p>IBM Carbon Design System, “Accessibility Overview.”<br>
+<a href="https://carbondesignsystem.com/guidelines/accessibility/overview/">https://carbondesignsystem.com/guidelines/accessibility/overview/</a></p>
+</li>
+<li>
+<p>IBM Carbon Design System, “Typography Style Strategies.”<br>
+<a href="https://carbondesignsystem.com/elements/typography/style-strategies/">https://carbondesignsystem.com/elements/typography/style-strategies/</a></p>
+</li>
+</ol>
+<hr>
+<h1 id="appendix-b--completion-checklist">Appendix B — Completion Checklist</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Identifier and required metadata</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research state snapshot</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Executive summary</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Original objective</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Scope</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository context</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Current understanding</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Key discoveries</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Evidence registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Hypothesis registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Failed assumptions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Architectural comparisons</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Open questions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Recommended next research</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research backlog</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Suggested specialized agents</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Parallel research opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Risks</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Cross-discipline opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Knowledge relationships</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Website updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> AI consumption notes</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Handoff instructions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research journal</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Theory impact assessment</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research quality metrics</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research debt</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Appendix</li>
+<li class="task-list-item"><input type="checkbox" disabled> Empirical experiment executed</li>
+<li class="task-list-item"><input type="checkbox" disabled> Hypotheses revised from results</li>
+<li class="task-list-item"><input type="checkbox" disabled> Final semantic architecture recommendation issued</li>
+</ul>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-07-21</td>
+<td>OpenAI Autonomous Engineering Research Agent</td>
+<td>Created executable semantic-durability research package and defined the next foundational experiment.</td>
+</tr>
+</tbody>
+</table></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

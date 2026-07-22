@@ -1,0 +1,1955 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Intuitive Is Just Familiar | Visual Engineering Research</title><meta name="description" content="Familiarity is a major source of what users call intuitive, but it is not the whole phenomenon. Repetition increases processing fluency, liking, confidence, speed, accuracy, and automaticity. It can therefore make an initially mediocre interface feel natural and, for practiced users, perform well. However, familiarity cannot reliably repair poor task structure, excessive physical effort, weak feedback, hidden state, preventable errors, or dangerous mappings. The report proposes that perceived intuitiveness is an inference generated from processing fluency and prediction success, while durable design quality depends on separate dimensions: immediate legibility, learnability, practiced efficiency, error resistance, transferability, and adaptability. Familiarity is best modeled as a performance multiplier and switching-cost generator, not as evidence that the underlying design is good."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span>  </p> <h1 data-pagefind-meta="title">Intuitive Is Just Familiar</h1> <p class="lede" data-pagefind-meta="summary">Familiarity is a major source of what users call intuitive, but it is not the whole phenomenon. Repetition increases processing fluency, liking, confidence, speed, accuracy, and automaticity. It can therefore make an initially mediocre interface feel natural and, for practiced users, perform well. However, familiarity cannot reliably repair poor task structure, excessive physical effort, weak feedback, hidden state, preventable errors, or dangerous mappings. The report proposes that perceived intuitiveness is an inference generated from processing fluency and prediction success, while durable design quality depends on separate dimensions: immediate legibility, learnability, practiced efficiency, error resistance, transferability, and adaptability. Familiarity is best modeled as a performance multiplier and switching-cost generator, not as evidence that the underlying design is good.</p> <dl class="metadata-panel">  <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">research-extension-complete</dd></div> <div><dt>Version</dt><dd>2</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/composition-science/research-note/intuitive-is-just-familiar-predictive-fit-rep-v2.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#intuitive-is-just-familiar">Intuitive Is Just Familiar</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#what-was-accomplished">What Was Accomplished</a></li><li><a href="#major-discoveries">Major Discoveries</a></li><li><a href="#1-intuitive-is-usually-an-attribution-not-a-directly-observed-property">1. “Intuitive” is usually an attribution, not a directly observed property</a></li><li><a href="#2-familiarity-changes-both-feeling-and-performance">2. Familiarity changes both feeling and performance</a></li><li><a href="#3-familiarity-can-make-an-average-design-locally-excellent-for-an-experienced-population">3. Familiarity can make an average design locally excellent for an experienced population</a></li><li><a href="#4-familiarity-also-conceals-defects">4. Familiarity also conceals defects</a></li><li><a href="#5-habit-creates-design-debt">5. Habit creates design debt</a></li><li><a href="#6-familiarity-is-not-sufficient-for-goodness">6. Familiarity is not sufficient for goodness</a></li><li><a href="#7-first-use-intuition-has-at-least-three-sources">7. First-use intuition has at least three sources</a></li><li><a href="#central-conclusion">Central Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#remaining-uncertainty">Remaining Uncertainty</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#research-log">Research Log</a></li><li><a href="#cycle-1-does-repetition-change-evaluation-without-improving-the-object-">Cycle 1: Does Repetition Change Evaluation Without Improving the Object?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-2-can-practice-make-arbitrary-interaction-efficient-">Cycle 2: Can Practice Make Arbitrary Interaction Efficient?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-3-what-costs-remain-after-familiarity-">Cycle 3: What Costs Remain After Familiarity?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-4-is-first-use-intuition-possible-">Cycle 4: Is First-Use Intuition Possible?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-5-when-does-familiarity-become-a-liability-">Cycle 5: When Does Familiarity Become a Liability?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-6-why-do-mediocre-familiar-designs-persist-">Cycle 6: Why Do Mediocre Familiar Designs Persist?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-7-can-intuitiveness-be-decomposed-into-measurable-parts-">Cycle 7: Can “Intuitiveness” Be Decomposed Into Measurable Parts?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-8-falsification-through-counterexamples">Cycle 8: Falsification Through Counterexamples</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#confirmed-findings">Confirmed Findings</a></li><li><a href="#cf-001-repetition-can-increase-preference-without-changing-objective-properties">CF-001: Repetition Can Increase Preference Without Changing Objective Properties</a></li><li><a href="#cf-002-practice-can-produce-automatic-interaction">CF-002: Practice Can Produce Automatic Interaction</a></li><li><a href="#cf-003-familiarity-is-context-and-population-dependent">CF-003: Familiarity Is Context- and Population-Dependent</a></li><li><a href="#cf-004-familiarity-can-create-errors-when-context-changes">CF-004: Familiarity Can Create Errors When Context Changes</a></li><li><a href="#cf-005-subjective-fluency-is-not-equivalent-to-usability">CF-005: Subjective Fluency Is Not Equivalent to Usability</a></li><li><a href="#cf-006-some-design-costs-persist-under-expertise">CF-006: Some Design Costs Persist Under Expertise</a></li><li><a href="#cf-007-consistency-has-compounding-value">CF-007: Consistency Has Compounding Value</a></li><li><a href="#cf-008-expert-observation-can-underestimate-design-friction">CF-008: Expert Observation Can Underestimate Design Friction</a></li><li><a href="#rejected-hypotheses">Rejected Hypotheses</a></li><li><a href="#rh-001-all-intuitive-design-is-merely-familiar-design">RH-001: All Intuitive Design Is Merely Familiar Design</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#residual-truth">Residual Truth</a></li><li><a href="#rh-002-repetition-makes-any-design-good">RH-002: Repetition Makes Any Design Good</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#residual-truth">Residual Truth</a></li><li><a href="#rh-003-familiarity-only-changes-preference-not-performance">RH-003: Familiarity Only Changes Preference, Not Performance</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#rh-004-a-familiar-design-is-always-safer">RH-004: A Familiar Design Is Always Safer</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#rh-005-convention-is-evidence-of-optimality">RH-005: Convention Is Evidence of Optimality</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#rh-006-novelty-and-familiarity-are-simple-opposites">RH-006: Novelty and Familiarity Are Simple Opposites</a></li><li><a href="#why-rejected">Why Rejected</a></li><li><a href="#emerging-patterns">Emerging Patterns</a></li><li><a href="#ep-001-intuitiveness-is-a-prediction-experience">EP-001: Intuitiveness Is a Prediction Experience</a></li><li><a href="#ep-002-familiarity-transfers-cost-from-runtime-to-training">EP-002: Familiarity Transfers Cost From Runtime to Training</a></li><li><a href="#ep-003-stability-compounds-change-liquidates">EP-003: Stability Compounds, Change Liquidates</a></li><li><a href="#ep-004-the-better-the-habit-the-more-dangerous-the-exception">EP-004: The Better the Habit, the More Dangerous the Exception</a></li><li><a href="#ep-005-familiarity-can-mask-structural-inefficiency">EP-005: Familiarity Can Mask Structural Inefficiency</a></li><li><a href="#ep-006-convention-is-distributed-memory">EP-006: Convention Is Distributed Memory</a></li><li><a href="#ep-007-natural-often-means-deeply-learned">EP-007: “Natural” Often Means Deeply Learned</a></li><li><a href="#proposed-models">Proposed Models</a></li><li><a href="#law-if-001-familiarity-attribution-law">LAW-IF-001: Familiarity Attribution Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-002-familiarity-compensation-law">LAW-IF-002: Familiarity Compensation Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-003-habit-fragility-law">LAW-IF-003: Habit Fragility Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-004-convention-investment-law">LAW-IF-004: Convention Investment Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-005-exceptional-state-distinction-law">LAW-IF-005: Exceptional-State Distinction Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#model-if-001-the-familiarity-adjusted-design-quality-model">MODEL-IF-001: The Familiarity-Adjusted Design Quality Model</a></li><li><a href="#state-a-encounter-quality">State A: Encounter Quality</a></li><li><a href="#state-b-acquisition-quality">State B: Acquisition Quality</a></li><li><a href="#state-c-practiced-quality">State C: Practiced Quality</a></li><li><a href="#model-if-002-interaction-cost-decomposition">MODEL-IF-002: Interaction Cost Decomposition</a></li><li><a href="#assumptions">Assumptions</a></li><li><a href="#status">Status</a></li><li><a href="#model-if-003-redesign-break-even-model">MODEL-IF-003: Redesign Break-Even Model</a></li><li><a href="#implication">Implication</a></li><li><a href="#status">Status</a></li><li><a href="#model-if-004-familiarity-classes">MODEL-IF-004: Familiarity Classes</a></li><li><a href="#f0-unknown">F0: Unknown</a></li><li><a href="#f1-structurally-inferable">F1: Structurally Inferable</a></li><li><a href="#f2-analogically-familiar">F2: Analogically Familiar</a></li><li><a href="#f3-conventionally-familiar">F3: Conventionally Familiar</a></li><li><a href="#f4-product-familiar">F4: Product Familiar</a></li><li><a href="#f5-procedurally-automatic">F5: Procedurally Automatic</a></li><li><a href="#why-this-matters">Why This Matters</a></li><li><a href="#observations">Observations</a></li><li><a href="#obs-001">OBS-001</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-002">OBS-002</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-003">OBS-003</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-004">OBS-004</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-005">OBS-005</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-006">OBS-006</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#evidence">Evidence</a></li><li><a href="#evd-001">EVD-001</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-002">EVD-002</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-003">EVD-003</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-004">EVD-004</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-005">EVD-005</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-006">EVD-006</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-007">EVD-007</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-008">EVD-008</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-009">EVD-009</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-010">EVD-010</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-011">EVD-011</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-012">EVD-012</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#oq-001-what-is-the-exposure-to-fluency-function-">OQ-001: What Is the Exposure-to-Fluency Function?</a></li><li><a href="#oq-002-how-much-structural-badness-can-familiarity-compensate-for-">OQ-002: How Much Structural Badness Can Familiarity Compensate For?</a></li><li><a href="#oq-003-can-we-separate-familiarity-from-good-mapping-experimentally-">OQ-003: Can We Separate Familiarity From Good Mapping Experimentally?</a></li><li><a href="#oq-004-how-long-does-habit-debt-persist-after-redesign-">OQ-004: How Long Does Habit Debt Persist After Redesign?</a></li><li><a href="#oq-005-does-familiarity-affect-accessibility-groups-differently-">OQ-005: Does Familiarity Affect Accessibility Groups Differently?</a></li><li><a href="#oq-006-when-is-deliberate-friction-better-than-intuitive-flow-">OQ-006: When Is Deliberate Friction Better Than Intuitive Flow?</a></li><li><a href="#oq-007-can-subjective-intuitiveness-be-debiased-">OQ-007: Can Subjective Intuitiveness Be Debiased?</a></li><li><a href="#oq-008-what-is-the-optimal-familiarity-novelty-ratio-in-composition-">OQ-008: What Is the Optimal Familiarity-Novelty Ratio in Composition?</a></li><li><a href="#recommendations">Recommendations</a></li><li><a href="#priority-1-replace-intuitive-with-an-exposure-indexed-scorecard">Priority 1: Replace “Intuitive” With an Exposure-Indexed Scorecard</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#priority-2-build-a-familiarity-controlled-experiment-library">Priority 2: Build a Familiarity-Controlled Experiment Library</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#priority-3-add-familiarity-as-a-node-in-the-composition-genome">Priority 3: Add Familiarity as a Node in the Composition Genome</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#priority-4-create-a-redesign-migration-calculator">Priority 4: Create a Redesign Migration Calculator</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#priority-5-study-exceptional-state-design">Priority 5: Study Exceptional-State Design</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#priority-6-develop-a-training-cost-hidden-in-the-user-audit">Priority 6: Develop a “Training Cost Hidden in the User” Audit</a></li><li><a href="#action">Action</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#rationale">Rationale</a></li><li><a href="#candidate-practical-rules">Candidate Practical Rules</a></li><li><a href="#pr-001">PR-001</a></li><li><a href="#pr-002">PR-002</a></li><li><a href="#pr-003">PR-003</a></li><li><a href="#pr-004">PR-004</a></li><li><a href="#pr-005">PR-005</a></li><li><a href="#pr-006">PR-006</a></li><li><a href="#pr-007">PR-007</a></li><li><a href="#pr-008">PR-008</a></li><li><a href="#pr-009">PR-009</a></li><li><a href="#pr-010">PR-010</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#academic">Academic</a></li><li><a href="#books">Books</a></li><li><a href="#industry">Industry</a></li><li><a href="#standards">Standards</a></li><li><a href="#historical">Historical</a></li><li><a href="#other">Other</a></li><li><a href="#next-actions">Next Actions</a></li><li><a href="#revision-history">Revision History</a></li><li><a href="#agent-instructions">Agent Instructions</a></li><li><a href="#predictive-processing-extension">Predictive Processing Extension</a></li><li><a href="#research-state-snapshot">Research State Snapshot</a></li><li><a href="#executive-summary-of-the-extension">Executive Summary of the Extension</a></li><li><a href="#research-log-extension-cycles">Research Log: Extension Cycles</a></li><li><a href="#cycle-9-can-predictive-processing-explain-the-feeling-of-intuition-">Cycle 9: Can Predictive Processing Explain the Feeling of Intuition?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-10-does-affordance-perception-require-familiarity-or-prediction-">Cycle 10: Does Affordance Perception Require Familiarity or Prediction?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-11-are-there-pre-existing-physical-expectations-">Cycle 11: Are There Pre-Existing Physical Expectations?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-12-when-does-familiarity-produce-valid-intuition-">Cycle 12: When Does Familiarity Produce Valid Intuition?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-13-can-surprise-be-quantified-for-interface-design-">Cycle 13: Can Surprise Be Quantified for Interface Design?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-14-falsification-of-the-unified-predictive-account">Cycle 14: Falsification of the Unified Predictive Account</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#confirmed-findings-added-by-this-pass">Confirmed Findings Added by This Pass</a></li><li><a href="#cf-009-expectation-congruence-reduces-interaction-cost">CF-009: Expectation Congruence Reduces Interaction Cost</a></li><li><a href="#cf-010-prior-knowledge-is-hierarchical">CF-010: Prior Knowledge Is Hierarchical</a></li><li><a href="#cf-011-feedback-quality-determines-whether-familiarity-becomes-expertise">CF-011: Feedback Quality Determines Whether Familiarity Becomes Expertise</a></li><li><a href="#cf-012-surprise-is-observer-relative">CF-012: Surprise Is Observer-Relative</a></li><li><a href="#cf-013-prediction-fit-is-not-equivalent-to-design-quality">CF-013: Prediction Fit Is Not Equivalent to Design Quality</a></li><li><a href="#cf-014-predictive-processing-is-not-yet-a-sufficient-neural-foundation-for-hci">CF-014: Predictive Processing Is Not Yet a Sufficient Neural Foundation for HCI</a></li><li><a href="#rejected-and-revised-hypotheses">Rejected and Revised Hypotheses</a></li><li><a href="#rh-006-intuition-equals-prediction-error-minimization">RH-006: Intuition Equals Prediction-Error Minimization</a></li><li><a href="#rh-007-completely-novel-interfaces-can-be-intuitive-without-prior-knowledge">RH-007: Completely Novel Interfaces Can Be Intuitive Without Prior Knowledge</a></li><li><a href="#rh-008-affordance-is-the-opposite-of-familiarity">RH-008: Affordance Is the Opposite of Familiarity</a></li><li><a href="#rh-009-minimizing-surprise-is-always-desirable">RH-009: Minimizing Surprise Is Always Desirable</a></li><li><a href="#emerging-patterns">Emerging Patterns</a></li><li><a href="#pattern-1-intuition-is-confidence-before-it-is-correctness">Pattern 1: Intuition Is Confidence Before It Is Correctness</a></li><li><a href="#pattern-2-familiarity-is-nested-not-binary">Pattern 2: Familiarity Is Nested, Not Binary</a></li><li><a href="#pattern-3-the-best-design-often-preserves-prediction-while-improving-mechanics">Pattern 3: The Best Design Often Preserves Prediction While Improving Mechanics</a></li><li><a href="#pattern-4-surprise-has-a-budget">Pattern 4: Surprise Has a Budget</a></li><li><a href="#pattern-5-feedback-converts-action-into-learning">Pattern 5: Feedback Converts Action Into Learning</a></li><li><a href="#pattern-6-intuitive-design-is-a-coordination-problem">Pattern 6: Intuitive Design Is a Coordination Problem</a></li><li><a href="#proposed-models">Proposed Models</a></li><li><a href="#model-if-005-predictive-fit-model-of-intuitive-interaction">MODEL-IF-005: Predictive Fit Model of Intuitive Interaction</a></li><li><a href="#definition">Definition</a></li><li><a href="#predictions">Predictions</a></li><li><a href="#assumptions">Assumptions</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#model-if-006-prior-breadth-hierarchy">MODEL-IF-006: Prior-Breadth Hierarchy</a></li><li><a href="#levels">Levels</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#design-implication">Design Implication</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#model-if-007-expectation-violation-cost">MODEL-IF-007: Expectation Violation Cost</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#model-if-008-intuition-reliability-matrix">MODEL-IF-008: Intuition Reliability Matrix</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#candidate-laws-and-principle-updates">Candidate Laws and Principle Updates</a></li><li><a href="#law-if-011-predictive-fit-principle">LAW-IF-011: Predictive Fit Principle</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-012-prior-breadth-principle">LAW-IF-012: Prior Breadth Principle</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-013-diagnostic-feedback-principle">LAW-IF-013: Diagnostic Feedback Principle</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-if-014-surprise-concentration-principle">LAW-IF-014: Surprise Concentration Principle</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#deprecated-principle">Deprecated Principle</a></li><li><a href="#replacement-principle">Replacement Principle</a></li><li><a href="#proposed-experimental-program">Proposed Experimental Program</a></li><li><a href="#ex-if-001-familiarity-versus-structural-legibility">EX-IF-001: Familiarity Versus Structural Legibility</a></li><li><a href="#question">Question</a></li><li><a href="#design">Design</a></li><li><a href="#critical-result">Critical Result</a></li><li><a href="#expected-value-effort">Expected Value / Effort</a></li><li><a href="#ex-if-002-explicit-state-prediction-protocol">EX-IF-002: Explicit State Prediction Protocol</a></li><li><a href="#question">Question</a></li><li><a href="#design">Design</a></li><li><a href="#expected-value-effort">Expected Value / Effort</a></li><li><a href="#ex-if-003-surprise-and-recovery">EX-IF-003: Surprise and Recovery</a></li><li><a href="#question">Question</a></li><li><a href="#design">Design</a></li><li><a href="#expected-value-effort">Expected Value / Effort</a></li><li><a href="#ex-if-004-prior-breadth-transfer-test">EX-IF-004: Prior-Breadth Transfer Test</a></li><li><a href="#question">Question</a></li><li><a href="#design">Design</a></li><li><a href="#expected-value-effort">Expected Value / Effort</a></li><li><a href="#ex-if-005-redesign-surprise-budget">EX-IF-005: Redesign Surprise Budget</a></li><li><a href="#question">Question</a></li><li><a href="#design">Design</a></li><li><a href="#expected-value-effort">Expected Value / Effort</a></li><li><a href="#evidence-registry-additions">Evidence Registry Additions</a></li><li><a href="#ev-013">EV-013</a></li><li><a href="#ev-014">EV-014</a></li><li><a href="#ev-015">EV-015</a></li><li><a href="#ev-016">EV-016</a></li><li><a href="#ev-017">EV-017</a></li><li><a href="#ev-018">EV-018</a></li><li><a href="#ev-019">EV-019</a></li><li><a href="#ev-020">EV-020</a></li><li><a href="#ev-021">EV-021</a></li><li><a href="#ev-022">EV-022</a></li><li><a href="#ev-023">EV-023</a></li><li><a href="#ev-024">EV-024</a></li><li><a href="#ev-025">EV-025</a></li><li><a href="#hypothesis-registry-additions">Hypothesis Registry Additions</a></li><li><a href="#hy-009-predictive-fit-hypothesis">HY-009: Predictive Fit Hypothesis</a></li><li><a href="#hy-010-action-structure-hypothesis">HY-010: Action-Structure Hypothesis</a></li><li><a href="#hy-011-broad-prior-hypothesis">HY-011: Broad-Prior Hypothesis</a></li><li><a href="#hy-012-valid-feedback-hypothesis">HY-012: Valid-Feedback Hypothesis</a></li><li><a href="#hy-013-surprise-cost-hypothesis">HY-013: Surprise-Cost Hypothesis</a></li><li><a href="#open-questions-ranked-by-importance">Open Questions Ranked by Importance</a></li><li><a href="#recommendations-and-research-backlog">Recommendations and Research Backlog</a></li><li><a href="#suggested-specialized-research-agents">Suggested Specialized Research Agents</a></li><li><a href="#agent-a-predictive-hci-experimentalist">Agent A: Predictive HCI Experimentalist</a></li><li><a href="#agent-b-ecological-interaction-researcher">Agent B: Ecological Interaction Researcher</a></li><li><a href="#agent-c-developmental-and-cross-cultural-prior-researcher">Agent C: Developmental and Cross-Cultural Prior Researcher</a></li><li><a href="#agent-d-safety-and-habit-capture-researcher">Agent D: Safety and Habit-Capture Researcher</a></li><li><a href="#agent-e-information-theoretic-modeler">Agent E: Information-Theoretic Modeler</a></li><li><a href="#parallel-research-opportunities">Parallel Research Opportunities</a></li><li><a href="#risks">Risks</a></li><li><a href="#theory-impact-assessment">Theory Impact Assessment</a></li><li><a href="#affected-theory-records">Affected Theory Records</a></li><li><a href="#new-principle-candidates">New Principle Candidates</a></li><li><a href="#deprecated-principles">Deprecated Principles</a></li><li><a href="#confidence-changes">Confidence Changes</a></li><li><a href="#predictions-created">Predictions Created</a></li><li><a href="#predictions-invalidated">Predictions Invalidated</a></li><li><a href="#required-registry-updates">Required Registry Updates</a></li><li><a href="#knowledge-relationships">Knowledge Relationships</a></li><li><a href="#repository-and-website-updates">Repository and Website Updates</a></li><li><a href="#repository-updates">Repository Updates</a></li><li><a href="#website-updates">Website Updates</a></li><li><a href="#ai-consumption-notes">AI Consumption Notes</a></li><li><a href="#handoff-instructions">Handoff Instructions</a></li><li><a href="#research-quality-metrics">Research Quality Metrics</a></li><li><a href="#research-debt">Research Debt</a></li><li><a href="#completion-checklist">Completion Checklist</a></li><li><a href="#bibliography-additions">Bibliography Additions</a></li><li><a href="#academic-and-neuroscience">Academic and Neuroscience</a></li><li><a href="#human-computer-interaction-and-human-factors">Human-Computer Interaction and Human Factors</a></li><li><a href="#ecological-and-developmental-psychology">Ecological and Developmental Psychology</a></li><li><a href="#expertise-and-decision-science">Expertise and Decision Science</a></li><li><a href="#information-theory-and-surprise">Information Theory and Surprise</a></li><li><a href="#revision-history-addition">Revision History Addition</a></li> </ol> </aside> <section class="document-body"><h1 id="intuitive-is-just-familiar">Intuitive Is Just Familiar</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This report investigates a deceptively simple claim:</p>
+<blockquote>
+<p>Intuitive is just familiar.</p>
+</blockquote>
+<p>The useful core of the claim is that users often call an interaction intuitive when it matches something they have already learned. Repetition may make an acceptable or even awkward design feel natural, fast, and preferable. That possibility matters because design evaluation often confuses three different things:</p>
+<ol>
+<li>A design that is easy on first contact.</li>
+<li>A design that becomes easy after learning.</li>
+<li>A design that remains effective, efficient, and safe after extensive use.</li>
+</ol>
+<p>The research goal was not to defend the phrase. It was to identify what it explains, what it fails to explain, and how to turn it into predictive design principles.</p>
+<hr>
+<h1 id="executive-summary">Executive Summary</h1>
+<h2 id="what-was-accomplished">What Was Accomplished</h2>
+<p>The investigation connected evidence from cognitive psychology, human factors, human-computer interaction, motor control, aesthetics, learning theory, safety engineering, and standards.</p>
+<p>The central proposition was broken into five testable claims:</p>
+<ol>
+<li>Repetition makes stimuli and interactions feel easier.</li>
+<li>Felt ease is often interpreted as goodness, truth, confidence, or intuitiveness.</li>
+<li>Practice can make initially awkward procedures fast and automatic.</li>
+<li>Familiarity creates switching costs that can preserve inferior designs.</li>
+<li>Some aspects of good design remain independent of familiarity.</li>
+</ol>
+<p>All five claims received support, but the strongest version of the slogan was rejected.</p>
+<h2 id="major-discoveries">Major Discoveries</h2>
+<h3 id="1-intuitive-is-usually-an-attribution-not-a-directly-observed-property">1. “Intuitive” is usually an attribution, not a directly observed property</h3>
+<p>Users do not inspect the causes of their own fluency. They experience low effort, successful prediction, and rapid action, then attribute that experience to the object: “This is intuitive.” The same subjective ease can arise from prior exposure, clear mapping, perceptual salience, reduced choice uncertainty, or motor compatibility.</p>
+<h3 id="2-familiarity-changes-both-feeling-and-performance">2. Familiarity changes both feeling and performance</h3>
+<p>Repeated exposure can increase liking even without explicit recognition. Practice can convert controlled operations into automatic responses, reducing attention demand and improving speed and accuracy. Interface habit studies show measurable gains that disappear when stable cues are disrupted.</p>
+<h3 id="3-familiarity-can-make-an-average-design-locally-excellent-for-an-experienced-population">3. Familiarity can make an average design locally excellent for an experienced population</h3>
+<p>A design does not need to be globally optimal to become highly effective within a stable user population. If users repeatedly perform the same tasks, memorize locations, chunk action sequences, and develop motor routines, an initially unremarkable interface may become extremely fast.</p>
+<p>This is real quality in one sense: experienced users can achieve goals efficiently. It is not imaginary. But it is contingent quality, purchased through user learning.</p>
+<h3 id="4-familiarity-also-conceals-defects">4. Familiarity also conceals defects</h3>
+<p>Practice can suppress evidence of poor discoverability, weak labels, excessive memorization, and arbitrary mappings. Experienced users route around defects so effectively that observation of experts alone can make a bad design look good.</p>
+<h3 id="5-habit-creates-design-debt">5. Habit creates design debt</h3>
+<p>Once a pattern becomes automatic, changing it carries a retraining cost and can temporarily increase errors. A familiar but mediocre design can therefore survive because the transition cost exceeds the expected benefit of a better replacement.</p>
+<h3 id="6-familiarity-is-not-sufficient-for-goodness">6. Familiarity is not sufficient for goodness</h3>
+<p>Repeated use cannot fully repair:</p>
+<ul>
+<li>excessive action count</li>
+<li>long physical travel distance</li>
+<li>slow system response</li>
+<li>hidden or ambiguous state</li>
+<li>poor error recovery</li>
+<li>dangerous mode confusion</li>
+<li>inaccessible controls</li>
+<li>mismatch between task structure and interface structure</li>
+<li>high consequences for slips</li>
+</ul>
+<p>Practice can reduce thinking time, but it cannot make a distant target physically closer, remove a required step, or make absent feedback informative.</p>
+<h3 id="7-first-use-intuition-has-at-least-three-sources">7. First-use intuition has at least three sources</h3>
+<p>What appears intuitive on first use can come from:</p>
+<ul>
+<li><strong>Biological or physical compatibility:</strong> larger targets are easier to acquire; spatially compatible controls are easier to operate.</li>
+<li><strong>Cultural convention:</strong> magnifying glass means search; underlined text suggests a link.</li>
+<li><strong>Structural inference:</strong> visible constraints, signifiers, mappings, and feedback expose how the system works.</li>
+</ul>
+<p>Only the second is purely familiarity. The first and third can support successful novel interaction.</p>
+<h2 id="central-conclusion">Central Conclusion</h2>
+<p>The phrase is directionally right but literally wrong.</p>
+<p>A better formulation is:</p>
+<blockquote>
+<p>Much of what people call intuitive is familiar, and repeated successful use can convert a merely adequate design into a highly effective practiced system. But familiarity is only one source of fluency, and fluency is only one dimension of design quality.</p>
+</blockquote>
+<h2 id="confidence">Confidence</h2>
+<ul>
+<li><strong>High:</strong> repetition increases fluency, liking, automaticity, and habit strength.</li>
+<li><strong>High:</strong> familiarity can improve performance while increasing switching costs and habit-related errors.</li>
+<li><strong>High:</strong> usability cannot be reduced to subjective ease; effectiveness, efficiency, satisfaction, context, and error consequences remain distinct.</li>
+<li><strong>Moderate:</strong> the proposed decomposition of intuitiveness into prediction, search, control, and consequence costs.</li>
+<li><strong>Moderate-low:</strong> the proposed equations are conceptual models, not validated measurement laws.</li>
+</ul>
+<h2 id="remaining-uncertainty">Remaining Uncertainty</h2>
+<p>The largest unresolved question is quantitative: how much exposure is required for familiarity to overcome specific kinds of design friction, and where does the performance curve plateau? Existing studies establish the mechanisms but do not yet yield a general conversion function from repetitions to perceived intuitiveness across interface classes.</p>
+<hr>
+<h1 id="key-findings">Key Findings</h1>
+<ul>
+<li>Familiarity is a powerful cause of perceived intuitiveness, not a synonym for it.</li>
+<li>Repetition changes affect, judgment, attention, memory retrieval, action selection, and motor execution.</li>
+<li>A mediocre design can become excellent for experts while remaining poor for novices, infrequent users, and users transferring from another convention.</li>
+<li>Familiarity primarily reduces cognitive and search costs. It does not eliminate structural, physical, temporal, or safety costs.</li>
+<li>Stability has value because it allows habit formation, but stability also accumulates switching costs.</li>
+<li>Convention is shared familiarity. Internal consistency is locally manufactured familiarity.</li>
+<li>“Intuitive” should be replaced in serious evaluation with measurable components: first-use success, learning rate, retained performance, practiced efficiency, error rate, recovery cost, transfer, and subjective fluency.</li>
+<li>Expert performance is not sufficient evidence of good design because experts may have absorbed the cost into training.</li>
+<li>Novel designs should outperform familiar ones by enough to repay migration, retraining, and error costs.</li>
+</ul>
+<hr>
+<h1 id="research-log">Research Log</h1>
+<h2 id="cycle-1-does-repetition-change-evaluation-without-improving-the-object">Cycle 1: Does Repetition Change Evaluation Without Improving the Object?</h2>
+<h3 id="objective">Objective</h3>
+<p>Determine whether familiarity alone changes preference and perceived quality.</p>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>Repeated exposure increases liking and subjective ease even when the stimulus itself is unchanged.</p>
+<h3 id="evidence-found">Evidence Found</h3>
+<p>The mere exposure literature consistently reports that prior exposure can increase preference. Bornstein’s work and later reviews indicate that the effect can occur even when recognition is weak or absent. Processing-fluency research offers a mechanism: repeated stimuli are processed more easily, and that ease is misattributed to positive qualities of the stimulus.</p>
+<p>The same family of effects appears beyond liking. Repetition can increase perceived truth, confidence, familiarity, and certainty. This establishes that subjective ease is not a transparent measure of objective quality.</p>
+<h3 id="evidence-against">Evidence Against</h3>
+<p>The effect is not universal or unlimited. Repetition can create boredom or reactance, and preference depends on stimulus complexity, exposure duration, context, task, and awareness. Some evidence suggests exposure affects salience and evaluative extremity, not only fluency. Familiarity and novelty can both be preferred under different processing conditions.</p>
+<h3 id="sources">Sources</h3>
+<ul>
+<li>Bornstein, R. F. “Stimulus Recognition and the Mere Exposure Effect.”</li>
+<li>Zajonc, R. B. “Attitudinal Effects of Mere Exposure.”</li>
+<li>Reber, Schwarz, and Winkielman. Processing fluency theory.</li>
+<li>Mrkva and Van Boven. Salience theory of mere exposure.</li>
+<li>Song et al. Familiarity and novelty in aesthetic preference.</li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<p>The phrase “repeated use can make an okay design great” has at least a perceptual truth. Repetition can improve evaluation without changing the design. But “great” in this case may mean preferred, comfortable, trusted, or easy-feeling rather than more effective.</p>
+<p>This is a critical distinction. Subjective quality is partly a relationship between a design and a trained nervous system. It is not located entirely inside the artifact.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Familiarity can increase perceived design quality independently of objective design change.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step">Next Step</h3>
+<p>Test whether familiarity also produces actual performance gains rather than only favorable judgments.</p>
+<hr>
+<h2 id="cycle-2-can-practice-make-arbitrary-interaction-efficient">Cycle 2: Can Practice Make Arbitrary Interaction Efficient?</h2>
+<h3 id="objective-1">Objective</h3>
+<p>Determine whether repeated use can transform an awkward or arbitrary interaction into fast, low-effort performance.</p>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p>Stable repeated mappings become automatic, reducing attention demand, decision time, and error rate.</p>
+<h3 id="evidence-found-1">Evidence Found</h3>
+<p>Schneider and Shiffrin’s controlled-versus-automatic processing research demonstrated that consistent practice can produce automatic attending and response patterns. Automatic processes require less active control and can operate with reduced attentional demand.</p>
+<p>Human-computer interaction research on interface habits found that users became faster and more accurate as stable cue-response relationships were repeated. When the familiar mapping was disrupted, the gain disappeared.</p>
+<p>The Keystroke-Level Model also distinguishes expert execution from learning and problem solving. Once a method is known, performance can be modeled as a sequence of mental, pointing, homing, and keystroke operators. Practice reduces or reorganizes mental preparation but cannot remove the physical operators still required.</p>
+<h3 id="evidence-against-1">Evidence Against</h3>
+<p>Automaticity is strongly dependent on consistency. Variable mappings do not automatize in the same way. Automatic responses can also persist when they are no longer appropriate, producing capture errors. A procedure may become fast but brittle.</p>
+<h3 id="sources-1">Sources</h3>
+<ul>
+<li>Schneider, W., and Shiffrin, R. M. “Controlled and Automatic Human Information Processing.”</li>
+<li>Garaialde et al. “Quantifying the Impact of Making and Breaking Interface Habits.”</li>
+<li>Card, Moran, and Newell. “The Keystroke-Level Model for User Performance Time with Interactive Systems.”</li>
+<li>Freed and Shafto. Habit-capture modeling in air traffic control.</li>
+</ul>
+<h3 id="analysis-1">Analysis</h3>
+<p>Practice does not merely change opinion. It changes the operating system of behavior. Users stop solving the interface as a fresh problem and begin executing compiled routines.</p>
+<p>This means an arbitrary design can become genuinely fast. QWERTY-like persistence does not require the design to be best in the abstract. It only requires sufficiently stable practice, adequate performance, and high switching costs.</p>
+<p>However, the gain belongs to the combined system of user plus interface. Calling the interface itself intuitive erases the training contribution.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>Repeated use can turn arbitrary but stable mappings into efficient expert behavior.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-1">Next Step</h3>
+<p>Determine what practice cannot repair.</p>
+<hr>
+<h2 id="cycle-3-what-costs-remain-after-familiarity">Cycle 3: What Costs Remain After Familiarity?</h2>
+<h3 id="objective-2">Objective</h3>
+<p>Identify design defects that persist even after users become highly practiced.</p>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p>Familiarity primarily reduces interpretation, search, and decision costs, but cannot eliminate physical, temporal, structural, or consequence costs.</p>
+<h3 id="evidence-found-2">Evidence Found</h3>
+<p>Fitts’s law relates movement time to target distance and size. Practice can improve the constants and movement strategy, but a small distant target remains more demanding than a large nearby target under otherwise comparable conditions.</p>
+<p>Hick’s work relates choice reaction time to uncertainty among response alternatives. Familiarity and unequal probabilities can reduce effective uncertainty, but unnecessary alternatives still impose costs, particularly in uncommon or changing tasks.</p>
+<p>The Keystroke-Level Model shows that expert performance remains constrained by the count and duration of physical and system operators. A six-step process does not become a two-step process merely because the six steps are automatic.</p>
+<p>ISO 9241-11 defines usability through effectiveness, efficiency, satisfaction, and context of use. Subjective comfort is therefore insufficient. Safety-oriented human-factors guidance similarly requires testing for use errors and real-world conditions rather than assuming training solves interface risk.</p>
+<h3 id="evidence-against-2">Evidence Against</h3>
+<p>Experts can chunk multiple actions into a single perceived unit, use shortcuts, anticipate response delays, and exploit stable spatial memory. Consequently, the felt cost of a long sequence can become much lower than its literal step count suggests.</p>
+<h3 id="sources-2">Sources</h3>
+<ul>
+<li>Fitts, P. M. “The Information Capacity of the Human Motor System in Controlling the Amplitude of Movement.”</li>
+<li>Hick, W. E. “On the Rate of Gain of Information.”</li>
+<li>Card, Moran, and Newell. Keystroke-Level Model.</li>
+<li>ISO 9241-11:2018.</li>
+<li>U.S. Consumer Product Safety Commission Human Factors Standard Practice.</li>
+</ul>
+<h3 id="analysis-2">Analysis</h3>
+<p>Familiarity is strongest against cognitive overhead. It reduces questions such as:</p>
+<ul>
+<li>What does this mean?</li>
+<li>Where is the control?</li>
+<li>What happens next?</li>
+<li>Which sequence should I use?</li>
+</ul>
+<p>It is weaker or powerless against:</p>
+<ul>
+<li>How far must I move?</li>
+<li>How many mandatory actions exist?</li>
+<li>How long must the system respond?</li>
+<li>Can I perceive the current state?</li>
+<li>What happens if I slip?</li>
+</ul>
+<p>This yields a useful boundary: familiarity can optimize the execution of a method, but it cannot necessarily improve the method’s structural efficiency or safety.</p>
+<h3 id="conclusion-2">Conclusion</h3>
+<p>Practice can hide but not erase many forms of design friction.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-2">Next Step</h3>
+<p>Investigate whether any interaction can be intuitive without prior cultural familiarity.</p>
+<hr>
+<h2 id="cycle-4-is-first-use-intuition-possible">Cycle 4: Is First-Use Intuition Possible?</h2>
+<h3 id="objective-3">Objective</h3>
+<p>Test the strongest version of the slogan: that all intuitive behavior is learned familiarity.</p>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p>Some successful first-use interaction can be explained by physical compatibility, affordances, constraints, and structural mappings rather than prior familiarity with a specific convention.</p>
+<h3 id="evidence-found-3">Evidence Found</h3>
+<p>Human-factors research on display-control compatibility shows that spatial and directional relationships affect response time and accuracy. Controls arranged to correspond with controlled objects reduce the need for arbitrary memory.</p>
+<p>Norman’s account of signifiers, mapping, constraints, and feedback describes how knowledge can be placed in the world rather than in the user’s memory. A control can expose the action it supports and the relation between action and effect.</p>
+<p>Fitts’s law and basic perceptual-motor constraints apply without requiring users to learn a cultural symbol. Large, close, visually distinct targets are easier to acquire because of human motor and perceptual characteristics.</p>
+<p>Scene-perception research also suggests that actionable possibilities, or affordances, provide strong structure for categorization.</p>
+<h3 id="evidence-against-3">Evidence Against</h3>
+<p>Many apparently natural mappings are partly cultural. Direction-of-turn stereotypes vary with display arrangement, control plane, population, and learned standards. Even doors and controls rely on prior experience with handles, plates, hinges, and mechanical causality.</p>
+<p>The clean separation between biology and culture is therefore difficult. Humans encounter physical regularities repeatedly from infancy, so some “natural” mappings may be extremely early familiarity.</p>
+<h3 id="sources-3">Sources</h3>
+<ul>
+<li>Tsang. “Interface Design and Display-Control Compatibility.”</li>
+<li>Vu et al. “Population Stereotypes for Objects and Representations.”</li>
+<li>Norman. <em>The Design of Everyday Things</em>.</li>
+<li>Greene et al. “Affordances Provide a Fundamental Categorization Principle for Visual Scenes.”</li>
+<li>Shinar and Acton. Control-display linkage stereotypes.</li>
+</ul>
+<h3 id="analysis-3">Analysis</h3>
+<p>The evidence does not support a pure innate-versus-learned binary. First-use success can arise from three layers:</p>
+<ol>
+<li><strong>Species constraints:</strong> perception and movement properties shared broadly by humans.</li>
+<li><strong>World regularities:</strong> learned through lifelong interaction with physical environments.</li>
+<li><strong>Cultural conventions:</strong> learned through exposure to a design ecosystem.</li>
+</ol>
+<p>All three can feel immediate because none requires conscious reasoning at the moment of use.</p>
+<p>The slogan fails if “familiar” means prior exposure to the exact interface. It becomes more defensible if familiarity is expanded so broadly that it includes embodied learning of gravity, causality, containment, and spatial correspondence. But at that point it explains almost everything and loses practical precision.</p>
+<h3 id="conclusion-3">Conclusion</h3>
+<p>Some first-use fluency is not specific-interface familiarity, though it may still depend on deep embodied and cultural learning.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>Moderate-high.</p>
+<h3 id="next-step-3">Next Step</h3>
+<p>Examine the costs and risks created by familiarity itself.</p>
+<hr>
+<h2 id="cycle-5-when-does-familiarity-become-a-liability">Cycle 5: When Does Familiarity Become a Liability?</h2>
+<h3 id="objective-4">Objective</h3>
+<p>Determine whether familiar interaction patterns can reduce performance or safety.</p>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p>Strong habits create brittle automatic responses, negative transfer, capture errors, and resistance to superior alternatives.</p>
+<h3 id="evidence-found-4">Evidence Found</h3>
+<p>Habit-capture research describes cases where a frequent action overrides an intended but less common action, especially when contexts share cues. Human-error research distinguishes slips from mistakes and emphasizes that system design must anticipate predictable human behavior.</p>
+<p>Interface habit experiments show that disrupting a learned mapping eliminates prior speed and accuracy gains. Nielsen Norman Group reports similar usability findings: variations in practiced patterns cause errors because users act from expectation rather than re-reading every interface.</p>
+<p>Population stereotypes can conflict with local standards. A user trained on one mapping may perform worse than a novice when moved to a superficially similar but differently mapped system.</p>
+<h3 id="evidence-against-4">Evidence Against</h3>
+<p>Habits are not inherently harmful. They are the mechanism that makes frequent work efficient. The problem is not habit but unstable or safety-critical contexts in which automatic responses can be triggered incorrectly.</p>
+<h3 id="sources-4">Sources</h3>
+<ul>
+<li>Reason, J. “Human Error: Models and Management.”</li>
+<li>Freed and Shafto. Predicting habit capture.</li>
+<li>Garaialde et al. Interface habits.</li>
+<li>Nielsen Norman Group. “Variations on Practiced Patterns Cause Mistakes.”</li>
+<li>Human-factors literature on population stereotypes.</li>
+</ul>
+<h3 id="analysis-4">Analysis</h3>
+<p>Familiarity produces a trade:</p>
+<ul>
+<li>It lowers the recurring cost of expected actions.</li>
+<li>It raises the disruption cost of unexpected changes.</li>
+</ul>
+<p>This means familiarity should be treated as stored behavioral capital. Stable conventions accumulate capital. Redesign can destroy it.</p>
+<p>But the same capital can become a liability when the environment changes. The more automatic the behavior, the less likely the user is to inspect the interface before acting.</p>
+<h3 id="conclusion-4">Conclusion</h3>
+<p>Familiarity improves routine performance while increasing change sensitivity and certain classes of error.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-4">Next Step</h3>
+<p>Investigate whether familiarity can preserve objectively inferior designs through economic and network mechanisms.</p>
+<hr>
+<h2 id="cycle-6-why-do-mediocre-familiar-designs-persist">Cycle 6: Why Do Mediocre Familiar Designs Persist?</h2>
+<h3 id="objective-5">Objective</h3>
+<p>Explain why a design that is not structurally optimal may dominate for long periods.</p>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>Installed user knowledge, social coordination, training materials, interoperability, and migration risk create increasing returns to familiarity.</p>
+<h3 id="evidence-found-5">Evidence Found</h3>
+<p>The cognitive evidence establishes individual switching costs: practiced mappings are faster, and disruption removes the gain. Standards and conventions add collective value because users can transfer knowledge across products. The more products share a pattern, the more valuable that pattern becomes.</p>
+<p>This resembles path dependence in economics and network effects in technology markets. The value of a convention is partly endogenous to adoption. A technically superior alternative must overcome not only feature comparison but retraining, documentation, support, error, and coordination costs.</p>
+<h3 id="evidence-against-5">Evidence Against</h3>
+<p>Familiar conventions do get replaced when the benefit is large enough, migration is gradual, compatibility layers are provided, or the old system becomes unsustainable. Familiarity creates inertia, not permanence.</p>
+<h3 id="sources-5">Sources</h3>
+<ul>
+<li>Interface habit and automaticity research.</li>
+<li>ISO and usability standards emphasizing context.</li>
+<li>Nielsen Norman Group guidance on consistency and standards.</li>
+<li>Historical examples from keyboards, command systems, operating systems, and industrial controls, used here as interpretive rather than decisive evidence.</li>
+</ul>
+<h3 id="analysis-5">Analysis</h3>
+<p>A mediocre standard can become locally optimal because the environment has adapted around it. Training, tools, mental models, and complementary products all encode the convention.</p>
+<p>This explains why redesign arguments based solely on reduced click count often fail. The redesign must repay a migration balance sheet:</p>
+<ul>
+<li>learning cost</li>
+<li>temporary productivity loss</li>
+<li>error spike</li>
+<li>support cost</li>
+<li>documentation change</li>
+<li>cross-system inconsistency</li>
+<li>loss of expert shortcuts</li>
+<li>emotional distrust caused by reduced fluency</li>
+</ul>
+<h3 id="conclusion-5">Conclusion</h3>
+<p>Familiarity is not only psychological. At scale it becomes infrastructure.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>Moderate-high.</p>
+<h3 id="next-step-5">Next Step</h3>
+<p>Develop a model separating intrinsic design quality from familiarity-dependent performance.</p>
+<hr>
+<h2 id="cycle-7-can-intuitiveness-be-decomposed-into-measurable-parts">Cycle 7: Can “Intuitiveness” Be Decomposed Into Measurable Parts?</h2>
+<h3 id="objective-6">Objective</h3>
+<p>Replace the vague adjective with a testable model.</p>
+<h3 id="hypothesis-6">Hypothesis</h3>
+<p>Perceived intuitiveness can be approximated by the inverse of four experienced costs: prediction, search, control, and consequence uncertainty.</p>
+<h3 id="evidence-found-6">Evidence Found</h3>
+<p>The reviewed literature repeatedly converges on these mechanisms:</p>
+<ul>
+<li>Processing fluency affects evaluation.</li>
+<li>Consistent practice reduces controlled processing.</li>
+<li>Hick-type uncertainty affects selection time.</li>
+<li>Fitts-type constraints affect movement time.</li>
+<li>Mapping and signifiers reduce inference and search.</li>
+<li>Feedback reduces state uncertainty.</li>
+<li>Error-prevention research separates successful completion from comfortable feeling.</li>
+</ul>
+<h3 id="evidence-against-6">Evidence Against</h3>
+<p>The variables are not independent. Familiarity changes search strategy, prediction, motor preparation, and confidence simultaneously. Emotional state, motivation, stakes, accessibility, and context also alter the experience.</p>
+<h3 id="analysis-6">Analysis</h3>
+<p>A practical decomposition is:</p>
+<p><strong>Perceived Intuitiveness ≈ Prediction Success + Processing Fluency + Action Confidence − Conscious Effort</strong></p>
+<p>A more diagnostic cost model is:</p>
+<p><strong>Interaction Cost = Search Cost + Interpretation Cost + Decision Cost + Motor Cost + System Delay + Error Risk + Recovery Cost</strong></p>
+<p>Familiarity has large effects on the first three, moderate effects on motor preparation and error likelihood in stable contexts, and limited direct effects on system delay or inherent recovery structure.</p>
+<h3 id="conclusion-6">Conclusion</h3>
+<p>“Intuitive” should be treated as a compressed user judgment generated by multiple underlying variables.</p>
+<h3 id="confidence-7">Confidence</h3>
+<p>Moderate-high.</p>
+<h3 id="next-step-6">Next Step</h3>
+<p>Attempt to falsify the emerging model with counterexamples.</p>
+<hr>
+<h2 id="cycle-8-falsification-through-counterexamples">Cycle 8: Falsification Through Counterexamples</h2>
+<h3 id="objective-7">Objective</h3>
+<p>Search for cases that break the proposed relationship between familiarity, fluency, and quality.</p>
+<h3 id="hypothesis-7">Hypothesis</h3>
+<p>If familiarity is only a multiplier, then some familiar designs should remain poor and some unfamiliar designs should succeed immediately.</p>
+<h3 id="evidence-found-7">Evidence Found</h3>
+<p>Familiar but poor:</p>
+<ul>
+<li>Repeated false statements become more believable without becoming true.</li>
+<li>Habitual actions can generate capture errors.</li>
+<li>Familiar interfaces can preserve hidden modes or dangerous mappings.</li>
+<li>Expert users can be fast on systems that remain inaccessible to novices.</li>
+</ul>
+<p>Unfamiliar but successful:</p>
+<ul>
+<li>Spatially compatible controls can be understood through visible mapping.</li>
+<li>Large, close targets are easier without special training.</li>
+<li>Constraints can make incorrect actions impossible.</li>
+<li>Immediate feedback can support exploration and correction.</li>
+</ul>
+<h3 id="evidence-against-7">Evidence Against</h3>
+<p>Even the unfamiliar-success cases rely on prior knowledge of physical causality, objects, reading direction, or interaction vocabulary. Total novelty is nearly impossible to construct for an adult participant.</p>
+<h3 id="analysis-7">Analysis</h3>
+<p>The model survives if it avoids claiming that familiarity and quality are independent. They interact. Good structure accelerates learning; familiarity amplifies stable structure; poor structure increases the training required; habit can compensate until the context changes.</p>
+<h3 id="conclusion-7">Conclusion</h3>
+<p>The strongest slogan is falsified. The weaker interaction model remains supported.</p>
+<h3 id="confidence-8">Confidence</h3>
+<p>High for rejection of the literal slogan; Moderate-high for the interaction model.</p>
+<h3 id="next-step-7">Next Step</h3>
+<p>Translate findings into candidate laws and practical evaluation methods.</p>
+<hr>
+<h1 id="confirmed-findings">Confirmed Findings</h1>
+<h2 id="cf-001-repetition-can-increase-preference-without-changing-objective-properties">CF-001: Repetition Can Increase Preference Without Changing Objective Properties</h2>
+<p>Repeated exposure can alter liking and evaluative judgment. Therefore, user preference after prolonged exposure is not clean evidence that the design’s structural properties are superior.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-002-practice-can-produce-automatic-interaction">CF-002: Practice Can Produce Automatic Interaction</h2>
+<p>Consistent cue-response mappings can become faster, more accurate, and less attention-demanding with practice.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-003-familiarity-is-context--and-population-dependent">CF-003: Familiarity Is Context- and Population-Dependent</h2>
+<p>A pattern can be familiar to one group and opaque to another. “Intuitive” without a specified user population is therefore incomplete.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-004-familiarity-can-create-errors-when-context-changes">CF-004: Familiarity Can Create Errors When Context Changes</h2>
+<p>Automatic responses can be misapplied after redesign, transfer, mode changes, or rare exceptions.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-005-subjective-fluency-is-not-equivalent-to-usability">CF-005: Subjective Fluency Is Not Equivalent to Usability</h2>
+<p>A system can feel easy while performing poorly on effectiveness, safety, recovery, or accessibility. Standards explicitly treat usability as contextual and multidimensional.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-006-some-design-costs-persist-under-expertise">CF-006: Some Design Costs Persist Under Expertise</h2>
+<p>Physical target acquisition, required action count, system delay, and absent feedback cannot be fully removed by learning.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-007-consistency-has-compounding-value">CF-007: Consistency Has Compounding Value</h2>
+<p>Stable patterns allow users to amortize learning across repetitions and products. Consistency is therefore not merely aesthetic uniformity. It is a mechanism for accumulating behavioral efficiency.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-008-expert-observation-can-underestimate-design-friction">CF-008: Expert Observation Can Underestimate Design Friction</h2>
+<p>Experts may have memorized locations, commands, exceptions, and workarounds. Their performance does not reveal the original learning cost or transfer difficulty.</p>
+<p><strong>Confidence:</strong> Moderate-high.</p>
+<hr>
+<h1 id="rejected-hypotheses">Rejected Hypotheses</h1>
+<h2 id="rh-001-all-intuitive-design-is-merely-familiar-design">RH-001: All Intuitive Design Is Merely Familiar Design</h2>
+<h3 id="why-rejected">Why Rejected</h3>
+<p>First-use success can be supported by visible mapping, constraints, feedback, perceptual salience, and physical compatibility. These do not require familiarity with the exact artifact or convention.</p>
+<h3 id="residual-truth">Residual Truth</h3>
+<p>Most adult first-use behavior still draws on prior embodied and cultural learning. “Novel” interfaces are rarely cognitively blank.</p>
+<h2 id="rh-002-repetition-makes-any-design-good">RH-002: Repetition Makes Any Design Good</h2>
+<h3 id="why-rejected-1">Why Rejected</h3>
+<p>Practice can improve execution of a method but cannot remove unnecessary actions, system latency, inaccessible targets, missing feedback, or catastrophic consequences of slips.</p>
+<h3 id="residual-truth-1">Residual Truth</h3>
+<p>Repeated use can make many poor features less noticeable and can make arbitrary mappings operationally efficient.</p>
+<h2 id="rh-003-familiarity-only-changes-preference-not-performance">RH-003: Familiarity Only Changes Preference, Not Performance</h2>
+<h3 id="why-rejected-2">Why Rejected</h3>
+<p>Automaticity and interface-habit research show real gains in speed and accuracy.</p>
+<h2 id="rh-004-a-familiar-design-is-always-safer">RH-004: A Familiar Design Is Always Safer</h2>
+<h3 id="why-rejected-3">Why Rejected</h3>
+<p>Familiarity can reduce routine errors but increase capture errors, complacency, mode mistakes, and negative transfer when familiar cues trigger the wrong response.</p>
+<h2 id="rh-005-convention-is-evidence-of-optimality">RH-005: Convention Is Evidence of Optimality</h2>
+<h3 id="why-rejected-4">Why Rejected</h3>
+<p>Conventions may persist because of installed knowledge, coordination benefits, path dependence, and switching costs. Survival demonstrates fitness within a historical ecosystem, not global optimality.</p>
+<h2 id="rh-006-novelty-and-familiarity-are-simple-opposites">RH-006: Novelty and Familiarity Are Simple Opposites</h2>
+<h3 id="why-rejected-5">Why Rejected</h3>
+<p>Preference can favor familiarity under low-effort automatic processing and novelty under active exploration. Complex designs may require a balance: enough familiarity for orientation, enough novelty for information or interest.</p>
+<hr>
+<h1 id="emerging-patterns">Emerging Patterns</h1>
+<h2 id="ep-001-intuitiveness-is-a-prediction-experience">EP-001: Intuitiveness Is a Prediction Experience</h2>
+<p>An interaction feels intuitive when the user’s predictions are repeatedly confirmed with little conscious effort. Familiarity improves prediction because the user already possesses a model. Good mapping improves prediction because the interface exposes the model.</p>
+<p><strong>Why it matters:</strong> This unifies convention-based and structure-based intuition without treating them as identical.</p>
+<h2 id="ep-002-familiarity-transfers-cost-from-runtime-to-training">EP-002: Familiarity Transfers Cost From Runtime to Training</h2>
+<p>A poor design can appear efficient at runtime because its cost was paid earlier through learning and repetition.</p>
+<p><strong>Why it matters:</strong> Design comparisons must include acquisition cost, not only expert task time.</p>
+<h2 id="ep-003-stability-compounds-change-liquidates">EP-003: Stability Compounds, Change Liquidates</h2>
+<p>Stable layouts and mappings accumulate procedural memory. Redesign partially liquidates that stored value.</p>
+<p><strong>Why it matters:</strong> Redesign should be evaluated as an investment decision, not a visual refresh.</p>
+<h2 id="ep-004-the-better-the-habit-the-more-dangerous-the-exception">EP-004: The Better the Habit, the More Dangerous the Exception</h2>
+<p>Strong automaticity improves frequent cases while increasing the chance that rare deviations will be missed.</p>
+<p><strong>Why it matters:</strong> Safety-critical systems should make exceptional states perceptually distinct and may need deliberate friction.</p>
+<h2 id="ep-005-familiarity-can-mask-structural-inefficiency">EP-005: Familiarity Can Mask Structural Inefficiency</h2>
+<p>Users stop noticing arbitrary sequences once they become chunks. This produces a ceiling on introspective feedback: experts may no longer be able to explain what was hard to learn.</p>
+<p><strong>Why it matters:</strong> Retrospective interviews with experts are insufficient for novice usability assessment.</p>
+<h2 id="ep-006-convention-is-distributed-memory">EP-006: Convention Is Distributed Memory</h2>
+<p>A shared icon, layout, or gesture stores knowledge outside any single product. Designers who follow it borrow training from the surrounding ecosystem.</p>
+<p><strong>Why it matters:</strong> Breaking convention spends collective learning capital and should require measurable benefit.</p>
+<h2 id="ep-007-natural-often-means-deeply-learned">EP-007: “Natural” Often Means Deeply Learned</h2>
+<p>Physical-world regularities are learned so early and broadly that they feel innate. The practical distinction is not innate versus learned, but how widely and robustly the knowledge transfers.</p>
+<p><strong>Why it matters:</strong> Designers should prefer mappings grounded in broad, durable experience over narrow product-specific conventions.</p>
+<hr>
+<h1 id="proposed-models">Proposed Models</h1>
+<h2 id="law-if-001-familiarity-attribution-law">LAW-IF-001: Familiarity Attribution Law</h2>
+<h3 id="hypothesis-8">Hypothesis</h3>
+<p>When an interaction is processed fluently and produces expected outcomes, users tend to attribute the ease to the design rather than to their own prior learning.</p>
+<h3 id="prediction">Prediction</h3>
+<p>Two users with different exposure histories will rate the same interface differently on “intuitiveness,” even when objective task structure is identical.</p>
+<h3 id="supporting-evidence">Supporting Evidence</h3>
+<p>Processing fluency, mere exposure, illusory truth, and interface habit research.</p>
+<h3 id="counter-evidence">Counter Evidence</h3>
+<p>Users can sometimes correctly identify that familiarity is the cause, particularly after explicit comparison or training disruption.</p>
+<h3 id="confidence-9">Confidence</h3>
+<p>High as a qualitative law; unvalidated quantitatively.</p>
+<hr>
+<h2 id="law-if-002-familiarity-compensation-law">LAW-IF-002: Familiarity Compensation Law</h2>
+<h3 id="hypothesis-9">Hypothesis</h3>
+<p>Repeated stable use can compensate for arbitrary mapping and poor discoverability, but compensation declines as structural, physical, temporal, or consequence costs increase.</p>
+<h3 id="prediction-1">Prediction</h3>
+<p>Practice will produce large gains for location memory and command selection, smaller gains for small distant targets, and minimal gains for system latency or missing feedback.</p>
+<h3 id="supporting-evidence-1">Supporting Evidence</h3>
+<p>Automaticity, KLM, Fitts, and human-factors evidence.</p>
+<h3 id="counter-evidence-1">Counter Evidence</h3>
+<p>Experts can sometimes restructure tasks with shortcuts or tools, indirectly changing structural costs.</p>
+<h3 id="confidence-10">Confidence</h3>
+<p>Moderate-high.</p>
+<hr>
+<h2 id="law-if-003-habit-fragility-law">LAW-IF-003: Habit Fragility Law</h2>
+<h3 id="hypothesis-10">Hypothesis</h3>
+<p>The performance advantage created by a stable interface habit is proportional to the disruption cost when the cue-response mapping changes.</p>
+<h3 id="prediction-2">Prediction</h3>
+<p>The most frequently practiced controls will show the largest temporary error and latency increase after relocation or remapping.</p>
+<h3 id="supporting-evidence-2">Supporting Evidence</h3>
+<p>Interface habit disruption and capture-error research.</p>
+<h3 id="counter-evidence-2">Counter Evidence</h3>
+<p>Highly explicit change signaling, retraining, dual support, and reversible customization may reduce disruption.</p>
+<h3 id="confidence-11">Confidence</h3>
+<p>High qualitatively.</p>
+<hr>
+<h2 id="law-if-004-convention-investment-law">LAW-IF-004: Convention Investment Law</h2>
+<h3 id="hypothesis-11">Hypothesis</h3>
+<p>The burden of proof for breaking a convention should rise with the size, frequency, and cross-context portability of the installed user habit.</p>
+<h3 id="prediction-3">Prediction</h3>
+<p>Replacing a high-frequency cross-application pattern requires a larger performance benefit than replacing a rare product-specific pattern.</p>
+<h3 id="supporting-evidence-3">Supporting Evidence</h3>
+<p>Automaticity, consistency, transfer, and switching-cost evidence.</p>
+<h3 id="counter-evidence-3">Counter Evidence</h3>
+<p>A convention with severe safety or accessibility defects may warrant replacement despite high installed familiarity.</p>
+<h3 id="confidence-12">Confidence</h3>
+<p>Moderate-high.</p>
+<hr>
+<h2 id="law-if-005-exceptional-state-distinction-law">LAW-IF-005: Exceptional-State Distinction Law</h2>
+<h3 id="hypothesis-12">Hypothesis</h3>
+<p>When a familiar action becomes inappropriate in a rare state, the interface must make that state more perceptually distinct as habit strength and consequence severity increase.</p>
+<h3 id="prediction-4">Prediction</h3>
+<p>Error rates will decline when exceptional modes alter multiple salient cues rather than relying on a small label or memory-based warning.</p>
+<h3 id="supporting-evidence-4">Supporting Evidence</h3>
+<p>Habit capture, mode errors, human-error systems theory, and safety guidance.</p>
+<h3 id="counter-evidence-4">Counter Evidence</h3>
+<p>Excessive visual change may itself disrupt orientation or create alarm fatigue.</p>
+<h3 id="confidence-13">Confidence</h3>
+<p>Moderate-high.</p>
+<hr>
+<h2 id="model-if-001-the-familiarity-adjusted-design-quality-model">MODEL-IF-001: The Familiarity-Adjusted Design Quality Model</h2>
+<p>A design should be evaluated at three exposure states:</p>
+<h3 id="state-a-encounter-quality">State A: Encounter Quality</h3>
+<p>Performance with little or no product-specific learning.</p>
+<p>Measures:</p>
+<ul>
+<li>first-attempt completion</li>
+<li>time to discover action</li>
+<li>interpretation accuracy</li>
+<li>reliance on help</li>
+<li>initial error severity</li>
+</ul>
+<h3 id="state-b-acquisition-quality">State B: Acquisition Quality</h3>
+<p>How rapidly stable competence develops.</p>
+<p>Measures:</p>
+<ul>
+<li>learning-curve slope</li>
+<li>repetitions to criterion</li>
+<li>retention after delay</li>
+<li>transfer from related products</li>
+<li>number of concepts or exceptions to memorize</li>
+</ul>
+<h3 id="state-c-practiced-quality">State C: Practiced Quality</h3>
+<p>Performance after habit formation.</p>
+<p>Measures:</p>
+<ul>
+<li>expert task time</li>
+<li>throughput</li>
+<li>attention demand</li>
+<li>error rate</li>
+<li>recovery time</li>
+<li>shortcut availability</li>
+</ul>
+<p>A design can score differently at each state. This creates a more useful taxonomy than “intuitive” versus “not intuitive.”</p>
+<hr>
+<h2 id="model-if-002-interaction-cost-decomposition">MODEL-IF-002: Interaction Cost Decomposition</h2>
+<p>For a task <em>t</em>, user <em>u</em>, design <em>d</em>, and exposure level <em>e</em>:</p>
+<p><strong>Total Interaction Cost</strong></p>
+<p><code>C(t,u,d,e) = Cs + Ci + Cd + Cm + Cl + Cr</code></p>
+<p>Where:</p>
+<ul>
+<li><code>Cs</code> = search cost</li>
+<li><code>Ci</code> = interpretation and prediction cost</li>
+<li><code>Cd</code> = decision cost</li>
+<li><code>Cm</code> = motor and physical cost</li>
+<li><code>Cl</code> = latency and waiting cost</li>
+<li><code>Cr</code> = expected error and recovery cost</li>
+</ul>
+<p>Familiarity primarily reduces <code>Cs</code>, <code>Ci</code>, and <code>Cd</code>. It can reduce portions of <code>Cm</code> through motor learning and portions of <code>Cr</code> in stable routine conditions. It has little direct effect on <code>Cl</code> and may increase <code>Cr</code> after unexpected change.</p>
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+<li>Costs can be estimated separately enough to guide diagnosis.</li>
+<li>Exposure affects more than one term.</li>
+<li>Context and consequence severity alter the weighting.</li>
+</ul>
+<h3 id="status">Status</h3>
+<p>Conceptual model requiring validation.</p>
+<hr>
+<h2 id="model-if-003-redesign-break-even-model">MODEL-IF-003: Redesign Break-Even Model</h2>
+<p>A redesign is justified when:</p>
+<p><code>Long-term Benefit > Migration Cost + Habit Loss + Transition Error Cost + Ecosystem Inconsistency</code></p>
+<p>More explicitly:</p>
+<p><code>N × F × ΔC × H > Ct + Ce + Cs + Cd</code></p>
+<p>Where:</p>
+<ul>
+<li><code>N</code> = number of affected users</li>
+<li><code>F</code> = future task frequency per user</li>
+<li><code>ΔC</code> = expected recurring cost reduction per task</li>
+<li><code>H</code> = expected remaining useful life</li>
+<li><code>Ct</code> = training and communication cost</li>
+<li><code>Ce</code> = transition error cost</li>
+<li><code>Cs</code> = support and documentation cost</li>
+<li><code>Cd</code> = disruption of cross-product consistency</li>
+</ul>
+<h3 id="implication">Implication</h3>
+<p>Small per-task improvements can justify migration for extremely frequent tasks. Large visual novelty with no measurable recurring gain usually cannot.</p>
+<h3 id="status-1">Status</h3>
+<p>Economic decision model, not yet empirically calibrated.</p>
+<hr>
+<h2 id="model-if-004-familiarity-classes">MODEL-IF-004: Familiarity Classes</h2>
+<h3 id="f0-unknown">F0: Unknown</h3>
+<p>No recognizable model, convention, or physical analogy.</p>
+<h3 id="f1-structurally-inferable">F1: Structurally Inferable</h3>
+<p>No direct prior use, but visible mapping, constraints, or affordances support prediction.</p>
+<h3 id="f2-analogically-familiar">F2: Analogically Familiar</h3>
+<p>Resembles another known system, though details differ.</p>
+<h3 id="f3-conventionally-familiar">F3: Conventionally Familiar</h3>
+<p>Uses a widely shared cultural or platform pattern.</p>
+<h3 id="f4-product-familiar">F4: Product Familiar</h3>
+<p>User knows the specific product and layout.</p>
+<h3 id="f5-procedurally-automatic">F5: Procedurally Automatic</h3>
+<p>Cue-response sequence is habitual and requires little conscious control.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>“Familiar” is not binary. A design may be new at the product level while familiar at the structural or conventional level. This taxonomy supports more precise research and testing.</p>
+<hr>
+<h1 id="observations">Observations</h1>
+<h2 id="obs-001">OBS-001</h2>
+<h3 id="observation">Observation</h3>
+<p>Users commonly use “intuitive” as a global adjective even though measured performance can differ across first use, learning, and expert use.</p>
+<h3 id="interpretation">Interpretation</h3>
+<p>The word compresses multiple dimensions and obscures tradeoffs.</p>
+<h3 id="confidence-14">Confidence</h3>
+<p>High.</p>
+<h2 id="obs-002">OBS-002</h2>
+<h3 id="observation-1">Observation</h3>
+<p>Repetition can increase liking and truth judgments without changing stimulus quality or factual accuracy.</p>
+<h3 id="interpretation-1">Interpretation</h3>
+<p>Fluency is used as a heuristic signal and can be misattributed.</p>
+<h3 id="confidence-15">Confidence</h3>
+<p>High.</p>
+<h2 id="obs-003">OBS-003</h2>
+<h3 id="observation-2">Observation</h3>
+<p>Stable mappings produce automaticity; changed mappings eliminate part of the gain.</p>
+<h3 id="interpretation-2">Interpretation</h3>
+<p>Consistency accumulates procedural value and redesign destroys some of it.</p>
+<h3 id="confidence-16">Confidence</h3>
+<p>High.</p>
+<h2 id="obs-004">OBS-004</h2>
+<h3 id="observation-3">Observation</h3>
+<p>Experts can execute arbitrary sequences rapidly.</p>
+<h3 id="interpretation-3">Interpretation</h3>
+<p>Expert speed alone cannot distinguish good structure from absorbed training cost.</p>
+<h3 id="confidence-17">Confidence</h3>
+<p>High.</p>
+<h2 id="obs-005">OBS-005</h2>
+<h3 id="observation-4">Observation</h3>
+<p>Physical compatibility and visible structure can improve first-use performance.</p>
+<h3 id="interpretation-4">Interpretation</h3>
+<p>Prior exposure to the exact design is not the only path to low-effort interaction.</p>
+<h3 id="confidence-18">Confidence</h3>
+<p>Moderate-high.</p>
+<h2 id="obs-006">OBS-006</h2>
+<h3 id="observation-5">Observation</h3>
+<p>Strong habits can generate errors when a rare state or changed interface requires a different action.</p>
+<h3 id="interpretation-5">Interpretation</h3>
+<p>The optimization for common cases can create vulnerability in exceptional cases.</p>
+<h3 id="confidence-19">Confidence</h3>
+<p>High.</p>
+<hr>
+<h1 id="evidence">Evidence</h1>
+<h2 id="evd-001">EVD-001</h2>
+<h3 id="citation">Citation</h3>
+<p>Bornstein, R. F. (1992). “Stimulus Recognition and the Mere Exposure Effect.” <em>Journal of Personality and Social Psychology</em>.</p>
+<h3 id="summary">Summary</h3>
+<p>Exposure effects can occur even when explicit recognition is weak, supporting a distinction between familiarity-driven evaluation and conscious memory.</p>
+<h3 id="supports">Supports</h3>
+<ul>
+<li>LAW-IF-001</li>
+<li>CF-001</li>
+</ul>
+<h3 id="challenges">Challenges</h3>
+<ul>
+<li>RH-003</li>
+</ul>
+<h2 id="evd-002">EVD-002</h2>
+<h3 id="citation-1">Citation</h3>
+<p>Hassan, A., and Barber, S. J. (2021). “The Effects of Repetition Frequency on the Illusory Truth Effect.”</p>
+<h3 id="summary-1">Summary</h3>
+<p>Repeated information becomes easier to process and is more likely to be judged true, illustrating that fluency can be mistaken for an objective property.</p>
+<h3 id="supports-1">Supports</h3>
+<ul>
+<li>LAW-IF-001</li>
+<li>EP-001</li>
+</ul>
+<h3 id="challenges-1">Challenges</h3>
+<ul>
+<li>Any inference that comfortable feeling reliably indicates quality</li>
+</ul>
+<h2 id="evd-003">EVD-003</h2>
+<h3 id="citation-2">Citation</h3>
+<p>Schneider, W., and Shiffrin, R. M. (1977). “Controlled and Automatic Human Information Processing.” <em>Psychological Review</em>.</p>
+<h3 id="summary-2">Summary</h3>
+<p>Consistent practice can convert controlled attention-demanding processing into automatic processing.</p>
+<h3 id="supports-2">Supports</h3>
+<ul>
+<li>LAW-IF-002</li>
+<li>CF-002</li>
+<li>EP-002</li>
+</ul>
+<h3 id="challenges-2">Challenges</h3>
+<ul>
+<li>RH-003</li>
+</ul>
+<h2 id="evd-004">EVD-004</h2>
+<h3 id="citation-3">Citation</h3>
+<p>Garaialde, D., et al. (2020). “Quantifying the Impact of Making and Breaking Interface Habits.”</p>
+<h3 id="summary-3">Summary</h3>
+<p>Users became faster and more accurate as interface habits formed, and performance gains disappeared when mappings were disrupted.</p>
+<h3 id="supports-3">Supports</h3>
+<ul>
+<li>LAW-IF-003</li>
+<li>CF-004</li>
+<li>EP-003</li>
+</ul>
+<h3 id="challenges-3">Challenges</h3>
+<ul>
+<li>RH-004</li>
+</ul>
+<h2 id="evd-005">EVD-005</h2>
+<h3 id="citation-4">Citation</h3>
+<p>Card, S. K., Moran, T. P., and Newell, A. (1980). “The Keystroke-Level Model for User Performance Time with Interactive Systems.” <em>Communications of the ACM</em>.</p>
+<h3 id="summary-4">Summary</h3>
+<p>Expert execution time can be decomposed into mental and physical operators, showing that familiarity can reduce mental preparation but does not erase every action cost.</p>
+<h3 id="supports-4">Supports</h3>
+<ul>
+<li>LAW-IF-002</li>
+<li>MODEL-IF-002</li>
+</ul>
+<h3 id="challenges-4">Challenges</h3>
+<ul>
+<li>RH-002</li>
+</ul>
+<h2 id="evd-006">EVD-006</h2>
+<h3 id="citation-5">Citation</h3>
+<p>Hick, W. E. (1952). “On the Rate of Gain of Information.” <em>Quarterly Journal of Experimental Psychology</em>.</p>
+<h3 id="summary-5">Summary</h3>
+<p>Choice reaction time varies with response uncertainty, providing a measurable basis for one component of decision friction.</p>
+<h3 id="supports-5">Supports</h3>
+<ul>
+<li>MODEL-IF-002</li>
+<li>EP-001</li>
+</ul>
+<h3 id="challenges-5">Challenges</h3>
+<ul>
+<li>A unitary model of intuitiveness</li>
+</ul>
+<h2 id="evd-007">EVD-007</h2>
+<h3 id="citation-6">Citation</h3>
+<p>Fitts, P. M. (1954). “The Information Capacity of the Human Motor System in Controlling the Amplitude of Movement.” <em>Journal of Experimental Psychology</em>.</p>
+<h3 id="summary-6">Summary</h3>
+<p>Movement time depends on target distance and size, demonstrating an interaction cost not reducible to semantic familiarity.</p>
+<h3 id="supports-6">Supports</h3>
+<ul>
+<li>LAW-IF-002</li>
+<li>MODEL-IF-002</li>
+</ul>
+<h3 id="challenges-6">Challenges</h3>
+<ul>
+<li>RH-002</li>
+</ul>
+<h2 id="evd-008">EVD-008</h2>
+<h3 id="citation-7">Citation</h3>
+<p>ISO 9241-11:2018. <em>Ergonomics of Human-System Interaction — Usability: Definitions and Concepts</em>.</p>
+<h3 id="summary-7">Summary</h3>
+<p>Usability is contextual and includes effectiveness, efficiency, and satisfaction. Felt intuitiveness is therefore only one possible indicator.</p>
+<h3 id="supports-7">Supports</h3>
+<ul>
+<li>CF-005</li>
+<li>MODEL-IF-001</li>
+</ul>
+<h3 id="challenges-7">Challenges</h3>
+<ul>
+<li>Treating subjective preference as total design quality</li>
+</ul>
+<h2 id="evd-009">EVD-009</h2>
+<h3 id="citation-8">Citation</h3>
+<p>Norman, D. A. (2013). <em>The Design of Everyday Things</em>, revised edition.</p>
+<h3 id="summary-8">Summary</h3>
+<p>Signifiers, mappings, constraints, conceptual models, and feedback can place knowledge in the world and improve discoverability.</p>
+<h3 id="supports-8">Supports</h3>
+<ul>
+<li>F1 familiarity class</li>
+<li>EP-001</li>
+</ul>
+<h3 id="challenges-8">Challenges</h3>
+<ul>
+<li>RH-001</li>
+</ul>
+<h2 id="evd-010">EVD-010</h2>
+<h3 id="citation-9">Citation</h3>
+<p>Reason, J. (2000). “Human Error: Models and Management.” <em>BMJ</em>.</p>
+<h3 id="summary-9">Summary</h3>
+<p>Errors must be understood through system conditions as well as individual actions. Familiar expertise does not eliminate predictable slips and latent design hazards.</p>
+<h3 id="supports-9">Supports</h3>
+<ul>
+<li>LAW-IF-005</li>
+<li>CF-004</li>
+</ul>
+<h3 id="challenges-9">Challenges</h3>
+<ul>
+<li>RH-004</li>
+</ul>
+<h2 id="evd-011">EVD-011</h2>
+<h3 id="citation-10">Citation</h3>
+<p>Tsang, S. N. H. (2015). “Interface Design and Display-Control Compatibility.”</p>
+<h3 id="summary-10">Summary</h3>
+<p>Compatibility between displays and controls improves operational effectiveness and safety, especially under emergency conditions.</p>
+<h3 id="supports-10">Supports</h3>
+<ul>
+<li>RH-001 rejection</li>
+<li>F1 familiarity class</li>
+</ul>
+<h3 id="challenges-10">Challenges</h3>
+<ul>
+<li>Pure convention explanation</li>
+</ul>
+<h2 id="evd-012">EVD-012</h2>
+<h3 id="citation-11">Citation</h3>
+<p>Nielsen Norman Group. “Maintain Consistency and Adhere to Standards” and “Variations on Practiced Patterns Cause Mistakes.”</p>
+<h3 id="summary-11">Summary</h3>
+<p>External and internal consistency allow users to apply existing knowledge; deviations from practiced patterns induce errors.</p>
+<h3 id="supports-11">Supports</h3>
+<ul>
+<li>LAW-IF-003</li>
+<li>LAW-IF-004</li>
+<li>EP-006</li>
+</ul>
+<h3 id="challenges-11">Challenges</h3>
+<ul>
+<li>Novelty without migration justification</li>
+</ul>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<h2 id="oq-001-what-is-the-exposure-to-fluency-function">OQ-001: What Is the Exposure-to-Fluency Function?</h2>
+<p><strong>Importance:</strong> Very high.</p>
+<p>How many repetitions are required for different interaction classes to reach 50%, 80%, and 95% of expert performance? The answer likely depends on mapping consistency, task complexity, spacing of practice, feedback quality, and prior analogies.</p>
+<h2 id="oq-002-how-much-structural-badness-can-familiarity-compensate-for">OQ-002: How Much Structural Badness Can Familiarity Compensate For?</h2>
+<p><strong>Importance:</strong> Very high.</p>
+<p>A controlled program could vary action count, target difficulty, mapping arbitrariness, and feedback while tracking learning curves. This would reveal where practice plateaus below acceptable performance.</p>
+<h2 id="oq-003-can-we-separate-familiarity-from-good-mapping-experimentally">OQ-003: Can We Separate Familiarity From Good Mapping Experimentally?</h2>
+<p><strong>Importance:</strong> High.</p>
+<p>Compare four conditions:</p>
+<ol>
+<li>familiar and well mapped</li>
+<li>familiar and poorly mapped</li>
+<li>unfamiliar and well mapped</li>
+<li>unfamiliar and poorly mapped</li>
+</ol>
+<p>Measure first-use success, learning slope, retention, transfer, and preference.</p>
+<h2 id="oq-004-how-long-does-habit-debt-persist-after-redesign">OQ-004: How Long Does Habit Debt Persist After Redesign?</h2>
+<p><strong>Importance:</strong> High.</p>
+<p>Measure the duration and severity of post-change performance loss, including delayed capture errors after apparent retraining.</p>
+<h2 id="oq-005-does-familiarity-affect-accessibility-groups-differently">OQ-005: Does Familiarity Affect Accessibility Groups Differently?</h2>
+<p><strong>Importance:</strong> High.</p>
+<p>A pattern familiar to sighted mouse users may not transfer to screen-reader, switch-control, motor-impaired, or cognitively impaired users. The “installed habit” may be population-specific.</p>
+<h2 id="oq-006-when-is-deliberate-friction-better-than-intuitive-flow">OQ-006: When Is Deliberate Friction Better Than Intuitive Flow?</h2>
+<p><strong>Importance:</strong> Medium-high.</p>
+<p>High-consequence actions may benefit from interruption, confirmation, or mode distinction. The optimal friction likely scales with consequence severity and reversibility.</p>
+<h2 id="oq-007-can-subjective-intuitiveness-be-debiased">OQ-007: Can Subjective Intuitiveness Be Debiased?</h2>
+<p><strong>Importance:</strong> Medium.</p>
+<p>Would asking users to report prior exposure, or comparing after a delay, reduce familiarity attribution errors?</p>
+<h2 id="oq-008-what-is-the-optimal-familiarity-novelty-ratio-in-composition">OQ-008: What Is the Optimal Familiarity-Novelty Ratio in Composition?</h2>
+<p><strong>Importance:</strong> Medium.</p>
+<p>In visual and auditory aesthetics, complete predictability can become boring while complete novelty becomes difficult. This may connect interface intuition to broader composition laws involving prediction, compression, and surprise.</p>
+<hr>
+<h1 id="recommendations">Recommendations</h1>
+<h2 id="priority-1-replace-intuitive-with-an-exposure-indexed-scorecard">Priority 1: Replace “Intuitive” With an Exposure-Indexed Scorecard</h2>
+<h3 id="action">Action</h3>
+<p>For every design evaluation, report separate measures for:</p>
+<ul>
+<li>first encounter</li>
+<li>early learning</li>
+<li>delayed retention</li>
+<li>expert routine use</li>
+<li>transfer after change</li>
+</ul>
+<h3 id="expected-value">Expected Value</h3>
+<p>Very high.</p>
+<h3 id="effort">Effort</h3>
+<p>Low to moderate.</p>
+<h3 id="rationale">Rationale</h3>
+<p>This prevents expert fluency from being mistaken for first-use clarity and exposes where the design’s cost is being paid.</p>
+<h2 id="priority-2-build-a-familiarity-controlled-experiment-library">Priority 2: Build a Familiarity-Controlled Experiment Library</h2>
+<h3 id="action-1">Action</h3>
+<p>Use existing published datasets where possible and add lightweight remote experiments only where evidence is missing. Manipulate convention match, mapping quality, repetition count, and change disruption.</p>
+<h3 id="expected-value-1">Expected Value</h3>
+<p>Very high.</p>
+<h3 id="effort-1">Effort</h3>
+<p>Moderate to high.</p>
+<h3 id="rationale-1">Rationale</h3>
+<p>The project needs quantitative learning curves, not more slogans.</p>
+<h2 id="priority-3-add-familiarity-as-a-node-in-the-composition-genome">Priority 3: Add Familiarity as a Node in the Composition Genome</h2>
+<h3 id="action-2">Action</h3>
+<p>Represent familiarity as a relational variable connected to:</p>
+<ul>
+<li>processing fluency</li>
+<li>predictability</li>
+<li>repetition</li>
+<li>convention</li>
+<li>consistency</li>
+<li>automaticity</li>
+<li>preference</li>
+<li>trust</li>
+<li>error risk</li>
+<li>novelty</li>
+<li>switching cost</li>
+</ul>
+<h3 id="expected-value-2">Expected Value</h3>
+<p>High.</p>
+<h3 id="effort-2">Effort</h3>
+<p>Moderate.</p>
+<h3 id="rationale-2">Rationale</h3>
+<p>Familiarity is not an isolated principle. It modifies perception, action, evaluation, and system economics.</p>
+<h2 id="priority-4-create-a-redesign-migration-calculator">Priority 4: Create a Redesign Migration Calculator</h2>
+<h3 id="action-3">Action</h3>
+<p>Operationalize MODEL-IF-003 using task frequency, affected population, measured time savings, training costs, support costs, and error consequences.</p>
+<h3 id="expected-value-3">Expected Value</h3>
+<p>High for real product decisions.</p>
+<h3 id="effort-3">Effort</h3>
+<p>Moderate.</p>
+<h3 id="rationale-3">Rationale</h3>
+<p>This turns debates about “modernizing” familiar systems into explicit break-even analysis.</p>
+<h2 id="priority-5-study-exceptional-state-design">Priority 5: Study Exceptional-State Design</h2>
+<h3 id="action-4">Action</h3>
+<p>Review aviation, medical device, nuclear control, automotive, and industrial safety research for ways to interrupt habit safely when routine actions become inappropriate.</p>
+<h3 id="expected-value-4">Expected Value</h3>
+<p>High.</p>
+<h3 id="effort-4">Effort</h3>
+<p>Moderate.</p>
+<h3 id="rationale-4">Rationale</h3>
+<p>The highest-value contradiction in the current theory is that the same automaticity that makes a design feel intuitive can create catastrophic rare-state errors.</p>
+<h2 id="priority-6-develop-a-training-cost-hidden-in-the-user-audit">Priority 6: Develop a “Training Cost Hidden in the User” Audit</h2>
+<h3 id="action-5">Action</h3>
+<p>During design review, list every fact, location, sequence, exception, and workaround users must memorize. Treat these as part of the design’s total cost.</p>
+<h3 id="expected-value-5">Expected Value</h3>
+<p>High.</p>
+<h3 id="effort-5">Effort</h3>
+<p>Low.</p>
+<h3 id="rationale-5">Rationale</h3>
+<p>It prevents organizations from crediting the product for competence that users laboriously supplied.</p>
+<hr>
+<h1 id="candidate-practical-rules">Candidate Practical Rules</h1>
+<h2 id="pr-001">PR-001</h2>
+<p>Do not call a design intuitive unless the exposure history of the evaluated users is known.</p>
+<h2 id="pr-002">PR-002</h2>
+<p>Do not use expert speed as evidence of discoverability.</p>
+<h2 id="pr-003">PR-003</h2>
+<p>Preserve high-frequency conventions unless a measurable recurring benefit repays migration cost.</p>
+<h2 id="pr-004">PR-004</h2>
+<p>Break convention more readily for rare, low-transfer, low-consequence patterns than for frequent ecosystem-wide patterns.</p>
+<h2 id="pr-005">PR-005</h2>
+<p>Make exceptional states visually and behaviorally distinct enough to overcome habitual action.</p>
+<h2 id="pr-006">PR-006</h2>
+<p>When a design feels good after repetition, separately measure whether it is effective, efficient, safe, accessible, and recoverable.</p>
+<h2 id="pr-007">PR-007</h2>
+<p>Prefer broadly transferable mappings over product-specific memorization.</p>
+<h2 id="pr-008">PR-008</h2>
+<p>Treat internal consistency as a way of manufacturing future familiarity.</p>
+<h2 id="pr-009">PR-009</h2>
+<p>Treat every redesign as both a design intervention and a behavioral retraining event.</p>
+<h2 id="pr-010">PR-010</h2>
+<p>Measure the area under the learning curve, not only the final plateau.</p>
+<hr>
+<h1 id="bibliography">Bibliography</h1>
+<h2 id="academic">Academic</h2>
+<ul>
+<li>Bornstein, R. F. (1992). “Stimulus Recognition and the Mere Exposure Effect.” <em>Journal of Personality and Social Psychology</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/1447685/">https://pubmed.ncbi.nlm.nih.gov/1447685/</a></li>
+<li>Fitts, P. M. (1954). “The Information Capacity of the Human Motor System in Controlling the Amplitude of Movement.” <em>Journal of Experimental Psychology</em>, 47(6), 381–391.</li>
+<li>Garaialde, D., Bowers, C. P., Pinder, C., Shah, P., Parashar, S., Clark, L., and Cowan, B. R. (2020). “Quantifying the Impact of Making and Breaking Interface Habits.” <a href="https://arxiv.org/abs/2005.06842">https://arxiv.org/abs/2005.06842</a></li>
+<li>Greene, M. R., Baldassano, C., Esteva, A., Beck, D. M., and Fei-Fei, L. (2014). “Affordances Provide a Fundamental Categorization Principle for Visual Scenes.” <a href="https://arxiv.org/abs/1411.5340">https://arxiv.org/abs/1411.5340</a></li>
+<li>Hassan, A., and Barber, S. J. (2021). “The Effects of Repetition Frequency on the Illusory Truth Effect.” <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8116821/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8116821/</a></li>
+<li>Hick, W. E. (1952). “On the Rate of Gain of Information.” <em>Quarterly Journal of Experimental Psychology</em>, 4, 11–26. <a href="https://doi.org/10.1080/17470215208416600">https://doi.org/10.1080/17470215208416600</a></li>
+<li>Mrkva, K., and Van Boven, L. (2020). “Salience Theory of Mere Exposure.” <a href="https://pubmed.ncbi.nlm.nih.gov/31971441/">https://pubmed.ncbi.nlm.nih.gov/31971441/</a></li>
+<li>Proctor, R. W., and Schneider, D. W. (2018). “Hick’s Law for Choice Reaction Time: A Review.” <em>Quarterly Journal of Experimental Psychology</em>. <a href="https://pubmed.ncbi.nlm.nih.gov/28434379/">https://pubmed.ncbi.nlm.nih.gov/28434379/</a></li>
+<li>Reason, J. (2000). “Human Error: Models and Management.” <em>BMJ</em>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC1117770/">https://pmc.ncbi.nlm.nih.gov/articles/PMC1117770/</a></li>
+<li>Reber, R., and Unkelbach, C. (2010). “The Epistemic Status of Processing Fluency as Source for Judgments of Truth.” <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3339024/">https://pmc.ncbi.nlm.nih.gov/articles/PMC3339024/</a></li>
+<li>Schneider, W., and Shiffrin, R. M. (1977). “Controlled and Automatic Human Information Processing: II. Perceptual Learning, Automatic Attending, and a General Theory.” <em>Psychological Review</em>, 84(2), 127–190. <a href="https://psych.indiana.edu/documents/shiffrin-and-schneider-1977.pdf">https://psych.indiana.edu/documents/shiffrin-and-schneider-1977.pdf</a></li>
+<li>Song, J., et al. (2021). “Familiarity and Novelty in Aesthetic Preference.” <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8345014/">https://pmc.ncbi.nlm.nih.gov/articles/PMC8345014/</a></li>
+<li>Vu, K. P. L., et al. (2019). “Population Stereotypes for Objects and Representations.” <a href="https://pubmed.ncbi.nlm.nih.gov/30689448/">https://pubmed.ncbi.nlm.nih.gov/30689448/</a></li>
+</ul>
+<h2 id="books">Books</h2>
+<ul>
+<li>Card, S. K., Moran, T. P., and Newell, A. (1983). <em>The Psychology of Human-Computer Interaction</em>. Lawrence Erlbaum Associates.</li>
+<li>Norman, D. A. (2013). <em>The Design of Everyday Things</em>, revised and expanded edition. Basic Books.</li>
+<li>Reason, J. (1990). <em>Human Error</em>. Cambridge University Press.</li>
+</ul>
+<h2 id="industry">Industry</h2>
+<ul>
+<li>Nielsen Norman Group. “Maintain Consistency and Adhere to Standards.” <a href="https://www.nngroup.com/articles/consistency-and-standards/">https://www.nngroup.com/articles/consistency-and-standards/</a></li>
+<li>Nielsen Norman Group. “Variations on Practiced Patterns Cause Mistakes.” <a href="https://www.nngroup.com/articles/practiced-patterns-mistakes/">https://www.nngroup.com/articles/practiced-patterns-mistakes/</a></li>
+<li>Nielsen Norman Group. “Match Between the System and the Real World.” <a href="https://www.nngroup.com/articles/match-system-real-world/">https://www.nngroup.com/articles/match-system-real-world/</a></li>
+</ul>
+<h2 id="standards">Standards</h2>
+<ul>
+<li>ISO 9241-11:2018. <em>Ergonomics of Human-System Interaction — Part 11: Usability: Definitions and Concepts</em>. <a href="https://www.iso.org/obp/ui/">https://www.iso.org/obp/ui/</a></li>
+<li>U.S. Consumer Product Safety Commission. <em>Human Factors Standard Practice</em>. <a href="https://www.cpsc.gov/s3fs-public/Human-Factors-Standard-Practice-Document-Final-ENGLISH-Feb03-2020_0.pdf">https://www.cpsc.gov/s3fs-public/Human-Factors-Standard-Practice-Document-Final-ENGLISH-Feb03-2020_0.pdf</a></li>
+</ul>
+<h2 id="historical">Historical</h2>
+<ul>
+<li>Card, S. K., Moran, T. P., and Newell, A. (1980). “The Keystroke-Level Model for User Performance Time with Interactive Systems.” <em>Communications of the ACM</em>, 23(7), 396–410. <a href="https://iiif.library.cmu.edu/file/Newell_box00072_fld05090_doc0005/Newell_box00072_fld05090_doc0005.pdf">https://iiif.library.cmu.edu/file/Newell_box00072_fld05090_doc0005/Newell_box00072_fld05090_doc0005.pdf</a></li>
+<li>Zajonc, R. B. (1968). “Attitudinal Effects of Mere Exposure.” <em>Journal of Personality and Social Psychology Monograph Supplement</em>, 9(2), 1–27.</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li>Freed, M., and Shafto, M. G. “A Conceptual Framework for Predicting Error in Complex Human-Machine Environments.” NASA. <a href="https://ntrs.nasa.gov/api/citations/20020064619/downloads/20020064619.pdf">https://ntrs.nasa.gov/api/citations/20020064619/downloads/20020064619.pdf</a></li>
+<li>Tsang, S. N. H. (2015). “Interface Design and Display-Control Compatibility.” <a href="https://journals.sagepub.com/doi/10.1177/0020294015569264">https://journals.sagepub.com/doi/10.1177/0020294015569264</a></li>
+</ul>
+<hr>
+<h1 id="next-actions">Next Actions</h1>
+<ol>
+<li>Add Familiarity, Automaticity, Convention, Switching Cost, and Habit Capture nodes to the Composition Genome.</li>
+<li>Build a source extraction table containing sample size, task type, repetitions, effect direction, and measured outcome for the strongest studies.</li>
+<li>Run a second research pass focused on quantitative learning curves and power-law-of-practice evidence.</li>
+<li>Investigate safety-critical exception design in aviation, medicine, automotive controls, and industrial systems.</li>
+<li>Develop an exposure-indexed evaluation worksheet for use in future design audits.</li>
+</ol>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-07-19</td>
+<td>OpenAI autonomous research agent</td>
+<td>Initial autonomous research report; eight investigation cycles, falsification, models, laws, recommendations, and bibliography.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="agent-instructions">Agent Instructions</h1>
+<p>When creating or modifying this document:</p>
+<ol>
+<li>Separate observation from interpretation.</li>
+<li>Never strengthen a conclusion beyond the available evidence.</li>
+<li>Preserve contradictory findings.</li>
+<li>Prefer measurable variables over subjective descriptions.</li>
+<li>Reference candidate laws and genome nodes whenever possible.</li>
+<li>Use stable IDs for observations, evidence, laws, experiments, metrics, and case studies.</li>
+<li>Record assumptions explicitly.</li>
+<li>Record confidence explicitly.</li>
+<li>Keep the YAML header valid.</li>
+<li>Do not delete revision history; append to it.</li>
+</ol>
+<p>This template is the standard for all Composition Science project documents.</p>
+<hr>
+<h1 id="predictive-processing-extension">Predictive Processing Extension</h1>
+<h2 id="research-state-snapshot">Research State Snapshot</h2>
+<ul>
+<li><strong>Research Package:</strong> RP-CS-INT-002</li>
+<li><strong>Theory version:</strong> TH-INT-2.0 candidate</li>
+<li><strong>Knowledge base version:</strong> 2026-07-21</li>
+<li><strong>Highest-confidence areas:</strong> prior knowledge transfer, practice-dependent automaticity, expectation effects on perception and response, importance of reliable feedback</li>
+<li><strong>Lowest-confidence areas:</strong> direct neural identity between perceived intuitiveness and prediction-error minimization; general quantitative coefficients across interface classes</li>
+<li><strong>Largest remaining unknown:</strong> whether a compact, exposure-sensitive surprise model predicts interface performance better than established task-level models alone</li>
+<li><strong>Active research streams:</strong> predictive processing, ecological affordances, intuitive physics, expert intuition, information-theoretic surprise, HCI measurement</li>
+<li><strong>Recently invalidated idea:</strong> that minimizing prediction error alone is a sufficient definition of good or intuitive design</li>
+<li><strong>Priority change:</strong> move from a single-cause account to a multi-mechanism, testable interaction model</li>
+</ul>
+<hr>
+<h1 id="executive-summary-of-the-extension">Executive Summary of the Extension</h1>
+<p>This extension tested the proposal that intuitive interaction is best understood as prediction-error minimization. The proposal survives only in a qualified form.</p>
+<p>Expectations clearly shape perception, attention, action selection, confidence, and response timing. Familiarity supplies priors that make outcomes easier to anticipate. Stable mappings allow users to predict both what action is available and what will happen after acting. Unexpected results attract attention, slow behavior, and force model revision. These findings make prediction and surprise valuable variables for interface science.</p>
+<p>However, predictive processing is not yet a sufficiently discriminating or empirically settled theory to replace lower-level explanations. Broad predictive-processing accounts can often explain almost any result after the fact. Neural evidence is mixed, and some findings attributed to prediction error are also explained by adaptation, attention, representational sharpening, associative learning, or ordinary decision models. Ecological psychology further challenges the assumption that action must always be mediated by an internal predictive model.</p>
+<p>The strongest revised conclusion is therefore:</p>
+<blockquote>
+<p>Perceived intuitiveness is the experienced confidence that an available action will produce an expected, controllable result without requiring costly conscious inference.</p>
+</blockquote>
+<p>Familiarity is one major way to generate that confidence. It is not the only way. Visible constraints, body-scaled affordances, natural mappings, clear causal feedback, and simple task structure can support accurate prediction on first contact. Conversely, familiarity can generate high confidence in an incorrect model, making an interface feel intuitive while producing systematic errors.</p>
+<p>The report proposes the <strong>Predictive Fit Model of Intuitive Interaction</strong>, which separates four questions:</p>
+<ol>
+<li>Can the user identify a plausible action?</li>
+<li>Can the user predict the action’s result?</li>
+<li>Does the observed result match the prediction?</li>
+<li>Can the user update or recover when it does not?</li>
+</ol>
+<p>This model is deliberately weaker than the claim that the brain globally minimizes free energy. It is an operational HCI model that can be tested using first-action accuracy, choice entropy, response time, gaze dispersion, confidence calibration, prediction violation, recovery latency, and learning curves.</p>
+<p><strong>Confidence:</strong> High that expectation congruence is a major component of intuitive interaction. Moderate that Bayesian surprise provides a useful quantitative abstraction. Low-to-moderate that active inference is currently the best neural foundation for HCI.</p>
+<hr>
+<h1 id="research-log-extension-cycles">Research Log: Extension Cycles</h1>
+<h2 id="cycle-9-can-predictive-processing-explain-the-feeling-of-intuition">Cycle 9: Can Predictive Processing Explain the Feeling of Intuition?</h2>
+<h3 id="objective-8">Objective</h3>
+<p>Test whether low prediction error offers a better explanation of intuitive interaction than familiarity alone.</p>
+<h3 id="hypothesis-13">Hypothesis</h3>
+<p>An interaction feels intuitive when the user can predict the next state of the system with high confidence and low conscious effort.</p>
+<h3 id="evidence-found-8">Evidence Found</h3>
+<p>Predictive-processing theories model perception as an interaction between prior expectations and sensory evidence. Expected stimuli are often identified more quickly, and ambiguous perception can be biased toward prior expectations. Experimental work on face perception has shown faster identification of expected faces and perceptual shifts toward cued priors. Research on long-term priors in bistable perception likewise supports a role for prior experience in shaping what is perceived.</p>
+<p>In HCI, Blackler and colleagues found that users operating unfamiliar products transferred knowledge from previously encountered features. Familiar features were used more quickly and with less overt reasoning. Hurtienne’s schema-based account similarly defines intuitive use through transfer of prior knowledge into a new task environment.</p>
+<p>These traditions converge on a common structure: the user does not approach the interface without expectations. Existing knowledge generates candidate interpretations and actions. When the interface behaves as expected, little model revision is required.</p>
+<h3 id="evidence-against-8">Evidence Against</h3>
+<p>The evidence does not show that users literally experience a scalar neural prediction-error quantity as “intuitiveness.” Expected stimuli can sometimes generate stronger rather than weaker neural representation, depending on task and measurement. Prediction, repetition suppression, attention, and adaptation are difficult to isolate experimentally.</p>
+<p>Moreover, a user can correctly predict a cumbersome ten-step process. Predictability can make a process familiar without making it physically efficient, safe, or well structured.</p>
+<h3 id="sources-6">Sources</h3>
+<ul>
+<li>Friston, K. (2010). “The Free-Energy Principle: A Unified Brain Theory?”</li>
+<li>Garlichs, A., et al. (2024). “Prediction Error Processing and Sharpening of Expected Representations.”</li>
+<li>Hardstone, R., et al. (2021). “Long-Term Priors Influence Visual Perception.”</li>
+<li>Blackler, A., Popovic, V., and Mahar, D. (2010). “Investigating Users’ Intuitive Interaction with Complex Artefacts.”</li>
+<li>Hurtienne, J., and Israel, J. H. (2007/2009). Cognitive-schema approaches to intuitive interaction.</li>
+</ul>
+<h3 id="analysis-8">Analysis</h3>
+<p>Prediction provides a useful bridge between familiarity and first-use clarity. Familiarity improves prediction by supplying priors. Visible structure improves prediction by constraining possible actions. Feedback improves prediction by making causal relationships learnable. These are different mechanisms with a shared functional outcome.</p>
+<p>But prediction fit is not equivalent to total design quality. It is one component of interaction quality and one plausible cause of the subjective label “intuitive.”</p>
+<h3 id="conclusion-8">Conclusion</h3>
+<p>Low-cost successful prediction is a strong candidate mechanism for perceived intuitiveness, but not a complete definition of good design.</p>
+<h3 id="confidence-20">Confidence</h3>
+<p>Moderate-high.</p>
+<h3 id="next-step-8">Next Step</h3>
+<p>Determine whether ecological affordances can explain novel intuitive action without internal prediction.</p>
+<hr>
+<h2 id="cycle-10-does-affordance-perception-require-familiarity-or-prediction">Cycle 10: Does Affordance Perception Require Familiarity or Prediction?</h2>
+<h3 id="objective-9">Objective</h3>
+<p>Test the strongest counterexample to the familiarity and predictive-model accounts: direct perception of action opportunities.</p>
+<h3 id="hypothesis-14">Hypothesis</h3>
+<p>Some novel interactions are immediately usable because the environment exposes action-relevant structure relative to the user’s body, not because the user recognizes a learned convention.</p>
+<h3 id="evidence-found-9">Evidence Found</h3>
+<p>Ecological psychology defines affordances relationally: an environment offers actions relative to an organism’s capabilities. Research on aperture passage, reachability, stair climbing, grasping, and tool-extended action shows that people calibrate judgments to body dimensions and action capacity. Systematic review evidence indicates that affordance perception adapts through attunement and recalibration when the person-plus-object system changes.</p>
+<p>This matters for interface design because some mappings inherit regularities from action in the physical world. A slider moving in the same direction as its controlled quantity, a handle shaped and positioned for grasping, or an object that visibly follows the finger can reduce the need for symbolic interpretation.</p>
+<h3 id="evidence-against-9">Evidence Against</h3>
+<p>Affordances are frequently overclaimed in digital design. A flat visual mark does not physically afford clicking in Gibson’s original sense. Its action meaning often depends on cultural learning, platform convention, and prior experience with screens. Even physical affordance perception requires developmental calibration and ongoing learning; “direct” does not mean innate, infallible, or independent of history.</p>
+<p>Action-specific and ecological accounts also disagree about the role of internal mediation. Evidence that perceived properties vary with action capability does not by itself decide whether internal predictive representation is necessary.</p>
+<h3 id="sources-7">Sources</h3>
+<ul>
+<li>Gibson, J. J. (1979). <em>The Ecological Approach to Visual Perception</em>.</li>
+<li>Vauclin, P., et al. (2023). Systematic review of attunement and recalibration in affordance perception.</li>
+<li>Witt, J. K. (2014). Reconciliation and conflict between action-specific and ecological approaches.</li>
+<li>Chong, I., and Proctor, R. W. (2020). Historical analysis of affordance theory.</li>
+</ul>
+<h3 id="analysis-9">Analysis</h3>
+<p>The ecological account prevents a critical mistake: treating every easy interaction as retrieval of a symbolic rule. Some structures reduce uncertainty because the space of physically plausible actions is constrained before conscious interpretation.</p>
+<p>For design science, the metaphysical dispute between direct perception and internal inference is less important than the empirical distinction between:</p>
+<ul>
+<li>action possibilities made legible by geometry and dynamics,</li>
+<li>action meanings supplied by convention,</li>
+<li>and action sequences learned through product-specific repetition.</li>
+</ul>
+<h3 id="conclusion-9">Conclusion</h3>
+<p>First-use success can arise from action-compatible structure without product-specific familiarity. The phrase “intuitive is just familiar” is therefore too strong.</p>
+<h3 id="confidence-21">Confidence</h3>
+<p>High for the design-level conclusion; low on resolving the theoretical dispute between ecological and predictive accounts.</p>
+<h3 id="next-step-9">Next Step</h3>
+<p>Test whether apparently innate physical expectations are actually learned statistical priors.</p>
+<hr>
+<h2 id="cycle-11-are-there-pre-existing-physical-expectations">Cycle 11: Are There Pre-Existing Physical Expectations?</h2>
+<h3 id="objective-10">Objective</h3>
+<p>Determine whether users possess expectations about objects, motion, containment, support, and causality that can support novel interaction.</p>
+<h3 id="hypothesis-15">Hypothesis</h3>
+<p>Humans enter interface encounters with broad physical expectations learned early enough and generally enough that they function as near-universal priors.</p>
+<h3 id="evidence-found-10">Evidence Found</h3>
+<p>Developmental research using violation-of-expectation paradigms reports that infants respond differently when objects appear to pass through solid barriers, disappear without occlusion, remain unsupported, or violate continuity. Adult electrophysiological evidence also indicates that intuitive physical expectations influence online object tracking.</p>
+<p>Computational work shows that systems trained only on visual sequences can learn useful object-centric expectations concerning continuity, solidity, and persistence. This supports the possibility that “intuitive physics” can emerge from exposure to environmental regularities rather than requiring fully specified innate rules.</p>
+<h3 id="evidence-against-10">Evidence Against</h3>
+<p>Infant violation-of-expectation findings are contested. Longer looking may reflect novelty, perceptual preference, or task-specific processing rather than adult-like physical concepts. The action demands placed on passive infants differ from those required for interactive tool use. Reviews increasingly caution against treating infant expectations as proof of explicit physical theories.</p>
+<p>The distinction between innate and rapidly learned is also unnecessary for most design decisions. Both produce broad priors by the time an adult uses an interface.</p>
+<h3 id="sources-8">Sources</h3>
+<ul>
+<li>Lin, Y., et al. (2021). Object-file and physical-reasoning systems.</li>
+<li>Vicovaro, M., and colleagues (2023). “Grounding Intuitive Physics in Perceptual Experience.”</li>
+<li>Balaban, H., et al. (2024). Electrophysiological evidence that intuitive physics guides dynamic tracking.</li>
+<li>Piloto, L. S., et al. (2022). “Intuitive Physics Learning in a Deep-Learning Model Inspired by Developmental Psychology.”</li>
+<li>Liu, S., et al. (2024). Review of violations of physical and psychological expectations.</li>
+</ul>
+<h3 id="analysis-10">Analysis</h3>
+<p>The useful design insight is not that a particular interface gesture is biologically innate. It is that interfaces can borrow highly overlearned world regularities with enormous transfer breadth. Object permanence, continuity, spatial correspondence, and immediate causal response are familiar at a far deeper level than platform conventions.</p>
+<p>This suggests a hierarchy of prior breadth. A drag interaction that preserves object continuity recruits broader experience than a platform-specific three-finger gesture. Both are familiar, but not equivalently transferable.</p>
+<h3 id="conclusion-10">Conclusion</h3>
+<p>Novel interfaces can feel immediately understandable by aligning with broad physical priors. These priors may themselves be learned, but they are not product-specific familiarity.</p>
+<h3 id="confidence-22">Confidence</h3>
+<p>Moderate-high.</p>
+<h3 id="next-step-10">Next Step</h3>
+<p>Examine when experience produces reliable intuition versus confident error.</p>
+<hr>
+<h2 id="cycle-12-when-does-familiarity-produce-valid-intuition">Cycle 12: When Does Familiarity Produce Valid Intuition?</h2>
+<h3 id="objective-11">Objective</h3>
+<p>Distinguish expertise from mere repetition and identify the conditions under which familiar action deserves trust.</p>
+<h3 id="hypothesis-16">Hypothesis</h3>
+<p>Repeated interaction creates reliable intuition only when the environment contains stable regularities and supplies timely, diagnostic feedback.</p>
+<h3 id="evidence-found-11">Evidence Found</h3>
+<p>Kahneman and Klein’s joint analysis concluded that skilled intuition can develop when an environment has sufficiently valid cues and when the learner has adequate opportunity to learn those cues through feedback. Recognition-primed decision research describes experts rapidly matching situations to patterns developed through experience.</p>
+<p>This explains why repeated use of a stable interface can produce accurate, rapid action. It also explains why users can become skilled at detecting subtle system states that novices do not notice.</p>
+<h3 id="evidence-against-11">Evidence Against</h3>
+<p>Experience alone is not a guarantee of expertise. In low-validity or delayed-feedback environments, confidence can increase without accuracy. Interfaces can teach the wrong model when feedback is ambiguous, intermittent, or masked. Workarounds may become habitual even after the original constraint disappears.</p>
+<p>A design can also create local expertise that transfers poorly. Product-specific skill may look like general competence until the context changes.</p>
+<h3 id="sources-9">Sources</h3>
+<ul>
+<li>Kahneman, D., and Klein, G. (2009). “Conditions for Intuitive Expertise: A Failure to Disagree.”</li>
+<li>Klein, G. (1998). <em>Sources of Power</em>.</li>
+<li>Shanteau, J. (1992). Competence in experts.</li>
+<li>Ericsson, K. A., et al. Research on deliberate practice and expert performance.</li>
+</ul>
+<h3 id="analysis-11">Analysis</h3>
+<p>The decisive variable is not exposure count by itself. It is the quality of the learning loop:</p>
+<p>[
+\text{Intuition Reliability} \approx \text{Environmental Regularity} \times \text{Feedback Diagnosticity} \times \text{Relevant Practice}
+]</p>
+<p>This is not a validated universal equation, but it states a falsifiable relationship. Familiarity in an unstable or deceptive system may increase speed and confidence faster than correctness.</p>
+<h3 id="conclusion-11">Conclusion</h3>
+<p>Familiarity becomes valid intuition only under learnable regularities and useful feedback. Repetition can otherwise automate error.</p>
+<h3 id="confidence-23">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-11">Next Step</h3>
+<p>Evaluate whether information-theoretic surprise can quantify expectation violation in interfaces.</p>
+<hr>
+<h2 id="cycle-13-can-surprise-be-quantified-for-interface-design">Cycle 13: Can Surprise Be Quantified for Interface Design?</h2>
+<h3 id="objective-12">Objective</h3>
+<p>Translate the predictive account into measurable variables without depending on unobservable neural claims.</p>
+<h3 id="hypothesis-17">Hypothesis</h3>
+<p>The behavioral cost of an interaction can be partly predicted by the information conveyed when the system violates the user’s expected state transition.</p>
+<h3 id="evidence-found-12">Evidence Found</h3>
+<p>Information theory defines surprisal of an event as:</p>
+<p>[
+S(o) = -\log_2 P(o)
+]</p>
+<p>An event assigned low prior probability has high surprisal. Bayesian surprise instead measures the divergence between prior and posterior beliefs, often represented by Kullback-Leibler divergence:</p>
+<p>[
+B = D_{KL}(P(\theta\mid o) \parallel P(\theta))
+]</p>
+<p>Itti and Baldi found that Bayesian surprise predicted human visual attention in natural scenes better than several alternatives. Work on unexpected events shows behavioral interruption and response-time costs. Surprise-based traffic models have also treated response timing as belief updating following violations of prior expectation.</p>
+<p>A recent active-inference-inspired HCI proposal attempts to connect surprise, task signal-to-noise ratio, mental capacity, Fitts’ law, Hick’s law, and the power law of practice. It is promising but remains new and requires independent replication.</p>
+<h3 id="evidence-against-12">Evidence Against</h3>
+<p>The probability distribution in a real interface is rarely known. Different users possess different priors. An event can be statistically rare but semantically unsurprising, or common but damaging because it violates a strong causal expectation. Surprise can also improve attention and learning rather than merely harm usability.</p>
+<p>A single surprisal measure cannot represent target acquisition, physical effort, moral consequence, accessibility, or emotional meaning.</p>
+<h3 id="sources-10">Sources</h3>
+<ul>
+<li>Shannon, C. E. (1948). “A Mathematical Theory of Communication.”</li>
+<li>Itti, L., and Baldi, P. (2009). “Bayesian Surprise Attracts Human Attention.”</li>
+<li>Guan, Y., et al. (2021). Unexpected events and response timing.</li>
+<li>Engström, J., et al. (2022). Surprise-based framework for road-user response timing.</li>
+<li>Vertegaal, R., et al. (2025). “Interactive Inference: A Neuromorphic Theory of HCI.” Preprint.</li>
+</ul>
+<h3 id="analysis-12">Analysis</h3>
+<p>Surprise becomes useful when treated as a user-model variable rather than an intrinsic property of the screen. The experimenter must estimate what the user expected, not merely what the designer intended.</p>
+<p>The most practical measures are therefore paired:</p>
+<ul>
+<li>explicit pre-action prediction,</li>
+<li>confidence in that prediction,</li>
+<li>observed outcome,</li>
+<li>behavioral interruption,</li>
+<li>recovery time,</li>
+<li>and subsequent model update.</li>
+</ul>
+<h3 id="conclusion-12">Conclusion</h3>
+<p>Information-theoretic surprise is a viable abstraction for expectation violation, but only as one layer in a multi-cost model.</p>
+<h3 id="confidence-24">Confidence</h3>
+<p>Moderate.</p>
+<h3 id="next-step-12">Next Step</h3>
+<p>Attempt to falsify predictive processing as the unifying foundation.</p>
+<hr>
+<h2 id="cycle-14-falsification-of-the-unified-predictive-account">Cycle 14: Falsification of the Unified Predictive Account</h2>
+<h3 id="objective-13">Objective</h3>
+<p>Determine whether predictive processing should become the primary theory of intuitive interaction.</p>
+<h3 id="hypothesis-18">Hypothesis</h3>
+<p>If predictive processing is the correct unifying foundation, it should generate distinctive predictions that competing accounts cannot explain equally well.</p>
+<h3 id="evidence-found-13">Evidence Found</h3>
+<p>Predictive accounts unify many observations elegantly: contextual facilitation, expectation-biased perception, repetition effects, action selection, surprise, and learning. Meta-analytic work identifies a broad network involved in predictive tasks. Cellular and computational studies show that neural systems can implement forms of prediction-error minimization.</p>
+<h3 id="evidence-against-13">Evidence Against</h3>
+<p>Critical reviews identify major limitations:</p>
+<ol>
+<li>Many experiments test expectation effects, not the specific neural architecture required by predictive coding.</li>
+<li>Reduced responses to expected stimuli can result from adaptation or attention.</li>
+<li>Some studies find sharpening or enhanced representation of expected stimuli rather than simple suppression.</li>
+<li>Broad formulations risk accommodating contradictory outcomes by changing assumptions about precision weighting.</li>
+<li>Active inference and the free-energy principle often require auxiliary commitments before yielding falsifiable behavioral predictions.</li>
+<li>Ecological approaches explain action through organism-environment coupling without requiring an internal generative model.</li>
+<li>Existing HCI models already predict important components such as choice time, pointing time, practice, and error without invoking a unified brain theory.</li>
+</ol>
+<p>Walsh and colleagues concluded that neurophysiological support for predictive processing is less decisive than is sometimes implied. Hodson and colleagues similarly found that direct empirical evaluation of predictive coding and active inference remains comparatively recent and incomplete.</p>
+<h3 id="sources-11">Sources</h3>
+<ul>
+<li>Walsh, K. S., et al. (2020). “Evaluating the Neurophysiological Evidence for Predictive Processing as a Model of Perception.”</li>
+<li>Hodson, R., et al. (2024). “The Empirical Status of Predictive Coding and Active Inference.”</li>
+<li>Ficco, L., et al. (2021). Meta-analysis of predictive-processing studies.</li>
+<li>Yon, D., et al. (2020). “Beliefs and Desires in the Predictive Brain.”</li>
+<li>Araújo, D., et al. Ecological critiques of inferential action accounts.</li>
+</ul>
+<h3 id="analysis-13">Analysis</h3>
+<p>Predictive processing is most useful here as a <strong>research grammar</strong>: priors, uncertainty, expected transitions, surprise, precision, and model updating. It is not yet justified as the sole biological truth beneath intuitive design.</p>
+<p>The project should therefore avoid translating a useful metaphor into an unsupported law. The operational model should stand or fall on behavioral prediction even if predictive-coding neuroscience is later revised.</p>
+<h3 id="conclusion-13">Conclusion</h3>
+<p>The unified predictive-processing hypothesis is rejected in its strongest form. A narrower predictive-fit model is retained.</p>
+<h3 id="confidence-25">Confidence</h3>
+<p>High that the strong claim is unjustified; moderate that the narrower model will add predictive value beyond established HCI measures.</p>
+<h3 id="next-step-13">Next Step</h3>
+<p>Construct and test a behavioral model that competes directly with familiarity-only and conventional usability models.</p>
+<hr>
+<h1 id="confirmed-findings-added-by-this-pass">Confirmed Findings Added by This Pass</h1>
+<h2 id="cf-009-expectation-congruence-reduces-interaction-cost">CF-009: Expectation Congruence Reduces Interaction Cost</h2>
+<p>When interface states and outcomes match a user’s expectations, recognition and action are generally faster and require less corrective processing.</p>
+<p><strong>Evidence:</strong> EV-013, EV-014, EV-015, EV-019<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-010-prior-knowledge-is-hierarchical">CF-010: Prior Knowledge Is Hierarchical</h2>
+<p>Prior knowledge ranges from broad physical and embodied regularities to cultural conventions, domain schemas, product conventions, and task-specific habits. Broader priors usually transfer to more contexts.</p>
+<p><strong>Evidence:</strong> EV-016, EV-017, EV-018<br>
+<strong>Confidence:</strong> Moderate-high</p>
+<h2 id="cf-011-feedback-quality-determines-whether-familiarity-becomes-expertise">CF-011: Feedback Quality Determines Whether Familiarity Becomes Expertise</h2>
+<p>Stable repetition produces trustworthy intuition only when the environment is sufficiently regular and the feedback identifies whether the action was correct.</p>
+<p><strong>Evidence:</strong> EV-020<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-012-surprise-is-observer-relative">CF-012: Surprise Is Observer-Relative</h2>
+<p>An interface outcome is surprising only relative to a user’s prior model and confidence. Designer intent is not a substitute for measuring that model.</p>
+<p><strong>Evidence:</strong> EV-021, EV-022<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-013-prediction-fit-is-not-equivalent-to-design-quality">CF-013: Prediction Fit Is Not Equivalent to Design Quality</h2>
+<p>A process can be predictable yet slow, inaccessible, unsafe, or unnecessarily complex. Prediction fit is one dimension rather than a total quality score.</p>
+<p><strong>Evidence:</strong> synthesis of EV-013 through EV-023 and prior evidence<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-014-predictive-processing-is-not-yet-a-sufficient-neural-foundation-for-hci">CF-014: Predictive Processing Is Not Yet a Sufficient Neural Foundation for HCI</h2>
+<p>The framework has explanatory reach, but key neural claims remain difficult to distinguish from adaptation, attention, associative learning, and alternative theories.</p>
+<p><strong>Evidence:</strong> EV-023, EV-024, EV-025<br>
+<strong>Confidence:</strong> Moderate-high</p>
+<hr>
+<h1 id="rejected-and-revised-hypotheses">Rejected and Revised Hypotheses</h1>
+<h2 id="rh-006-intuition-equals-prediction-error-minimization">RH-006: Intuition Equals Prediction-Error Minimization</h2>
+<p><strong>Status:</strong> Rejected as an identity claim.</p>
+<p>Prediction success contributes to intuitive experience, but the construct also involves action visibility, effort, control, consequence, feedback, and learned confidence. A theory broad enough to call all of these prediction error loses discriminating power.</p>
+<h2 id="rh-007-completely-novel-interfaces-can-be-intuitive-without-prior-knowledge">RH-007: Completely Novel Interfaces Can Be Intuitive Without Prior Knowledge</h2>
+<p><strong>Status:</strong> Rejected as usually formulated.</p>
+<p>Users always bring prior structure, including bodily capabilities, physical regularities, linguistic categories, cultural conventions, and learned causal expectations. “Novel product” does not imply “absence of relevant prior knowledge.”</p>
+<h2 id="rh-008-affordance-is-the-opposite-of-familiarity">RH-008: Affordance Is the Opposite of Familiarity</h2>
+<p><strong>Status:</strong> Rejected.</p>
+<p>Affordance perception and familiarity interact. People calibrate to action possibilities through experience, while physical structure can support transfer beyond product conventions.</p>
+<h2 id="rh-009-minimizing-surprise-is-always-desirable">RH-009: Minimizing Surprise Is Always Desirable</h2>
+<p><strong>Status:</strong> Rejected.</p>
+<p>Some surprise attracts attention, promotes learning, communicates state change, or creates aesthetic interest. The design objective is not zero surprise. It is <strong>appropriate, interpretable surprise at the correct semantic level</strong>.</p>
+<hr>
+<h1 id="emerging-patterns-1">Emerging Patterns</h1>
+<h2 id="pattern-1-intuition-is-confidence-before-it-is-correctness">Pattern 1: Intuition Is Confidence Before It Is Correctness</h2>
+<p>Users can feel certain before acting because the interface activates a strong prior. That confidence may be accurate or misplaced. Therefore subjective intuitiveness must be calibrated against outcome accuracy.</p>
+<h2 id="pattern-2-familiarity-is-nested-not-binary">Pattern 2: Familiarity Is Nested, Not Binary</h2>
+<p>A user may be unfamiliar with a product but familiar with its physical analogy, task domain, icon vocabulary, interaction grammar, or causal structure. Research that labels participants merely “novice” or “experienced” loses this structure.</p>
+<h2 id="pattern-3-the-best-design-often-preserves-prediction-while-improving-mechanics">Pattern 3: The Best Design Often Preserves Prediction While Improving Mechanics</h2>
+<p>High-value redesigns frequently keep the user’s causal model stable while reducing action count, latency, or error exposure. This preserves behavioral capital without preserving every visual detail.</p>
+<h2 id="pattern-4-surprise-has-a-budget">Pattern 4: Surprise Has a Budget</h2>
+<p>Users tolerate and sometimes enjoy local novelty when the larger task model remains stable. When novelty appears simultaneously in navigation, terminology, state behavior, and visual hierarchy, prediction violations compound.</p>
+<h2 id="pattern-5-feedback-converts-action-into-learning">Pattern 5: Feedback Converts Action Into Learning</h2>
+<p>Without clear feedback, repetition creates familiarity with sequences but not necessarily understanding. With diagnostic feedback, users can refine a causal model and transfer it.</p>
+<h2 id="pattern-6-intuitive-design-is-a-coordination-problem">Pattern 6: Intuitive Design Is a Coordination Problem</h2>
+<p>The designer and user must share enough of a model for signs, actions, and outcomes to coordinate. Intuitiveness is therefore relational, population-specific, and historical rather than an intrinsic surface property.</p>
+<hr>
+<h1 id="proposed-models-1">Proposed Models</h1>
+<h2 id="model-if-005-predictive-fit-model-of-intuitive-interaction">MODEL-IF-005: Predictive Fit Model of Intuitive Interaction</h2>
+<h3 id="definition">Definition</h3>
+<p>For an action candidate (a) in state (s), define perceived intuitive fit as:</p>
+<p>[
+I(a,s,u) = w_1 A_v + w_2 O_p + w_3 C_f + w_4 R_e - w_5 D_c - w_6 U_c
+]</p>
+<p>Where:</p>
+<ul>
+<li>(A_v): action visibility or availability</li>
+<li>(O_p): predicted-outcome confidence</li>
+<li>(C_f): causal feedback fit after action</li>
+<li>(R_e): recovery expectancy</li>
+<li>(D_c): deliberation cost</li>
+<li>(U_c): consequence-weighted uncertainty</li>
+<li>(u): user history and capabilities</li>
+</ul>
+<p>The coefficients are population- and task-dependent. The equation is a measurement scaffold, not a validated psychophysical law.</p>
+<h3 id="predictions">Predictions</h3>
+<ol>
+<li>High predicted-outcome confidence with poor feedback will produce fast first actions but weak learning and poor recovery.</li>
+<li>High action visibility with low outcome predictability will produce exploration rather than intuition.</li>
+<li>Familiarity will primarily increase (O_p), lower (D_c), and sometimes inflate confidence beyond accuracy.</li>
+<li>Clear feedback will increase subsequent (C_f) and improve transfer.</li>
+<li>Consequence severity will increase the effective cost of uncertainty even when action time is unchanged.</li>
+</ol>
+<h3 id="assumptions-1">Assumptions</h3>
+<ul>
+<li>The user maintains at least an implicit expectation distribution over actions and outcomes.</li>
+<li>Confidence and uncertainty can be approximated behaviorally or through self-report.</li>
+<li>Intuitive fit is task- and user-relative.</li>
+</ul>
+<h3 id="confidence-26">Confidence</h3>
+<p>Moderate.</p>
+<hr>
+<h2 id="model-if-006-prior-breadth-hierarchy">MODEL-IF-006: Prior-Breadth Hierarchy</h2>
+<h3 id="levels">Levels</h3>
+<ul>
+<li><strong>P0: Organism constraints</strong> — reach, grip, visual field, motor compatibility</li>
+<li><strong>P1: Environmental regularities</strong> — continuity, support, containment, spatial correspondence</li>
+<li><strong>P2: Cultural-linguistic conventions</strong> — reading direction, symbols, metaphors</li>
+<li><strong>P3: Domain schemas</strong> — editing, accounting, cooking, navigation, music</li>
+<li><strong>P4: Platform conventions</strong> — browser, mobile, desktop, game controller</li>
+<li><strong>P5: Product conventions</strong> — local navigation and command structure</li>
+<li><strong>P6: Task-specific habits</strong> — memorized paths and motor chunks</li>
+</ul>
+<h3 id="prediction-5">Prediction</h3>
+<p>Transfer breadth generally decreases from P0 toward P6, while routine execution speed may increase toward P6.</p>
+<h3 id="design-implication">Design Implication</h3>
+<p>Prefer the broadest prior that accurately communicates the intended action. Use narrow product-specific priors when they create substantial recurring advantage.</p>
+<h3 id="confidence-27">Confidence</h3>
+<p>Moderate-high.</p>
+<hr>
+<h2 id="model-if-007-expectation-violation-cost">MODEL-IF-007: Expectation Violation Cost</h2>
+<p>For an observed system outcome (o):</p>
+<p>[
+EVC = S_u(o) \times K_t \times C_e \times (1 - R_q)
+]</p>
+<p>Where:</p>
+<ul>
+<li>(S_u(o)): surprise relative to the user’s expectation</li>
+<li>(K_t): task interruption sensitivity</li>
+<li>(C_e): consequence or error severity</li>
+<li>(R_q): quality of recovery support, scaled 0 to 1</li>
+</ul>
+<h3 id="interpretation-6">Interpretation</h3>
+<p>A surprising animation may have low cost in exploration but high cost during a rapid safety-critical task. Recovery support can reduce the cost of the same violation.</p>
+<h3 id="confidence-28">Confidence</h3>
+<p>Moderate-low until experimentally calibrated.</p>
+<hr>
+<h2 id="model-if-008-intuition-reliability-matrix">MODEL-IF-008: Intuition Reliability Matrix</h2>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Feedback</th>
+<th>Expected result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable</td>
+<td>Immediate and diagnostic</td>
+<td>Fast, increasingly accurate intuition</td>
+</tr>
+<tr>
+<td>Stable</td>
+<td>Delayed or ambiguous</td>
+<td>Habit with uncertain understanding</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Immediate and diagnostic</td>
+<td>Adaptable but effortful expertise</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>Delayed or misleading</td>
+<td>Confident error and superstition</td>
+</tr>
+</tbody>
+</table>
+<h3 id="confidence-29">Confidence</h3>
+<p>High as a qualitative model.</p>
+<hr>
+<h1 id="candidate-laws-and-principle-updates">Candidate Laws and Principle Updates</h1>
+<h2 id="law-if-011-predictive-fit-principle">LAW-IF-011: Predictive Fit Principle</h2>
+<h3 id="hypothesis-19">Hypothesis</h3>
+<p>An interaction is more likely to be experienced as intuitive when the user can select an action and accurately anticipate its outcome with low deliberation.</p>
+<h3 id="prediction-6">Prediction</h3>
+<p>Controlling for motor effort, higher pre-action prediction accuracy and confidence calibration will correlate with lower response time, lower gaze dispersion, and fewer reversals.</p>
+<h3 id="counter-evidence-5">Counter Evidence</h3>
+<p>Highly practiced but incorrect expectations can produce fast errors. Therefore confidence must be evaluated against correctness.</p>
+<h3 id="confidence-30">Confidence</h3>
+<p>Moderate-high.</p>
+<h2 id="law-if-012-prior-breadth-principle">LAW-IF-012: Prior Breadth Principle</h2>
+<h3 id="hypothesis-20">Hypothesis</h3>
+<p>Designs aligned with broader priors transfer across more populations and contexts than designs dependent on product-specific habits.</p>
+<h3 id="prediction-7">Prediction</h3>
+<p>Users unfamiliar with a product but familiar with the broader physical or domain schema will outperform users who lack that schema.</p>
+<h3 id="confidence-31">Confidence</h3>
+<p>Moderate-high.</p>
+<h2 id="law-if-013-diagnostic-feedback-principle">LAW-IF-013: Diagnostic Feedback Principle</h2>
+<h3 id="hypothesis-21">Hypothesis</h3>
+<p>Repeated use becomes reliable intuition in proportion to the speed and diagnosticity of feedback.</p>
+<h3 id="prediction-8">Prediction</h3>
+<p>When two designs have equal repetition, the design with clearer causal feedback will produce better confidence calibration, retention, and transfer.</p>
+<h3 id="confidence-32">Confidence</h3>
+<p>High.</p>
+<h2 id="law-if-014-surprise-concentration-principle">LAW-IF-014: Surprise Concentration Principle</h2>
+<h3 id="hypothesis-22">Hypothesis</h3>
+<p>Users tolerate more novelty when prediction violations are localized and the higher-level task model remains stable.</p>
+<h3 id="prediction-9">Prediction</h3>
+<p>A redesign changing one interaction layer at a time will produce fewer errors than a redesign with equal total change distributed simultaneously across terminology, layout, navigation, and system behavior.</p>
+<h3 id="confidence-33">Confidence</h3>
+<p>Moderate.</p>
+<h2 id="deprecated-principle">Deprecated Principle</h2>
+<p><strong>“Intuitive is just familiar.”</strong> Deprecated as a literal law.</p>
+<h2 id="replacement-principle">Replacement Principle</h2>
+<blockquote>
+<p>Intuitive interaction is usually successful transfer: the interface allows users to apply prior knowledge, embodied expectations, and visible causal structure to predict and control outcomes with little conscious inference.</p>
+</blockquote>
+<hr>
+<h1 id="proposed-experimental-program">Proposed Experimental Program</h1>
+<h2 id="ex-if-001-familiarity-versus-structural-legibility">EX-IF-001: Familiarity Versus Structural Legibility</h2>
+<h3 id="question">Question</h3>
+<p>Can visible structure outperform familiar convention on first use, and does familiarity overtake it after practice?</p>
+<h3 id="design">Design</h3>
+<p>Create four versions of the same task:</p>
+<ol>
+<li>familiar convention with clear mapping,</li>
+<li>familiar convention with poor mapping,</li>
+<li>novel pattern with clear physical/causal mapping,</li>
+<li>novel pattern with arbitrary mapping.</li>
+</ol>
+<p>Measure first-action accuracy, completion time, errors, prediction confidence, and performance over 20 repetitions.</p>
+<h3 id="critical-result">Critical Result</h3>
+<p>If the novel-clear condition beats familiar-poor on first use, familiarity is not sufficient. If familiar-poor later overtakes novel-clear, practice can compensate strongly for structure. If it never overtakes, some defects resist familiarity.</p>
+<h3 id="expected-value--effort">Expected Value / Effort</h3>
+<p>Very high / Moderate.</p>
+<h2 id="ex-if-002-explicit-state-prediction-protocol">EX-IF-002: Explicit State Prediction Protocol</h2>
+<h3 id="question-1">Question</h3>
+<p>Does prediction accuracy explain intuitive-use performance beyond prior-experience self-report?</p>
+<h3 id="design-1">Design</h3>
+<p>Before each action, ask a subset of participants to select the state they expect next and rate confidence. Compare prediction accuracy with response time, errors, gaze, and subjective intuitiveness.</p>
+<h3 id="expected-value--effort-1">Expected Value / Effort</h3>
+<p>Very high / Moderate.</p>
+<h2 id="ex-if-003-surprise-and-recovery">EX-IF-003: Surprise and Recovery</h2>
+<h3 id="question-2">Question</h3>
+<p>What makes an expectation violation recoverable rather than disorienting?</p>
+<h3 id="design-2">Design</h3>
+<p>Introduce controlled violations differing in semantic severity, visual salience, explanation, undo availability, and persistence. Measure interruption, error propagation, recovery latency, confidence loss, and subsequent learning.</p>
+<h3 id="expected-value--effort-2">Expected Value / Effort</h3>
+<p>High / Moderate-high.</p>
+<h2 id="ex-if-004-prior-breadth-transfer-test">EX-IF-004: Prior-Breadth Transfer Test</h2>
+<h3 id="question-3">Question</h3>
+<p>Do broad physical and domain priors transfer better than platform and product conventions?</p>
+<h3 id="design-3">Design</h3>
+<p>Recruit groups with different domain and platform histories. Use tasks whose mappings separately align with P1 through P5 priors. Model transfer using multilevel regression rather than novice/expert labels.</p>
+<h3 id="expected-value--effort-3">Expected Value / Effort</h3>
+<p>Very high / High.</p>
+<h2 id="ex-if-005-redesign-surprise-budget">EX-IF-005: Redesign Surprise Budget</h2>
+<h3 id="question-4">Question</h3>
+<p>Do simultaneous expectation violations interact superadditively?</p>
+<h3 id="design-4">Design</h3>
+<p>Manipulate changes to terminology, location, visual form, interaction, and system response in isolation and combination. Compare observed error cost with the sum of individual costs.</p>
+<h3 id="expected-value--effort-4">Expected Value / Effort</h3>
+<p>High / High.</p>
+<hr>
+<h1 id="evidence-registry-additions">Evidence Registry Additions</h1>
+<h2 id="ev-013">EV-013</h2>
+<p><strong>Citation:</strong> Friston, K. (2010). “The Free-Energy Principle: A Unified Brain Theory?” <em>Nature Reviews Neuroscience</em>, 11, 127–138.<br>
+<strong>Type:</strong> Theoretical review<br>
+<strong>Contribution:</strong> Formalizes perception and action as inference under generative models and surprise minimization.<br>
+<strong>Limits:</strong> Very broad; does not directly validate interface-level intuitiveness.<br>
+<strong>Supports:</strong> HY-009, LAW-IF-011</p>
+<h2 id="ev-014">EV-014</h2>
+<p><strong>Citation:</strong> Garlichs, A., et al. (2024). “Prediction Error Processing and Sharpening of Expected Representations.” <em>Nature Communications</em>.<br>
+<strong>Type:</strong> Experimental neuroimaging and computational modeling<br>
+<strong>Contribution:</strong> Expected faces were identified faster; ambiguous perception shifted toward priors.<br>
+<strong>Limits:</strong> Face perception does not directly establish action-interface behavior.<br>
+<strong>Supports:</strong> HY-009</p>
+<h2 id="ev-015">EV-015</h2>
+<p><strong>Citation:</strong> Hardstone, R., et al. (2021). “Long-Term Priors Influence Visual Perception Through Recruitment of Long-Range Feedback.” <em>Nature Communications</em>.<br>
+<strong>Type:</strong> Experimental and computational<br>
+<strong>Contribution:</strong> Supports durable prior effects on ambiguous perception.<br>
+<strong>Supports:</strong> HY-009</p>
+<h2 id="ev-016">EV-016</h2>
+<p><strong>Citation:</strong> Blackler, A., Popovic, V., and Mahar, D. (2010). “Investigating Users’ Intuitive Interaction with Complex Artefacts.” <em>Applied Ergonomics</em>, 41(1), 72–92.<br>
+<strong>Type:</strong> Empirical HCI/human factors<br>
+<strong>Contribution:</strong> Links intuitive use of unfamiliar products to transferred prior experience and familiar features.<br>
+<strong>Supports:</strong> HY-001, HY-009, LAW-IF-012</p>
+<h2 id="ev-017">EV-017</h2>
+<p><strong>Citation:</strong> Vauclin, P., et al. (2023). “Perception of Affordances for the Person-Plus-Object System: A Systematic Review.”<br>
+<strong>Type:</strong> Systematic review<br>
+<strong>Contribution:</strong> Shows attunement and recalibration of action possibilities relative to body-plus-object capabilities.<br>
+<strong>Supports:</strong> HY-010, MODEL-IF-006</p>
+<h2 id="ev-018">EV-018</h2>
+<p><strong>Citation:</strong> Piloto, L. S., et al. (2022). “Intuitive Physics Learning in a Deep-Learning Model Inspired by Developmental Psychology.” <em>Nature Human Behaviour</em>.<br>
+<strong>Type:</strong> Computational modeling with developmental comparison<br>
+<strong>Contribution:</strong> Demonstrates that broad object expectations can be learned from visual experience.<br>
+<strong>Limits:</strong> Model competence does not resolve infant cognition or interface transfer.<br>
+<strong>Supports:</strong> HY-011</p>
+<h2 id="ev-019">EV-019</h2>
+<p><strong>Citation:</strong> Balaban, H., et al. (2024). “Electrophysiology Reveals That Intuitive Physics Guides Visual Tracking and Working Memory.”<br>
+<strong>Type:</strong> Human electrophysiology<br>
+<strong>Contribution:</strong> Physical expectations affect online representation of moving objects.<br>
+<strong>Supports:</strong> HY-011</p>
+<h2 id="ev-020">EV-020</h2>
+<p><strong>Citation:</strong> Kahneman, D., and Klein, G. (2009). “Conditions for Intuitive Expertise: A Failure to Disagree.” <em>American Psychologist</em>, 64(6), 515–526.<br>
+<strong>Type:</strong> Integrative theoretical review<br>
+<strong>Contribution:</strong> Identifies environmental validity and learning opportunity as conditions for reliable intuitive expertise.<br>
+<strong>Supports:</strong> HY-012, LAW-IF-013</p>
+<h2 id="ev-021">EV-021</h2>
+<p><strong>Citation:</strong> Itti, L., and Baldi, P. (2009). “Bayesian Surprise Attracts Human Attention.” <em>Vision Research</em>, 49(10), 1295–1306.<br>
+<strong>Type:</strong> Computational and behavioral eye-movement study<br>
+<strong>Contribution:</strong> Formal Bayesian surprise predicted attention during natural viewing.<br>
+<strong>Supports:</strong> HY-013, MODEL-IF-007</p>
+<h2 id="ev-022">EV-022</h2>
+<p><strong>Citation:</strong> Engström, J., et al. (2022). “Modeling Road User Response Timing in Naturalistic Settings: A Surprise-Based Framework.”<br>
+<strong>Type:</strong> Behavioral modeling / naturalistic traffic data<br>
+<strong>Contribution:</strong> Models response timing as belief updating after expectation violations.<br>
+<strong>Limits:</strong> Domain-specific and initially published as a preprint.<br>
+<strong>Supports:</strong> HY-013</p>
+<h2 id="ev-023">EV-023</h2>
+<p><strong>Citation:</strong> Walsh, K. S., et al. (2020). “Evaluating the Neurophysiological Evidence for Predictive Processing as a Model of Perception.”<br>
+<strong>Type:</strong> Critical review<br>
+<strong>Contribution:</strong> Finds that evidence often underdetermines predictive-processing mechanisms.<br>
+<strong>Challenges:</strong> Strong form of HY-009</p>
+<h2 id="ev-024">EV-024</h2>
+<p><strong>Citation:</strong> Hodson, R., et al. (2024). “The Empirical Status of Predictive Coding and Active Inference.” <em>Neuroscience &#x26; Biobehavioral Reviews</em>.<br>
+<strong>Type:</strong> Critical empirical review<br>
+<strong>Contribution:</strong> Direct empirical support is growing but remains incomplete and uneven.<br>
+<strong>Challenges:</strong> Strong form of HY-009</p>
+<h2 id="ev-025">EV-025</h2>
+<p><strong>Citation:</strong> Ficco, L., et al. (2021). “Disentangling Predictive Processing in the Brain: A Meta-Analytic Study.” <em>Scientific Reports</em>.<br>
+<strong>Type:</strong> Meta-analysis<br>
+<strong>Contribution:</strong> Supports a broad predictive network but does not establish a clean network-level separation between predictions and errors.<br>
+<strong>Supports/Challenges:</strong> Narrow predictive framework; challenges overly specific neural claims</p>
+<hr>
+<h1 id="hypothesis-registry-additions">Hypothesis Registry Additions</h1>
+<h2 id="hy-009-predictive-fit-hypothesis">HY-009: Predictive Fit Hypothesis</h2>
+<p><strong>Statement:</strong> Perceived intuitiveness rises when users can predict available actions and resulting states with low deliberation.<br>
+<strong>Status:</strong> Provisionally supported in narrowed form<br>
+<strong>Confidence:</strong> Moderate-high<br>
+<strong>Evidence:</strong> EV-013 through EV-016, EV-023 through EV-025</p>
+<h2 id="hy-010-action-structure-hypothesis">HY-010: Action-Structure Hypothesis</h2>
+<p><strong>Statement:</strong> Body-compatible geometry and dynamics can support successful novel action without product-specific familiarity.<br>
+<strong>Status:</strong> Supported<br>
+<strong>Confidence:</strong> High<br>
+<strong>Evidence:</strong> EV-017</p>
+<h2 id="hy-011-broad-prior-hypothesis">HY-011: Broad-Prior Hypothesis</h2>
+<p><strong>Statement:</strong> Physical regularities learned very early and across many environments function as broad priors for novel interfaces.<br>
+<strong>Status:</strong> Supported with qualification<br>
+<strong>Confidence:</strong> Moderate-high<br>
+<strong>Evidence:</strong> EV-018, EV-019</p>
+<h2 id="hy-012-valid-feedback-hypothesis">HY-012: Valid-Feedback Hypothesis</h2>
+<p><strong>Statement:</strong> Familiarity produces reliable intuitive expertise only where patterns are learnable and feedback is timely and diagnostic.<br>
+<strong>Status:</strong> Supported<br>
+<strong>Confidence:</strong> High<br>
+<strong>Evidence:</strong> EV-020</p>
+<h2 id="hy-013-surprise-cost-hypothesis">HY-013: Surprise-Cost Hypothesis</h2>
+<p><strong>Statement:</strong> Behavioral disruption increases with observer-relative expectation violation, task sensitivity, and consequence severity, and decreases with recovery support.<br>
+<strong>Status:</strong> Plausible, unvalidated as a general model<br>
+<strong>Confidence:</strong> Moderate<br>
+<strong>Evidence:</strong> EV-021, EV-022</p>
+<hr>
+<h1 id="open-questions-ranked-by-importance">Open Questions Ranked by Importance</h1>
+<ol>
+<li><strong>Incremental validity:</strong> Does the Predictive Fit Model explain performance beyond familiarity, Fitts’ law, Hick-Hyman law, and standard usability measures?</li>
+<li><strong>Prior measurement:</strong> How can user priors be estimated without interrupting natural interaction or teaching the expected answer?</li>
+<li><strong>Surprise composition:</strong> Do multiple small expectation violations add linearly, multiplicatively, or according to a threshold?</li>
+<li><strong>Confidence calibration:</strong> Which interfaces create fast but unjustified confidence?</li>
+<li><strong>Prior breadth:</strong> Can the P0–P6 hierarchy be empirically ordered by transfer across populations?</li>
+<li><strong>Affective moderation:</strong> When does surprise create curiosity and pleasure instead of friction?</li>
+<li><strong>Accessibility:</strong> How do sensory, motor, cognitive, and neurodivergent differences alter prior weighting and action visibility?</li>
+<li><strong>Collective familiarity:</strong> How do organizational training, documentation, peer assistance, and social norms create shared intuitiveness?</li>
+<li><strong>Longitudinal decay:</strong> How quickly do product-specific habits decay, and how does interference from competing systems change retention?</li>
+<li><strong>Ethics:</strong> When do interfaces exploit familiar cues to induce actions whose consequences users do not accurately predict?</li>
+</ol>
+<hr>
+<h1 id="recommendations-and-research-backlog">Recommendations and Research Backlog</h1>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Research action</th>
+<th align="right">Expected value</th>
+<th align="right">Effort</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Run EX-IF-001 and EX-IF-002 together</td>
+<td align="right">Very high</td>
+<td align="right">Moderate</td>
+<td>Directly separates familiarity, structural legibility, prediction, and confidence</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Build a Prior Inventory instrument based on P0–P6</td>
+<td align="right">Very high</td>
+<td align="right">Moderate</td>
+<td>Replaces crude novice/expert classification</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Create an expectation-violation annotation format for usability studies</td>
+<td align="right">High</td>
+<td align="right">Low-moderate</td>
+<td>Makes surprise evidence reusable across projects</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Replicate the Interactive Inference model against standard HCI baselines</td>
+<td align="right">High</td>
+<td align="right">High</td>
+<td>Tests whether active-inference language adds real predictive power</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Review safety-critical mode errors through MODEL-IF-007</td>
+<td align="right">High</td>
+<td align="right">Moderate</td>
+<td>Connects surprise, habit capture, and consequence</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Study positive surprise and aesthetic novelty</td>
+<td align="right">Medium-high</td>
+<td align="right">Moderate</td>
+<td>Prevents the theory from collapsing into “make everything predictable”</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Add accessibility and neurodiversity as a dedicated research stream</td>
+<td align="right">Very high</td>
+<td align="right">High</td>
+<td>Priors and precision weighting are unlikely to be population-invariant</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="suggested-specialized-research-agents">Suggested Specialized Research Agents</h1>
+<h2 id="agent-a-predictive-hci-experimentalist">Agent A: Predictive HCI Experimentalist</h2>
+<p>Designs and analyzes EX-IF-001 through EX-IF-003. Must compare proposed models against Fitts, Hick-Hyman, KLM/GOMS, and mixed-effects learning curves.</p>
+<h2 id="agent-b-ecological-interaction-researcher">Agent B: Ecological Interaction Researcher</h2>
+<p>Maps Gibsonian affordance research to digital, tangible, spatial, and embodied interfaces while preventing misuse of the term “affordance.”</p>
+<h2 id="agent-c-developmental-and-cross-cultural-prior-researcher">Agent C: Developmental and Cross-Cultural Prior Researcher</h2>
+<p>Investigates which action expectations are broad, culturally variable, developmentally early, and population-specific.</p>
+<h2 id="agent-d-safety-and-habit-capture-researcher">Agent D: Safety and Habit-Capture Researcher</h2>
+<p>Studies aviation, medicine, transportation, and industrial controls where strong priors produce rare but costly errors.</p>
+<h2 id="agent-e-information-theoretic-modeler">Agent E: Information-Theoretic Modeler</h2>
+<p>Operationalizes user-relative surprise, compares surprisal and Bayesian surprise, and determines whether either predicts response interruption and recovery.</p>
+<hr>
+<h1 id="parallel-research-opportunities">Parallel Research Opportunities</h1>
+<ul>
+<li><strong>Language:</strong> linguistic surprisal, garden-path sentences, and how readers recover from violated syntactic expectations</li>
+<li><strong>Music:</strong> expectation, tension, repetition, and optimal violation</li>
+<li><strong>Architecture:</strong> wayfinding, spatial legibility, and learned building typologies</li>
+<li><strong>Economics:</strong> switching costs, standards, network effects, and path dependence</li>
+<li><strong>Manufacturing:</strong> poka-yoke, physical constraints, and error-proofing</li>
+<li><strong>AI interaction:</strong> model unpredictability, confidence calibration, and recoverable uncertainty</li>
+<li><strong>Education:</strong> desirable difficulty versus fluent but shallow learning</li>
+<li><strong>Security:</strong> familiar cues used for phishing, consent manipulation, and deceptive design</li>
+</ul>
+<hr>
+<h1 id="risks">Risks</h1>
+<ol>
+<li><strong>Neuroscience laundering:</strong> using predictive-processing vocabulary to make ordinary usability claims appear more scientific.</li>
+<li><strong>Circularity:</strong> defining intuitive as predictable and then inferring predictability from reports of intuitiveness.</li>
+<li><strong>Population erasure:</strong> assuming that one group’s priors represent universal human expectation.</li>
+<li><strong>Optimization error:</strong> minimizing surprise so aggressively that the system becomes stagnant, undiscoverable, or unable to signal important change.</li>
+<li><strong>Confidence inflation:</strong> producing familiar-looking interactions whose actual consequences differ from the convention they invoke.</li>
+<li><strong>Measurement contamination:</strong> asking users for predictions can alter attention and learning.</li>
+<li><strong>Overfitting:</strong> creating a model with enough hidden weights to explain every result without predicting new ones.</li>
+</ol>
+<hr>
+<h1 id="theory-impact-assessment">Theory Impact Assessment</h1>
+<h2 id="affected-theory-records">Affected Theory Records</h2>
+<ul>
+<li>TH-INT-001: Familiarity Theory of Intuitive Interaction</li>
+<li>TH-COMP-PRED-001: Prediction and Surprise in Composition</li>
+<li>TH-LEARN-001: Repetition, Fluency, and Automaticity</li>
+</ul>
+<h2 id="new-principle-candidates">New Principle Candidates</h2>
+<ul>
+<li>LAW-IF-011 Predictive Fit Principle</li>
+<li>LAW-IF-012 Prior Breadth Principle</li>
+<li>LAW-IF-013 Diagnostic Feedback Principle</li>
+<li>LAW-IF-014 Surprise Concentration Principle</li>
+</ul>
+<h2 id="deprecated-principles">Deprecated Principles</h2>
+<ul>
+<li>“Intuitive is just familiar” as a literal equivalence</li>
+<li>“Least surprise” interpreted as zero novelty</li>
+</ul>
+<h2 id="confidence-changes">Confidence Changes</h2>
+<ul>
+<li>Familiarity as a major source of intuitiveness: remains High</li>
+<li>Familiarity as a sufficient explanation: reduced from Moderate to Low</li>
+<li>Prediction congruence as a mechanism: raised to Moderate-high</li>
+<li>Predictive processing as unified neural foundation: held at Low-moderate</li>
+<li>Feedback as a boundary condition for expertise: raised to High</li>
+</ul>
+<h2 id="predictions-created">Predictions Created</h2>
+<ul>
+<li>Novel-clear mappings can outperform familiar-poor mappings on first use.</li>
+<li>Familiarity will reduce deliberation before it reduces physical operator cost.</li>
+<li>Confidence will mediate subjective intuitiveness but can diverge from accuracy.</li>
+<li>Combined violations across multiple interface layers may create superadditive disruption.</li>
+<li>Diagnostic feedback will improve transfer more than repetition alone.</li>
+</ul>
+<h2 id="predictions-invalidated">Predictions Invalidated</h2>
+<ul>
+<li>Any interface with low prediction error will necessarily be good.</li>
+<li>Completely novel interaction can be evaluated independently of prior knowledge.</li>
+<li>Neural response suppression is a unique signature of fulfilled prediction.</li>
+</ul>
+<h2 id="required-registry-updates">Required Registry Updates</h2>
+<p>Add HY-009 through HY-013, EV-013 through EV-025, MODEL-IF-005 through MODEL-IF-008, and LAW-IF-011 through LAW-IF-014.</p>
+<hr>
+<h1 id="knowledge-relationships">Knowledge Relationships</h1>
+<pre><code class="language-text">Familiarity
+  -> stronger priors
+  -> faster action selection
+  -> lower deliberation cost
+  -> higher subjective fluency
+  -> greater habit strength
+
+Visible structure
+  -> constrained action set
+  -> lower choice entropy
+  -> stronger outcome prediction
+
+Diagnostic feedback
+  -> causal model update
+  -> confidence calibration
+  -> retention and transfer
+
+Expectation violation
+  -> attention capture
+  -> interruption and model revision
+  -> learning OR error propagation
+    depending on explanation, consequence, and recovery
+
+Broad priors
+  -> greater transfer
+  -> lower population dependence
+
+Narrow habits
+  -> high local speed
+  -> high switching cost
+  -> low transfer
+</code></pre>
+<hr>
+<h1 id="repository-and-website-updates">Repository and Website Updates</h1>
+<h2 id="repository-updates">Repository Updates</h2>
+<ol>
+<li>Replace the original report with this version or store it as <code>RP-CS-INT-002-intuitive-familiar-predictive-fit.md</code>.</li>
+<li>Add structured registry entries for all new EV, HY, LAW, MODEL, and EX identifiers.</li>
+<li>Create a machine-readable crosswalk between the former F0–F5 familiarity taxonomy and the new P0–P6 Prior-Breadth Hierarchy.</li>
+<li>Add a <code>/experiments/intuitive-interaction/</code> directory containing protocols and data dictionaries for EX-IF-001 through EX-IF-005.</li>
+<li>Preserve version 1.0 as superseded evidence history rather than overwriting it without trace.</li>
+</ol>
+<h2 id="website-updates">Website Updates</h2>
+<p>Create an explorable page with:</p>
+<ul>
+<li>the original claim,</li>
+<li>the revised principle,</li>
+<li>a familiarity-versus-predictive-fit comparison,</li>
+<li>the P0–P6 hierarchy,</li>
+<li>the Intuition Reliability Matrix,</li>
+<li>and interactive learning curves showing first use through expert use.</li>
+</ul>
+<p>Do not present predictive processing as settled neuroscience. Mark theoretical status and confidence visibly.</p>
+<hr>
+<h1 id="ai-consumption-notes">AI Consumption Notes</h1>
+<ul>
+<li>Treat “intuitive” as a latent, relational construct, not an artifact attribute.</li>
+<li>Never infer universality from a single population’s familiarity.</li>
+<li>Preserve the distinction between prediction as an operational behavioral construct and predictive coding as a neural theory.</li>
+<li>When recommending convention-breaking, calculate learning and migration cost.</li>
+<li>When evaluating expert performance, request exposure history and feedback conditions.</li>
+<li>Prefer explicit measurements: first-action accuracy, prediction accuracy, confidence calibration, response time, error count, recovery latency, transfer, and retention.</li>
+<li>Do not merge surprise, novelty, salience, and prediction error without definition.</li>
+</ul>
+<hr>
+<h1 id="handoff-instructions">Handoff Instructions</h1>
+<p>The next agent should begin with EX-IF-001 and EX-IF-002. It should not conduct another broad literature review until it has specified:</p>
+<ol>
+<li>exact independent variables,</li>
+<li>operational definitions of familiarity and structural legibility,</li>
+<li>a method for measuring expected outcome without excessive task interference,</li>
+<li>baseline models for comparison,</li>
+<li>exclusion criteria,</li>
+<li>preregistered primary outcomes,</li>
+<li>and a plan for mixed-effects analysis across repeated trials.</li>
+</ol>
+<p>The goal of the next REP is to determine whether predictive fit has incremental predictive validity. Failure to outperform simpler models should be recorded as a valuable negative result.</p>
+<hr>
+<h1 id="research-quality-metrics">Research Quality Metrics</h1>
+<ul>
+<li><strong>Primary or original empirical sources added:</strong> 9</li>
+<li><strong>Systematic/meta-analytic or critical reviews added:</strong> 4</li>
+<li><strong>Independent disciplinary traditions compared:</strong> 6</li>
+<li><strong>Counterexamples reviewed:</strong> 8</li>
+<li><strong>Competing viewpoints reviewed:</strong> predictive coding, ecological psychology, schema transfer, expertise research, intuitive physics, information theory</li>
+<li><strong>Hypotheses tested:</strong> 5</li>
+<li><strong>Hypotheses rejected or narrowed:</strong> 4</li>
+<li><strong>Research completeness:</strong> 82% for conceptual foundation; 35% for quantitative validation</li>
+<li><strong>Confidence gain:</strong> High on boundary conditions; moderate on operational model</li>
+<li><strong>Open questions reduced:</strong> 1 major binary question replaced by 10 more precise empirical questions</li>
+</ul>
+<hr>
+<h1 id="research-debt">Research Debt</h1>
+<ul>
+<li>No direct dataset yet compares familiarity-only, structural-legibility, and predictive-fit models.</li>
+<li>No validated instrument exists in this project for estimating prior breadth.</li>
+<li>Accessibility and neurodiversity evidence remain underrepresented.</li>
+<li>Cultural variation in symbol and gesture priors needs systematic review.</li>
+<li>The proposed equations have not been calibrated.</li>
+<li>The active-inference HCI proposal requires peer-reviewed replication.</li>
+<li>Positive surprise and aesthetic value remain weakly integrated.</li>
+<li>Explicit prediction probes may alter the phenomenon being measured.</li>
+</ul>
+<hr>
+<h1 id="completion-checklist">Completion Checklist</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Original objective reconstructed</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Existing findings reviewed</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Largest uncertainty identified</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Competing hypotheses generated</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Supporting and contradictory evidence reviewed</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Strong predictive-processing claim falsified</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Narrow operational theory proposed</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Evidence registry updated</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Hypothesis registry updated</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Failed assumptions recorded</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Open questions ranked</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Experiments proposed</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Specialized agents specified</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Theory impacts recorded</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research debt recorded</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Handoff instructions supplied</li>
+<li class="task-list-item"><input type="checkbox" disabled> Quantitative experiments executed</li>
+<li class="task-list-item"><input type="checkbox" disabled> Models calibrated or externally validated</li>
+</ul>
+<hr>
+<h1 id="bibliography-additions">Bibliography Additions</h1>
+<h2 id="academic-and-neuroscience">Academic and Neuroscience</h2>
+<ul>
+<li>Balaban, H., et al. (2024). “Electrophysiology Reveals That Intuitive Physics Guides Online Object Representation.” Open-access article: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11634321/">https://pmc.ncbi.nlm.nih.gov/articles/PMC11634321/</a></li>
+<li>Ficco, L., et al. (2021). “Disentangling Predictive Processing in the Brain: A Meta-Analytic Study in Favour of a Predictive Network.” <em>Scientific Reports</em>, 11. <a href="https://www.nature.com/articles/s41598-021-95603-5">https://www.nature.com/articles/s41598-021-95603-5</a></li>
+<li>Friston, K. (2010). “The Free-Energy Principle: A Unified Brain Theory?” <em>Nature Reviews Neuroscience</em>, 11, 127–138. <a href="https://www.nature.com/articles/nrn2787">https://www.nature.com/articles/nrn2787</a></li>
+<li>Garlichs, A., et al. (2024). “Prediction Error Processing and Sharpening of Expected Representations.” <em>Nature Communications</em>. <a href="https://www.nature.com/articles/s41467-024-47749-9">https://www.nature.com/articles/s41467-024-47749-9</a></li>
+<li>Hardstone, R., et al. (2021). “Long-Term Priors Influence Visual Perception Through Recruitment of Long-Range Feedback.” <em>Nature Communications</em>. <a href="https://www.nature.com/articles/s41467-021-26544-w">https://www.nature.com/articles/s41467-021-26544-w</a></li>
+<li>Hodson, R., et al. (2024). “The Empirical Status of Predictive Coding and Active Inference.” <em>Neuroscience &#x26; Biobehavioral Reviews</em>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0149763423004426">https://www.sciencedirect.com/science/article/abs/pii/S0149763423004426</a></li>
+<li>Walsh, K. S., et al. (2020). “Evaluating the Neurophysiological Evidence for Predictive Processing as a Model of Perception.” <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7187369/">https://pmc.ncbi.nlm.nih.gov/articles/PMC7187369/</a></li>
+<li>Yon, D., et al. (2020). “Beliefs and Desires in the Predictive Brain.” <em>Nature Communications</em>, 11. <a href="https://www.nature.com/articles/s41467-020-18332-9">https://www.nature.com/articles/s41467-020-18332-9</a></li>
+</ul>
+<h2 id="human-computer-interaction-and-human-factors">Human-Computer Interaction and Human Factors</h2>
+<ul>
+<li>Blackler, A., Popovic, V., and Mahar, D. (2010). “Investigating Users’ Intuitive Interaction with Complex Artefacts.” <em>Applied Ergonomics</em>, 41(1), 72–92. <a href="https://pubmed.ncbi.nlm.nih.gov/19586618/">https://pubmed.ncbi.nlm.nih.gov/19586618/</a></li>
+<li>Fischer, S., Itoh, M., and Inagaki, T. (2015). Schema-based approaches to diagnosing intuitive use.</li>
+<li>Hurtienne, J., and Israel, J. H. “A Cognitive Schema Approach to Diagnose Intuitiveness.” ACM Digital Library. <a href="https://dl.acm.org/doi/10.1145/1620509.1620516">https://dl.acm.org/doi/10.1145/1620509.1620516</a></li>
+<li>Lawry, S., Popovic, V., and Blackler, A. (2019). “Age, Familiarity, and Intuitive Use: An Empirical Investigation.” <em>Applied Ergonomics</em>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0003687018302898">https://www.sciencedirect.com/science/article/abs/pii/S0003687018302898</a></li>
+<li>Vertegaal, R., Merritt, T., Greenberg, S., Tarun, A. P., Li, Z., and Fountas, Z. (2025). “Interactive Inference: A Neuromorphic Theory of Human-Computer Interaction.” Preprint. <a href="https://arxiv.org/abs/2502.05935">https://arxiv.org/abs/2502.05935</a></li>
+<li>Wennberg, A., and colleagues (2018). “The Intuitive in HCI: A Critical Discourse Analysis.” ACM. <a href="https://dl.acm.org/doi/pdf/10.1145/3240167.3240202">https://dl.acm.org/doi/pdf/10.1145/3240167.3240202</a></li>
+</ul>
+<h2 id="ecological-and-developmental-psychology">Ecological and Developmental Psychology</h2>
+<ul>
+<li>Chong, I., and Proctor, R. W. (2020). “On the Evolution of a Radical Concept: Affordances According to Gibson and Their Subsequent Use and Development.” <a href="https://pubmed.ncbi.nlm.nih.gov/31711365/">https://pubmed.ncbi.nlm.nih.gov/31711365/</a></li>
+<li>Gibson, J. J. (1979). <em>The Ecological Approach to Visual Perception</em>. Houghton Mifflin.</li>
+<li>Piloto, L. S., et al. (2022). “Intuitive Physics Learning in a Deep-Learning Model Inspired by Developmental Psychology.” <em>Nature Human Behaviour</em>. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9489531/">https://pmc.ncbi.nlm.nih.gov/articles/PMC9489531/</a></li>
+<li>Vauclin, P., et al. (2023). “A Systematic Review of Perception of Affordances for the Person-Plus-Object System.” <a href="https://pubmed.ncbi.nlm.nih.gov/37407795/">https://pubmed.ncbi.nlm.nih.gov/37407795/</a></li>
+<li>Vicovaro, M., et al. (2023). “Grounding Intuitive Physics in Perceptual Experience.” <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10607174/">https://pmc.ncbi.nlm.nih.gov/articles/PMC10607174/</a></li>
+<li>Witt, J. K. (2014). “Reconceptualizing the Relations Between Action-Specific and Ecological Approaches to Perception.” <a href="https://pubmed.ncbi.nlm.nih.gov/24683098/">https://pubmed.ncbi.nlm.nih.gov/24683098/</a></li>
+</ul>
+<h2 id="expertise-and-decision-science">Expertise and Decision Science</h2>
+<ul>
+<li>Kahneman, D., and Klein, G. (2009). “Conditions for Intuitive Expertise: A Failure to Disagree.” <em>American Psychologist</em>, 64(6), 515–526. <a href="https://pubmed.ncbi.nlm.nih.gov/19739881/">https://pubmed.ncbi.nlm.nih.gov/19739881/</a></li>
+<li>Klein, G. (1998). <em>Sources of Power: How People Make Decisions</em>. MIT Press.</li>
+</ul>
+<h2 id="information-theory-and-surprise">Information Theory and Surprise</h2>
+<ul>
+<li>Engström, J., Liu, S.-Y., Dinparastdjadid, A., and Simoiu, C. (2022). “Modeling Road User Response Timing in Naturalistic Settings: A Surprise-Based Framework.” <a href="https://arxiv.org/abs/2208.08651">https://arxiv.org/abs/2208.08651</a></li>
+<li>Itti, L., and Baldi, P. (2009). “Bayesian Surprise Attracts Human Attention.” <em>Vision Research</em>, 49(10), 1295–1306. <a href="https://cseweb.ucsd.edu/classes/fa09/cse258a/papers/itti-baldi-2009.pdf">https://cseweb.ucsd.edu/classes/fa09/cse258a/papers/itti-baldi-2009.pdf</a></li>
+<li>Shannon, C. E. (1948). “A Mathematical Theory of Communication.” <em>Bell System Technical Journal</em>, 27, 379–423 and 623–656.</li>
+</ul>
+<hr>
+<h1 id="revision-history-addition">Revision History Addition</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.0</td>
+<td>2026-07-21</td>
+<td>OpenAI autonomous research agent</td>
+<td>Added predictive-processing falsification pass, ecological and developmental alternatives, expert-intuition boundary conditions, surprise models, five experiments, REP v2 handoff sections, and evidence/hypothesis registry additions.</td>
+</tr>
+</tbody>
+</table></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

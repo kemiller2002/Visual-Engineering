@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Web Component Framework ADR Set | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span> <span data-pagefind-meta="stableId">ADR-WC-INDEX-0001</span> </p> <h1 data-pagefind-meta="title">Web Component Framework ADR Set</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>ADR-WC-INDEX-0001</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">verified</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div> <div><dt>Tags</dt><dd data-pagefind-meta="tags">adr, web-components</dd></div> <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/design-library/decision-record/web-component-framework-adrs-v1.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#web-component-framework-adr-set">Web Component Framework ADR Set</a></li><li><a href="#adr-wc-001">ADR-WC-001</a></li><li><a href="#adr-wc-002">ADR-WC-002</a></li><li><a href="#adr-wc-003">ADR-WC-003</a></li><li><a href="#adr-wc-004">ADR-WC-004</a></li><li><a href="#adr-wc-005">ADR-WC-005</a></li><li><a href="#adr-wc-006">ADR-WC-006</a></li><li><a href="#adr-wc-007">ADR-WC-007</a></li><li><a href="#adr-wc-008">ADR-WC-008</a></li> </ol> </aside> <section class="document-body"><h1 id="web-component-framework-adr-set">Web Component Framework ADR Set</h1>
+<h2 id="adr-wc-001">ADR-WC-001</h2>
+<ul>
+<li>Decision class: Foundation</li>
+<li>Problem: What is the smallest stable interoperability boundary?</li>
+<li>Selected decision: Use native Web Components as one shared interoperability boundary for selected categories, while keeping native HTML recipes and CSS-first patterns as first-class citizens.</li>
+<li>Why: Cross-framework delivery matters, but not every reusable artifact benefits from becoming a custom element.</li>
+<li>Invalidation trigger: If consumer testing shows wrappers or native CE consumption are materially unreliable across the target matrix.</li>
+</ul>
+<h2 id="adr-wc-002">ADR-WC-002</h2>
+<ul>
+<li>Decision class: Foundation</li>
+<li>Problem: Should one authoring model define every package?</li>
+<li>Selected decision: Adopt a mixed authoring strategy:
+<ul>
+<li>native <code>HTMLElement</code> or utilities for minimal primitives,</li>
+<li>Lit for bounded interactive components,</li>
+<li>CSS-first authoring for layout/composition.</li>
+</ul>
+</li>
+<li>Why: Best balance of standards alignment, ergonomics, and avoidance of unnecessary runtime abstraction.</li>
+<li>Invalidation trigger: If mixed-authoring metadata and testing become too inconsistent to govern.</li>
+</ul>
+<h2 id="adr-wc-003">ADR-WC-003</h2>
+<ul>
+<li>Decision class: Foundation</li>
+<li>Problem: What is the default DOM strategy?</li>
+<li>Selected decision: Use Light DOM for content, layout, and semantic composites; use Shadow DOM for bounded interactive widgets and selected protected controls.</li>
+<li>Why: Preserves content openness and theming where needed while retaining encapsulation where it earns its cost.</li>
+<li>Invalidation trigger: If consumer theming or accessibility failures show the category split is wrong.</li>
+</ul>
+<h2 id="adr-wc-004">ADR-WC-004</h2>
+<ul>
+<li>Decision class: Foundation</li>
+<li>Problem: How should visual styling stay decoupled from behavior?</li>
+<li>Selected decision: Use layered DTCG token sources that generate CSS custom properties and typed package outputs.</li>
+<li>Why: Shared token source with generated outputs is more durable than hand-authored per-package token APIs.</li>
+<li>Invalidation trigger: If DTCG format cannot represent required token relationships without excessive private extensions.</li>
+</ul>
+<h2 id="adr-wc-005">ADR-WC-005</h2>
+<ul>
+<li>Decision class: Policy</li>
+<li>Problem: What is the machine-readable public contract?</li>
+<li>Selected decision: Make Custom Elements Manifest the canonical generated API contract, with source annotations and API diffing in CI.</li>
+<li>Why: Supports docs, wrappers, search, IDE support, and agent-safe automation from one artifact.</li>
+<li>Invalidation trigger: If CEM proves structurally insufficient for required package metadata.</li>
+</ul>
+<h2 id="adr-wc-006">ADR-WC-006</h2>
+<ul>
+<li>Decision class: Default</li>
+<li>Problem: What is the primary documentation workbench?</li>
+<li>Selected decision: Use Storybook as the interactive workbench, backed by CEM and authored usage docs.</li>
+<li>Why: Strong Web Components support, a11y add-ons, interactions, docs, and visual workflows.</li>
+<li>Invalidation trigger: If Web Components support or generated-doc ergonomics fail during pilot implementation.</li>
+</ul>
+<h2 id="adr-wc-007">ADR-WC-007</h2>
+<ul>
+<li>Decision class: Foundation</li>
+<li>Problem: What is the browser test foundation?</li>
+<li>Selected decision: Use Playwright for browser contract, keyboard, a11y, and visual checks, supplemented by unit tests and consumer fixtures.</li>
+<li>Why: Real-browser execution is required for platform behavior.</li>
+<li>Invalidation trigger: If the selected repo stack requires a different real-browser test runner for critical gaps.</li>
+</ul>
+<h2 id="adr-wc-008">ADR-WC-008</h2>
+<ul>
+<li>Decision class: Policy</li>
+<li>Problem: How should packages be structured and versioned?</li>
+<li>Selected decision: Start with a monorepo of publishable packages, independently releasable but governed by a lockstep-major policy until maturity.</li>
+<li>Why: Balances isolation with shared tooling and reduces early-release chaos.</li>
+<li>Invalidation trigger: If release complexity outweighs reuse benefits after pilots.</li>
+</ul></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

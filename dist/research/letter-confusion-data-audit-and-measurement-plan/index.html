@@ -1,0 +1,369 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Letter-Confusion Data Audit and Measurement Plan | Visual Engineering Research</title><meta name="description" content="Audit of existing letter-similarity, letter-confusion, visual-span, and synthetic glyph datasets. The main finding is that these data classes answer different questions and must remain condition-aware."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span>  </p> <h1 data-pagefind-meta="title">Letter-Confusion Data Audit and Measurement Plan</h1> <p class="lede" data-pagefind-meta="summary">Audit of existing letter-similarity, letter-confusion, visual-span, and synthetic glyph datasets. The main finding is that these data classes answer different questions and must remain condition-aware.</p> <dl class="metadata-panel">  <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">research draft</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/project-atlas/audit/project-atlas-letter-confusion-data-audit-v1.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#letter-confusion-data-audit-and-measurement-plan">Letter-Confusion Data Audit and Measurement Plan</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#1-four-different-data-types">1. Four Different Data Types</a></li><li><a href="#clear-view-similarity-ratings">Clear-view similarity ratings</a></li><li><a href="#identification-confusion-matrices">Identification-confusion matrices</a></li><li><a href="#visual-span-profiles">Visual-span profiles</a></li><li><a href="#computational-glyph-datasets">Computational glyph datasets</a></li><li><a href="#2-why-these-data-must-not-be-pooled">2. Why These Data Must Not Be Pooled</a></li><li><a href="#3-candidate-source-audit">3. Candidate Source Audit</a></li><li><a href="#data-vit-001-mueller-and-weidemann-review">DATA-VIT-001: Mueller and Weidemann Review</a></li><li><a href="#data-vit-002-simpson-et-al-latin-similarity-matrix">DATA-VIT-002: Simpson et al. Latin Similarity Matrix</a></li><li><a href="#data-vit-003-bouma-lowercase-recognition-data">DATA-VIT-003: Bouma Lowercase Recognition Data</a></li><li><a href="#data-vit-004-liu-et-al-geometric-moment-dataset">DATA-VIT-004: Liu et al. Geometric-Moment Dataset</a></li><li><a href="#data-vit-005-beckmann-legge-visual-span-data">DATA-VIT-005: Beckmann-Legge Visual-Span Data</a></li><li><a href="#data-vit-006-yu-and-kwon-cross-matrix-comparison">DATA-VIT-006: Yu and Kwon Cross-Matrix Comparison</a></li><li><a href="#data-vit-007-uci-letter-recognition">DATA-VIT-007: UCI Letter Recognition</a></li><li><a href="#data-vit-008-typography-mnist">DATA-VIT-008: Typography-MNIST</a></li><li><a href="#4-core-finding">4. Core Finding</a></li><li><a href="#5-standard-atlas-dataset-schema">5. Standard Atlas Dataset Schema</a></li><li><a href="#6-first-metrics">6. First Metrics</a></li><li><a href="#met-vit-011-directed-confusion">MET-VIT-011: Directed Confusion</a></li><li><a href="#met-vit-012-symmetric-pair-confusion">MET-VIT-012: Symmetric Pair Confusion</a></li><li><a href="#met-vit-013-confusion-asymmetry">MET-VIT-013: Confusion Asymmetry</a></li><li><a href="#met-vit-014-response-bias">MET-VIT-014: Response Bias</a></li><li><a href="#met-vit-015-mutual-information">MET-VIT-015: Mutual Information</a></li><li><a href="#met-vit-016-normalized-information-retention">MET-VIT-016: Normalized Information Retention</a></li><li><a href="#met-vit-017-weakest-consequential-pair">MET-VIT-017: Weakest Consequential Pair</a></li><li><a href="#met-vit-018-matrix-stability">MET-VIT-018: Matrix Stability</a></li><li><a href="#7-first-reanalysis">7. First Reanalysis</a></li><li><a href="#study-a-clear-similarity-versus-actual-confusion">Study A: Clear Similarity Versus Actual Confusion</a></li><li><a href="#high-confusion-low-rated-similarity">High confusion, low rated similarity</a></li><li><a href="#high-rated-similarity-low-confusion">High rated similarity, low confusion</a></li><li><a href="#study-b-stable-confusion-backbone">Study B: Stable Confusion Backbone</a></li><li><a href="#study-c-component-to-reading-transfer">Study C: Component-to-Reading Transfer</a></li><li><a href="#8-refined-candidate-laws">8. Refined Candidate Laws</a></li><li><a href="#law-vit-012-matrix-conditionality">LAW-VIT-012: Matrix Conditionality</a></li><li><a href="#law-vit-013-rating-error-separation">LAW-VIT-013: Rating-Error Separation</a></li><li><a href="#law-vit-014-bias-decomposition">LAW-VIT-014: Bias Decomposition</a></li><li><a href="#law-vit-015-residual-value">LAW-VIT-015: Residual Value</a></li><li><a href="#law-vit-016-stable-backbone-hypothesis">LAW-VIT-016: Stable-Backbone Hypothesis</a></li><li><a href="#law-vit-017-proxy-validation">LAW-VIT-017: Proxy Validation</a></li><li><a href="#9-risks">9. Risks</a></li><li><a href="#10-immediate-next-actions">10. Immediate Next Actions</a></li><li><a href="#references">References</a></li><li><a href="#revision-history">Revision History</a></li> </ol> </aside> <section class="document-body"><h1 id="letter-confusion-data-audit-and-measurement-plan">Letter-Confusion Data Audit and Measurement Plan</h1>
+<h2 id="purpose">Purpose</h2>
+<p>The previous work established that letter recognition can be modeled as a noisy
+communication problem. This document identifies what evidence already exists and
+what Atlas can calculate without running new human studies.</p>
+<blockquote>
+<p>A matrix is only meaningful together with its stimulus, observer, task,
+presentation conditions, and response procedure.</p>
+</blockquote>
+<h2 id="1-four-different-data-types">1. Four Different Data Types</h2>
+<h3 id="clear-view-similarity-ratings">Clear-view similarity ratings</h3>
+<p>Participants compare clearly rendered letter pairs and rate visual resemblance.</p>
+<p>Useful for:</p>
+<ul>
+<li>conscious shape similarity</li>
+<li>baseline clustering</li>
+<li>cross-case and diacritic comparisons</li>
+</ul>
+<p>Not direct evidence of:</p>
+<ul>
+<li>substitution errors</li>
+<li>blur robustness</li>
+<li>crowding robustness</li>
+<li>reading speed</li>
+</ul>
+<h3 id="identification-confusion-matrices">Identification-confusion matrices</h3>
+<p>Participants identify briefly shown, peripheral, low-contrast, small, or
+crowded letters.</p>
+<p>They estimate:</p>
+<pre><code class="language-text">P(response = j | target = i, condition = c)
+</code></pre>
+<p>These are the strongest data for modeling actual recognition failure.</p>
+<h3 id="visual-span-profiles">Visual-span profiles</h3>
+<p>Participants identify letters at positions around fixation, often in trigrams.
+Results estimate how much symbol information is available across the visual
+field.</p>
+<h3 id="computational-glyph-datasets">Computational glyph datasets</h3>
+<p>Rendered letters are distorted and classified by machines.</p>
+<p>Useful for stimulus generation and proxy-model development, but they are not
+human legibility evidence unless validated against human results.</p>
+<h2 id="2-why-these-data-must-not-be-pooled">2. Why These Data Must Not Be Pooled</h2>
+<pre><code class="language-text">Similarity ratings      → What looks alike?
+Confusion matrices      → What is mistaken for what?
+Visual-span profiles    → What survives by retinal position?
+Reading studies         → What transfers to continuous reading?
+Synthetic datasets      → What can machines screen or predict?
+</code></pre>
+<p>Similarity, confusability, and reading performance overlap, but they are not the
+same construct.</p>
+<h1 id="3-candidate-source-audit">3. Candidate Source Audit</h1>
+<h2 id="data-vit-001-mueller-and-weidemann-review">DATA-VIT-001: Mueller and Weidemann Review</h2>
+<p><em>Alphabetic letter identification: Effects of perceivability, similarity, and
+bias</em> reviews more than a century of letter-identification research and more
+than 70 relevant publications.</p>
+<p>Its most important contribution is separating three influences:</p>
+<ul>
+<li>perceivability</li>
+<li>similarity</li>
+<li>response bias</li>
+</ul>
+<p><strong>Atlas value:</strong> High as a source map and conceptual framework.</p>
+<p><strong>Limitation:</strong> It is not one standardized raw dataset.</p>
+<h2 id="data-vit-002-simpson-et-al-latin-similarity-matrix">DATA-VIT-002: Simpson et al. Latin Similarity Matrix</h2>
+<p><em>A letter visual-similarity matrix for Latin-based alphabets</em> collected untimed
+similarity ratings for clearly presented letters used across several European
+languages.</p>
+<p>Reported design:</p>
+<ul>
+<li>52 uppercase forms</li>
+<li>53 lowercase forms</li>
+<li>1,326 unordered uppercase pairs</li>
+<li>1,378 unordered lowercase pairs</li>
+</ul>
+<p><strong>Measures:</strong> conscious resemblance under clear viewing.</p>
+<p><strong>Does not measure:</strong> actual substitution probability under degradation.</p>
+<p><strong>Atlas value:</strong> Excellent baseline for comparing rated similarity with real
+confusion.</p>
+<h2 id="data-vit-003-bouma-lowercase-recognition-data">DATA-VIT-003: Bouma Lowercase Recognition Data</h2>
+<p>Bouma's studies on isolated lowercase recognition and parafoveal interference
+are repeatedly reused in later confusion research.</p>
+<p><strong>Atlas value:</strong> High because they contain actual identification errors.</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>older fonts and apparatus</li>
+<li>incomplete modern metadata</li>
+<li>raw machine-readable availability remains uncertain</li>
+<li>not suitable for ranking contemporary web fonts without replication</li>
+</ul>
+<h2 id="data-vit-004-liu-et-al-geometric-moment-dataset">DATA-VIT-004: Liu et al. Geometric-Moment Dataset</h2>
+<p><em>Using geometric moments to explain human letter recognition near the acuity
+limit</em> compares human confusion patterns with low-order geometric image
+descriptors.</p>
+<p><strong>Atlas value:</strong> Extremely high. It directly tests whether computable geometry
+can predict human confusion.</p>
+<p><strong>Limitation:</strong> Geometry explains only part of performance. Familiarity, bias,
+context, and task remain relevant.</p>
+<h2 id="data-vit-005-beckmann-legge-visual-span-data">DATA-VIT-005: Beckmann-Legge Visual-Span Data</h2>
+<p>Visual-span research uses confusion data to convert recognition performance into
+information transmitted in bits across retinal positions.</p>
+<p><strong>Atlas value:</strong> Provides an established bridge among confusion matrices,
+information theory, visual position, and reading.</p>
+<p><strong>Risk:</strong> A generic percent-correct-to-bits conversion may hide condition-specific
+confusion structure. Atlas should prefer full matrices when available.</p>
+<h2 id="data-vit-006-yu-and-kwon-cross-matrix-comparison">DATA-VIT-006: Yu and Kwon Cross-Matrix Comparison</h2>
+<p><em>Defining letter similarity</em> compares four matrices collected with different
+fonts and conditions.</p>
+<p><strong>Atlas value:</strong> Supports testing which confusion relationships are stable and
+which are condition-specific.</p>
+<p><strong>Limitation:</strong> The accessible source is a conference record; original matrices
+must be traced to source studies.</p>
+<h2 id="data-vit-007-uci-letter-recognition">DATA-VIT-007: UCI Letter Recognition</h2>
+<p>The UCI dataset contains 20,000 distorted uppercase stimuli based on 20 fonts
+and represented by 16 numerical image features.</p>
+<p><strong>Atlas value:</strong> Reproducible pipeline and proxy-model benchmark.</p>
+<p><strong>Limitation:</strong> Machine-classification data, not human responses.</p>
+<h2 id="data-vit-008-typography-mnist">DATA-VIT-008: Typography-MNIST</h2>
+<p>A large rendered corpus spanning many fonts, scripts, and glyphs.</p>
+<p><strong>Atlas value:</strong> Broad geometry corpus and computational screening.</p>
+<p><strong>Limitation:</strong> No human confusion probabilities.</p>
+<h1 id="4-core-finding">4. Core Finding</h1>
+<p>There is no universal letter-confusion matrix.</p>
+<p>The correct object is:</p>
+<pre><code class="language-text">M(i, j | typeface, size, contrast, eccentricity, spacing,
+       exposure, observer, language, task)
+</code></pre>
+<p>not:</p>
+<pre><code class="language-text">M(i, j)
+</code></pre>
+<p>Glyph distance is conditional.</p>
+<h1 id="5-standard-atlas-dataset-schema">5. Standard Atlas Dataset Schema</h1>
+<pre><code class="language-yaml">dataset_id:
+source:
+  citation:
+  doi:
+  publication_status:
+  license:
+  raw_data_location:
+
+stimulus:
+  script:
+  alphabet:
+  case:
+  typeface:
+  font_version:
+  weight:
+  nominal_size:
+  measured_x_height:
+  rendering_medium:
+  contrast:
+  polarity:
+
+presentation:
+  task_type:
+  exposure_ms:
+  masking:
+  retinal_eccentricity_deg:
+  flanker_configuration:
+  letter_spacing:
+  viewing_distance:
+  visual_angle:
+
+observer:
+  sample_size:
+  age_range:
+  vision_criteria:
+  language:
+  alphabet_expertise:
+  reading_level:
+
+response:
+  response_set:
+  forced_choice:
+  response_time_available:
+  confidence_available:
+
+data:
+  unit: count | probability | rating | accuracy | bits
+  matrix_orientation:
+  missing_cells:
+  repeated_trials:
+  aggregation_level:
+
+interpretation:
+  valid_uses:
+  invalid_uses:
+  known_biases:
+  confidence:
+</code></pre>
+<p>Missing metadata must remain explicit rather than being silently assumed.</p>
+<h1 id="6-first-metrics">6. First Metrics</h1>
+<h2 id="met-vit-011-directed-confusion">MET-VIT-011: Directed Confusion</h2>
+<pre><code class="language-text">P(response_j | target_i)
+</code></pre>
+<p>Preserves directional errors.</p>
+<h2 id="met-vit-012-symmetric-pair-confusion">MET-VIT-012: Symmetric Pair Confusion</h2>
+<pre><code class="language-text">C_sym(i,j) = [P(j|i) + P(i|j)] / 2
+</code></pre>
+<p>Useful for clustering only. It must not replace the directed source matrix.</p>
+<h2 id="met-vit-013-confusion-asymmetry">MET-VIT-013: Confusion Asymmetry</h2>
+<pre><code class="language-text">A(i,j) = |P(j|i) - P(i|j)|
+</code></pre>
+<p>High asymmetry may reveal response bias or unequal feature visibility.</p>
+<h2 id="met-vit-014-response-bias">MET-VIT-014: Response Bias</h2>
+<p>How often a symbol is selected independent of whether it was shown.</p>
+<p>A commonly guessed symbol can appear deceptively legible if only diagonal
+accuracy is reported.</p>
+<h2 id="met-vit-015-mutual-information">MET-VIT-015: Mutual Information</h2>
+<pre><code class="language-text">I(Target; Response)
+</code></pre>
+<p>Measures how much the response reduces uncertainty about the target.</p>
+<h2 id="met-vit-016-normalized-information-retention">MET-VIT-016: Normalized Information Retention</h2>
+<pre><code class="language-text">I(Target; Response) / H(Target)
+</code></pre>
+<p>Allows comparison across alphabets and target distributions.</p>
+<h2 id="met-vit-017-weakest-consequential-pair">MET-VIT-017: Weakest Consequential Pair</h2>
+<pre><code class="language-text">confusion probability
+× occurrence probability
+× consequence of error
+</code></pre>
+<p>This is more useful for real systems than average accuracy alone.</p>
+<h2 id="met-vit-018-matrix-stability">MET-VIT-018: Matrix Stability</h2>
+<p>Compare conditions using:</p>
+<ul>
+<li>rank correlation</li>
+<li>Jensen-Shannon divergence</li>
+<li>Hellinger distance</li>
+<li>nearest-neighbor overlap</li>
+<li>confusion-cluster preservation</li>
+</ul>
+<p>No single comparison should be treated as definitive.</p>
+<h1 id="7-first-reanalysis">7. First Reanalysis</h1>
+<h2 id="study-a-clear-similarity-versus-actual-confusion">Study A: Clear Similarity Versus Actual Confusion</h2>
+<p>Compare the Simpson clear-view ratings with one or more degraded identification
+matrices.</p>
+<p>Questions:</p>
+<ul>
+<li>Do pairs that look alike become pairs that are actually confused?</li>
+<li>Which pairs are more confusable than ratings predict?</li>
+<li>Which pairs look similar but remain categorically distinct?</li>
+<li>Does the relationship change with blur, crowding, or eccentricity?</li>
+</ul>
+<p>The residuals are especially valuable.</p>
+<h3 id="high-confusion-low-rated-similarity">High confusion, low rated similarity</h3>
+<p>Possible causes:</p>
+<ul>
+<li>degradation-specific feature loss</li>
+<li>crowding</li>
+<li>response bias</li>
+<li>mirror or positional errors</li>
+<li>rendering artifacts</li>
+</ul>
+<h3 id="high-rated-similarity-low-confusion">High rated similarity, low confusion</h3>
+<p>Possible causes:</p>
+<ul>
+<li>diagnostic local features</li>
+<li>learned category boundaries</li>
+<li>task differences</li>
+<li>strong conventional familiarity</li>
+</ul>
+<h2 id="study-b-stable-confusion-backbone">Study B: Stable Confusion Backbone</h2>
+<p>Classify pair relationships as:</p>
+<pre><code class="language-text">Structural
+  stable across many conditions
+
+Conditional
+  activated by a particular degradation
+
+Typeface-specific
+  caused by local design decisions
+</code></pre>
+<p>This separates alphabet-level constraints from typeface-level failures.</p>
+<h2 id="study-c-component-to-reading-transfer">Study C: Component-to-Reading Transfer</h2>
+<p>Collect studies reporting at least two levels:</p>
+<ul>
+<li>letter recognition</li>
+<li>word recognition</li>
+<li>visual span</li>
+<li>reading speed</li>
+<li>eye movements</li>
+<li>comprehension</li>
+</ul>
+<p>This will reveal when improved glyph information transfers to reading and when
+another bottleneck dominates.</p>
+<h1 id="8-refined-candidate-laws">8. Refined Candidate Laws</h1>
+<h2 id="law-vit-012-matrix-conditionality">LAW-VIT-012: Matrix Conditionality</h2>
+<p>A confusion matrix describes a symbol system under a condition, not a permanent
+alphabet map.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="law-vit-013-rating-error-separation">LAW-VIT-013: Rating-Error Separation</h2>
+<p>Perceived similarity under clear viewing and actual substitution under degraded
+viewing are distinct constructs.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="law-vit-014-bias-decomposition">LAW-VIT-014: Bias Decomposition</h2>
+<p>Observed identification reflects perceivability, similarity, and response bias.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="law-vit-015-residual-value">LAW-VIT-015: Residual Value</h2>
+<p>Errors unexplained by geometric or clear-view similarity identify missing
+perceptual, learned, contextual, or procedural variables.</p>
+<p><strong>Confidence:</strong> Moderate to high</p>
+<h2 id="law-vit-016-stable-backbone-hypothesis">LAW-VIT-016: Stable-Backbone Hypothesis</h2>
+<p>Some confusions will remain stable across conditions because they arise from
+shared alphabet structure; others will be typeface- or condition-specific.</p>
+<p><strong>Confidence:</strong> Moderate</p>
+<h2 id="law-vit-017-proxy-validation">LAW-VIT-017: Proxy Validation</h2>
+<p>A computational legibility model is useful only insofar as it predicts human
+confusion under matched conditions.</p>
+<p><strong>Confidence:</strong> High</p>
+<h1 id="9-risks">9. Risks</h1>
+<ul>
+<li>Older matrices may require manual extraction.</li>
+<li>Matrix orientation can be transcribed incorrectly.</li>
+<li>Aggregated data may hide observer variation.</li>
+<li>Historical font versions may be unrecoverable.</li>
+<li>Point size without x-height or visual angle is insufficient.</li>
+<li>Forced-choice tasks can create artificial substitutions.</li>
+<li>Acuity-threshold results may not generalize to ordinary body text.</li>
+<li>Clear-view ratings may conceal degradation failures.</li>
+<li>Machine observers may learn synthetic artifacts rather than human features.</li>
+</ul>
+<h1 id="10-immediate-next-actions">10. Immediate Next Actions</h1>
+<ol>
+<li>Obtain a machine-readable Simpson similarity matrix.</li>
+<li>Locate complete Bouma- and Liu-derived confusion matrices.</li>
+<li>Verify access to Beckmann-Legge conversion or response data.</li>
+<li>Create CSV and JSON forms of the Atlas schema.</li>
+<li>Build an import validator for orientation, totals, missing cells, and metadata.</li>
+<li>Calculate directed confusion, asymmetry, mutual information, and graph
+clusters for the first available matrix.</li>
+<li>Compare at least two matrices before deriving typography laws.</li>
+<li>Add language frequency and consequence weighting only after preserving the
+unweighted perceptual structure.</li>
+<li>Keep synthetic corpora classified as computational evidence.</li>
+<li>Record inaccessible data as a limitation rather than filling gaps by
+assumption.</li>
+</ol>
+<h1 id="references">References</h1>
+<ul>
+<li>Mueller, S. T., &#x26; Weidemann, C. T. (2012). <em>Alphabetic letter
+identification: Effects of perceivability, similarity, and bias</em>.</li>
+<li>Simpson, I. C., Mousikou, P., Montoya, J. M., &#x26; Defior, S. (2013).
+<em>A letter visual-similarity matrix for Latin-based alphabets</em>.</li>
+<li>Bouma, H. (1971). <em>Visual recognition of isolated lower-case letters</em>.</li>
+<li>Liu, L. et al. (2009). <em>Using geometric moments to explain human letter
+recognition near the acuity limit</em>.</li>
+<li>Yu, D. et al. (2007). <em>Effect of letter spacing on visual span and reading
+speed</em>.</li>
+<li>UCI Machine Learning Repository. <em>Letter Recognition</em>.</li>
+<li>Magre, N., &#x26; Brown, N. (2022). <em>Typography-MNIST</em>.</li>
+</ul>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-07-19</td>
+<td>OpenAI</td>
+<td>Initial dataset audit, schema, metrics, and reanalysis plan.</td>
+</tr>
+</tbody>
+</table></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

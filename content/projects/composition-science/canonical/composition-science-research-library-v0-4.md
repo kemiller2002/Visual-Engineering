@@ -1,3 +1,7 @@
+---
+slug: composition-science-research-library-v0-4
+---
+
 # Composition Science Research Library
 
 **Version:** 0.4  

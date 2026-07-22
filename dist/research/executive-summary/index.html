@@ -1,0 +1,1355 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Executive Summary | Visual Engineering Research</title><meta name="description" content="Multi-cycle investigation of typography as a constrained visual communication system. The work tested information-theoretic, geometric, crowding, spacing, contextual-inference, familiarity, and functional-aesthetic hypotheses. The strongest conclusion is that typography cannot be optimized with one global readability score. It is an adaptive, layered inference system whose active bottleneck changes with observer, environment, task, language context, and consequence of error. Glyph-level robustness remains measurable and important, but improvements transfer upward only when glyph recognition is the limiting factor. The proposed Atlas model therefore combines conditional confusion networks, degradation curves, language redundancy, eye-movement adaptation, and task-weighted error costs."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span>  </p> <h1 data-pagefind-meta="title">Executive Summary</h1> <p class="lede" data-pagefind-meta="summary">Multi-cycle investigation of typography as a constrained visual communication system. The work tested information-theoretic, geometric, crowding, spacing, contextual-inference, familiarity, and functional-aesthetic hypotheses. The strongest conclusion is that typography cannot be optimized with one global readability score. It is an adaptive, layered inference system whose active bottleneck changes with observer, environment, task, language context, and consequence of error. Glyph-level robustness remains measurable and important, but improvements transfer upward only when glyph recognition is the limiting factor. The proposed Atlas model therefore combines conditional confusion networks, degradation curves, language redundancy, eye-movement adaptation, and task-weighted error costs.</p> <dl class="metadata-panel">  <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">completed research phase</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/project-atlas/research-report/project-atlas-typography-autonomous-research-report-v1.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#executive-summary">Executive Summary</a></li><li><a href="#what-was-accomplished">What Was Accomplished</a></li><li><a href="#major-discoveries">Major Discoveries</a></li><li><a href="#1-typography-is-not-one-communication-channel">1. Typography is not one communication channel</a></li><li><a href="#2-glyph-robustness-is-measurable-but-it-is-not-sufficient">2. Glyph robustness is measurable, but it is not sufficient</a></li><li><a href="#3-reading-is-active-inference-not-passive-decoding">3. Reading is active inference, not passive decoding</a></li><li><a href="#4-typography-variables-have-conditional-optima">4. Typography variables have conditional optima</a></li><li><a href="#5-the-governing-variable-is-the-active-bottleneck">5. The governing variable is the active bottleneck</a></li><li><a href="#6-error-cost-matters-as-much-as-average-accuracy">6. Error cost matters as much as average accuracy</a></li><li><a href="#7-familiarity-is-part-of-the-system">7. Familiarity is part of the system</a></li><li><a href="#8-beauty-is-not-reducible-to-efficiency">8. Beauty is not reducible to efficiency</a></li><li><a href="#overall-confidence">Overall Confidence</a></li><li><a href="#largest-remaining-uncertainty">Largest Remaining Uncertainty</a></li><li><a href="#research-log">Research Log</a></li><li><a href="#cycle-1-can-shannon-information-theory-explain-typography-">Cycle 1: Can Shannon Information Theory Explain Typography?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-2-does-geometric-distinctiveness-predict-letter-recognition-">Cycle 2: Does Geometric Distinctiveness Predict Letter Recognition?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-3-is-crowding-the-primary-bottleneck-in-reading-">Cycle 3: Is Crowding the Primary Bottleneck in Reading?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-4-do-more-space-width-weight-and-size-consistently-improve-reading-">Cycle 4: Do More Space, Width, Weight, and Size Consistently Improve Reading?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypotheses">Hypotheses</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-5-does-language-function-as-error-correcting-redundancy-">Cycle 5: Does Language Function as Error-Correcting Redundancy?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-6-is-familiarity-merely-bias-or-does-it-alter-the-effective-channel-">Cycle 6: Is Familiarity Merely Bias, or Does It Alter the Effective Channel?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-7-is-typographic-beauty-an-emergent-property-of-efficient-transmission-">Cycle 7: Is Typographic Beauty an Emergent Property of Efficient Transmission?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#confirmed-findings">Confirmed Findings</a></li><li><a href="#cf-001-print-size-has-a-critical-threshold-and-a-broad-fluent-range">CF-001: Print size has a critical threshold and a broad fluent range</a></li><li><a href="#cf-002-crowding-impairs-identification-of-otherwise-visible-letters">CF-002: Crowding impairs identification of otherwise visible letters</a></li><li><a href="#cf-003-letter-spacing-has-competing-effects">CF-003: Letter spacing has competing effects</a></li><li><a href="#cf-004-human-letter-errors-are-structured-and-asymmetric">CF-004: Human letter errors are structured and asymmetric</a></li><li><a href="#cf-005-geometry-predicts-part-but-not-all-of-letter-confusion">CF-005: Geometry predicts part, but not all, of letter confusion</a></li><li><a href="#cf-006-reader-familiarity-affects-reading-and-letter-perception">CF-006: Reader familiarity affects reading and letter perception</a></li><li><a href="#cf-007-context-improves-recovery-of-uncertain-letters">CF-007: Context improves recovery of uncertain letters</a></li><li><a href="#cf-008-component-gains-do-not-guarantee-system-gains">CF-008: Component gains do not guarantee system gains</a></li><li><a href="#cf-009-extreme-values-are-usually-harmful">CF-009: Extreme values are usually harmful</a></li><li><a href="#cf-010-task-determines-the-required-level-of-glyph-distinction">CF-010: Task determines the required level of glyph distinction</a></li><li><a href="#rejected-hypotheses">Rejected Hypotheses</a></li><li><a href="#rh-001-shannon-information-is-a-complete-measure-of-typographic-quality">RH-001: Shannon information is a complete measure of typographic quality</a></li><li><a href="#rh-002-a-glyph-has-one-intrinsic-recognition-distance-from-every-other-glyph">RH-002: A glyph has one intrinsic recognition distance from every other glyph</a></li><li><a href="#rh-003-maximum-alphabetic-distinctiveness-is-universally-optimal">RH-003: Maximum alphabetic distinctiveness is universally optimal</a></li><li><a href="#rh-004-crowding-is-the-universal-causal-bottleneck-in-reading">RH-004: Crowding is the universal causal bottleneck in reading</a></li><li><a href="#rh-005-more-letter-spacing-always-improves-reading">RH-005: More letter spacing always improves reading</a></li><li><a href="#rh-006-bolder-type-reliably-improves-reading-speed">RH-006: Bolder type reliably improves reading speed</a></li><li><a href="#rh-007-wider-type-necessarily-produces-faster-reading">RH-007: Wider type necessarily produces faster reading</a></li><li><a href="#rh-008-larger-print-continuously-improves-reading">RH-008: Larger print continuously improves reading</a></li><li><a href="#rh-009-specialized-dyslexia-fonts-are-generally-superior">RH-009: Specialized dyslexia fonts are generally superior</a></li><li><a href="#rh-010-better-isolated-letter-recognition-automatically-improves-reading">RH-010: Better isolated-letter recognition automatically improves reading</a></li><li><a href="#rh-011-familiarity-is-merely-response-bias">RH-011: Familiarity is merely response bias</a></li><li><a href="#rh-012-beauty-is-efficient-communication-made-visible">RH-012: Beauty is efficient communication made visible</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#1-what-predicts-upward-transfer-">1. What predicts upward transfer?</a></li><li><a href="#2-can-active-bottlenecks-be-diagnosed-without-extensive-human-testing-">2. Can active bottlenecks be diagnosed without extensive human testing?</a></li><li><a href="#3-is-there-a-stable-cross-condition-confusion-backbone-">3. Is there a stable cross-condition confusion backbone?</a></li><li><a href="#4-how-should-human-and-computational-observer-data-be-combined-">4. How should human and computational observer data be combined?</a></li><li><a href="#5-what-is-the-correct-task-weighted-loss-function-">5. What is the correct task-weighted loss function?</a></li><li><a href="#6-how-do-eye-movements-conceal-typographic-weakness-">6. How do eye movements conceal typographic weakness?</a></li><li><a href="#7-how-should-comfort-and-fatigue-be-measured-">7. How should comfort and fatigue be measured?</a></li><li><a href="#8-which-variable-interactions-are-genuinely-causal-">8. Which variable interactions are genuinely causal?</a></li><li><a href="#9-how-transferable-are-latin-alphabet-results-">9. How transferable are Latin-alphabet results?</a></li><li><a href="#10-can-expressive-fitness-be-modeled-without-reducing-it-to-preference-">10. Can expressive fitness be modeled without reducing it to preference?</a></li><li><a href="#emerging-patterns">Emerging Patterns</a></li><li><a href="#pattern-1-safe-operating-ranges">Pattern 1: Safe Operating Ranges</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-2-local-improvement-global-compensation">Pattern 2: Local Improvement, Global Compensation</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-3-redundancy-is-distributed-across-layers">Pattern 3: Redundancy Is Distributed Across Layers</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-4-the-observer-is-inside-the-system">Pattern 4: The Observer Is Inside the System</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-5-performance-curves-matter-more-than-rankings">Pattern 5: Performance Curves Matter More Than Rankings</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-6-errors-have-unequal-consequences">Pattern 6: Errors Have Unequal Consequences</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-7-mature-forms-reflect-both-optimization-and-lock-in">Pattern 7: Mature Forms Reflect Both Optimization and Lock-In</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#pattern-8-typography-is-a-control-system-not-a-static-object">Pattern 8: Typography Is a Control System, Not a Static Object</a></li><li><a href="#why-it-matters">Why It Matters</a></li><li><a href="#proposed-models">Proposed Models</a></li><li><a href="#model-1-atlas-conditional-communication-model">Model 1: Atlas Conditional Communication Model</a></li><li><a href="#assumptions">Assumptions</a></li><li><a href="#model-2-active-bottleneck-model">Model 2: Active Bottleneck Model</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#assumption">Assumption</a></li><li><a href="#model-3-conditional-confusion-network">Model 3: Conditional Confusion Network</a></li><li><a href="#assumption">Assumption</a></li><li><a href="#model-4-robustness-curve">Model 4: Robustness Curve</a></li><li><a href="#assumption">Assumption</a></li><li><a href="#model-5-bayesian-reading-model">Model 5: Bayesian Reading Model</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#model-6-task-weighted-error-cost">Model 6: Task-Weighted Error Cost</a></li><li><a href="#assumptions">Assumptions</a></li><li><a href="#model-7-compensation-cost-model">Model 7: Compensation Cost Model</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#model-8-dual-fitness-model">Model 8: Dual Fitness Model</a></li><li><a href="#assumption">Assumption</a></li><li><a href="#recommendations">Recommendations</a></li><li><a href="#priority-1-build-the-cross-layer-transfer-dataset">Priority 1: Build the Cross-Layer Transfer Dataset</a></li><li><a href="#work">Work</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-2-acquire-and-normalize-human-confusion-matrices">Priority 2: Acquire and Normalize Human Confusion Matrices</a></li><li><a href="#work">Work</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-3-build-a-controlled-degradation-benchmark">Priority 3: Build a Controlled Degradation Benchmark</a></li><li><a href="#work">Work</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-4-separate-task-families">Priority 4: Separate Task Families</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-5-measure-compensation-not-just-speed">Priority 5: Measure Compensation, Not Just Speed</a></li><li><a href="#work">Work</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-6-test-stable-versus-conditional-confusions">Priority 6: Test Stable Versus Conditional Confusions</a></li><li><a href="#work">Work</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-7-extend-beyond-latin">Priority 7: Extend Beyond Latin</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#priority-8-delay-a-universal-typography-score">Priority 8: Delay a Universal Typography Score</a></li><li><a href="#recommendation">Recommendation</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#reason">Reason</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#academic">Academic</a></li><li><a href="#information-theory-and-noisy-channel-models">Information Theory and Noisy-Channel Models</a></li><li><a href="#letter-recognition-and-similarity">Letter Recognition and Similarity</a></li><li><a href="#print-size-visual-span-and-crowding">Print Size, Visual Span, and Crowding</a></li><li><a href="#spacing-width-weight-and-typeface">Spacing, Width, Weight, and Typeface</a></li><li><a href="#context-words-and-reading">Context, Words, and Reading</a></li><li><a href="#familiarity-and-typeface-experience">Familiarity and Typeface Experience</a></li><li><a href="#dyslexia-and-specialized-fonts">Dyslexia and Specialized Fonts</a></li><li><a href="#aesthetics-and-emotion">Aesthetics and Emotion</a></li><li><a href="#books">Books</a></li><li><a href="#industry">Industry</a></li><li><a href="#patents">Patents</a></li><li><a href="#standards">Standards</a></li><li><a href="#historical">Historical</a></li><li><a href="#other">Other</a></li><li><a href="#final-research-position">Final Research Position</a></li> </ol> </aside> <section class="document-body"><h1 id="executive-summary">Executive Summary</h1>
+<h2 id="what-was-accomplished">What Was Accomplished</h2>
+<p>This research phase moved the Project Atlas typography work beyond the initial
+claim that typography resembles a noisy communication channel.</p>
+<p>Seven investigation cycles were completed:</p>
+<ol>
+<li>Tested whether Shannon information theory can serve as a complete theory of
+typography.</li>
+<li>Tested whether geometric distinctiveness predicts human letter recognition.</li>
+<li>Tested whether crowding and visual-span size are the primary bottlenecks in
+reading.</li>
+<li>Tested whether increased spacing, width, weight, and size improve reading in
+predictable directions.</li>
+<li>Tested whether words and linguistic context function as error-correcting
+redundancy.</li>
+<li>Tested whether familiarity and reader expertise are secondary biases or
+fundamental channel variables.</li>
+<li>Tested whether aesthetic quality can be derived from communication efficiency.</li>
+</ol>
+<p>The research repeatedly attempted to falsify the emerging model. Several
+plausible claims failed, and those failures materially changed the framework.</p>
+<h2 id="major-discoveries">Major Discoveries</h2>
+<h3 id="1-typography-is-not-one-communication-channel">1. Typography is not one communication channel</h3>
+<p>It is a layered and adaptive system:</p>
+<pre><code class="language-text">Rendered signal
+    ↓
+Perceptual availability
+    ↓
+Glyph discrimination
+    ↓
+Letter-position recovery
+    ↓
+Word inference
+    ↓
+Sentence interpretation
+    ↓
+Structural navigation
+    ↓
+Decision and action
+</code></pre>
+<p>A design can succeed at one layer and fail at another.</p>
+<h3 id="2-glyph-robustness-is-measurable-but-it-is-not-sufficient">2. Glyph robustness is measurable, but it is not sufficient</h3>
+<p>Human letter-confusion matrices can be converted into mutual information and
+information-retention curves. Geometric image descriptors predict a meaningful
+portion of human confusions near recognition limits.</p>
+<p>However, better isolated-letter recognition does not reliably produce faster
+continuous reading. The improvement transfers only when symbol recognition is
+the dominant bottleneck.</p>
+<h3 id="3-reading-is-active-inference-not-passive-decoding">3. Reading is active inference, not passive decoding</h3>
+<p>Readers combine uncertain visual evidence with:</p>
+<ul>
+<li>letter-frequency expectations</li>
+<li>orthographic legality</li>
+<li>word probability</li>
+<li>syntax</li>
+<li>semantics</li>
+<li>familiarity</li>
+<li>eye-movement resampling</li>
+</ul>
+<p>The reader does not wait for every letter to become certain before understanding
+a word or sentence.</p>
+<h3 id="4-typography-variables-have-conditional-optima">4. Typography variables have conditional optima</h3>
+<p>Spacing, width, weight, and size do not behave as monotonic goods.</p>
+<p>Examples:</p>
+<ul>
+<li>More letter spacing can reduce crowding but increase peripheral extent and
+weaken word grouping.</li>
+<li>Bolder text can improve stroke visibility until counters and apertures begin
+to close, yet several studies find no reading-speed gain across a wide range
+of boldness.</li>
+<li>Condensed text changes fixation behavior without necessarily reducing overall
+reading speed because readers compensate.</li>
+<li>Print size has a strong threshold effect, but above critical print size there
+is a broad fluent range rather than one ideal size.</li>
+</ul>
+<h3 id="5-the-governing-variable-is-the-active-bottleneck">5. The governing variable is the active bottleneck</h3>
+<p>Typography should not be optimized by maximizing every favorable feature.</p>
+<p>The highest-value intervention is the one that addresses the weakest active
+layer for a defined observer, task, and environment.</p>
+<h3 id="6-error-cost-matters-as-much-as-average-accuracy">6. Error cost matters as much as average accuracy</h3>
+<p>Ordinary prose can tolerate substantial letter-level uncertainty because
+language provides redundancy.</p>
+<p>Serial numbers, medication names, passwords, safety instructions, unfamiliar
+names, and short labels provide much less contextual correction. They require
+stronger glyph-level distinction.</p>
+<h3 id="7-familiarity-is-part-of-the-system">7. Familiarity is part of the system</h3>
+<p>Readers become perceptually tuned to conventional letter structures and familiar
+typefaces. Familiarity can compensate for some geometric weakness and can make
+an initially inferior typeface perform better after exposure.</p>
+<p>This means a typeface cannot be represented only by its geometry.</p>
+<h3 id="8-beauty-is-not-reducible-to-efficiency">8. Beauty is not reducible to efficiency</h3>
+<p>Processing fluency may contribute to preference, but typography also serves
+expression, identity, historical reference, status, tension, novelty, and
+deliberate friction.</p>
+<p>The hypothesis that beautiful typography is simply efficient typography was
+rejected.</p>
+<h2 id="overall-confidence">Overall Confidence</h2>
+<p><strong>Moderate to high</strong> for the layered bottleneck model, conditional-optimum model,
+contextual error-correction model, and distinction between component performance
+and system performance.</p>
+<p><strong>Moderate</strong> for the proposed quantitative integration of confusion networks,
+language priors, eye-movement cost, and consequence weighting. The components
+are supported independently, but a unified predictive model has not yet been
+validated.</p>
+<h2 id="largest-remaining-uncertainty">Largest Remaining Uncertainty</h2>
+<p>The largest unresolved question is not whether typography affects reading. It is:</p>
+<blockquote>
+<p>Under which conditions does a measurable glyph-level improvement transfer to
+word recognition, reading speed, comprehension, navigation, or action?</p>
+</blockquote>
+<p>That transfer function is the highest-value target for the next research phase.</p>
+<hr>
+<h1 id="research-log">Research Log</h1>
+<h2 id="cycle-1-can-shannon-information-theory-explain-typography">Cycle 1: Can Shannon Information Theory Explain Typography?</h2>
+<h3 id="objective">Objective</h3>
+<p>Determine whether typography can be modeled directly as an information channel
+and whether information transmitted can serve as a global measure of quality.</p>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>A typographic system can be evaluated by the amount of information that survives
+transmission from source to reader.</p>
+<h3 id="evidence-found">Evidence Found</h3>
+<p>Claude Shannon's communication model provides rigorous concepts for:</p>
+<ul>
+<li>entropy</li>
+<li>conditional entropy</li>
+<li>mutual information</li>
+<li>redundancy</li>
+<li>noise</li>
+<li>channel capacity</li>
+<li>decoding error</li>
+</ul>
+<p>Visual-span researchers have applied information-theoretic calculations to
+letter recognition. Confusion matrices can be converted into bits transmitted,
+giving a direct measure of how much uncertainty about a presented letter remains
+after an observer responds.</p>
+<p>Roger Levy's noisy-channel model of sentence comprehension demonstrates that
+language understanding can be modeled as inference over uncertain input. The
+reader combines a prior probability over intended messages with a likelihood
+model describing how the input may have been corrupted.</p>
+<p>Rational eye-movement models similarly treat each fixation as an information
+gathering decision under uncertainty.</p>
+<h3 id="evidence-against">Evidence Against</h3>
+<p>Shannon explicitly excluded semantics from the engineering definition of
+information.</p>
+<p>A perfectly transmitted sentence can still be:</p>
+<ul>
+<li>incomprehensible</li>
+<li>ambiguous</li>
+<li>false</li>
+<li>irrelevant</li>
+<li>badly organized</li>
+<li>behaviorally ineffective</li>
+</ul>
+<p>Character-level mutual information therefore cannot measure comprehension,
+persuasion, trust, navigation, or task success.</p>
+<p>No evidence supports collapsing all visual communication outcomes into one
+information score.</p>
+<h3 id="sources">Sources</h3>
+<ul>
+<li>Shannon, C. E. (1948), <em>A Mathematical Theory of Communication</em></li>
+<li>Legge et al. (2007), <em>The Case for the Visual Span as a Sensory Bottleneck in
+Reading</em></li>
+<li>Levy, R. (2008), <em>A Noisy-Channel Model of Rational Human Sentence
+Comprehension under Uncertain Input</em></li>
+<li>Bicknell, K., and Levy, R. (2010), <em>A Rational Model of Eye Movement Control
+in Reading</em></li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<p>The information-theory analogy survives, but only when the represented
+uncertainty is explicitly defined.</p>
+<p>At the glyph layer, the alternatives are letters and the output is an observer's
+response. Mutual information is directly applicable.</p>
+<p>At the semantic layer, the alternatives are possible meanings or intended
+messages. A different model is required.</p>
+<p>At the task layer, uncertainty concerns actions and outcomes.</p>
+<p>The word <em>information</em> is therefore not one quantity across the system. Each
+layer has its own state space, priors, evidence, and loss function.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Shannon theory is a valid quantitative foundation for symbol transmission but
+not a complete theory of typography.</p>
+<h3 id="confidence">Confidence</h3>
+<p>High</p>
+<h3 id="next-step">Next Step</h3>
+<p>Test whether physical geometry can predict the human confusion channel well
+enough to support scalable computational analysis.</p>
+<hr>
+<h2 id="cycle-2-does-geometric-distinctiveness-predict-letter-recognition">Cycle 2: Does Geometric Distinctiveness Predict Letter Recognition?</h2>
+<h3 id="objective-1">Objective</h3>
+<p>Determine whether letter recognition can be predicted from measurable image
+geometry rather than traditional type-anatomy labels.</p>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p>Human letter confusions are largely determined by pairwise geometric similarity.
+A sufficiently good image descriptor should predict which letters are confused.</p>
+<h3 id="evidence-found-1">Evidence Found</h3>
+<p>Liu and colleagues found that low-order geometric moments explained a substantial
+portion of human letter-confusion patterns near the acuity limit.</p>
+<p>Geometric moments represent broad properties such as:</p>
+<ul>
+<li>area</li>
+<li>centroid</li>
+<li>orientation</li>
+<li>spread</li>
+<li>symmetry</li>
+<li>coarse distribution of visual mass</li>
+</ul>
+<p>This supports the idea that recognition depends partly on global structure rather
+than only on named anatomy such as serif, bowl, or terminal.</p>
+<p>Image-descriptor studies of Chinese characters also found associations among
+stroke count, size, type style, and legibility thresholds.</p>
+<p>Human similarity matrices show stable clusters that often correspond to obvious
+structural relationships.</p>
+<h3 id="evidence-against-1">Evidence Against</h3>
+<p>Mueller and Weidemann showed that observed identification reflects at least:</p>
+<ul>
+<li>perceivability</li>
+<li>similarity</li>
+<li>response bias</li>
+</ul>
+<p>Geometric similarity alone cannot explain why some symbols are selected more
+often as guesses or why one direction of a confusion is stronger than the
+reverse.</p>
+<p>Reader expertise changes perceived similarity. Mirror-letter sensitivity, for
+example, changes with reading acquisition.</p>
+<p>Clear-view similarity ratings are not equivalent to actual confusion under
+blur, crowding, or peripheral presentation.</p>
+<p>Local diagnostic features can preserve categorical identity even when overall
+shapes are similar.</p>
+<h3 id="sources-1">Sources</h3>
+<ul>
+<li>Liu et al. (2009), <em>Using Geometric Moments to Explain Human Letter
+Recognition Near the Acuity Limit</em></li>
+<li>Mueller and Weidemann (2012), <em>Alphabetic Letter Identification: Effects of
+Perceivability, Similarity, and Bias</em></li>
+<li>Simpson et al. (2013), <em>A Letter Visual-Similarity Matrix for Latin-Based
+Alphabets</em></li>
+<li>Wiley et al. (2016), <em>The Effects of Alphabet and Expertise on Letter
+Perception</em></li>
+<li>Duñabeitia et al. (2013), <em>The Influence of Reading Expertise in
+Mirror-Letter Perception</em></li>
+</ul>
+<h3 id="analysis-1">Analysis</h3>
+<p>Geometry is neither irrelevant nor sufficient.</p>
+<p>The strongest model is:</p>
+<pre><code class="language-text">Observed confusion
+=
+physical similarity
+× feature survival
+× target perceivability
+× learned category structure
+× response bias
+× condition
+</code></pre>
+<p>The multiplication is conceptual. Some variables may combine additively or
+interactively in an empirical model.</p>
+<p>Traditional anatomy terms remain useful only when they identify a feature whose
+presence, absence, or degradation changes confusion probability.</p>
+<p>The scientifically relevant unit is not "open aperture" by itself. It is the
+change in conditional discriminability produced by changing the aperture under
+a defined condition.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>Geometric models are useful screening tools and can explain meaningful variance,
+but no observer-independent glyph-distance metric is currently justified.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-1">Next Step</h3>
+<p>Investigate the dominant form of visual interference in connected text:
+crowding and visual-span limits.</p>
+<hr>
+<h2 id="cycle-3-is-crowding-the-primary-bottleneck-in-reading">Cycle 3: Is Crowding the Primary Bottleneck in Reading?</h2>
+<h3 id="objective-2">Objective</h3>
+<p>Test whether visual crowding and the size of the visual span causally determine
+reading speed.</p>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p>Reading speed is primarily limited by the number of uncrowded letters available
+during each fixation. Reducing crowding should enlarge the visual span and
+increase reading speed.</p>
+<h3 id="evidence-found-2">Evidence Found</h3>
+<p>Pelli and colleagues found that reading rate scales with an uncrowded span across
+eccentricities.</p>
+<p>Legge and colleagues reported strong relationships among crowding, visual-span
+size, and reading speed.</p>
+<p>Crowding is a clear perceptual phenomenon: a letter that is identifiable in
+isolation can become unidentifiable when surrounded by nearby letters.</p>
+<p>Research identifies several potential mechanisms:</p>
+<ul>
+<li>feature pooling</li>
+<li>feature substitution</li>
+<li>positional uncertainty</li>
+<li>feature migration</li>
+<li>source confusion</li>
+</ul>
+<p>Critical spacing often scales with eccentricity, a relationship commonly
+associated with Bouma's law.</p>
+<h3 id="evidence-against-2">Evidence Against</h3>
+<p>Training studies reduced crowding without producing proportionate or consistent
+improvements in visual span and reading speed.</p>
+<p>He and colleagues explicitly challenged a simple causal chain from crowding to
+visual span to reading.</p>
+<p>Fonts designed to reduce inter-letter similarity improved peripheral letter and
+word recognition but did not consistently improve sentence-reading speed.</p>
+<p>Temporal-processing training has improved rapid serial visual presentation
+reading, showing that non-spatial bottlenecks can also matter.</p>
+<p>Reading models must also account for eye-movement control, lexical access,
+attention, temporal processing, language inference, and motor planning.</p>
+<h3 id="sources-2">Sources</h3>
+<ul>
+<li>Pelli et al. (2007), <em>Crowding and Eccentricity Determine Reading Rate</em></li>
+<li>Legge et al. (2007), <em>The Case for the Visual Span as a Sensory Bottleneck in
+Reading</em></li>
+<li>He et al. (2017), <em>Linking Crowding, Visual Span, and Reading</em></li>
+<li>He et al. (2013), <em>Sensory and Cognitive Influences on Training-Related
+Improvement in Crowded-Letter Recognition</em></li>
+<li>Bernard et al. (2016), <em>A New Font Specifically Designed for Peripheral
+Vision</em></li>
+<li>Chung (2021), <em>Training to Improve Temporal Processing of Letters Benefits
+Reading Speed</em></li>
+</ul>
+<h3 id="analysis-2">Analysis</h3>
+<p>Crowding is a real constraint, but "the primary bottleneck" is too strong as a
+universal claim.</p>
+<p>The causal relationship appears conditional:</p>
+<pre><code class="language-text">If crowding is the active bottleneck:
+    reducing crowding can improve reading
+
+If lexical, temporal, attentional, oculomotor, or semantic processing is limiting:
+    reducing crowding may produce little transfer
+</code></pre>
+<p>This explains why component-level gains sometimes fail at the system level.</p>
+<p>Visual span should be treated as a performance summary produced by multiple
+mechanisms, not automatically as one independent causal variable.</p>
+<h3 id="conclusion-2">Conclusion</h3>
+<p>The hypothesis that crowding universally determines reading speed was rejected.
+Crowding is one of several possible active bottlenecks.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>Moderate to high</p>
+<h3 id="next-step-2">Next Step</h3>
+<p>Test the practical design variables most often used to reduce crowding and
+increase visibility: spacing, width, weight, and size.</p>
+<hr>
+<h2 id="cycle-4-do-more-space-width-weight-and-size-consistently-improve-reading">Cycle 4: Do More Space, Width, Weight, and Size Consistently Improve Reading?</h2>
+<h3 id="objective-3">Objective</h3>
+<p>Determine whether common legibility interventions behave monotonically.</p>
+<h3 id="hypotheses">Hypotheses</h3>
+<ol>
+<li>Increased letter spacing improves reading by reducing crowding.</li>
+<li>Wider letters improve reading by increasing distinctive area.</li>
+<li>Bolder strokes improve reading by increasing visibility.</li>
+<li>Larger print improves reading continuously.</li>
+</ol>
+<h3 id="evidence-found-3">Evidence Found</h3>
+<p>Print size has a clear lower threshold. Legge's review identified a broad fluent
+range beginning near an x-height of approximately 0.2 degrees of visual angle
+for normally sighted readers.</p>
+<p>Increased spacing can reduce local crowding.</p>
+<p>Narrow, highly condensed forms can alter eye-movement behavior and increase
+fixation duration.</p>
+<p>Some low-vision and dyslexic populations benefit from enlarged spacing under
+specific conditions.</p>
+<p>Recent cognitive and perceptual reviews generally warn against:</p>
+<ul>
+<li>extremely condensed fonts</li>
+<li>extreme weights</li>
+<li>narrow spacing</li>
+<li>closed counters</li>
+<li>excessive embellishment</li>
+</ul>
+<h3 id="evidence-against-3">Evidence Against</h3>
+<p>Yu and colleagues found that increasing letter spacing creates competing effects.
+It reduces crowding but pushes letters farther into peripheral vision, where
+acuity and positional precision are worse.</p>
+<p>Vinckier and colleagues found nonlinear deterioration when letters became
+sufficiently separated, consistent with damage to multi-letter or bigram
+processing.</p>
+<p>Studies of boldness found that reading speed was often invariant across a broad
+range and could decrease when internal spaces became too small.</p>
+<p>Chung found that bolder print did not improve reading speed for people with
+central vision loss.</p>
+<p>Minakata found that an ultra-condensed font altered fixation and saccade
+patterns, yet overall reading speed remained similar because readers adapted.</p>
+<p>Above critical print size, larger type does not continuously increase maximum
+reading speed. There is a wide fluent plateau.</p>
+<p>Dyslexie and similar specialized fonts have repeatedly failed to produce
+consistent superiority over conventional fonts when size and spacing are
+controlled.</p>
+<h3 id="sources-3">Sources</h3>
+<ul>
+<li>Legge and Bigelow (2011), <em>Does Print Size Matter for Reading?</em></li>
+<li>Yu et al. (2007), <em>Effect of Letter Spacing on Visual Span and Reading Speed</em></li>
+<li>Vinckier et al. (2011), <em>The Impact of Letter Spacing on Reading</em></li>
+<li>Bernard et al. (2013), <em>The Effect of Letter-Stroke Boldness on Reading Speed</em></li>
+<li>Chung (2018), <em>Bolder Print Does Not Increase Reading Speed in People with
+Central Vision Loss</em></li>
+<li>Xiong et al. (2018), <em>Fonts Designed for Macular Degeneration</em></li>
+<li>Minakata and Beier (2021), <em>The Effect of Font Width on Eye Movements During
+Reading</em></li>
+<li>Duranovic et al. (2018), spacing and Dyslexie-font study</li>
+</ul>
+<h3 id="analysis-3">Analysis</h3>
+<p>Each variable exhibits a useful range bounded by competing failure modes.</p>
+<pre><code class="language-text">Letter spacing:
+crowding ← useful range → fragmentation and eccentricity cost
+
+Weight:
+stroke dropout ← useful range → counter closure and fusion
+
+Width:
+compressed features ← useful range → excessive line length and scan cost
+
+Size:
+subcritical recognition ← fluent plateau → layout and navigation cost
+</code></pre>
+<p>This is a general pattern of constrained optimization.</p>
+<p>The correct question is not "Is more better?" It is:</p>
+<blockquote>
+<p>Which failure boundary is currently closer for this observer, task, and
+environment?</p>
+</blockquote>
+<h3 id="conclusion-3">Conclusion</h3>
+<p>All four monotonic hypotheses were rejected.</p>
+<p>Typography variables should be modeled with condition-dependent response curves
+and safe operating ranges.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-3">Next Step</h3>
+<p>Investigate how linguistic structure repairs uncertain visual input and changes
+the required level of glyph distinction.</p>
+<hr>
+<h2 id="cycle-5-does-language-function-as-error-correcting-redundancy">Cycle 5: Does Language Function as Error-Correcting Redundancy?</h2>
+<h3 id="objective-4">Objective</h3>
+<p>Determine whether word and sentence context systematically compensate for weak
+or degraded letter signals.</p>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p>Readers use higher-level linguistic probability to correct lower-level visual
+uncertainty. Typography therefore operates within an error-correcting language
+system.</p>
+<h3 id="evidence-found-4">Evidence Found</h3>
+<p>The word-superiority effect has been replicated across a long experimental
+history: under brief or degraded presentation, a letter can be identified more
+accurately inside a familiar word than in an unrelated string or isolation.</p>
+<p>Pseudoword and acronym superiority effects show that the benefit is not limited
+to semantic familiarity. Orthographic legality, learned sequence structure, and
+familiar multi-letter units also contribute.</p>
+<p>Sentence-superiority work suggests that still-higher context can improve
+post-cued letter identification.</p>
+<p>Noisy-channel models of comprehension formally combine:</p>
+<pre><code class="language-text">P(intended message)
+×
+P(observed input | intended message)
+</code></pre>
+<p>Low-vision research found that removing spaces caused larger reading-speed
+losses in low vision than normal vision, indicating that segmentation and
+linguistic inference become more important when bottom-up visual quality is
+reduced.</p>
+<h3 id="evidence-against-4">Evidence Against</h3>
+<p>Context can produce confident misperception when prior expectations dominate
+weak evidence.</p>
+<p>Word-superiority effects depend on experimental design and have generated
+methodological debate, particularly around post-cue procedures and response
+alternatives.</p>
+<p>Context provides little protection in:</p>
+<ul>
+<li>random strings</li>
+<li>account numbers</li>
+<li>medication names</li>
+<li>uncommon proper names</li>
+<li>passwords</li>
+<li>short labels</li>
+<li>unfamiliar technical notation</li>
+<li>safety codes</li>
+</ul>
+<p>Language redundancy can therefore hide typography defects in prose while leaving
+high-consequence low-context tasks vulnerable.</p>
+<h3 id="sources-4">Sources</h3>
+<ul>
+<li>Grainger (2024), <em>Letters, Words, Sentences, and Reading</em></li>
+<li>Jordan et al. (2024), Reicher-Wheeler paradigm review</li>
+<li>Coch et al. (2010), word and pseudoword superiority</li>
+<li>Laszlo and Federmeier (2007), acronym superiority</li>
+<li>Massol et al. (2025), word and sentence superiority</li>
+<li>Levy (2008), noisy-channel sentence comprehension</li>
+<li>Sass et al. (2006), linguistic inference and low-vision reading speed</li>
+</ul>
+<h3 id="analysis-4">Analysis</h3>
+<p>Language is not merely downstream of typography. It feeds back into visual
+interpretation.</p>
+<p>The typography channel should therefore be modeled using Bayesian inference:</p>
+<pre><code class="language-text">Posterior intended symbol or word
+∝
+visual likelihood
+×
+linguistic prior
+</code></pre>
+<p>The strength of the prior changes by task.</p>
+<p>For ordinary prose:</p>
+<pre><code class="language-text">high contextual redundancy
+→ moderate glyph ambiguity may be recoverable
+</code></pre>
+<p>For identifiers:</p>
+<pre><code class="language-text">low contextual redundancy
+→ glyph ambiguity directly raises error risk
+</code></pre>
+<p>A universal font ranking that ignores message distribution is therefore
+fundamentally incomplete.</p>
+<h3 id="conclusion-4">Conclusion</h3>
+<p>Language behaves like an error-correcting layer, but it can both repair and
+distort uncertain visual evidence.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-4">Next Step</h3>
+<p>Determine whether familiarity is just another prior or whether it changes
+perceptual encoding itself.</p>
+<hr>
+<h2 id="cycle-6-is-familiarity-merely-bias-or-does-it-alter-the-effective-channel">Cycle 6: Is Familiarity Merely Bias, or Does It Alter the Effective Channel?</h2>
+<h3 id="objective-5">Objective</h3>
+<p>Determine whether typeface familiarity and reading expertise should be treated
+as external preferences or as part of the perceptual system.</p>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p>Familiarity changes priors but leaves bottom-up visual encoding unchanged.</p>
+<h3 id="evidence-found-5">Evidence Found</h3>
+<p>Eye-tracking research found faster reading for familiar letter structures and
+improvement with exposure to initially unfamiliar typefaces.</p>
+<p>Expertise in a writing system changes letter-similarity judgments.</p>
+<p>Reading acquisition changes sensitivity to mirror forms, suggesting that learned
+categories reshape visual discrimination.</p>
+<p>Familiarity effects are consistent with more efficient mappings among visual
+features, letter identities, and lexical representations.</p>
+<h3 id="evidence-against-5">Evidence Against</h3>
+<p>Some near-threshold geometric and crowding effects persist regardless of
+expertise.</p>
+<p>Exposure cannot rescue a signal that falls below perceptual availability.</p>
+<p>A familiar typeface is not universally superior. Under severe degradation, a
+more structurally robust unfamiliar typeface may eventually outperform it.</p>
+<p>The evidence does not support reducing all familiarity effects to response bias.
+Some changes appear perceptual or representational.</p>
+<h3 id="sources-5">Sources</h3>
+<ul>
+<li>Nedeljković et al. (2020), <em>You Read Best What You Read Most</em></li>
+<li>Wiley et al. (2016), alphabet expertise and letter perception</li>
+<li>Duñabeitia et al. (2013), mirror-letter perception</li>
+<li>Mueller and Weidemann (2012), perceivability, similarity, and bias</li>
+</ul>
+<h3 id="analysis-5">Analysis</h3>
+<p>The original hypothesis was too narrow.</p>
+<p>Familiarity likely acts at multiple layers:</p>
+<pre><code class="language-text">response prior
++
+feature weighting
++
+category boundary tuning
++
+letter-to-word mapping efficiency
++
+expectation about legal variation
+</code></pre>
+<p>The effective channel therefore includes observer history.</p>
+<p>This creates a switching-cost problem. A theoretically superior redesign may
+perform poorly at first because it invalidates learned perceptual models.</p>
+<p>Mature alphabets and common typefaces may persist partly because replacement
+requires retraining millions of observers, not because the existing forms are
+globally optimal.</p>
+<h3 id="conclusion-5">Conclusion</h3>
+<p>Familiarity is both prior knowledge and learned perceptual tuning. It is a core
+channel variable, not a nuisance to be removed from the model.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-5">Next Step</h3>
+<p>Test the tempting claim that efficient communication naturally produces beauty.</p>
+<hr>
+<h2 id="cycle-7-is-typographic-beauty-an-emergent-property-of-efficient-transmission">Cycle 7: Is Typographic Beauty an Emergent Property of Efficient Transmission?</h2>
+<h3 id="objective-6">Objective</h3>
+<p>Determine whether aesthetic quality can be explained primarily by perceptual
+fluency or functional efficiency.</p>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>Typography appears beautiful when it transmits information efficiently under
+human perceptual constraints.</p>
+<h3 id="evidence-found-6">Evidence Found</h3>
+<p>Processing fluency research broadly suggests that easier perceptual processing
+can increase positive affect and preference.</p>
+<p>Typeface shape has been associated with pleasantness and emotional experience.</p>
+<p>Coherent proportions, predictable rhythm, and clear differentiation can produce
+both functional and aesthetic benefits.</p>
+<p>Some features that improve robustness, such as balanced counters and controlled
+stroke contrast, can also appear harmonious.</p>
+<h3 id="evidence-against-6">Evidence Against</h3>
+<p>Expressive typography often works by increasing friction, ambiguity, novelty, or
+tension.</p>
+<p>Display typography may prioritize:</p>
+<ul>
+<li>identity</li>
+<li>historical association</li>
+<li>luxury signaling</li>
+<li>emotional tone</li>
+<li>memorability</li>
+<li>ceremonial weight</li>
+<li>disruption</li>
+</ul>
+<p>A familiar, fluent typeface can be perceived as boring or inappropriate.</p>
+<p>A difficult typeface can be aesthetically successful when the difficulty
+supports the intended meaning.</p>
+<p>Evidence connecting fluency with preference does not establish that beauty is
+nothing more than efficiency.</p>
+<h3 id="sources-6">Sources</h3>
+<ul>
+<li>Medved et al. (2023), typeface shape, reading speed, and pleasantness</li>
+<li>Processing-fluency literature summarized in perceptual and aesthetic research</li>
+<li>Typography and emotional-connotation studies</li>
+</ul>
+<h3 id="analysis-6">Analysis</h3>
+<p>Functional fluency is one aesthetic input among several.</p>
+<p>A better model separates:</p>
+<pre><code class="language-text">instrumental fitness
+    accurate, fast, sustainable communication
+
+expressive fitness
+    appropriate identity, emotion, and cultural meaning
+</code></pre>
+<p>These objectives can align, conflict, or be intentionally traded.</p>
+<p>A warning label and a film title should not be optimized with the same loss
+function.</p>
+<h3 id="conclusion-6">Conclusion</h3>
+<p>The efficiency-equals-beauty hypothesis was rejected.</p>
+<p>Beauty cannot be inferred from channel robustness alone.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-6">Next Step</h3>
+<p>Integrate the surviving findings into a predictive model and identify the
+research needed to validate it.</p>
+<hr>
+<h1 id="confirmed-findings">Confirmed Findings</h1>
+<p>The following findings are supported by multiple strong sources or well-established
+experimental traditions.</p>
+<h2 id="cf-001-print-size-has-a-critical-threshold-and-a-broad-fluent-range">CF-001: Print size has a critical threshold and a broad fluent range</h2>
+<p>Reading speed deteriorates below a critical print size. Above that threshold,
+normally sighted readers can maintain near-maximum speed over a broad range.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-002-crowding-impairs-identification-of-otherwise-visible-letters">CF-002: Crowding impairs identification of otherwise visible letters</h2>
+<p>The presence and spacing of neighboring symbols can reduce recognition without
+making the target disappear.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-003-letter-spacing-has-competing-effects">CF-003: Letter spacing has competing effects</h2>
+<p>Spacing can reduce crowding while increasing eccentricity, line length,
+fixation demand, and word fragmentation.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-004-human-letter-errors-are-structured-and-asymmetric">CF-004: Human letter errors are structured and asymmetric</h2>
+<p>Confusions cluster around particular relationships and can be directional.
+Average accuracy loses important information.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-005-geometry-predicts-part-but-not-all-of-letter-confusion">CF-005: Geometry predicts part, but not all, of letter confusion</h2>
+<p>Global image descriptors and feature relationships explain meaningful variance
+in human recognition.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-006-reader-familiarity-affects-reading-and-letter-perception">CF-006: Reader familiarity affects reading and letter perception</h2>
+<p>Typeface exposure and alphabet expertise alter performance and perceived
+similarity.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-007-context-improves-recovery-of-uncertain-letters">CF-007: Context improves recovery of uncertain letters</h2>
+<p>Word, pseudoword, acronym, and sentence structure can improve letter
+identification under constrained conditions.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-008-component-gains-do-not-guarantee-system-gains">CF-008: Component gains do not guarantee system gains</h2>
+<p>Improvements in isolated-letter or peripheral recognition may fail to improve
+continuous reading speed.</p>
+<p><strong>Confidence:</strong> High</p>
+<h2 id="cf-009-extreme-values-are-usually-harmful">CF-009: Extreme values are usually harmful</h2>
+<p>Extreme condensation, weight, spacing, embellishment, or insufficient size tend
+to increase recognition or reading costs.</p>
+<p><strong>Confidence:</strong> Moderate to high</p>
+<h2 id="cf-010-task-determines-the-required-level-of-glyph-distinction">CF-010: Task determines the required level of glyph distinction</h2>
+<p>Low-context and high-consequence tasks depend more heavily on character-level
+legibility than ordinary prose.</p>
+<p><strong>Confidence:</strong> Moderate to high</p>
+<hr>
+<h1 id="rejected-hypotheses">Rejected Hypotheses</h1>
+<h2 id="rh-001-shannon-information-is-a-complete-measure-of-typographic-quality">RH-001: Shannon information is a complete measure of typographic quality</h2>
+<p>Rejected because symbol transmission does not measure meaning, comprehension,
+navigation, trust, or action.</p>
+<h2 id="rh-002-a-glyph-has-one-intrinsic-recognition-distance-from-every-other-glyph">RH-002: A glyph has one intrinsic recognition distance from every other glyph</h2>
+<p>Rejected because confusability changes with typeface, scale, degradation,
+neighbors, observer, and task.</p>
+<h2 id="rh-003-maximum-alphabetic-distinctiveness-is-universally-optimal">RH-003: Maximum alphabetic distinctiveness is universally optimal</h2>
+<p>Rejected because extreme distinctiveness can damage coherence, learnability,
+spatial efficiency, writing efficiency, and familiarity.</p>
+<h2 id="rh-004-crowding-is-the-universal-causal-bottleneck-in-reading">RH-004: Crowding is the universal causal bottleneck in reading</h2>
+<p>Rejected because reducing crowding does not always improve visual span or reading
+speed, and temporal, lexical, attentional, and oculomotor constraints also matter.</p>
+<h2 id="rh-005-more-letter-spacing-always-improves-reading">RH-005: More letter spacing always improves reading</h2>
+<p>Rejected because the benefit reverses when spacing creates peripheral,
+navigation, or grouping costs.</p>
+<h2 id="rh-006-bolder-type-reliably-improves-reading-speed">RH-006: Bolder type reliably improves reading speed</h2>
+<p>Rejected because reading speed is frequently invariant across useful boldness
+ranges and can worsen when counters and apertures close.</p>
+<h2 id="rh-007-wider-type-necessarily-produces-faster-reading">RH-007: Wider type necessarily produces faster reading</h2>
+<p>Rejected because readers adapt their eye movements and because width introduces
+line-length and spatial-efficiency costs.</p>
+<h2 id="rh-008-larger-print-continuously-improves-reading">RH-008: Larger print continuously improves reading</h2>
+<p>Rejected because performance reaches a fluent plateau above critical print size.</p>
+<h2 id="rh-009-specialized-dyslexia-fonts-are-generally-superior">RH-009: Specialized dyslexia fonts are generally superior</h2>
+<p>Rejected because controlled studies do not show consistent performance benefits
+over conventional fonts once spacing, familiarity, and size are considered.</p>
+<h2 id="rh-010-better-isolated-letter-recognition-automatically-improves-reading">RH-010: Better isolated-letter recognition automatically improves reading</h2>
+<p>Rejected by font and training studies showing weak or absent upward transfer.</p>
+<h2 id="rh-011-familiarity-is-merely-response-bias">RH-011: Familiarity is merely response bias</h2>
+<p>Rejected because expertise appears to alter perceptual organization and category
+sensitivity.</p>
+<h2 id="rh-012-beauty-is-efficient-communication-made-visible">RH-012: Beauty is efficient communication made visible</h2>
+<p>Rejected because expressive typography can succeed through deliberate friction
+and because aesthetics includes cultural and semantic objectives beyond fluency.</p>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<p>Ranked by expected importance.</p>
+<h2 id="1-what-predicts-upward-transfer">1. What predicts upward transfer?</h2>
+<p>Which glyph-level improvements produce measurable gains in:</p>
+<ul>
+<li>word recognition</li>
+<li>reading speed</li>
+<li>comprehension</li>
+<li>navigation</li>
+<li>task success</li>
+</ul>
+<p>This is the central unresolved problem.</p>
+<h2 id="2-can-active-bottlenecks-be-diagnosed-without-extensive-human-testing">2. Can active bottlenecks be diagnosed without extensive human testing?</h2>
+<p>Atlas needs a practical method for predicting whether a design is limited by:</p>
+<ul>
+<li>size</li>
+<li>contrast</li>
+<li>crowding</li>
+<li>glyph similarity</li>
+<li>temporal exposure</li>
+<li>eye movement</li>
+<li>lexical access</li>
+<li>hierarchy</li>
+<li>comprehension</li>
+</ul>
+<h2 id="3-is-there-a-stable-cross-condition-confusion-backbone">3. Is there a stable cross-condition confusion backbone?</h2>
+<p>Some letter pairs may remain vulnerable across many fonts and degradation types,
+while others are typeface-specific.</p>
+<p>Identifying the stable backbone would separate alphabet constraints from design
+defects.</p>
+<h2 id="4-how-should-human-and-computational-observer-data-be-combined">4. How should human and computational observer data be combined?</h2>
+<p>The optimal proxy may be an ensemble of:</p>
+<ul>
+<li>geometric descriptors</li>
+<li>optical degradation</li>
+<li>neural classifiers</li>
+<li>language models</li>
+<li>human confusion data</li>
+</ul>
+<p>The validation procedure remains unresolved.</p>
+<h2 id="5-what-is-the-correct-task-weighted-loss-function">5. What is the correct task-weighted loss function?</h2>
+<p>Average recognition is inappropriate when one rare error is catastrophic.</p>
+<p>Atlas needs separate models for:</p>
+<ul>
+<li>prose</li>
+<li>interface labels</li>
+<li>safety signage</li>
+<li>medication names</li>
+<li>codes and identifiers</li>
+<li>low-vision reading</li>
+<li>peripheral monitoring</li>
+</ul>
+<h2 id="6-how-do-eye-movements-conceal-typographic-weakness">6. How do eye movements conceal typographic weakness?</h2>
+<p>Readers can compensate with longer fixations, regressions, and altered saccades
+while maintaining average reading speed.</p>
+<p>Speed alone may underestimate cost.</p>
+<h2 id="7-how-should-comfort-and-fatigue-be-measured">7. How should comfort and fatigue be measured?</h2>
+<p>Short laboratory tasks may miss cumulative effort, headache, abandonment, and
+reduced persistence.</p>
+<h2 id="8-which-variable-interactions-are-genuinely-causal">8. Which variable interactions are genuinely causal?</h2>
+<p>Examples:</p>
+<ul>
+<li>x-height × width</li>
+<li>weight × aperture</li>
+<li>spacing × eccentricity</li>
+<li>line length × line spacing</li>
+<li>familiarity × degradation</li>
+<li>context × character ambiguity</li>
+</ul>
+<h2 id="9-how-transferable-are-latin-alphabet-results">9. How transferable are Latin-alphabet results?</h2>
+<p>Writing systems differ in:</p>
+<ul>
+<li>symbol inventory</li>
+<li>visual density</li>
+<li>connectedness</li>
+<li>diacritics</li>
+<li>spatial arrangement</li>
+<li>morphology</li>
+<li>word-boundary marking</li>
+</ul>
+<h2 id="10-can-expressive-fitness-be-modeled-without-reducing-it-to-preference">10. Can expressive fitness be modeled without reducing it to preference?</h2>
+<p>A framework is needed for emotional appropriateness, identity, historical
+association, and intentional friction.</p>
+<hr>
+<h1 id="emerging-patterns">Emerging Patterns</h1>
+<h2 id="pattern-1-safe-operating-ranges">Pattern 1: Safe Operating Ranges</h2>
+<p>Many typography variables have two failure boundaries rather than one ideal
+point.</p>
+<pre><code class="language-text">insufficient value ← viable range → excessive value
+</code></pre>
+<p>This pattern appears in:</p>
+<ul>
+<li>size</li>
+<li>spacing</li>
+<li>weight</li>
+<li>width</li>
+<li>contrast</li>
+<li>line length</li>
+<li>line spacing</li>
+<li>hierarchy strength</li>
+</ul>
+<h3 id="why-it-matters">Why It Matters</h3>
+<p>Design guidance should specify ranges, boundary conditions, and failure signals
+rather than fixed universal values.</p>
+<hr>
+<h2 id="pattern-2-local-improvement-global-compensation">Pattern 2: Local Improvement, Global Compensation</h2>
+<p>Readers compensate for weak typography through:</p>
+<ul>
+<li>longer fixations</li>
+<li>additional fixations</li>
+<li>regressions</li>
+<li>linguistic inference</li>
+<li>familiarity</li>
+<li>slower decision-making</li>
+</ul>
+<h3 id="why-it-matters-1">Why It Matters</h3>
+<p>Stable reading speed does not prove equivalent usability. A design may preserve
+output by consuming more cognitive or oculomotor resources.</p>
+<hr>
+<h2 id="pattern-3-redundancy-is-distributed-across-layers">Pattern 3: Redundancy Is Distributed Across Layers</h2>
+<p>Redundancy exists in:</p>
+<ul>
+<li>distinctive glyph features</li>
+<li>letter spacing</li>
+<li>word structure</li>
+<li>syntax</li>
+<li>semantics</li>
+<li>hierarchy</li>
+<li>layout</li>
+<li>repeated conventions</li>
+</ul>
+<h3 id="why-it-matters-2">Why It Matters</h3>
+<p>Removing redundancy from one layer increases dependence on the others. Designs
+must be more locally explicit when higher-level context is weak.</p>
+<hr>
+<h2 id="pattern-4-the-observer-is-inside-the-system">Pattern 4: The Observer Is Inside the System</h2>
+<p>Vision, age, expertise, language, familiarity, fatigue, and strategy change the
+effective channel.</p>
+<h3 id="why-it-matters-3">Why It Matters</h3>
+<p>The same rendered typography is not one stimulus in functional terms. It creates
+different evidence for different readers.</p>
+<hr>
+<h2 id="pattern-5-performance-curves-matter-more-than-rankings">Pattern 5: Performance Curves Matter More Than Rankings</h2>
+<p>Two typefaces may perform equally under ideal conditions but diverge rapidly as
+noise increases.</p>
+<h3 id="why-it-matters-4">Why It Matters</h3>
+<p>Robustness across realistic degradation is more useful than a single laboratory
+score.</p>
+<hr>
+<h2 id="pattern-6-errors-have-unequal-consequences">Pattern 6: Errors Have Unequal Consequences</h2>
+<p>A substitution in a predictable sentence may be harmless. A substitution in a
+drug name or account number may be severe.</p>
+<h3 id="why-it-matters-5">Why It Matters</h3>
+<p>Typography evaluation needs decision theory as well as perception science.</p>
+<hr>
+<h2 id="pattern-7-mature-forms-reflect-both-optimization-and-lock-in">Pattern 7: Mature Forms Reflect Both Optimization and Lock-In</h2>
+<p>Conventional alphabets and common typefaces may combine:</p>
+<ul>
+<li>perceptual fitness</li>
+<li>production history</li>
+<li>cultural inheritance</li>
+<li>educational investment</li>
+<li>switching costs</li>
+</ul>
+<h3 id="why-it-matters-6">Why It Matters</h3>
+<p>Historical survival is evidence of viability, not proof of global optimality.</p>
+<hr>
+<h2 id="pattern-8-typography-is-a-control-system-not-a-static-object">Pattern 8: Typography Is a Control System, Not a Static Object</h2>
+<p>Readers sample, infer, verify, regress, and update.</p>
+<h3 id="why-it-matters-7">Why It Matters</h3>
+<p>A static screenshot cannot fully represent reading. The system unfolds over time.</p>
+<hr>
+<h1 id="proposed-models">Proposed Models</h1>
+<h2 id="model-1-atlas-conditional-communication-model">Model 1: Atlas Conditional Communication Model</h2>
+<pre><code class="language-text">Performance =
+f(
+  rendered signal,
+  degradation,
+  observer,
+  familiarity,
+  language context,
+  task,
+  eye-movement strategy,
+  error consequence
+)
+</code></pre>
+<h3 id="assumptions">Assumptions</h3>
+<ul>
+<li>Performance is conditional rather than intrinsic.</li>
+<li>Different outcomes require different metrics.</li>
+<li>Variables interact.</li>
+<li>The reader adapts during the task.</li>
+</ul>
+<hr>
+<h2 id="model-2-active-bottleneck-model">Model 2: Active Bottleneck Model</h2>
+<p>Overall performance is constrained by the weakest currently active process.</p>
+<p>Candidate bottlenecks:</p>
+<pre><code class="language-text">rendering
+perceptual availability
+crowding
+glyph discrimination
+position coding
+temporal processing
+lexical inference
+eye movement
+working memory
+semantic interpretation
+navigation
+action selection
+</code></pre>
+<h3 id="prediction">Prediction</h3>
+<p>Improving a non-limiting component produces little system gain.</p>
+<h3 id="assumption">Assumption</h3>
+<p>The system may have multiple simultaneous bottlenecks rather than exactly one.</p>
+<hr>
+<h2 id="model-3-conditional-confusion-network">Model 3: Conditional Confusion Network</h2>
+<p>Each symbol is a node. Directed edges represent substitution probability.</p>
+<pre><code class="language-text">edge(i → j) =
+P(response j | target i, condition)
+</code></pre>
+<p>Network properties:</p>
+<ul>
+<li>incoming confusion</li>
+<li>outgoing confusion</li>
+<li>asymmetry</li>
+<li>clusters</li>
+<li>weakest consequential pair</li>
+<li>stability across degradation</li>
+</ul>
+<h3 id="assumption-1">Assumption</h3>
+<p>The matrix must retain stimulus and observer metadata.</p>
+<hr>
+<h2 id="model-4-robustness-curve">Model 4: Robustness Curve</h2>
+<p>For degradation level <code>n</code>:</p>
+<pre><code class="language-text">R(n) = I(Target; Response | n) / H(Target)
+</code></pre>
+<p>Candidate summary measures:</p>
+<ul>
+<li>critical information threshold</li>
+<li>degradation slope</li>
+<li>area under the curve</li>
+<li>weakest-pair threshold</li>
+<li>population variance</li>
+</ul>
+<h3 id="assumption-2">Assumption</h3>
+<p>The chosen degradation distribution must match the intended environment.</p>
+<hr>
+<h2 id="model-5-bayesian-reading-model">Model 5: Bayesian Reading Model</h2>
+<pre><code class="language-text">P(intended text | visual evidence)
+∝
+P(visual evidence | intended text)
+×
+P(intended text | language and context)
+</code></pre>
+<p>Typography changes the likelihood term.</p>
+<p>Language, familiarity, and context change the prior.</p>
+<h3 id="prediction-1">Prediction</h3>
+<p>Typography improvements matter more when priors are weak.</p>
+<hr>
+<h2 id="model-6-task-weighted-error-cost">Model 6: Task-Weighted Error Cost</h2>
+<pre><code class="language-text">Expected loss =
+Σ P(message element)
+× P(confusion | condition)
+× consequence(confusion)
+× recovery cost
+</code></pre>
+<h3 id="assumptions-1">Assumptions</h3>
+<ul>
+<li>Error consequences can be estimated.</li>
+<li>Recovery and detection probabilities differ by task.</li>
+<li>Average accuracy is not a sufficient objective.</li>
+</ul>
+<hr>
+<h2 id="model-7-compensation-cost-model">Model 7: Compensation Cost Model</h2>
+<pre><code class="language-text">Observed task success
+=
+baseline information
++
+reader compensation
+-
+compensation cost
+</code></pre>
+<p>Compensation cost may appear as:</p>
+<ul>
+<li>longer fixation time</li>
+<li>regressions</li>
+<li>fatigue</li>
+<li>reduced secondary-task capacity</li>
+<li>lower persistence</li>
+<li>slower action</li>
+<li>greater error under distraction</li>
+</ul>
+<h3 id="prediction-2">Prediction</h3>
+<p>Two settings with equal reading speed may differ in effort and robustness.</p>
+<hr>
+<h2 id="model-8-dual-fitness-model">Model 8: Dual Fitness Model</h2>
+<pre><code class="language-text">Typographic fitness =
+instrumental fitness
++
+expressive fitness
+-
+contextual mismatch
+</code></pre>
+<p>Instrumental fitness includes accuracy, speed, sustainability, and accessibility.</p>
+<p>Expressive fitness includes identity, emotion, historical meaning, and
+memorability.</p>
+<h3 id="assumption-3">Assumption</h3>
+<p>The relative weights are task-specific.</p>
+<hr>
+<h1 id="recommendations">Recommendations</h1>
+<h2 id="priority-1-build-the-cross-layer-transfer-dataset">Priority 1: Build the Cross-Layer Transfer Dataset</h2>
+<h3 id="work">Work</h3>
+<p>Collect studies that report at least two of:</p>
+<ul>
+<li>glyph identification</li>
+<li>word recognition</li>
+<li>visual span</li>
+<li>eye movements</li>
+<li>reading speed</li>
+<li>comprehension</li>
+<li>preference</li>
+<li>fatigue</li>
+</ul>
+<h3 id="expected-value">Expected Value</h3>
+<p>Very high</p>
+<h3 id="effort">Effort</h3>
+<p>Moderate to high</p>
+<h3 id="reason">Reason</h3>
+<p>This addresses the largest remaining uncertainty and can reveal when local
+typographic improvements matter.</p>
+<hr>
+<h2 id="priority-2-acquire-and-normalize-human-confusion-matrices">Priority 2: Acquire and Normalize Human Confusion Matrices</h2>
+<h3 id="work-1">Work</h3>
+<p>Obtain machine-readable data from:</p>
+<ul>
+<li>Simpson et al.</li>
+<li>Bouma-derived studies</li>
+<li>Liu et al.</li>
+<li>visual-span studies</li>
+<li>newer size-, script-, and condition-specific studies</li>
+</ul>
+<h3 id="expected-value-1">Expected Value</h3>
+<p>Very high</p>
+<h3 id="effort-1">Effort</h3>
+<p>Moderate</p>
+<h3 id="reason-1">Reason</h3>
+<p>These matrices are the foundation for validating computational proxies.</p>
+<hr>
+<h2 id="priority-3-build-a-controlled-degradation-benchmark">Priority 3: Build a Controlled Degradation Benchmark</h2>
+<h3 id="work-2">Work</h3>
+<p>Render a representative set of open-source typefaces across:</p>
+<ul>
+<li>angular size</li>
+<li>blur</li>
+<li>contrast</li>
+<li>erosion</li>
+<li>dilation</li>
+<li>crowding</li>
+<li>eccentricity approximations</li>
+<li>display resolution</li>
+</ul>
+<h3 id="expected-value-2">Expected Value</h3>
+<p>High</p>
+<h3 id="effort-2">Effort</h3>
+<p>Moderate</p>
+<h3 id="reason-2">Reason</h3>
+<p>It creates reproducible robustness curves without immediately requiring new
+human experiments.</p>
+<hr>
+<h2 id="priority-4-separate-task-families">Priority 4: Separate Task Families</h2>
+<p>Create distinct evaluation profiles for:</p>
+<ol>
+<li>Long-form prose</li>
+<li>Interface navigation</li>
+<li>Short labels</li>
+<li>Codes and identifiers</li>
+<li>Safety-critical text</li>
+<li>Low-vision reading</li>
+<li>Peripheral monitoring</li>
+<li>Display and expressive typography</li>
+</ol>
+<h3 id="expected-value-3">Expected Value</h3>
+<p>High</p>
+<h3 id="effort-3">Effort</h3>
+<p>Low to moderate</p>
+<h3 id="reason-3">Reason</h3>
+<p>This prevents universal rankings built from incompatible objectives.</p>
+<hr>
+<h2 id="priority-5-measure-compensation-not-just-speed">Priority 5: Measure Compensation, Not Just Speed</h2>
+<h3 id="work-3">Work</h3>
+<p>Prefer studies and tests that include:</p>
+<ul>
+<li>fixation duration</li>
+<li>regressions</li>
+<li>pupil response</li>
+<li>secondary-task cost</li>
+<li>subjective effort</li>
+<li>persistence</li>
+<li>delayed comprehension</li>
+</ul>
+<h3 id="expected-value-4">Expected Value</h3>
+<p>High</p>
+<h3 id="effort-4">Effort</h3>
+<p>High</p>
+<h3 id="reason-4">Reason</h3>
+<p>Readers can preserve speed by consuming additional resources.</p>
+<hr>
+<h2 id="priority-6-test-stable-versus-conditional-confusions">Priority 6: Test Stable Versus Conditional Confusions</h2>
+<h3 id="work-4">Work</h3>
+<p>Compare confusion-network topology across fonts, sizes, and degradation types.</p>
+<h3 id="expected-value-5">Expected Value</h3>
+<p>High</p>
+<h3 id="effort-5">Effort</h3>
+<p>Moderate</p>
+<h3 id="reason-5">Reason</h3>
+<p>This can identify universal alphabet vulnerabilities and design-specific defects.</p>
+<hr>
+<h2 id="priority-7-extend-beyond-latin">Priority 7: Extend Beyond Latin</h2>
+<p>Begin with scripts that create useful contrasts:</p>
+<ul>
+<li>Cyrillic for shared and divergent letter forms</li>
+<li>Arabic for connected forms and context-sensitive glyphs</li>
+<li>Devanagari for headline structure and complex clusters</li>
+<li>Chinese for larger symbol inventories and stroke density</li>
+<li>Hangul for compositional blocks</li>
+</ul>
+<h3 id="expected-value-6">Expected Value</h3>
+<p>High</p>
+<h3 id="effort-6">Effort</h3>
+<p>High</p>
+<h3 id="reason-6">Reason</h3>
+<p>A universal visual-communication theory cannot be inferred from Latin alone.</p>
+<hr>
+<h2 id="priority-8-delay-a-universal-typography-score">Priority 8: Delay a Universal Typography Score</h2>
+<h3 id="recommendation">Recommendation</h3>
+<p>Do not produce one global Atlas readability score yet.</p>
+<p>Build a profile:</p>
+<pre><code class="language-yaml">glyph_robustness:
+word_recovery:
+reading_efficiency:
+navigation:
+adaptability:
+task_error_risk:
+expressive_fit:
+confidence:
+</code></pre>
+<h3 id="expected-value-7">Expected Value</h3>
+<p>Very high</p>
+<h3 id="effort-7">Effort</h3>
+<p>Low</p>
+<h3 id="reason-7">Reason</h3>
+<p>A single score would hide the most important discoveries from this research.</p>
+<hr>
+<h1 id="bibliography">Bibliography</h1>
+<h2 id="academic">Academic</h2>
+<h3 id="information-theory-and-noisy-channel-models">Information Theory and Noisy-Channel Models</h3>
+<ul>
+<li>Shannon, C. E. (1948). <em>A Mathematical Theory of Communication</em>. Bell System
+Technical Journal, 27, 379–423 and 623–656.</li>
+<li>Levy, R. (2008). <em>A Noisy-Channel Model of Rational Human Sentence
+Comprehension under Uncertain Input</em>. EMNLP.</li>
+<li>Bicknell, K., and Levy, R. (2010). <em>A Rational Model of Eye Movement Control
+in Reading</em>. ACL.</li>
+</ul>
+<h3 id="letter-recognition-and-similarity">Letter Recognition and Similarity</h3>
+<ul>
+<li>Mueller, S. T., and Weidemann, C. T. (2012). <em>Alphabetic Letter
+Identification: Effects of Perceivability, Similarity, and Bias</em>. Acta
+Psychologica, 139(1), 19–37.</li>
+<li>Simpson, I. C., Mousikou, P., Montoya, J. M., and Defior, S. (2013).
+<em>A Letter Visual-Similarity Matrix for Latin-Based Alphabets</em>. Behavior
+Research Methods, 45, 431–439.</li>
+<li>Liu, L., Klein, S. A., Xue, F., Zhang, J., and Yu, C. (2009). <em>Using
+Geometric Moments to Explain Human Letter Recognition Near the Acuity Limit</em>.
+Journal of Vision, 9(1).</li>
+<li>Wiley, R. W., Wilson, C., and Rapp, B. (2016). <em>The Effects of Alphabet and
+Expertise on Letter Perception</em>. Journal of Experimental Psychology: Human
+Perception and Performance.</li>
+<li>Duñabeitia, J. A. et al. (2013). <em>The Influence of Reading Expertise in
+Mirror-Letter Perception</em>. Frontiers in Psychology.</li>
+</ul>
+<h3 id="print-size-visual-span-and-crowding">Print Size, Visual Span, and Crowding</h3>
+<ul>
+<li>Legge, G. E., and Bigelow, C. A. (2011). <em>Does Print Size Matter for Reading?
+A Review of Findings from Vision Science and Typography</em>. Journal of Vision.</li>
+<li>Legge, G. E. et al. (2007). <em>The Case for the Visual Span as a Sensory
+Bottleneck in Reading</em>. Journal of Vision.</li>
+<li>Pelli, D. G. et al. (2007). <em>Crowding and Eccentricity Determine Reading
+Rate</em>. Journal of Vision.</li>
+<li>Strasburger, H., Rentschler, I., and Jüttner, M. (2011). <em>Peripheral Vision
+and Pattern Recognition: A Review</em>. Journal of Vision.</li>
+<li>Nandy, A. S., and Tjan, B. S. (2007). <em>The Nature of Letter Crowding as
+Revealed by First- and Second-Order Classification Images</em>. Journal of Vision.</li>
+<li>Song, S., Levi, D. M., and Pelli, D. G. (2014). <em>A Double Dissociation of
+the Acuity and Crowding Limits to Letter Identification</em>. Journal of Vision.</li>
+<li>Kurzawski, J. W. et al. (2023). <em>The Bouma Law Accounts for Crowding in 50
+Observers</em>. Journal of Vision.</li>
+<li>He, Y. et al. (2017). <em>Linking Crowding, Visual Span, and Reading</em>. Journal
+of Vision.</li>
+</ul>
+<h3 id="spacing-width-weight-and-typeface">Spacing, Width, Weight, and Typeface</h3>
+<ul>
+<li>Yu, D., Cheung, S. H., Legge, G. E., and Chung, S. T. L. (2007). <em>Effect
+of Letter Spacing on Visual Span and Reading Speed</em>. Journal of Vision.</li>
+<li>Vinckier, F. et al. (2011). <em>The Impact of Letter Spacing on Reading: A Test
+of the Bigram Coding Hypothesis</em>. Journal of Vision.</li>
+<li>Bernard, J. B. et al. (2013). <em>The Effect of Letter-Stroke Boldness on
+Reading Speed in Central and Peripheral Vision</em>. Vision Research.</li>
+<li>Chung, S. T. L. (2018). <em>Bolder Print Does Not Increase Reading Speed in
+People with Central Vision Loss</em>. Vision Research.</li>
+<li>Minakata, K., and Beier, S. (2021). <em>The Effect of Font Width on Eye
+Movements During Reading</em>. Applied Ergonomics.</li>
+<li>Bernard, J. B. et al. (2016). <em>A New Font, Specifically Designed for
+Peripheral Vision, Improves Peripheral Letter and Word Recognition, but Not
+Eye-Mediated Reading Performance</em>. PLOS ONE.</li>
+<li>Mansfield, J. S. et al. (1996). <em>Psychophysics of Reading XV: Font Effects in
+Normal and Low Vision</em>. Investigative Ophthalmology &#x26; Visual Science.</li>
+<li>Dobres, J. et al. (2016). <em>Utilising Psychophysical Techniques to Investigate
+the Effects of Age, Typeface Design, Size and Display Polarity on Glance
+Legibility</em>. Ergonomics.</li>
+<li>Xiong, Y. Z. et al. (2018). <em>Fonts Designed for Macular Degeneration: Impact
+on Reading</em>. Investigative Ophthalmology &#x26; Visual Science.</li>
+<li>Galiano, A. R. et al. (2023). <em>Luciole, a New Font for People with Low
+Vision</em>. Applied Ergonomics.</li>
+</ul>
+<h3 id="context-words-and-reading">Context, Words, and Reading</h3>
+<ul>
+<li>Grainger, J. (2024). <em>Letters, Words, Sentences, and Reading</em>. Psychonomic
+Bulletin &#x26; Review.</li>
+<li>Coch, D. et al. (2010). <em>Word and Pseudoword Superiority Effects Reflected in
+the ERP Waveform</em>. Brain Research.</li>
+<li>Laszlo, S., and Federmeier, K. D. (2007). <em>The Acronym Superiority Effect</em>.
+Psychonomic Bulletin &#x26; Review.</li>
+<li>Starrfelt, R. et al. (2013). <em>Don't Words Come Easy? A Psychophysical
+Exploration of Word Superiority</em>. Frontiers in Human Neuroscience.</li>
+<li>Jordan, T. R. et al. (2024). <em>The Reicher-Wheeler Paradigm in Word
+Recognition Research</em>. Behavior Research Methods.</li>
+<li>Massol, S. et al. (2025). <em>Word Superiority and Sentence Superiority Effects
+in Post-Cued Letter Identification</em>. Attention, Perception, &#x26; Psychophysics.</li>
+<li>Sass, S. M. et al. (2006). <em>Low-Vision Reading Speed: Influences of
+Linguistic Inference and Aging</em>. Optometry and Vision Science.</li>
+</ul>
+<h3 id="familiarity-and-typeface-experience">Familiarity and Typeface Experience</h3>
+<ul>
+<li>Nedeljković, U. et al. (2020). <em>You Read Best What You Read Most: An
+Eye-Tracking Study</em>. Frontiers in Psychology.</li>
+</ul>
+<h3 id="dyslexia-and-specialized-fonts">Dyslexia and Specialized Fonts</h3>
+<ul>
+<li>Duranovic, M. et al. (2018). <em>Influence of Increased Letter Spacing and Font
+Type on the Reading Ability of Dyslexic Children</em>. Annals of Dyslexia.</li>
+<li>Kuster, S. M. et al. Research comparing Dyslexie and conventional typefaces.</li>
+<li>Gori, S., and Facoetti, A. (2015). <em>The Intriguing Case of Crowding and
+Developmental Dyslexia</em>. Journal of Vision.</li>
+</ul>
+<h3 id="aesthetics-and-emotion">Aesthetics and Emotion</h3>
+<ul>
+<li>Medved, T. et al. (2023). <em>Influence of Letter Shape on Readers' Emotional
+Experience, Reading Fluency, and Text Comprehension</em>. Frontiers in Psychology.</li>
+</ul>
+<h2 id="books">Books</h2>
+<ul>
+<li>Legge, G. E. (2007). <em>Psychophysics of Reading in Normal and Low Vision</em>.
+Lawrence Erlbaum Associates.</li>
+<li>Tracy, W. (1986). <em>Letters of Credit: A View of Type Design</em>. David R.
+Godine.</li>
+<li>Bigelow, C., and Day, D. (1983). <em>Digital Typography</em>. Scientific American.</li>
+<li>Bringhurst, R. <em>The Elements of Typographic Style</em>. Included as historical and
+professional context, not as experimental evidence.</li>
+</ul>
+<h2 id="industry">Industry</h2>
+<ul>
+<li>Google Fonts Knowledge. Typeface and optical-size documentation.</li>
+<li>Microsoft typography and accessibility documentation.</li>
+<li>Adobe typography and font-rendering documentation.</li>
+<li>Type Network and foundry technical documentation for optical sizes and
+production practices.</li>
+</ul>
+<h2 id="patents">Patents</h2>
+<p>No patent evidence materially changed the conclusions in this phase. Patent
+research is lower priority than acquiring human confusion datasets and should
+focus later on:</p>
+<ul>
+<li>screen font hinting</li>
+<li>subpixel rendering</li>
+<li>adaptive text display</li>
+<li>optical-size interpolation</li>
+<li>low-vision typeface systems</li>
+</ul>
+<h2 id="standards">Standards</h2>
+<ul>
+<li>W3C Web Content Accessibility Guidelines, text spacing and reflow criteria.</li>
+<li>ISO 9241 ergonomics standards for visual displays and human-system interaction.</li>
+<li>DIN and related signage-legibility standards should be reviewed in the
+task-specific phase.</li>
+<li>U.S. accessibility and highway-sign standards should be reviewed when
+evaluating safety-critical typography.</li>
+</ul>
+<h2 id="historical">Historical</h2>
+<ul>
+<li>Bouma, H. (1971). <em>Visual Recognition of Isolated Lower-Case Letters</em>.
+Vision Research.</li>
+<li>Cattell, J. M. (1886). Early demonstrations related to word-superiority
+effects.</li>
+<li>Reicher, G. M. (1969), and Wheeler, D. D. (1970). Foundational
+word-superiority paradigm studies.</li>
+<li>Historical typefounders' optical-size practices, to be investigated as
+empirical craft knowledge rather than assumed proof.</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li>UCI Machine Learning Repository, <em>Letter Recognition</em> dataset.</li>
+<li>Magre, N., and Brown, N. (2022), <em>Typography-MNIST</em>.</li>
+<li>Synthetic glyph corpora and OCR benchmarks, classified as computational
+resources rather than human evidence.</li>
+</ul>
+<hr>
+<h1 id="final-research-position">Final Research Position</h1>
+<p>The initial claim was:</p>
+<blockquote>
+<p>Typography is the engineering of visual symbols to maximize accurate
+information transfer under human perceptual constraints.</p>
+</blockquote>
+<p>That definition is directionally correct but incomplete.</p>
+<p>The revised definition is:</p>
+<blockquote>
+<p><strong>Typography is the adaptive design of visible language so that
+task-relevant distinctions, structures, meanings, and actions survive the
+combined constraints of rendering, perception, learned inference, navigation,
+and context.</strong></p>
+</blockquote>
+<p>The most important shift is from optimizing symbols in isolation to diagnosing
+the active bottleneck in a layered, adaptive system.</p>
+<p>The Typography Genome should therefore not become a catalog of fonts or even a
+catalog of letter features.</p>
+<p>It should become a conditional model that predicts:</p>
+<ul>
+<li>where information will be lost</li>
+<li>which layer will fail first</li>
+<li>how the reader will compensate</li>
+<li>whether compensation is sustainable</li>
+<li>which errors matter for the task</li>
+<li>which design change has the highest expected benefit</li>
+</ul>
+<p>That is the point where Atlas begins moving from descriptive typography toward a
+predictive science of visible language.</p></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

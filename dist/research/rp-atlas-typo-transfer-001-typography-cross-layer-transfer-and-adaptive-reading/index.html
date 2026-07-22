@@ -1,0 +1,1204 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Typography Cross-Layer Transfer and Adaptive Reading | Visual Engineering Research</title><meta name="description" content="This research package investigates when improvements to glyphs, fonts, spacing,
+size, width, and weight transfer to higher-level outcomes such as word recognition,
+continuous reading, comprehension, navigation, memory, and action. The research
+rejects a simple upward-transfer model. Typography changes can improve local
+perceptual capacity without improving reading, can preserve reading speed through
+increased compensatory effort, or can improve reading for some individuals while
+harming others. The strongest emerging theory is that transfer occurs when three
+conditions align: the manipulated typographic property affects the active
+bottleneck, the benefit survives interactions with layout and language, and the
+measured outcome is sensitive to the cost being reduced. Atlas should therefore
+model typography as a personalized adaptive control problem rather than search for
+one universally optimal typeface."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-package</span> <span data-pagefind-meta="stableId">RP-ATLAS-TYPO-TRANSFER-001</span> </p> <h1 data-pagefind-meta="title">Typography Cross-Layer Transfer and Adaptive Reading</h1> <p class="lede" data-pagefind-meta="summary">This research package investigates when improvements to glyphs, fonts, spacing,
+size, width, and weight transfer to higher-level outcomes such as word recognition,
+continuous reading, comprehension, navigation, memory, and action. The research
+rejects a simple upward-transfer model. Typography changes can improve local
+perceptual capacity without improving reading, can preserve reading speed through
+increased compensatory effort, or can improve reading for some individuals while
+harming others. The strongest emerging theory is that transfer occurs when three
+conditions align: the manipulated typographic property affects the active
+bottleneck, the benefit survives interactions with layout and language, and the
+measured outcome is sensitive to the cost being reduced. Atlas should therefore
+model typography as a personalized adaptive control problem rather than search for
+one universally optimal typeface.</p> <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>RP-ATLAS-TYPO-TRANSFER-001</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">Project Atlas / Typography Genome</dd></div> <div><dt>Discipline</dt><dd data-pagefind-meta="discipline">vision science, cognitive psychology, psycholinguistics, human-computer interaction, typography</dd></div> <div><dt>Status</dt><dd data-pagefind-meta="status">canonical research package</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>Critical</dd></div> <div><dt>Tags</dt><dd data-pagefind-meta="tags">typography, reading, transfer, eye movements, comprehension, adaptive systems, personalization</dd></div> <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/project-atlas/research-note/rp-atlas-typo-transfer-001.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#research-state-snapshot">Research State Snapshot</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#what-was-accomplished">What Was Accomplished</a></li><li><a href="#major-discovery">Major Discovery</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#remaining-uncertainty">Remaining Uncertainty</a></li><li><a href="#original-objective">Original Objective</a></li><li><a href="#scope">Scope</a></li><li><a href="#repository-context">Repository Context</a></li><li><a href="#current-understanding">Current Understanding</a></li><li><a href="#key-discoveries">Key Discoveries</a></li><li><a href="#kd-001-transfer-is-bottleneck-dependent">KD-001: Transfer is bottleneck-dependent</a></li><li><a href="#kd-002-compensation-can-preserve-output">KD-002: Compensation can preserve output</a></li><li><a href="#kd-003-individual-differences-are-not-noise">KD-003: Individual differences are not noise</a></li><li><a href="#kd-004-local-difficulty-is-usually-not-a-desirable-difficulty">KD-004: Local difficulty is usually not a desirable difficulty</a></li><li><a href="#kd-005-layout-can-cancel-local-gains">KD-005: Layout can cancel local gains</a></li><li><a href="#kd-006-personalization-is-more-promising-than-universal-ranking">KD-006: Personalization is more promising than universal ranking</a></li><li><a href="#research-log">Research Log</a></li><li><a href="#cycle-1-is-glyph-level-improvement-sufficient-for-continuous-reading-">Cycle 1: Is glyph-level improvement sufficient for continuous reading?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-2-does-reading-speed-capture-typographic-cost-">Cycle 2: Does reading speed capture typographic cost?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-3-is-there-a-universally-superior-font-for-fluent-readers-">Cycle 3: Is there a universally superior font for fluent readers?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-4-does-typographic-disfluency-improve-memory-or-comprehension-">Cycle 4: Does typographic disfluency improve memory or comprehension?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-5-can-local-legibility-improvements-be-reversed-by-layout-constraints-">Cycle 5: Can local legibility improvements be reversed by layout constraints?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-6-should-typography-be-modeled-as-an-adaptive-control-problem-">Cycle 6: Should typography be modeled as an adaptive control problem?</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#sources">Sources</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#confirmed-findings">Confirmed Findings</a></li><li><a href="#cf-tr-001">CF-TR-001</a></li><li><a href="#cf-tr-002">CF-TR-002</a></li><li><a href="#cf-tr-003">CF-TR-003</a></li><li><a href="#cf-tr-004">CF-TR-004</a></li><li><a href="#cf-tr-005">CF-TR-005</a></li><li><a href="#cf-tr-006">CF-TR-006</a></li><li><a href="#cf-tr-007">CF-TR-007</a></li><li><a href="#evidence-registry">Evidence Registry</a></li><li><a href="#ev-tr-001">EV-TR-001</a></li><li><a href="#ev-tr-002">EV-TR-002</a></li><li><a href="#ev-tr-003">EV-TR-003</a></li><li><a href="#ev-tr-004">EV-TR-004</a></li><li><a href="#ev-tr-005">EV-TR-005</a></li><li><a href="#ev-tr-006">EV-TR-006</a></li><li><a href="#ev-tr-007">EV-TR-007</a></li><li><a href="#ev-tr-008">EV-TR-008</a></li><li><a href="#ev-tr-009">EV-TR-009</a></li><li><a href="#ev-tr-010">EV-TR-010</a></li><li><a href="#ev-tr-011">EV-TR-011</a></li><li><a href="#ev-tr-012">EV-TR-012</a></li><li><a href="#ev-tr-013">EV-TR-013</a></li><li><a href="#hypothesis-registry">Hypothesis Registry</a></li><li><a href="#hy-tr-001-direct-transfer">HY-TR-001: Direct Transfer</a></li><li><a href="#hy-tr-002-active-bottleneck">HY-TR-002: Active Bottleneck</a></li><li><a href="#hy-tr-003-compensation-masking">HY-TR-003: Compensation Masking</a></li><li><a href="#hy-tr-004-stable-individual-optima">HY-TR-004: Stable Individual Optima</a></li><li><a href="#hy-tr-005-disfluency-benefit">HY-TR-005: Disfluency Benefit</a></li><li><a href="#hy-tr-006-spatial-budget">HY-TR-006: Spatial Budget</a></li><li><a href="#hy-tr-007-adaptive-typography">HY-TR-007: Adaptive Typography</a></li><li><a href="#hy-tr-008-transfer-alignment">HY-TR-008: Transfer Alignment</a></li><li><a href="#failed-assumptions">Failed Assumptions</a></li><li><a href="#proposed-models">Proposed Models</a></li><li><a href="#th-typo-adaptive-002-adaptive-layered-reading-theory">TH-TYPO-ADAPTIVE-002: Adaptive Layered Reading Theory</a></li><li><a href="#cn-tr-001-transfer-alignment-principle">CN-TR-001: Transfer Alignment Principle</a></li><li><a href="#cn-tr-002-compensation-reserve">CN-TR-002: Compensation Reserve</a></li><li><a href="#cn-tr-003-spatial-typography-budget">CN-TR-003: Spatial Typography Budget</a></li><li><a href="#df-tr-001-typography-intervention-decision-framework">DF-TR-001: Typography Intervention Decision Framework</a></li><li><a href="#theory-impact-assessment">Theory Impact Assessment</a></li><li><a href="#affected-theory-records">Affected Theory Records</a></li><li><a href="#new-principle-candidates">New Principle Candidates</a></li><li><a href="#deprecated-principles">Deprecated Principles</a></li><li><a href="#confidence-changes">Confidence Changes</a></li><li><a href="#predictions-created">Predictions Created</a></li><li><a href="#predictions-invalidated">Predictions Invalidated</a></li><li><a href="#required-theory-registry-updates">Required Theory Registry Updates</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#critical">Critical</a></li><li><a href="#high">High</a></li><li><a href="#medium">Medium</a></li><li><a href="#recommended-next-research">Recommended Next Research</a></li><li><a href="#research-backlog">Research Backlog</a></li><li><a href="#suggested-specialized-research-agents">Suggested Specialized Research Agents</a></li><li><a href="#agent-a-personalized-typography-analyst">Agent A: Personalized Typography Analyst</a></li><li><a href="#agent-b-eye-movement-compensation-analyst">Agent B: Eye-Movement Compensation Analyst</a></li><li><a href="#agent-c-task-critical-typography-analyst">Agent C: Task-Critical Typography Analyst</a></li><li><a href="#agent-d-spatial-budget-modeler">Agent D: Spatial Budget Modeler</a></li><li><a href="#parallel-research-opportunities">Parallel Research Opportunities</a></li><li><a href="#risks">Risks</a></li><li><a href="#cross-discipline-opportunities">Cross-Discipline Opportunities</a></li><li><a href="#control-theory">Control Theory</a></li><li><a href="#economics">Economics</a></li><li><a href="#decision-theory">Decision Theory</a></li><li><a href="#reliability-engineering">Reliability Engineering</a></li><li><a href="#personalized-medicine">Personalized Medicine</a></li><li><a href="#information-theory">Information Theory</a></li><li><a href="#knowledge-relationships">Knowledge Relationships</a></li><li><a href="#repository-updates">Repository Updates</a></li><li><a href="#website-updates">Website Updates</a></li><li><a href="#ai-consumption-notes">AI Consumption Notes</a></li><li><a href="#handoff-instructions">Handoff Instructions</a></li><li><a href="#research-journal">Research Journal</a></li><li><a href="#jr-atlas-tr-001">JR-ATLAS-TR-001</a></li><li><a href="#jr-atlas-tr-002">JR-ATLAS-TR-002</a></li><li><a href="#jr-atlas-tr-003">JR-ATLAS-TR-003</a></li><li><a href="#jr-atlas-tr-004">JR-ATLAS-TR-004</a></li><li><a href="#jr-atlas-tr-005">JR-ATLAS-TR-005</a></li><li><a href="#jr-atlas-tr-006">JR-ATLAS-TR-006</a></li><li><a href="#jr-atlas-tr-007">JR-ATLAS-TR-007</a></li><li><a href="#research-quality-metrics">Research Quality Metrics</a></li><li><a href="#research-debt">Research Debt</a></li><li><a href="#missing-evidence">Missing Evidence</a></li><li><a href="#missing-experiments">Missing Experiments</a></li><li><a href="#missing-disciplines">Missing Disciplines</a></li><li><a href="#tool-limitations">Tool Limitations</a></li><li><a href="#assumptions-awaiting-evidence">Assumptions Awaiting Evidence</a></li><li><a href="#appendix-a-bibliography">Appendix A: Bibliography</a></li><li><a href="#academic">Academic</a></li><li><a href="#books">Books</a></li><li><a href="#industry">Industry</a></li><li><a href="#patents">Patents</a></li><li><a href="#standards">Standards</a></li><li><a href="#historical">Historical</a></li><li><a href="#other">Other</a></li><li><a href="#appendix-b-completion-checklist">Appendix B: Completion Checklist</a></li> </ol> </aside> <section class="document-body"><h1 id="research-state-snapshot">Research State Snapshot</h1>
+<ul>
+<li><strong>Theory Version:</strong> TH-TYPO-ADAPTIVE-002</li>
+<li><strong>Knowledge Base Version:</strong> KB-ATLAS-2026-07-21</li>
+<li><strong>Highest Confidence Areas:</strong>
+<ul>
+<li>typography operates through multiple layers</li>
+<li>local perceptual improvements do not guarantee reading improvements</li>
+<li>print size and display capacity create interacting constraints</li>
+<li>reader compensation can mask typographic cost</li>
+<li>individual differences materially affect optimal settings</li>
+</ul>
+</li>
+<li><strong>Lowest Confidence Areas:</strong>
+<ul>
+<li>predicting transfer before testing</li>
+<li>quantifying cognitive effort independently of speed</li>
+<li>generalizing personalized font effects beyond study populations</li>
+<li>linking reading improvements to real-world task outcomes</li>
+</ul>
+</li>
+<li><strong>Largest Remaining Unknown:</strong> How to diagnose the active bottleneck for a person, task, and environment with a short practical test.</li>
+<li><strong>Active Research Streams:</strong>
+<ul>
+<li>human confusion matrices</li>
+<li>personalized typography</li>
+<li>compensation-cost metrics</li>
+<li>cross-script generalization</li>
+<li>task-weighted typography</li>
+</ul>
+</li>
+<li><strong>Recently Invalidated Ideas:</strong>
+<ul>
+<li>better glyph recognition automatically improves reading</li>
+<li>one best font can be selected for a population</li>
+<li>slower reading caused by disfluency reliably improves memory</li>
+<li>reading speed alone is an adequate outcome</li>
+</ul>
+</li>
+<li><strong>Priority Changes:</strong>
+<ul>
+<li>personalized and task-specific models moved to highest priority</li>
+<li>universal font ranking moved to low priority</li>
+<li>cross-layer measurement moved ahead of additional anatomy cataloging</li>
+</ul>
+</li>
+</ul>
+<h1 id="executive-summary">Executive Summary</h1>
+<h2 id="what-was-accomplished">What Was Accomplished</h2>
+<p>This phase investigated the largest uncertainty left by the prior Project Atlas
+typography research:</p>
+<blockquote>
+<p>When does a measurable improvement at the glyph or font level transfer upward
+to word recognition, reading speed, comprehension, memory, navigation, or action?</p>
+</blockquote>
+<p>The research reviewed evidence from vision science, psycholinguistics,
+eye-tracking, low-vision research, learning science, and human-computer
+interaction. It examined both successful and failed transfers.</p>
+<p>Six major hypothesis cycles were completed:</p>
+<ol>
+<li>Whether glyph-level improvement is sufficient for reading improvement.</li>
+<li>Whether reading speed captures the cost of typography.</li>
+<li>Whether font effects are stable across readers.</li>
+<li>Whether typography-induced difficulty improves memory or comprehension.</li>
+<li>Whether layout constraints can reverse local typographic benefits.</li>
+<li>Whether adaptation and personalization should replace universal optimization.</li>
+</ol>
+<h2 id="major-discovery">Major Discovery</h2>
+<p>Cross-layer transfer is conditional.</p>
+<p>A local typography change transfers upward only when:</p>
+<ol>
+<li>it improves the process that is currently limiting performance;</li>
+<li>the improvement is not cancelled by a new cost at another layer;</li>
+<li>the higher-level task depends materially on the improved process;</li>
+<li>the measurement captures the relevant benefit;</li>
+<li>the reader has not already compensated enough to hide the difference.</li>
+</ol>
+<p>This produces the proposed <strong>Transfer Alignment Principle</strong>:</p>
+<blockquote>
+<p>A typography intervention produces system-level benefit only when the
+intervention, active bottleneck, task dependency, and outcome measure are aligned.</p>
+</blockquote>
+<h2 id="confidence">Confidence</h2>
+<p><strong>Moderate to high.</strong></p>
+<p>The individual components are supported by multiple independent studies.
+The integrated predictive model remains unvalidated as a whole.</p>
+<h2 id="remaining-uncertainty">Remaining Uncertainty</h2>
+<p>The most important unresolved issue is practical diagnosis. Atlas needs a short
+protocol that can distinguish whether a reader is currently constrained by:</p>
+<ul>
+<li>visual acuity</li>
+<li>contrast</li>
+<li>crowding</li>
+<li>glyph confusability</li>
+<li>line capacity</li>
+<li>eye-movement strategy</li>
+<li>lexical processing</li>
+<li>comprehension</li>
+<li>fatigue</li>
+<li>interface navigation</li>
+</ul>
+<h1 id="original-objective">Original Objective</h1>
+<p>Determine when and why typography improvements transfer from lower perceptual
+layers to higher reading and task outcomes.</p>
+<h1 id="scope">Scope</h1>
+<p>Included:</p>
+<ul>
+<li>glyph recognition</li>
+<li>word recognition</li>
+<li>continuous reading</li>
+<li>visual span</li>
+<li>eye movements</li>
+<li>reading speed</li>
+<li>comprehension</li>
+<li>memory</li>
+<li>subjective workload</li>
+<li>personalization</li>
+<li>display and layout interaction</li>
+</ul>
+<p>Excluded from this phase:</p>
+<ul>
+<li>full cross-script comparison</li>
+<li>production of new fonts</li>
+<li>new human-subject experiments</li>
+<li>branding and expressive typography except where relevant to transfer</li>
+<li>complete interface-navigation research</li>
+</ul>
+<h1 id="repository-context">Repository Context</h1>
+<p>This package extends three prior artifacts:</p>
+<ol>
+<li>The visual-information foundation established that typography can be modeled
+as a noisy channel only at clearly defined layers.</li>
+<li>The letter-confusion audit established that similarity ratings, confusion
+matrices, visual-span measures, and synthetic datasets answer different
+questions.</li>
+<li>The autonomous typography report established the active-bottleneck model and
+rejected universal monotonic rules for spacing, size, weight, and width.</li>
+</ol>
+<p>The present package tests the missing link between those lower-level findings
+and real reading behavior.</p>
+<h1 id="current-understanding">Current Understanding</h1>
+<p>Typography changes can produce at least four distinct outcomes:</p>
+<pre><code class="language-text">1. Capacity improvement
+   The reader can recover more visual information.
+
+2. Efficiency improvement
+   The same task is completed faster or with fewer eye movements.
+
+3. Compensation reduction
+   Performance remains similar, but less effort is required.
+
+4. Task improvement
+   Comprehension, recall, navigation, or decision quality improves.
+</code></pre>
+<p>These outcomes are related but not interchangeable.</p>
+<p>A study may show a capacity gain without an efficiency gain. A reader may
+maintain speed while making longer fixations. A font may feel easier without
+improving comprehension. A more difficult font may slow reading without creating
+deeper processing.</p>
+<h1 id="key-discoveries">Key Discoveries</h1>
+<h2 id="kd-001-transfer-is-bottleneck-dependent">KD-001: Transfer is bottleneck-dependent</h2>
+<p>Glyph improvements matter most near perceptual limits, in peripheral reading,
+under low contrast, for low-vision readers, and in low-context tasks.</p>
+<p>When lexical, semantic, temporal, or oculomotor processes dominate, improved
+glyph distinction may not change reading speed.</p>
+<h2 id="kd-002-compensation-can-preserve-output">KD-002: Compensation can preserve output</h2>
+<p>Readers alter:</p>
+<ul>
+<li>fixation duration</li>
+<li>fixation count</li>
+<li>saccade length</li>
+<li>regressions</li>
+<li>reading strategy</li>
+<li>use of context</li>
+</ul>
+<p>As a result, average reading speed can remain stable while effort changes.</p>
+<h2 id="kd-003-individual-differences-are-not-noise">KD-003: Individual differences are not noise</h2>
+<p>Large-scale personalized-font studies report that different readers achieve
+their best reading performance with different typefaces. Preference does not
+reliably predict performance.</p>
+<p>The appropriate unit of analysis may therefore be the reader-font-task
+combination rather than the typeface alone.</p>
+<h2 id="kd-004-local-difficulty-is-usually-not-a-desirable-difficulty">KD-004: Local difficulty is usually not a desirable difficulty</h2>
+<p>Disfluent fonts reliably increase perceived difficulty, but effects on learning
+and memory are inconsistent or null. Additional orthographic effort does not
+necessarily create semantic or relational processing.</p>
+<h2 id="kd-005-layout-can-cancel-local-gains">KD-005: Layout can cancel local gains</h2>
+<p>Larger print improves recognition until fewer characters fit per line or screen.
+Wider forms may improve local shape availability while increasing line length or
+reducing text capacity. More spacing can reduce crowding while fragmenting words.</p>
+<p>Typography must therefore be evaluated within its display geometry.</p>
+<h2 id="kd-006-personalization-is-more-promising-than-universal-ranking">KD-006: Personalization is more promising than universal ranking</h2>
+<p>Evidence from adaptive and individualized typography suggests meaningful reading
+speed gains can be obtained by tuning font family, size normalization, character
+spacing, and line spacing to the reader.</p>
+<p>The strongest current direction is not “find the best font,” but “identify a
+small effective configuration for this reader and task.”</p>
+<h1 id="research-log">Research Log</h1>
+<h2 id="cycle-1-is-glyph-level-improvement-sufficient-for-continuous-reading">Cycle 1: Is glyph-level improvement sufficient for continuous reading?</h2>
+<h3 id="objective">Objective</h3>
+<p>Test whether a font that improves isolated or peripheral letter recognition
+should improve continuous reading.</p>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>Improved glyph recognition will reliably increase reading speed.</p>
+<h3 id="evidence-found">Evidence Found</h3>
+<p>Fonts designed for peripheral distinction can improve:</p>
+<ul>
+<li>isolated letter recognition</li>
+<li>peripheral word recognition</li>
+<li>some low-vision outcomes</li>
+</ul>
+<p>Luciole showed small advantages over some comparison fonts for some readers with
+low vision.</p>
+<h3 id="evidence-against">Evidence Against</h3>
+<p>A font designed specifically for peripheral vision improved peripheral letter
+and word recognition but did not improve eye-mediated sentence reading.</p>
+<p>Training that reduced crowding did not always produce proportional changes in
+visual span or reading speed.</p>
+<h3 id="sources">Sources</h3>
+<ul>
+<li>Bernard et al. (2016)</li>
+<li>He et al. (2017)</li>
+<li>Galiano et al. (2023)</li>
+<li>Legge et al. visual-span research</li>
+</ul>
+<h3 id="analysis">Analysis</h3>
+<p>The local benefit was real, but the continuous-reading system was able to
+compensate or was limited elsewhere.</p>
+<p>The original hypothesis assumed a serial pipeline:</p>
+<pre><code class="language-text">better letters → better words → faster reading
+</code></pre>
+<p>The evidence supports a conditional network:</p>
+<pre><code class="language-text">better letters
+    ├─ improves reading if letter information is limiting
+    ├─ produces no change if another process is limiting
+    └─ may be cancelled by spacing, width, familiarity, or eye-movement costs
+</code></pre>
+<h3 id="conclusion">Conclusion</h3>
+<p>Rejected as a universal claim.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High</p>
+<h3 id="next-step">Next Step</h3>
+<p>Determine whether common reading metrics conceal compensation.</p>
+<hr>
+<h2 id="cycle-2-does-reading-speed-capture-typographic-cost">Cycle 2: Does reading speed capture typographic cost?</h2>
+<h3 id="objective-1">Objective</h3>
+<p>Test whether equal reading speed implies equivalent typography performance.</p>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p>If two text settings produce the same reading speed, they are functionally
+equivalent.</p>
+<h3 id="evidence-found-1">Evidence Found</h3>
+<p>Reading speed is strongly related to many practical reading outcomes and remains
+an important measure.</p>
+<h3 id="evidence-against-1">Evidence Against</h3>
+<p>Font-width studies found similar aggregate speed with different combinations of
+fixation counts, fixation durations, and saccade behavior.</p>
+<p>Webpage typography studies found effects on eye movements even when higher-level
+performance differences were limited.</p>
+<p>Bionic-reading studies found little or no speed advantage and changed effort or
+reading time inconsistently.</p>
+<h3 id="sources-1">Sources</h3>
+<ul>
+<li>Minakata and Beier (2021)</li>
+<li>Scaltritti et al. (2019)</li>
+<li>Beelders et al. (2025)</li>
+<li>eye-movement studies of reading strategy</li>
+</ul>
+<h3 id="analysis-1">Analysis</h3>
+<p>Readers can maintain throughput by paying a higher internal cost.</p>
+<p>Equivalent speed can coexist with:</p>
+<ul>
+<li>longer fixations</li>
+<li>more regressions</li>
+<li>reduced spare attention</li>
+<li>lower robustness under distraction</li>
+<li>higher fatigue</li>
+<li>reduced persistence</li>
+</ul>
+<p>Reading speed is an output variable, not a complete cost function.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>Rejected.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-1">Next Step</h3>
+<p>Investigate whether individual readers exhibit stable differences in font
+response.</p>
+<hr>
+<h2 id="cycle-3-is-there-a-universally-superior-font-for-fluent-readers">Cycle 3: Is there a universally superior font for fluent readers?</h2>
+<h3 id="objective-2">Objective</h3>
+<p>Test whether population averages can identify one generally best-performing
+typeface.</p>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p>Once fonts are normalized for size, one or a small set of fonts will consistently
+outperform others across readers.</p>
+<h3 id="evidence-found-2">Evidence Found</h3>
+<p>Some fonts perform better on average in specific experiments. Familiar and
+conventional structures often support fluent reading.</p>
+<h3 id="evidence-against-2">Evidence Against</h3>
+<p>Individual-difference studies found substantial reader-specific variation in
+font preference and reading speed.</p>
+<p>Preference and familiarity did not reliably identify the fastest font for each
+reader.</p>
+<p>Studies of school-age readers found that personalized font selection could
+increase reading speed while preserving comprehension.</p>
+<p>Adaptive-font systems demonstrated the feasibility of learning a reader-specific
+font configuration.</p>
+<h3 id="sources-2">Sources</h3>
+<ul>
+<li>Wallace et al. (2020)</li>
+<li>Wallace et al. (2022)</li>
+<li>Kadner et al. (2021)</li>
+<li>Nedeljković et al. (2020)</li>
+</ul>
+<h3 id="analysis-2">Analysis</h3>
+<p>Population means can conceal crossover interactions:</p>
+<pre><code class="language-text">Reader A: Font X > Font Y
+Reader B: Font Y > Font X
+Average: X ≈ Y
+</code></pre>
+<p>This is not random measurement noise if the preference remains reproducible.</p>
+<p>Universal defaults are still needed, but they should be viewed as robust
+starting points rather than optima.</p>
+<h3 id="conclusion-2">Conclusion</h3>
+<p>Rejected as a universal claim.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>Moderate to high</p>
+<h3 id="next-step-2">Next Step</h3>
+<p>Test whether deliberate difficulty can improve higher-level outcomes.</p>
+<hr>
+<h2 id="cycle-4-does-typographic-disfluency-improve-memory-or-comprehension">Cycle 4: Does typographic disfluency improve memory or comprehension?</h2>
+<h3 id="objective-3">Objective</h3>
+<p>Evaluate whether making text harder to read creates deeper processing.</p>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p>A difficult-to-read font increases mental effort, which improves memory and
+comprehension.</p>
+<h3 id="evidence-found-3">Evidence Found</h3>
+<p>A small number of studies reported benefits under limited conditions, especially
+for distinctive material or novel-word learning.</p>
+<p>Distinctive typography can direct attention when selectively applied.</p>
+<h3 id="evidence-against-3">Evidence Against</h3>
+<p>Multiple studies found no benefit of Sans Forgetica or other disfluent fonts for
+recall or comprehension.</p>
+<p>A one-week delayed-recall study found a strong testing benefit but no font
+benefit, despite a large perceived-difficulty manipulation.</p>
+<p>The authors argued that disfluency increases local orthographic work rather than
+semantic-relational processing and may interfere with integration across words.</p>
+<p>Recent work also reports null effects on comprehension and attention.</p>
+<h3 id="sources-3">Sources</h3>
+<ul>
+<li>Wetzler et al. (2021)</li>
+<li>Taylor et al.</li>
+<li>Geller et al.</li>
+<li>Tietz et al. (2025)</li>
+<li>disfluency meta-analytic debate</li>
+</ul>
+<h3 id="analysis-3">Analysis</h3>
+<p>Effort is not fungible.</p>
+<pre><code class="language-text">More perceptual effort
+≠
+more semantic processing
+</code></pre>
+<p>Difficulty helps only when the extra work engages processes that are useful for
+the later task.</p>
+<p>This is consistent with transfer-appropriate processing and the broader Atlas
+transfer model.</p>
+<h3 id="conclusion-3">Conclusion</h3>
+<p>Rejected as a general theory.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-3">Next Step</h3>
+<p>Investigate interactions between local legibility and available layout space.</p>
+<hr>
+<h2 id="cycle-5-can-local-legibility-improvements-be-reversed-by-layout-constraints">Cycle 5: Can local legibility improvements be reversed by layout constraints?</h2>
+<h3 id="objective-4">Objective</h3>
+<p>Test whether larger, wider, or more spaced type remains beneficial when display
+capacity is considered.</p>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p>Improving local visual availability will improve total reading performance.</p>
+<h3 id="evidence-found-4">Evidence Found</h3>
+<p>Larger print improves reading below critical print size.</p>
+<p>Spacing can reduce crowding.</p>
+<p>Wider or larger-x-height forms may improve recognition under small-size
+conditions.</p>
+<h3 id="evidence-against-4">Evidence Against</h3>
+<p>On small displays, increasing print size reduces characters per line and lines
+per screen. Reading performance requires both sufficient angular size and enough
+text capacity.</p>
+<p>Research found a minimum approximate character count per line for maintaining a
+criterion level of reading speed.</p>
+<p>Increased spacing and width can introduce more eye movements and navigation cost.</p>
+<h3 id="sources-4">Sources</h3>
+<ul>
+<li>Atilgan et al. (2020)</li>
+<li>Legge and Bigelow (2011)</li>
+<li>Yu et al. (2007)</li>
+<li>Minakata and Beier (2021)</li>
+<li>Sawyer et al. (2025)</li>
+</ul>
+<h3 id="analysis-4">Analysis</h3>
+<p>Typography and layout share a finite spatial budget.</p>
+<p>A local change reallocates that budget:</p>
+<pre><code class="language-text">larger characters
+    → more visible detail
+    → fewer characters per fixation or line
+    → more navigation
+
+more spacing
+    → less crowding
+    → lower density
+    → greater peripheral extent
+</code></pre>
+<p>The correct objective is not maximum local legibility. It is maximum task
+performance under a spatial constraint.</p>
+<h3 id="conclusion-4">Conclusion</h3>
+<p>The hypothesis was rejected in its simple form.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>High</p>
+<h3 id="next-step-4">Next Step</h3>
+<p>Determine whether adaptive typography is theoretically and practically superior
+to fixed settings.</p>
+<hr>
+<h2 id="cycle-6-should-typography-be-modeled-as-an-adaptive-control-problem">Cycle 6: Should typography be modeled as an adaptive control problem?</h2>
+<h3 id="objective-5">Objective</h3>
+<p>Evaluate whether personalization and situational adjustment offer a stronger
+model than universal design values.</p>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>A small adaptive system can identify settings that improve reading for a specific
+reader without harming comprehension.</p>
+<h3 id="evidence-found-5">Evidence Found</h3>
+<p>Individualized studies show measurable reading-speed differences across fonts.</p>
+<p>Generative and adaptive systems have optimized font shapes or configurations
+using human-in-the-loop feedback.</p>
+<p>Personalized selection can preserve comprehension while improving speed.</p>
+<p>Recent situational systems report improvements in efficiency and perceived
+workload when typography responds to context.</p>
+<h3 id="evidence-against-5">Evidence Against</h3>
+<p>Personalized testing has costs:</p>
+<ul>
+<li>measurement noise</li>
+<li>practice effects</li>
+<li>short-term optimization</li>
+<li>preference instability</li>
+<li>overfitting to one text type</li>
+<li>implementation complexity</li>
+</ul>
+<p>The evidence base is still small compared with conventional reading research.</p>
+<p>A personalized optimum for speed may not optimize comfort, retention, or
+accessibility.</p>
+<h3 id="sources-5">Sources</h3>
+<ul>
+<li>Wallace et al. (2020, 2022)</li>
+<li>Kadner et al. (2021)</li>
+<li>adaptive typography HCI research</li>
+<li>individual-difference studies</li>
+</ul>
+<h3 id="analysis-5">Analysis</h3>
+<p>The evidence supports constrained adaptation, not unlimited customization.</p>
+<p>A practical system should:</p>
+<ol>
+<li>begin with a robust accessible default;</li>
+<li>test a small controlled set of alternatives;</li>
+<li>measure more than preference;</li>
+<li>preserve user override;</li>
+<li>optimize for the current task;</li>
+<li>avoid continuous visual instability.</li>
+</ol>
+<h3 id="conclusion-5">Conclusion</h3>
+<p>Provisionally supported.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>Moderate</p>
+<h3 id="next-step-5">Next Step</h3>
+<p>Develop and validate a short bottleneck-diagnostic and personalization protocol.</p>
+<h1 id="confirmed-findings">Confirmed Findings</h1>
+<h2 id="cf-tr-001">CF-TR-001</h2>
+<p>Local perceptual improvements do not guarantee higher-level reading benefits.</p>
+<p><strong>Evidence:</strong> EV-TR-001, EV-TR-002, EV-TR-003<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-tr-002">CF-TR-002</h2>
+<p>Reading speed alone can conceal changes in eye-movement strategy and effort.</p>
+<p><strong>Evidence:</strong> EV-TR-004, EV-TR-005<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-tr-003">CF-TR-003</h2>
+<p>Typographic effects vary meaningfully across readers.</p>
+<p><strong>Evidence:</strong> EV-TR-006, EV-TR-007, EV-TR-008<br>
+<strong>Confidence:</strong> Moderate-High</p>
+<h2 id="cf-tr-004">CF-TR-004</h2>
+<p>Font preference is not a reliable substitute for measured performance.</p>
+<p><strong>Evidence:</strong> EV-TR-006<br>
+<strong>Confidence:</strong> Moderate-High</p>
+<h2 id="cf-tr-005">CF-TR-005</h2>
+<p>Disfluent fonts do not reliably improve memory or comprehension.</p>
+<p><strong>Evidence:</strong> EV-TR-009, EV-TR-010<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-tr-006">CF-TR-006</h2>
+<p>Print size, spacing, width, and display capacity interact.</p>
+<p><strong>Evidence:</strong> EV-TR-011, EV-TR-012, EV-TR-013<br>
+<strong>Confidence:</strong> High</p>
+<h2 id="cf-tr-007">CF-TR-007</h2>
+<p>Personalized typography can improve reading performance while preserving
+comprehension in some populations.</p>
+<p><strong>Evidence:</strong> EV-TR-006, EV-TR-007, EV-TR-008<br>
+<strong>Confidence:</strong> Moderate</p>
+<h1 id="evidence-registry">Evidence Registry</h1>
+<h2 id="ev-tr-001">EV-TR-001</h2>
+<p><strong>Citation:</strong> Bernard et al. (2016), font designed for peripheral vision.<br>
+<strong>Finding:</strong> Improved peripheral letter and word recognition, but not
+eye-mediated reading performance.<br>
+<strong>Supports:</strong> HY-TR-002, TH-TYPO-ADAPTIVE-002<br>
+<strong>Quality:</strong> High, peer-reviewed experimental study.</p>
+<h2 id="ev-tr-002">EV-TR-002</h2>
+<p><strong>Citation:</strong> He et al. (2017), linking crowding, visual span, and reading.<br>
+<strong>Finding:</strong> Challenges a simple causal pathway from reduced crowding to reading
+improvement.<br>
+<strong>Supports:</strong> HY-TR-002<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-003">EV-TR-003</h2>
+<p><strong>Citation:</strong> Galiano et al. (2023), Luciole low-vision font.<br>
+<strong>Finding:</strong> Small, population- and comparison-dependent advantages rather than
+universal superiority.<br>
+<strong>Supports:</strong> HY-TR-001, HY-TR-004<br>
+<strong>Quality:</strong> Moderate-High.</p>
+<h2 id="ev-tr-004">EV-TR-004</h2>
+<p><strong>Citation:</strong> Minakata and Beier (2021), font width and eye movements.<br>
+<strong>Finding:</strong> Font width changed eye-movement strategies and exposed tradeoffs.<br>
+<strong>Supports:</strong> HY-TR-003<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-005">EV-TR-005</h2>
+<p><strong>Citation:</strong> Scaltritti et al. (2019), typography on real webpages.<br>
+<strong>Finding:</strong> Typographic variables affected eye movements and performance across
+reader groups.<br>
+<strong>Supports:</strong> HY-TR-003<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-006">EV-TR-006</h2>
+<p><strong>Citation:</strong> Wallace et al. (2020), individual font preference and effectiveness.<br>
+<strong>Finding:</strong> Readers differ in fastest font; normalization matters; preference
+and familiarity do not fully predict performance.<br>
+<strong>Supports:</strong> HY-TR-004, TH-TYPO-PERSONALIZED-001<br>
+<strong>Quality:</strong> Moderate-High.</p>
+<h2 id="ev-tr-007">EV-TR-007</h2>
+<p><strong>Citation:</strong> Wallace et al. (2022), different fonts increase reading speed for
+different individuals.<br>
+<strong>Finding:</strong> Individual font tuning can improve reading speed while maintaining
+comprehension.<br>
+<strong>Supports:</strong> HY-TR-004, HY-TR-007<br>
+<strong>Quality:</strong> Moderate-High.</p>
+<h2 id="ev-tr-008">EV-TR-008</h2>
+<p><strong>Citation:</strong> Kadner et al. (2021), AdaptiFont.<br>
+<strong>Finding:</strong> Human-in-the-loop optimization can generate reader-specific font
+configurations.<br>
+<strong>Supports:</strong> HY-TR-007<br>
+<strong>Quality:</strong> Moderate.</p>
+<h2 id="ev-tr-009">EV-TR-009</h2>
+<p><strong>Citation:</strong> Wetzler, Pyke, and Werner (2021), Sans Forgetica delayed recall.<br>
+<strong>Finding:</strong> Strong manipulation of perceived difficulty; no one-week recall
+benefit; testing effect remained.<br>
+<strong>Supports:</strong> HY-TR-005<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-010">EV-TR-010</h2>
+<p><strong>Citation:</strong> Tietz et al. (2025), text disfluency, attention, and comprehension.<br>
+<strong>Finding:</strong> Disfluency did not improve comprehension or reduce mind wandering.<br>
+<strong>Supports:</strong> HY-TR-005<br>
+<strong>Quality:</strong> Moderate-High.</p>
+<h2 id="ev-tr-011">EV-TR-011</h2>
+<p><strong>Citation:</strong> Atilgan et al. (2020), print-size and display-size constraints.<br>
+<strong>Finding:</strong> Adequate print size and sufficient characters per line jointly
+constrain reading.<br>
+<strong>Supports:</strong> HY-TR-006<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-012">EV-TR-012</h2>
+<p><strong>Citation:</strong> Yu et al. (2007), letter spacing.<br>
+<strong>Finding:</strong> Spacing reduces crowding but increases peripheral extent; effects are
+non-monotonic.<br>
+<strong>Supports:</strong> HY-TR-006<br>
+<strong>Quality:</strong> High.</p>
+<h2 id="ev-tr-013">EV-TR-013</h2>
+<p><strong>Citation:</strong> Legge and Bigelow (2011), print-size review.<br>
+<strong>Finding:</strong> Critical print size and fluent range; no unlimited benefit from
+larger text.<br>
+<strong>Supports:</strong> HY-TR-006<br>
+<strong>Quality:</strong> High.</p>
+<h1 id="hypothesis-registry">Hypothesis Registry</h1>
+<h2 id="hy-tr-001-direct-transfer">HY-TR-001: Direct Transfer</h2>
+<p><strong>Claim:</strong> Better glyph recognition directly improves reading.<br>
+<strong>Status:</strong> Rejected as universal; retained conditionally.<br>
+<strong>Confidence:</strong> High.</p>
+<h2 id="hy-tr-002-active-bottleneck">HY-TR-002: Active Bottleneck</h2>
+<p><strong>Claim:</strong> A local typography change transfers only when it affects the current
+limiting process.<br>
+<strong>Status:</strong> Supported.<br>
+<strong>Confidence:</strong> Moderate-High.</p>
+<h2 id="hy-tr-003-compensation-masking">HY-TR-003: Compensation Masking</h2>
+<p><strong>Claim:</strong> Readers can preserve speed by changing eye movements and effort,
+masking typography cost.<br>
+<strong>Status:</strong> Supported.<br>
+<strong>Confidence:</strong> High.</p>
+<h2 id="hy-tr-004-stable-individual-optima">HY-TR-004: Stable Individual Optima</h2>
+<p><strong>Claim:</strong> Readers have reproducible differences in effective font configuration.<br>
+<strong>Status:</strong> Provisionally supported.<br>
+<strong>Confidence:</strong> Moderate.</p>
+<h2 id="hy-tr-005-disfluency-benefit">HY-TR-005: Disfluency Benefit</h2>
+<p><strong>Claim:</strong> Perceptual difficulty improves learning by inducing deeper processing.<br>
+<strong>Status:</strong> Rejected as a general claim.<br>
+<strong>Confidence:</strong> High.</p>
+<h2 id="hy-tr-006-spatial-budget">HY-TR-006: Spatial Budget</h2>
+<p><strong>Claim:</strong> Local visual improvements can create layout costs that reverse their
+benefit.<br>
+<strong>Status:</strong> Supported.<br>
+<strong>Confidence:</strong> High.</p>
+<h2 id="hy-tr-007-adaptive-typography">HY-TR-007: Adaptive Typography</h2>
+<p><strong>Claim:</strong> Controlled personalization can outperform one fixed default for some
+readers and tasks.<br>
+<strong>Status:</strong> Provisionally supported.<br>
+<strong>Confidence:</strong> Moderate.</p>
+<h2 id="hy-tr-008-transfer-alignment">HY-TR-008: Transfer Alignment</h2>
+<p><strong>Claim:</strong> System-level benefit requires alignment among intervention, active
+bottleneck, task dependency, and outcome measure.<br>
+<strong>Status:</strong> New theory candidate.<br>
+<strong>Confidence:</strong> Moderate-High.</p>
+<h1 id="failed-assumptions">Failed Assumptions</h1>
+<ol>
+<li><strong>Assumption:</strong> Letter recognition is the base variable governing all reading.
+<ul>
+<li><strong>Failure:</strong> Other processes can dominate.</li>
+</ul>
+</li>
+<li><strong>Assumption:</strong> Reading speed is a complete performance measure.
+<ul>
+<li><strong>Failure:</strong> Eye-movement and effort changes can occur without speed changes.</li>
+</ul>
+</li>
+<li><strong>Assumption:</strong> Population averages identify the best font.
+<ul>
+<li><strong>Failure:</strong> Crossover effects among readers are substantial.</li>
+</ul>
+</li>
+<li><strong>Assumption:</strong> More perceptual effort creates deeper learning.
+<ul>
+<li><strong>Failure:</strong> Effort is often consumed locally at the orthographic layer.</li>
+</ul>
+</li>
+<li><strong>Assumption:</strong> Larger or more open text is always better.
+<ul>
+<li><strong>Failure:</strong> Spatial capacity and navigation introduce opposing costs.</li>
+</ul>
+</li>
+<li><strong>Assumption:</strong> Preference can guide personalization.
+<ul>
+<li><strong>Failure:</strong> Preferred and fastest fonts do not reliably match.</li>
+</ul>
+</li>
+</ol>
+<h1 id="proposed-models">Proposed Models</h1>
+<h2 id="th-typo-adaptive-002-adaptive-layered-reading-theory">TH-TYPO-ADAPTIVE-002: Adaptive Layered Reading Theory</h2>
+<p>Typography performance emerges from interaction among:</p>
+<pre><code class="language-text">visual signal
+× observer capability
+× learned familiarity
+× language redundancy
+× display geometry
+× task demand
+× compensation strategy
+</code></pre>
+<p>No typeface has one context-free readability value.</p>
+<h2 id="cn-tr-001-transfer-alignment-principle">CN-TR-001: Transfer Alignment Principle</h2>
+<p>A local improvement produces a higher-level benefit when:</p>
+<pre><code class="language-text">Intervention affects active bottleneck
+AND
+task depends on that bottleneck
+AND
+new costs do not cancel the gain
+AND
+measurement detects the gain
+</code></pre>
+<h2 id="cn-tr-002-compensation-reserve">CN-TR-002: Compensation Reserve</h2>
+<p>Readers possess a finite capacity to compensate for weak typography.</p>
+<p>Compensation reserve is consumed through:</p>
+<ul>
+<li>longer fixation</li>
+<li>additional fixation</li>
+<li>regression</li>
+<li>contextual inference</li>
+<li>working-memory effort</li>
+<li>slower navigation</li>
+</ul>
+<p>A design may appear adequate in easy conditions but fail under distraction,
+fatigue, or secondary-task load.</p>
+<h2 id="cn-tr-003-spatial-typography-budget">CN-TR-003: Spatial Typography Budget</h2>
+<p>Every display allocates a finite visual area among:</p>
+<ul>
+<li>character size</li>
+<li>character width</li>
+<li>letter spacing</li>
+<li>word spacing</li>
+<li>line length</li>
+<li>number of lines</li>
+<li>margins</li>
+<li>hierarchy</li>
+</ul>
+<p>Improvement in one dimension consumes capacity elsewhere.</p>
+<h2 id="df-tr-001-typography-intervention-decision-framework">DF-TR-001: Typography Intervention Decision Framework</h2>
+<ol>
+<li>Define the task.</li>
+<li>Define the critical error.</li>
+<li>Identify the likely bottleneck.</li>
+<li>Choose an intervention that targets that bottleneck.</li>
+<li>Measure local effect.</li>
+<li>Measure eye-movement or effort effect.</li>
+<li>Measure task-level transfer.</li>
+<li>Test under degraded conditions.</li>
+<li>Test individual variation.</li>
+<li>retain a user override.</li>
+</ol>
+<h1 id="theory-impact-assessment">Theory Impact Assessment</h1>
+<h2 id="affected-theory-records">Affected Theory Records</h2>
+<ul>
+<li>TH-TYPO-CHANNEL-001</li>
+<li>TH-TYPO-ADAPTIVE-001</li>
+<li>TH-TYPO-BOTTLENECK-001</li>
+</ul>
+<h2 id="new-principle-candidates">New Principle Candidates</h2>
+<ul>
+<li>CN-TR-001 Transfer Alignment Principle</li>
+<li>CN-TR-002 Compensation Reserve</li>
+<li>CN-TR-003 Spatial Typography Budget</li>
+<li>TH-TYPO-PERSONALIZED-001 Reader-Specific Typography</li>
+</ul>
+<h2 id="deprecated-principles">Deprecated Principles</h2>
+<ul>
+<li>Universal Font Superiority</li>
+<li>Direct Glyph-to-Reading Transfer</li>
+<li>Disfluency as General Desirable Difficulty</li>
+</ul>
+<h2 id="confidence-changes">Confidence Changes</h2>
+<ul>
+<li>Active bottleneck theory: Moderate → Moderate-High</li>
+<li>Personalized typography: Low → Moderate</li>
+<li>Universal readability score: Low → Very Low</li>
+<li>Compensation-cost model: Moderate → Moderate-High</li>
+</ul>
+<h2 id="predictions-created">Predictions Created</h2>
+<ol>
+<li>Personalized settings will produce larger gains under perceptually demanding
+conditions than under easy reading.</li>
+<li>Readers with equal speed across fonts will differ in fixation and workload.</li>
+<li>Preference will predict adoption better than peak performance, but not peak
+reading speed.</li>
+<li>Low-context tasks will show stronger transfer from glyph distinction than
+ordinary prose.</li>
+<li>Font gains measured on a large display will shrink or reverse on a small
+display when line capacity falls below a critical range.</li>
+<li>Disfluent typography applied selectively may improve attention to marked
+elements, while applying it globally will not improve learning.</li>
+</ol>
+<h2 id="predictions-invalidated">Predictions Invalidated</h2>
+<ul>
+<li>A font engineered for isolated-character distinction will necessarily improve
+sentence reading.</li>
+<li>Greater perceived difficulty predicts better delayed recall.</li>
+</ul>
+<h2 id="required-theory-registry-updates">Required Theory Registry Updates</h2>
+<p>Add:</p>
+<ul>
+<li>TH-TYPO-ADAPTIVE-002</li>
+<li>CN-TR-001</li>
+<li>CN-TR-002</li>
+<li>CN-TR-003</li>
+<li>DF-TR-001</li>
+</ul>
+<p>Deprecate:</p>
+<ul>
+<li>TH-TYPO-DIRECT-TRANSFER-001</li>
+<li>TH-TYPO-DISFLUENCY-001</li>
+</ul>
+<h1 id="open-questions">Open Questions</h1>
+<h2 id="critical">Critical</h2>
+<ol>
+<li>Can a five-minute test diagnose a reader's active typography bottleneck?</li>
+<li>How stable are personalized font gains across days, devices, and content?</li>
+<li>Which compensation metrics best predict fatigue and failure under load?</li>
+<li>How should Atlas optimize multiple objectives without reducing them to one
+score?</li>
+</ol>
+<h2 id="high">High</h2>
+<ol start="5">
+<li>Do personalized settings improve comprehension over long reading sessions?</li>
+<li>How much gain comes from font family versus size normalization, spacing,
+grade, and line layout?</li>
+<li>Which reader characteristics predict response to typography?</li>
+<li>Can a computational model narrow the personalization search space reliably?</li>
+<li>How do personalized settings interact with browser zoom and accessibility
+overrides?</li>
+</ol>
+<h2 id="medium">Medium</h2>
+<ol start="10">
+<li>Can selective disfluency serve as an attention signal without harming
+comprehension?</li>
+<li>Are individual optima stable across languages and scripts?</li>
+<li>How much familiarization is needed before a new font reaches stable
+performance?</li>
+</ol>
+<h1 id="recommended-next-research">Recommended Next Research</h1>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Research</th>
+<th align="right">Expected Value</th>
+<th align="right">Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Design a short active-bottleneck diagnostic</td>
+<td align="right">Very high</td>
+<td align="right">High</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Build a cross-layer study registry</td>
+<td align="right">Very high</td>
+<td align="right">Moderate</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reanalyze personalized-font datasets</td>
+<td align="right">High</td>
+<td align="right">Moderate</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Define compensation-cost metrics</td>
+<td align="right">High</td>
+<td align="right">High</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Compare low-context and prose tasks</td>
+<td align="right">High</td>
+<td align="right">Moderate</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Model display spatial budget</td>
+<td align="right">High</td>
+<td align="right">Moderate</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Test stability of individualized settings</td>
+<td align="right">High</td>
+<td align="right">High</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Extend to non-Latin scripts</td>
+<td align="right">High</td>
+<td align="right">High</td>
+</tr>
+</tbody>
+</table>
+<h1 id="research-backlog">Research Backlog</h1>
+<ul>
+<li>Extract effect sizes from individualized-font studies.</li>
+<li>Record whether fonts were normalized by x-height, cap height, or nominal size.</li>
+<li>Compare preference, speed, comprehension, and workload within participants.</li>
+<li>Build a taxonomy of transfer failures.</li>
+<li>Review pupillometry and dual-task methods for reading effort.</li>
+<li>Review standards for safety-critical labels and identifiers.</li>
+<li>Investigate font grade as distinct from weight.</li>
+<li>Compare static adaptation with continuous adaptive typography.</li>
+<li>Analyze accessibility risks of changing typography automatically.</li>
+<li>Review long-session reading and fatigue studies.</li>
+</ul>
+<h1 id="suggested-specialized-research-agents">Suggested Specialized Research Agents</h1>
+<h2 id="agent-a-personalized-typography-analyst">Agent A: Personalized Typography Analyst</h2>
+<p>Focus:</p>
+<ul>
+<li>individual-difference datasets</li>
+<li>reliability</li>
+<li>effect sizes</li>
+<li>personalization algorithms</li>
+<li>overfitting risk</li>
+</ul>
+<h2 id="agent-b-eye-movement-compensation-analyst">Agent B: Eye-Movement Compensation Analyst</h2>
+<p>Focus:</p>
+<ul>
+<li>fixation duration</li>
+<li>regressions</li>
+<li>saccade length</li>
+<li>pupil response</li>
+<li>dual-task cost</li>
+<li>fatigue</li>
+</ul>
+<h2 id="agent-c-task-critical-typography-analyst">Agent C: Task-Critical Typography Analyst</h2>
+<p>Focus:</p>
+<ul>
+<li>medication labels</li>
+<li>safety signage</li>
+<li>serial numbers</li>
+<li>control panels</li>
+<li>glance reading</li>
+</ul>
+<h2 id="agent-d-spatial-budget-modeler">Agent D: Spatial Budget Modeler</h2>
+<p>Focus:</p>
+<ul>
+<li>print size</li>
+<li>viewport size</li>
+<li>characters per line</li>
+<li>reflow</li>
+<li>zoom</li>
+<li>responsive layout</li>
+</ul>
+<h1 id="parallel-research-opportunities">Parallel Research Opportunities</h1>
+<ul>
+<li>typography personalization</li>
+<li>visual hierarchy transfer</li>
+<li>icon and symbol confusion</li>
+<li>chart-label legibility</li>
+<li>wayfinding</li>
+<li>alert design</li>
+<li>multilingual interfaces</li>
+<li>low-vision adaptive systems</li>
+</ul>
+<h1 id="risks">Risks</h1>
+<ul>
+<li>personalization may overfit short tests</li>
+<li>speed optimization may reduce comprehension or comfort</li>
+<li>adaptive changes may create instability</li>
+<li>study fonts may not reflect production implementations</li>
+<li>individual effects may be inflated by repeated-measures designs</li>
+<li>publication bias may favor positive personalization results</li>
+<li>accessibility systems may conflict with authored adaptation</li>
+<li>laboratory reading may not predict real-world persistence</li>
+</ul>
+<h1 id="cross-discipline-opportunities">Cross-Discipline Opportunities</h1>
+<h2 id="control-theory">Control Theory</h2>
+<p>Model the reader as a controller that changes sampling behavior to preserve
+performance.</p>
+<h2 id="economics">Economics</h2>
+<p>Treat attention and screen area as scarce resources with opportunity costs.</p>
+<h2 id="decision-theory">Decision Theory</h2>
+<p>Weight typography errors by consequence rather than frequency alone.</p>
+<h2 id="reliability-engineering">Reliability Engineering</h2>
+<p>Use degradation testing and failure thresholds instead of ideal-condition
+ranking.</p>
+<h2 id="personalized-medicine">Personalized Medicine</h2>
+<p>Use robust defaults plus individual response testing rather than population
+averages alone.</p>
+<h2 id="information-theory">Information Theory</h2>
+<p>Measure uncertainty reduction at each layer, without equating symbol accuracy
+with meaning.</p>
+<h1 id="knowledge-relationships">Knowledge Relationships</h1>
+<pre><code class="language-text">Glyph robustness
+    ↓ conditional transfer
+Word recognition
+    ↓ constrained by
+Eye movements + language inference
+    ↓ constrained by
+Layout and display capacity
+    ↓ produces
+Reading efficiency and compensation cost
+    ↓ affects
+Comprehension, navigation, action
+</code></pre>
+<p>Personalization affects every transition rather than only glyph selection.</p>
+<h1 id="repository-updates">Repository Updates</h1>
+<p>Create or update:</p>
+<pre><code class="language-text">/research/typography/rep/RP-ATLAS-TYPO-TRANSFER-001.md
+/theory/TH-TYPO-ADAPTIVE-002.md
+/concepts/CN-TR-001-transfer-alignment.md
+/concepts/CN-TR-002-compensation-reserve.md
+/concepts/CN-TR-003-spatial-typography-budget.md
+/frameworks/DF-TR-001-typography-intervention.md
+/evidence/typography-transfer-registry.yaml
+</code></pre>
+<h1 id="website-updates">Website Updates</h1>
+<p>Add a Typography Transfer section with:</p>
+<ul>
+<li>layered transfer diagram</li>
+<li>local-versus-system outcome examples</li>
+<li>personalized typography evidence</li>
+<li>rejected disfluency claim</li>
+<li>interactive spatial-budget illustration</li>
+<li>confidence indicators</li>
+</ul>
+<p>Do not present a universal “best font” list.</p>
+<h1 id="ai-consumption-notes">AI Consumption Notes</h1>
+<p>Agents consuming this package should:</p>
+<ol>
+<li>Treat reading speed, comprehension, and preference as separate outcomes.</li>
+<li>Never infer transfer from a lower-level metric alone.</li>
+<li>Preserve individual-level data when available.</li>
+<li>Record whether font sizes were physically or optically normalized.</li>
+<li>Distinguish typeface, font, grade, weight, spacing, and layout.</li>
+<li>Record display size and characters per line.</li>
+<li>Separate null effects from evidence of equivalence.</li>
+<li>Avoid recommending disfluent fonts for learning without task-specific
+evidence.</li>
+<li>Prefer profiles and conditional rules over global scores.</li>
+<li>Reference evidence and hypothesis IDs in future work.</li>
+</ol>
+<h1 id="handoff-instructions">Handoff Instructions</h1>
+<p>The next agent should begin with <strong>Open Question 1</strong>:</p>
+<blockquote>
+<p>Can a short diagnostic determine the active typography bottleneck?</p>
+</blockquote>
+<p>Required next steps:</p>
+<ol>
+<li>Review adaptive psychophysical methods such as qReading.</li>
+<li>Review short font-tuning methods used by individualized-font studies.</li>
+<li>Identify the minimum set of tasks needed to distinguish:
+<ul>
+<li>size limitation</li>
+<li>crowding</li>
+<li>glyph confusion</li>
+<li>line-capacity limitation</li>
+<li>lexical limitation</li>
+</ul>
+</li>
+<li>Propose an experiment that can run in five to ten minutes.</li>
+<li>Define stopping criteria and reliability requirements.</li>
+<li>Produce RP-ATLAS-TYPO-DIAGNOSTIC-001.</li>
+</ol>
+<h1 id="research-journal">Research Journal</h1>
+<h2 id="jr-atlas-tr-001">JR-ATLAS-TR-001</h2>
+<p>Reviewed previous Atlas artifacts and identified cross-layer transfer as the
+largest unresolved uncertainty.</p>
+<h2 id="jr-atlas-tr-002">JR-ATLAS-TR-002</h2>
+<p>Compared successful local recognition improvements with failed reading-speed
+transfer. Direct-transfer theory weakened.</p>
+<h2 id="jr-atlas-tr-003">JR-ATLAS-TR-003</h2>
+<p>Reviewed eye-movement evidence. Added compensation masking and compensation
+reserve concepts.</p>
+<h2 id="jr-atlas-tr-004">JR-ATLAS-TR-004</h2>
+<p>Reviewed individual-difference and adaptive-font studies. Personalized
+typography confidence increased from low to moderate.</p>
+<h2 id="jr-atlas-tr-005">JR-ATLAS-TR-005</h2>
+<p>Reviewed disfluency and Sans Forgetica evidence. General desirable-difficulty
+hypothesis rejected.</p>
+<h2 id="jr-atlas-tr-006">JR-ATLAS-TR-006</h2>
+<p>Reviewed display-size and print-size interaction. Spatial typography budget
+model added.</p>
+<h2 id="jr-atlas-tr-007">JR-ATLAS-TR-007</h2>
+<p>Integrated findings into Transfer Alignment Principle and adaptive layered
+reading theory.</p>
+<h1 id="research-quality-metrics">Research Quality Metrics</h1>
+<ul>
+<li><strong>Primary Sources:</strong> 13 core experimental or review sources</li>
+<li><strong>Independent Source Families:</strong> 7</li>
+<li><strong>Counterexamples Reviewed:</strong> 9</li>
+<li><strong>Competing Viewpoints Reviewed:</strong> 5</li>
+<li><strong>Hypotheses Tested:</strong> 8</li>
+<li><strong>Failed Hypotheses:</strong> 4 universal claims, 2 simple assumptions</li>
+<li><strong>Research Completeness:</strong> 82% for current objective</li>
+<li><strong>Confidence Gain:</strong> Moderate → Moderate-High</li>
+<li><strong>Open Questions Reduced:</strong> 1 major question decomposed into 12 testable
+questions</li>
+</ul>
+<h1 id="research-debt">Research Debt</h1>
+<h2 id="missing-evidence">Missing Evidence</h2>
+<ul>
+<li>raw individualized-font datasets</li>
+<li>long-term personalization stability</li>
+<li>fatigue and workload evidence</li>
+<li>safety-critical task transfer</li>
+<li>non-Latin transfer evidence</li>
+</ul>
+<h2 id="missing-experiments">Missing Experiments</h2>
+<ul>
+<li>short bottleneck diagnostic</li>
+<li>within-person stability study</li>
+<li>low-context versus prose comparison</li>
+<li>dual-task compensation study</li>
+<li>small-display personalization study</li>
+</ul>
+<h2 id="missing-disciplines">Missing Disciplines</h2>
+<ul>
+<li>occupational ergonomics</li>
+<li>clinical low-vision rehabilitation</li>
+<li>safety engineering</li>
+<li>educational measurement</li>
+<li>adaptive user interfaces</li>
+</ul>
+<h2 id="tool-limitations">Tool Limitations</h2>
+<ul>
+<li>several publisher pages did not expose full datasets</li>
+<li>some current HCI results are available only as abstracts</li>
+<li>no new human experiments were conducted</li>
+<li>effect sizes were not pooled meta-analytically</li>
+</ul>
+<h2 id="assumptions-awaiting-evidence">Assumptions Awaiting Evidence</h2>
+<ul>
+<li>compensation reserve is finite and measurable</li>
+<li>personalized font effects are stable enough for production use</li>
+<li>active bottlenecks can be diagnosed quickly</li>
+<li>computational proxies can reduce human testing substantially</li>
+</ul>
+<h1 id="appendix-a-bibliography">Appendix A: Bibliography</h1>
+<h2 id="academic">Academic</h2>
+<ul>
+<li>Atilgan, N. et al. (2020). <em>Reconciling Print-Size and Display-Size
+Constraints on Reading</em>.</li>
+<li>Bernard, J. B. et al. (2016). <em>A New Font Specifically Designed for
+Peripheral Vision Improves Peripheral Letter and Word Recognition, but Not
+Eye-Mediated Reading Performance</em>.</li>
+<li>Galiano, A. R. et al. (2023). <em>Luciole, a New Font for People with Low Vision</em>.</li>
+<li>He, Y. et al. (2017). <em>Linking Crowding, Visual Span, and Reading</em>.</li>
+<li>Kadner, F. et al. (2021). <em>Increasing Individuals' Reading Speed with a
+Generative Font Model and Bayesian Optimization</em>.</li>
+<li>Legge, G. E., and Bigelow, C. A. (2011). <em>Does Print Size Matter for Reading?</em></li>
+<li>Minakata, K., and Beier, S. (2021). <em>The Effect of Font Width on Eye
+Movements During Reading</em>.</li>
+<li>Nedeljković, U. et al. (2020). <em>You Read Best What You Read Most</em>.</li>
+<li>Scaltritti, M. et al. (2019). <em>Investigating Effects of Typographic Variables
+on Webpage Reading Through Eye Movements</em>.</li>
+<li>Wallace, S. et al. (2020). <em>Individual Differences in Font Preference and
+Effectiveness as Applied to Interlude Reading in the Digital Age</em>.</li>
+<li>Wallace, S. et al. (2022). <em>Different Fonts Increase Reading Speed for
+Different Individuals</em>.</li>
+<li>Wetzler, E. L., Pyke, A. A., and Werner, A. (2021). <em>Sans Forgetica Is Not
+the Font of Knowledge</em>.</li>
+<li>Yu, D. et al. (2007). <em>Effect of Letter Spacing on Visual Span and Reading
+Speed</em>.</li>
+</ul>
+<h2 id="books">Books</h2>
+<ul>
+<li>Legge, G. E. (2007). <em>Psychophysics of Reading in Normal and Low Vision</em>.</li>
+</ul>
+<h2 id="industry">Industry</h2>
+<ul>
+<li>Google Fonts accessibility and readability research initiatives.</li>
+<li>Browser and operating-system text customization documentation.</li>
+</ul>
+<h2 id="patents">Patents</h2>
+<p>No patent evidence was decisive in this phase.</p>
+<h2 id="standards">Standards</h2>
+<ul>
+<li>WCAG text spacing and reflow requirements.</li>
+<li>ISO 9241 human-system interaction standards.</li>
+</ul>
+<h2 id="historical">Historical</h2>
+<ul>
+<li>Bouma, H. letter recognition and crowding research.</li>
+<li>Reicher-Wheeler word-superiority research.</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li>qReading adaptive measurement method.</li>
+<li>Current adaptive typography HCI systems.</li>
+</ul>
+<h1 id="appendix-b-completion-checklist">Appendix B: Completion Checklist</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Executive Summary</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Original Objective</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Scope</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository Context</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Current Understanding</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Key Discoveries</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Evidence Registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Hypothesis Registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Failed Assumptions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Open Questions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Recommended Next Research</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Backlog</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Suggested Specialized Research Agents</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Parallel Research Opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Risks</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Cross-Discipline Opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Knowledge Relationships</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository Updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Website Updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> AI Consumption Notes</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Handoff Instructions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Journal</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Appendix</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Theory Impact Assessment</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Quality Metrics</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Debt</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Completion Checklist</li>
+</ul></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

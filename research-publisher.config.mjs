@@ -1,0 +1,44 @@
+export default {
+  site: {
+    title: "Visual Engineering Research",
+    description: "Searchable visual engineering research repository",
+    baseUrl: "/Visual-Engineering/",
+    language: "en",
+    siteUrl: "https://kemiller2002.github.io/Visual-Engineering"
+  },
+  repository: {
+    name: "Visual-Engineering",
+    sourceUrl: "https://github.com/kemiller2002/Visual-Engineering"
+  },
+  content: {
+    include: [
+      "**/*.md"
+    ],
+    exclude: [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      "build-reports/**",
+      ".git/**",
+      ".github/**",
+      ".research-publisher/**",
+      "coverage/**",
+      "tmp/**",
+      "temp/**",
+      "input-documents/**",
+      "prompts/**",
+      "**/archive/**",
+      "**/archives/**"
+    ],
+    drafts: false
+  },
+  metadata: {
+    mode: "compatible",
+    strictInCI: true
+  },
+  output: {
+    directory: "dist",
+    catalog: "data/research-catalog.json",
+    diagnostics: "data/build-diagnostics.json"
+  }
+};

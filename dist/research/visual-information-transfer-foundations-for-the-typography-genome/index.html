@@ -1,0 +1,1114 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual Information Transfer: Foundations for the Typography Genome | Visual Engineering Research</title><meta name="description" content="Typography can be usefully modeled as a noisy visual communication channel, but Shannon information cannot be equated with comprehension or meaning. The strongest measurable foundation is a layered model: physical signal preservation, perceptual discrimination, symbolic recognition, linguistic interpretation, and task success. Existing vision research already measures letter recognition in bits through confusion matrices and visual-span profiles, supporting the idea that type systems can be evaluated by information retained under degradation. However, alphabet fitness cannot be reduced to maximum geometric distinctiveness because familiarity, frequency, context, word structure, spacing, and reading strategy provide redundancy and alter the cost of individual confusions. Atlas should therefore measure conditional communication performance: how much task-relevant uncertainty a visual system removes for a defined reader, environment, and task."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span>  </p> <h1 data-pagefind-meta="title">Visual Information Transfer: Foundations for the Typography Genome</h1> <p class="lede" data-pagefind-meta="summary">Typography can be usefully modeled as a noisy visual communication channel, but Shannon information cannot be equated with comprehension or meaning. The strongest measurable foundation is a layered model: physical signal preservation, perceptual discrimination, symbolic recognition, linguistic interpretation, and task success. Existing vision research already measures letter recognition in bits through confusion matrices and visual-span profiles, supporting the idea that type systems can be evaluated by information retained under degradation. However, alphabet fitness cannot be reduced to maximum geometric distinctiveness because familiarity, frequency, context, word structure, spacing, and reading strategy provide redundancy and alter the cost of individual confusions. Atlas should therefore measure conditional communication performance: how much task-relevant uncertainty a visual system removes for a defined reader, environment, and task.</p> <dl class="metadata-panel">  <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">research draft</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/project-atlas/canonical/project-atlas-visual-information-transfer-foundations-v1-2.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#visual-information-transfer-foundations-for-the-typography-genome">Visual Information Transfer: Foundations for the Typography Genome</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#content">Content</a></li><li><a href="#1-the-strong-version-of-the-hypothesis">1. The Strong Version of the Hypothesis</a></li><li><a href="#2-what-shannon-s-model-gives-us">2. What Shannon&#39;s Model Gives Us</a></li><li><a href="#entropy">Entropy</a></li><li><a href="#conditional-entropy">Conditional entropy</a></li><li><a href="#mutual-information">Mutual information</a></li><li><a href="#redundancy">Redundancy</a></li><li><a href="#channel-capacity">Channel capacity</a></li><li><a href="#noise">Noise</a></li><li><a href="#3-the-boundary-of-shannon-information">3. The Boundary of Shannon Information</a></li><li><a href="#4-the-atlas-layered-channel-model">4. The Atlas Layered Channel Model</a></li><li><a href="#layer-1-physical-rendering">Layer 1: Physical rendering</a></li><li><a href="#layer-2-perceptual-availability">Layer 2: Perceptual availability</a></li><li><a href="#layer-3-symbol-discrimination">Layer 3: Symbol discrimination</a></li><li><a href="#layer-4-sequence-recognition">Layer 4: Sequence recognition</a></li><li><a href="#layer-5-structural-interpretation">Layer 5: Structural interpretation</a></li><li><a href="#layer-6-semantic-comprehension">Layer 6: Semantic comprehension</a></li><li><a href="#layer-7-task-and-action">Layer 7: Task and action</a></li><li><a href="#5-recognition-can-be-measured-in-bits">5. Recognition Can Be Measured in Bits</a></li><li><a href="#6-why-accuracy-alone-is-not-enough">6. Why Accuracy Alone Is Not Enough</a></li><li><a href="#system-a">System A</a></li><li><a href="#system-b">System B</a></li><li><a href="#7-the-alphabet-as-a-weighted-confusion-network">7. The Alphabet as a Weighted Confusion Network</a></li><li><a href="#8-why-frequency-must-weight-alphabet-fitness">8. Why Frequency Must Weight Alphabet Fitness</a></li><li><a href="#9-language-as-error-correcting-redundancy">9. Language as Error-Correcting Redundancy</a></li><li><a href="#10-crowding-as-channel-interference">10. Crowding as Channel Interference</a></li><li><a href="#11-spacing-is-a-bandwidth-allocation-problem">11. Spacing Is a Bandwidth Allocation Problem</a></li><li><a href="#12-recognition-curves-and-robustness">12. Recognition Curves and Robustness</a></li><li><a href="#half-information-threshold">Half-information threshold</a></li><li><a href="#failure-slope">Failure slope</a></li><li><a href="#minimum-pair-threshold">Minimum-pair threshold</a></li><li><a href="#area-under-robustness-curve">Area under robustness curve</a></li><li><a href="#context-recovery-gain">Context recovery gain</a></li><li><a href="#population-robustness-spread">Population robustness spread</a></li><li><a href="#13-alphabet-fitness-is-multi-objective">13. Alphabet Fitness Is Multi-Objective</a></li><li><a href="#14-familiarity-changes-the-channel">14. Familiarity Changes the Channel</a></li><li><a href="#15-can-beauty-be-reduced-to-efficiency-">15. Can Beauty Be Reduced to Efficiency?</a></li><li><a href="#16-a-revised-definition-of-visual-information">16. A Revised Definition of Visual Information</a></li><li><a href="#17-proposed-atlas-communication-model">17. Proposed Atlas Communication Model</a></li><li><a href="#observations">Observations</a></li><li><a href="#obs-vit-001">OBS-VIT-001</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-002">OBS-VIT-002</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-003">OBS-VIT-003</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-004">OBS-VIT-004</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-005">OBS-VIT-005</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-006">OBS-VIT-006</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#obs-vit-007">OBS-VIT-007</a></li><li><a href="#observation">Observation</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#evidence">Evidence</a></li><li><a href="#evd-vit-001">EVD-VIT-001</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-002">EVD-VIT-002</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-003">EVD-VIT-003</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-004">EVD-VIT-004</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-005">EVD-VIT-005</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-006">EVD-VIT-006</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-007">EVD-VIT-007</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-008">EVD-VIT-008</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#evd-vit-009">EVD-VIT-009</a></li><li><a href="#citation">Citation</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#candidate-laws">Candidate Laws</a></li><li><a href="#law-vit-001-layer-separation">LAW-VIT-001: Layer Separation</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-002-semantic-non-equivalence">LAW-VIT-002: Semantic Non-Equivalence</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-003-bottleneck-dominance">LAW-VIT-003: Bottleneck Dominance</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-004-conditional-distinctiveness">LAW-VIT-004: Conditional Distinctiveness</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-005-structured-error">LAW-VIT-005: Structured Error</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-006-interference-tradeoff">LAW-VIT-006: Interference Tradeoff</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-007-degradation-robustness">LAW-VIT-007: Degradation Robustness</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-008-learned-channel">LAW-VIT-008: Learned Channel</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-009-task-weighted-information">LAW-VIT-009: Task-Weighted Information</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-010-redundancy-allocation">LAW-VIT-010: Redundancy Allocation</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-vit-011-local-to-system-non-transfer">LAW-VIT-011: Local-to-System Non-Transfer</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#proposed-metrics">Proposed Metrics</a></li><li><a href="#met-vit-001-recognition-information">MET-VIT-001: Recognition Information</a></li><li><a href="#met-vit-002-information-retention-ratio">MET-VIT-002: Information Retention Ratio</a></li><li><a href="#met-vit-003-robustness-area">MET-VIT-003: Robustness Area</a></li><li><a href="#met-vit-004-critical-information-threshold">MET-VIT-004: Critical Information Threshold</a></li><li><a href="#met-vit-005-weakest-pair-margin">MET-VIT-005: Weakest-Pair Margin</a></li><li><a href="#met-vit-006-context-recovery-gain">MET-VIT-006: Context Recovery Gain</a></li><li><a href="#met-vit-007-frequency-weighted-confusion-cost">MET-VIT-007: Frequency-Weighted Confusion Cost</a></li><li><a href="#met-vit-008-consequence-weighted-confusion-cost">MET-VIT-008: Consequence-Weighted Confusion Cost</a></li><li><a href="#met-vit-009-layer-transfer-ratio">MET-VIT-009: Layer Transfer Ratio</a></li><li><a href="#met-vit-010-adaptation-spread">MET-VIT-010: Adaptation Spread</a></li><li><a href="#research-program">Research Program</a></li><li><a href="#phase-1-reanalyze-existing-confusion-data">Phase 1: Reanalyze Existing Confusion Data</a></li><li><a href="#phase-2-computational-degradation">Phase 2: Computational Degradation</a></li><li><a href="#phase-3-language-aware-modeling">Phase 3: Language-Aware Modeling</a></li><li><a href="#phase-4-cross-layer-transfer-review">Phase 4: Cross-Layer Transfer Review</a></li><li><a href="#phase-5-atlas-visual-channel-simulator">Phase 5: Atlas Visual Channel Simulator</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#next-actions">Next Actions</a></li><li><a href="#revision-history">Revision History</a></li><li><a href="#agent-instructions">Agent Instructions</a></li> </ol> </aside> <section class="document-body"><h1 id="visual-information-transfer-foundations-for-the-typography-genome">Visual Information Transfer: Foundations for the Typography Genome</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document investigates the hypothesis that typography is best understood as visual information engineering.</p>
+<p>The hypothesis is promising, but it must be made more precise. Information theory, perception science, reading research, and graphic design use the word <em>information</em> differently. Treating them as identical would produce a persuasive metaphor but a weak scientific model.</p>
+<p>The central question is:</p>
+<blockquote>
+<p>Which parts of visual communication can be measured as transmission through noise, and where must Atlas add models of perception, meaning, context, and action?</p>
+</blockquote>
+<hr>
+<h1 id="key-findings">Key Findings</h1>
+<ul>
+<li>Shannon's communication model is directly useful for describing encoding, channel noise, decoding errors, redundancy, and capacity. It deliberately excludes semantic meaning, so it cannot by itself measure comprehension, persuasion, or usability.</li>
+<li>Letter-recognition research already converts confusion matrices into information transmitted in bits. The information-theory connection is therefore more than analogy at the perceptual-recognition layer.</li>
+<li>The most useful unit is conditional uncertainty reduction, not visual complexity alone. A symbol is informative when it helps a specific observer distinguish among relevant alternatives under specified conditions.</li>
+<li>Maximum pairwise geometric distance is not automatically optimal. Readers exploit familiarity, letter frequency, word probability, syntax, and context. A visually redundant alphabet may be efficient because language supplies error correction.</li>
+<li>Recognition failure is usually structured rather than random. Blur, low contrast, crowding, eccentricity, and feature migration create predictable confusion families.</li>
+<li>Spacing exposes a real tradeoff: increasing separation can reduce crowding but spread letters farther into lower-acuity peripheral vision and weaken word cohesion.</li>
+<li>Visual communication has several distinct bottlenecks. Signal preservation, glyph discrimination, word recognition, comprehension, navigation, and action can fail independently.</li>
+<li>An alphabet should be modeled as a weighted confusion network. Weights must include both perceptual confusion probability and real-world occurrence or consequence.</li>
+<li>Atlas should distinguish channel capacity from task capacity. A setting may transmit many recognizable characters yet still communicate poorly because hierarchy, language, or task structure is weak.</li>
+<li>Beauty cannot currently be derived from transmission efficiency. Functional robustness may contribute to fluency and preference, but aesthetic value also depends on culture, expectation, expression, novelty, and purpose.</li>
+</ul>
+<hr>
+<h1 id="content">Content</h1>
+<h2 id="1-the-strong-version-of-the-hypothesis">1. The Strong Version of the Hypothesis</h2>
+<p>A useful starting definition is:</p>
+<blockquote>
+<p>Typography is the design and arrangement of visible language so that intended distinctions, structures, meanings, and actions survive the conditions of perception.</p>
+</blockquote>
+<p>This is stronger than defining typography as the arrangement of type, but more accurate than defining it only as information transfer.</p>
+<p>It identifies four progressively higher outcomes:</p>
+<pre><code class="language-text">Distinction
+    ↓
+Structure
+    ↓
+Meaning
+    ↓
+Action
+</code></pre>
+<p>A system can succeed at an earlier layer and fail at a later one.</p>
+<p>Examples:</p>
+<ul>
+<li>Every letter may be recognizable while the paragraph structure remains difficult to navigate.</li>
+<li>Every sentence may be understandable while the visual hierarchy obscures the primary action.</li>
+<li>A warning may be perfectly legible but semantically ambiguous.</li>
+<li>A display face may transmit words accurately while communicating the wrong institutional tone.</li>
+</ul>
+<p>Typography is therefore not one channel. It is a stack of coupled channels.</p>
+<h2 id="2-what-shannons-model-gives-us">2. What Shannon's Model Gives Us</h2>
+<p>Shannon's communication system contains:</p>
+<pre><code class="language-text">Information source
+    ↓
+Transmitter / encoder
+    ↓
+Channel
+    ↓
+Noise
+    ↓
+Receiver / decoder
+    ↓
+Destination
+</code></pre>
+<p>Mapped cautiously to typography:</p>
+<pre><code class="language-text">Intended linguistic content
+    ↓
+Writing and typographic encoding
+    ↓
+Print, display, environment, and visual field
+    ↓
+Blur, glare, crowding, distance, resolution, distraction
+    ↓
+Visual and cognitive decoding
+    ↓
+Reader interpretation and response
+</code></pre>
+<p>The mapping is valuable because it forces us to identify where errors enter rather than calling the final experience simply "readable" or "unreadable."</p>
+<p>Shannon's model contributes several directly useful concepts:</p>
+<h3 id="entropy">Entropy</h3>
+<p>Uncertainty among possible symbols or messages before observation.</p>
+<h3 id="conditional-entropy">Conditional entropy</h3>
+<p>Uncertainty remaining after observing the received signal.</p>
+<h3 id="mutual-information">Mutual information</h3>
+<p>How much observing the received signal reduces uncertainty about the transmitted symbol.</p>
+<h3 id="redundancy">Redundancy</h3>
+<p>Structure that allows a message to survive partial corruption.</p>
+<h3 id="channel-capacity">Channel capacity</h3>
+<p>The maximum rate at which information can be transmitted with arbitrarily low error under the model's assumptions.</p>
+<h3 id="noise">Noise</h3>
+<p>Any process that causes the received signal to differ from the transmitted signal.</p>
+<p>These concepts can be used directly for controlled recognition experiments.</p>
+<h2 id="3-the-boundary-of-shannon-information">3. The Boundary of Shannon Information</h2>
+<p>Shannon explicitly separated the engineering problem of selecting and transmitting messages from the semantic question of what those messages mean.</p>
+<p>That boundary is essential for Atlas.</p>
+<p>A perfectly transmitted string can be:</p>
+<ul>
+<li>meaningless to the reader</li>
+<li>written in an unknown language</li>
+<li>logically contradictory</li>
+<li>misleading</li>
+<li>poorly structured</li>
+<li>irrelevant to the reader's task</li>
+</ul>
+<p>Therefore:</p>
+<pre><code class="language-text">Symbol accuracy ≠ comprehension
+Comprehension ≠ judgment
+Judgment ≠ action
+Action ≠ successful outcome
+</code></pre>
+<p>Atlas should not use a single "information transfer" score across all these layers.</p>
+<p>Instead, it should model a chain of conditional success probabilities.</p>
+<h2 id="4-the-atlas-layered-channel-model">4. The Atlas Layered Channel Model</h2>
+<h3 id="layer-1-physical-rendering">Layer 1: Physical rendering</h3>
+<p>Question:</p>
+<blockquote>
+<p>Did the intended visual form appear in the medium?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>pixel density</li>
+<li>rasterization</li>
+<li>ink spread</li>
+<li>stroke dropout</li>
+<li>display contrast</li>
+<li>illumination</li>
+<li>motion</li>
+<li>glare</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>edge preservation</li>
+<li>stroke continuity</li>
+<li>modulation transfer</li>
+<li>rendered-to-source similarity</li>
+</ul>
+<h3 id="layer-2-perceptual-availability">Layer 2: Perceptual availability</h3>
+<p>Question:</p>
+<blockquote>
+<p>Was identity-bearing visual information available to the observer?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>angular size</li>
+<li>retinal eccentricity</li>
+<li>contrast sensitivity</li>
+<li>blur</li>
+<li>exposure duration</li>
+<li>crowding</li>
+<li>masking</li>
+<li>fatigue</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>feature detectability</li>
+<li>contrast threshold</li>
+<li>visual-span profile</li>
+<li>crowding distance</li>
+</ul>
+<h3 id="layer-3-symbol-discrimination">Layer 3: Symbol discrimination</h3>
+<p>Question:</p>
+<blockquote>
+<p>Could the observer distinguish the intended glyph from relevant alternatives?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>pairwise similarity</li>
+<li>feature distinctiveness</li>
+<li>response bias</li>
+<li>alphabet familiarity</li>
+<li>case</li>
+<li>neighboring glyphs</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>confusion matrix</li>
+<li>identification accuracy</li>
+<li>mutual information</li>
+<li>minimum pairwise recognition margin</li>
+</ul>
+<h3 id="layer-4-sequence-recognition">Layer 4: Sequence recognition</h3>
+<p>Question:</p>
+<blockquote>
+<p>Could the observer recover the intended word or symbol sequence?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>letter position</li>
+<li>spacing</li>
+<li>word frequency</li>
+<li>orthographic probability</li>
+<li>parafoveal information</li>
+<li>feature migration</li>
+<li>line position</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>word accuracy</li>
+<li>fixation duration</li>
+<li>regression rate</li>
+<li>sequence edit distance</li>
+<li>reading speed</li>
+</ul>
+<h3 id="layer-5-structural-interpretation">Layer 5: Structural interpretation</h3>
+<p>Question:</p>
+<blockquote>
+<p>Could the observer infer grouping, hierarchy, order, and relationships?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>proximity</li>
+<li>alignment</li>
+<li>heading contrast</li>
+<li>indentation</li>
+<li>line length</li>
+<li>paragraph rhythm</li>
+<li>visual grouping</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>target-location time</li>
+<li>hierarchy reconstruction</li>
+<li>grouping errors</li>
+<li>scan-path efficiency</li>
+</ul>
+<h3 id="layer-6-semantic-comprehension">Layer 6: Semantic comprehension</h3>
+<p>Question:</p>
+<blockquote>
+<p>Did the reader construct the intended meaning?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>vocabulary</li>
+<li>syntax</li>
+<li>domain knowledge</li>
+<li>ambiguity</li>
+<li>working memory</li>
+<li>reading fluency</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>factual recall</li>
+<li>inference accuracy</li>
+<li>summarization quality</li>
+<li>delayed retention</li>
+</ul>
+<h3 id="layer-7-task-and-action">Layer 7: Task and action</h3>
+<p>Question:</p>
+<blockquote>
+<p>Did the communication support the intended decision or behavior?</p>
+</blockquote>
+<p>Variables:</p>
+<ul>
+<li>action visibility</li>
+<li>perceived risk</li>
+<li>trust</li>
+<li>urgency</li>
+<li>competing goals</li>
+<li>feedback</li>
+<li>consequence of error</li>
+</ul>
+<p>Output metric examples:</p>
+<ul>
+<li>task success</li>
+<li>time to action</li>
+<li>error severity</li>
+<li>abandonment</li>
+<li>recovery cost</li>
+</ul>
+<p>This layered model prevents a high score at one level from concealing failure at another.</p>
+<h2 id="5-recognition-can-be-measured-in-bits">5. Recognition Can Be Measured in Bits</h2>
+<p>Letter-recognition experiments commonly present letters at multiple positions or under degraded conditions, record identification responses, and construct confusion matrices.</p>
+<p>A confusion matrix provides:</p>
+<pre><code class="language-text">P(response = j | stimulus = i)
+</code></pre>
+<p>From that distribution, information transmitted can be estimated.</p>
+<p>For an alphabet of 26 equally probable letters, the maximum uncertainty is:</p>
+<pre><code class="language-text">log2(26) ≈ 4.70 bits per letter
+</code></pre>
+<p>Perfect recognition transmits approximately 4.70 bits.</p>
+<p>Complete inability to distinguish the letters transmits approximately 0 bits.</p>
+<p>Partial recognition falls between those values.</p>
+<p>This creates a useful recognition curve:</p>
+<pre><code class="language-text">Noise level
+    ↓
+Confusion matrix
+    ↓
+Mutual information
+    ↓
+Bits retained
+</code></pre>
+<p>The curve is more informative than a single accuracy score because it captures which mistakes occur and how rapidly uncertainty increases.</p>
+<h2 id="6-why-accuracy-alone-is-not-enough">6. Why Accuracy Alone Is Not Enough</h2>
+<p>Two alphabets can have the same average accuracy but different error structures.</p>
+<p>Example:</p>
+<h3 id="system-a">System A</h3>
+<ul>
+<li>Errors are distributed across many alternatives.</li>
+<li>A misread letter gives little useful information.</li>
+</ul>
+<h3 id="system-b">System B</h3>
+<ul>
+<li>Errors occur almost entirely within one predictable pair.</li>
+<li>Most of the alphabet remains reliably distinguished.</li>
+</ul>
+<p>Both might score 90% accuracy, but System B preserves more usable structure and may be easier for language context to correct.</p>
+<p>Accuracy also ignores asymmetry.</p>
+<p>A degraded <code>c</code> may often be reported as <code>e</code>, while a degraded <code>e</code> may not be reported as <code>c</code> at the same rate. Differences in feature visibility, response bias, and familiarity can make confusion directional.</p>
+<p>Atlas should preserve full conditional response distributions rather than collapsing them prematurely.</p>
+<h2 id="7-the-alphabet-as-a-weighted-confusion-network">7. The Alphabet as a Weighted Confusion Network</h2>
+<p>Represent each glyph as a node.</p>
+<p>Represent confusion as a directed edge:</p>
+<pre><code class="language-text">c ──0.18──> e
+e ──0.07──> c
+</code></pre>
+<p>The network changes with:</p>
+<ul>
+<li>size</li>
+<li>blur</li>
+<li>contrast</li>
+<li>eccentricity</li>
+<li>spacing</li>
+<li>neighboring characters</li>
+<li>case</li>
+<li>reader population</li>
+<li>exposure duration</li>
+</ul>
+<p>There is therefore no single permanent "distance" between glyphs.</p>
+<p>There is a family of conditional distances:</p>
+<pre><code class="language-text">D(i, j | typeface, size, noise, context, observer, task)
+</code></pre>
+<p>A complete alphabet model should include:</p>
+<ul>
+<li>average separation</li>
+<li>weakest pair</li>
+<li>number of high-confusion clusters</li>
+<li>asymmetry</li>
+<li>degradation slope</li>
+<li>recovery through context</li>
+<li>frequency-weighted error cost</li>
+</ul>
+<h2 id="8-why-frequency-must-weight-alphabet-fitness">8. Why Frequency Must Weight Alphabet Fitness</h2>
+<p>Letters are not equally frequent.</p>
+<p>Letter pairs are not equally frequent.</p>
+<p>Words are not equally probable.</p>
+<p>Confusing two rare symbols may have little practical consequence. Confusing two high-frequency symbols can affect large amounts of text.</p>
+<p>A practical alphabet score should therefore weight pairwise confusion by exposure:</p>
+<pre><code class="language-text">Expected recognition cost
+=
+Σ P(symbol or sequence)
+× P(confusion)
+× consequence of confusion
+</code></pre>
+<p>For continuous reading, bigram and word frequency may matter more than isolated-letter frequency.</p>
+<p>For safety signage, consequence may dominate frequency.</p>
+<p>For passwords or serial numbers, every character may need nearly equal weight because linguistic context cannot repair the error.</p>
+<p>This leads to a major principle:</p>
+<blockquote>
+<p>The optimal symbol system depends on the probability and cost structure of the messages it carries.</p>
+</blockquote>
+<h2 id="9-language-as-error-correcting-redundancy">9. Language as Error-Correcting Redundancy</h2>
+<p>Natural language is highly redundant.</p>
+<p>Readers use:</p>
+<ul>
+<li>lexical probability</li>
+<li>spelling constraints</li>
+<li>syntax</li>
+<li>semantics</li>
+<li>sentence context</li>
+<li>topic knowledge</li>
+</ul>
+<p>to infer uncertain symbols.</p>
+<p>The word:</p>
+<pre><code class="language-text">t_e
+</code></pre>
+<p>is often recoverable from context even when one letter is missing.</p>
+<p>This does not mean the missing letter is unimportant. It means recognition occurs through combined bottom-up and top-down information.</p>
+<p>Typography can therefore trade some symbol-level efficiency against language-level redundancy, but the trade is task dependent.</p>
+<p>Context is weak or absent in:</p>
+<ul>
+<li>random identifiers</li>
+<li>medication labels</li>
+<li>account numbers</li>
+<li>passwords</li>
+<li>airport codes</li>
+<li>mathematical notation</li>
+<li>unfamiliar names</li>
+<li>short interface labels</li>
+<li>emergency signage</li>
+</ul>
+<p>These tasks require stronger character-level distinction than ordinary prose.</p>
+<h2 id="10-crowding-as-channel-interference">10. Crowding as Channel Interference</h2>
+<p>Crowding is not merely reduced sharpness. A target can remain visible while becoming difficult to identify because neighboring features interfere.</p>
+<p>Research describes several possible effects:</p>
+<ul>
+<li>feature pooling</li>
+<li>feature substitution</li>
+<li>positional uncertainty</li>
+<li>source confusion</li>
+<li>mislocalization of features between neighboring letters</li>
+</ul>
+<p>This resembles inter-symbol interference in communication systems.</p>
+<p>The analogy is useful because the problem is relational:</p>
+<pre><code class="language-text">Target signal
++
+neighboring signals
+→ corrupted feature assignment
+</code></pre>
+<p>But the perceptual mechanism should not be assumed to be identical to electronic interference.</p>
+<p>The important design consequence is:</p>
+<blockquote>
+<p>More visible ink does not necessarily produce more recoverable information.</p>
+</blockquote>
+<p>Adding weight, decoration, or density can increase energy while reducing discriminability.</p>
+<h2 id="11-spacing-is-a-bandwidth-allocation-problem">11. Spacing Is a Bandwidth Allocation Problem</h2>
+<p>Increasing letter spacing can:</p>
+<ul>
+<li>reduce local crowding</li>
+<li>improve separation</li>
+<li>expose boundaries</li>
+</ul>
+<p>But it can also:</p>
+<ul>
+<li>spread letters farther into peripheral vision</li>
+<li>increase line length</li>
+<li>weaken word grouping</li>
+<li>reduce skipping</li>
+<li>increase the number of fixations</li>
+<li>alter rhythm</li>
+</ul>
+<p>This creates a competing-cost function:</p>
+<pre><code class="language-text">Total spacing cost
+=
+crowding cost
++
+eccentricity cost
++
+grouping cost
++
+navigation cost
+</code></pre>
+<p>The optimal point depends on:</p>
+<ul>
+<li>central versus peripheral reading</li>
+<li>print size</li>
+<li>reader vision</li>
+<li>word length</li>
+<li>line width</li>
+<li>display constraints</li>
+</ul>
+<p>Spacing should therefore be modeled as a conditional optimum rather than a monotonic good.</p>
+<h2 id="12-recognition-curves-and-robustness">12. Recognition Curves and Robustness</h2>
+<p>For a glyph, pair, alphabet, or typeface, define a degradation parameter <code>n</code>.</p>
+<p>Examples:</p>
+<ul>
+<li>Gaussian blur radius</li>
+<li>contrast reduction</li>
+<li>angular-size reduction</li>
+<li>added visual clutter</li>
+<li>eccentricity</li>
+<li>exposure-time reduction</li>
+</ul>
+<p>Measure recognition information:</p>
+<pre><code class="language-text">I(n) = mutual information retained at noise level n
+</code></pre>
+<p>A robust system loses information slowly.</p>
+<p>Candidate metrics:</p>
+<h3 id="half-information-threshold">Half-information threshold</h3>
+<p>Noise level at which transmitted information falls to 50% of maximum.</p>
+<h3 id="failure-slope">Failure slope</h3>
+<p>Rate at which information declines near the threshold.</p>
+<h3 id="minimum-pair-threshold">Minimum-pair threshold</h3>
+<p>Noise level at which the weakest important pair becomes unreliable.</p>
+<h3 id="area-under-robustness-curve">Area under robustness curve</h3>
+<p>Total retained information across a defined degradation range.</p>
+<h3 id="context-recovery-gain">Context recovery gain</h3>
+<p>Difference between isolated-symbol and word-context information.</p>
+<h3 id="population-robustness-spread">Population robustness spread</h3>
+<p>Variation in the curve across reader groups.</p>
+<p>This gives a better answer than asking which font is universally most readable.</p>
+<h2 id="13-alphabet-fitness-is-multi-objective">13. Alphabet Fitness Is Multi-Objective</h2>
+<p>A symbol system may need to balance:</p>
+<ul>
+<li>recognition accuracy</li>
+<li>robustness</li>
+<li>visual coherence</li>
+<li>learnability</li>
+<li>writing speed</li>
+<li>production cost</li>
+<li>spatial efficiency</li>
+<li>language compatibility</li>
+<li>cultural continuity</li>
+<li>emotional expression</li>
+</ul>
+<p>Maximum geometric distinctiveness alone could create an alphabet that is:</p>
+<ul>
+<li>slow to learn</li>
+<li>visually chaotic</li>
+<li>difficult to write</li>
+<li>inefficient in space</li>
+<li>incompatible with reader expectations</li>
+</ul>
+<p>Alphabet design is therefore a Pareto optimization problem.</p>
+<p>There may be many non-dominated solutions rather than one universally optimal alphabet.</p>
+<h2 id="14-familiarity-changes-the-channel">14. Familiarity Changes the Channel</h2>
+<p>Expertise alters perception.</p>
+<p>Readers of an alphabet develop:</p>
+<ul>
+<li>tuned feature detectors</li>
+<li>expectations about legal forms</li>
+<li>sensitivity to conventional variations</li>
+<li>efficient mappings from shapes to identities</li>
+<li>stronger use of orthographic context</li>
+</ul>
+<p>A familiar but geometrically imperfect symbol may outperform an unfamiliar but objectively distinct alternative.</p>
+<p>This means the observer is part of the channel.</p>
+<p>A fuller model is:</p>
+<pre><code class="language-text">Performance
+=
+f(signal, noise, symbol system, observer history, context, task)
+</code></pre>
+<p>The typography genome cannot be purely geometric.</p>
+<h2 id="15-can-beauty-be-reduced-to-efficiency">15. Can Beauty Be Reduced to Efficiency?</h2>
+<p>The current evidence does not justify this claim.</p>
+<p>Possible relationships include:</p>
+<ul>
+<li>fluent processing can increase preference</li>
+<li>familiar proportions can feel stable</li>
+<li>balanced differentiation can produce visual coherence</li>
+<li>robust forms can appear purposeful</li>
+<li>predictable rhythm can reduce effort</li>
+</ul>
+<p>But beauty also reflects:</p>
+<ul>
+<li>cultural association</li>
+<li>historical reference</li>
+<li>novelty</li>
+<li>status</li>
+<li>identity</li>
+<li>expressive tension</li>
+<li>deliberate inefficiency</li>
+<li>context and expectation</li>
+</ul>
+<p>Typography sometimes uses friction intentionally:</p>
+<ul>
+<li>ceremonial text</li>
+<li>luxury branding</li>
+<li>horror titles</li>
+<li>protest graphics</li>
+<li>editorial emphasis</li>
+<li>expressive poetry</li>
+</ul>
+<p>A more defensible hypothesis is:</p>
+<blockquote>
+<p>Processing fluency is one contributor to aesthetic response, not its complete cause.</p>
+</blockquote>
+<h2 id="16-a-revised-definition-of-visual-information">16. A Revised Definition of Visual Information</h2>
+<p>Atlas should avoid treating visual information as the amount of detail in an image.</p>
+<p>A dense pattern can contain many physical variations while conveying little useful information.</p>
+<p>A single red octagon can carry substantial task-relevant information for a trained driver.</p>
+<p>A useful Atlas definition is:</p>
+<blockquote>
+<p>Visual information is the reduction of task-relevant uncertainty produced in an observer by a visual signal under defined conditions.</p>
+</blockquote>
+<p>This definition requires five explicit elements:</p>
+<ol>
+<li>Observer</li>
+<li>Alternatives or uncertainty</li>
+<li>Visual signal</li>
+<li>Conditions</li>
+<li>Task</li>
+</ol>
+<p>Without those elements, claims about "more information" are ambiguous.</p>
+<h2 id="17-proposed-atlas-communication-model">17. Proposed Atlas Communication Model</h2>
+<pre><code class="language-text">Intent
+    ↓
+Semantic formulation
+    ↓
+Symbolic encoding
+    ↓
+Typographic and compositional encoding
+    ↓
+Physical rendering
+    ↓
+Environmental and perceptual noise
+    ↓
+Feature extraction
+    ↓
+Symbol recognition
+    ↓
+Sequence and structural reconstruction
+    ↓
+Semantic interpretation
+    ↓
+Decision and action
+    ↓
+Outcome
+</code></pre>
+<p>Feedback can occur at several levels:</p>
+<ul>
+<li>eye movements resample the signal</li>
+<li>regressions revisit uncertain text</li>
+<li>context repairs symbol errors</li>
+<li>interface feedback confirms or rejects action</li>
+<li>learning changes later perception</li>
+</ul>
+<p>The model is therefore dynamic, not a one-way pipeline.</p>
+<hr>
+<h1 id="observations">Observations</h1>
+<h2 id="obs-vit-001">OBS-VIT-001</h2>
+<h3 id="observation">Observation</h3>
+<p>Visual-span research expresses letter-recognition performance as information transmitted in bits derived from confusion patterns across letter positions.</p>
+<h3 id="interpretation">Interpretation</h3>
+<p>The application of information theory to typography is not merely metaphorical at the perceptual-recognition layer.</p>
+<h3 id="confidence">Confidence</h3>
+<p>High</p>
+<h2 id="obs-vit-002">OBS-VIT-002</h2>
+<h3 id="observation-1">Observation</h3>
+<p>Shannon's original framework explicitly brackets meaning from the engineering problem of communication.</p>
+<h3 id="interpretation-1">Interpretation</h3>
+<p>Atlas must not equate character transmission with comprehension, interpretation, or successful action.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High</p>
+<h2 id="obs-vit-003">OBS-VIT-003</h2>
+<h3 id="observation-2">Observation</h3>
+<p>Letter confusion changes under size, blur, contrast, eccentricity, crowding, and spacing.</p>
+<h3 id="interpretation-2">Interpretation</h3>
+<p>Glyph distance is conditional rather than an intrinsic scalar property.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>High</p>
+<h2 id="obs-vit-004">OBS-VIT-004</h2>
+<h3 id="observation-3">Observation</h3>
+<p>Increased letter spacing can reduce crowding without necessarily improving overall reading speed.</p>
+<h3 id="interpretation-3">Interpretation</h3>
+<p>Reducing one source of noise can create costs elsewhere in the reading system.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>High</p>
+<h2 id="obs-vit-005">OBS-VIT-005</h2>
+<h3 id="observation-4">Observation</h3>
+<p>Geometric models using low-order image moments explain a meaningful portion, but not all, of human letter-confusion patterns.</p>
+<h3 id="interpretation-4">Interpretation</h3>
+<p>Computational proxies can narrow the design space, but human recognition cannot yet be replaced by simple geometry alone.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>Moderate</p>
+<h2 id="obs-vit-006">OBS-VIT-006</h2>
+<h3 id="observation-5">Observation</h3>
+<p>Fonts designed to reduce inter-letter similarity can improve some peripheral letter-recognition measures without consistently improving every reading outcome.</p>
+<h3 id="interpretation-5">Interpretation</h3>
+<p>Improving component-level transmission does not guarantee system-level performance.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>Moderate to high</p>
+<h2 id="obs-vit-007">OBS-VIT-007</h2>
+<h3 id="observation-6">Observation</h3>
+<p>Expertise and alphabet familiarity alter perceived letter similarity.</p>
+<h3 id="interpretation-6">Interpretation</h3>
+<p>Recognition-space geometry is partly learned.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>High</p>
+<hr>
+<h1 id="evidence">Evidence</h1>
+<h2 id="evd-vit-001">EVD-VIT-001</h2>
+<h3 id="citation">Citation</h3>
+<p>Shannon, C. E. (1948). <em>A Mathematical Theory of Communication</em>. Bell System Technical Journal, 27, 379–423 and 623–656.</p>
+<h3 id="summary">Summary</h3>
+<p>Defines entropy, redundancy, channel capacity, noise, encoding, and decoding while separating the technical communication problem from semantic meaning.</p>
+<h3 id="supports">Supports</h3>
+<ul>
+<li>LAW-VIT-001</li>
+<li>LAW-VIT-002</li>
+<li>LAW-VIT-009</li>
+</ul>
+<h3 id="challenges">Challenges</h3>
+<ul>
+<li>Claims equating information fidelity with understanding</li>
+</ul>
+<h2 id="evd-vit-002">EVD-VIT-002</h2>
+<h3 id="citation-1">Citation</h3>
+<p>Legge, G. E. et al. Visual-span studies, including <em>The Case for the Visual Span as a Sensory Bottleneck in Reading</em>.</p>
+<h3 id="summary-1">Summary</h3>
+<p>Measures letter recognition across positions and expresses visual-span size using information transmitted in bits. Links visual span to reading performance while retaining important qualifications.</p>
+<h3 id="supports-1">Supports</h3>
+<ul>
+<li>LAW-VIT-003</li>
+<li>LAW-VIT-004</li>
+<li>LAW-VIT-006</li>
+</ul>
+<h3 id="challenges-1">Challenges</h3>
+<ul>
+<li>A single-font ranking detached from viewing position and task</li>
+</ul>
+<h2 id="evd-vit-003">EVD-VIT-003</h2>
+<h3 id="citation-2">Citation</h3>
+<p>Mueller, S. T., and Weidemann, C. T. (2012). <em>Alphabetic letter identification: Effects of perceivability, similarity, and bias</em>.</p>
+<h3 id="summary-2">Summary</h3>
+<p>Shows that identification performance reflects perceivability, similarity, and response bias rather than visual similarity alone.</p>
+<h3 id="supports-2">Supports</h3>
+<ul>
+<li>LAW-VIT-004</li>
+<li>LAW-VIT-005</li>
+<li>LAW-VIT-008</li>
+</ul>
+<h3 id="challenges-2">Challenges</h3>
+<ul>
+<li>Purely geometric models of legibility</li>
+</ul>
+<h2 id="evd-vit-004">EVD-VIT-004</h2>
+<h3 id="citation-3">Citation</h3>
+<p>Liu, L. et al. (2009). <em>Using geometric moments to explain human letter recognition near the acuity limit</em>.</p>
+<h3 id="summary-3">Summary</h3>
+<p>Uses a large confusion dataset and finds that low-order geometric moments account for a substantial portion of human letter confusions for English and Chinese characters.</p>
+<h3 id="supports-3">Supports</h3>
+<ul>
+<li>LAW-VIT-004</li>
+<li>LAW-VIT-007</li>
+</ul>
+<h3 id="challenges-3">Challenges</h3>
+<ul>
+<li>The claim that named anatomy categories are the only useful feature representation</li>
+</ul>
+<h2 id="evd-vit-005">EVD-VIT-005</h2>
+<h3 id="citation-4">Citation</h3>
+<p>Yu, D. et al. (2007). <em>Effect of letter spacing on visual span and reading speed</em>.</p>
+<h3 id="summary-4">Summary</h3>
+<p>Finds competing effects of spacing: reduced crowding versus greater peripheral extent. Reading and visual-span performance do not increase monotonically with spacing.</p>
+<h3 id="supports-4">Supports</h3>
+<ul>
+<li>LAW-VIT-006</li>
+<li>LAW-VIT-010</li>
+</ul>
+<h3 id="challenges-4">Challenges</h3>
+<ul>
+<li>"More spacing is always more readable"</li>
+</ul>
+<h2 id="evd-vit-006">EVD-VIT-006</h2>
+<h3 id="citation-5">Citation</h3>
+<p>Chiu, T. Y. et al. (2023). <em>The role of visual crowding in eye movements during reading</em>.</p>
+<h3 id="summary-5">Summary</h3>
+<p>Examines how crowding affects natural reading, including parafoveal processing and saccade targeting, rather than treating it only as isolated-letter loss.</p>
+<h3 id="supports-5">Supports</h3>
+<ul>
+<li>LAW-VIT-003</li>
+<li>LAW-VIT-006</li>
+</ul>
+<h3 id="challenges-5">Challenges</h3>
+<ul>
+<li>Models that limit crowding to local glyph recognition</li>
+</ul>
+<h2 id="evd-vit-007">EVD-VIT-007</h2>
+<h3 id="citation-6">Citation</h3>
+<p>Coates, D. R. et al. (2021). <em>Feature contingencies when reading letter strings</em>.</p>
+<h3 id="summary-6">Summary</h3>
+<p>Investigates distinctive features and possible feature mislocalization between crowded letters.</p>
+<h3 id="supports-6">Supports</h3>
+<ul>
+<li>LAW-VIT-004</li>
+<li>LAW-VIT-005</li>
+</ul>
+<h3 id="challenges-6">Challenges</h3>
+<ul>
+<li>Static whole-outline models</li>
+</ul>
+<h2 id="evd-vit-008">EVD-VIT-008</h2>
+<h3 id="citation-7">Citation</h3>
+<p>Wiley, R. W. et al. (2016). <em>The effects of alphabet and expertise on letter perception</em>.</p>
+<h3 id="summary-7">Summary</h3>
+<p>Shows that alphabet expertise affects similarity judgments and perceptual organization.</p>
+<h3 id="supports-7">Supports</h3>
+<ul>
+<li>LAW-VIT-008</li>
+</ul>
+<h3 id="challenges-7">Challenges</h3>
+<ul>
+<li>Observer-independent alphabet geometry</li>
+</ul>
+<h2 id="evd-vit-009">EVD-VIT-009</h2>
+<h3 id="citation-8">Citation</h3>
+<p>Bernard, J. B. et al. (2016). <em>A new font, specifically designed for peripheral vision, improves peripheral letter and word recognition, but not eye-mediated reading performance</em>.</p>
+<h3 id="summary-8">Summary</h3>
+<p>Reducing inter-letter similarity improved several recognition measures, but improvements did not transfer uniformly to reading performance.</p>
+<h3 id="supports-8">Supports</h3>
+<ul>
+<li>LAW-VIT-002</li>
+<li>LAW-VIT-003</li>
+<li>LAW-VIT-011</li>
+</ul>
+<h3 id="challenges-8">Challenges</h3>
+<ul>
+<li>The assumption that better glyph recognition automatically produces faster reading</li>
+</ul>
+<hr>
+<h1 id="candidate-laws">Candidate Laws</h1>
+<h2 id="law-vit-001-layer-separation">LAW-VIT-001: Layer Separation</h2>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>Reliable visual communication requires separate measurement of physical signal, perception, recognition, structure, meaning, and action.</p>
+<h3 id="prediction">Prediction</h3>
+<p>Interventions that improve one layer will sometimes leave later layers unchanged or make them worse.</p>
+<h3 id="supporting-evidence">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-001</li>
+<li>EVD-VIT-009</li>
+</ul>
+<h3 id="counter-evidence">Counter Evidence</h3>
+<p>None identified against the general layered claim; the specific boundaries require refinement.</p>
+<h3 id="confidence-7">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-002-semantic-non-equivalence">LAW-VIT-002: Semantic Non-Equivalence</h2>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p>The amount of visually transmitted symbol information does not determine comprehension or usefulness.</p>
+<h3 id="prediction-1">Prediction</h3>
+<p>Two settings with equal character-recognition information can produce different comprehension and task performance.</p>
+<h3 id="supporting-evidence-1">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-001</li>
+<li>EVD-VIT-009</li>
+</ul>
+<h3 id="counter-evidence-1">Counter Evidence</h3>
+<p>Strong correlations may appear in threshold-limited conditions, but correlation would not establish equivalence.</p>
+<h3 id="confidence-8">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-003-bottleneck-dominance">LAW-VIT-003: Bottleneck Dominance</h2>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p>Overall communication performance is constrained most strongly by the weakest active layer.</p>
+<h3 id="prediction-2">Prediction</h3>
+<p>Improving a non-limiting layer will produce little system-level benefit until the dominant bottleneck is addressed.</p>
+<h3 id="supporting-evidence-2">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-002</li>
+<li>EVD-VIT-006</li>
+<li>EVD-VIT-009</li>
+</ul>
+<h3 id="counter-evidence-2">Counter Evidence</h3>
+<p>Multiple weak layers may interact rather than form one clean bottleneck.</p>
+<h3 id="confidence-9">Confidence</h3>
+<p>Moderate</p>
+<h2 id="law-vit-004-conditional-distinctiveness">LAW-VIT-004: Conditional Distinctiveness</h2>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p>Symbol distinctiveness is a conditional relationship between alternatives, observer, context, and degradation rather than a fixed property of a glyph.</p>
+<h3 id="prediction-3">Prediction</h3>
+<p>Pairwise confusion rankings will change across viewing conditions and reader populations.</p>
+<h3 id="supporting-evidence-3">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-003</li>
+<li>EVD-VIT-004</li>
+<li>EVD-VIT-007</li>
+<li>EVD-VIT-008</li>
+</ul>
+<h3 id="counter-evidence-3">Counter Evidence</h3>
+<p>Some confusion families may remain stable across wide condition ranges.</p>
+<h3 id="confidence-10">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-005-structured-error">LAW-VIT-005: Structured Error</h2>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p>Visual recognition noise produces patterned, asymmetric errors rather than uniform random substitution.</p>
+<h3 id="prediction-4">Prediction</h3>
+<p>Full confusion matrices will provide more predictive value than overall accuracy.</p>
+<h3 id="supporting-evidence-4">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-003</li>
+<li>EVD-VIT-004</li>
+<li>EVD-VIT-007</li>
+</ul>
+<h3 id="counter-evidence-4">Counter Evidence</h3>
+<p>At extreme degradation, responses may approach chance and lose structure.</p>
+<h3 id="confidence-11">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-006-interference-tradeoff">LAW-VIT-006: Interference Tradeoff</h2>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>Reducing local interference can increase other costs such as peripheral extent, grouping loss, or navigation effort.</p>
+<h3 id="prediction-5">Prediction</h3>
+<p>Spacing and separation interventions will have non-monotonic performance curves.</p>
+<h3 id="supporting-evidence-5">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-002</li>
+<li>EVD-VIT-005</li>
+<li>EVD-VIT-006</li>
+</ul>
+<h3 id="counter-evidence-5">Counter Evidence</h3>
+<p>Specific impaired populations or tasks may benefit across a larger monotonic range.</p>
+<h3 id="confidence-12">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-007-degradation-robustness">LAW-VIT-007: Degradation Robustness</h2>
+<h3 id="hypothesis-6">Hypothesis</h3>
+<p>A useful measure of symbol-system quality is the rate at which task-relevant information is lost as controlled noise increases.</p>
+<h3 id="prediction-6">Prediction</h3>
+<p>Area under the information-retention curve will distinguish systems that have similar performance under ideal conditions.</p>
+<h3 id="supporting-evidence-6">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-002</li>
+<li>EVD-VIT-004</li>
+</ul>
+<h3 id="counter-evidence-6">Counter Evidence</h3>
+<p>The choice and distribution of noise conditions may dominate the resulting ranking.</p>
+<h3 id="confidence-13">Confidence</h3>
+<p>Moderate</p>
+<h2 id="law-vit-008-learned-channel">LAW-VIT-008: Learned Channel</h2>
+<h3 id="hypothesis-7">Hypothesis</h3>
+<p>The observer's perceptual history changes the effective communication channel.</p>
+<h3 id="prediction-7">Prediction</h3>
+<p>Expert and novice confusion networks will differ even when physical stimuli are identical.</p>
+<h3 id="supporting-evidence-7">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-003</li>
+<li>EVD-VIT-008</li>
+</ul>
+<h3 id="counter-evidence-7">Counter Evidence</h3>
+<p>Some low-level effects may remain largely independent of expertise.</p>
+<h3 id="confidence-14">Confidence</h3>
+<p>High</p>
+<h2 id="law-vit-009-task-weighted-information">LAW-VIT-009: Task-Weighted Information</h2>
+<h3 id="hypothesis-8">Hypothesis</h3>
+<p>Visual information should be measured as reduction of task-relevant uncertainty rather than physical detail or unweighted symbol accuracy.</p>
+<h3 id="prediction-8">Prediction</h3>
+<p>Frequency- and consequence-weighted metrics will predict real-world errors better than equal-weight alphabet scores.</p>
+<h3 id="supporting-evidence-8">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-001</li>
+<li>theoretical consequence of confusion and language distributions</li>
+</ul>
+<h3 id="counter-evidence-8">Counter Evidence</h3>
+<p>Direct empirical validation across tasks is still needed.</p>
+<h3 id="confidence-15">Confidence</h3>
+<p>Moderate</p>
+<h2 id="law-vit-010-redundancy-allocation">LAW-VIT-010: Redundancy Allocation</h2>
+<h3 id="hypothesis-9">Hypothesis</h3>
+<p>Effective visual systems distribute redundancy across glyph shape, spacing, word structure, hierarchy, and context.</p>
+<h3 id="prediction-9">Prediction</h3>
+<p>Removing redundancy at one layer will increase reliance on other layers and disproportionately harm contexts where those layers are absent.</p>
+<h3 id="supporting-evidence-9">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-002</li>
+<li>EVD-VIT-005</li>
+</ul>
+<h3 id="counter-evidence-9">Counter Evidence</h3>
+<p>The relative contribution of each redundancy source remains uncertain.</p>
+<h3 id="confidence-16">Confidence</h3>
+<p>Moderate</p>
+<h2 id="law-vit-011-local-to-system-non-transfer">LAW-VIT-011: Local-to-System Non-Transfer</h2>
+<h3 id="hypothesis-10">Hypothesis</h3>
+<p>Improvement in isolated symbol recognition does not guarantee improvement in continuous reading or task performance.</p>
+<h3 id="prediction-10">Prediction</h3>
+<p>Some fonts optimized for pairwise distinctiveness will improve acuity or peripheral recognition without increasing reading speed.</p>
+<h3 id="supporting-evidence-10">Supporting Evidence</h3>
+<ul>
+<li>EVD-VIT-009</li>
+</ul>
+<h3 id="counter-evidence-10">Counter Evidence</h3>
+<p>Other optimizations may transfer when the improved component is the dominant bottleneck.</p>
+<h3 id="confidence-17">Confidence</h3>
+<p>High</p>
+<hr>
+<h1 id="proposed-metrics">Proposed Metrics</h1>
+<h2 id="met-vit-001-recognition-information">MET-VIT-001: Recognition Information</h2>
+<p>Mutual information between presented and reported symbols.</p>
+<p>Unit: bits</p>
+<h2 id="met-vit-002-information-retention-ratio">MET-VIT-002: Information Retention Ratio</h2>
+<pre><code class="language-text">observed recognition information / maximum possible information
+</code></pre>
+<p>Unit: proportion</p>
+<h2 id="met-vit-003-robustness-area">MET-VIT-003: Robustness Area</h2>
+<p>Area under the information-retention curve across a specified degradation distribution.</p>
+<p>Unit: condition-weighted bits</p>
+<h2 id="met-vit-004-critical-information-threshold">MET-VIT-004: Critical Information Threshold</h2>
+<p>Noise level at which recognition information falls below a task-defined minimum.</p>
+<h2 id="met-vit-005-weakest-pair-margin">MET-VIT-005: Weakest-Pair Margin</h2>
+<p>Performance of the most consequential high-confusion pair.</p>
+<h2 id="met-vit-006-context-recovery-gain">MET-VIT-006: Context Recovery Gain</h2>
+<p>Difference between isolated-symbol and contextual recognition information.</p>
+<h2 id="met-vit-007-frequency-weighted-confusion-cost">MET-VIT-007: Frequency-Weighted Confusion Cost</h2>
+<p>Pairwise error probability weighted by symbol or sequence occurrence.</p>
+<h2 id="met-vit-008-consequence-weighted-confusion-cost">MET-VIT-008: Consequence-Weighted Confusion Cost</h2>
+<p>Pairwise error probability weighted by the real-world severity of substitution.</p>
+<h2 id="met-vit-009-layer-transfer-ratio">MET-VIT-009: Layer Transfer Ratio</h2>
+<p>System-level improvement divided by component-level improvement.</p>
+<p>A low ratio indicates that local gains did not transfer.</p>
+<h2 id="met-vit-010-adaptation-spread">MET-VIT-010: Adaptation Spread</h2>
+<p>Variation in performance across observer groups, devices, environments, or user overrides.</p>
+<hr>
+<h1 id="research-program">Research Program</h1>
+<h2 id="phase-1-reanalyze-existing-confusion-data">Phase 1: Reanalyze Existing Confusion Data</h2>
+<p>Use published confusion matrices where available.</p>
+<p>Calculate:</p>
+<ul>
+<li>mutual information</li>
+<li>entropy remaining</li>
+<li>asymmetric pairwise errors</li>
+<li>graph clusters</li>
+<li>weakest-pair margins</li>
+<li>frequency-weighted cost</li>
+</ul>
+<p>This requires no new human experiment.</p>
+<h2 id="phase-2-computational-degradation">Phase 2: Computational Degradation</h2>
+<p>Render open-source typefaces under controlled transformations:</p>
+<ul>
+<li>blur</li>
+<li>contrast reduction</li>
+<li>downsampling</li>
+<li>stroke erosion</li>
+<li>ink spread</li>
+<li>peripheral-vision approximations</li>
+<li>neighboring-letter crowding</li>
+</ul>
+<p>Use multiple machine observers as proxies, while explicitly treating them as hypothesis generators rather than human replacements.</p>
+<h2 id="phase-3-language-aware-modeling">Phase 3: Language-Aware Modeling</h2>
+<p>Weight glyph and pair confusions using:</p>
+<ul>
+<li>letter frequency</li>
+<li>bigram frequency</li>
+<li>word frequency</li>
+<li>task-specific vocabularies</li>
+<li>consequence matrices</li>
+</ul>
+<p>Compare ordinary prose against low-context tasks such as serial numbers and medical labels.</p>
+<h2 id="phase-4-cross-layer-transfer-review">Phase 4: Cross-Layer Transfer Review</h2>
+<p>Collect studies that separately report:</p>
+<ul>
+<li>letter recognition</li>
+<li>word recognition</li>
+<li>reading speed</li>
+<li>eye movements</li>
+<li>comprehension</li>
+<li>task completion</li>
+</ul>
+<p>Estimate when component improvements transfer and when they do not.</p>
+<h2 id="phase-5-atlas-visual-channel-simulator">Phase 5: Atlas Visual Channel Simulator</h2>
+<p>Build a system that accepts:</p>
+<pre><code class="language-yaml">observer:
+  vision_model:
+  familiarity:
+  language:
+task:
+  type:
+  vocabulary:
+  error_consequence:
+environment:
+  distance:
+  contrast:
+  glare:
+  display:
+typography:
+  typeface:
+  size:
+  spacing:
+  weight:
+  line_length:
+</code></pre>
+<p>and returns predicted risk rather than a universal readability score.</p>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<ul>
+<li>Which published letter-confusion datasets provide complete trial-level or matrix data suitable for reanalysis?</li>
+<li>Which degradation transformations best approximate human perceptual noise without falsely claiming biological fidelity?</li>
+<li>Can a small set of geometric or neural features predict confusion-network changes across multiple fonts?</li>
+<li>How much practical predictive improvement comes from frequency weighting?</li>
+<li>What is the best metric for a task where one rare error is catastrophic?</li>
+<li>How should Atlas combine mutual information with response time?</li>
+<li>Can hierarchy and grouping be represented with confusion-style uncertainty models?</li>
+<li>What forms of visual redundancy improve comprehension without adding clutter?</li>
+<li>Does perceptual fluency predict aesthetic preference after controlling for familiarity?</li>
+<li>Where does deliberate visual friction improve attention, memory, or meaning?</li>
+<li>Are mature alphabets near local optima, or primarily locked in by cultural and educational switching costs?</li>
+<li>How should handwriting and production efficiency enter alphabet fitness?</li>
+<li>Can visual channel capacity be estimated for complex layouts, or only for narrowly defined symbol tasks?</li>
+</ul>
+<hr>
+<h1 id="next-actions">Next Actions</h1>
+<ul>
+<li>Obtain complete published letter-confusion matrices and visual-span datasets.</li>
+<li>Build a standard schema for stimulus, condition, response, and observer metadata.</li>
+<li>Calculate information-theoretic metrics from at least two existing datasets.</li>
+<li>Create a degradation benchmark for a small representative typeface set.</li>
+<li>Separate prose, interface-label, serial-number, and safety-critical task models.</li>
+<li>Add visual-information nodes to the Project Atlas genome map.</li>
+<li>Review research on processing fluency and aesthetics without assuming functional efficiency explains beauty.</li>
+<li>Investigate sign and icon comprehension as a parallel symbol system.</li>
+</ul>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-07-18</td>
+<td>OpenAI</td>
+<td>Initial research foundation connecting typography, information theory, visual perception, and task performance.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="agent-instructions">Agent Instructions</h1>
+<p>When creating or modifying this document:</p>
+<ol>
+<li>Separate observation from interpretation.</li>
+<li>Never strengthen a conclusion beyond the available evidence.</li>
+<li>Preserve contradictory findings.</li>
+<li>Prefer measurable variables over subjective descriptions.</li>
+<li>Reference candidate laws and genome nodes whenever possible.</li>
+<li>Use stable IDs for observations, evidence, laws, experiments, metrics, and case studies.</li>
+<li>Record assumptions explicitly.</li>
+<li>Record confidence explicitly.</li>
+<li>Keep the YAML header valid.</li>
+<li>Do not delete revision history; append to it.</li>
+<li>Do not use Shannon information as a synonym for meaning or comprehension.</li>
+<li>State the observer, task, alternatives, and viewing conditions for every visual-information claim.</li>
+<li>Preserve full confusion structures where possible rather than reporting only accuracy.</li>
+<li>Treat computational observers as screening tools unless validated against human data.</li>
+<li>Distinguish component-level improvements from system-level outcomes.</li>
+</ol></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

@@ -1,0 +1,914 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Component Library Foundations Research Report | Visual Engineering Research</title><meta name="description" content="The evidence supports a hybrid, native-first component library rather than a
+web-component-only architecture. Semantic HTML can remain relatively stable
+across substantial visual redesign, but only when markup represents durable
+information relationships rather than current visual groupings. Different
+categories require different ownership and encapsulation strategies. Native
+controls should remain native unless measurable requirements cannot be met;
+light DOM is favored for content-rich, composition-sensitive structures;
+Shadow DOM is favored for tightly bounded behavioral widgets whose internal
+invariants require protection. CSS should own presentation and contextual
+layout, while component logic owns only intrinsic behavior and state. Design
+tokens should encode decisions through a layered dependency model, but must
+not become a universal escape-hatch API. Implementation should begin only
+after a small set of targeted validation experiments confirms these rules in
+the project’s actual product contexts."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span>  </p> <h1 data-pagefind-meta="title">Component Library Foundations Research Report</h1> <p class="lede" data-pagefind-meta="summary">The evidence supports a hybrid, native-first component library rather than a
+web-component-only architecture. Semantic HTML can remain relatively stable
+across substantial visual redesign, but only when markup represents durable
+information relationships rather than current visual groupings. Different
+categories require different ownership and encapsulation strategies. Native
+controls should remain native unless measurable requirements cannot be met;
+light DOM is favored for content-rich, composition-sensitive structures;
+Shadow DOM is favored for tightly bounded behavioral widgets whose internal
+invariants require protection. CSS should own presentation and contextual
+layout, while component logic owns only intrinsic behavior and state. Design
+tokens should encode decisions through a layered dependency model, but must
+not become a universal escape-hatch API. Implementation should begin only
+after a small set of targeted validation experiments confirms these rules in
+the project’s actual product contexts.</p> <dl class="metadata-panel">  <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">research-baseline</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/design-library/research-report/component-library-foundations-research-report.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#component-library-foundations-research-report">Component Library Foundations Research Report</a></li><li><a href="#purpose">Purpose</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#final-research-position">Final research position</a></li><li><a href="#findings-with-the-highest-confidence">Findings with the highest confidence</a></li><li><a href="#f-001-native-controls-must-be-the-default">F-001: Native controls must be the default</a></li><li><a href="#f-002-semantic-stability-is-conditional-not-absolute">F-002: Semantic stability is conditional, not absolute</a></li><li><a href="#f-003-encapsulation-must-vary-by-component-category">F-003: Encapsulation must vary by component category</a></li><li><a href="#f-004-layout-ownership-is-the-major-coupling-boundary">F-004: Layout ownership is the major coupling boundary</a></li><li><a href="#f-005-tokens-are-a-dependency-system-not-a-bag-of-variables">F-005: Tokens are a dependency system, not a bag of variables</a></li><li><a href="#f-006-accessibility-cannot-be-contained-entirely-inside-a-component">F-006: Accessibility cannot be “contained” entirely inside a component</a></li><li><a href="#f-007-cross-framework-interoperability-is-achievable-but-incomplete-as-a-definition-of-reuse">F-007: Cross-framework interoperability is achievable but incomplete as a definition of reuse</a></li><li><a href="#f-008-visual-redesignability-depends-more-on-semantic-and-css-boundaries-than-on-custom-elements">F-008: Visual redesignability depends more on semantic and CSS boundaries than on custom elements</a></li><li><a href="#assumptions-weakened-or-rejected">Assumptions weakened or rejected</a></li><li><a href="#recommended-implementation-posture">Recommended implementation posture</a></li><li><a href="#research-method">Research Method</a></li><li><a href="#foundational-model">Foundational Model</a></li><li><a href="#the-library-should-not-be-one-thing">The library should not be one thing</a></li><li><a href="#proposed-research-classification">Proposed research classification</a></li><li><a href="#c1-native-semantic-element">C1 — Native semantic element</a></li><li><a href="#c2-styled-native-convention">C2 — Styled native convention</a></li><li><a href="#c3-progressive-behavioral-enhancement">C3 — Progressive behavioral enhancement</a></li><li><a href="#c4-bounded-behavioral-widget">C4 — Bounded behavioral widget</a></li><li><a href="#c5-semantic-composite">C5 — Semantic composite</a></li><li><a href="#c6-composition-pattern">C6 — Composition pattern</a></li><li><a href="#c7-product-composition">C7 — Product composition</a></li><li><a href="#c8-experimental-or-rejected-abstraction">C8 — Experimental or rejected abstraction</a></li><li><a href="#assumption-registry">Assumption Registry</a></li><li><a href="#a-001-semantic-html-can-remain-stable-through-substantial-redesign">A-001: Semantic HTML can remain stable through substantial redesign</a></li><li><a href="#a-002-most-visual-redesign-should-be-possible-in-css">A-002: Most visual redesign should be possible in CSS</a></li><li><a href="#a-003-web-components-should-form-the-center-of-the-library">A-003: Web Components should form the center of the library</a></li><li><a href="#a-004-shadow-dom-should-be-the-default-encapsulation-strategy">A-004: Shadow DOM should be the default encapsulation strategy</a></li><li><a href="#a-005-design-tokens-make-radical-redesign-inexpensive">A-005: Design tokens make radical redesign inexpensive</a></li><li><a href="#a-006-component-owned-layout-improves-reuse">A-006: Component-owned layout improves reuse</a></li><li><a href="#a-007-small-components-maximize-composability">A-007: Small components maximize composability</a></li><li><a href="#a-008-one-highly-flexible-component-is-better-than-several-specialized-components">A-008: One highly flexible component is better than several specialized components</a></li><li><a href="#a-009-accessibility-can-be-guaranteed-by-the-library">A-009: Accessibility can be guaranteed by the library</a></li><li><a href="#a-010-themes-should-be-able-to-change-every-visual-property">A-010: Themes should be able to change every visual property</a></li><li><a href="#a-011-cross-context-reuse-should-include-marketing-applications-dashboards-and-reports">A-011: Cross-context reuse should include marketing, applications, dashboards, and reports</a></li><li><a href="#a-012-server-rendering-and-no-javascript-operation-can-be-deferred">A-012: Server rendering and no-JavaScript operation can be deferred</a></li><li><a href="#architectural-comparisons">Architectural Comparisons</a></li><li><a href="#native-html-versus-custom-elements">Native HTML versus custom elements</a></li><li><a href="#native-html-advantages">Native HTML advantages</a></li><li><a href="#native-html-limits">Native HTML limits</a></li><li><a href="#custom-element-advantages">Custom element advantages</a></li><li><a href="#custom-element-costs">Custom element costs</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#light-dom-versus-shadow-dom">Light DOM versus Shadow DOM</a></li><li><a href="#light-dom-is-favored-when">Light DOM is favored when</a></li><li><a href="#shadow-dom-is-favored-when">Shadow DOM is favored when</a></li><li><a href="#hybrid-rule">Hybrid rule</a></li><li><a href="#slots-versus-structured-children">Slots versus structured children</a></li><li><a href="#slots">Slots</a></li><li><a href="#structured-children">Structured children</a></li><li><a href="#configuration">Configuration</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#variants-versus-composition">Variants versus composition</a></li><li><a href="#utility-css-versus-semantic-css">Utility CSS versus semantic CSS</a></li><li><a href="#global-css-versus-component-css">Global CSS versus component CSS</a></li><li><a href="#global-css-should-own">Global CSS should own</a></li><li><a href="#component-css-should-own">Component CSS should own</a></li><li><a href="#page-css-should-own">Page CSS should own</a></li><li><a href="#design-system-evidence">Design-System Evidence</a></li><li><a href="#material">Material</a></li><li><a href="#carbon">Carbon</a></li><li><a href="#spectrum">Spectrum</a></li><li><a href="#fast">FAST</a></li><li><a href="#shoelace-and-similar-web-component-libraries">Shoelace and similar Web Component libraries</a></li><li><a href="#open-props-and-utility-oriented-systems">Open Props and utility-oriented systems</a></li><li><a href="#cross-system-pattern">Cross-system pattern</a></li><li><a href="#accessibility-foundation">Accessibility Foundation</a></li><li><a href="#native-first-rule">Native-first rule</a></li><li><a href="#component-obligations">Component obligations</a></li><li><a href="#consumer-obligations">Consumer obligations</a></li><li><a href="#architectural-implication">Architectural implication</a></li><li><a href="#visual-reordering-rule">Visual reordering rule</a></li><li><a href="#styling-and-token-foundation">Styling and Token Foundation</a></li><li><a href="#token-hierarchy">Token hierarchy</a></li><li><a href="#reference-values">Reference values</a></li><li><a href="#system-or-semantic-decisions">System or semantic decisions</a></li><li><a href="#context-decisions">Context decisions</a></li><li><a href="#component-decisions">Component decisions</a></li><li><a href="#dependency-rules">Dependency rules</a></li><li><a href="#token-admission-test">Token admission test</a></li><li><a href="#themes">Themes</a></li><li><a href="#composition-foundation">Composition Foundation</a></li><li><a href="#intrinsic-versus-contextual-layout">Intrinsic versus contextual layout</a></li><li><a href="#intrinsic-layout">Intrinsic layout</a></li><li><a href="#contextual-layout">Contextual layout</a></li><li><a href="#external-margin-rule">External margin rule</a></li><li><a href="#container-response">Container response</a></li><li><a href="#fragmentation-warning">Fragmentation warning</a></li><li><a href="#maintainability-model">Maintainability Model</a></li><li><a href="#flexibility-is-not-free">Flexibility is not free</a></li><li><a href="#complexity-indicators">Complexity indicators</a></li><li><a href="#split-signals">Split signals</a></li><li><a href="#merge-signals">Merge signals</a></li><li><a href="#replacement-test">Replacement test</a></li><li><a href="#failed-hypotheses-and-dangerous-directions">Failed Hypotheses and Dangerous Directions</a></li><li><a href="#fh-001-generic-card-as-a-foundational-component">FH-001: Generic card as a foundational component</a></li><li><a href="#fh-002-encapsulate-all-internals-to-guarantee-safety">FH-002: Encapsulate all internals to guarantee safety</a></li><li><a href="#fh-003-expose-a-custom-property-for-every-style-decision">FH-003: Expose a custom property for every style decision</a></li><li><a href="#fh-004-one-component-plus-enough-variants-avoids-duplication">FH-004: One component plus enough variants avoids duplication</a></li><li><a href="#fh-005-stable-dom-is-an-absolute-success-criterion">FH-005: Stable DOM is an absolute success criterion</a></li><li><a href="#fh-006-design-system-consistency-is-always-beneficial">FH-006: Design-system consistency is always beneficial</a></li><li><a href="#evidence-registry">Evidence Registry</a></li><li><a href="#evd-001-custom-elements-are-a-platform-defined-extension-mechanism">EVD-001 — Custom elements are a platform-defined extension mechanism</a></li><li><a href="#evd-002-form-associated-custom-elements-exist-but-require-deliberate-implementation">EVD-002 — Form-associated custom elements exist but require deliberate implementation</a></li><li><a href="#evd-003-native-control-replacements-commonly-lose-reliability-and-accessibility">EVD-003 — Native-control replacements commonly lose reliability and accessibility</a></li><li><a href="#evd-004-declarative-shadow-dom-improves-server-rendering">EVD-004 — Declarative Shadow DOM improves server rendering</a></li><li><a href="#evd-005-shadow-dom-intentionally-creates-a-style-and-dom-boundary">EVD-005 — Shadow DOM intentionally creates a style and DOM boundary</a></li><li><a href="#evd-006-cross-root-id-relationships-have-explicit-constraints">EVD-006 — Cross-root ID relationships have explicit constraints</a></li><li><a href="#evd-007-wcag-requirements-include-behavior-beyond-component-appearance">EVD-007 — WCAG requirements include behavior beyond component appearance</a></li><li><a href="#evd-008-tokens-are-treated-as-reusable-design-decisions-across-mature-systems">EVD-008 — Tokens are treated as reusable design decisions across mature systems</a></li><li><a href="#evd-009-token-migrations-can-create-broad-blast-radius">EVD-009 — Token migrations can create broad blast radius</a></li><li><a href="#evd-010-themes-can-be-locally-scoped">EVD-010 — Themes can be locally scoped</a></li><li><a href="#evd-011-open-ui-decomposes-common-controls-into-conceptual-parts-before-standardization">EVD-011 — Open UI decomposes common controls into conceptual parts before standardization</a></li><li><a href="#evd-012-production-systems-distinguish-foundations-from-components">EVD-012 — Production systems distinguish foundations from components</a></li><li><a href="#candidate-architectural-laws">Candidate Architectural Laws</a></li><li><a href="#law-001-native-capability-conservation">LAW-001 — Native Capability Conservation</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#counterevidence-that-would-weaken-it">Counterevidence that would weaken it</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-002-semantic-stability-boundary">LAW-002 — Semantic Stability Boundary</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-003-intrinsic-layout-ownership">LAW-003 — Intrinsic Layout Ownership</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-004-selective-encapsulation">LAW-004 — Selective Encapsulation</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-005-variation-surface-conservation">LAW-005 — Variation Surface Conservation</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-006-accessibility-contract-distribution">LAW-006 — Accessibility Contract Distribution</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-007-reuse-specificity-gradient">LAW-007 — Reuse Specificity Gradient</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#required-pre-implementation-research-experiments">Required Pre-Implementation Research Experiments</a></li><li><a href="#exp-001-semantic-durability-mapping">EXP-001 — Semantic durability mapping</a></li><li><a href="#exp-002-native-capability-inventory">EXP-002 — Native capability inventory</a></li><li><a href="#exp-003-encapsulation-decision-matrix">EXP-003 — Encapsulation decision matrix</a></li><li><a href="#exp-004-token-dependency-simulation">EXP-004 — Token dependency simulation</a></li><li><a href="#exp-005-accessibility-responsibility-matrix">EXP-005 — Accessibility responsibility matrix</a></li><li><a href="#exp-006-cross-framework-authoring-study">EXP-006 — Cross-framework authoring study</a></li><li><a href="#exp-007-governance-and-evolution-study">EXP-007 — Governance and evolution study</a></li><li><a href="#research-to-implementation-gate">Research-to-Implementation Gate</a></li><li><a href="#recommended-foundation">Recommended Foundation</a></li><li><a href="#architectural-stance">Architectural stance</a></li><li><a href="#component-boundaries">Component boundaries</a></li><li><a href="#dom-strategy">DOM strategy</a></li><li><a href="#styling-strategy">Styling strategy</a></li><li><a href="#token-strategy">Token strategy</a></li><li><a href="#accessibility-strategy">Accessibility strategy</a></li><li><a href="#composition-strategy">Composition strategy</a></li><li><a href="#governance-strategy">Governance strategy</a></li><li><a href="#remaining-unknowns">Remaining Unknowns</a></li><li><a href="#recommended-next-research-areas">Recommended Next Research Areas</a></li><li><a href="#final-recommendation">Final Recommendation</a></li><li><a href="#adopt-with-constraints-hybrid-native-first-foundation">Adopt with constraints: hybrid native-first foundation</a></li><li><a href="#references">References</a></li><li><a href="#revision-history">Revision History</a></li> </ol> </aside> <section class="document-body"><h1 id="component-library-foundations-research-report">Component Library Foundations Research Report</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This report determines what the future component library should be built upon. It does not define production APIs, names, markup, tokens, or components. Its purpose is to reduce the chance of creating architectural commitments that later prevent visual redesign, accessibility, replacement, or cross-product reuse.</p>
+<p>The central question is not whether Web Components work. They do. The central question is where custom elements, native HTML, CSS, JavaScript behavior, design tokens, and composition each create the most durable boundary.</p>
+<hr>
+<h1 id="executive-summary">Executive Summary</h1>
+<h2 id="final-research-position">Final research position</h2>
+<p>The most defensible foundation is a <strong>hybrid, native-first, category-specific architecture</strong>.</p>
+<p>A single universal component model is not supported by the evidence. The platform itself distinguishes semantic elements, form controls, custom elements, shadow trees, slots, accessibility APIs, and styling mechanisms because these solve different classes of problems. Mature design systems similarly separate foundations, tokens, components, patterns, and product-level compositions.</p>
+<p>The future library should therefore be built on five architectural strata:</p>
+<ol>
+<li><strong>Native semantic HTML</strong> for document meaning and browser-provided interaction.</li>
+<li><strong>Styling conventions and compositions</strong> for visual presentation and page-level relationships.</li>
+<li><strong>Behavioral enhancement</strong> for reusable interaction that the platform does not provide adequately.</li>
+<li><strong>Semantic or composite structures</strong> only where a stable domain relationship has been demonstrated across multiple contexts.</li>
+<li><strong>Custom elements with selective encapsulation</strong> where lifecycle, state coordination, replacement boundaries, or implementation protection provide measurable value.</li>
+</ol>
+<h2 id="findings-with-the-highest-confidence">Findings with the highest confidence</h2>
+<h3 id="f-001-native-controls-must-be-the-default">F-001: Native controls must be the default</h3>
+<p>Native controls carry semantics, keyboard behavior, form participation, accessibility mappings, mobile behavior, and browser integration that custom replacements must reconstruct. Open UI’s research repeatedly identifies reduced accessibility, reliability, and performance in custom replacements for selects, comboboxes, and ranges. The correct burden of proof is therefore reversed: a team must justify replacing a native element, not justify keeping it.</p>
+<h3 id="f-002-semantic-stability-is-conditional-not-absolute">F-002: Semantic stability is conditional, not absolute</h3>
+<p>HTML can survive radical visual redesign when it expresses durable content relationships. It fails when it encodes a particular layout, prominence scheme, or product context. “Stable markup” should mean stable while the meaning remains stable, not immutable regardless of what the design reveals.</p>
+<h3 id="f-003-encapsulation-must-vary-by-component-category">F-003: Encapsulation must vary by component category</h3>
+<p>Shadow DOM provides genuine protection from accidental external CSS and DOM manipulation. That protection also creates boundaries around styling, ID references, querying, content relationships, debugging, testing, and global composition. Content-rich structures and components whose visual hierarchy must remain open to experimentation generally favor light DOM. Mechanically bounded widgets with protected interaction invariants more often justify Shadow DOM.</p>
+<h3 id="f-004-layout-ownership-is-the-major-coupling-boundary">F-004: Layout ownership is the major coupling boundary</h3>
+<p>Most reusable components should not own their placement, external spacing, width, or page-level arrangement. A component should own only layout intrinsic to its semantics or interaction. Parent compositions should own relationships among siblings. Confusing intrinsic and contextual layout is a primary source of modes such as <code>horizontal</code>, <code>dashboard</code>, <code>marketing</code>, and <code>compact</code>.</p>
+<h3 id="f-005-tokens-are-a-dependency-system-not-a-bag-of-variables">F-005: Tokens are a dependency system, not a bag of variables</h3>
+<p>Material, Spectrum, Carbon, and FAST all treat tokens as named design decisions. The useful common pattern is indirection from reference values toward semantic and contextual decisions. The danger is excessive component tokens, which expose internals and turn theming into remote control of every declaration. Token layers must have explicit responsibilities and permitted dependencies.</p>
+<h3 id="f-006-accessibility-cannot-be-contained-entirely-inside-a-component">F-006: Accessibility cannot be “contained” entirely inside a component</h3>
+<p>A component can guarantee intrinsic keyboard interaction, roles, state exposure, focus behavior, and local labeling hooks. It cannot guarantee meaningful labels, correct placement in a page hierarchy, valid reading order, sufficient surrounding instructions, or appropriate use. Accessibility is therefore a shared contract between the library and the consumer.</p>
+<h3 id="f-007-cross-framework-interoperability-is-achievable-but-incomplete-as-a-definition-of-reuse">F-007: Cross-framework interoperability is achievable but incomplete as a definition of reuse</h3>
+<p>Custom elements provide a browser-level element interface and can cross framework boundaries. That does not automatically solve data-binding conventions, server rendering, event conventions, forms, styling, documentation, or author ergonomics. “Works in React, Vue, and plain HTML” is necessary evidence for interoperability, but not sufficient evidence of a good component.</p>
+<h3 id="f-008-visual-redesignability-depends-more-on-semantic-and-css-boundaries-than-on-custom-elements">F-008: Visual redesignability depends more on semantic and CSS boundaries than on custom elements</h3>
+<p>Custom elements do not inherently make an interface redesignable. A poorly modeled custom element can be more rigid than ordinary HTML. Redesignability comes from durable content models, presentation-neutral DOM order, parent-owned composition, contextual tokens, low-specificity CSS, and controlled escape hatches.</p>
+<h2 id="assumptions-weakened-or-rejected">Assumptions weakened or rejected</h2>
+<ul>
+<li><strong>Rejected:</strong> Every reusable UI element should become a custom element.</li>
+<li><strong>Rejected:</strong> Shadow DOM should be the default because encapsulation is always beneficial.</li>
+<li><strong>Rejected:</strong> A sufficiently flexible component can serve every product context through variants.</li>
+<li><strong>Rejected:</strong> Accessibility can be solved once inside the library.</li>
+<li><strong>Weakened:</strong> Markup can remain unchanged through any redesign.</li>
+<li><strong>Weakened:</strong> Themes can produce radically different systems through token substitution alone.</li>
+<li><strong>Weakened:</strong> Design tokens necessarily reduce complexity.</li>
+<li><strong>Weakened:</strong> Component reuse is always preferable to duplication.</li>
+</ul>
+<h2 id="recommended-implementation-posture">Recommended implementation posture</h2>
+<p>Implementation should proceed after a short validation gate, not after indefinite research. The gate should test the highest-risk conclusions in the project’s real environment:</p>
+<ul>
+<li>stable semantic content across contrasting layouts,</li>
+<li>native versus custom control tradeoffs,</li>
+<li>light versus Shadow DOM by category,</li>
+<li>nested theme isolation,</li>
+<li>no-JavaScript and server-rendered behavior,</li>
+<li>and redesign blast radius.</li>
+</ul>
+<p>The goal of the first implementation phase should not be a broad catalog. It should be to establish reliable foundations and prove that one small vertical slice can survive genuine redesign.</p>
+<hr>
+<h1 id="research-method">Research Method</h1>
+<p>This report used repeated comparison across four evidence classes:</p>
+<ol>
+<li><strong>Platform standards:</strong> WHATWG HTML, W3C CSS, WCAG, ARIA-related specifications and guidance.</li>
+<li><strong>Platform evolution research:</strong> Open UI investigations into controls and common interaction patterns.</li>
+<li><strong>Mature production systems:</strong> Material, Carbon, Spectrum, FAST, and related Web Component libraries.</li>
+<li><strong>Failure-oriented analysis:</strong> identifying where apparently reusable abstractions transfer complexity into variants, tokens, slots, consumer knowledge, or accessibility obligations.</li>
+</ol>
+<p>The research deliberately separates observations from interpretations. Some conclusions are strong platform constraints; others remain architectural recommendations requiring validation in the future library’s actual contexts.</p>
+<hr>
+<h1 id="foundational-model">Foundational Model</h1>
+<h2 id="the-library-should-not-be-one-thing">The library should not be one thing</h2>
+<p>The phrase “component library” hides several distinct artifacts:</p>
+<ul>
+<li>semantic HTML conventions,</li>
+<li>CSS foundations,</li>
+<li>design decisions,</li>
+<li>behavior modules,</li>
+<li>custom elements,</li>
+<li>composite domain structures,</li>
+<li>accessibility contracts,</li>
+<li>layout compositions,</li>
+<li>documentation,</li>
+<li>tests,</li>
+<li>and governance.</li>
+</ul>
+<p>Treating all of these as equivalent “components” creates false uniformity. A button and a report section may both appear as entries in documentation, but their engineering constraints are fundamentally different.</p>
+<h2 id="proposed-research-classification">Proposed research classification</h2>
+<p>This is a classification model, not a production naming or API decision.</p>
+<h3 id="c1--native-semantic-element">C1 — Native semantic element</h3>
+<p>Use browser HTML directly. The library may document it but does not wrap it.</p>
+<p>Appropriate when HTML already expresses the meaning and behavior accurately.</p>
+<p>Examples of likely candidates include headings, paragraphs, lists, links, buttons, many inputs, tables, <code>details</code>, and <code>dialog</code> where platform support meets requirements.</p>
+<h3 id="c2--styled-native-convention">C2 — Styled native convention</h3>
+<p>Native HTML remains the author-facing and accessibility-facing object. Shared CSS and usage guidance provide a consistent visual and behavioral baseline.</p>
+<p>This is likely the default category for ordinary controls.</p>
+<h3 id="c3--progressive-behavioral-enhancement">C3 — Progressive behavioral enhancement</h3>
+<p>A script or custom element enhances valid, understandable native markup. The underlying content remains usable before upgrade or after JavaScript failure.</p>
+<p>This is appropriate for disclosure orchestration, certain tab patterns, validation coordination, or data-table behavior.</p>
+<h3 id="c4--bounded-behavioral-widget">C4 — Bounded behavioral widget</h3>
+<p>A reusable widget owns a nontrivial state machine and keyboard model. It may justify a custom element and Shadow DOM when protecting internal invariants has more value than open composition.</p>
+<p>Examples could include a date picker, complex combobox, or specialized data visualization, but only when native capabilities are insufficient.</p>
+<h3 id="c5--semantic-composite">C5 — Semantic composite</h3>
+<p>A stable domain concept consists of several meaningful subregions. It may use light DOM, structured child elements, or constrained slots. Its validity depends on repeated evidence that the domain relationship survives across contexts.</p>
+<p>Examples might include an evidence record, experiment result, financial metric, or message thread—not a generic “card.”</p>
+<h3 id="c6--composition-pattern">C6 — Composition pattern</h3>
+<p>A CSS-managed relationship among independent children. It should normally not become a custom element unless it adds meaningful semantics, lifecycle, constraints, or measurement.</p>
+<p>Examples include stack, cluster, sidebar, grid, frame, and content measure.</p>
+<h3 id="c7--product-composition">C7 — Product composition</h3>
+<p>A page- or workflow-specific assembly. Reuse may happen, but it should not be promoted into the shared library until repeated independent use reveals a stable abstraction.</p>
+<h3 id="c8--experimental-or-rejected-abstraction">C8 — Experimental or rejected abstraction</h3>
+<p>An explicit category is needed for ideas that are being tested or have failed. Without it, experiments tend to become permanent through inertia.</p>
+<hr>
+<h1 id="assumption-registry">Assumption Registry</h1>
+<h2 id="a-001-semantic-html-can-remain-stable-through-substantial-redesign">A-001: Semantic HTML can remain stable through substantial redesign</h2>
+<p><strong>Why it exists:</strong> The project wants to improve visual design rapidly through CSS without continuously rebuilding markup and behavior.</p>
+<p><strong>Supporting evidence:</strong> HTML and CSS are explicitly separate languages for structure/semantics and presentation. CSS can alter typography, spacing, layout, grouping, color, media-specific rendering, and responsive behavior. Modern container queries and cascade controls extend contextual adaptation.</p>
+<p><strong>Contradicting evidence:</strong> Visual redesign can expose a different information hierarchy or interaction model. CSS reordering can produce conflict between visual order, reading order, focus order, and source order. A structure designed as a dashboard summary may not contain the semantic relationships required by an editorial narrative.</p>
+<p><strong>Confidence:</strong> Moderate-high.</p>
+<p><strong>Current recommendation:</strong> Seek semantic stability, not DOM immutability. Markup changes are acceptable when the meaning, interaction, or required reading order changes. They are suspect when driven only by surface styling.</p>
+<p><strong>Open questions:</strong> How often do the project’s real designs require different content order rather than different presentation? Which domain structures survive editorial, dashboard, mobile, and report contexts?</p>
+<h2 id="a-002-most-visual-redesign-should-be-possible-in-css">A-002: Most visual redesign should be possible in CSS</h2>
+<p><strong>Supporting evidence:</strong> CSS owns rendering across screen, print, and other media; custom properties, container queries, cascade layers, logical properties, media queries, and scoped selectors provide substantial adaptation.</p>
+<p><strong>Contradicting evidence:</strong> CSS cannot invent missing semantics, change accessible relationships safely, or replace a fundamentally different interaction model. Excessive CSS flexibility can also produce hidden coupling, selector complexity, and theme-specific exceptions.</p>
+<p><strong>Confidence:</strong> High within presentation; low outside presentation.</p>
+<p><strong>Recommendation:</strong> CSS owns appearance and contextual layout. Do not use CSS to conceal semantic mismatch. Measure redesign success by unchanged meaning and APIs, not by zero markup changes at any cost.</p>
+<h2 id="a-003-web-components-should-form-the-center-of-the-library">A-003: Web Components should form the center of the library</h2>
+<p><strong>Supporting evidence:</strong> Custom elements provide browser-native lifecycle and a reusable element interface. Shadow DOM and slots can support encapsulation and composition. They are framework-independent at the platform level.</p>
+<p><strong>Contradicting evidence:</strong> Native HTML already solves many controls better. Custom elements add upgrade timing, authoring rules, event/API conventions, SSR considerations, form participation decisions, testing complexity, and accessibility obligations. Cross-framework use still requires integration discipline.</p>
+<p><strong>Confidence:</strong> Low as a universal strategy; moderate for selected categories.</p>
+<p><strong>Recommendation:</strong> Use custom elements selectively. The library may expose a coherent catalog without implementing every catalog entry as a custom element.</p>
+<h2 id="a-004-shadow-dom-should-be-the-default-encapsulation-strategy">A-004: Shadow DOM should be the default encapsulation strategy</h2>
+<p><strong>Supporting evidence:</strong> Shadow DOM prevents accidental external CSS and DOM mutation, protects implementation details, scopes selectors, and supports parts and slots.</p>
+<p><strong>Contradicting evidence:</strong> It restricts ordinary styling and querying; cross-root accessible relationships and ID references require care; global typography and composition do not pass through in the same way; slotted content introduces a two-tree mental model; theme APIs must be deliberately exposed; debugging and testing become more complex.</p>
+<p><strong>Confidence:</strong> Low as a default; high as a targeted tool.</p>
+<p><strong>Recommendation:</strong> Choose encapsulation by category. Favor light DOM for content-rich semantic composites and highly redesignable structures. Favor Shadow DOM for bounded widgets with protected internal invariants. Avoid closed roots for the general library.</p>
+<h2 id="a-005-design-tokens-make-radical-redesign-inexpensive">A-005: Design tokens make radical redesign inexpensive</h2>
+<p><strong>Supporting evidence:</strong> Material, Spectrum, Carbon, and FAST use tokens to translate reusable design decisions into data or custom properties. Tokens enable consistent changes and scoped themes.</p>
+<p><strong>Contradicting evidence:</strong> Tokens cannot change DOM relationships, interaction models, or composition by themselves. Component-level token proliferation can expose implementation details and create a second, poorly typed API. Token renaming can itself create broad migrations, as documented by mature systems.</p>
+<p><strong>Confidence:</strong> High for controlled design decisions; moderate for radical redesign.</p>
+<p><strong>Recommendation:</strong> Treat tokens as a constrained dependency graph. Use them for repeated decisions with semantic meaning. Do not create a token merely to make every declaration externally configurable.</p>
+<h2 id="a-006-component-owned-layout-improves-reuse">A-006: Component-owned layout improves reuse</h2>
+<p><strong>Supporting evidence:</strong> Intrinsic layout can protect a widget’s functional structure and reduce repeated implementation.</p>
+<p><strong>Contradicting evidence:</strong> Owning external spacing, width, orientation, or sibling relationships makes components context-aware. This pressure produces presentation modes and page-specific overrides.</p>
+<p><strong>Confidence:</strong> Low for contextual layout; high for intrinsic layout.</p>
+<p><strong>Recommendation:</strong> Components own internal relationships required for meaning or behavior. Parents own placement and relationships among components. External margins should normally be absent.</p>
+<h2 id="a-007-small-components-maximize-composability">A-007: Small components maximize composability</h2>
+<p><strong>Supporting evidence:</strong> Small units can be independently reused and replaced.</p>
+<p><strong>Contradicting evidence:</strong> Tiny wrappers can obscure native HTML, increase nesting, distribute one interaction contract across many files, and force authors to understand hidden assembly rules. Slot-heavy systems can trade variant complexity for composition complexity.</p>
+<p><strong>Confidence:</strong> Moderate-low.</p>
+<p><strong>Recommendation:</strong> Boundaries should follow coherent semantics, state, accessibility, or change cadence—not line count or visual fragments.</p>
+<h2 id="a-008-one-highly-flexible-component-is-better-than-several-specialized-components">A-008: One highly flexible component is better than several specialized components</h2>
+<p><strong>Supporting evidence:</strong> Shared implementation reduces duplication and may make behavior consistent.</p>
+<p><strong>Contradicting evidence:</strong> Legitimately different semantics become flags and modes. Attribute combinations become invalid or inaccessible. Consumers must learn an expanding configuration language. A generic “card” often conflates resource, action, metric, notification, and article concepts.</p>
+<p><strong>Confidence:</strong> Low.</p>
+<p><strong>Recommendation:</strong> Prefer semantic specialization when differences affect content model, interaction, or accessibility. Share lower-level behavior or styling mechanisms rather than forcing one public abstraction.</p>
+<h2 id="a-009-accessibility-can-be-guaranteed-by-the-library">A-009: Accessibility can be guaranteed by the library</h2>
+<p><strong>Supporting evidence:</strong> Libraries can centralize tested keyboard behavior, roles, states, focus handling, forced-colors support, target sizes, and error-announcement mechanisms.</p>
+<p><strong>Contradicting evidence:</strong> Consumers supply labels, hierarchy, instructions, ordering, context, and content. They can misuse valid components or create inaccessible composition. Visual reordering and theme choices can break accessibility outside the component boundary.</p>
+<p><strong>Confidence:</strong> Falsified as a complete guarantee.</p>
+<p><strong>Recommendation:</strong> Define a shared accessibility contract. The library guarantees intrinsic behavior and prevents invalid states where possible. Consumers retain explicit obligations, enforced through documentation, tests, and diagnostics.</p>
+<h2 id="a-010-themes-should-be-able-to-change-every-visual-property">A-010: Themes should be able to change every visual property</h2>
+<p><strong>Supporting evidence:</strong> Broad theming supports brand and experimentation.</p>
+<p><strong>Contradicting evidence:</strong> Unlimited theme control destroys component invariants, creates unstable APIs, and can undermine accessibility. Some geometry, hit areas, focus treatments, and state distinctions are functional constraints rather than branding choices.</p>
+<p><strong>Confidence:</strong> Low.</p>
+<p><strong>Recommendation:</strong> Define protected invariants, themeable decisions, and composition-level decisions separately. A theme is not permission to violate usability requirements.</p>
+<h2 id="a-011-cross-context-reuse-should-include-marketing-applications-dashboards-and-reports">A-011: Cross-context reuse should include marketing, applications, dashboards, and reports</h2>
+<p><strong>Supporting evidence:</strong> Shared primitives and behaviors can reduce duplication across these contexts.</p>
+<p><strong>Contradicting evidence:</strong> These contexts often have different content models, density, narrative order, interaction expectations, and performance constraints. Universal reuse can turn into mode accumulation.</p>
+<p><strong>Confidence:</strong> Moderate for foundations and behaviors; low for large composites.</p>
+<p><strong>Recommendation:</strong> Expect reuse breadth to decrease as semantic and behavioral specificity increases. Foundations may be universal; complex composites should have declared context boundaries.</p>
+<h2 id="a-012-server-rendering-and-no-javascript-operation-can-be-deferred">A-012: Server rendering and no-JavaScript operation can be deferred</h2>
+<p><strong>Supporting evidence:</strong> Some applications require JavaScript by definition.</p>
+<p><strong>Contradicting evidence:</strong> Upgrade delay, slow loading, failure, indexing, print, and content extraction expose architecture choices early. Declarative Shadow DOM improves SSR but does not erase the need to define pre-upgrade behavior.</p>
+<p><strong>Confidence:</strong> Low as a general assumption.</p>
+<p><strong>Recommendation:</strong> Define pre-upgrade, server-rendered, and failed-upgrade behavior before stable component implementation.</p>
+<hr>
+<h1 id="architectural-comparisons">Architectural Comparisons</h1>
+<h2 id="native-html-versus-custom-elements">Native HTML versus custom elements</h2>
+<h3 id="native-html-advantages">Native HTML advantages</h3>
+<ul>
+<li>built-in semantics and accessibility mappings,</li>
+<li>keyboard and pointer behavior,</li>
+<li>form submission and validation,</li>
+<li>mobile and assistive-technology integration,</li>
+<li>browser optimization,</li>
+<li>graceful operation without JavaScript,</li>
+<li>lower authoring and testing burden.</li>
+</ul>
+<h3 id="native-html-limits">Native HTML limits</h3>
+<ul>
+<li>inconsistent or constrained styling,</li>
+<li>missing complex patterns,</li>
+<li>limited component lifecycle,</li>
+<li>historical browser inconsistencies,</li>
+<li>no domain-specific semantic vocabulary.</li>
+</ul>
+<h3 id="custom-element-advantages">Custom element advantages</h3>
+<ul>
+<li>explicit lifecycle and upgrade behavior,</li>
+<li>reusable browser-level API,</li>
+<li>state and behavior ownership,</li>
+<li>optional encapsulation,</li>
+<li>cross-framework distribution potential,</li>
+<li>domain-specific element vocabulary.</li>
+</ul>
+<h3 id="custom-element-costs">Custom element costs</h3>
+<ul>
+<li>naming and registration constraints,</li>
+<li>asynchronous upgrade,</li>
+<li>form participation and accessible-state work,</li>
+<li>event/property/attribute design burden,</li>
+<li>SSR and hydration decisions,</li>
+<li>wrapper temptation,</li>
+<li>testing across browser and framework boundaries.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Native HTML is the foundation. Custom elements are an escalation used when native semantics plus behavior modules cannot provide the required durable boundary.</p>
+<h2 id="light-dom-versus-shadow-dom">Light DOM versus Shadow DOM</h2>
+<h3 id="light-dom-is-favored-when">Light DOM is favored when</h3>
+<ul>
+<li>content is meaningful outside the component,</li>
+<li>authors need normal document semantics,</li>
+<li>visual hierarchy will undergo substantial experimentation,</li>
+<li>global typography and content styling should apply,</li>
+<li>page CSS must compose or query meaningful descendants,</li>
+<li>server output should remain directly understandable,</li>
+<li>consumer-provided content relationships are central.</li>
+</ul>
+<h3 id="shadow-dom-is-favored-when">Shadow DOM is favored when</h3>
+<ul>
+<li>internal DOM is implementation detail,</li>
+<li>accidental host CSS is a serious operational risk,</li>
+<li>a widget has strict interaction and layout invariants,</li>
+<li>internal replacement should not affect consumers,</li>
+<li>a small and intentional styling API can be defined,</li>
+<li>slot composition remains limited and understandable.</li>
+</ul>
+<h3 id="hybrid-rule">Hybrid rule</h3>
+<p>Encapsulation should follow the source of volatility. Hide implementation detail that should change independently; expose semantic content that should participate in the surrounding document.</p>
+<h2 id="slots-versus-structured-children">Slots versus structured children</h2>
+<h3 id="slots">Slots</h3>
+<p>Slots are useful when consumers provide content but should not know internal placement mechanics. They become costly when there are many named slots, strict ordering rules, conditional combinations, or semantics spanning shadow boundaries.</p>
+<h3 id="structured-children">Structured children</h3>
+<p>Explicit semantic children keep content relationships visible and styleable. They create tighter knowledge of the public content model and may require validation.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Properties and JSON-like configuration can simplify data-driven widgets but hide semantics from server HTML and can reduce progressive enhancement. Configuration is most defensible for data, not document content.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p>Use ordinary children for document-like semantic content, limited slots for bounded extension points, and configuration for non-document widget data. Avoid turning slots into a templating language.</p>
+<h2 id="variants-versus-composition">Variants versus composition</h2>
+<p>A variant is justified when the same semantic object and interaction has a small number of legitimate, mutually understood states. Composition is preferred when differences arise from surrounding context or arrangement. Separate components are preferred when the content model or interaction meaning differs.</p>
+<p>A practical test:</p>
+<ul>
+<li>If changing the option changes what the thing <strong>means</strong>, split it.</li>
+<li>If it changes how siblings are <strong>arranged</strong>, compose it.</li>
+<li>If it changes a bounded presentation while meaning and behavior remain stable, a variant or CSS state may be justified.</li>
+<li>If it exists only for one page, keep it local.</li>
+</ul>
+<h2 id="utility-css-versus-semantic-css">Utility CSS versus semantic CSS</h2>
+<p>Utility CSS provides explicit local control, low selector specificity, and predictable composition. It can also scatter design decisions through markup and make broad redesign dependent on stable utility semantics.</p>
+<p>Semantic CSS centralizes intent and allows theme-level reinterpretation, but can create large selectors and hidden behavior when class names become vague.</p>
+<p>The defensible foundation is mixed:</p>
+<ul>
+<li>low-level utilities for exceptional composition and explicit constraints,</li>
+<li>semantic tokens for repeated design meaning,</li>
+<li>component-local selectors for intrinsic structure,</li>
+<li>page compositions for contextual layout,</li>
+<li>cascade layers to make ownership and override order explicit.</li>
+</ul>
+<h2 id="global-css-versus-component-css">Global CSS versus component CSS</h2>
+<h3 id="global-css-should-own">Global CSS should own</h3>
+<ul>
+<li>reset and normalization,</li>
+<li>typography inheritance and document defaults,</li>
+<li>user-preference media queries,</li>
+<li>broadly shared semantic tokens,</li>
+<li>composition primitives,</li>
+<li>utilities,</li>
+<li>print and forced-colors foundations.</li>
+</ul>
+<h3 id="component-css-should-own">Component CSS should own</h3>
+<ul>
+<li>intrinsic state visualization,</li>
+<li>local structure required by behavior,</li>
+<li>protected minimum interaction geometry,</li>
+<li>styling of implementation details,</li>
+<li>documented parts or contextual variables.</li>
+</ul>
+<h3 id="page-css-should-own">Page CSS should own</h3>
+<ul>
+<li>placement,</li>
+<li>sibling relationships,</li>
+<li>page rhythm,</li>
+<li>region-specific hierarchy,</li>
+<li>exceptional product compositions.</li>
+</ul>
+<hr>
+<h1 id="design-system-evidence">Design-System Evidence</h1>
+<h2 id="material">Material</h2>
+<p>Material’s current token model maps component tokens to system tokens and system tokens to reference values. This supports structured indirection and scoped CSS custom properties. Its strength is consistency and broad tooling. Its limitation for this project is that Material is itself a coherent visual language; adopting its component assumptions can constrain radically different composition unless the underlying architecture is separated from Material-specific decisions.</p>
+<h2 id="carbon">Carbon</h2>
+<p>Carbon explicitly separates foundations, guidelines, components, and implementation. Its contribution checklist requires token use, globalization support, and avoidance of un-tokenized magic values. Carbon’s migrations also show that token systems are not free of breaking change: renaming or restructuring tokens can require broad asset and code changes even when the visual design remains similar.</p>
+<h2 id="spectrum">Spectrum</h2>
+<p>Spectrum describes tokens as design decisions translated into data and uses them to maintain cohesion. Spectrum’s value is its explicit treatment of design decisions as shared artifacts across tools and platforms. Its risk is similar to other mature systems: cohesive product identity and universal redesignability are not identical goals.</p>
+<h2 id="fast">FAST</h2>
+<p>FAST demonstrates a token-driven, Web Component-oriented model in which tokens can cascade through the DOM. This strongly supports contextual design decisions and local themes. It also illustrates how a token system can become deeply coupled to component implementation if boundaries are not controlled.</p>
+<h2 id="shoelace-and-similar-web-component-libraries">Shoelace and similar Web Component libraries</h2>
+<p>Libraries using Shadow DOM, CSS custom properties, slots, and parts demonstrate that highly distributable components are practical. They also reveal the central trade: strong encapsulation requires an explicit styling surface, and consumers inevitably request more access when their design needs exceed that surface.</p>
+<h2 id="open-props-and-utility-oriented-systems">Open Props and utility-oriented systems</h2>
+<p>Open Props and utility philosophies show the value of reusable low-level decisions without requiring a full component catalog. They are strong foundations for experimentation but do not independently define semantics, interaction contracts, or component boundaries.</p>
+<h2 id="cross-system-pattern">Cross-system pattern</h2>
+<p>The recurring durable pattern is not a particular library technology. It is layered responsibility:</p>
+<ul>
+<li>foundations,</li>
+<li>named design decisions,</li>
+<li>accessible primitives,</li>
+<li>reusable behavior,</li>
+<li>compositional patterns,</li>
+<li>product-specific assemblies,</li>
+<li>documentation and governance.</li>
+</ul>
+<p>Systems become rigid when these layers collapse into component variants or when one visual language is mistaken for universal semantics.</p>
+<hr>
+<h1 id="accessibility-foundation">Accessibility Foundation</h1>
+<h2 id="native-first-rule">Native-first rule</h2>
+<p>The HTML standard defines native form-associated elements and also provides form-associated custom elements. The latter capability does not make custom controls equivalent in cost. Native controls begin with browser semantics and behavior; custom controls begin with obligations.</p>
+<h2 id="component-obligations">Component obligations</h2>
+<p>A stable behavioral component must define:</p>
+<ul>
+<li>semantic role or native element basis,</li>
+<li>accessible name mechanism,</li>
+<li>accessible description mechanism,</li>
+<li>keyboard interaction model,</li>
+<li>focus entry and exit behavior,</li>
+<li>state exposure,</li>
+<li>disabled and read-only behavior,</li>
+<li>error and status announcement behavior,</li>
+<li>high-contrast and forced-colors rendering,</li>
+<li>zoom and text-resize behavior,</li>
+<li>reduced-motion behavior,</li>
+<li>no-JavaScript behavior,</li>
+<li>localization and bidirectionality behavior.</li>
+</ul>
+<h2 id="consumer-obligations">Consumer obligations</h2>
+<p>Consumers must provide:</p>
+<ul>
+<li>meaningful labels and instructions,</li>
+<li>correct heading and landmark context,</li>
+<li>logical DOM order,</li>
+<li>sufficient surrounding contrast and spacing,</li>
+<li>valid task flow,</li>
+<li>non-duplicative announcements,</li>
+<li>appropriate component selection,</li>
+<li>complete localized content.</li>
+</ul>
+<h2 id="architectural-implication">Architectural implication</h2>
+<p>Accessibility requirements must be represented as contracts and tests, not only documentation prose. However, automated tests cannot prove task comprehension, meaningful labels, sensible reading order, or usability. Manual and assistive-technology testing remains necessary.</p>
+<h2 id="visual-reordering-rule">Visual reordering rule</h2>
+<p>Do not use CSS order as a routine mechanism to create a visual sequence that disagrees with reading or focus order. When visual hierarchy requires a different semantic sequence, reconsider the DOM or the component boundary. Stable markup is subordinate to coherent interaction.</p>
+<hr>
+<h1 id="styling-and-token-foundation">Styling and Token Foundation</h1>
+<h2 id="token-hierarchy">Token hierarchy</h2>
+<p>The research supports a layered model, but implementation names remain intentionally undecided.</p>
+<h3 id="reference-values">Reference values</h3>
+<p>Raw palettes, dimensions, type scales, motion values, and other source material. These are implementation inputs, not recommended application APIs.</p>
+<h3 id="system-or-semantic-decisions">System or semantic decisions</h3>
+<p>Values named by purpose: text, surface, border, focus, spacing relationship, content measure, interaction state, and similar concepts.</p>
+<h3 id="context-decisions">Context decisions</h3>
+<p>Values that change according to environment: density, brand, color scheme, accessibility mode, product region, content type, or input modality.</p>
+<h3 id="component-decisions">Component decisions</h3>
+<p>Only values representing legitimate public variation of a stable component. These should generally map to semantic/context values rather than raw values.</p>
+<h2 id="dependency-rules">Dependency rules</h2>
+<ul>
+<li>Components should prefer semantic or contextual decisions over reference values.</li>
+<li>Themes may change reference and semantic mappings.</li>
+<li>Component decisions should not become a mirror of every CSS declaration.</li>
+<li>Product-specific tokens should not enter the global system until repeated cross-product use is demonstrated.</li>
+<li>Accessibility invariants may constrain or override theme decisions.</li>
+<li>Circular token references and context leakage must be detected automatically.</li>
+</ul>
+<h2 id="token-admission-test">Token admission test</h2>
+<p>A new token should require evidence that:</p>
+<ol>
+<li>the decision repeats,</li>
+<li>the decision has stable meaning,</li>
+<li>consumers legitimately need to vary it,</li>
+<li>exposing it will not bind them to internal structure,</li>
+<li>a broader semantic token cannot serve the need,</li>
+<li>its valid range and accessibility constraints are understood.</li>
+</ol>
+<h2 id="themes">Themes</h2>
+<p>Themes should be treated as coherent mappings of design decisions, not selector files that patch individual components. A theme that repeatedly targets component internals indicates one of four failures:</p>
+<ul>
+<li>missing semantic/context tokens,</li>
+<li>an overly rigid component,</li>
+<li>an invalid theme requirement,</li>
+<li>or a component that belongs to a narrower visual system.</li>
+</ul>
+<p>Nested themes must be considered from the beginning because CSS custom properties naturally inherit across boundaries. This is powerful but can produce accidental leakage when values are incomplete or names are too generic.</p>
+<hr>
+<h1 id="composition-foundation">Composition Foundation</h1>
+<h2 id="intrinsic-versus-contextual-layout">Intrinsic versus contextual layout</h2>
+<p>This distinction should become a governing architectural rule.</p>
+<h3 id="intrinsic-layout">Intrinsic layout</h3>
+<p>The spatial relationship is required for the component to preserve meaning or interaction. The component may own it.</p>
+<p>Examples:</p>
+<ul>
+<li>relationship between a checkbox and its visible label,</li>
+<li>internal alignment of an icon and control text,</li>
+<li>placement of a dialog’s focusable region relative to its modal surface,</li>
+<li>association of a table header with its data structure.</li>
+</ul>
+<h3 id="contextual-layout">Contextual layout</h3>
+<p>The relationship depends on where the component is used. The parent should own it.</p>
+<p>Examples:</p>
+<ul>
+<li>whether a card is in a grid or list,</li>
+<li>spacing between sections,</li>
+<li>sidebar width,</li>
+<li>whether a navigation region is horizontal or vertical because of page layout,</li>
+<li>prominence relative to neighboring content.</li>
+</ul>
+<h2 id="external-margin-rule">External margin rule</h2>
+<p>Shared components should normally avoid owning outer margins. Margin is a relationship between objects and therefore belongs to composition. Internal padding may be component-owned when it is part of the component’s bounded surface.</p>
+<h2 id="container-response">Container response</h2>
+<p>Components should respond primarily to content pressure and container context rather than only viewport width. Container queries are appropriate for component-internal adaptation, but explicit content constraints and logical properties remain necessary. Viewport queries still belong at page and application shell levels.</p>
+<h2 id="fragmentation-warning">Fragmentation warning</h2>
+<p>Composition has gone too far when:</p>
+<ul>
+<li>authors must assemble many wrappers in a strict undocumented order,</li>
+<li>one accessible pattern is distributed across several independently optional pieces,</li>
+<li>components exist only to attach one class,</li>
+<li>normal HTML becomes difficult to recognize,</li>
+<li>replacement requires understanding hidden parent-child protocols.</li>
+</ul>
+<hr>
+<h1 id="maintainability-model">Maintainability Model</h1>
+<h2 id="flexibility-is-not-free">Flexibility is not free</h2>
+<p>Every variation mechanism creates an API, even when it is expressed as CSS. Attributes, slots, parts, custom properties, utility classes, child selectors, inherited tokens, and context selectors are all coupling surfaces.</p>
+<p>A component is not more flexible simply because it exposes more of them. It may merely transfer responsibility to consumers.</p>
+<h2 id="complexity-indicators">Complexity indicators</h2>
+<p>Before implementation, the library should commit to measuring:</p>
+<ul>
+<li>public attributes, properties, events, methods, slots, and parts,</li>
+<li>exposed custom properties,</li>
+<li>theme-specific component overrides,</li>
+<li>parent or ancestor selectors required by a component,</li>
+<li>invalid public-state combinations,</li>
+<li>component-specific responsive breakpoints,</li>
+<li>consumer markup changes during redesign,</li>
+<li>consumer changes during component replacement,</li>
+<li>accessibility exceptions,</li>
+<li>CSS specificity distribution,</li>
+<li><code>!important</code> usage,</li>
+<li>duplicate patterns across components,</li>
+<li>JavaScript required before useful rendering,</li>
+<li>and documentation steps required for correct use.</li>
+</ul>
+<h2 id="split-signals">Split signals</h2>
+<p>A component should be considered for splitting when:</p>
+<ul>
+<li>modes change its content model,</li>
+<li>keyboard behavior differs by mode,</li>
+<li>required slots vary substantially,</li>
+<li>many attribute combinations are invalid,</li>
+<li>themes repeatedly target different internal structures,</li>
+<li>consumers use only disjoint subsets of its API,</li>
+<li>its name describes appearance rather than purpose.</li>
+</ul>
+<h2 id="merge-signals">Merge signals</h2>
+<p>Separate components should be considered for unification when:</p>
+<ul>
+<li>semantics and keyboard behavior are identical,</li>
+<li>differences are purely visual and bounded,</li>
+<li>duplicated implementations repeatedly receive the same fixes,</li>
+<li>replacement and authoring are simpler through one abstraction,</li>
+<li>configuration does not create contradictory states.</li>
+</ul>
+<h2 id="replacement-test">Replacement test</h2>
+<p>A library should optimize not only reuse but removal. Consumers should depend on documented semantics and public behavior, not undocumented descendants, timing, or theme internals. Replacement cost is a better measure of loose coupling than the number of contexts in which a component appears.</p>
+<hr>
+<h1 id="failed-hypotheses-and-dangerous-directions">Failed Hypotheses and Dangerous Directions</h1>
+<h2 id="fh-001-generic-card-as-a-foundational-component">FH-001: Generic card as a foundational component</h2>
+<p><strong>Why it seems reasonable:</strong> Cards are visually common and appear across product types.</p>
+<p><strong>Why it fails:</strong> “Card” describes a surface treatment, not a single semantic object. Article previews, metrics, actions, alerts, products, and evidence records have different content and interaction models. A generic card tends to collect slots and visual modes.</p>
+<p><strong>Learning:</strong> Keep card-like surface treatment as a composition or styling primitive until a stable semantic object is identified.</p>
+<h2 id="fh-002-encapsulate-all-internals-to-guarantee-safety">FH-002: Encapsulate all internals to guarantee safety</h2>
+<p><strong>Why it seems reasonable:</strong> External CSS and DOM mutation can break components.</p>
+<p><strong>Why it fails:</strong> The system’s primary objective includes radical visual experimentation. Encapsulation can force every future styling need through parts, properties, or tokens and can hide meaningful document structure.</p>
+<p><strong>Learning:</strong> Protect implementation details selectively; do not hide semantic content merely for uniformity.</p>
+<h2 id="fh-003-expose-a-custom-property-for-every-style-decision">FH-003: Expose a custom property for every style decision</h2>
+<p><strong>Why it seems reasonable:</strong> Consumers can redesign without forking.</p>
+<p><strong>Why it fails:</strong> The variable set becomes an undocumented parallel CSS API tied to internal structure. Invalid combinations and accessibility regressions become consumer responsibility.</p>
+<p><strong>Learning:</strong> Expose decisions, not declarations.</p>
+<h2 id="fh-004-one-component-plus-enough-variants-avoids-duplication">FH-004: One component plus enough variants avoids duplication</h2>
+<p><strong>Why it seems reasonable:</strong> Shared code appears easier to maintain.</p>
+<p><strong>Why it fails:</strong> Variants interact combinatorially and conceal semantic differences. Internal code becomes a conditional renderer; documentation becomes a configuration matrix.</p>
+<p><strong>Learning:</strong> Duplication can be cheaper than false unification. Share behavior beneath separate semantic components when necessary.</p>
+<h2 id="fh-005-stable-dom-is-an-absolute-success-criterion">FH-005: Stable DOM is an absolute success criterion</h2>
+<p><strong>Why it seems reasonable:</strong> Zero markup changes imply maximum redesignability.</p>
+<p><strong>Why it fails:</strong> It can incentivize inaccessible CSS reordering or overly generic markup. A new design may reveal that the original information architecture was wrong.</p>
+<p><strong>Learning:</strong> Preserve meaning and contracts, not accidental structure.</p>
+<h2 id="fh-006-design-system-consistency-is-always-beneficial">FH-006: Design-system consistency is always beneficial</h2>
+<p><strong>Why it seems reasonable:</strong> Consistency reduces cognitive and maintenance costs.</p>
+<p><strong>Why it fails:</strong> Over-standardization can prevent product-appropriate hierarchy, experimentation, and domain expression. Familiarity and consistency have value, but they are not substitutes for task fit.</p>
+<p><strong>Learning:</strong> The library should provide coherent defaults and constraints while allowing controlled divergence at composition and theme layers.</p>
+<hr>
+<h1 id="evidence-registry">Evidence Registry</h1>
+<h2 id="evd-001--custom-elements-are-a-platform-defined-extension-mechanism">EVD-001 — Custom elements are a platform-defined extension mechanism</h2>
+<p><strong>Source:</strong> WHATWG HTML Standard, Custom Elements.</p>
+<p><strong>Observation:</strong> Custom elements allow authors to define fully featured DOM elements with construction and lifecycle behavior.</p>
+<p><strong>Supports:</strong> Selective use of custom elements for durable behavioral boundaries.</p>
+<p><strong>Does not support:</strong> Making every reusable pattern a custom element.</p>
+<p><strong>Confidence:</strong> High.</p>
+<p><strong>Limitations:</strong> A specification defines capability, not architectural suitability.</p>
+<h2 id="evd-002--form-associated-custom-elements-exist-but-require-deliberate-implementation">EVD-002 — Form-associated custom elements exist but require deliberate implementation</h2>
+<p><strong>Source:</strong> WHATWG HTML Standard, form-associated custom elements and <code>ElementInternals</code>.</p>
+<p><strong>Observation:</strong> The platform provides mechanisms for custom elements to participate in forms and expose default accessible roles and states.</p>
+<p><strong>Supports:</strong> Complex custom controls are technically possible.</p>
+<p><strong>Challenges:</strong> Claims that custom controls are cheap substitutes for native controls.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-003--native-control-replacements-commonly-lose-reliability-and-accessibility">EVD-003 — Native-control replacements commonly lose reliability and accessibility</h2>
+<p><strong>Source:</strong> Open UI customizable select, combobox, and enhanced range research.</p>
+<p><strong>Observation:</strong> Open UI identifies reduced performance, reliability, and accessibility as common consequences of custom replacements motivated by styling limitations.</p>
+<p><strong>Supports:</strong> Native-first escalation rule.</p>
+<p><strong>Confidence:</strong> High.</p>
+<p><strong>Limitations:</strong> Some specialized requirements still justify custom controls.</p>
+<h2 id="evd-004--declarative-shadow-dom-improves-server-rendering">EVD-004 — Declarative Shadow DOM improves server rendering</h2>
+<p><strong>Source:</strong> HTML Standard and web.dev documentation.</p>
+<p><strong>Observation:</strong> Shadow roots can be represented declaratively in HTML and are interoperable across current major browsers.</p>
+<p><strong>Supports:</strong> SSR is no longer a categorical reason to reject Shadow DOM.</p>
+<p><strong>Challenges:</strong> Claims that Declarative Shadow DOM removes all hydration, accessibility, or authoring concerns.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-005--shadow-dom-intentionally-creates-a-style-and-dom-boundary">EVD-005 — Shadow DOM intentionally creates a style and DOM boundary</h2>
+<p><strong>Source:</strong> DOM/HTML standards and MDN platform documentation.</p>
+<p><strong>Observation:</strong> Shadow DOM shields internal markup and styling from ordinary page CSS and JavaScript access.</p>
+<p><strong>Supports:</strong> Implementation protection for bounded widgets.</p>
+<p><strong>Challenges:</strong> Universal global styling and open composition.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-006--cross-root-id-relationships-have-explicit-constraints">EVD-006 — Cross-root ID relationships have explicit constraints</h2>
+<p><strong>Source:</strong> WAI ACT rule material and HTML reflection mechanisms.</p>
+<p><strong>Observation:</strong> ID-reference resolution and accessible relationships interact with tree boundaries and require deliberate APIs.</p>
+<p><strong>Supports:</strong> Caution around content-rich Shadow DOM components and labeling across roots.</p>
+<p><strong>Confidence:</strong> Moderate-high.</p>
+<h2 id="evd-007--wcag-requirements-include-behavior-beyond-component-appearance">EVD-007 — WCAG requirements include behavior beyond component appearance</h2>
+<p><strong>Source:</strong> WCAG 2.2 quick reference.</p>
+<p><strong>Observation:</strong> Accessibility covers keyboard access, focus, contrast, reflow, text resizing, motion, names, roles, status messages, and more.</p>
+<p><strong>Supports:</strong> Shared library-consumer accessibility contract and multi-condition testing.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-008--tokens-are-treated-as-reusable-design-decisions-across-mature-systems">EVD-008 — Tokens are treated as reusable design decisions across mature systems</h2>
+<p><strong>Source:</strong> Material, Spectrum, Carbon, FAST documentation.</p>
+<p><strong>Observation:</strong> Independent mature systems use token indirection for color, typography, spacing, motion, and component decisions.</p>
+<p><strong>Supports:</strong> A layered token foundation.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-009--token-migrations-can-create-broad-blast-radius">EVD-009 — Token migrations can create broad blast radius</h2>
+<p><strong>Source:</strong> Carbon migration documentation.</p>
+<p><strong>Observation:</strong> Token naming and architecture changes can require updates across design assets and code even without a visual redesign.</p>
+<p><strong>Supports:</strong> Treating token names and dependency layers as public architecture.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-010--themes-can-be-locally-scoped">EVD-010 — Themes can be locally scoped</h2>
+<p><strong>Source:</strong> Material Web theming and Carbon theme documentation.</p>
+<p><strong>Observation:</strong> CSS custom-property and provider approaches can theme page regions rather than only entire applications.</p>
+<p><strong>Supports:</strong> Contextual and nested themes.</p>
+<p><strong>Challenges:</strong> Assumption that inheritance automatically prevents leakage or incomplete theme state.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-011--open-ui-decomposes-common-controls-into-conceptual-parts-before-standardization">EVD-011 — Open UI decomposes common controls into conceptual parts before standardization</h2>
+<p><strong>Source:</strong> Open UI tabs and other control research.</p>
+<p><strong>Observation:</strong> Reusable control work begins by identifying anatomy, semantics, states, and interaction across existing systems rather than by selecting a component API immediately.</p>
+<p><strong>Supports:</strong> Researching component boundaries and content models before naming APIs.</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="evd-012--production-systems-distinguish-foundations-from-components">EVD-012 — Production systems distinguish foundations from components</h2>
+<p><strong>Source:</strong> Carbon, Spectrum, Material, and FAST documentation.</p>
+<p><strong>Observation:</strong> Mature systems contain tokens, guidelines, patterns, foundations, and tools in addition to coded components.</p>
+<p><strong>Supports:</strong> Treating the future library as a layered system rather than a catalog of custom elements.</p>
+<p><strong>Confidence:</strong> High.</p>
+<hr>
+<h1 id="candidate-architectural-laws">Candidate Architectural Laws</h1>
+<p>These are provisional laws to be tested during pre-implementation validation and early construction.</p>
+<h2 id="law-001--native-capability-conservation">LAW-001 — Native Capability Conservation</h2>
+<h3 id="hypothesis">Hypothesis</h3>
+<p>A library should preserve native semantics and behavior unless replacing them delivers measurable value that cannot be achieved through styling or progressive enhancement.</p>
+<h3 id="prediction">Prediction</h3>
+<p>Native-first implementations will require fewer keyboard, accessibility, form, mobile, and failure-mode exceptions than custom replacements.</p>
+<h3 id="counterevidence-that-would-weaken-it">Counterevidence that would weaken it</h3>
+<p>A native element consistently cannot meet core product requirements, while a custom implementation demonstrates equivalent accessibility and lower total complexity across supported contexts.</p>
+<h3 id="confidence">Confidence</h3>
+<p>High.</p>
+<h2 id="law-002--semantic-stability-boundary">LAW-002 — Semantic Stability Boundary</h2>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p>Markup remains durable only to the extent that it encodes stable information relationships rather than current visual hierarchy.</p>
+<h3 id="prediction-1">Prediction</h3>
+<p>Domain-named structures will survive redesign better than appearance-named structures, but will still change when reading order or interaction meaning changes.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>Moderate-high.</p>
+<h2 id="law-003--intrinsic-layout-ownership">LAW-003 — Intrinsic Layout Ownership</h2>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p>A reusable component should own only layout intrinsic to its semantics or behavior; contextual arrangement should belong to parent compositions.</p>
+<h3 id="prediction-2">Prediction</h3>
+<p>Following this rule will reduce orientation variants, external margins, ancestor knowledge, and page-specific overrides.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>High.</p>
+<h2 id="law-004--selective-encapsulation">LAW-004 — Selective Encapsulation</h2>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p>Encapsulation produces net value when the protected implementation is more volatile than the public styling and composition requirements.</p>
+<h3 id="prediction-3">Prediction</h3>
+<p>Bounded behavioral widgets will benefit from Shadow DOM more often than content-rich semantic composites.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>Moderate.</p>
+<h2 id="law-005--variation-surface-conservation">LAW-005 — Variation Surface Conservation</h2>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p>Every variation mechanism is a public coupling surface and should be introduced only after repeated concrete pressure.</p>
+<h3 id="prediction-4">Prediction</h3>
+<p>Components governed by an admission rule for attributes, slots, parts, and custom properties will show lower redesign and replacement blast radius.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>Moderate-high.</p>
+<h2 id="law-006--accessibility-contract-distribution">LAW-006 — Accessibility Contract Distribution</h2>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>Accessibility is most durable when intrinsic obligations are owned by the library and contextual obligations are explicit, testable consumer responsibilities.</p>
+<h3 id="prediction-5">Prediction</h3>
+<p>Attempting to hide all accessibility inside components will either fail or create rigid APIs that cannot fit real contexts.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>High.</p>
+<h2 id="law-007--reuse-specificity-gradient">LAW-007 — Reuse Specificity Gradient</h2>
+<h3 id="hypothesis-6">Hypothesis</h3>
+<p>Potential reuse breadth decreases as semantic, behavioral, and contextual specificity increases.</p>
+<h3 id="prediction-6">Prediction</h3>
+<p>Foundations and basic behaviors will transfer broadly; large domain composites will require narrower declared scope.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>Moderate-high.</p>
+<hr>
+<h1 id="required-pre-implementation-research-experiments">Required Pre-Implementation Research Experiments</h1>
+<p>No production components should be written during these experiments. Throwaway prototypes may be used only as measuring instruments after the research-only phase is formally closed.</p>
+<h2 id="exp-001--semantic-durability-mapping">EXP-001 — Semantic durability mapping</h2>
+<p><strong>Question:</strong> Which content relationships remain stable across the project’s actual visual systems?</p>
+<p><strong>Method:</strong> Select three real domain objects, such as evidence, recommendation, and metric. Model their information without styling. Compare the required reading order and optional regions across editorial, dashboard, mobile, report, and low-vision contexts.</p>
+<p><strong>Measure:</strong> Stable fields, conflicting order, context-specific fields, interaction differences, and any visual-only groupings.</p>
+<p><strong>Failure threshold:</strong> A proposed shared model requires visual reordering that conflicts with reading/focus order or contains many context-only fields.</p>
+<p><strong>Expected information gain:</strong> Very high.</p>
+<h2 id="exp-002--native-capability-inventory">EXP-002 — Native capability inventory</h2>
+<p><strong>Question:</strong> Which anticipated library items are already adequately supported by native HTML and current platform features?</p>
+<p><strong>Method:</strong> For every proposed catalog item, document native semantics, current browser support, accessibility behavior, styling limits, and missing product requirements.</p>
+<p><strong>Measure:</strong> Native fit, enhancement needed, custom behavior needed, and replacement cost.</p>
+<p><strong>Expected information gain:</strong> Very high.</p>
+<h2 id="exp-003--encapsulation-decision-matrix">EXP-003 — Encapsulation decision matrix</h2>
+<p><strong>Question:</strong> Which categories justify light DOM, Shadow DOM, or behavior-only enhancement?</p>
+<p><strong>Method:</strong> Evaluate representative categories against styling openness, semantic visibility, internal invariants, SSR, accessible relationships, testing, and replacement.</p>
+<p><strong>Failure threshold:</strong> Any universal rule that produces serious costs in more than one category.</p>
+<p><strong>Expected information gain:</strong> High.</p>
+<h2 id="exp-004--token-dependency-simulation">EXP-004 — Token dependency simulation</h2>
+<p><strong>Question:</strong> Can proposed token layers support multiple visual systems without component-level exception growth?</p>
+<p><strong>Method:</strong> Model design decisions abstractly across four contrasting systems without writing production CSS. Track which decisions are global, semantic, contextual, component-specific, or composition-specific.</p>
+<p><strong>Measure:</strong> Number of component exceptions, ambiguous token meanings, dependency cycles, and values that violate accessibility constraints.</p>
+<p><strong>Expected information gain:</strong> High.</p>
+<h2 id="exp-005--accessibility-responsibility-matrix">EXP-005 — Accessibility responsibility matrix</h2>
+<p><strong>Question:</strong> Which accessibility obligations can the library guarantee, and which necessarily remain contextual?</p>
+<p><strong>Method:</strong> Map WCAG and APG obligations across representative controls and composites. Identify required author inputs and invalid uses.</p>
+<p><strong>Measure:</strong> Intrinsic guarantees, required consumer responsibilities, enforceable constraints, and manual-test obligations.</p>
+<p><strong>Expected information gain:</strong> High.</p>
+<h2 id="exp-006--cross-framework-authoring-study">EXP-006 — Cross-framework authoring study</h2>
+<p><strong>Question:</strong> Does the same component contract remain understandable and reliable in plain HTML, server templates, React, Vue, and another likely consumer?</p>
+<p><strong>Method:</strong> Analyze event, property, boolean attribute, children, form, SSR, and styling conventions. No production implementation required.</p>
+<p><strong>Measure:</strong> Adapter requirements, semantic differences, typing gaps, hydration concerns, and documentation burden.</p>
+<p><strong>Expected information gain:</strong> Moderate-high.</p>
+<h2 id="exp-007--governance-and-evolution-study">EXP-007 — Governance and evolution study</h2>
+<p><strong>Question:</strong> What process prevents experiments and accidental APIs from becoming permanent?</p>
+<p><strong>Method:</strong> Compare maturity stages, deprecation processes, decision logs, and migration practices in long-lived systems.</p>
+<p><strong>Measure:</strong> Required evidence for promotion, reversal conditions, migration obligations, and ownership model.</p>
+<p><strong>Expected information gain:</strong> Moderate-high.</p>
+<hr>
+<h1 id="research-to-implementation-gate">Research-to-Implementation Gate</h1>
+<p>Implementation may begin when all of the following are true:</p>
+<ol>
+<li>Every anticipated first-release item has a provisional classification.</li>
+<li>Native capabilities and gaps have been documented.</li>
+<li>The DOM/encapsulation strategy is category-specific rather than universal.</li>
+<li>Accessibility responsibilities are divided between library and consumers.</li>
+<li>The token dependency model and invariants are documented.</li>
+<li>Layout ownership rules are explicit.</li>
+<li>Server-rendered, pre-upgrade, failed-upgrade, and no-JavaScript expectations are defined.</li>
+<li>At least three real domain structures have undergone semantic durability analysis.</li>
+<li>Theme goals distinguish token substitution from composition changes.</li>
+<li>Component admission, maturity, deprecation, and reversal processes are defined.</li>
+<li>Remaining uncertainties are known and accepted rather than hidden.</li>
+</ol>
+<p>Passing the gate does not mean the architecture is proven. It means the largest avoidable foundational mistakes have been addressed well enough for incremental implementation and empirical testing.</p>
+<hr>
+<h1 id="recommended-foundation">Recommended Foundation</h1>
+<h2 id="architectural-stance">Architectural stance</h2>
+<p>Adopt a <strong>hybrid architecture with native HTML at the base and selective Web Components above it</strong>.</p>
+<h2 id="component-boundaries">Component boundaries</h2>
+<p>Create a shared abstraction only when it owns at least one durable unit of:</p>
+<ul>
+<li>semantics,</li>
+<li>behavior or state,</li>
+<li>accessibility interaction,</li>
+<li>validation,</li>
+<li>lifecycle,</li>
+<li>or repeated composition with demonstrated cross-context stability.</li>
+</ul>
+<p>Appearance alone is insufficient.</p>
+<h2 id="dom-strategy">DOM strategy</h2>
+<ul>
+<li>Native and styled native elements remain ordinary DOM.</li>
+<li>Content-rich semantic composites default to light DOM.</li>
+<li>Bounded behavioral widgets may use open Shadow DOM.</li>
+<li>Closed Shadow DOM is rejected for the general library.</li>
+<li>Declarative Shadow DOM should be evaluated where server rendering of shadow components is required.</li>
+<li>Slots remain limited, documented extension points rather than a general template language.</li>
+</ul>
+<h2 id="styling-strategy">Styling strategy</h2>
+<ul>
+<li>CSS owns presentation.</li>
+<li>Parent compositions own contextual layout.</li>
+<li>Components own intrinsic layout and state visualization.</li>
+<li>Low-specificity selectors and cascade layers should make ownership explicit.</li>
+<li>Logical properties, user preferences, forced colors, print, and content resizing are foundational requirements.</li>
+<li>Themes alter coherent semantic/context mappings; they should not patch internal selectors broadly.</li>
+</ul>
+<h2 id="token-strategy">Token strategy</h2>
+<p>Use a layered dependency model with explicit admission rules. Preserve accessibility and interaction invariants outside ordinary theme discretion. Treat token names and layer boundaries as versioned public architecture.</p>
+<h2 id="accessibility-strategy">Accessibility strategy</h2>
+<p>Native-first, progressive enhancement, explicit keyboard models, tested pre-upgrade behavior, shared responsibility contracts, and mandatory manual validation for complex interactions.</p>
+<h2 id="composition-strategy">Composition strategy</h2>
+<p>Distinguish intrinsic from contextual layout. Favor ordinary CSS and recognizable HTML over wrapper proliferation. Promote repeated compositions only after evidence of stable reuse.</p>
+<h2 id="governance-strategy">Governance strategy</h2>
+<p>Every abstraction should begin experimental. Promotion requires evidence from multiple contexts, hostile content, accessibility review, replacement analysis, and documented reversal conditions. Failed abstractions remain recorded.</p>
+<hr>
+<h1 id="remaining-unknowns">Remaining Unknowns</h1>
+<p>The following cannot be resolved confidently without project-specific evidence:</p>
+<ol>
+<li>Which exact domain composites are stable enough to enter the shared library.</li>
+<li>How radical the desired visual systems will be in structural terms.</li>
+<li>Which frameworks, rendering environments, and browser support ranges are mandatory.</li>
+<li>Whether form-associated custom elements are needed in the first releases.</li>
+<li>How much SSR and no-JavaScript functionality each product requires.</li>
+<li>Whether nested themes are a common production need or primarily an experiment need.</li>
+<li>How authoring complexity should be measured with the actual team.</li>
+<li>Which accessibility testing environments and assistive technologies are operationally supportable.</li>
+<li>How iconography, data visualization, and rich text should fit the encapsulation model.</li>
+<li>What publication and versioning model will be used across packages and products.</li>
+</ol>
+<hr>
+<h1 id="recommended-next-research-areas">Recommended Next Research Areas</h1>
+<p>Ranked by expected information gain and architectural risk:</p>
+<table>
+<thead>
+<tr>
+<th align="right">Rank</th>
+<th>Research area</th>
+<th>Information gain</th>
+<th>Risk addressed</th>
+<th>Effort</th>
+<th>Urgency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">1</td>
+<td>Semantic durability of real domain objects</td>
+<td>Very high</td>
+<td>Wrong content model and rigid markup</td>
+<td>Medium</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td align="right">2</td>
+<td>Native capability and control inventory</td>
+<td>Very high</td>
+<td>Unnecessary custom controls and accessibility debt</td>
+<td>Medium</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td align="right">3</td>
+<td>Encapsulation matrix by category</td>
+<td>High</td>
+<td>Styling lock-in and hidden coupling</td>
+<td>Medium</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td align="right">4</td>
+<td>Accessibility responsibility matrix</td>
+<td>High</td>
+<td>Incomplete contracts and audit failures</td>
+<td>Medium</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td align="right">5</td>
+<td>Token dependency and theme-boundary study</td>
+<td>High</td>
+<td>Token explosion and theme leakage</td>
+<td>Medium</td>
+<td>Immediate</td>
+</tr>
+<tr>
+<td align="right">6</td>
+<td>Framework/SSR interoperability constraints</td>
+<td>Moderate-high</td>
+<td>Consumer adapters and hydration failure</td>
+<td>Medium</td>
+<td>Before API work</td>
+</tr>
+<tr>
+<td align="right">7</td>
+<td>Governance and maturity model</td>
+<td>Moderate-high</td>
+<td>Premature standardization</td>
+<td>Low-medium</td>
+<td>Before repository creation</td>
+</tr>
+<tr>
+<td align="right">8</td>
+<td>Performance budget and measurement strategy</td>
+<td>Moderate</td>
+<td>Large-list and upgrade cost</td>
+<td>Medium</td>
+<td>Before implementation benchmarks</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td>Design-theory encoding rules</td>
+<td>Moderate</td>
+<td>Embedding temporary visual theories in APIs</td>
+<td>High</td>
+<td>Parallel research</td>
+</tr>
+<tr>
+<td align="right">10</td>
+<td>Long-term migration case studies</td>
+<td>Moderate</td>
+<td>Versioning and replacement debt</td>
+<td>High</td>
+<td>Before stable release</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="final-recommendation">Final Recommendation</h1>
+<h2 id="adopt-with-constraints-hybrid-native-first-foundation">Adopt with constraints: hybrid native-first foundation</h2>
+<p>The evidence is sufficient to reject a universal Web Component architecture and to support a hybrid model as the starting foundation.</p>
+<p>The library should be built, but not as a catalog in which every documented object is a custom element. It should be a layered interface system in which native HTML remains visible, CSS owns presentation and contextual composition, behaviors are progressively enhanced where possible, semantic composites are admitted only after durability evidence, and Shadow DOM is selected deliberately for bounded implementation protection.</p>
+<p>The largest remaining risk is not choosing the wrong JavaScript base class. It is defining the wrong semantic and ownership boundaries. Those boundaries determine whether later design learning can flow through CSS and composition or whether every insight becomes a new variant, slot, custom property, and exception.</p>
+<p>Implementation should begin after the focused research gate above is completed. Once it begins, architecture research should continue alongside construction, with each early component treated as a falsifiable hypothesis rather than a permanent standard.</p>
+<hr>
+<h1 id="references">References</h1>
+<ol>
+<li>WHATWG HTML Standard — Custom Elements: <a href="https://html.spec.whatwg.org/multipage/custom-elements.html">https://html.spec.whatwg.org/multipage/custom-elements.html</a></li>
+<li>WHATWG HTML Standard — Creating a form-associated custom element: <a href="https://html.spec.whatwg.org/dev/custom-elements.html">https://html.spec.whatwg.org/dev/custom-elements.html</a></li>
+<li>WHATWG HTML Standard — Scripting, templates, and slots: <a href="https://html.spec.whatwg.org/dev/scripting.html">https://html.spec.whatwg.org/dev/scripting.html</a></li>
+<li>W3C WCAG 2.2 Quick Reference: <a href="https://www.w3.org/WAI/WCAG22/quickref/">https://www.w3.org/WAI/WCAG22/quickref/</a></li>
+<li>W3C TAG — Guidelines for creating web-platform-compatible components: <a href="https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/">https://www.w3.org/2001/tag/doc/webcomponents-design-guidelines/</a></li>
+<li>Open UI — Customizable Select: <a href="https://open-ui.org/components/customizable-select.explainer/">https://open-ui.org/components/customizable-select.explainer/</a></li>
+<li>Open UI — Combobox: <a href="https://open-ui.org/components/combobox.explainer/">https://open-ui.org/components/combobox.explainer/</a></li>
+<li>Open UI — Enhanced Range Input: <a href="https://open-ui.org/components/enhanced-range-input.explainer/">https://open-ui.org/components/enhanced-range-input.explainer/</a></li>
+<li>Open UI — Tabs anatomy research: <a href="https://open-ui.org/components/tabs.research.parts/">https://open-ui.org/components/tabs.research.parts/</a></li>
+<li>Open UI — Popover research: <a href="https://open-ui.org/components/popover.research.explainer/">https://open-ui.org/components/popover.research.explainer/</a></li>
+<li>web.dev — Declarative Shadow DOM: <a href="https://web.dev/articles/declarative-shadow-dom">https://web.dev/articles/declarative-shadow-dom</a></li>
+<li>Material Web — Theming: <a href="https://material-web.dev/theming/material-theming/">https://material-web.dev/theming/material-theming/</a></li>
+<li>Material Design 3 — Design Tokens: <a href="https://m3.material.io/foundations/design-tokens">https://m3.material.io/foundations/design-tokens</a></li>
+<li>IBM Carbon Design System: <a href="https://carbondesignsystem.com/">https://carbondesignsystem.com/</a></li>
+<li>Carbon Component Checklist: <a href="https://carbondesignsystem.com/contributing/component-checklist/">https://carbondesignsystem.com/contributing/component-checklist/</a></li>
+<li>Carbon Migration FAQ: <a href="https://carbondesignsystem.com/migrating/faq/">https://carbondesignsystem.com/migrating/faq/</a></li>
+<li>Adobe Spectrum — Design Tokens: <a href="https://spectrum.adobe.com/page/design-tokens/">https://spectrum.adobe.com/page/design-tokens/</a></li>
+<li>FAST — Design Systems Overview: <a href="https://fast.design/docs/1.x/design-systems/overview/">https://fast.design/docs/1.x/design-systems/overview/</a></li>
+<li>Design Tokens Community Group: <a href="https://design-tokens.github.io/community-group/format/">https://design-tokens.github.io/community-group/format/</a></li>
+<li>MDN — Web Components: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components">https://developer.mozilla.org/en-US/docs/Web/API/Web_components</a></li>
+<li>MDN — Using Shadow DOM: <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM</a></li>
+</ol>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1</td>
+<td>2026-07-19</td>
+<td>OpenAI Research Agent</td>
+<td>Initial research baseline, assumption registry, candidate laws, evidence registry, architectural recommendation, and pre-implementation research gate.</td>
+</tr>
+</tbody>
+</table></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

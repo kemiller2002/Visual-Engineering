@@ -1,0 +1,1486 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Operationalizing Product Legibility | Visual Engineering Research</title><meta name="description" content="Product Legibility can be measured, but not responsibly as a context-free aesthetic score. The evidence supports a task-, population-, and environment-specific profile built from six gates: action possibility, discoverability, interpretability, executability, feedback closure, and consequence comprehension. A single average is unsafe because severe failure in one critical dimension can be concealed by strength elsewhere. This REP replaces the proposed additive score with a gated measurement architecture, distinguishes diagnostic metrics from outcome metrics, and provides a repeatable Product Legibility Evaluation Protocol. It also finds that classic predictive laws such as Fitts' and Hick's are useful locally but cannot serve as universal product-quality laws without checking their assumptions."><style></style><style>:root{--color-bg: #f7f4ec;--color-surface: #fffdf8;--color-ink: #1d2630;--color-accent: #9d3c12;--color-accent-soft: #f6d6c7;--color-border: #d7cfbf;--color-muted: #5f6a75;--font-display: "Fraunces", Georgia, serif;--font-body: "Source Sans 3", system-ui, sans-serif;--space-2: .5rem;--space-3: .75rem;--space-4: 1rem;--space-6: 1.5rem;--space-8: 2rem;--space-12: 3rem;--radius: 1rem;--shadow: 0 24px 60px rgba(12, 24, 32, .08);--content-width: 72rem}*,*:before,*:after{box-sizing:border-box}body,h1,h2,h3,p,ul,ol,dl{margin:0}img{max-width:100%}html{color-scheme:light dark}body{background:radial-gradient(circle at top,rgba(157,60,18,.08),transparent 30%),linear-gradient(180deg,var(--color-bg),#fff);color:var(--color-ink);font-family:var(--font-body);line-height:1.6}a{color:var(--color-accent)}main,.site-header__inner,.site-footer{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.skip-link{position:absolute;left:-999px}.skip-link:focus{left:1rem;top:1rem;z-index:100;background:var(--color-surface);padding:var(--space-3)}h1,h2,h3,.site-title{font-family:var(--font-display);line-height:1.1}h1{font-size:clamp(2.4rem,6vw,4.5rem)}h2{font-size:clamp(1.7rem,4vw,2.5rem)}h3{font-size:1.35rem}.lede{font-size:1.1rem;color:var(--color-muted)}.eyebrow,.site-kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--color-muted)}.site-header{padding:var(--space-8) 0 var(--space-6)}.site-header__inner{display:grid;gap:var(--space-6)}.site-nav{display:flex;flex-wrap:wrap;gap:var(--space-4);list-style:none;padding:0}.hero,.feature-grid,.card-grid,.document-shell,.page-intro,.search-shell{width:min(calc(100% - 2rem),var(--content-width));margin:0 auto}.hero{display:grid;gap:var(--space-8);padding:var(--space-8) 0 var(--space-12)}.feature-grid,.card-grid,.relationship-grid{display:grid;gap:var(--space-6)}.document-shell{display:grid;gap:var(--space-8);padding-bottom:var(--space-12)}.document-body{max-width:70ch}.document-body>*+*{margin-top:var(--space-4)}.page-intro,.search-shell{padding:var(--space-6) 0}.site-footer{padding:var(--space-8) 0}@media(min-width:48rem){.site-header__inner,.hero{grid-template-columns:1.6fr 1fr;align-items:start}.feature-grid,.card-grid,.relationship-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}.button,button{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:999px;border:1px solid var(--color-accent);background:var(--color-accent);color:#fff;text-decoration:none}.button--secondary{background:transparent;color:var(--color-accent)}.hero-actions{display:flex;gap:var(--space-4);flex-wrap:wrap;margin-top:var(--space-6)}.stats-panel,.metadata-panel,.document-card,.toc-panel,.search-form{background:color-mix(in srgb,var(--color-surface) 92%,white 8%);border:1px solid var(--color-border);border-radius:var(--radius);box-shadow:var(--shadow)}.stats-panel,.metadata-panel{display:grid;gap:var(--space-4);padding:var(--space-6)}.document-card,.toc-panel{padding:var(--space-6)}.inline-meta,.metadata-panel{display:grid;gap:var(--space-3)}.inline-meta div,.metadata-panel div,.stats-panel div{display:grid;gap:.15rem}.inline-meta dt,.metadata-panel dt,.stats-panel dt{font-size:.8rem;text-transform:uppercase;color:var(--color-muted)}.search-form{display:grid;gap:var(--space-4);padding:var(--space-6)}.search-form label{display:grid;gap:var(--space-2)}.search-form input,.search-form select{min-height:2.75rem;padding:.7rem .9rem;border-radius:.75rem;border:1px solid var(--color-border)}.search-results{display:grid;gap:var(--space-4);margin-top:var(--space-6)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid color-mix(in srgb,var(--color-accent) 60%,white);outline-offset:2px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media print{.site-header,.site-footer,.search-shell,.hero-actions{display:none}body{background:#fff}}
+</style></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div> <p class="site-kicker">Reusable research publishing</p> <a class="site-title" href="/">Visual Engineering Research</a> <p class="site-description">Searchable visual engineering research repository</p> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/">Overview</a></li><li><a href="/search/">Search</a></li><li><a href="/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-package</span> <span data-pagefind-meta="stableId">RP-PROD-002</span> </p> <h1 data-pagefind-meta="title">Operationalizing Product Legibility</h1> <p class="lede" data-pagefind-meta="summary">Product Legibility can be measured, but not responsibly as a context-free aesthetic score. The evidence supports a task-, population-, and environment-specific profile built from six gates: action possibility, discoverability, interpretability, executability, feedback closure, and consequence comprehension. A single average is unsafe because severe failure in one critical dimension can be concealed by strength elsewhere. This REP replaces the proposed additive score with a gated measurement architecture, distinguishes diagnostic metrics from outcome metrics, and provides a repeatable Product Legibility Evaluation Protocol. It also finds that classic predictive laws such as Fitts&#39; and Hick&#39;s are useful locally but cannot serve as universal product-quality laws without checking their assumptions.</p> <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>RP-PROD-002</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">Product Genome</dd></div> <div><dt>Discipline</dt><dd data-pagefind-meta="discipline">Industrial Design, Human Factors, Ergonomics, Cognitive Psychology, Human-Computer Interaction</dd></div> <div><dt>Status</dt><dd data-pagefind-meta="status">complete</dd></div> <div><dt>Version</dt><dd>1</dd></div>   <div><dt>Priority</dt><dd>Critical</dd></div> <div><dt>Tags</dt><dd data-pagefind-meta="tags">product-design, product-legibility, usability, human-factors, ergonomics, measurement</dd></div> <div><dt>Updated</dt><dd>2026-07-22</dd></div> <div><dt>Source</dt><dd>content/projects/product-genome/canonical/product-genome-research-execution-package-run-02.md</dd></div> </dl> </header> <aside class="toc-panel"> <h2>Contents</h2> <ol> <li><a href="#operationalizing-product-legibility">Operationalizing Product Legibility</a></li><li><a href="#research-state-snapshot">Research State Snapshot</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#what-was-accomplished">What Was Accomplished</a></li><li><a href="#major-discovery">Major Discovery</a></li><li><a href="#strongest-conclusion">Strongest Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#remaining-uncertainty">Remaining Uncertainty</a></li><li><a href="#original-objective">Original Objective</a></li><li><a href="#scope">Scope</a></li><li><a href="#included">Included</a></li><li><a href="#excluded">Excluded</a></li><li><a href="#repository-context">Repository Context</a></li><li><a href="#current-understanding">Current Understanding</a></li><li><a href="#key-discoveries">Key Discoveries</a></li><li><a href="#research-log">Research Log</a></li><li><a href="#cycle-1-define-the-construct">Cycle 1: Define the Construct</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#supporting-evidence-sought">Supporting Evidence Sought</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#attempted-falsification">Attempted Falsification</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-2-operationalize-the-six-gates">Cycle 2: Operationalize the Six Gates</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#attempted-falsification">Attempted Falsification</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-3-test-the-single-score-hypothesis">Cycle 3: Test the Single-Score Hypothesis</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-that-would-support-it">Evidence That Would Support It</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#counterexample">Counterexample</a></li><li><a href="#attempted-falsification">Attempted Falsification</a></li><li><a href="#analysis">Analysis</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-4-test-classical-predictive-laws">Cycle 4: Test Classical Predictive Laws</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#attempted-falsification">Attempted Falsification</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#cycle-5-construct-and-stress-test-the-protocol">Cycle 5: Construct and Stress-Test the Protocol</a></li><li><a href="#objective">Objective</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#protocol-stress-tests">Protocol Stress Tests</a></li><li><a href="#evidence-found">Evidence Found</a></li><li><a href="#evidence-against">Evidence Against</a></li><li><a href="#conclusion">Conclusion</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#next-step">Next Step</a></li><li><a href="#proposed-model">Proposed Model</a></li><li><a href="#model-prod-001-revision-a-gated-product-legibility-model">MODEL-PROD-001 Revision A: Gated Product Legibility Model</a></li><li><a href="#unit-of-analysis">Unit of Analysis</a></li><li><a href="#model">Model</a></li><li><a href="#gate-rule">Gate Rule</a></li><li><a href="#noncompensation-rule">Noncompensation Rule</a></li><li><a href="#summary-score-rule">Summary Score Rule</a></li><li><a href="#measurement-architecture">Measurement Architecture</a></li><li><a href="#layer-1-outcome-measures">Layer 1: Outcome Measures</a></li><li><a href="#layer-2-gate-measures">Layer 2: Gate Measures</a></li><li><a href="#a-actual-action-possibility">A. Actual Action Possibility</a></li><li><a href="#d-discoverability">D. Discoverability</a></li><li><a href="#i-interpretability">I. Interpretability</a></li><li><a href="#e-executability">E. Executability</a></li><li><a href="#f-feedback-closure">F. Feedback Closure</a></li><li><a href="#c-consequence-comprehension">C. Consequence Comprehension</a></li><li><a href="#layer-3-experience-measures">Layer 3: Experience Measures</a></li><li><a href="#product-legibility-evaluation-protocol">Product Legibility Evaluation Protocol</a></li><li><a href="#plp-001">PLP-001</a></li><li><a href="#step-1-define-the-interaction">Step 1: Define the Interaction</a></li><li><a href="#step-2-define-population">Step 2: Define Population</a></li><li><a href="#step-3-define-environment">Step 3: Define Environment</a></li><li><a href="#step-4-define-exposure">Step 4: Define Exposure</a></li><li><a href="#step-5-conduct-pre-action-elicitation">Step 5: Conduct Pre-Action Elicitation</a></li><li><a href="#step-6-observe-action">Step 6: Observe Action</a></li><li><a href="#step-7-test-feedback-and-state-understanding">Step 7: Test Feedback and State Understanding</a></li><li><a href="#step-8-repeat-under-relevant-stressors">Step 8: Repeat Under Relevant Stressors</a></li><li><a href="#step-9-apply-critical-gate-rules">Step 9: Apply Critical Gate Rules</a></li><li><a href="#step-10-report-profile-and-raw-data">Step 10: Report Profile and Raw Data</a></li><li><a href="#confirmed-findings">Confirmed Findings</a></li><li><a href="#cf-prod-011">CF-PROD-011</a></li><li><a href="#cf-prod-012">CF-PROD-012</a></li><li><a href="#cf-prod-013">CF-PROD-013</a></li><li><a href="#cf-prod-014">CF-PROD-014</a></li><li><a href="#cf-prod-015">CF-PROD-015</a></li><li><a href="#cf-prod-016">CF-PROD-016</a></li><li><a href="#cf-prod-017">CF-PROD-017</a></li><li><a href="#rejected-hypotheses">Rejected Hypotheses</a></li><li><a href="#rh-prod-008">RH-PROD-008</a></li><li><a href="#rh-prod-009">RH-PROD-009</a></li><li><a href="#rh-prod-010">RH-PROD-010</a></li><li><a href="#rh-prod-011">RH-PROD-011</a></li><li><a href="#rh-prod-012">RH-PROD-012</a></li><li><a href="#rh-prod-013">RH-PROD-013</a></li><li><a href="#emerging-patterns">Emerging Patterns</a></li><li><a href="#ep-prod-007-the-success-mask">EP-PROD-007: The Success Mask</a></li><li><a href="#ep-prod-008-confidence-inversion">EP-PROD-008: Confidence Inversion</a></li><li><a href="#ep-prod-009-legibility-migration-through-learning">EP-PROD-009: Legibility Migration Through Learning</a></li><li><a href="#ep-prod-010-measurement-must-follow-consequence">EP-PROD-010: Measurement Must Follow Consequence</a></li><li><a href="#ep-prod-011-product-families-can-externalize-learning">EP-PROD-011: Product Families Can Externalize Learning</a></li><li><a href="#candidate-laws">Candidate Laws</a></li><li><a href="#law-prod-008-contextual-legibility-law">LAW-PROD-008: Contextual Legibility Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#counter-evidence">Counter Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-prod-009-critical-gate-law">LAW-PROD-009: Critical Gate Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#supporting-evidence">Supporting Evidence</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-prod-010-pre-action-prediction-law">LAW-PROD-010: Pre-Action Prediction Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#status">Status</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-prod-011-feedback-closure-law-revised">LAW-PROD-011: Feedback Closure Law, Revised</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#law-prod-012-learning-transfer-law">LAW-PROD-012: Learning Transfer Law</a></li><li><a href="#hypothesis">Hypothesis</a></li><li><a href="#prediction">Prediction</a></li><li><a href="#confidence">Confidence</a></li><li><a href="#evidence-registry">Evidence Registry</a></li><li><a href="#ev-prod-011">EV-PROD-011</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#url">URL</a></li><li><a href="#ev-prod-012">EV-PROD-012</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#url">URL</a></li><li><a href="#ev-prod-013">EV-PROD-013</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#urls">URLs</a></li><li><a href="#ev-prod-014">EV-PROD-014</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#url">URL</a></li><li><a href="#ev-prod-015">EV-PROD-015</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#quality">Quality</a></li><li><a href="#doi">DOI</a></li><li><a href="#ev-prod-016">EV-PROD-016</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#quality">Quality</a></li><li><a href="#doi">DOI</a></li><li><a href="#ev-prod-017">EV-PROD-017</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#doi">DOI</a></li><li><a href="#ev-prod-018">EV-PROD-018</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#challenges">Challenges</a></li><li><a href="#quality">Quality</a></li><li><a href="#doi">DOI</a></li><li><a href="#ev-prod-019">EV-PROD-019</a></li><li><a href="#citation">Citation</a></li><li><a href="#source-type">Source Type</a></li><li><a href="#summary">Summary</a></li><li><a href="#supports">Supports</a></li><li><a href="#quality">Quality</a></li><li><a href="#urls">URLs</a></li><li><a href="#hypothesis-registry">Hypothesis Registry</a></li><li><a href="#failed-assumptions">Failed Assumptions</a></li><li><a href="#fa-prod-001-product-level-scoring-is-the-correct-unit">FA-PROD-001: Product-level scoring is the correct unit</a></li><li><a href="#fa-prod-002-more-numerical-compression-means-more-scientific-rigor">FA-PROD-002: More numerical compression means more scientific rigor</a></li><li><a href="#fa-prod-003-successful-use-proves-correct-understanding">FA-PROD-003: Successful use proves correct understanding</a></li><li><a href="#fa-prod-004-classic-laws-automatically-become-design-laws">FA-PROD-004: Classic laws automatically become design laws</a></li><li><a href="#theory-impact-assessment">Theory Impact Assessment</a></li><li><a href="#affected-theory-records">Affected Theory Records</a></li><li><a href="#new-principle-candidates">New Principle Candidates</a></li><li><a href="#deprecated-principles">Deprecated Principles</a></li><li><a href="#confidence-changes">Confidence Changes</a></li><li><a href="#predictions-created">Predictions Created</a></li><li><a href="#predictions-invalidated">Predictions Invalidated</a></li><li><a href="#required-theory-registry-updates">Required Theory Registry Updates</a></li><li><a href="#open-questions">Open Questions</a></li><li><a href="#1-what-thresholds-define-gate-failure-">1. What thresholds define gate failure?</a></li><li><a href="#2-does-pre-action-prediction-accuracy-reliably-forecast-use-errors-">2. Does pre-action prediction accuracy reliably forecast use errors?</a></li><li><a href="#3-how-reliable-are-independent-raters-when-coding-the-six-gates-">3. How reliable are independent raters when coding the six gates?</a></li><li><a href="#4-how-should-learning-curves-be-represented-">4. How should learning curves be represented?</a></li><li><a href="#5-can-population-exclusion-be-summarized-without-averaging-it-away-">5. Can population exclusion be summarized without averaging it away?</a></li><li><a href="#6-which-measures-transfer-from-digital-interfaces-to-physical-products-">6. Which measures transfer from digital interfaces to physical products?</a></li><li><a href="#7-how-should-continuous-manipulations-be-evaluated-">7. How should continuous manipulations be evaluated?</a></li><li><a href="#8-can-product-family-consistency-be-measured-as-transfer-rather-than-sameness-">8. Can product-family consistency be measured as transfer rather than sameness?</a></li><li><a href="#recommended-next-research">Recommended Next Research</a></li><li><a href="#priority-1-pilot-the-protocol-on-matched-product-pairs">Priority 1: Pilot the Protocol on Matched Product Pairs</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#priority-2-build-the-coding-manual">Priority 2: Build the Coding Manual</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#priority-3-test-pre-action-prediction">Priority 3: Test Pre-Action Prediction</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#priority-4-build-a-population-accommodation-layer">Priority 4: Build a Population Accommodation Layer</a></li><li><a href="#expected-value">Expected Value</a></li><li><a href="#effort">Effort</a></li><li><a href="#research-backlog">Research Backlog</a></li><li><a href="#suggested-specialized-research-agents">Suggested Specialized Research Agents</a></li><li><a href="#agent-a-human-factors-measurement-specialist">Agent A: Human-Factors Measurement Specialist</a></li><li><a href="#agent-b-ergonomics-and-anthropometry-specialist">Agent B: Ergonomics and Anthropometry Specialist</a></li><li><a href="#agent-c-cognitive-modeling-specialist">Agent C: Cognitive Modeling Specialist</a></li><li><a href="#agent-d-industrial-design-historian">Agent D: Industrial Design Historian</a></li><li><a href="#agent-e-research-methods-and-reliability-specialist">Agent E: Research Methods and Reliability Specialist</a></li><li><a href="#parallel-research-opportunities">Parallel Research Opportunities</a></li><li><a href="#risks">Risks</a></li><li><a href="#cross-discipline-opportunities">Cross-Discipline Opportunities</a></li><li><a href="#cognitive-psychology">Cognitive Psychology</a></li><li><a href="#biomechanics">Biomechanics</a></li><li><a href="#control-theory">Control Theory</a></li><li><a href="#information-theory">Information Theory</a></li><li><a href="#safety-engineering">Safety Engineering</a></li><li><a href="#architecture">Architecture</a></li><li><a href="#typography-and-visual-composition">Typography and Visual Composition</a></li><li><a href="#knowledge-relationships">Knowledge Relationships</a></li><li><a href="#repository-updates">Repository Updates</a></li><li><a href="#required">Required</a></li><li><a href="#suggested-file-names">Suggested File Names</a></li><li><a href="#website-updates">Website Updates</a></li><li><a href="#ai-consumption-notes">AI Consumption Notes</a></li><li><a href="#handoff-instructions">Handoff Instructions</a></li><li><a href="#research-quality-metrics">Research Quality Metrics</a></li><li><a href="#research-debt">Research Debt</a></li><li><a href="#missing-evidence">Missing Evidence</a></li><li><a href="#missing-experiments">Missing Experiments</a></li><li><a href="#missing-disciplines">Missing Disciplines</a></li><li><a href="#replication-needed">Replication Needed</a></li><li><a href="#tool-limitations">Tool Limitations</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#academic-original-research">Academic: Original Research</a></li><li><a href="#academic-reviews">Academic: Reviews</a></li><li><a href="#standards">Standards</a></li><li><a href="#government-and-regulatory-guidance">Government and Regulatory Guidance</a></li><li><a href="#books-and-foundational-works">Books and Foundational Works</a></li><li><a href="#historical">Historical</a></li><li><a href="#research-journal">Research Journal</a></li><li><a href="#jr-prod-002-01">JR-PROD-002-01</a></li><li><a href="#jr-prod-002-02">JR-PROD-002-02</a></li><li><a href="#jr-prod-002-03">JR-PROD-002-03</a></li><li><a href="#jr-prod-002-04">JR-PROD-002-04</a></li><li><a href="#appendix-a-minimal-coding-sheet">Appendix A: Minimal Coding Sheet</a></li><li><a href="#completion-checklist">Completion Checklist</a></li><li><a href="#revision-history">Revision History</a></li><li><a href="#agent-instructions">Agent Instructions</a></li> </ol> </aside> <section class="document-body"><h1 id="operationalizing-product-legibility">Operationalizing Product Legibility</h1>
+<h2 id="research-state-snapshot">Research State Snapshot</h2>
+<ul>
+<li><strong>Theory Version:</strong> Product Genome preliminary theory after RP-PROD-001</li>
+<li><strong>Knowledge Base Version:</strong> Product Genome KB 0.2</li>
+<li><strong>Highest Confidence Areas:</strong> Task-specific usability measurement; representative-user testing; motor target tradeoffs; critical-task analysis; feedback and error observation</li>
+<li><strong>Lowest Confidence Areas:</strong> Cross-product aggregation; long-term learning; emotional meaning; weighting among legibility dimensions</li>
+<li><strong>Largest Remaining Unknown:</strong> Whether measurements from different products and contexts can be normalized without erasing critical differences</li>
+<li><strong>Active Research Streams:</strong> Product Legibility, Complexity Allocation, Rams/Sapper case coding, repairability, product longevity</li>
+<li><strong>Recently Invalidated Ideas:</strong> Minimalism as a universal law; visual simplicity as a proxy for usability; additive legibility scoring without critical gates</li>
+<li><strong>Priority Changes:</strong> Product case-study coding should use the protocol in this REP before designer-genome scores are assigned</li>
+</ul>
+<hr>
+<h1 id="executive-summary">Executive Summary</h1>
+<h2 id="what-was-accomplished">What Was Accomplished</h2>
+<p>This research run addressed the highest-ranked open question from RP-PROD-001:</p>
+<blockquote>
+<p>How should Product Legibility be measured?</p>
+</blockquote>
+<p>Five investigation cycles were completed:</p>
+<ol>
+<li>Determine what kind of construct Product Legibility is.</li>
+<li>Test whether its six components can be measured independently.</li>
+<li>Test whether a single composite score is defensible.</li>
+<li>Examine whether classic predictive laws can supply quantitative foundations.</li>
+<li>Build an executable evaluation protocol and falsification plan.</li>
+</ol>
+<p>The resulting model is no longer merely descriptive. It now specifies units of analysis, required context, observable measures, failure criteria, and reporting rules.</p>
+<h2 id="major-discovery">Major Discovery</h2>
+<p>Product Legibility is not an intrinsic property of an object.</p>
+<p>It is a measured relationship among:</p>
+<pre><code class="language-text">Product × Task × User Population × Environment × Time
+</code></pre>
+<p>A control can be highly legible for a trained technician standing in good light and illegible for an older first-time user wearing gloves under time pressure. Therefore, statements such as “this product is intuitive” or “this control is legible” are incomplete unless the task and population are named.</p>
+<h2 id="strongest-conclusion">Strongest Conclusion</h2>
+<p>The Product Legibility Model should use a <strong>gated profile</strong>, not a simple arithmetic average.</p>
+<p>A product interaction must pass six gates:</p>
+<ol>
+<li>Actual Action Possibility</li>
+<li>Discoverability</li>
+<li>Interpretability</li>
+<li>Executability</li>
+<li>Feedback Closure</li>
+<li>Consequence Comprehension</li>
+</ol>
+<p>A severe failure in a critical gate can invalidate the interaction even when the other scores are high. A dangerous control can be easy to find, quick to operate, and pleasant to use while still failing because users misunderstand its consequence.</p>
+<h2 id="confidence">Confidence</h2>
+<p><strong>Moderate-High.</strong></p>
+<p>Confidence is high that usability must be evaluated for specified users, goals, and contexts, and that effectiveness, efficiency, errors, and satisfaction require direct observation. Confidence is moderate in the exact proposed scoring and thresholds because they have not yet been validated across product categories.</p>
+<h2 id="remaining-uncertainty">Remaining Uncertainty</h2>
+<p>The protocol can reliably structure measurement, but three major questions remain:</p>
+<ul>
+<li>How should scores be normalized across products with radically different tasks?</li>
+<li>How should learning over repeated use alter the legibility profile?</li>
+<li>What thresholds should define pass, caution, and failure for non-safety-critical consumer products?</li>
+</ul>
+<hr>
+<h1 id="original-objective">Original Objective</h1>
+<p>Operationalize MODEL-001 from RP-PROD-001:</p>
+<pre><code class="language-text">L = f(A, D, I, E, F, C)
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>A = actual action possibility</li>
+<li>D = discoverability</li>
+<li>I = interpretability</li>
+<li>E = executability</li>
+<li>F = feedback quality</li>
+<li>C = consequence comprehension</li>
+</ul>
+<p>The prior model proposed these components but did not specify measurement units, aggregation rules, thresholds, or experimental procedure.</p>
+<hr>
+<h1 id="scope">Scope</h1>
+<h2 id="included">Included</h2>
+<ul>
+<li>Physical products and hybrid physical-digital products</li>
+<li>Discrete and continuous controls</li>
+<li>First-use and repeated-use testing</li>
+<li>Representative users and contexts</li>
+<li>Performance, error, confidence, and biomechanical measures</li>
+<li>Safety-critical and ordinary consumer tasks</li>
+</ul>
+<h2 id="excluded">Excluded</h2>
+<ul>
+<li>Purely aesthetic judgment</li>
+<li>Brand preference</li>
+<li>Manufacturing quality except where it affects interaction</li>
+<li>Full emotional durability assessment</li>
+<li>Full repairability assessment</li>
+<li>Longitudinal ownership beyond learnability and retention measures</li>
+</ul>
+<hr>
+<h1 id="repository-context">Repository Context</h1>
+<p>RP-PROD-001 established that:</p>
+<ul>
+<li>minimalism is not a universal law;</li>
+<li>affordance is relational rather than visual alone;</li>
+<li>feedback closes a control loop;</li>
+<li>compatibility is more precise than “intuitiveness”;</li>
+<li>complexity can be transferred rather than removed;</li>
+<li>Product Legibility is a promising model but lacked operational metrics.</li>
+</ul>
+<p>This REP advances that theory and should be used before large-scale Rams and Sapper product coding begins.</p>
+<hr>
+<h1 id="current-understanding">Current Understanding</h1>
+<p>Product Legibility concerns whether a person can:</p>
+<ol>
+<li>recognize that an action is possible;</li>
+<li>locate the means of action;</li>
+<li>predict what the action will do;</li>
+<li>physically perform it;</li>
+<li>detect and interpret the system response;</li>
+<li>understand the resulting state and consequences.</li>
+</ol>
+<p>These stages resemble a control loop, but they are not always strictly sequential. Experienced users may act through stable spatial memory before consciously interpreting a label. Physical constraints may prevent an invalid action before consequence comprehension is required. Feedback can update interpretation during execution.</p>
+<p>The model is therefore best treated as a <strong>network of necessary interaction conditions</strong>, not a universal linear pipeline.</p>
+<hr>
+<h1 id="key-discoveries">Key Discoveries</h1>
+<ol>
+<li><strong>Product Legibility is relational and conditional.</strong> It must be reported for a named task, population, environment, and exposure level.</li>
+<li><strong>Outcome metrics and diagnostic metrics are different.</strong> Completion rate tells whether the interaction succeeded; the six gates help explain why.</li>
+<li><strong>Averages conceal catastrophic weaknesses.</strong> Critical failures require gating or minimum rules.</li>
+<li><strong>Discoverability is not equivalent to visual salience.</strong> Search time, first action, and unaided discovery are stronger measures.</li>
+<li><strong>Interpretability must be tested before action.</strong> Asking users to predict results separates comprehension from trial-and-error learning.</li>
+<li><strong>Executability requires capability distributions, not an “average user.”</strong> Reach, force, precision, posture, and sensory capability must be population-specific.</li>
+<li><strong>Feedback quality is multidimensional.</strong> Latency, detectability, discriminability, compatibility, persistence, and proportionality should be measured separately.</li>
+<li><strong>Confidence is useful only when calibrated against correctness.</strong> High confidence paired with wrong predictions is a dangerous form of illegibility.</li>
+<li><strong>Fitts' and Hick's laws are local models.</strong> They predict constrained aspects of movement and choice, not overall product quality.</li>
+<li><strong>Learnability can improve performance while preserving exclusion.</strong> A product that becomes usable after training may still have poor first-use legibility.</li>
+</ol>
+<hr>
+<h1 id="research-log">Research Log</h1>
+<h2 id="cycle-1-define-the-construct">Cycle 1: Define the Construct</h2>
+<h3 id="objective">Objective</h3>
+<p>Determine whether Product Legibility can be treated as an intrinsic product attribute.</p>
+<h3 id="hypothesis">Hypothesis</h3>
+<p><strong>HY-PROD-008:</strong> Product Legibility is a stable property of product form and can be scored without specifying a task or user population.</p>
+<h3 id="supporting-evidence-sought">Supporting Evidence Sought</h3>
+<ul>
+<li>Stable rankings across tasks and user groups</li>
+<li>Usability standards defining usability independently of context</li>
+<li>Product features that predict success regardless of population</li>
+</ul>
+<h3 id="evidence-found">Evidence Found</h3>
+<p>ISO 9241-11 defines usability in relation to specified users achieving specified goals with effectiveness, efficiency, and satisfaction in a specified context of use. NIST usability testing likewise emphasizes representative users performing representative tasks and collecting completion, error, time, and satisfaction data. FDA human-factors guidance requires analysis of intended users, uses, use environments, and critical tasks rather than generic judgments about interface quality.</p>
+<p>NASA human-integration material similarly treats anthropometry, biomechanics, strength, environment, equipment, and task as coupled design inputs.</p>
+<h3 id="evidence-against">Evidence Against</h3>
+<p>The same control can vary in usability with gloves, darkness, vibration, impairment, expertise, urgency, posture, and divided attention. No strong source supports context-free usability scoring.</p>
+<h3 id="attempted-falsification">Attempted Falsification</h3>
+<p>Visual form sometimes produces stable expectations across users, suggesting that product-level properties matter. However, stable cues do not eliminate dependence on bodily capability, task, and environment. Product properties influence legibility but do not contain it independently.</p>
+<h3 id="analysis">Analysis</h3>
+<p>Product Legibility should be indexed as:</p>
+<pre><code class="language-text">PL(product, task, population, environment, exposure)
+</code></pre>
+<p>The exposure term is required because first use, learned use, and expert use may have different profiles.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p><strong>HY-PROD-008 rejected.</strong></p>
+<p>Product Legibility is a relational measurement.</p>
+<h3 id="confidence-1">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step">Next Step</h3>
+<p>Identify measurable variables for each legibility gate.</p>
+<hr>
+<h2 id="cycle-2-operationalize-the-six-gates">Cycle 2: Operationalize the Six Gates</h2>
+<h3 id="objective-1">Objective</h3>
+<p>Determine whether each component can be associated with observable measures.</p>
+<h3 id="hypothesis-1">Hypothesis</h3>
+<p><strong>HY-PROD-009:</strong> Each Product Legibility component can be measured using at least one behavioral or biomechanical variable rather than subjective rating alone.</p>
+<h3 id="evidence-found-1">Evidence Found</h3>
+<p>Human-factors practice supplies multiple direct measures:</p>
+<ul>
+<li>successful task completion;</li>
+<li>time on task;</li>
+<li>use errors and close calls;</li>
+<li>assistance required;</li>
+<li>repeated actions;</li>
+<li>deviations from expected sequence;</li>
+<li>workload and satisfaction;</li>
+<li>reach, force, posture, and precision requirements;</li>
+<li>state-identification and prediction accuracy.</li>
+</ul>
+<p>Fitts' work demonstrates that movement time varies systematically with movement amplitude and target width under constrained aiming tasks. Hick's experiments show that choice reaction time can vary with information uncertainty under specific stimulus-response conditions. Card, Moran, and Newell's Keystroke-Level Model demonstrates that expert error-free task time can be estimated by decomposing a known procedure into operators.</p>
+<p>These do not validate the whole Product Legibility model, but they show that important subcomponents can be operationalized.</p>
+<h3 id="evidence-against-1">Evidence Against</h3>
+<p>Some variables are difficult to isolate. Discoverability and interpretability interact. A user may fail to find a control because the task representation is wrong, not because the control lacks salience. Satisfaction can be influenced by brand, aesthetics, expectations, and prior experience. Anthropometric accommodation does not ensure comfortable or safe execution.</p>
+<h3 id="attempted-falsification-1">Attempted Falsification</h3>
+<p>A purely questionnaire-based scale would be cheaper and could produce a single score. It fails because users may report confidence after incorrect actions, may not recall near-errors, and may adapt to poor design. Direct observation remains necessary.</p>
+<h3 id="conclusion-1">Conclusion</h3>
+<p><strong>HY-PROD-009 provisionally supported.</strong></p>
+<p>All six gates can be associated with observable variables, but no gate should be inferred from a single measure.</p>
+<h3 id="confidence-2">Confidence</h3>
+<p>Moderate-High.</p>
+<h3 id="next-step-1">Next Step</h3>
+<p>Test aggregation.</p>
+<hr>
+<h2 id="cycle-3-test-the-single-score-hypothesis">Cycle 3: Test the Single-Score Hypothesis</h2>
+<h3 id="objective-2">Objective</h3>
+<p>Determine whether the six components should be averaged into one Product Legibility score.</p>
+<h3 id="hypothesis-2">Hypothesis</h3>
+<p><strong>HY-PROD-010:</strong> A weighted arithmetic mean of the six component scores provides a valid overall Product Legibility score.</p>
+<h3 id="evidence-that-would-support-it">Evidence That Would Support It</h3>
+<ul>
+<li>Weak components can be compensated by strong components without unacceptable outcomes</li>
+<li>Similar average scores predict similar task success and risk</li>
+<li>Weightings remain stable across product categories</li>
+</ul>
+<h3 id="evidence-against-2">Evidence Against</h3>
+<p>FDA critical-task analysis contradicts simple compensation. A low-frequency but severe use error may dominate risk even when most actions are fast and satisfactory. ISO's context-specific definition also cautions against assuming stable weights across goals and environments.</p>
+<p>A control can score highly on discoverability, executability, and immediate feedback while producing a confidently incorrect state interpretation. An arithmetic mean can label that interaction acceptable.</p>
+<h3 id="counterexample">Counterexample</h3>
+<p>Consider an emergency shutoff:</p>
+<ul>
+<li>Discoverability: 95</li>
+<li>Interpretability: 40</li>
+<li>Executability: 95</li>
+<li>Feedback: 90</li>
+<li>Consequence comprehension: 20</li>
+</ul>
+<p>The average is 68, but the interaction is unsafe because users do not understand what will stop or whether shutdown occurred.</p>
+<h3 id="attempted-falsification-2">Attempted Falsification</h3>
+<p>A weighted mean with very high weights on safety-relevant dimensions could reduce this problem. However, weights would need to vary by task consequence, effectively reintroducing gates and context-specific rules.</p>
+<h3 id="analysis-1">Analysis</h3>
+<p>The correct architecture is hierarchical:</p>
+<ol>
+<li><strong>Critical gate rule:</strong> Any critical gate below threshold causes failure.</li>
+<li><strong>Task outcome rule:</strong> Critical-task completion and serious-use-error rates are reported independently.</li>
+<li><strong>Profile rule:</strong> Remaining dimensions are displayed as a profile.</li>
+<li><strong>Composite rule:</strong> A summary score may be calculated only for comparisons within the same task, population, environment, exposure, and consequence class.</li>
+</ol>
+<h3 id="conclusion-2">Conclusion</h3>
+<p><strong>HY-PROD-010 rejected.</strong></p>
+<p>A context-free additive Product Legibility score is not defensible.</p>
+<h3 id="confidence-3">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-2">Next Step</h3>
+<p>Determine how classical quantitative laws can strengthen individual gates without being overgeneralized.</p>
+<hr>
+<h2 id="cycle-4-test-classical-predictive-laws">Cycle 4: Test Classical Predictive Laws</h2>
+<h3 id="objective-3">Objective</h3>
+<p>Assess whether Fitts' law, Hick's law, and task-decomposition models can serve as universal mathematical foundations for Product Legibility.</p>
+<h3 id="hypothesis-3">Hypothesis</h3>
+<p><strong>HY-PROD-011:</strong> Established human-performance laws can be combined to predict overall product interaction quality.</p>
+<h3 id="evidence-found-2">Evidence Found</h3>
+<p>Fitts' original experiments established a reliable speed-accuracy relationship for constrained aimed movement. Hick found a relationship between reaction time and stimulus uncertainty in choice tasks. The Keystroke-Level Model predicted expert, routine, error-free execution time by decomposing a known method.</p>
+<p>These models offer useful local predictions:</p>
+<ul>
+<li>larger or nearer targets generally reduce aiming difficulty;</li>
+<li>more uncertain choices can increase selection time;</li>
+<li>longer action sequences generally increase expert execution time;</li>
+<li>system response delay adds directly to task time and can disrupt control.</li>
+</ul>
+<h3 id="evidence-against-3">Evidence Against</h3>
+<p>Each model has assumptions that Product Genome must preserve:</p>
+<ul>
+<li>Fitts' law does not measure whether users know which target to select.</li>
+<li>Hick's law is affected by familiarity, probability, grouping, stimulus-response compatibility, and search structure.</li>
+<li>KLM assumes skilled users, a known correct method, and error-free routine action.</li>
+<li>None directly measures safety, meaning, physical exclusion, attachment, repairability, or long-term trust.</li>
+</ul>
+<h3 id="attempted-falsification-3">Attempted Falsification</h3>
+<p>A product interaction could be decomposed into movement, choice, mental preparation, and response operators. This may predict task time after the correct method is known. It still cannot predict discovery, mistaken mental models, or whether the user chooses the correct goal.</p>
+<h3 id="conclusion-3">Conclusion</h3>
+<p><strong>HY-PROD-011 rejected in strong form and retained in narrow form.</strong></p>
+<p>Classical laws should be embedded as gate-specific models, not promoted to universal product laws.</p>
+<h3 id="confidence-4">Confidence</h3>
+<p>High.</p>
+<h3 id="next-step-3">Next Step</h3>
+<p>Build an executable protocol with explicit separation between outcomes and diagnostics.</p>
+<hr>
+<h2 id="cycle-5-construct-and-stress-test-the-protocol">Cycle 5: Construct and Stress-Test the Protocol</h2>
+<h3 id="objective-4">Objective</h3>
+<p>Create a protocol another research agent can apply without additional context.</p>
+<h3 id="hypothesis-4">Hypothesis</h3>
+<p><strong>HY-PROD-012:</strong> A standardized sequence can produce comparable Product Legibility profiles while preserving context and critical failures.</p>
+<h3 id="protocol-stress-tests">Protocol Stress Tests</h3>
+<p>The draft protocol was tested conceptually against four interaction classes:</p>
+<ol>
+<li>A single-purpose mechanical switch</li>
+<li>A continuous lamp-positioning mechanism</li>
+<li>A multifunction appliance control</li>
+<li>A safety-critical medical-device task</li>
+</ol>
+<h3 id="evidence-found-3">Evidence Found</h3>
+<p>The six gates apply to all four classes, but their measures and thresholds differ. Continuous controls require trajectory quality and proportional feedback. Multifunction controls require mode awareness and state persistence. Safety-critical tasks require use-error severity and consequence comprehension to dominate.</p>
+<h3 id="evidence-against-4">Evidence Against</h3>
+<p>Full numerical comparability across categories remains weak. A discovery time of two seconds may be excellent for a hidden maintenance latch and unacceptable for an emergency control. The protocol must preserve raw measures and context rather than only normalized scores.</p>
+<h3 id="conclusion-4">Conclusion</h3>
+<p><strong>HY-PROD-012 provisionally supported.</strong></p>
+<p>The protocol is suitable for research execution, but cross-category ranking is not yet justified.</p>
+<h3 id="confidence-5">Confidence</h3>
+<p>Moderate-High.</p>
+<h3 id="next-step-4">Next Step</h3>
+<p>Apply the protocol to a pilot set of matched Rams and Sapper products and examine inter-rater reliability.</p>
+<hr>
+<h1 id="proposed-model">Proposed Model</h1>
+<h2 id="model-prod-001-revision-a-gated-product-legibility-model">MODEL-PROD-001 Revision A: Gated Product Legibility Model</h2>
+<h3 id="unit-of-analysis">Unit of Analysis</h3>
+<p>A defined interaction, not an entire product.</p>
+<p>Example:</p>
+<pre><code class="language-text">Incorrect: Braun SK 4 legibility
+Correct: Ability of a first-time adult user to select and begin radio playback in a quiet home environment
+</code></pre>
+<h3 id="model">Model</h3>
+<pre><code class="language-text">PL = Profile(A, D, I, E, F, C | T, P, X, R)
+</code></pre>
+<p>Where:</p>
+<ul>
+<li><strong>A:</strong> Actual Action Possibility</li>
+<li><strong>D:</strong> Discoverability</li>
+<li><strong>I:</strong> Interpretability</li>
+<li><strong>E:</strong> Executability</li>
+<li><strong>F:</strong> Feedback Closure</li>
+<li><strong>C:</strong> Consequence Comprehension</li>
+<li><strong>T:</strong> Task</li>
+<li><strong>P:</strong> Population</li>
+<li><strong>X:</strong> Context/environment</li>
+<li><strong>R:</strong> Repetition or exposure level</li>
+</ul>
+<h3 id="gate-rule">Gate Rule</h3>
+<pre><code class="language-text">Interaction Pass =
+  Task Outcome Pass
+  AND all Critical Gates >= task-specific thresholds
+</code></pre>
+<h3 id="noncompensation-rule">Noncompensation Rule</h3>
+<p>A critical failure in one gate cannot be canceled by high performance in another.</p>
+<h3 id="summary-score-rule">Summary Score Rule</h3>
+<p>A composite may be used only when:</p>
+<ul>
+<li>the task is identical;</li>
+<li>the user population is identical;</li>
+<li>the environment is identical;</li>
+<li>exposure level is identical;</li>
+<li>consequence class is identical;</li>
+<li>critical gates have passed;</li>
+<li>raw measures remain available.</li>
+</ul>
+<hr>
+<h1 id="measurement-architecture">Measurement Architecture</h1>
+<h2 id="layer-1-outcome-measures">Layer 1: Outcome Measures</h2>
+<p>These determine whether the interaction worked.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th align="right">Unit</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task completion</td>
+<td align="right">binary / percentage</td>
+<td>Whether the intended goal was achieved</td>
+</tr>
+<tr>
+<td>Correct completion</td>
+<td align="right">percentage</td>
+<td>Completion without incorrect final state</td>
+</tr>
+<tr>
+<td>Critical use error</td>
+<td align="right">count / rate</td>
+<td>Error capable of causing unacceptable outcome</td>
+</tr>
+<tr>
+<td>Noncritical use error</td>
+<td align="right">count / rate</td>
+<td>Recoverable error or inefficiency</td>
+</tr>
+<tr>
+<td>Assistance required</td>
+<td align="right">count / percentage</td>
+<td>External help, prompt, or instruction needed</td>
+</tr>
+<tr>
+<td>Time on task</td>
+<td align="right">seconds</td>
+<td>Efficiency after task begins</td>
+</tr>
+<tr>
+<td>Abandonment</td>
+<td align="right">percentage</td>
+<td>Failure to continue</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layer-2-gate-measures">Layer 2: Gate Measures</h2>
+<h3 id="a-actual-action-possibility">A. Actual Action Possibility</h3>
+<p><strong>Question:</strong> Can the target user perform the action under the target conditions?</p>
+<p>Measures:</p>
+<ul>
+<li>percentage of population physically capable;</li>
+<li>reach accommodation percentile;</li>
+<li>required force relative to capability distribution;</li>
+<li>required range of motion;</li>
+<li>grip or pinch type;</li>
+<li>sensory requirement;</li>
+<li>prerequisite equipment or posture;</li>
+<li>successful manipulation under environmental constraints.</li>
+</ul>
+<p>Failure examples:</p>
+<ul>
+<li>control cannot be reached from required position;</li>
+<li>force exceeds capability for part of intended population;</li>
+<li>action requires visual acuity unavailable in intended context;</li>
+<li>gloves prevent grip or touch recognition.</li>
+</ul>
+<h3 id="d-discoverability">D. Discoverability</h3>
+<p><strong>Question:</strong> Can the user locate the action opportunity without inappropriate help?</p>
+<p>Measures:</p>
+<ul>
+<li>unaided discovery rate;</li>
+<li>time to first fixation or first contact;</li>
+<li>time to correct control selection;</li>
+<li>incorrect-control approaches;</li>
+<li>requests for help;</li>
+<li>search path length;</li>
+<li>first-action correctness.</li>
+</ul>
+<p>Important distinction:</p>
+<p>Visual salience is an input variable. Discoverability is a behavioral result.</p>
+<h3 id="i-interpretability">I. Interpretability</h3>
+<p><strong>Question:</strong> Before acting, can the user predict what the control will do?</p>
+<p>Measures:</p>
+<ul>
+<li>predicted-effect accuracy;</li>
+<li>predicted-direction accuracy;</li>
+<li>mode identification accuracy;</li>
+<li>label/icon comprehension;</li>
+<li>mapping accuracy;</li>
+<li>confidence in prediction;</li>
+<li>confidence calibration.</li>
+</ul>
+<p>Calibration measure:</p>
+<pre><code class="language-text">Calibration Error = |Confidence - Accuracy|
+</code></pre>
+<p>High confidence plus low accuracy is a severe warning.</p>
+<h3 id="e-executability">E. Executability</h3>
+<p><strong>Question:</strong> Can the user carry out the intended action accurately and efficiently?</p>
+<p>Measures:</p>
+<ul>
+<li>task movement time;</li>
+<li>miss or slip rate;</li>
+<li>correction count;</li>
+<li>overshoot;</li>
+<li>force variability;</li>
+<li>posture deviation;</li>
+<li>sequence length;</li>
+<li>hand or visual transitions;</li>
+<li>workload;</li>
+<li>fatigue across repetition.</li>
+</ul>
+<p>Applicable local models:</p>
+<ul>
+<li>Fitts-type target analysis;</li>
+<li>movement trajectory analysis;</li>
+<li>anthropometric accommodation;</li>
+<li>task decomposition;</li>
+<li>force and precision testing.</li>
+</ul>
+<h3 id="f-feedback-closure">F. Feedback Closure</h3>
+<p><strong>Question:</strong> Can the user detect, distinguish, and interpret the product's response?</p>
+<p>Measures:</p>
+<ul>
+<li>response latency;</li>
+<li>feedback detection rate;</li>
+<li>feedback identification accuracy;</li>
+<li>state-identification accuracy;</li>
+<li>repeated-action rate;</li>
+<li>overcorrection rate;</li>
+<li>feedback persistence;</li>
+<li>cross-modal agreement;</li>
+<li>perceived versus actual state.</li>
+</ul>
+<p>Candidate dimensions:</p>
+<pre><code class="language-text">Latency
+Detectability
+Discriminability
+Compatibility
+Proportionality
+Persistence
+Redundancy
+</code></pre>
+<h3 id="c-consequence-comprehension">C. Consequence Comprehension</h3>
+<p><strong>Question:</strong> Does the user understand the resulting state, risk, reversibility, and downstream effect?</p>
+<p>Measures:</p>
+<ul>
+<li>final-state identification;</li>
+<li>hazard awareness;</li>
+<li>reversibility knowledge;</li>
+<li>downstream-effect prediction;</li>
+<li>recovery-path knowledge;</li>
+<li>delayed-state recall;</li>
+<li>discrepancy between perceived and actual state.</li>
+</ul>
+<p>This gate is especially important for mode changes, automation, destructive actions, medication delivery, vehicle controls, and emergency systems.</p>
+<h2 id="layer-3-experience-measures">Layer 3: Experience Measures</h2>
+<p>These explain acceptance but do not replace performance measures.</p>
+<ul>
+<li>perceived effort;</li>
+<li>satisfaction;</li>
+<li>trust;</li>
+<li>comfort;</li>
+<li>perceived control;</li>
+<li>perceived complexity;</li>
+<li>aesthetic coherence;</li>
+<li>preference.</li>
+</ul>
+<hr>
+<h1 id="product-legibility-evaluation-protocol">Product Legibility Evaluation Protocol</h1>
+<h2 id="plp-001">PLP-001</h2>
+<h3 id="step-1-define-the-interaction">Step 1: Define the Interaction</h3>
+<p>Record:</p>
+<ul>
+<li>product;</li>
+<li>task goal;</li>
+<li>start state;</li>
+<li>successful end state;</li>
+<li>critical and noncritical errors;</li>
+<li>expected action sequence;</li>
+<li>possible alternate valid sequences.</li>
+</ul>
+<h3 id="step-2-define-population">Step 2: Define Population</h3>
+<p>Record distributions, not just averages:</p>
+<ul>
+<li>age range;</li>
+<li>experience;</li>
+<li>relevant disability or impairment;</li>
+<li>handedness if material;</li>
+<li>strength and reach considerations;</li>
+<li>language and literacy;</li>
+<li>professional training;</li>
+<li>familiarity with product conventions.</li>
+</ul>
+<h3 id="step-3-define-environment">Step 3: Define Environment</h3>
+<p>Record:</p>
+<ul>
+<li>illumination;</li>
+<li>noise;</li>
+<li>vibration;</li>
+<li>posture;</li>
+<li>mobility;</li>
+<li>divided attention;</li>
+<li>gloves or protective equipment;</li>
+<li>time pressure;</li>
+<li>social conditions;</li>
+<li>environmental hazards.</li>
+</ul>
+<h3 id="step-4-define-exposure">Step 4: Define Exposure</h3>
+<p>At minimum:</p>
+<ul>
+<li>first encounter;</li>
+<li>after brief instruction;</li>
+<li>after repeated practice;</li>
+<li>retention after delay, when relevant.</li>
+</ul>
+<h3 id="step-5-conduct-pre-action-elicitation">Step 5: Conduct Pre-Action Elicitation</h3>
+<p>Before permitting interaction, ask participants to identify:</p>
+<ul>
+<li>what can be acted upon;</li>
+<li>what they expect each relevant action to do;</li>
+<li>the current product state;</li>
+<li>likely consequences.</li>
+</ul>
+<p>This prevents trial-and-error success from being mistaken for initial legibility.</p>
+<h3 id="step-6-observe-action">Step 6: Observe Action</h3>
+<p>Record:</p>
+<ul>
+<li>first action;</li>
+<li>path;</li>
+<li>errors;</li>
+<li>hesitation;</li>
+<li>corrections;</li>
+<li>repeated actions;</li>
+<li>assistance;</li>
+<li>completion;</li>
+<li>time;</li>
+<li>physical difficulty.</li>
+</ul>
+<h3 id="step-7-test-feedback-and-state-understanding">Step 7: Test Feedback and State Understanding</h3>
+<p>Immediately after action, ask:</p>
+<ul>
+<li>Did the product register the action?</li>
+<li>What state is it now in?</li>
+<li>What changed?</li>
+<li>Is the action complete?</li>
+<li>Can it be reversed?</li>
+</ul>
+<p>Compare answers with actual state.</p>
+<h3 id="step-8-repeat-under-relevant-stressors">Step 8: Repeat Under Relevant Stressors</h3>
+<p>Use only realistic stressors:</p>
+<ul>
+<li>low light;</li>
+<li>noise;</li>
+<li>gloves;</li>
+<li>divided attention;</li>
+<li>fatigue;</li>
+<li>urgency;</li>
+<li>reduced mobility;</li>
+<li>repeated use.</li>
+</ul>
+<h3 id="step-9-apply-critical-gate-rules">Step 9: Apply Critical Gate Rules</h3>
+<p>Define thresholds before testing. Do not lower thresholds after observing results.</p>
+<h3 id="step-10-report-profile-and-raw-data">Step 10: Report Profile and Raw Data</h3>
+<p>Required output:</p>
+<pre><code class="language-text">Task outcome
+Critical errors
+A profile
+D profile
+I profile
+E profile
+F profile
+C profile
+Experience measures
+Population and context
+Exposure level
+Uncertainty and limitations
+</code></pre>
+<hr>
+<h1 id="confirmed-findings">Confirmed Findings</h1>
+<h2 id="cf-prod-011">CF-PROD-011</h2>
+<p>Usability and Product Legibility cannot be evaluated independently of specified users, goals, and context.</p>
+<p><strong>Evidence:</strong> EV-PROD-011, EV-PROD-012, EV-PROD-013</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-prod-012">CF-PROD-012</h2>
+<p>Representative-user task testing supplies stronger evidence than expert aesthetic judgment alone.</p>
+<p><strong>Evidence:</strong> EV-PROD-011, EV-PROD-012</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-prod-013">CF-PROD-013</h2>
+<p>Task completion, time, errors, assistance, and satisfaction are distinct outcome dimensions and should not be collapsed without preserving raw values.</p>
+<p><strong>Evidence:</strong> EV-PROD-011, EV-PROD-012, EV-PROD-014</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-prod-014">CF-PROD-014</h2>
+<p>Motor target size and movement amplitude can predict movement time under constrained aiming tasks.</p>
+<p><strong>Evidence:</strong> EV-PROD-015</p>
+<p><strong>Confidence:</strong> High within the law's boundary conditions.</p>
+<h2 id="cf-prod-015">CF-PROD-015</h2>
+<p>Choice uncertainty can affect reaction time, but the effect is conditional on task structure, probability, familiarity, and compatibility.</p>
+<p><strong>Evidence:</strong> EV-PROD-016, EV-PROD-017</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-prod-016">CF-PROD-016</h2>
+<p>Expert task execution can be decomposed into operators for time prediction, but such models do not measure discoverability or novice mental-model errors.</p>
+<p><strong>Evidence:</strong> EV-PROD-018</p>
+<p><strong>Confidence:</strong> High.</p>
+<h2 id="cf-prod-017">CF-PROD-017</h2>
+<p>A severe use-related risk cannot be made acceptable by strength in unrelated usability dimensions.</p>
+<p><strong>Evidence:</strong> EV-PROD-012</p>
+<p><strong>Confidence:</strong> High for safety-critical contexts; moderate-high as a general design principle.</p>
+<hr>
+<h1 id="rejected-hypotheses">Rejected Hypotheses</h1>
+<h2 id="rh-prod-008">RH-PROD-008</h2>
+<p><strong>Product Legibility is an intrinsic object property.</strong></p>
+<p>Rejected because performance depends on task, population, environment, and exposure.</p>
+<h2 id="rh-prod-009">RH-PROD-009</h2>
+<p><strong>A questionnaire can replace behavioral testing.</strong></p>
+<p>Rejected because confidence and satisfaction can remain high despite incorrect action or state understanding.</p>
+<h2 id="rh-prod-010">RH-PROD-010</h2>
+<p><strong>The six gate scores can always be averaged.</strong></p>
+<p>Rejected because critical failure can be hidden by compensation.</p>
+<h2 id="rh-prod-011">RH-PROD-011</h2>
+<p><strong>Fitts' law is a general law of ease of use.</strong></p>
+<p>Rejected because it models aimed movement, not target selection, comprehension, safety, or product value.</p>
+<h2 id="rh-prod-012">RH-PROD-012</h2>
+<p><strong>Hick's law proves that fewer options are always better.</strong></p>
+<p>Rejected because structured, familiar, probable, and compatible choices do not behave like arbitrary equiprobable alternatives.</p>
+<h2 id="rh-prod-013">RH-PROD-013</h2>
+<p><strong>Successful task completion proves the interaction was legible.</strong></p>
+<p>Rejected because users may succeed by guessing, repeated action, external cues, or recovery from error.</p>
+<hr>
+<h1 id="emerging-patterns">Emerging Patterns</h1>
+<h2 id="ep-prod-007-the-success-mask">EP-PROD-007: The Success Mask</h2>
+<p>A final successful outcome can conceal a poor interaction path.</p>
+<p>A user may complete a task after multiple errors, accidental discovery, excessive force, or repeated activation. Product analysis that records only success will overestimate legibility.</p>
+<h2 id="ep-prod-008-confidence-inversion">EP-PROD-008: Confidence Inversion</h2>
+<p>The most dangerous interaction is not always one users find difficult. It may be one they perform confidently while misunderstanding the result.</p>
+<p>This connects Product Legibility to calibration research, automation bias, medical-device use error, and mode confusion.</p>
+<h2 id="ep-prod-009-legibility-migration-through-learning">EP-PROD-009: Legibility Migration Through Learning</h2>
+<p>Repeated use can move performance from conscious interpretation toward recognition, spatial memory, and motor routine.</p>
+<p>The product has not necessarily become more legible in its first-use state. The user has absorbed part of the product's complexity.</p>
+<h2 id="ep-prod-010-measurement-must-follow-consequence">EP-PROD-010: Measurement Must Follow Consequence</h2>
+<p>The importance of a gate depends on what failure means.</p>
+<p>A delayed state indication may be mildly annoying in a lamp and dangerous in medication delivery. Universal dimensions can exist without universal thresholds.</p>
+<h2 id="ep-prod-011-product-families-can-externalize-learning">EP-PROD-011: Product Families Can Externalize Learning</h2>
+<p>Stable mappings and control grammars may reduce discovery and interpretation costs across products. This suggests that legibility can exist at the family or ecosystem level, not only within one product.</p>
+<hr>
+<h1 id="candidate-laws">Candidate Laws</h1>
+<h2 id="law-prod-008-contextual-legibility-law">LAW-PROD-008: Contextual Legibility Law</h2>
+<h3 id="hypothesis-5">Hypothesis</h3>
+<p>An interaction is legible only relative to a specified task, population, environment, and exposure level.</p>
+<h3 id="prediction">Prediction</h3>
+<p>Changing any of these conditions can change the Product Legibility profile without altering the physical product.</p>
+<h3 id="supporting-evidence">Supporting Evidence</h3>
+<p>EV-PROD-011 through EV-PROD-014.</p>
+<h3 id="counter-evidence">Counter Evidence</h3>
+<p>Some strong physical cues remain stable across many contexts, but no evidence shows complete independence from context.</p>
+<h3 id="confidence-6">Confidence</h3>
+<p>High.</p>
+<h2 id="law-prod-009-critical-gate-law">LAW-PROD-009: Critical Gate Law</h2>
+<h3 id="hypothesis-6">Hypothesis</h3>
+<p>For consequential tasks, failure in one necessary interaction gate cannot be offset by high scores in other gates.</p>
+<h3 id="prediction-1">Prediction</h3>
+<p>Additive scores will misclassify some interactions that produce rare but severe use errors.</p>
+<h3 id="supporting-evidence-1">Supporting Evidence</h3>
+<p>FDA critical-task and use-related-risk framework.</p>
+<h3 id="confidence-7">Confidence</h3>
+<p>High in safety-critical contexts; moderate-high generally.</p>
+<h2 id="law-prod-010-pre-action-prediction-law">LAW-PROD-010: Pre-Action Prediction Law</h2>
+<h3 id="hypothesis-7">Hypothesis</h3>
+<p>The difference between users' predicted outcomes before action and actual outcomes is a direct indicator of interpretive legibility.</p>
+<h3 id="prediction-2">Prediction</h3>
+<p>Products with low prediction accuracy will show more exploratory actions, reversals, and mode errors.</p>
+<h3 id="status">Status</h3>
+<p>Testable candidate law.</p>
+<h3 id="confidence-8">Confidence</h3>
+<p>Moderate.</p>
+<h2 id="law-prod-011-feedback-closure-law-revised">LAW-PROD-011: Feedback Closure Law, Revised</h2>
+<h3 id="hypothesis-8">Hypothesis</h3>
+<p>Feedback improves control only when it is detectable, discriminable, timely enough for the task, compatible with the action, and informative about state.</p>
+<h3 id="prediction-3">Prediction</h3>
+<p>Decorative or ambiguous feedback may increase perceived responsiveness without improving state accuracy.</p>
+<h3 id="confidence-9">Confidence</h3>
+<p>Moderate-High.</p>
+<h2 id="law-prod-012-learning-transfer-law">LAW-PROD-012: Learning Transfer Law</h2>
+<h3 id="hypothesis-9">Hypothesis</h3>
+<p>Stable control mappings across a product family reduce discovery and interpretation cost for users with prior family exposure.</p>
+<h3 id="prediction-4">Prediction</h3>
+<p>Experienced family users will show lower first-action error and faster prediction than equally experienced users of unrelated products.</p>
+<h3 id="confidence-10">Confidence</h3>
+<p>Preliminary.</p>
+<hr>
+<h1 id="evidence-registry">Evidence Registry</h1>
+<h2 id="ev-prod-011">EV-PROD-011</h2>
+<h3 id="citation">Citation</h3>
+<p>International Organization for Standardization. <strong>ISO 9241-11:2018, Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts.</strong></p>
+<h3 id="source-type">Source Type</h3>
+<p>Standard.</p>
+<h3 id="summary">Summary</h3>
+<p>Defines usability in relation to specified users, specified goals, and a specified context, expressed through effectiveness, efficiency, and satisfaction.</p>
+<h3 id="supports">Supports</h3>
+<ul>
+<li>LAW-PROD-008</li>
+<li>MODEL-PROD-001 Revision A</li>
+</ul>
+<h3 id="quality">Quality</h3>
+<p>High.</p>
+<h3 id="url">URL</h3>
+<p><a href="https://www.iso.org/standard/63500.html">https://www.iso.org/standard/63500.html</a></p>
+<h2 id="ev-prod-012">EV-PROD-012</h2>
+<h3 id="citation-1">Citation</h3>
+<p>U.S. Food and Drug Administration. <strong>Applying Human Factors and Usability Engineering to Medical Devices.</strong> 2016.</p>
+<h3 id="source-type-1">Source Type</h3>
+<p>Regulatory guidance.</p>
+<h3 id="summary-1">Summary</h3>
+<p>Requires intended-user, use-environment, task, use-error, and critical-task analysis. Emphasizes designing out use-related hazards and validating safe and effective use with representative users.</p>
+<h3 id="supports-1">Supports</h3>
+<ul>
+<li>LAW-PROD-008</li>
+<li>LAW-PROD-009</li>
+<li>PLP-001</li>
+</ul>
+<h3 id="quality-1">Quality</h3>
+<p>High.</p>
+<h3 id="url-1">URL</h3>
+<p><a href="https://www.fda.gov/media/80481/download">https://www.fda.gov/media/80481/download</a></p>
+<h2 id="ev-prod-013">EV-PROD-013</h2>
+<h3 id="citation-2">Citation</h3>
+<p>NASA. <strong>Human Integration Design Handbook, Revision 1</strong> and <strong>OCHMO-HB-004 Anthropometry, Biomechanics, and Strength.</strong></p>
+<h3 id="source-type-2">Source Type</h3>
+<p>Engineering and human-factors documentation.</p>
+<h3 id="summary-2">Summary</h3>
+<p>Treats user capability, anthropometry, biomechanics, environment, task, and system design as integrated variables. Provides population-based physical-capability data and design rationale.</p>
+<h3 id="supports-2">Supports</h3>
+<ul>
+<li>Actual Action Possibility gate</li>
+<li>Executability gate</li>
+<li>LAW-PROD-008</li>
+</ul>
+<h3 id="quality-2">Quality</h3>
+<p>High.</p>
+<h3 id="urls">URLs</h3>
+<p><a href="https://www.nasa.gov/wp-content/uploads/2015/03/human_integration_design_handbook_revision_1.pdf">https://www.nasa.gov/wp-content/uploads/2015/03/human_integration_design_handbook_revision_1.pdf</a></p>
+<p><a href="https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-hb-004-rev-a-dec2023.pdf">https://www.nasa.gov/wp-content/uploads/2023/12/ochmo-hb-004-rev-a-dec2023.pdf</a></p>
+<h2 id="ev-prod-014">EV-PROD-014</h2>
+<h3 id="citation-3">Citation</h3>
+<p>National Institute of Standards and Technology. <strong>Usability Testing.</strong></p>
+<h3 id="source-type-3">Source Type</h3>
+<p>Government research guidance.</p>
+<h3 id="summary-3">Summary</h3>
+<p>Describes representative-user task testing using quantitative measures such as time, errors, and successful completion, combined with qualitative satisfaction data.</p>
+<h3 id="supports-3">Supports</h3>
+<ul>
+<li>PLP-001</li>
+<li>Outcome measurement architecture</li>
+</ul>
+<h3 id="quality-3">Quality</h3>
+<p>High.</p>
+<h3 id="url-2">URL</h3>
+<p><a href="https://www.nist.gov/programs-projects/usability-testing">https://www.nist.gov/programs-projects/usability-testing</a></p>
+<h2 id="ev-prod-015">EV-PROD-015</h2>
+<h3 id="citation-4">Citation</h3>
+<p>Fitts, P. M. <strong>The Information Capacity of the Human Motor System in Controlling the Amplitude of Movement.</strong> <em>Journal of Experimental Psychology</em>, 47(6), 1954, 381–391.</p>
+<h3 id="source-type-4">Source Type</h3>
+<p>Original empirical research.</p>
+<h3 id="summary-4">Summary</h3>
+<p>Demonstrated a systematic speed-accuracy relationship in constrained aimed movement based on movement amplitude and target tolerance.</p>
+<h3 id="supports-4">Supports</h3>
+<ul>
+<li>Executability gate</li>
+<li>Local target-design prediction</li>
+</ul>
+<h3 id="challenges">Challenges</h3>
+<ul>
+<li>Use of Fitts' law as a complete usability model</li>
+</ul>
+<h3 id="quality-4">Quality</h3>
+<p>High within scope.</p>
+<h3 id="doi">DOI</h3>
+<p>10.1037/h0055392</p>
+<h2 id="ev-prod-016">EV-PROD-016</h2>
+<h3 id="citation-5">Citation</h3>
+<p>Hick, W. E. <strong>On the Rate of Gain of Information.</strong> <em>Quarterly Journal of Experimental Psychology</em>, 4(1), 1952, 11–26.</p>
+<h3 id="source-type-5">Source Type</h3>
+<p>Original empirical research.</p>
+<h3 id="summary-5">Summary</h3>
+<p>Related perceptual-motor choice time to stimulus information under controlled conditions.</p>
+<h3 id="supports-5">Supports</h3>
+<ul>
+<li>Interpretability and choice analysis</li>
+</ul>
+<h3 id="challenges-1">Challenges</h3>
+<ul>
+<li>The simplistic claim that every additional option produces the same burden</li>
+</ul>
+<h3 id="quality-5">Quality</h3>
+<p>High within scope.</p>
+<h3 id="doi-1">DOI</h3>
+<p>10.1080/17470215208416600</p>
+<h2 id="ev-prod-017">EV-PROD-017</h2>
+<h3 id="citation-6">Citation</h3>
+<p>Proctor, R. W., and Schneider, D. W. <strong>Hick's Law for Choice Reaction Time: A Review.</strong> <em>Quarterly Journal of Experimental Psychology</em>, 71(6), 2018.</p>
+<h3 id="source-type-6">Source Type</h3>
+<p>Academic review.</p>
+<h3 id="summary-6">Summary</h3>
+<p>Reviews the law's history, evidence, interpretations, and boundary conditions, including uncertainty and stimulus-response conditions.</p>
+<h3 id="supports-6">Supports</h3>
+<ul>
+<li>Narrow use of Hick-type models</li>
+</ul>
+<h3 id="quality-6">Quality</h3>
+<p>High.</p>
+<h3 id="doi-2">DOI</h3>
+<p>10.1080/17470218.2017.1322622</p>
+<h2 id="ev-prod-018">EV-PROD-018</h2>
+<h3 id="citation-7">Citation</h3>
+<p>Card, S. K., Moran, T. P., and Newell, A. <strong>The Keystroke-Level Model for User Performance Time with Interactive Systems.</strong> <em>Communications of the ACM</em>, 23(7), 1980, 396–410.</p>
+<h3 id="source-type-7">Source Type</h3>
+<p>Original modeling and validation research.</p>
+<h3 id="summary-7">Summary</h3>
+<p>Predicts expert routine task time from low-level operators, mental preparation, and system response time. Explicitly addresses only one dimension of performance.</p>
+<h3 id="supports-7">Supports</h3>
+<ul>
+<li>Executability analysis</li>
+<li>Task decomposition</li>
+</ul>
+<h3 id="challenges-2">Challenges</h3>
+<ul>
+<li>Using execution-time models for novice discovery and comprehension</li>
+</ul>
+<h3 id="quality-7">Quality</h3>
+<p>High within scope.</p>
+<h3 id="doi-3">DOI</h3>
+<p>10.1145/358886.358895</p>
+<h2 id="ev-prod-019">EV-PROD-019</h2>
+<h3 id="citation-8">Citation</h3>
+<p>NIST. <strong>Human Engineering Design Criteria Standards, Parts 1 and 2.</strong> NISTIR 7889 and NISTIR 7934, 2014.</p>
+<h3 id="source-type-8">Source Type</h3>
+<p>Government engineering guidance.</p>
+<h3 id="summary-8">Summary</h3>
+<p>Provides criteria and practices intended to improve personnel performance and integrate human capabilities into equipment and system design.</p>
+<h3 id="supports-8">Supports</h3>
+<ul>
+<li>Gate-level design variables</li>
+<li>Environmental and task specificity</li>
+</ul>
+<h3 id="quality-8">Quality</h3>
+<p>High.</p>
+<h3 id="urls-1">URLs</h3>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/ir/2014/NIST.IR.7889.pdf">https://nvlpubs.nist.gov/nistpubs/ir/2014/NIST.IR.7889.pdf</a></p>
+<p><a href="https://nvlpubs.nist.gov/nistpubs/ir/2014/NIST.IR.7934.pdf">https://nvlpubs.nist.gov/nistpubs/ir/2014/NIST.IR.7934.pdf</a></p>
+<hr>
+<h1 id="hypothesis-registry">Hypothesis Registry</h1>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Hypothesis</th>
+<th>Status</th>
+<th>Confidence</th>
+<th>Theory Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HY-PROD-008</td>
+<td>Legibility is an intrinsic product property</td>
+<td>Rejected</td>
+<td>High</td>
+<td>Forces contextual indexing</td>
+</tr>
+<tr>
+<td>HY-PROD-009</td>
+<td>Each gate can be behaviorally or biomechanically measured</td>
+<td>Provisionally supported</td>
+<td>Moderate-High</td>
+<td>Enables protocol</td>
+</tr>
+<tr>
+<td>HY-PROD-010</td>
+<td>Six gates can be averaged into a universal score</td>
+<td>Rejected</td>
+<td>High</td>
+<td>Replaced with gated profile</td>
+</tr>
+<tr>
+<td>HY-PROD-011</td>
+<td>Classical laws predict overall product quality</td>
+<td>Rejected in strong form</td>
+<td>High</td>
+<td>Retained as local models</td>
+</tr>
+<tr>
+<td>HY-PROD-012</td>
+<td>A standardized protocol can support comparable profiles</td>
+<td>Provisionally supported</td>
+<td>Moderate-High</td>
+<td>Ready for pilot validation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="failed-assumptions">Failed Assumptions</h1>
+<h2 id="fa-prod-001-product-level-scoring-is-the-correct-unit">FA-PROD-001: Product-level scoring is the correct unit</h2>
+<p>Failed because whole products contain many tasks with different users, consequences, and contexts.</p>
+<h2 id="fa-prod-002-more-numerical-compression-means-more-scientific-rigor">FA-PROD-002: More numerical compression means more scientific rigor</h2>
+<p>Failed because a single score can remove the very failure information needed for diagnosis and safety.</p>
+<h2 id="fa-prod-003-successful-use-proves-correct-understanding">FA-PROD-003: Successful use proves correct understanding</h2>
+<p>Failed because users can succeed by chance, imitation, recovery, or repeated action.</p>
+<h2 id="fa-prod-004-classic-laws-automatically-become-design-laws">FA-PROD-004: Classic laws automatically become design laws</h2>
+<p>Failed because predictive models are conditional and limited to specific portions of interaction.</p>
+<hr>
+<h1 id="theory-impact-assessment">Theory Impact Assessment</h1>
+<h2 id="affected-theory-records">Affected Theory Records</h2>
+<ul>
+<li>MODEL-PROD-001 Product Legibility Model</li>
+<li>MODEL-PROD-003 Feedback Closure Index</li>
+<li>LAW-PROD-002 Relational Affordance Principle</li>
+<li>LAW-PROD-003 Closed Feedback Loop Principle</li>
+<li>LAW-PROD-005 Eyes-Free Control Principle</li>
+</ul>
+<h2 id="new-principle-candidates">New Principle Candidates</h2>
+<ul>
+<li>LAW-PROD-008 Contextual Legibility Law</li>
+<li>LAW-PROD-009 Critical Gate Law</li>
+<li>LAW-PROD-010 Pre-Action Prediction Law</li>
+<li>LAW-PROD-012 Learning Transfer Law</li>
+</ul>
+<h2 id="deprecated-principles">Deprecated Principles</h2>
+<ul>
+<li>Product Legibility represented as a context-free scalar</li>
+<li>Any additive formula that permits critical-failure compensation</li>
+</ul>
+<h2 id="confidence-changes">Confidence Changes</h2>
+<ul>
+<li>Product Legibility as a useful research construct: Moderate → Moderate-High</li>
+<li>Product Legibility as a single score: Preliminary → Rejected</li>
+<li>Fitts/Hick as universal design laws: Low → Rejected</li>
+<li>Fitts/Hick as local predictive models: Moderate → High</li>
+</ul>
+<h2 id="predictions-created">Predictions Created</h2>
+<ol>
+<li>Pre-action prediction error will correlate with exploratory actions and reversals.</li>
+<li>High confidence paired with low prediction accuracy will predict more consequential errors than low-confidence uncertainty.</li>
+<li>Stable family mappings will reduce first-action errors among previously exposed users.</li>
+<li>A gated profile will identify unsafe interactions missed by additive scoring.</li>
+<li>Stressors will degrade different gates selectively rather than lowering all dimensions equally.</li>
+</ol>
+<h2 id="predictions-invalidated">Predictions Invalidated</h2>
+<ul>
+<li>A visually simple product will produce a uniformly high legibility score.</li>
+<li>A low action count will predict high Product Legibility.</li>
+</ul>
+<h2 id="required-theory-registry-updates">Required Theory Registry Updates</h2>
+<ul>
+<li>Replace MODEL-PROD-001 with Revision A.</li>
+<li>Mark composite scoring as context-limited.</li>
+<li>Add PLP-001 as the canonical evaluation protocol.</li>
+<li>Add critical-gate annotations to all future case studies.</li>
+</ul>
+<hr>
+<h1 id="open-questions">Open Questions</h1>
+<p>Ranked by importance.</p>
+<h2 id="1-what-thresholds-define-gate-failure">1. What thresholds define gate failure?</h2>
+<p><strong>Importance:</strong> Critical<br>
+<strong>Needed:</strong> Empirical distributions and consequence-specific acceptance criteria.</p>
+<h2 id="2-does-pre-action-prediction-accuracy-reliably-forecast-use-errors">2. Does pre-action prediction accuracy reliably forecast use errors?</h2>
+<p><strong>Importance:</strong> Critical<br>
+<strong>Needed:</strong> Controlled studies across mechanical, digital, and hybrid products.</p>
+<h2 id="3-how-reliable-are-independent-raters-when-coding-the-six-gates">3. How reliable are independent raters when coding the six gates?</h2>
+<p><strong>Importance:</strong> Critical<br>
+<strong>Needed:</strong> A coding manual, training set, and inter-rater reliability analysis.</p>
+<h2 id="4-how-should-learning-curves-be-represented">4. How should learning curves be represented?</h2>
+<p><strong>Importance:</strong> High<br>
+<strong>Needed:</strong> First-use, repeated-use, and delayed-retention measurements.</p>
+<h2 id="5-can-population-exclusion-be-summarized-without-averaging-it-away">5. Can population exclusion be summarized without averaging it away?</h2>
+<p><strong>Importance:</strong> High<br>
+<strong>Needed:</strong> Distributional reporting, subgroup analysis, and worst-case critical-task rules.</p>
+<h2 id="6-which-measures-transfer-from-digital-interfaces-to-physical-products">6. Which measures transfer from digital interfaces to physical products?</h2>
+<p><strong>Importance:</strong> High<br>
+<strong>Needed:</strong> Matched physical/digital interaction experiments.</p>
+<h2 id="7-how-should-continuous-manipulations-be-evaluated">7. How should continuous manipulations be evaluated?</h2>
+<p><strong>Importance:</strong> High<br>
+<strong>Needed:</strong> Trajectory, stability, overshoot, force, and proportional feedback measures.</p>
+<h2 id="8-can-product-family-consistency-be-measured-as-transfer-rather-than-sameness">8. Can product-family consistency be measured as transfer rather than sameness?</h2>
+<p><strong>Importance:</strong> Medium-High<br>
+<strong>Needed:</strong> Cross-product learning and transfer studies.</p>
+<hr>
+<h1 id="recommended-next-research">Recommended Next Research</h1>
+<h2 id="priority-1-pilot-the-protocol-on-matched-product-pairs">Priority 1: Pilot the Protocol on Matched Product Pairs</h2>
+<p>Select six products:</p>
+<ul>
+<li>three Rams-associated products;</li>
+<li>three Sapper-associated products;</li>
+<li>matched by broad task where possible;</li>
+<li>at least one discrete control, one continuous adjustment, and one multifunction interaction per designer.</li>
+</ul>
+<h3 id="expected-value">Expected Value</h3>
+<p>Very high. This tests whether the protocol produces useful distinctions rather than merely formal structure.</p>
+<h3 id="effort">Effort</h3>
+<p>Moderate-High.</p>
+<h2 id="priority-2-build-the-coding-manual">Priority 2: Build the Coding Manual</h2>
+<p>Define examples, decision rules, and evidence requirements for every gate and metric.</p>
+<h3 id="expected-value-1">Expected Value</h3>
+<p>Very high. Required for inter-rater reliability and autonomous-agent consistency.</p>
+<h3 id="effort-1">Effort</h3>
+<p>Moderate.</p>
+<h2 id="priority-3-test-pre-action-prediction">Priority 3: Test Pre-Action Prediction</h2>
+<p>Run a small controlled study comparing predicted action effects with actual interaction behavior.</p>
+<h3 id="expected-value-2">Expected Value</h3>
+<p>High. This may become one of the strongest direct measures of interpretive legibility.</p>
+<h3 id="effort-2">Effort</h3>
+<p>Moderate.</p>
+<h2 id="priority-4-build-a-population-accommodation-layer">Priority 4: Build a Population Accommodation Layer</h2>
+<p>Integrate anthropometric, strength, sensory, and mobility distributions into Actual Action Possibility and Executability.</p>
+<h3 id="expected-value-3">Expected Value</h3>
+<p>High. Prevents “average user” scoring from concealing exclusion.</p>
+<h3 id="effort-3">Effort</h3>
+<p>High.</p>
+<hr>
+<h1 id="research-backlog">Research Backlog</h1>
+<ol>
+<li>Matched Rams/Sapper pilot set</li>
+<li>Product Legibility coding manual</li>
+<li>Inter-rater reliability study</li>
+<li>Pre-action prediction experiment</li>
+<li>Confidence-calibration metric validation</li>
+<li>Continuous-control protocol extension</li>
+<li>Stressor matrix for low light, gloves, divided attention, and time pressure</li>
+<li>Product-family learning transfer study</li>
+<li>Accessibility and aging-user integration</li>
+<li>Relationship between Product Legibility and Complexity Allocation</li>
+</ol>
+<hr>
+<h1 id="suggested-specialized-research-agents">Suggested Specialized Research Agents</h1>
+<h2 id="agent-a-human-factors-measurement-specialist">Agent A: Human-Factors Measurement Specialist</h2>
+<p>Focus on task metrics, critical errors, thresholds, and validation design.</p>
+<h2 id="agent-b-ergonomics-and-anthropometry-specialist">Agent B: Ergonomics and Anthropometry Specialist</h2>
+<p>Focus on reach, force, posture, grip, mobility, and population accommodation.</p>
+<h2 id="agent-c-cognitive-modeling-specialist">Agent C: Cognitive Modeling Specialist</h2>
+<p>Focus on prediction, mapping, mode awareness, confidence calibration, Fitts, Hick, KLM, and learning curves.</p>
+<h2 id="agent-d-industrial-design-historian">Agent D: Industrial Design Historian</h2>
+<p>Select well-documented Rams and Sapper products and reconstruct original design intent and constraints.</p>
+<h2 id="agent-e-research-methods-and-reliability-specialist">Agent E: Research Methods and Reliability Specialist</h2>
+<p>Develop coding manual and inter-rater reliability procedure.</p>
+<hr>
+<h1 id="parallel-research-opportunities">Parallel Research Opportunities</h1>
+<ul>
+<li>Complexity Allocation Ledger can be developed while Product Legibility case coding proceeds.</li>
+<li>Repairability scoring can share task decomposition and population/context definitions.</li>
+<li>Architecture and interface branches can test whether the gated model transfers across media.</li>
+<li>“Intuitive is familiar” research can directly inform exposure and learning dimensions.</li>
+</ul>
+<hr>
+<h1 id="risks">Risks</h1>
+<ol>
+<li><strong>False precision:</strong> Numerical profiles may appear more validated than they are.</li>
+<li><strong>Context loss:</strong> Aggregation may detach results from the tested task and population.</li>
+<li><strong>Sampling bias:</strong> Young, able, technically experienced participants can inflate scores.</li>
+<li><strong>Observer inference:</strong> Researchers may code intention rather than behavior.</li>
+<li><strong>Historical incompleteness:</strong> Museum artifacts may not be operable or tested in original contexts.</li>
+<li><strong>Survivorship bias:</strong> Famous products may have better documentation and stronger cultural familiarity.</li>
+<li><strong>Training contamination:</strong> Instructions can conceal poor first-use discoverability.</li>
+</ol>
+<hr>
+<h1 id="cross-discipline-opportunities">Cross-Discipline Opportunities</h1>
+<h2 id="cognitive-psychology">Cognitive Psychology</h2>
+<p>Mental models, choice, confidence calibration, learning, memory, and transfer.</p>
+<h2 id="biomechanics">Biomechanics</h2>
+<p>Reach, force, precision, fatigue, posture, and capability distributions.</p>
+<h2 id="control-theory">Control Theory</h2>
+<p>Feedback latency, signal quality, correction, stability, and state estimation.</p>
+<h2 id="information-theory">Information Theory</h2>
+<p>Local uncertainty measures, not whole-product quality scores.</p>
+<h2 id="safety-engineering">Safety Engineering</h2>
+<p>Critical gates, severity, probability, hazard controls, and failure analysis.</p>
+<h2 id="architecture">Architecture</h2>
+<p>Wayfinding and threshold recognition can test discoverability and consequence comprehension at environmental scale.</p>
+<h2 id="typography-and-visual-composition">Typography and Visual Composition</h2>
+<p>Signal hierarchy and grouping affect discoverability but should be validated through behavior.</p>
+<hr>
+<h1 id="knowledge-relationships">Knowledge Relationships</h1>
+<pre><code class="language-text">Relational Affordance
+    ↓
+Actual Action Possibility + Discoverability
+
+Population Compatibility
+    ↓
+Interpretability + Executability
+
+Closed Feedback Loop
+    ↓
+Feedback Closure + Consequence Comprehension
+
+Fitts / Hick / KLM
+    ↓
+Local predictive models inside gates
+
+Critical-Task Analysis
+    ↓
+Noncompensating gate rule
+
+“Intuitive Is Familiar”
+    ↓
+Exposure, learning, and product-family transfer
+
+Complexity Allocation
+    ↔
+Legibility costs may be transferred to learning, maintenance, or infrastructure
+</code></pre>
+<hr>
+<h1 id="repository-updates">Repository Updates</h1>
+<h2 id="required">Required</h2>
+<ul>
+<li>Add this REP under <code>product-genome/research-packages/</code>.</li>
+<li>Replace MODEL-PROD-001 with Revision A in the theory registry.</li>
+<li>Add HY-PROD-008 through HY-PROD-012 to the hypothesis registry.</li>
+<li>Add EV-PROD-011 through EV-PROD-019 to the evidence registry.</li>
+<li>Add PLP-001 under <code>methods/product-legibility/</code>.</li>
+<li>Mark Product Legibility operationalization as complete but unvalidated.</li>
+</ul>
+<h2 id="suggested-file-names">Suggested File Names</h2>
+<pre><code class="language-text">research-packages/RP-PROD-002-Operationalizing-Product-Legibility.md
+methods/PLP-001-Product-Legibility-Evaluation-Protocol.md
+theory/MODEL-PROD-001-Product-Legibility-Revision-A.md
+</code></pre>
+<hr>
+<h1 id="website-updates">Website Updates</h1>
+<p>Add a Product Legibility page with:</p>
+<ul>
+<li>the six-gate model;</li>
+<li>explicit task/population/context fields;</li>
+<li>a profile visualization rather than one score;</li>
+<li>critical-gate warnings;</li>
+<li>raw metrics;</li>
+<li>evidence links;</li>
+<li>first-use versus learned-use comparison;</li>
+<li>case-study filters.</li>
+</ul>
+<p>Do not display rankings across unrelated product tasks until validation exists.</p>
+<hr>
+<h1 id="ai-consumption-notes">AI Consumption Notes</h1>
+<p>Agents using this package must:</p>
+<ol>
+<li>Never call an entire product “legible” without naming a task.</li>
+<li>Never infer Actual Action Possibility from photographs alone.</li>
+<li>Preserve raw outcome and gate measurements.</li>
+<li>Treat questionnaires as supplementary evidence.</li>
+<li>Record first-use separately from trained use.</li>
+<li>Never average a critical failure away.</li>
+<li>State the tested population and environment.</li>
+<li>Apply Fitts, Hick, and KLM only within their assumptions.</li>
+<li>Distinguish observed behavior from inferred design intent.</li>
+<li>Mark all untested numerical thresholds as provisional.</li>
+</ol>
+<hr>
+<h1 id="handoff-instructions">Handoff Instructions</h1>
+<p>The next agent should:</p>
+<ol>
+<li>Read RP-PROD-001 and RP-PROD-002.</li>
+<li>Select a six-product Rams/Sapper pilot set based on documentary quality and task comparability.</li>
+<li>Build a coding sheet directly from PLP-001.</li>
+<li>Code documentary evidence separately from empirical user evidence.</li>
+<li>Identify where live product testing is impossible.</li>
+<li>Conduct at least two independent coding passes.</li>
+<li>Report disagreements and calculate inter-rater agreement where possible.</li>
+<li>Produce RP-PROD-003 with case profiles, failed comparisons, and protocol revisions.</li>
+</ol>
+<hr>
+<h1 id="research-quality-metrics">Research Quality Metrics</h1>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th align="right">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary or original sources</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>Standards / regulatory / government sources</td>
+<td align="right">6</td>
+</tr>
+<tr>
+<td>Independent source families</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>Counterexamples reviewed</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>Competing viewpoints reviewed</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>Hypotheses tested</td>
+<td align="right">5</td>
+</tr>
+<tr>
+<td>Hypotheses rejected or narrowed</td>
+<td align="right">3</td>
+</tr>
+<tr>
+<td>Failed assumptions documented</td>
+<td align="right">4</td>
+</tr>
+<tr>
+<td>Open questions reduced</td>
+<td align="right">1 critical question operationalized</td>
+</tr>
+<tr>
+<td>New open questions generated</td>
+<td align="right">8</td>
+</tr>
+<tr>
+<td>Confidence gain</td>
+<td align="right">Moderate</td>
+</tr>
+<tr>
+<td>Research completeness</td>
+<td align="right">85% for operational definition; 0% for empirical cross-product validation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="research-debt">Research Debt</h1>
+<h2 id="missing-evidence">Missing Evidence</h2>
+<ul>
+<li>Direct validation of the six-gate model</li>
+<li>Empirical thresholds</li>
+<li>Cross-category normalization</li>
+<li>Disabled and aging-user datasets linked to specific case products</li>
+<li>Longitudinal learning and retention data</li>
+</ul>
+<h2 id="missing-experiments">Missing Experiments</h2>
+<ul>
+<li>Pre-action prediction versus error study</li>
+<li>Inter-rater coding study</li>
+<li>Stressor sensitivity study</li>
+<li>Product-family transfer study</li>
+</ul>
+<h2 id="missing-disciplines">Missing Disciplines</h2>
+<ul>
+<li>Occupational therapy</li>
+<li>Rehabilitation engineering</li>
+<li>Inclusive design research</li>
+<li>Psychometrics</li>
+<li>Safety-case engineering</li>
+</ul>
+<h2 id="replication-needed">Replication Needed</h2>
+<ul>
+<li>Fitts and Hick effects in selected physical-product interactions</li>
+<li>Confidence calibration in product-state prediction</li>
+</ul>
+<h2 id="tool-limitations">Tool Limitations</h2>
+<ul>
+<li>No direct access to original physical products during this research run</li>
+<li>Some standards provide only limited public previews</li>
+<li>Historical case records may omit failed use and maintenance experience</li>
+</ul>
+<hr>
+<h1 id="bibliography">Bibliography</h1>
+<h2 id="academic-original-research">Academic: Original Research</h2>
+<ul>
+<li>Card, S. K., Moran, T. P., and Newell, A. “The Keystroke-Level Model for User Performance Time with Interactive Systems.” <em>Communications of the ACM</em> 23(7), 1980: 396–410. DOI: 10.1145/358886.358895.</li>
+<li>Fitts, P. M. “The Information Capacity of the Human Motor System in Controlling the Amplitude of Movement.” <em>Journal of Experimental Psychology</em> 47(6), 1954: 381–391. DOI: 10.1037/h0055392.</li>
+<li>Hick, W. E. “On the Rate of Gain of Information.” <em>Quarterly Journal of Experimental Psychology</em> 4(1), 1952: 11–26. DOI: 10.1080/17470215208416600.</li>
+</ul>
+<h2 id="academic-reviews">Academic: Reviews</h2>
+<ul>
+<li>Proctor, R. W., and Schneider, D. W. “Hick's Law for Choice Reaction Time: A Review.” <em>Quarterly Journal of Experimental Psychology</em> 71(6), 2018. DOI: 10.1080/17470218.2017.1322622.</li>
+</ul>
+<h2 id="standards">Standards</h2>
+<ul>
+<li>International Organization for Standardization. <em>ISO 9241-11:2018: Ergonomics of human-system interaction — Part 11: Usability: Definitions and concepts.</em></li>
+</ul>
+<h2 id="government-and-regulatory-guidance">Government and Regulatory Guidance</h2>
+<ul>
+<li>U.S. Food and Drug Administration. <em>Applying Human Factors and Usability Engineering to Medical Devices.</em> 2016.</li>
+<li>National Institute of Standards and Technology. <em>Usability Testing.</em></li>
+<li>Furman, S. et al. <em>Human Engineering Design Criteria Standards, Part 1.</em> NISTIR 7889, 2014.</li>
+<li>Furman, S. et al. <em>Human Engineering Design Criteria Standards, Part 2.</em> NISTIR 7934, 2014.</li>
+<li>NASA. <em>Human Integration Design Handbook, Revision 1.</em></li>
+<li>NASA. <em>OCHMO-HB-004 Revision A: Anthropometry, Biomechanics, and Strength.</em> 2023.</li>
+</ul>
+<h2 id="books-and-foundational-works">Books and Foundational Works</h2>
+<ul>
+<li>Card, S. K., Moran, T. P., and Newell, A. <em>The Psychology of Human-Computer Interaction.</em> Lawrence Erlbaum Associates, 1983.</li>
+</ul>
+<h2 id="historical">Historical</h2>
+<ul>
+<li>Fitts, Hick, Card, Moran, and Newell original publications listed above.</li>
+</ul>
+<hr>
+<h1 id="research-journal">Research Journal</h1>
+<h2 id="jr-prod-002-01">JR-PROD-002-01</h2>
+<p>The initial plan was to create numerical scales for all six gates and combine them. Review of ISO, FDA, and task-risk frameworks showed that this would create false compensation. The research direction changed from scalar scoring to gated profiling.</p>
+<h2 id="jr-prod-002-02">JR-PROD-002-02</h2>
+<p>Classic “laws” initially appeared to offer the mathematical foundation. Closer inspection showed that each predicts a narrow part of skilled performance. They were retained as local models and rejected as universal quality measures.</p>
+<h2 id="jr-prod-002-03">JR-PROD-002-03</h2>
+<p>The distinction between pre-action understanding and post-action success emerged as a high-value measurement principle. It creates a way to test interpretability without allowing trial and error to conceal poor initial comprehension.</p>
+<h2 id="jr-prod-002-04">JR-PROD-002-04</h2>
+<p>The most important safety insight is confidence inversion: a product can feel clear while producing an incorrect mental model. Confidence must therefore be calibrated against correctness rather than treated as positive evidence alone.</p>
+<hr>
+<h1 id="appendix-a-minimal-coding-sheet">Appendix A: Minimal Coding Sheet</h1>
+<pre><code class="language-yaml">case_id:
+product:
+designer:
+year:
+interaction:
+task_goal:
+start_state:
+success_state:
+critical_errors:
+noncritical_errors:
+population:
+environment:
+exposure_level:
+
+outcomes:
+  completion_rate:
+  correct_completion_rate:
+  critical_error_rate:
+  noncritical_error_rate:
+  assistance_rate:
+  median_time_seconds:
+  abandonment_rate:
+
+actual_action_possibility:
+  observations:
+  measures:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+discoverability:
+  observations:
+  unaided_discovery_rate:
+  first_action_correct_rate:
+  median_discovery_time_seconds:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+interpretability:
+  predicted_effect_accuracy:
+  predicted_direction_accuracy:
+  confidence:
+  calibration_error:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+executability:
+  median_execution_time_seconds:
+  error_rate:
+  correction_count:
+  physical_difficulty:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+feedback_closure:
+  latency_ms:
+  detection_rate:
+  state_identification_accuracy:
+  repeated_action_rate:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+consequence_comprehension:
+  final_state_accuracy:
+  reversibility_accuracy:
+  hazard_awareness_accuracy:
+  critical_gate: true|false
+  pass: true|false|unknown
+
+limitations:
+evidence_ids:
+confidence:
+</code></pre>
+<hr>
+<h1 id="completion-checklist">Completion Checklist</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" checked disabled> Executive Summary</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Original Objective</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Scope</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository Context</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Current Understanding</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Key Discoveries</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Evidence Registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Hypothesis Registry</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Failed Assumptions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Open Questions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Recommended Next Research</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Backlog</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Suggested Specialized Research Agents</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Parallel Research Opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Risks</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Cross-Discipline Opportunities</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Knowledge Relationships</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Repository Updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Website Updates</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> AI Consumption Notes</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Handoff Instructions</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Journal</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Appendix</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Theory Impact Assessment</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Quality Metrics</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Research Debt</li>
+<li class="task-list-item"><input type="checkbox" checked disabled> Bibliography</li>
+</ul>
+<hr>
+<h1 id="revision-history">Revision History</h1>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Date</th>
+<th>Author</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0</td>
+<td>2026-07-21</td>
+<td>OpenAI Autonomous Research Agent</td>
+<td>Initial completed research execution package; operationalized Product Legibility as a gated context-specific profile and created PLP-001.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="agent-instructions">Agent Instructions</h1>
+<p>When extending this document:</p>
+<ol>
+<li>Separate observation from interpretation.</li>
+<li>Never strengthen a conclusion beyond the available evidence.</li>
+<li>Preserve contradictory findings.</li>
+<li>Prefer measurable variables over subjective descriptions.</li>
+<li>Reference candidate laws and genome nodes whenever possible.</li>
+<li>Use stable IDs for observations, evidence, laws, experiments, metrics, and case studies.</li>
+<li>Record assumptions explicitly.</li>
+<li>Record confidence explicitly.</li>
+<li>Keep the YAML header valid.</li>
+<li>Do not delete revision history; append to it.</li>
+</ol></section>  </article>  </main> <footer class="site-footer"> <p>Built from Markdown with a reusable Astro and Pagefind workflow.</p> </footer> </body></html>

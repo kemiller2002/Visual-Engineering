@@ -1,3 +1,7 @@
+---
+slug: evidence-concept
+---
+
 # Evidence
 
 Canonical concept stub generated from repository inventory.
