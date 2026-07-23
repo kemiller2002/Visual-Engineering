@@ -6,7 +6,7 @@
     "publishable source": 104,
     "intake/unprocessed": 1,
     "ambiguous": 349,
-    "ignored": 7
+    "ignored": 63
   },
   "records": [
     {
@@ -1858,7 +1858,231 @@
       "classification": "ignored"
     },
     {
+      "path": "prompts/visual-engineering-section-research.md",
+      "classification": "ignored"
+    },
+    {
       "path": "prompts/Visual-Engineering-Web-Component-Framework-Research-and-Handoff-Prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/generated-files-manifest.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/research-coverage-audit.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/research-dependency-map.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/research-priority-matrix.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/research-roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/section-index.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/accessibility-cultural-transfer/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/accessibility-cultural-transfer/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/accessibility-cultural-transfer/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/accessibility-cultural-transfer/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/color-contrast/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/color-contrast/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/color-contrast/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/color-contrast/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/component-systems/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/component-systems/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/component-systems/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/component-systems/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/domain-safety/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/domain-safety/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/domain-safety/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/domain-safety/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/evaluation-measurement/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/evaluation-measurement/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/evaluation-measurement/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/evaluation-measurement/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/governance-knowledge-system/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/governance-knowledge-system/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/governance-knowledge-system/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/governance-knowledge-system/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/human-agent-communication/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/human-agent-communication/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/human-agent-communication/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/human-agent-communication/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/perception-attention/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/perception-attention/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/perception-attention/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/perception-attention/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/product-semantics/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/product-semantics/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/product-semantics/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/product-semantics/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/spatial-composition/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/spatial-composition/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/spatial-composition/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/spatial-composition/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/typography-legibility/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/typography-legibility/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/typography-legibility/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/typography-legibility/roadmap.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/wayfinding-familiarity/01-foundation-falsification-research-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/wayfinding-familiarity/02-engineering-validation-prompt.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/wayfinding-familiarity/README.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/sections/wayfinding-familiarity/roadmap.md",
       "classification": "ignored"
     },
     {
