@@ -4,16 +4,14 @@ export default {
     description: "Searchable visual engineering research repository",
     baseUrl: "/Visual-Engineering/",
     language: "en",
-    siteUrl: "https://kemiller2002.github.io/Visual-Engineering"
-  },
+    siteUrl: "https://kemiller2002.github.io/Visual-Engineering",
+  } /**/,
   repository: {
     name: "Visual-Engineering",
-    sourceUrl: "https://github.com/kemiller2002/Visual-Engineering"
+    sourceUrl: "https://github.com/kemiller2002/Visual-Engineering",
   },
   content: {
-    include: [
-      "**/*.md"
-    ],
+    include: ["**/*.md"],
     exclude: [
       "node_modules/**",
       "dist/**",
@@ -28,17 +26,17 @@ export default {
       "input-documents/**",
       "prompts/**",
       "**/archive/**",
-      "**/archives/**"
+      "**/archives/**",
     ],
-    drafts: false
+    drafts: false,
   },
   metadata: {
     mode: "compatible",
-    strictInCI: true
+    strictInCI: true,
   },
   output: {
     directory: "dist",
     catalog: "data/research-catalog.json",
-    diagnostics: "data/build-diagnostics.json"
-  }
+    diagnostics: "data/build-diagnostics.json",
+  },
 };
