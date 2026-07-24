@@ -7,7 +7,7 @@
 - publishable source: 104
 - intake/unprocessed: 1
 - ambiguous: 349
-- ignored: 63
+- ignored: 64
 
 ## Records
 
@@ -469,6 +469,7 @@
 - ambiguous: `node_modules/zod/README.md`
 - ambiguous: `node_modules/zwitch/readme.md`
 - ignored: `prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md`
+- ignored: `prompts/implement-project-context-contract.md`
 - ignored: `prompts/install-research-publisher-on-existing-repo.md`
 - ignored: `prompts/RP-COMP-005-Visual-Scene-Construction-Predictive-Processing-and-Active-Perception.md`
 - ignored: `prompts/upgrade-existing-research-publisher-installation.md`

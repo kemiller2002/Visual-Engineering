@@ -3,10 +3,10 @@
   "generatedOn": "2026-07-22",
   "performance": {
     "documentCount": 104,
-    "parseTimeMs": 1357.044875,
-    "renderTimeMs": 2211.3903339999997,
-    "searchIndexTimeMs": 1597.6427090000002,
-    "totalBuildTimeMs": 5262.888166999999
+    "parseTimeMs": 1226.2285419999998,
+    "renderTimeMs": 1582.4891670000002,
+    "searchIndexTimeMs": 418.4770830000002,
+    "totalBuildTimeMs": 3329.736459
   },
   "summary": {
     "totalDocuments": 104,

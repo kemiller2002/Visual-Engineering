@@ -6,7 +6,7 @@
     "publishable source": 104,
     "intake/unprocessed": 1,
     "ambiguous": 349,
-    "ignored": 63
+    "ignored": 64
   },
   "records": [
     {
@@ -1839,6 +1839,10 @@
     },
     {
       "path": "prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/implement-project-context-contract.md",
       "classification": "ignored"
     },
     {
