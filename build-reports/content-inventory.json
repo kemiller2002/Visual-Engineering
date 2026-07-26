@@ -1,14 +1,30 @@
 {
   "generatedAt": "2026-07-22",
   "summary": {
+    "publishable source": 117,
     "generated output": 1,
     "archived": 2,
-    "publishable source": 104,
     "intake/unprocessed": 1,
     "ambiguous": 349,
     "ignored": 64
   },
   "records": [
+    {
+      "path": "agent-context/README.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "agent-context/UI-ANTI-PATTERNS.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "agent-context/UI-DECISION-CHECKLIST.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "agent-context/UI-FOUNDATIONS.md",
+      "classification": "publishable source"
+    },
     {
       "path": "build-reports/content-inventory.md",
       "classification": "generated output"
@@ -262,6 +278,18 @@
       "classification": "publishable source"
     },
     {
+      "path": "content/projects/evaluation-measurement/audit/visual-engineering-measurement-audit-v0-1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md",
+      "classification": "publishable source"
+    },
+    {
       "path": "content/projects/product-genome/canonical/product-genome-project-atlas-v1.md",
       "classification": "publishable source"
     },
@@ -327,6 +355,10 @@
     },
     {
       "path": "content/projects/project-atlas/research-execution-package/rep-atlas-0004-visual-design-research-consolidation.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/project-atlas/research-execution-package/rep-ve-col-001-color-contrast-low-vision-and-color-vision-deficiency.md",
       "classification": "publishable source"
     },
     {
@@ -1836,6 +1868,26 @@
     {
       "path": "node_modules/zwitch/readme.md",
       "classification": "ambiguous"
+    },
+    {
+      "path": "packages/visual-engineering-context/context/RESEARCH-INDEX.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "packages/visual-engineering-context/context/UI-FOUNDATIONS.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "packages/visual-engineering-context/README.md",
+      "classification": "publishable source"
     },
     {
       "path": "prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md",

@@ -3,16 +3,20 @@ id: RDM-VE-001
 title: Visual Engineering Research Roadmap
 abstract: Research-program artifact for the Visual Engineering repository.
 created: 2026-07-23
-updated: 2026-07-23
+updated: 2026-07-24
 project: Visual Engineering
 document_type: roadmap
-status: research-draft
-canonical: false
+status: approved
+canonical: true
 concepts:
   - research-methodology
 ---
 
 # Visual Engineering Research Roadmap
+
+## Approval
+
+Approved as the canonical research-program roadmap on 2026-07-24. This approval governs the taxonomy, sequencing, dependencies, and operationalization gates. It does not promote provisional research claims, domain prompts, or generated engineering guidance beyond their independently recorded evidence and status.
 
 ## Executive judgment
 

@@ -1,0 +1,77 @@
+name: Publish UI agent context
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "agent-context/**"
+      - "content/**"
+      - "knowledge-platform/**"
+      - "packages/visual-engineering-context/**"
+      - "scripts/build-ui-context.mjs"
+      - "scripts/validate-ui-context.mjs"
+      - "scripts/test-ui-context.mjs"
+      - "package.json"
+      - "package-lock.json"
+      - "research-publisher.config.mjs"
+      - ".github/workflows/publish-ui-context.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: publish-ui-context
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      PACKAGE_NAME: ${{ vars.VE_CONTEXT_NPM_PACKAGE || '@kemiller2002/visual-engineering-context' }}
+      CONTEXT_VERSION: 0.${{ github.run_number }}.${{ github.run_attempt }}
+      VE_CONTEXT_VERSION: 0.${{ github.run_number }}.${{ github.run_attempt }}
+      VE_GENERATED_AT: ${{ github.event.head_commit.timestamp }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build research catalog
+        run: npm run research:build
+
+      - name: Set publish identity and version
+        working-directory: packages/visual-engineering-context
+        run: |
+          npm pkg set name="$PACKAGE_NAME"
+          npm pkg set version="$CONTEXT_VERSION"
+
+      - name: Build and validate package
+        run: |
+          npm run context:build
+          npm run context:validate
+          npm run context:test
+          npm run context:pack
+
+      - name: Publish latest package
+        if: ${{ env.NODE_AUTH_TOKEN != '' }}
+        working-directory: packages/visual-engineering-context
+        run: npm publish --access public --provenance --tag latest
+
+      - name: Explain skipped publication
+        if: ${{ env.NODE_AUTH_TOKEN == '' }}
+        run: |
+          echo "::warning::UI context was built and validated but not published because the NPM_TOKEN repository secret is not configured."

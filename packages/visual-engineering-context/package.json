@@ -1,0 +1,27 @@
+{
+  "name": "@kemiller2002/visual-engineering-context",
+  "version": "0.0.0-dev",
+  "description": "Versioned Visual Engineering research context for UI implementation agents",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kemiller2002/Visual-Engineering.git"
+  },
+  "homepage": "https://kemiller2002.github.io/Visual-Engineering/",
+  "files": [
+    "bin/",
+    "context/",
+    "README.md"
+  ],
+  "bin": {
+    "ve-context": "bin/ve-context.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

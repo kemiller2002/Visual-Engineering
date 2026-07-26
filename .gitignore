@@ -1,3 +1,7 @@
 node_modules/
 .research-publisher/
 npm-debug.log*
+packages/visual-engineering-context/context/
+build-reports/ui-context-release/
+dist/context/
+*.tgz

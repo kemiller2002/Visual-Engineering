@@ -3,7 +3,13 @@
     "research:inventory": "research-publisher inventory --config ./research-publisher.config.mjs",
     "research:validate": "research-publisher validate --config ./research-publisher.config.mjs",
     "research:build": "research-publisher build --config ./research-publisher.config.mjs",
-    "research:clean": "research-publisher clean --config ./research-publisher.config.mjs"
+    "research:clean": "research-publisher clean --config ./research-publisher.config.mjs",
+    "context:build": "node scripts/build-ui-context.mjs",
+    "context:validate": "node scripts/validate-ui-context.mjs",
+    "context:test": "node scripts/test-ui-context.mjs",
+    "context:stage-pages": "node scripts/stage-ui-context-pages.mjs",
+    "context:release": "node scripts/build-ui-context-release.mjs",
+    "context:pack": "npm pack --dry-run --cache /tmp/visual-engineering-npm-cache ./packages/visual-engineering-context"
   },
   "devDependencies": {
     "research-publisher": "github:kemiller2002/research-publisher#main"

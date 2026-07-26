@@ -170,8 +170,11 @@ Do not stop after finding supporting sources. Stop only after priority hypothese
 
 Answer: What did I expect? What most challenged it? What conclusion is strongest and why? Which is fragile? Where might I be overgeneralizing? Which stakeholder or discipline is missing? What would a skeptical expert dispute? What evidence would most change the roadmap? Can another agent reconstruct and continue from the artifacts alone?`;
 
-function fm(id,title,type, concepts=[]){
- return `---\nid: ${id}\ntitle: ${title}\nabstract: Research-program artifact for the Visual Engineering repository.\ncreated: ${date}\nupdated: ${date}\nproject: Visual Engineering\ndocument_type: ${type}\nstatus: research-draft\ncanonical: false\nconcepts:\n${concepts.map(x=>`  - ${x}`).join("\n") || "  - research-methodology"}\n---\n`;
+function fm(id,title,type, concepts=[], metadata={}){
+ const updated = metadata.updated ?? date;
+ const status = metadata.status ?? "research-draft";
+ const canonical = metadata.canonical ?? false;
+ return `---\nid: ${id}\ntitle: ${title}\nabstract: Research-program artifact for the Visual Engineering repository.\ncreated: ${date}\nupdated: ${updated}\nproject: Visual Engineering\ndocument_type: ${type}\nstatus: ${status}\ncanonical: ${canonical}\nconcepts:\n${concepts.map(x=>`  - ${x}`).join("\n") || "  - research-methodology"}\n---\n`;
 }
 function link(fromDir, target) { return path.relative(fromDir, target).replaceAll(path.sep,"/"); }
 function write(rel, text){ const p=path.join(out,rel); fs.mkdirSync(path.dirname(p),{recursive:true}); fs.writeFileSync(p,text.trim()+"\n"); }
@@ -327,8 +330,12 @@ const waves=[
  ["Wave 4 — consequential transfer",["domain-safety"]]
 ];
 const taxonomy=sections.map(s=>`| ${s.id} | ${s.title} | ${s.action} | ${s.maturity} | ${s.confidence} | ${s.priority} |`).join("\n");
-write("research-roadmap.md",`${fm("RDM-VE-001","Visual Engineering Research Roadmap","roadmap",["research-methodology"])}
+write("research-roadmap.md",`${fm("RDM-VE-001","Visual Engineering Research Roadmap","roadmap",["research-methodology"],{updated:"2026-07-24",status:"approved",canonical:true})}
 # Visual Engineering Research Roadmap
+
+## Approval
+
+Approved as the canonical research-program roadmap on 2026-07-24. This approval governs the taxonomy, sequencing, dependencies, and operationalization gates. It does not promote provisional research claims, domain prompts, or generated engineering guidance beyond their independently recorded evidence and status.
 
 ## Executive judgment
 

@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VE_CONTEXT_VERSION: 0.${{ github.run_number }}.${{ github.run_attempt }}
+      VE_GENERATED_AT: ${{ github.event.head_commit.timestamp }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
@@ -36,6 +39,13 @@ jobs:
 
       - name: Build research site
         run: npm run research:build
+
+      - name: Build and validate UI agent context
+        run: |
+          npm run context:build
+          npm run context:validate
+          npm run context:test
+          npm run context:stage-pages
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

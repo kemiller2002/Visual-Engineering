@@ -1,0 +1,97 @@
+name: Release immutable UI agent context
+
+on:
+  push:
+    tags:
+      - "ui-context-v*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Semantic version for the immutable context release
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-ui-context-${{ github.ref_name }}-${{ inputs.version || 'tag' }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Resolve release version
+        id: version
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          REF_NAME: ${{ github.ref_name }}
+          INPUT_VERSION: ${{ inputs.version }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            VERSION="${INPUT_VERSION#ui-context-v}"
+          else
+            VERSION="${REF_NAME#ui-context-v}"
+          fi
+          if ! printf '%s' "$VERSION" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$'; then
+            echo "::error::Version must be semantic: $VERSION"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "tag=ui-context-v$VERSION" >> "$GITHUB_OUTPUT"
+          echo "VE_CONTEXT_VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "VE_GENERATED_AT=$(git show -s --format=%cI "$GITHUB_SHA")" >> "$GITHUB_ENV"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refuse an existing immutable release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Release $TAG already exists and will not be modified."
+            exit 1
+          fi
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && git rev-parse --verify --quiet "refs/tags/$TAG" >/dev/null; then
+            echo "::error::Tag $TAG already exists. Choose a new semantic version."
+            exit 1
+          fi
+
+      - name: Build research and immutable context
+        run: |
+          npm run research:build
+          npm run context:build
+          npm run context:validate
+          npm run context:test
+          npm run context:release -- "${{ steps.version.outputs.version }}"
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          gh release create "$TAG" \
+            "build-reports/ui-context-release/visual-engineering-context-$VERSION.tar.gz" \
+            "build-reports/ui-context-release/SHA256SUMS" \
+            "build-reports/ui-context-release/context.json" \
+            --target "$GITHUB_SHA" \
+            --title "Visual Engineering UI Context $VERSION" \
+            --generate-notes \
+            --latest=false

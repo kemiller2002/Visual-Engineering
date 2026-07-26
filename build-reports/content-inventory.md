@@ -2,15 +2,19 @@
 
 ## Summary
 
+- publishable source: 117
 - generated output: 1
 - archived: 2
-- publishable source: 104
 - intake/unprocessed: 1
 - ambiguous: 349
 - ignored: 64
 
 ## Records
 
+- publishable source: `agent-context/README.md`
+- publishable source: `agent-context/UI-ANTI-PATTERNS.md`
+- publishable source: `agent-context/UI-DECISION-CHECKLIST.md`
+- publishable source: `agent-context/UI-FOUNDATIONS.md`
 - generated output: `build-reports/content-inventory.md`
 - archived: `content/archive/duplicates/composition-science/Composition_Science_Research_Library_v0.2.md`
 - archived: `content/archive/duplicates/project-atlas/Project_Atlas_Visual_Information_Transfer_Foundations_v1.md`
@@ -74,6 +78,9 @@
 - publishable source: `content/projects/design-library/research-note/2026-07-21-semantic-durability-research-execution-package.md`
 - publishable source: `content/projects/design-library/research-report/component-library-foundations-research-report.md`
 - publishable source: `content/projects/design-library/theory-registry/web-component-framework-theory-registry-update-v1.md`
+- publishable source: `content/projects/evaluation-measurement/audit/visual-engineering-measurement-audit-v0-1.md`
+- publishable source: `content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md`
+- publishable source: `content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-project-atlas-v1.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-research-execution-package-run-02.md`
 - publishable source: `content/projects/product-genome/knowledge-model/product-genome-autonomous-research-run-01.md`
@@ -91,6 +98,7 @@
 - publishable source: `content/projects/project-atlas/evidence-registry/project-atlas-color-evidence-registry-v0-1.md`
 - publishable source: `content/projects/project-atlas/research-execution-package/rep-atlas-0002-relational-legibility-envelope.md`
 - publishable source: `content/projects/project-atlas/research-execution-package/rep-atlas-0004-visual-design-research-consolidation.md`
+- publishable source: `content/projects/project-atlas/research-execution-package/rep-ve-col-001-color-contrast-low-vision-and-color-vision-deficiency.md`
 - publishable source: `content/projects/project-atlas/research-framework/composition-science-atlas-research-framework-v1.md`
 - publishable source: `content/projects/project-atlas/research-framework/project-atlas-comparative-color-framework-v0-1.md`
 - publishable source: `content/projects/project-atlas/research-note/atlas-0001-proximity-and-relative-separation-v0-1.md`
@@ -468,6 +476,11 @@
 - ambiguous: `node_modules/zod-to-json-schema/README.md`
 - ambiguous: `node_modules/zod/README.md`
 - ambiguous: `node_modules/zwitch/readme.md`
+- publishable source: `packages/visual-engineering-context/context/RESEARCH-INDEX.md`
+- publishable source: `packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md`
+- publishable source: `packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md`
+- publishable source: `packages/visual-engineering-context/context/UI-FOUNDATIONS.md`
+- publishable source: `packages/visual-engineering-context/README.md`
 - ignored: `prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md`
 - ignored: `prompts/implement-project-context-contract.md`
 - ignored: `prompts/install-research-publisher-on-existing-repo.md`

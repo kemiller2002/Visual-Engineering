@@ -34,3 +34,14 @@ jobs:
       - name: Build research site
         run: npm run research:build
 
+      - name: Build UI agent context
+        run: npm run context:build
+
+      - name: Validate UI agent context
+        run: npm run context:validate
+
+      - name: Test UI context consumer
+        run: npm run context:test
+
+      - name: Inspect npm package contents
+        run: npm run context:pack
