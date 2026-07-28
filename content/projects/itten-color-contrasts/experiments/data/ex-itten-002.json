@@ -1,0 +1,23 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-002",
+  "n_pairs": 72,
+  "result": {
+    "spearman": {
+      "wcag_vs_lab": 0.6357,
+      "wcag_vs_oklab": 0.9398,
+      "lab_vs_oklab": 0.6791
+    },
+    "pass_4_5": 31,
+    "pass_3": 47,
+    "induction_shift_deltaE76": {
+      "median": 6.1736,
+      "max": 9.2009
+    },
+    "interpretation": "Metric rankings disagree because they describe different constructs. The induction values are model-generated stress indicators, not observed appearance shifts."
+  }
+}

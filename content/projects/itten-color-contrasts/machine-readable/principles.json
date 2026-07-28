@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "framework": "Visual Engineering Color Principles v1",
+  "generated": "2026-07-28",
+  "principles": [
+    {"id":"VECP-1","name":"Separate luminance structure from chromatic coding","status":"adopt","confidence":"high","requirements":["Compute required text and boundary contrast","Provide a non-color cue for every consequential state"],"evidence":["EV-ITTEN-009","EV-ITTEN-010","EV-ITTEN-023"]},
+    {"id":"VECP-2","name":"Specify appearance in context","status":"adopt","confidence":"high","requirements":["Declare color space, white point, luminance, surround, adaptation, geometry, device, ambient, observer and task","Do not use raw RGB or HSL distance as perceptual evidence"],"evidence":["EV-ITTEN-001","EV-ITTEN-002","EV-ITTEN-004","EV-ITTEN-011"]},
+    {"id":"VECP-3","name":"Design at retinal scale","status":"adopt","confidence":"high","requirements":["Test actual angular size and eccentricity","Reinforce thin or peripheral chromatic cues"],"evidence":["EV-ITTEN-008","EV-ITTEN-011","EV-ITTEN-021"]},
+    {"id":"VECP-4","name":"Treat adaptation and illumination as state","status":"adopt","confidence":"high","requirements":["Test theme, surround, ambient and transition conditions"],"evidence":["EV-ITTEN-001","EV-ITTEN-011","EV-ITTEN-024","EV-ITTEN-025"]},
+    {"id":"VECP-5","name":"Encode meaning redundantly","status":"adopt","confidence":"high","requirements":["Pair color with shape, text, pattern, position or luminance","Treat CVD simulation as audit aid, not human validation"],"evidence":["EV-ITTEN-020","EV-ITTEN-021","EV-ITTEN-022","EV-ITTEN-023"]},
+    {"id":"VECP-6","name":"Allocate salience, not visual weight","status":"adopt-provisional","confidence":"medium","requirements":["Model multiscale feature contrast and task priority","Do not infer comprehension or balance from fixation alone"],"evidence":["EV-ITTEN-017","EV-ITTEN-018","EV-ITTEN-019"]},
+    {"id":"VECP-7","name":"Characterize the display pipeline","status":"adopt","confidence":"high","requirements":["Declare gamut, transfer function, white, peak/minimum luminance, mapping and ambient","Measure representative devices"],"evidence":["EV-ITTEN-001","EV-ITTEN-002","EV-ITTEN-003","EV-ITTEN-024"]},
+    {"id":"VECP-8","name":"Validate behavior, not palettes","status":"adopt","confidence":"high","requirements":["Measure accuracy, misses, false alarms and response time for consequential tasks","Predefine acceptance and rollback criteria"],"evidence":["EV-ITTEN-020","EV-ITTEN-021","EV-ITTEN-023"]}
+  ],
+  "itten_dispositions": [
+    {"contrast":"hue","action":"keep-revise","confidence":"high"},
+    {"contrast":"light-dark","action":"keep-elevate-rename","confidence":"high"},
+    {"contrast":"cold-warm","action":"demote-to-association","confidence":"medium"},
+    {"contrast":"complementary","action":"split-definitions","confidence":"high"},
+    {"contrast":"simultaneous","action":"keep-broaden","confidence":"high"},
+    {"contrast":"saturation","action":"keep-rename-contextualize","confidence":"high"},
+    {"contrast":"extension","action":"retire-as-color-law","confidence":"medium-high"}
+  ]
+}
+

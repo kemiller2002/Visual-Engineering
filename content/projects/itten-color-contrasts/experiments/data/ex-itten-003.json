@@ -1,0 +1,21 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-003",
+  "n_conditions": 48,
+  "result": {
+    "predicted_t90_seconds": {
+      "median": 9.1656,
+      "p95": 14.2672,
+      "max": 16.0654
+    },
+    "predicted_initial_sensitivity_loss": {
+      "median": 0.1849,
+      "max": 0.3864
+    },
+    "status": "model-only; requires measured thresholds before/after controlled flashes"
+  }
+}

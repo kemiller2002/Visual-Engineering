@@ -1,0 +1,27 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-004",
+  "n_observer_pair_conditions": 792,
+  "result": {
+    "modeled_color_pair_detection_rate": {
+      "typical_25": 1,
+      "typical_65": 0.9848,
+      "typical_80": 0.9848,
+      "protan_25": 0.9697,
+      "protan_65": 0.9545,
+      "protan_80": 0.9394,
+      "deutan_25": 0.9242,
+      "deutan_65": 0.8939,
+      "deutan_80": 0.8788,
+      "tritan_25": 0.9394,
+      "tritan_65": 0.9394,
+      "tritan_80": 0.9394
+    },
+    "redundant_shape_detection_rate": 1,
+    "warning": "The 0.08 Oklab cutoff, CVD matrices, and lens-yellowing transform are screening assumptions, not clinical thresholds."
+  }
+}

@@ -2,12 +2,12 @@
 
 ## Summary
 
-- publishable source: 117
+- publishable source: 120
 - generated output: 6
 - archived: 2
 - intake/unprocessed: 1
 - ambiguous: 358
-- ignored: 65
+- ignored: 67
 
 ## Records
 
@@ -91,6 +91,9 @@
 - publishable source: `content/projects/evaluation-measurement/audit/visual-engineering-measurement-audit-v0-1.md`
 - publishable source: `content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md`
 - publishable source: `content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md`
+- publishable source: `content/projects/itten-color-contrasts/evidence-registry/itten-color-evidence-registry-v1.md`
+- publishable source: `content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md`
+- publishable source: `content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-project-atlas-v1.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-research-execution-package-run-02.md`
 - publishable source: `content/projects/product-genome/knowledge-model/product-genome-autonomous-research-run-01.md`
@@ -498,6 +501,7 @@
 - ignored: `prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md`
 - ignored: `prompts/implement-project-context-contract.md`
 - ignored: `prompts/install-research-publisher-on-existing-repo.md`
+- ignored: `prompts/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md`
 - ignored: `prompts/research-publisher-mark-documents.md`
 - ignored: `prompts/RP-COMP-005-Visual-Scene-Construction-Predictive-Processing-and-Active-Perception.md`
 - ignored: `prompts/upgrade-existing-research-publisher-installation.md`
@@ -508,6 +512,7 @@
 - ignored: `prompts/visual-engineering/README.md`
 - ignored: `prompts/visual-engineering/research-coverage-audit.md`
 - ignored: `prompts/visual-engineering/research-dependency-map.md`
+- ignored: `prompts/visual-engineering/research-expansion-backlog.md`
 - ignored: `prompts/visual-engineering/research-priority-matrix.md`
 - ignored: `prompts/visual-engineering/research-roadmap.md`
 - ignored: `prompts/visual-engineering/section-index.md`

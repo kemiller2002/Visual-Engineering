@@ -498,6 +498,22 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EVREG-VE-ITTEN-001",
+        "title": "Itten Color Contrasts Evidence Registry v1",
+        "url": "/Visual-Engineering/research/evreg-ve-itten-001-itten-color-contrasts-evidence-registry-v1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Executive Summary",
         "url": "/Visual-Engineering/research/executive-summary/",
@@ -1367,6 +1383,30 @@
         "researchArea": "General Research"
       },
       {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Repository Architecture",
         "url": "/Visual-Engineering/research/repository-architecture/",
@@ -1432,6 +1472,22 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "draft",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-001",
+        "title": "Itten Color Contrasts — Research Cycle 1",
+        "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "complete",
         "researchArea": "General Research"
       },
       {
@@ -3409,6 +3465,22 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EVREG-VE-ITTEN-001",
+        "title": "Itten Color Contrasts Evidence Registry v1",
+        "url": "/Visual-Engineering/research/evreg-ve-itten-001-itten-color-contrasts-evidence-registry-v1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-COMP-011",
         "title": "Context Reliability Reversal",
         "url": "/Visual-Engineering/research/ex-comp-011-context-reliability-reversal/",
@@ -4551,6 +4623,30 @@
         "researchArea": "General Research"
       },
       {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Repository Architecture",
         "url": "/Visual-Engineering/research/repository-architecture/",
@@ -4640,6 +4736,22 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "draft",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-001",
+        "title": "Itten Color Contrasts — Research Cycle 1",
+        "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "complete",
         "researchArea": "General Research"
       },
       {
@@ -11374,6 +11486,22 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EVREG-VE-ITTEN-001",
+        "title": "Itten Color Contrasts Evidence Registry v1",
+        "url": "/Visual-Engineering/research/evreg-ve-itten-001-itten-color-contrasts-evidence-registry-v1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": "HYR-CCE-0001",
         "title": "Clinical Communication Engineering Hypothesis Registry",
         "url": "/Visual-Engineering/research/hyr-cce-0001-clinical-communication-engineering-hypothesis-registry/",
@@ -11629,6 +11757,22 @@
         "entryPoint": true,
         "entryPointOrder": 10,
         "entryPointLabel": "Current synthesis",
+        "status": "complete",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-001",
+        "title": "Itten Color Contrasts — Research Cycle 1",
+        "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
         "status": "complete",
         "researchArea": "General Research"
       },
@@ -12016,6 +12160,30 @@
         "entryPoint": true,
         "entryPointOrder": 20,
         "entryPointLabel": "Measurement foundation",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
         "status": "active-research-package",
         "researchArea": "General Research"
       },
@@ -14239,6 +14407,64 @@
         "entryPointOrder": 10,
         "entryPointLabel": "Start here",
         "status": "active-research-package",
+        "researchArea": "General Research"
+      }
+    ],
+    "itten-color-contrasts": [
+      {
+        "id": "EVREG-VE-ITTEN-001",
+        "title": "Itten Color Contrasts Evidence Registry v1",
+        "url": "/Visual-Engineering/research/evreg-ve-itten-001-itten-color-contrasts-evidence-registry-v1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-001",
+        "title": "Itten Color Contrasts — Research Cycle 1",
+        "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "complete",
         "researchArea": "General Research"
       }
     ],
@@ -18056,6 +18282,30 @@
         "researchArea": "General Research"
       },
       {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Repository Manifest",
         "url": "/Visual-Engineering/research/repository-manifest/",
@@ -19486,6 +19736,30 @@
         "researchArea": "General Research"
       },
       {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Risk Assessment",
         "url": "/Visual-Engineering/research/risk-assessment/",
@@ -20457,6 +20731,30 @@
         "entryPoint": true,
         "entryPointOrder": 20,
         "entryPointLabel": "Measurement foundation",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
         "status": "active-research-package",
         "researchArea": "General Research"
       },
@@ -22094,6 +22392,30 @@
         "entryPoint": true,
         "entryPointOrder": 20,
         "entryPointLabel": "Measurement foundation",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
         "status": "active-research-package",
         "researchArea": "General Research"
       },
@@ -24671,6 +24993,30 @@
         "researchArea": "General Research"
       },
       {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Risk Assessment",
         "url": "/Visual-Engineering/research/risk-assessment/",
@@ -26574,6 +26920,30 @@
         "entryPoint": true,
         "entryPointOrder": 20,
         "entryPointLabel": "Measurement foundation",
+        "status": "active-research-package",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPoint": true,
+        "entryPointOrder": 10,
+        "entryPointLabel": "Start here",
         "status": "active-research-package",
         "researchArea": "General Research"
       },

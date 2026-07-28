@@ -1,0 +1,35 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-007",
+  "n_conditions": 100,
+  "result": {
+    "modeled_minimum_size_degrees": {
+      "0deg_chroma0.05": 0.25,
+      "0deg_chroma0.1": 0.1,
+      "0deg_chroma0.2": 0.1,
+      "0deg_chroma0.35": 0.1,
+      "5deg_chroma0.05": 0.5,
+      "5deg_chroma0.1": 0.25,
+      "5deg_chroma0.2": 0.25,
+      "5deg_chroma0.35": 0.1,
+      "10deg_chroma0.05": 2,
+      "10deg_chroma0.1": 0.5,
+      "10deg_chroma0.2": 0.25,
+      "10deg_chroma0.35": 0.25,
+      "20deg_chroma0.05": null,
+      "20deg_chroma0.1": null,
+      "20deg_chroma0.2": 1,
+      "20deg_chroma0.35": 1,
+      "30deg_chroma0.05": null,
+      "30deg_chroma0.1": null,
+      "30deg_chroma0.2": null,
+      "30deg_chroma0.35": null
+    },
+    "interpretation": "The proxy predicts rapidly worsening hue-only cue reliability with eccentricity; null means no tested size passed.",
+    "status": "model-only; requires gaze-contingent psychophysics"
+  }
+}

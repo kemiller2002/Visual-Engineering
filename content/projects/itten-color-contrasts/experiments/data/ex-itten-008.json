@@ -1,0 +1,21 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-008",
+  "n_pairs": 3000,
+  "result": {
+    "rank_stability_after_gamut_compression": {
+      "lab": 0.999,
+      "oklab": 0.9987
+    },
+    "cross_metric_rank_correlation": 0.7824,
+    "correlation_with_luminance_difference": {
+      "lab": 0.3675,
+      "oklab": 0.7417
+    },
+    "status": "computational stress test only; no perceptual ground truth, CAM16-UCS, ΔE00, or HDR measurements yet"
+  }
+}

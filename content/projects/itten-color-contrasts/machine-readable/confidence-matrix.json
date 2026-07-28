@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0.0",
+  "scale":{"evidence_strength":["weak","moderate","strong","very-strong"],"confidence":["low","medium","medium-high","high"],"replication_quality":["poor","limited","mixed","good","foundational"]},
+  "claims":[
+    {"id":"CL-001","claim":"Color appearance depends on surround, adaptation and viewing conditions","evidence_strength":"very-strong","confidence":"high","replication_quality":"foundational","practical_value":"very-high"},
+    {"id":"CL-002","claim":"Luminance structure is generally more robust than hue-only structure for legibility","evidence_strength":"very-strong","confidence":"high","replication_quality":"foundational","practical_value":"very-high"},
+    {"id":"CL-003","claim":"Hue-temperature mapping is a direct universal sensory axis","evidence_strength":"weak","confidence":"low","replication_quality":"mixed","practical_value":"low"},
+    {"id":"CL-004","claim":"Hue-temperature associations are measurable but moderated","evidence_strength":"moderate","confidence":"medium","replication_quality":"limited","practical_value":"medium"},
+    {"id":"CL-005","claim":"Cone opponency and chromatic adaptation contribute to complement/afterimage effects","evidence_strength":"very-strong","confidence":"high","replication_quality":"foundational","practical_value":"high"},
+    {"id":"CL-006","claim":"One complementary wheel predicts neutralization, discrimination and harmony","evidence_strength":"weak","confidence":"low","replication_quality":"poor","practical_value":"low"},
+    {"id":"CL-007","claim":"Simultaneous contrast is robust and mechanism-plural","evidence_strength":"strong","confidence":"high","replication_quality":"good","practical_value":"high"},
+    {"id":"CL-008","claim":"Induction can reverse toward assimilation with geometry and spatial frequency","evidence_strength":"strong","confidence":"medium-high","replication_quality":"good","practical_value":"high"},
+    {"id":"CL-009","claim":"Chroma/colorfulness depend on luminance, surround, gamut and adaptation","evidence_strength":"very-strong","confidence":"high","replication_quality":"foundational","practical_value":"high"},
+    {"id":"CL-010","claim":"Increasing saturation generally resolves CVD discrimination","evidence_strength":"weak","confidence":"low","replication_quality":"limited","practical_value":"low"},
+    {"id":"CL-011","claim":"Fixed color-area ratios universally predict perceptual balance","evidence_strength":"weak","confidence":"low","replication_quality":"poor","practical_value":"low"},
+    {"id":"CL-012","claim":"Salience depends on multiscale feature competition and task","evidence_strength":"strong","confidence":"high","replication_quality":"good","practical_value":"high"},
+    {"id":"CL-013","claim":"HDR/OLED appearance is determined by class label alone","evidence_strength":"weak","confidence":"low","replication_quality":"poor","practical_value":"low"},
+    {"id":"CL-014","claim":"Accessibility requires redundant encoding and rendered-state validation","evidence_strength":"very-strong","confidence":"high","replication_quality":"good","practical_value":"very-high"}
+  ]
+}
+

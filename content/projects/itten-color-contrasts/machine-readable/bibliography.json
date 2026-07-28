@@ -1,0 +1,31 @@
+{
+  "schema_version":"1.0.0",
+  "entries":[
+    {"id":"EV-ITTEN-001","title":"The CIE 2016 Colour Appearance Model for Colour Management Systems: CIECAM16","year":2022,"publisher":"CIE","doi":"10.25039/TR.248.2022","url":"https://www.cie.co.at/publications/cie-2016-colour-appearance-model-colour-management-systems-ciecam16"},
+    {"id":"EV-ITTEN-002","authors":["Fairchild, M. D.","Johnson, G. M."],"title":"iCAM framework for image appearance, differences, and quality","year":2006,"doi":"10.1109/TIP.2006.884946"},
+    {"id":"EV-ITTEN-003","authors":["Safdar, M.","Cui, G.","Kim, Y. J.","Luo, M. R."],"title":"Perceptually uniform color space for image signals including high dynamic range and wide gamut","year":2017,"doi":"10.1364/OE.25.015131"},
+    {"id":"EV-ITTEN-004","authors":["Luo, M. R.","Cui, G.","Rigg, B."],"title":"The development of the CIE 2000 colour-difference formula","year":2001,"doi":"10.1002/col.10070"},
+    {"id":"EV-ITTEN-005","authors":["Witzel, C.","Gegenfurtner, K. R."],"title":"Categorical perception for red and brown","year":2016,"doi":"10.1037/xhp0000349"},
+    {"id":"EV-ITTEN-006","authors":["Gibson, E. et al."],"title":"Color naming across languages reflects color use","year":2017,"doi":"10.1073/pnas.1619666114"},
+    {"id":"EV-ITTEN-007","authors":["Lindsey, D. T. et al."],"title":"Testing the cross-cultural generality of Hering's theory of color appearance","year":2021,"doi":"10.1111/cogs.12907"},
+    {"id":"EV-ITTEN-008","authors":["Werner, J. S. et al."],"title":"Chromatic-spatial vision of the aging eye","year":2010,"doi":"10.1364/JOSAA.27.000A14"},
+    {"id":"EV-ITTEN-009","authors":["Sinha, P. et al."],"title":"Mechanisms underlying simultaneous brightness contrast: Early and innate","year":2020,"doi":"10.1016/j.visres.2020.04.012"},
+    {"id":"EV-ITTEN-010","authors":["Blakeslee, B.","McCourt, M. E."],"title":"A multiscale spatial filtering account of the White effect, simultaneous brightness contrast and grating induction","year":1999,"doi":"10.1016/S0042-6989(99)00186-3"},
+    {"id":"EV-ITTEN-011","authors":["Shevell, S. K.","Kingdom, F. A. A."],"title":"Color in complex scenes","year":2008,"doi":"10.1146/annurev.psych.59.103006.093619"},
+    {"id":"EV-ITTEN-012","authors":["Lotto, R. B.","Purves, D."],"title":"An empirical explanation of color contrast","year":2000,"pmid":"11058148","url":"https://pmc.ncbi.nlm.nih.gov/articles/PMC18850/"},
+    {"id":"EV-ITTEN-013","authors":["Faul, F. et al."],"title":"Individual variability in simultaneous contrast for color and brightness","year":2018,"doi":"10.3389/fpsyg.2018.01640"},
+    {"id":"EV-ITTEN-014","authors":["Fairchild, M. D."],"title":"All effects of psychophysical variables on color attributes: A classification system","year":2013,"doi":"10.1002/col.20102"},
+    {"id":"EV-ITTEN-015","authors":["Hammond, B. R. et al."],"title":"Increasing intensity directly increases the perceived warmth of primary colors","year":2024,"doi":"10.1038/s41598-024-78751-2"},
+    {"id":"EV-ITTEN-016","authors":["Levitan, C. A. et al."],"title":"Cross-cultural color-odor associations","year":2014,"doi":"10.1371/journal.pone.0101651"},
+    {"id":"EV-ITTEN-017","authors":["Itti, L.","Koch, C.","Niebur, E."],"title":"A model of saliency-based visual attention for rapid scene analysis","year":1998,"doi":"10.1109/34.730558"},
+    {"id":"EV-ITTEN-018","authors":["Veale, R. et al."],"title":"How is visual salience computed in the brain?","year":2017,"doi":"10.1098/rstb.2016.0113"},
+    {"id":"EV-ITTEN-019","authors":["Tatler, B. W. et al."],"title":"Eye guidance in natural vision: Reinterpreting salience","year":2011,"doi":"10.1167/11.5.5"},
+    {"id":"EV-ITTEN-020","authors":["Hathibelagal, A."],"title":"The impact of display saturation on visual search performance in congenital colour vision deficiency","year":2023,"doi":"10.1371/journal.pone.0290782"},
+    {"id":"EV-ITTEN-021","authors":["Kugler, G. et al."],"title":"Visual search in the real world: Color vision deficiency affects peripheral guidance","year":2015,"doi":"10.3389/fnhum.2015.00680"},
+    {"id":"EV-ITTEN-022","authors":["Álvaro, L. et al."],"title":"Coloured filters can simulate colour deficiency but cannot compensate for congenital colour vision deficiency","year":2022,"doi":"10.1038/s41598-022-13877-9"},
+    {"id":"EV-ITTEN-023","title":"Web Content Accessibility Guidelines (WCAG) 2.2","year":2023,"publisher":"W3C","url":"https://www.w3.org/TR/WCAG22/"},
+    {"id":"EV-ITTEN-024","title":"High dynamic range television for production and international programme exchange","year":2025,"publisher":"ITU-R","url":"https://www.itu.int/pub/R-REP-BT.2390"},
+    {"id":"EV-ITTEN-025","authors":["Land, E. H.","McCann, J. J."],"title":"Lightness and Retinex theory","year":1971,"doi":"10.1364/JOSA.61.000001"}
+  ]
+}
+

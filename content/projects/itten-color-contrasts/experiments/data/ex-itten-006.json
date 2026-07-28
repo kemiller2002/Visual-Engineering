@@ -1,0 +1,39 @@
+{
+  "generated": "2026-07-28T21:32:53.497Z",
+  "seed": 20260728,
+  "execution_class": "deterministic computational pilot",
+  "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
+  "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348",
+  "id": "EX-ITTEN-006",
+  "n_conditions": 24,
+  "result": {
+    "contrast_by_condition": {
+      "OLED_0lux_100nit": 200000,
+      "OLED_0lux_300nit": 600000,
+      "OLED_0lux_600nit": 1200000,
+      "OLED_50lux_100nit": 523.2,
+      "OLED_50lux_300nit": 1567.7,
+      "OLED_50lux_600nit": 3134.4,
+      "OLED_200lux_100nit": 131.8,
+      "OLED_200lux_300nit": 393.4,
+      "OLED_200lux_600nit": 785.9,
+      "OLED_1000lux_100nit": 27.2,
+      "OLED_1000lux_300nit": 79.5,
+      "OLED_1000lux_600nit": 158.1,
+      "LCD_0lux_100nit": 1250,
+      "LCD_0lux_300nit": 3750,
+      "LCD_0lux_600nit": 7500,
+      "LCD_50lux_100nit": 210.1,
+      "LCD_50lux_300nit": 628.6,
+      "LCD_50lux_600nit": 1256.4,
+      "LCD_200lux_100nit": 60.8,
+      "LCD_200lux_300nit": 180.4,
+      "LCD_200lux_600nit": 359.9,
+      "LCD_1000lux_100nit": 13.4,
+      "LCD_1000lux_300nit": 38.3,
+      "LCD_1000lux_600nit": 75.6
+    },
+    "interpretation": "Matched emitted white does not imply matched effective contrast once black level and ambient reflection differ.",
+    "status": "parameter sweep; requires spectroradiometer/photometer measurements on named devices"
+  }
+}

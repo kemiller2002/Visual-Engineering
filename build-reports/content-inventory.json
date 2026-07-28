@@ -1,12 +1,12 @@
 {
   "generatedAt": "2026-07-22",
   "summary": {
-    "publishable source": 117,
+    "publishable source": 120,
     "generated output": 6,
     "archived": 2,
     "intake/unprocessed": 1,
     "ambiguous": 358,
-    "ignored": 65
+    "ignored": 67
   },
   "records": [
     {
@@ -327,6 +327,18 @@
     },
     {
       "path": "content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/evidence-registry/itten-color-evidence-registry-v1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md",
       "classification": "publishable source"
     },
     {
@@ -1958,6 +1970,10 @@
       "classification": "ignored"
     },
     {
+      "path": "prompts/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md",
+      "classification": "ignored"
+    },
+    {
       "path": "prompts/research-publisher-mark-documents.md",
       "classification": "ignored"
     },
@@ -1995,6 +2011,10 @@
     },
     {
       "path": "prompts/visual-engineering/research-dependency-map.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/visual-engineering/research-expansion-backlog.md",
       "classification": "ignored"
     },
     {

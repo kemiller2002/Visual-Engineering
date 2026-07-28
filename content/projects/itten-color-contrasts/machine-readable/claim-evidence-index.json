@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0.0",
+  "report":"../research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md",
+  "links":{
+    "CL-001":["EV-ITTEN-001","EV-ITTEN-002","EV-ITTEN-011","EV-ITTEN-025"],
+    "CL-002":["EV-ITTEN-009","EV-ITTEN-010","EV-ITTEN-023"],
+    "CL-003":["EV-ITTEN-015","EV-ITTEN-016"],
+    "CL-004":["EV-ITTEN-015","EV-ITTEN-016"],
+    "CL-005":["EV-ITTEN-001","EV-ITTEN-011","EV-ITTEN-014"],
+    "CL-006":["EV-ITTEN-001","EV-ITTEN-011","EV-ITTEN-014"],
+    "CL-007":["EV-ITTEN-009","EV-ITTEN-011","EV-ITTEN-012","EV-ITTEN-013"],
+    "CL-008":["EV-ITTEN-011","EV-ITTEN-014"],
+    "CL-009":["EV-ITTEN-001","EV-ITTEN-002","EV-ITTEN-003","EV-ITTEN-014"],
+    "CL-010":["EV-ITTEN-020","EV-ITTEN-021","EV-ITTEN-022"],
+    "CL-011":["EV-ITTEN-017","EV-ITTEN-018","EV-ITTEN-019"],
+    "CL-012":["EV-ITTEN-017","EV-ITTEN-018","EV-ITTEN-019"],
+    "CL-013":["EV-ITTEN-001","EV-ITTEN-002","EV-ITTEN-003","EV-ITTEN-024"],
+    "CL-014":["EV-ITTEN-020","EV-ITTEN-021","EV-ITTEN-023"]
+  }
+}

@@ -186,6 +186,31 @@
         "order": 30
       }
     ],
+    "itten-color-contrasts": [
+      {
+        "id": "REP-VE-ITTEN-001",
+        "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+        "summary": "",
+        "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+        "artifactType": "research-document",
+        "project": "itten-color-contrasts",
+        "researchArea": "General Research",
+        "status": "active-research-package",
+        "updated": "2026-07-28",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Start here",
+        "order": 10
+      }
+    ],
     "product-genome": [
       {
         "id": null,

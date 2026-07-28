@@ -274,6 +274,14 @@
       "sourcePath": "content/projects/beautiful-digital-experiences/evidence-registry/beautiful-digital-experiences-evidence-registry-v0-1.md"
     },
     {
+      "id": "EVREG-VE-ITTEN-001",
+      "title": "Itten Color Contrasts Evidence Registry v1",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/evreg-ve-itten-001-itten-color-contrasts-evidence-registry-v1/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/evidence-registry/itten-color-evidence-registry-v1.md"
+    },
+    {
       "id": "EX-COMP-011",
       "title": "Context Reliability Reversal",
       "artifactType": "experiment",
@@ -706,6 +714,14 @@
       "sourcePath": "content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md"
     },
     {
+      "id": "REP-VE-ITTEN-001",
+      "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/research-execution-package/rep-ve-itten-001.md"
+    },
+    {
       "id": "repository-architecture",
       "title": "Repository Architecture",
       "artifactType": "research-document",
@@ -736,6 +752,14 @@
       "url": "/Visual-Engineering/research/risk-assessment/",
       "researchArea": "General Research",
       "sourcePath": "knowledge-platform/risk-assessment.md"
+    },
+    {
+      "id": "RJ-VE-ITTEN-001",
+      "title": "Itten Color Contrasts — Research Cycle 1",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md"
     },
     {
       "id": "RP-ATLAS-COLOR-004",
@@ -1009,6 +1033,7 @@
     ],
     "EVR-WC-0001": [],
     "EVREG-BDE-001": [],
+    "EVREG-VE-ITTEN-001": [],
     "EX-COMP-011": [],
     "EX-COMP-012": [],
     "EX-WC-0001": [],
@@ -1067,10 +1092,12 @@
     "REP-BDE-0001": [],
     "REP-VE-COL-001": [],
     "REP-VE-EVL-001": [],
+    "REP-VE-ITTEN-001": [],
     "repository-architecture": [],
     "repository-manifest": [],
     "research-methodology": [],
     "risk-assessment": [],
+    "RJ-VE-ITTEN-001": [],
     "RP-ATLAS-COLOR-004": [],
     "RP-ATLAS-TYPO-TRANSFER-001": [],
     "RP-CCE-0001": [],
