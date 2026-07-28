@@ -6,7 +6,7 @@ confidence: High for the central model; Moderate for proposed quantitative laws
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: composition-science
 purpose: |
   Investigate the claim "intuitive is just familiar," determine how repeated exposure changes perceived and actual design quality, identify the limits of familiarity, and develop testable models for predicting when convention, repetition, and intrinsic design structure will dominate user performance.
 references:
@@ -26,6 +26,13 @@ status: research-complete
 summary: |
   Familiarity is a major source of what users call intuitive, but it is not the whole phenomenon. Repetition increases processing fluency, liking, confidence, speed, accuracy, and automaticity. It can therefore make an initially mediocre interface feel natural and, for practiced users, perform well. However, familiarity cannot reliably repair poor task structure, excessive physical effort, weak feedback, hidden state, preventable errors, or dangerous mappings. The report proposes that perceived intuitiveness is an inference generated from processing fluency and prediction success, while durable design quality depends on separate dimensions: immediate legibility, learnability, practiced efficiency, error resistance, transferability, and adaptability. Familiarity is best modeled as a performance multiplier and switching-cost generator, not as evidence that the underlying design is good.
 version: 1.0
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Intuitive Is Just Familiar

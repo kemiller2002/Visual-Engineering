@@ -48,6 +48,14 @@ summary: |
   therefore treats stable markup as a bounded hypothesis, establishes competing
   models, measurable failure thresholds, evidence schemas, and handoff instructions
   for executing the study before production component APIs are designed.
+project: design-library
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Semantic Durability Across Interface Contexts

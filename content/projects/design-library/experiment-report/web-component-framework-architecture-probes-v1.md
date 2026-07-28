@@ -6,7 +6,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-22
 updated: 2026-07-22
-project: Design Library
+project: design-library
 document_type: experiment-report
 status: verified
 canonical: false
@@ -25,6 +25,12 @@ keywords:
   - static html
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Web Component Framework Architecture Probes

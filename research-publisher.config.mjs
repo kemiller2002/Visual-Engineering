@@ -25,6 +25,7 @@ export default {
       "temp/**",
       "input-documents/**",
       "prompts/**",
+      "packages/**",
       "**/archive/**",
       "**/archives/**",
     ],

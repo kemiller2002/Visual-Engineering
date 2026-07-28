@@ -5,7 +5,7 @@ abstract: Foundational REP defining CCE as a safety-oriented discipline with evi
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: research-report
 artifactType: research-package
 researchArea: Clinical Communication Engineering
@@ -21,6 +21,16 @@ relatedDocuments:
 tags: [clinical-communication, rep, human-factors, patient-safety]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
+entryPoint: true
+entryPointOrder: 10
+entryPointLabel: Start here
 ---
 
 # Clinical Communication Engineering Foundation Research Execution Package

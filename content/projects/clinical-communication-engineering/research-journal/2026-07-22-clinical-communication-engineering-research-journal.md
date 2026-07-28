@@ -5,7 +5,7 @@ abstract: Research log, uncertainty review, contradictory evidence, and stopping
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: research-journal
 artifactType: journal-entry
 researchArea: Clinical Communication Engineering
@@ -13,6 +13,12 @@ status: complete
 tags: [clinical-communication, research-journal]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - chronicle
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Clinical Communication Engineering Research Journal — Cycle 1

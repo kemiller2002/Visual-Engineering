@@ -2,7 +2,7 @@
 title: ATLAS-0002 Relational Legibility Envelope
 id: REP-ATLAS-0002
 document_type: research_execution_package
-project: Composition Science
+project: project-atlas
 version: 1.0
 status: working
 date: 2026-07-21
@@ -23,6 +23,14 @@ references:
   - Composition_Science_Ontology_v1.md
   - Composition_Science_Repository_Governance_Specification_v1.md
   - Composition_Science_Research_Library_v0.4.md
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # ATLAS-0002: Relational Legibility Envelope

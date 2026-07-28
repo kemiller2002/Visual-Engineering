@@ -2,7 +2,7 @@
 title: First Glance Versus Verified Understanding
 id: EX-COMP-012
 document_type: experiment_report
-project: Composition Science
+project: composition-science
 version: 1.0
 status: proposed
 date: 2026-07-21
@@ -13,6 +13,12 @@ tests:
   - LAW-COMP-039
   - HY-COMP-037
   - HY-COMP-038
+purposes:
+  - verify
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # EX-COMP-012 — First Glance Versus Verified Understanding

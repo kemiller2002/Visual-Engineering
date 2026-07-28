@@ -5,13 +5,21 @@ authors:
 date: 2026-07-18
 document_type: specification
 id: SPEC-001
-project: Composition Science
+project: composition-science
 purpose: |
   Defines how knowledge is represented and linked across the Composition
   Science ecosystem.
 status: working
 title: Composition Science Knowledge Graph Specification
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Composition Science Knowledge Graph Specification

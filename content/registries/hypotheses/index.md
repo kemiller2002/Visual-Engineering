@@ -1,3 +1,12 @@
+---
+purposes:
+  - reference
+  - integrate
+audiences:
+  - researcher
+  - contributor
+---
+
 # Hypotheses
 
 Generated hypothesis registry placeholder.

@@ -6,7 +6,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-22
 updated: 2026-07-22
-project: Design Library
+project: design-library
 document_type: research-report
 status: verified
 canonical: false
@@ -32,6 +32,13 @@ keywords:
   - handoff
 machine_readable: true
 llm_ingest: true
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Cross-Project Web Component Framework Research Execution Package

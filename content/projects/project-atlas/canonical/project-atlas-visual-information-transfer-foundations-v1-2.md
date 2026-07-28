@@ -5,7 +5,7 @@ confidence: Moderate
 date: 2026-07-18
 llm_ingest: true
 machine_readable: true
-project: Project Atlas / Composition Science
+project: project-atlas
 purpose: |
   Establish a research foundation for treating typography and visual design as constrained communication systems. This document tests which concepts from information theory, signal detection, psychophysics, and symbol-recognition research can be applied directly, which are useful analogies, and which require new Atlas-specific models.
 references:
@@ -22,6 +22,14 @@ status: research draft
 summary: |
   Typography can be usefully modeled as a noisy visual communication channel, but Shannon information cannot be equated with comprehension or meaning. The strongest measurable foundation is a layered model: physical signal preservation, perceptual discrimination, symbolic recognition, linguistic interpretation, and task success. Existing vision research already measures letter recognition in bits through confusion matrices and visual-span profiles, supporting the idea that type systems can be evaluated by information retained under degradation. However, alphabet fitness cannot be reduced to maximum geometric distinctiveness because familiarity, frequency, context, word structure, spacing, and reading strategy provide redundancy and alter the cost of individual confusions. Atlas should therefore measure conditional communication performance: how much task-relevant uncertainty a visual system removes for a defined reader, environment, and task.
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Visual Information Transfer: Foundations for the Typography Genome

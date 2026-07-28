@@ -1,7 +1,7 @@
 ---
 title: "Project Atlas Autonomous Research Report 001"
 subtitle: "From Design-System Convergence to Predictive Mechanisms"
-project: "Project Atlas"
+project: project-atlas
 version: "0.1"
 date: "2026-07-19"
 status: "Research synthesis with falsification log"
@@ -16,6 +16,13 @@ scope:
   - accessibility
 llm_ingest: true
 machine_readable: true
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Executive Summary

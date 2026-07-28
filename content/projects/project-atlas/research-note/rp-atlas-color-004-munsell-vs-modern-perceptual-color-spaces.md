@@ -38,6 +38,14 @@ keywords:
   - gamut
 llm_ingest: true
 machine_readable: true
+project: project-atlas
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Executive Summary

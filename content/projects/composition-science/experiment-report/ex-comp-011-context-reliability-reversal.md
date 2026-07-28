@@ -2,7 +2,7 @@
 title: Context Reliability Reversal
 id: EX-COMP-011
 document_type: experiment_report
-project: Composition Science
+project: composition-science
 version: 1.0
 status: proposed
 date: 2026-07-21
@@ -12,6 +12,12 @@ tests:
   - LAW-COMP-034
   - HY-COMP-034
   - HY-COMP-036
+purposes:
+  - verify
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # EX-COMP-011 — Context Reliability Reversal

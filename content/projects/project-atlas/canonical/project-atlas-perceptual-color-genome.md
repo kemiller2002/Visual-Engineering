@@ -1,3 +1,15 @@
+---
+project: project-atlas
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
+---
+
 # Project Atlas: Perceptual Color Genome
 
 ## Purpose

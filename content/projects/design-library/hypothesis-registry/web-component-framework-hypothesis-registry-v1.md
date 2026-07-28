@@ -6,7 +6,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-22
 updated: 2026-07-22
-project: Design Library
+project: design-library
 document_type: research-report
 status: verified
 canonical: false
@@ -24,6 +24,11 @@ keywords:
   - storybook
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - reference
+audiences:
+  - researcher
 ---
 
 # Web Component Framework Hypothesis Registry

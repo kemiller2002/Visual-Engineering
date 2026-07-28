@@ -1,0 +1,302 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Visual Engineering Measurement Audit v0.1 | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><link rel="stylesheet" href="/Visual-Engineering/_astro/_term_.BXadKaff.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div class="site-identity"> <span class="site-mark" aria-hidden="true">VE</span> <div> <a class="site-title" href="/Visual-Engineering/">Visual Engineering Research</a> <p class="site-description">An open index of evidence, theory, and practice</p> </div> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/Visual-Engineering/">Overview</a></li><li><a href="/Visual-Engineering/search/">Search</a></li><li><a href="/Visual-Engineering/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span> <span data-pagefind-meta="stableId">AUD-VE-EVL-001</span> </p> <h1 data-pagefind-meta="title">Visual Engineering Measurement Audit v0.1</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>AUD-VE-EVL-001</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div> <div><dt>Project</dt><dd data-pagefind-meta="project">visual-engineering</dd></div> <div><dt>Useful for</dt><dd data-pagefind-meta="purposes">verify, reproduce</dd></div> <div><dt>Audience</dt><dd data-pagefind-meta="audiences">researcher, contributor</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">working-draft</dd></div> <div><dt>Version</dt><dd>0.1</dd></div> <div><dt>Confidence</dt><dd>0.6</dd></div>  <div><dt>Priority</dt><dd>medium</dd></div> <div><dt>Tags</dt><dd data-pagefind-meta="tags">measurement, audit, replication</dd></div> <div><dt>Updated</dt><dd>2026-07-25</dd></div> <div><dt>Source</dt><dd>content/projects/evaluation-measurement/audit/visual-engineering-measurement-audit-v0-1.md</dd></div> </dl> </header> <div class="document-reading-grid"> <aside class="toc-panel"> <h2>On this page</h2> <ol> <li><a href="#visual-engineering-measurement-audit-v0-1">Visual Engineering Measurement Audit v0.1</a></li><li><a href="#audit-question">Audit question</a></li><li><a href="#scope-and-method">Scope and method</a></li><li><a href="#execution-state-vocabulary-proposed-by-the-audit">Execution-state vocabulary proposed by the audit</a></li><li><a href="#artifact-inventory">Artifact inventory</a></li><li><a href="#coverage-summary">Coverage summary</a></li><li><a href="#cross-repository-findings">Cross-repository findings</a></li><li><a href="#f1-execution-state-is-the-largest-immediate-traceability-gap">F1 — Execution state is the largest immediate traceability gap</a></li><li><a href="#f2-the-best-recent-artifacts-already-reject-single-metric-evaluation">F2 — The best recent artifacts already reject single-metric evaluation</a></li><li><a href="#f3-confidence-is-not-calibrated-across-artifact-types">F3 — Confidence is not calibrated across artifact types</a></li><li><a href="#f4-proposed-experiments-have-useful-falsification-logic-but-incomplete-protocols">F4 — Proposed experiments have useful falsification logic but incomplete protocols</a></li><li><a href="#f5-expert-analyses-are-the-highest-proxy-to-outcome-risk">F5 — Expert analyses are the highest proxy-to-outcome risk</a></li><li><a href="#immediate-controls-proposed">Immediate controls proposed</a></li><li><a href="#recommended-corrections-by-priority">Recommended corrections by priority</a></li><li><a href="#audit-limits">Audit limits</a></li><li><a href="#decision">Decision</a></li> </ol> </aside> <section class="document-body"><h1 id="visual-engineering-measurement-audit-v01">Visual Engineering Measurement Audit v0.1</h1>
+<h2 id="audit-question">Audit question</h2>
+<p>Can another researcher determine what was observed, what was inferred, what was merely
+proposed, and the population, task, apparatus, analysis, uncertainty, artifacts, and
+transfer boundary associated with each evaluation claim?</p>
+<h2 id="scope-and-method">Scope and method</h2>
+<p>The audit enumerated Markdown artifacts in these claim-bearing directories:</p>
+<ul>
+<li><code>experiment-report</code></li>
+<li><code>case-study</code></li>
+<li><code>comparative-study</code></li>
+<li><code>audit</code></li>
+<li><code>research-plan</code></li>
+<li><code>research-execution-package</code></li>
+</ul>
+<p>Fourteen files were found, including the active VE-EVL package. Thirteen predecessor
+artifacts were coded using the construct model and minimum experiment record in
+<code>REP-VE-EVL-001</code>. Coding used only repository content; absence means the field could
+not be reconstructed from the artifact, not that the underlying research never
+considered it.</p>
+<p>This is an artifact audit, not a re-appraisal of every external citation.</p>
+<h2 id="execution-state-vocabulary-proposed-by-the-audit">Execution-state vocabulary proposed by the audit</h2>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>plan</code></td>
+<td>Questions or intended research sequence; no claim of evaluation execution.</td>
+</tr>
+<tr>
+<td><code>proposed-experiment</code></td>
+<td>Design and predictions specified; data not collected.</td>
+</tr>
+<tr>
+<td><code>repository-probe</code></td>
+<td>Files, tooling, schemas, or builds directly inspected or executed.</td>
+</tr>
+<tr>
+<td><code>expert-analysis</code></td>
+<td>A design or system interpreted against a framework without participant data.</td>
+</tr>
+<tr>
+<td><code>source-synthesis</code></td>
+<td>Conclusions derived from external literature, standards, or documentation.</td>
+</tr>
+<tr>
+<td><code>secondary-data-analysis</code></td>
+<td>Existing observations or datasets reanalyzed.</td>
+</tr>
+<tr>
+<td><code>human-study</code></td>
+<td>New participant observations collected under a recorded protocol.</td>
+</tr>
+<tr>
+<td><code>mixed</code></td>
+<td>Multiple states present; every conclusion must identify its supporting state.</td>
+</tr>
+</tbody>
+</table>
+<p><code>status</code> and <code>execution_state</code> answer different questions and should not substitute for
+one another.</p>
+<h2 id="artifact-inventory">Artifact inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Artifact</th>
+<th>Execution state</th>
+<th>Principal constructs/measures</th>
+<th>Missing or ambiguous record fields</th>
+<th>Main inference or proxy risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EX-COMP-011</code> Context Reliability Reversal</td>
+<td>proposed-experiment</td>
+<td>identification accuracy, reaction time, first fixation, confidence/calibration; notice and identification</td>
+<td>population, sample rationale, stimuli, apparatus, primary outcome, scoring, analysis model, artifacts, ethics</td>
+<td>Gaze and latency could be mistaken for changed perception; the file itself warns against this.</td>
+</tr>
+<tr>
+<td><code>EX-COMP-012</code> First Glance Versus Verified Understanding</td>
+<td>proposed-experiment</td>
+<td>gist, identity/state, relationship comprehension, next-step prediction, confidence</td>
+<td>population, sample rationale, stimulus family, apparatus, scoring, primary outcome, mask details, analysis model, artifacts, ethics</td>
+<td>Above-chance gist could be promoted as actionable comprehension; the file explicitly prohibits that shortcut.</td>
+</tr>
+<tr>
+<td><code>EX-WC-0001</code> Web Component Framework Architecture Probes</td>
+<td>mixed: repository-probe + source-synthesis + deferred probes</td>
+<td>repository/tooling presence, architecture compatibility judgments</td>
+<td>per-probe evidence links, decision rubric, uncertainty, reproducible command outputs, artifact versions, clear executed/deferred field</td>
+<td>A <code>verified</code> document can make source-backed architectural judgment appear equivalent to executed runtime validation.</td>
+</tr>
+<tr>
+<td><code>REP-WC-0001</code> Web Component Framework</td>
+<td>source-synthesis + repository-probe</td>
+<td>architecture feasibility, interoperability, semantic durability, accessibility risk</td>
+<td>consistent claim-to-probe mapping, comparative scoring rules, runtime population/tasks, effect/uncertainty model</td>
+<td>“Foundation-scoped certainty” may exceed implementation evidence; remaining tests are acknowledged as deferred.</td>
+</tr>
+<tr>
+<td><code>RP-COMP-005</code> Visual Scene Construction</td>
+<td>source-synthesis + proposed-experiments</td>
+<td>rapid gist, context, fixation-dependent evidence, verification cost, confidence</td>
+<td>review protocol, screening/export record, claim-level effect sizes, population/stimulus transfer matrix</td>
+<td>Literature synthesis supports candidate mechanisms, but candidate laws can read like executed repository validation.</td>
+</tr>
+<tr>
+<td><code>REP-CCE-0001</code> Clinical Communication Engineering</td>
+<td>source-synthesis</td>
+<td>comprehension, decision, workload, accessibility, error and trust-related safety outcomes</td>
+<td>direct experiment protocol, concrete comparator, participant and setting details, analysis plan</td>
+<td>Consequential engineering recommendations depend on later representative validation; the document acknowledges local validation needs.</td>
+</tr>
+<tr>
+<td>Letter Confusion Data Audit</td>
+<td>source-synthesis + data-model design</td>
+<td>resemblance, substitution probability, identification accuracy, information retention</td>
+<td>reproducible search/export, dual screening, dataset-level sample/apparatus completeness</td>
+<td>Geometry and similarity corpora may be mistaken for human confusion probabilities; the audit explicitly identifies this gap.</td>
+</tr>
+<tr>
+<td>Account Settings Case Study</td>
+<td>expert-analysis</td>
+<td>relative separation ratios, predicted grouping, section recognition, action selection</td>
+<td>stable ID, participants, task protocol, variants as artifacts, scoring, uncertainty, analysis, accessibility states</td>
+<td>High confidence labels describe expert diagnosis, not measured user effects; pixel ratios risk appearing prescriptive.</td>
+</tr>
+<tr>
+<td>Ribbon Comparative Study</td>
+<td>expert-analysis</td>
+<td>ordinal recognition, density, discoverability, recall, task context</td>
+<td>front matter/ID, operational definitions, evidence, participants, tasks, source versions, rubric, uncertainty</td>
+<td>High/medium/low judgments are unsupported ordinal ratings and may convert preference or familiarity into performance claims.</td>
+</tr>
+<tr>
+<td><code>REP-ATLAS-0002</code> Relational Legibility Envelope</td>
+<td>source-synthesis + proposed-experiments</td>
+<td>grouping reconstruction, identification, search slope, retention, transformation preservation, recovery and consequence-weighted error</td>
+<td>executed-study separation, protocol-specific sample/apparatus/analysis, calibrated profile values</td>
+<td>Strong metric design is present, but literature-backed laws, metric proposals, and unexecuted experiments are easy to conflate.</td>
+</tr>
+<tr>
+<td><code>REP-ATLAS-0004</code> Visual Design Consolidation</td>
+<td>source-synthesis</td>
+<td>broad perception, spacing, typography, color, hierarchy, accessibility and wayfinding outcomes</td>
+<td>systematic review protocol, claim-level traceability, comparable confidence calibration, effect/uncertainty table</td>
+<td>Breadth and mature language may imply a single unified validation level across evidence of unequal strength.</td>
+</tr>
+<tr>
+<td><code>REP-VE-COL-001</code> Color/Contrast/Low Vision/CVD</td>
+<td>source-synthesis + proposed-experiments</td>
+<td>discrimination, identification, reading accuracy/rate, completion, errors, confidence, fatigue, abandonment</td>
+<td>preregistered protocol, concrete stimuli, sample rationale, device calibration, analysis plan, ethics; accurately states no participant testing</td>
+<td>Strongly separates metrics from task outcomes, but proposed metric tournaments could be mistaken for completed validation if execution state is omitted.</td>
+</tr>
+<tr>
+<td>Project Atlas Foundation Research Plan</td>
+<td>plan</td>
+<td>proposed distance, density, confidence, perception and cognition constructs</td>
+<td>stable metadata, operational definitions, sources, execution records, calibration</td>
+<td>Early universal and numeric language—such as confidence <code>0.99</code>—has no defined calibration and conflicts with later bounded methodology.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="coverage-summary">Coverage summary</h2>
+<table>
+<thead>
+<tr>
+<th>Minimum-record dimension</th>
+<th>Coverage judgment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable identity and status</td>
+<td>Uneven; several legacy artifacts lack a canonical ID or controlled status.</td>
+</tr>
+<tr>
+<td>Execution state</td>
+<td>Absent as a common field; inferred from prose.</td>
+</tr>
+<tr>
+<td>Claim and target inference</td>
+<td>Often present conceptually, rarely encoded per measure.</td>
+</tr>
+<tr>
+<td>Construct and measure role</td>
+<td>Strongest in recent Atlas and Composition Science work; weakest in comparative/expert analyses.</td>
+</tr>
+<tr>
+<td>Primary versus secondary outcome</td>
+<td>Generally absent.</td>
+</tr>
+<tr>
+<td>Population and target population</td>
+<td>Usually absent in proposals; bounded populations appear in recent accessibility research.</td>
+</tr>
+<tr>
+<td>Tasks and stimuli</td>
+<td>Often sketched, rarely versioned as reproducible artifacts.</td>
+</tr>
+<tr>
+<td>Apparatus and environment</td>
+<td>Generally absent.</td>
+</tr>
+<tr>
+<td>Sample rationale and stopping</td>
+<td>Absent because most participant studies are proposed, but execution gating is not machine-readable.</td>
+</tr>
+<tr>
+<td>Analysis plan and uncertainty</td>
+<td>Analysis cautions appear; executable plans and uncertainty reporting are sparse.</td>
+</tr>
+<tr>
+<td>Artifacts, code, and data</td>
+<td>Repository files are available, but experiment materials and data packages are mostly prospective.</td>
+</tr>
+<tr>
+<td>Nulls, reversals, and contradictions</td>
+<td>Strong cultural coverage in recent REPs.</td>
+</tr>
+<tr>
+<td>Transfer boundary</td>
+<td>Frequently discussed in prose; not consistently attached to individual claims.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="cross-repository-findings">Cross-repository findings</h2>
+<h3 id="f1--execution-state-is-the-largest-immediate-traceability-gap">F1 — Execution state is the largest immediate traceability gap</h3>
+<p>The repository is predominantly a research and design-knowledge corpus, not a corpus of
+completed original human experiments. That is acceptable, but readers and machines
+must not infer execution from mature document status or from the presence of an
+experiment design.</p>
+<h3 id="f2--the-best-recent-artifacts-already-reject-single-metric-evaluation">F2 — The best recent artifacts already reject single-metric evaluation</h3>
+<p><code>EX-COMP-011</code>, <code>EX-COMP-012</code>, <code>REP-ATLAS-0002</code>, and <code>REP-VE-COL-001</code> independently
+separate accuracy, latency, gaze, confidence, comprehension, error, and transfer. This
+convergence further weakens VE-EVL-H1.</p>
+<h3 id="f3--confidence-is-not-calibrated-across-artifact-types">F3 — Confidence is not calibrated across artifact types</h3>
+<p>“High” confidence can refer to an expert diagnosis, a literature-level mechanism, an
+architecture decision, or an empirical result. The Atlas foundation plan even uses
+<code>0.99</code> without a calibration model. Confidence is therefore not presently comparable
+across projects or methods.</p>
+<h3 id="f4--proposed-experiments-have-useful-falsification-logic-but-incomplete-protocols">F4 — Proposed experiments have useful falsification logic but incomplete protocols</h3>
+<p>The repository is comparatively strong at predictions, counterexamples, and warnings
+against proxy misuse. It is weak at sample rationale, primary-outcome designation,
+apparatus/version capture, analysis specification, ethics state, and reproducible
+materials.</p>
+<h3 id="f5--expert-analyses-are-the-highest-proxy-to-outcome-risk">F5 — Expert analyses are the highest proxy-to-outcome risk</h3>
+<p>The Account Settings and Ribbon studies generate useful hypotheses, but their
+confidence and ordinal comparisons are not participant outcomes. They should be
+classified as expert analysis until tested.</p>
+<h2 id="immediate-controls-proposed">Immediate controls proposed</h2>
+<p>For every new claim-bearing artifact:</p>
+<pre><code class="language-yaml">execution_state: plan | proposed-experiment | repository-probe | expert-analysis | source-synthesis | secondary-data-analysis | human-study | mixed
+data_collection_status: none | planned | active | complete
+</code></pre>
+<p>For <code>mixed</code> documents, each major conclusion should identify its evidence IDs and
+execution state.</p>
+<p>Before an experiment moves from proposed to active, require:</p>
+<ul>
+<li>named primary outcome and construct;</li>
+<li>participant/target-population definition;</li>
+<li>sample rationale and stopping rule;</li>
+<li>versioned tasks, stimuli, software, apparatus, and accessibility conditions;</li>
+<li>analysis and missing-data plan;</li>
+<li>consent, privacy, ethics, and risk disposition;</li>
+<li>artifact and data-access plan.</li>
+</ul>
+<h2 id="recommended-corrections-by-priority">Recommended corrections by priority</h2>
+<ol>
+<li>Add execution-state fields to the metadata standard and new templates.</li>
+<li>Split the executed, source-backed, and deferred portions of <code>EX-WC-0001</code> at the
+claim-to-evidence level.</li>
+<li>Mark the Account Settings and Ribbon documents explicitly as expert analyses.</li>
+<li>Expand <code>EX-COMP-011</code> and <code>EX-COMP-012</code> into preregistration-ready protocols before
+implementation.</li>
+<li>Replace unsupported numeric confidence in the Atlas foundation plan with an
+uncalibrated/provisional label or an explicit model.</li>
+<li>Test the minimum experiment record on one proposed perceptual experiment, one
+architecture probe, and one expert analysis before canonical adoption.</li>
+</ol>
+<h2 id="audit-limits">Audit limits</h2>
+<ul>
+<li>The audit did not re-screen all citations in the large REPs.</li>
+<li>It did not include every research note or canonical theory document containing a
+proposed measure.</li>
+<li>No document owner was interviewed.</li>
+<li>“Missing” means absent from the audited artifact.</li>
+<li>No human-participant data were collected.</li>
+</ul>
+<h2 id="decision">Decision</h2>
+<p>Stack A is complete enough to proceed to the reporting-framework crosswalk, with one
+additional action carried forward: the crosswalk must accommodate multiple execution
+states rather than assuming every evaluation is a randomized or participant study.</p></section> </div>  </article>  </main> <footer class="site-footer"> <p><strong>Visual Engineering Research</strong></p> <p>Research made navigable, verifiable, and reusable.</p> <p class="site-build-stamp">
+Build: <time datetime="2026-07-27T21:03:27.885Z">Jul 27, 2026, 9:03:27 PM UTC</time> </p> </footer> </body></html>

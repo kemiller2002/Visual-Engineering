@@ -1,6 +1,6 @@
 ---
 title: "ATLAS-0001: Proximity and Relative Separation"
-project: "Composition Science"
+project: project-atlas
 version: "0.1"
 status: "Evidence Review — Working Draft"
 date: "2026-07-18"
@@ -32,6 +32,12 @@ references:
   - "Johansson, R. C. G., et al. (2024). Serial processing of proximity groups and similarity groups in perceptual organization."
   - "Beck, D. M., & Palmer, S. E. (2002). Top-down influences on perceptual grouping."
   - "Li, J., et al. (2018). Evidence for the beneficial effect of perceptual grouping on visual working memory."
+purposes:
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # ATLAS-0001: Proximity and Relative Separation

@@ -5,13 +5,23 @@ authors:
 date: 2026-07-18
 document_type: governance
 id: GOV-001
-project: Composition Science
+project: composition-science
 purpose: |
   Governing principles and standards for all Composition Science
   documents and contributors.
 status: approved
 title: Composition Science Project Constitution
 version: 1.0
+purposes:
+  - orient
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
+entryPoint: true
+entryPointOrder: 10
+entryPointLabel: Project foundation
 ---
 
 # Composition Science Project Constitution

@@ -7,7 +7,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-24
 updated: 2026-07-25
-project: Visual Engineering
+project: visual-engineering
 document_type: research-package
 status: active-research-package
 evidence_level: C
@@ -26,6 +26,17 @@ tags:
   - replication
 machine_readable: true
 llm_ingest: true
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
+entryPoint: true
+entryPointOrder: 20
+entryPointLabel: Measurement foundation
 ---
 
 # Evaluation, Measurement, and Experimentation Foundation and Falsification

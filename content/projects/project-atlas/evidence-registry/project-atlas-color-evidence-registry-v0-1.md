@@ -1,6 +1,6 @@
 ---
 title: "Project Atlas Color Evidence Registry v0.1"
-project: Composition Science
+project: project-atlas
 version: 0.1
 status: Working Draft
 date: 2026-07-18
@@ -31,6 +31,11 @@ references:
   - https://pubmed.ncbi.nlm.nih.gov/14650846/
   - https://pubmed.ncbi.nlm.nih.gov/23435629/
   - https://bottosson.github.io/posts/oklab/
+purposes:
+  - verify
+  - reference
+audiences:
+  - researcher
 ---
 
 # Project Atlas Color Evidence Registry v0.1

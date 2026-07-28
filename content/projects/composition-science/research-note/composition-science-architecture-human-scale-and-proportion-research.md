@@ -1,3 +1,14 @@
+---
+project: composition-science
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
+---
+
 # Composition Science: Architecture Research - Human Scale and Proportion
 
 ## Executive Summary

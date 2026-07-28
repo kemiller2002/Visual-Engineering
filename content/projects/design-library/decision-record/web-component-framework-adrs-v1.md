@@ -6,7 +6,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-22
 updated: 2026-07-22
-project: Design Library
+project: design-library
 document_type: decision-record
 status: verified
 canonical: false
@@ -23,6 +23,13 @@ keywords:
   - architecture
 machine_readable: true
 llm_ingest: true
+purposes:
+  - decide
+  - reference
+  - chronicle
+audiences:
+  - practitioner
+  - contributor
 ---
 
 # Web Component Framework ADR Set

@@ -1,5 +1,13 @@
 ---
 slug: evidence-concept
+purposes:
+  - reference
+  - integrate
+audiences:
+  - general
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Evidence

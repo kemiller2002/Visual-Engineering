@@ -4,13 +4,19 @@ confidence: Moderate
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Project Atlas / Typography Genome
+project: project-atlas
 status: research draft
 summary: >
   Audit of existing letter-similarity, letter-confusion, visual-span, and
   synthetic glyph datasets. The main finding is that these data classes answer
   different questions and must remain condition-aware.
 version: 1.0
+purposes:
+  - verify
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Letter-Confusion Data Audit and Measurement Plan

@@ -1,3 +1,14 @@
+---
+project: visual-engineering-knowledge-platform
+purposes:
+  - decide
+  - apply
+  - reference
+audiences:
+  - practitioner
+  - contributor
+---
+
 # Search Architecture
 
 Generated: 2026-07-22T15:10:59+00:00

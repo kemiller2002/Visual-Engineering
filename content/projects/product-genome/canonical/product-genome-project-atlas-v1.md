@@ -6,7 +6,7 @@ confidence: Preliminary
 date: 2026-07-18
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: product-genome
 purpose: |
   Establish the Product Genome research branch of Project Atlas. This document defines the scope, analytical model, genome structure, evidence standards, candidate laws, and research sequence for studying product design across designers, industries, materials, interactions, and time.
 references:
@@ -22,6 +22,17 @@ status: active
 summary: |
   Product design is treated here as the design of sustained physical interaction between humans, objects, systems, and environments. The Product Genome will not begin as a catalog of famous designers or stylistic movements. It will identify recurring variables, constraints, interaction patterns, and perceptual effects, then map how individual designers and product categories weight those variables differently. The goal is to distinguish biological and functional regularities from cultural conventions, manufacturing artifacts, brand language, and temporary fashion.
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
+entryPoint: true
+entryPointOrder: 10
+entryPointLabel: Start here
 ---
 
 # Product Genome: Project Atlas Research Framework

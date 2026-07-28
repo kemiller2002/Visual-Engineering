@@ -6,7 +6,7 @@ authors:
   - Codex
 created: 2026-07-24
 updated: 2026-07-24
-project: Visual Engineering
+project: visual-engineering
 discipline: Color and Accessibility
 research_area:
   - color
@@ -37,6 +37,14 @@ source_stage: processed
 reading_time_minutes: 32
 machine_readable: true
 llm_ingest: true
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # REP-VE-COL-001 — Color, Contrast, Low Vision, and Color-Vision Deficiency

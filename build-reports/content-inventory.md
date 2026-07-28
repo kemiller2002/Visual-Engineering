@@ -3,19 +3,25 @@
 ## Summary
 
 - publishable source: 117
-- generated output: 1
+- generated output: 6
 - archived: 2
 - intake/unprocessed: 1
-- ambiguous: 349
-- ignored: 64
+- ambiguous: 358
+- ignored: 65
 
 ## Records
 
+- publishable source: `agent-context/AGENT-INSTRUCTIONS.md`
 - publishable source: `agent-context/README.md`
 - publishable source: `agent-context/UI-ANTI-PATTERNS.md`
 - publishable source: `agent-context/UI-DECISION-CHECKLIST.md`
 - publishable source: `agent-context/UI-FOUNDATIONS.md`
 - generated output: `build-reports/content-inventory.md`
+- generated output: `build-reports/ui-context-release/visual-engineering-context-0.1.0/AGENT-INSTRUCTIONS.md`
+- generated output: `build-reports/ui-context-release/visual-engineering-context-0.1.0/RESEARCH-INDEX.md`
+- generated output: `build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-ANTI-PATTERNS.md`
+- generated output: `build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-DECISION-CHECKLIST.md`
+- generated output: `build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-FOUNDATIONS.md`
 - archived: `content/archive/duplicates/composition-science/Composition_Science_Research_Library_v0.2.md`
 - archived: `content/archive/duplicates/project-atlas/Project_Atlas_Visual_Information_Transfer_Foundations_v1.md`
 - publishable source: `content/concepts/architecture/index.md`
@@ -37,6 +43,10 @@
 - publishable source: `content/concepts/typography/index.md`
 - publishable source: `content/concepts/wayfinding/index.md`
 - publishable source: `content/intake-preservation.md`
+- publishable source: `content/projects/beautiful-digital-experiences/evidence-registry/beautiful-digital-experiences-evidence-registry-v0-1.md`
+- publishable source: `content/projects/beautiful-digital-experiences/hypothesis-registry/beautiful-digital-experiences-hypothesis-registry-v0-1.md`
+- publishable source: `content/projects/beautiful-digital-experiences/research-execution-package/rep-bde-0001-territory-and-evidence-foundation.md`
+- publishable source: `content/projects/beautiful-digital-experiences/research-journal/2026-07-26-beautiful-digital-experiences-cycle-1.md`
 - publishable source: `content/projects/clinical-communication-engineering/design-specification/clinical-communication-design-system-and-prototypes-v1.md`
 - publishable source: `content/projects/clinical-communication-engineering/evidence-registry/clinical-communication-engineering-evidence-registry-v1.md`
 - publishable source: `content/projects/clinical-communication-engineering/hypothesis-registry/clinical-communication-engineering-hypothesis-registry-v1.md`
@@ -398,6 +408,9 @@
 - ambiguous: `node_modules/remark-rehype/readme.md`
 - ambiguous: `node_modules/remark-smartypants/readme.md`
 - ambiguous: `node_modules/remark-stringify/readme.md`
+- ambiguous: `node_modules/research-publisher/docs/document-purpose-taxonomy.md`
+- ambiguous: `node_modules/research-publisher/docs/research-metadata-schema.md`
+- ambiguous: `node_modules/research-publisher/prompts/mark-research-documents.md`
 - ambiguous: `node_modules/research-publisher/README.md`
 - ambiguous: `node_modules/retext-latin/readme.md`
 - ambiguous: `node_modules/retext-smartypants/readme.md`
@@ -476,14 +489,16 @@
 - ambiguous: `node_modules/zod-to-json-schema/README.md`
 - ambiguous: `node_modules/zod/README.md`
 - ambiguous: `node_modules/zwitch/readme.md`
-- publishable source: `packages/visual-engineering-context/context/RESEARCH-INDEX.md`
-- publishable source: `packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md`
-- publishable source: `packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md`
-- publishable source: `packages/visual-engineering-context/context/UI-FOUNDATIONS.md`
-- publishable source: `packages/visual-engineering-context/README.md`
+- ambiguous: `packages/visual-engineering-context/context/AGENT-INSTRUCTIONS.md`
+- ambiguous: `packages/visual-engineering-context/context/RESEARCH-INDEX.md`
+- ambiguous: `packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md`
+- ambiguous: `packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md`
+- ambiguous: `packages/visual-engineering-context/context/UI-FOUNDATIONS.md`
+- ambiguous: `packages/visual-engineering-context/README.md`
 - ignored: `prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md`
 - ignored: `prompts/implement-project-context-contract.md`
 - ignored: `prompts/install-research-publisher-on-existing-repo.md`
+- ignored: `prompts/research-publisher-mark-documents.md`
 - ignored: `prompts/RP-COMP-005-Visual-Scene-Construction-Predictive-Processing-and-Active-Perception.md`
 - ignored: `prompts/upgrade-existing-research-publisher-installation.md`
 - ignored: `prompts/visual-engineering-repository-cleanup-codex-prompt.md`

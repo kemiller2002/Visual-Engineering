@@ -1,3 +1,13 @@
+---
+project: composition-science
+purposes:
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
+---
+
 # Composition Science Research
 ## Phase 2: Visual Hierarchy, Wayfinding, and Attention
 

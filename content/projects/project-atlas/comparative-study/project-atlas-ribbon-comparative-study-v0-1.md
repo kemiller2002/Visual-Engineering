@@ -1,3 +1,14 @@
+---
+project: project-atlas
+purposes:
+  - apply
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
+---
+
 # Project Atlas – Ribbon Comparative Study v0.1
 
 ## Objective

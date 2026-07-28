@@ -1,3 +1,12 @@
+---
+purposes:
+  - reference
+  - integrate
+audiences:
+  - researcher
+  - contributor
+---
+
 # Experiments
 
 Generated experiment registry placeholder.

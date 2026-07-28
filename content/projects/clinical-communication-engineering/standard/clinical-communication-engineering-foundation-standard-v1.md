@@ -5,7 +5,7 @@ abstract: Initial principles, cognitive model, information architecture, visual 
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: standard
 researchArea: Clinical Communication Engineering
 status: proposed
@@ -13,6 +13,15 @@ version: 0.1
 tags: [clinical-communication, standard, human-factors, information-architecture]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - apply
+  - reference
+audiences:
+  - practitioner
+  - contributor
+entryPoint: true
+entryPointOrder: 20
+entryPointLabel: Practical standard
 ---
 
 # Clinical Communication Engineering Foundation Standard

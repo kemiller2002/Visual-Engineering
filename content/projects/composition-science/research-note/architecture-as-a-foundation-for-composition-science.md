@@ -5,7 +5,7 @@ confidence: Medium
 date: 2026-07-18
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: composition-science
 purpose: |
   Establish architecture as a primary research discipline within the
   Composition Science project and identify transferable principles that
@@ -15,6 +15,12 @@ summary: |
   Architecture serves as a foundational source of evidence for
   discovering universal laws of composition.
 version: 1
+purposes:
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Architecture as a Foundation for Composition Science

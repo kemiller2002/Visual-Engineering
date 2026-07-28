@@ -7,7 +7,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-24
 updated: 2026-07-25
-project: Visual Engineering
+project: visual-engineering
 document_type: journal-entry
 status: working
 canonical: false
@@ -15,6 +15,12 @@ concepts:
   - research-methodology
 related_documents:
   - content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md
+purposes:
+  - verify
+  - chronicle
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Evaluation and Measurement Research Journal — Cycle 1

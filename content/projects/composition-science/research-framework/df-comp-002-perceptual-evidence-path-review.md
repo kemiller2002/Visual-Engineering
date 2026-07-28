@@ -2,12 +2,20 @@
 title: Perceptual Evidence Path Review
 id: DF-COMP-002
 document_type: research_framework
-project: Composition Science
+project: composition-science
 version: 1.0
 status: candidate
 date: 2026-07-21
 source_rep: RP-COMP-005
 related_theory: TH-COMP-005
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # DF-COMP-002 — Perceptual Evidence Path Review

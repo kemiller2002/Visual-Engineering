@@ -2,7 +2,7 @@
 title: Active Inference Composition Theory
 id: TH-COMP-005
 document_type: theory_registry
-project: Composition Science
+project: composition-science
 version: 1.0
 status: candidate
 date: 2026-07-21
@@ -10,6 +10,12 @@ confidence: Medium-High
 source_rep: RP-COMP-005
 llm_ingest: true
 machine_readable: true
+purposes:
+  - verify
+  - reference
+  - integrate
+audiences:
+  - researcher
 ---
 
 # TH-COMP-005 — Active Inference Composition Theory

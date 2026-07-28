@@ -1,3 +1,12 @@
+---
+purposes:
+  - reference
+  - integrate
+audiences:
+  - researcher
+  - contributor
+---
+
 # Evidence
 
 Generated evidence registry placeholder.

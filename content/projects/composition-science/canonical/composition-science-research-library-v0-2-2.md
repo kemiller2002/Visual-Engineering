@@ -1,5 +1,13 @@
 ---
 slug: composition-science-research-library-v0-2-2
+project: composition-science
+purposes:
+  - verify
+  - reference
+  - integrate
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Composition Science Research Library

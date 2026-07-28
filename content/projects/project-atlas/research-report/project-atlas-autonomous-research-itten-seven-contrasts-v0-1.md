@@ -1,6 +1,6 @@
 ---
 title: "Project Atlas Autonomous Research Report: Johannes Itten's Seven Color Contrasts"
-project: "Project Atlas"
+project: project-atlas
 series: "Masters vs. Modern Science"
 document_id: "CLR-MMS-003"
 version: 0.1
@@ -8,6 +8,13 @@ status: "Research Synthesis"
 date: 2026-07-19
 confidence: "Moderate to High"
 research_mode: "Autonomous repeated-cycle investigation"
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Executive Summary

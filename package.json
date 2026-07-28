@@ -12,6 +12,6 @@
     "context:pack": "npm pack --dry-run --cache /tmp/visual-engineering-npm-cache ./packages/visual-engineering-context"
   },
   "devDependencies": {
-    "research-publisher": "github:kemiller2002/research-publisher#main"
+    "research-publisher": "github:kemiller2002/research-publisher#v0.2.0"
   }
 }

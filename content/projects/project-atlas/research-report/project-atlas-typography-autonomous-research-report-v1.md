@@ -5,7 +5,7 @@ confidence: Moderate-High
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Project Atlas / Typography Genome
+project: project-atlas
 research_mode: autonomous hypothesis cycles
 status: completed research phase
 summary: >
@@ -21,6 +21,13 @@ summary: >
   networks, degradation curves, language redundancy, eye-movement adaptation,
   and task-weighted error costs.
 version: 1.0
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Executive Summary

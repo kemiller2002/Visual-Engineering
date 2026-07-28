@@ -1,3 +1,14 @@
+---
+project: project-atlas
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
+---
+
 # Project Atlas - Masters vs. Modern Science 02: Josef Albers
 
 ## Executive Summary

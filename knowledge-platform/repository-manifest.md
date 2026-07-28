@@ -1,3 +1,14 @@
+---
+project: visual-engineering-knowledge-platform
+purposes:
+  - orient
+  - integrate
+  - chronicle
+audiences:
+  - researcher
+  - contributor
+---
+
 # Repository Manifest
 
 Generated: 2026-07-22T15:10:59+00:00

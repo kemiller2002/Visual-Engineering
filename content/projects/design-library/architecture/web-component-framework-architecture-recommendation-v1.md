@@ -6,7 +6,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-22
 updated: 2026-07-22
-project: Design Library
+project: design-library
 document_type: research-report
 status: verified
 canonical: false
@@ -27,6 +27,17 @@ keywords:
   - governance
 machine_readable: true
 llm_ingest: true
+purposes:
+  - decide
+  - apply
+  - reference
+audiences:
+  - executive
+  - practitioner
+  - contributor
+entryPoint: true
+entryPointOrder: 20
+entryPointLabel: Architecture guide
 ---
 
 # Cross-Project Web Component Framework Architecture Recommendation

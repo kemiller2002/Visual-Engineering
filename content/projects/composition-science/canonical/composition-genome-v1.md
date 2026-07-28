@@ -3,7 +3,7 @@ authors:
 - Kevin Miller
 - ChatGPT
 date: 2026-07-18
-project: Composition Science
+project: composition-science
 purpose: |
   Master map of the Composition Science research program. This document
   defines the major systems, relationships, and research roadmap. It is
@@ -17,6 +17,14 @@ tags:
 - research
 title: Composition Genome v1
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Composition Genome v1

@@ -5,7 +5,7 @@ confidence: Unrated
 date: YYYY-MM-DD
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: composition-science
 purpose: |
   Brief description of why this document exists.
 references:
@@ -14,6 +14,13 @@ status: draft
 summary: |
   Optional one-paragraph executive summary.
 version: 1.0
+purposes:
+  - apply
+  - reference
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Title

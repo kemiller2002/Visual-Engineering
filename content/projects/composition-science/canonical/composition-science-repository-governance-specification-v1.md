@@ -1,3 +1,15 @@
+---
+project: composition-science
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
+---
+
 # Composition Science Repository Governance Specification
 
 ---

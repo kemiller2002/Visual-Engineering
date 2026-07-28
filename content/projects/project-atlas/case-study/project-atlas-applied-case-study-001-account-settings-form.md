@@ -1,6 +1,6 @@
 ---
 title: "Project Atlas Applied Case Study 001: Account Settings Form"
-project: "Project Atlas"
+project: project-atlas
 version: "0.1"
 status: "Applied Analysis — Working Draft"
 date: "2026-07-18"
@@ -12,6 +12,12 @@ purpose: |
   stimulus.
 llm_ingest: true
 machine_readable: true
+purposes:
+  - apply
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Project Atlas Applied Case Study 001

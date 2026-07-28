@@ -2,37 +2,64 @@
   "schemaVersion": "1.0",
   "generatedOn": "2026-07-22",
   "performance": {
-    "documentCount": 104,
-    "parseTimeMs": 1437.211458,
-    "renderTimeMs": 1596.0395,
-    "searchIndexTimeMs": 451.80658399999993,
-    "totalBuildTimeMs": 3590.194125
+    "documentCount": 117,
+    "parseTimeMs": 1428.449709,
+    "renderTimeMs": 1568.613,
+    "searchIndexTimeMs": 474.64683300000024,
+    "totalBuildTimeMs": 3580.3695
   },
   "summary": {
-    "totalDocuments": 104,
+    "totalDocuments": 117,
     "byArtifactType": {
-      "research-document": 66,
+      "research-document": 77,
       "concept": 17,
       "Architecture and Decision Framework": 1,
       "decision-framework": 2,
       "evidence": 3,
       "experiment": 3,
       "hypothesis": 2,
-      "journal-entry": 2,
+      "journal-entry": 4,
       "research-package": 7,
       "theory": 1
     },
     "byResearchArea": {
-      "General Research": 91,
+      "General Research": 103,
       "Composition Science": 1,
       "Clinical Communication Engineering": 8,
+      "color,contrast,low-vision,color-vision-deficiency": 1,
       "Project Atlas / Perceptual Measurement": 1,
       "Project Atlas / Typography Genome": 1,
       "Component Library Foundations": 1,
       "Product Genome": 1
+    },
+    "byProject": {
+      "design-library": 11,
+      "visual-engineering": 11,
+      "composition-science": 23,
+      "project-atlas": 25,
+      "visual-engineering-knowledge-platform": 10,
+      "clinical-communication-engineering": 8,
+      "beautiful-digital-experiences": 4,
+      "product-genome": 3
+    },
+    "byPurpose": {
+      "decide": 11,
+      "reference": 69,
+      "chronicle": 8,
+      "apply": 21,
+      "integrate": 72,
+      "verify": 56,
+      "reproduce": 7,
+      "orient": 31
     }
   },
   "diagnostics": [
+    {
+      "severity": "warning",
+      "code": "missing-id",
+      "sourcePath": "agent-context/AGENT-INSTRUCTIONS.md",
+      "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+    },
     {
       "severity": "warning",
       "code": "missing-id",
@@ -145,6 +172,12 @@
       "severity": "warning",
       "code": "missing-id",
       "sourcePath": "content/registries/decisions/index.md",
+      "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+    },
+    {
+      "severity": "warning",
+      "code": "missing-id",
+      "sourcePath": "agent-context/README.md",
       "message": "Compatibility mode inferred metadata because no canonical identifier was present."
     },
     {
@@ -433,6 +466,24 @@
       "severity": "warning",
       "code": "missing-id",
       "sourcePath": "content/projects/composition-science/research-note/composition-science-visual-density-crowding-and-perceptual-separation.md",
+      "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+    },
+    {
+      "severity": "warning",
+      "code": "missing-id",
+      "sourcePath": "agent-context/UI-ANTI-PATTERNS.md",
+      "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+    },
+    {
+      "severity": "warning",
+      "code": "missing-id",
+      "sourcePath": "agent-context/UI-DECISION-CHECKLIST.md",
+      "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+    },
+    {
+      "severity": "warning",
+      "code": "missing-id",
+      "sourcePath": "agent-context/UI-FOUNDATIONS.md",
       "message": "Compatibility mode inferred metadata because no canonical identifier was present."
     },
     {

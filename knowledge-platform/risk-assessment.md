@@ -1,3 +1,13 @@
+---
+project: visual-engineering-knowledge-platform
+purposes:
+  - decide
+  - verify
+audiences:
+  - executive
+  - contributor
+---
+
 # Risk Assessment
 
 Generated: 2026-07-22T15:10:59+00:00

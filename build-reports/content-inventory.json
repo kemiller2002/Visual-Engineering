@@ -2,13 +2,17 @@
   "generatedAt": "2026-07-22",
   "summary": {
     "publishable source": 117,
-    "generated output": 1,
+    "generated output": 6,
     "archived": 2,
     "intake/unprocessed": 1,
-    "ambiguous": 349,
-    "ignored": 64
+    "ambiguous": 358,
+    "ignored": 65
   },
   "records": [
+    {
+      "path": "agent-context/AGENT-INSTRUCTIONS.md",
+      "classification": "publishable source"
+    },
     {
       "path": "agent-context/README.md",
       "classification": "publishable source"
@@ -27,6 +31,26 @@
     },
     {
       "path": "build-reports/content-inventory.md",
+      "classification": "generated output"
+    },
+    {
+      "path": "build-reports/ui-context-release/visual-engineering-context-0.1.0/AGENT-INSTRUCTIONS.md",
+      "classification": "generated output"
+    },
+    {
+      "path": "build-reports/ui-context-release/visual-engineering-context-0.1.0/RESEARCH-INDEX.md",
+      "classification": "generated output"
+    },
+    {
+      "path": "build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-ANTI-PATTERNS.md",
+      "classification": "generated output"
+    },
+    {
+      "path": "build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-DECISION-CHECKLIST.md",
+      "classification": "generated output"
+    },
+    {
+      "path": "build-reports/ui-context-release/visual-engineering-context-0.1.0/UI-FOUNDATIONS.md",
       "classification": "generated output"
     },
     {
@@ -111,6 +135,22 @@
     },
     {
       "path": "content/intake-preservation.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/beautiful-digital-experiences/evidence-registry/beautiful-digital-experiences-evidence-registry-v0-1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/beautiful-digital-experiences/hypothesis-registry/beautiful-digital-experiences-hypothesis-registry-v0-1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/beautiful-digital-experiences/research-execution-package/rep-bde-0001-territory-and-evidence-foundation.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/beautiful-digital-experiences/research-journal/2026-07-26-beautiful-digital-experiences-cycle-1.md",
       "classification": "publishable source"
     },
     {
@@ -1558,6 +1598,18 @@
       "classification": "ambiguous"
     },
     {
+      "path": "node_modules/research-publisher/docs/document-purpose-taxonomy.md",
+      "classification": "ambiguous"
+    },
+    {
+      "path": "node_modules/research-publisher/docs/research-metadata-schema.md",
+      "classification": "ambiguous"
+    },
+    {
+      "path": "node_modules/research-publisher/prompts/mark-research-documents.md",
+      "classification": "ambiguous"
+    },
+    {
       "path": "node_modules/research-publisher/README.md",
       "classification": "ambiguous"
     },
@@ -1870,24 +1922,28 @@
       "classification": "ambiguous"
     },
     {
+      "path": "packages/visual-engineering-context/context/AGENT-INSTRUCTIONS.md",
+      "classification": "ambiguous"
+    },
+    {
       "path": "packages/visual-engineering-context/context/RESEARCH-INDEX.md",
-      "classification": "publishable source"
+      "classification": "ambiguous"
     },
     {
       "path": "packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md",
-      "classification": "publishable source"
+      "classification": "ambiguous"
     },
     {
       "path": "packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md",
-      "classification": "publishable source"
+      "classification": "ambiguous"
     },
     {
       "path": "packages/visual-engineering-context/context/UI-FOUNDATIONS.md",
-      "classification": "publishable source"
+      "classification": "ambiguous"
     },
     {
       "path": "packages/visual-engineering-context/README.md",
-      "classification": "publishable source"
+      "classification": "ambiguous"
     },
     {
       "path": "prompts/Clinical-Communication-Engineering-REP-Research-Agent-v2.md",
@@ -1899,6 +1955,10 @@
     },
     {
       "path": "prompts/install-research-publisher-on-existing-repo.md",
+      "classification": "ignored"
+    },
+    {
+      "path": "prompts/research-publisher-mark-documents.md",
       "classification": "ignored"
     },
     {

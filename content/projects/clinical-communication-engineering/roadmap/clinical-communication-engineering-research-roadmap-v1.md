@@ -5,13 +5,22 @@ abstract: Staged program for validating CCE foundations from cognitive fieldwork
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: research-roadmap
 researchArea: Clinical Communication Engineering
 status: proposed
 tags: [clinical-communication, roadmap, validation]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - orient
+  - decide
+  - apply
+audiences:
+  - executive
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Clinical Communication Engineering Research Roadmap

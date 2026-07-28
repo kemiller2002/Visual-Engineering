@@ -5,7 +5,7 @@ abstract: Falsifiable hypotheses for clinical communication structures, visual s
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: hypothesis-registry
 artifactType: hypothesis
 researchArea: Clinical Communication Engineering
@@ -13,6 +13,11 @@ status: active
 tags: [clinical-communication, hypotheses, falsification]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - reference
+audiences:
+  - researcher
 ---
 
 # Clinical Communication Engineering Hypothesis Registry

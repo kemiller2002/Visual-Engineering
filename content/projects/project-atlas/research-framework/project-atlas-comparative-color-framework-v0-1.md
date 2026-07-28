@@ -6,7 +6,7 @@ confidence: Moderate
 date: 2026-07-18
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: project-atlas
 purpose: |
   Compare how major disciplines define, measure, and apply color, identify
   genuine disagreements versus differences in scope, and reorganize the
@@ -33,6 +33,14 @@ summary: |
   lower-level mechanisms such as adaptation, contrast, grouping, salience,
   ecological familiarity, and learned meaning.
 version: 0.1
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Project Atlas: Comparative Color Framework

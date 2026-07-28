@@ -1,3 +1,14 @@
+---
+project: project-atlas
+purposes:
+  - orient
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
+---
+
 # Project Atlas
 
 ## Vision

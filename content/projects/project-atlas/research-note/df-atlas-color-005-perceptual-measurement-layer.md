@@ -1,7 +1,7 @@
 ---
 identifier: DF-ATLAS-COLOR-005
 title: "Atlas Perceptual Measurement Layer"
-project: "Project Atlas"
+project: project-atlas
 artifact_type: "Architecture and Decision Framework"
 version: 0.1
 date: 2026-07-21
@@ -10,6 +10,12 @@ confidence: "High for layered architecture; moderate for default metric choices"
 related_research_package: RP-ATLAS-COLOR-004
 llm_ingest: true
 machine_readable: true
+purposes:
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Purpose

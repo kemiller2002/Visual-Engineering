@@ -2,7 +2,7 @@
 title: Visual Design Research Consolidation
 id: REP-ATLAS-0004
 document_type: research_execution_package
-project: Composition Science
+project: project-atlas
 version: 1.0
 status: complete
 date: 2026-07-22
@@ -40,6 +40,17 @@ references:
   - 2026-07-21-semantic-durability-research-execution-package.md
   - product-genome-project-atlas-v1.md
   - product-genome-research-execution-package-run-02.md
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
+entryPoint: true
+entryPointOrder: 10
+entryPointLabel: Current synthesis
 ---
 
 # Visual Design Research Consolidation

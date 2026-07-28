@@ -1,0 +1,286 @@
+{
+  "schemaVersion": "1.0",
+  "generatedOn": "2026-07-27",
+  "projects": {
+    "beautiful-digital-experiences": [
+      {
+        "id": "REP-BDE-0001",
+        "title": "Beautiful Digital Experiences — Territory and Evidence Foundation",
+        "summary": "",
+        "url": "/Visual-Engineering/research/rep-bde-0001-beautiful-digital-experiences-territory-and-evidence-foundation/",
+        "artifactType": "research-document",
+        "project": "beautiful-digital-experiences",
+        "researchArea": "General Research",
+        "status": "active-research-package",
+        "updated": "2026-07-26",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Start here",
+        "order": 10
+      }
+    ],
+    "clinical-communication-engineering": [
+      {
+        "id": "RP-CCE-0001",
+        "title": "Clinical Communication Engineering Foundation Research Execution Package",
+        "summary": "",
+        "url": "/Visual-Engineering/research/rp-cce-0001-clinical-communication-engineering-foundation-research-execution-package/",
+        "artifactType": "research-package",
+        "project": "clinical-communication-engineering",
+        "researchArea": "Clinical Communication Engineering",
+        "status": "research-baseline",
+        "updated": "2026-07-22",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Start here",
+        "order": 10
+      },
+      {
+        "id": "STD-CCE-0001",
+        "title": "Clinical Communication Engineering Foundation Standard",
+        "summary": "",
+        "url": "/Visual-Engineering/research/std-cce-0001-clinical-communication-engineering-foundation-standard/",
+        "artifactType": "research-document",
+        "project": "clinical-communication-engineering",
+        "researchArea": "Clinical Communication Engineering",
+        "status": "proposed",
+        "updated": "2026-07-22",
+        "purposes": [
+          "apply",
+          "reference"
+        ],
+        "audiences": [
+          "practitioner",
+          "contributor"
+        ],
+        "entryPointLabel": "Practical standard",
+        "order": 20
+      }
+    ],
+    "composition-science": [
+      {
+        "id": "GOV-001",
+        "title": "Composition Science Project Constitution",
+        "summary": "",
+        "url": "/Visual-Engineering/research/gov-001-composition-science-project-constitution/",
+        "artifactType": "research-document",
+        "project": "composition-science",
+        "researchArea": "General Research",
+        "status": "approved",
+        "updated": "2026-07-22",
+        "purposes": [
+          "orient",
+          "reference"
+        ],
+        "audiences": [
+          "practitioner",
+          "researcher",
+          "contributor"
+        ],
+        "entryPointLabel": "Project foundation",
+        "order": 10
+      },
+      {
+        "id": null,
+        "title": "Composition Science Research Library",
+        "summary": "",
+        "url": "/Visual-Engineering/research/composition-science-research-library-v0-4/",
+        "artifactType": "research-document",
+        "project": "composition-science",
+        "researchArea": "General Research",
+        "status": "draft",
+        "updated": "2026-07-22",
+        "purposes": [
+          "verify",
+          "reference",
+          "integrate"
+        ],
+        "audiences": [
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Evidence library",
+        "order": 20
+      }
+    ],
+    "design-library": [
+      {
+        "id": null,
+        "title": "Component Library Foundations Research Report",
+        "summary": "The evidence supports a hybrid, native-first component library rather than a\nweb-component-only architecture. Semantic HTML can remain relatively stable\nacross substantial visual redesign, but only when markup represents durable\ninformation relationships rather than current visual groupings. Different\ncategories require different ownership and encapsulation strategies. Native\ncontrols should remain native unless measurable requirements cannot be met;\nlight DOM is favored for content-rich, composition-sensitive structures;\nShadow DOM is favored for tightly bounded behavioral widgets whose internal\ninvariants require protection. CSS should own presentation and contextual\nlayout, while component logic owns only intrinsic behavior and state. Design\ntokens should encode decisions through a layered dependency model, but must\nnot become a universal escape-hatch API. Implementation should begin only\nafter a small set of targeted validation experiments confirms these rules in\nthe project’s actual product contexts.",
+        "url": "/Visual-Engineering/research/component-library-foundations-research-report/",
+        "artifactType": "research-document",
+        "project": "design-library",
+        "researchArea": "General Research",
+        "status": "research-baseline",
+        "updated": "2026-07-22",
+        "purposes": [
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Research foundation",
+        "order": 10
+      },
+      {
+        "id": "ARC-WC-0001",
+        "title": "Cross-Project Web Component Framework Architecture Recommendation",
+        "summary": "",
+        "url": "/Visual-Engineering/research/arc-wc-0001-cross-project-web-component-framework-architecture-recommendation/",
+        "artifactType": "research-document",
+        "project": "design-library",
+        "researchArea": "General Research",
+        "status": "verified",
+        "updated": "2026-07-22",
+        "purposes": [
+          "decide",
+          "apply",
+          "reference"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "contributor"
+        ],
+        "entryPointLabel": "Architecture guide",
+        "order": 20
+      },
+      {
+        "id": "CHK-WC-0001",
+        "title": "Web Component Framework Implementation Readiness Checklist",
+        "summary": "",
+        "url": "/Visual-Engineering/research/chk-wc-0001-web-component-framework-implementation-readiness-checklist/",
+        "artifactType": "research-document",
+        "project": "design-library",
+        "researchArea": "General Research",
+        "status": "verified",
+        "updated": "2026-07-22",
+        "purposes": [
+          "apply",
+          "reference"
+        ],
+        "audiences": [
+          "practitioner",
+          "contributor"
+        ],
+        "entryPointLabel": "Implementation checklist",
+        "order": 30
+      }
+    ],
+    "product-genome": [
+      {
+        "id": null,
+        "title": "Product Genome: Project Atlas Research Framework",
+        "summary": "Product design is treated here as the design of sustained physical interaction between humans, objects, systems, and environments. The Product Genome will not begin as a catalog of famous designers or stylistic movements. It will identify recurring variables, constraints, interaction patterns, and perceptual effects, then map how individual designers and product categories weight those variables differently. The goal is to distinguish biological and functional regularities from cultural conventions, manufacturing artifacts, brand language, and temporary fashion.",
+        "url": "/Visual-Engineering/research/product-genome-project-atlas-research-framework/",
+        "artifactType": "research-document",
+        "project": "product-genome",
+        "researchArea": "General Research",
+        "status": "active",
+        "updated": "2026-07-22",
+        "purposes": [
+          "orient",
+          "integrate",
+          "reference"
+        ],
+        "audiences": [
+          "practitioner",
+          "researcher",
+          "contributor"
+        ],
+        "entryPointLabel": "Start here",
+        "order": 10
+      }
+    ],
+    "project-atlas": [
+      {
+        "id": "REP-ATLAS-0004",
+        "title": "Visual Design Research Consolidation",
+        "summary": "",
+        "url": "/Visual-Engineering/research/rep-atlas-0004-visual-design-research-consolidation/",
+        "artifactType": "research-document",
+        "project": "project-atlas",
+        "researchArea": "General Research",
+        "status": "complete",
+        "updated": "2026-07-22",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Current synthesis",
+        "order": 10
+      }
+    ],
+    "visual-engineering": [
+      {
+        "id": null,
+        "title": "Visual Engineering UI Foundations",
+        "summary": "",
+        "url": "/Visual-Engineering/research/visual-engineering-ui-foundations/",
+        "artifactType": "research-document",
+        "project": "visual-engineering",
+        "researchArea": "General Research",
+        "status": "draft",
+        "updated": "2026-07-22",
+        "purposes": [
+          "apply",
+          "reference"
+        ],
+        "audiences": [
+          "practitioner",
+          "contributor"
+        ],
+        "entryPointLabel": "Practical guide",
+        "order": 10
+      },
+      {
+        "id": "REP-VE-EVL-001",
+        "title": "Evaluation, Measurement, and Experimentation Foundation and Falsification",
+        "summary": "",
+        "url": "/Visual-Engineering/research/rep-ve-evl-001-evaluation-measurement-and-experimentation-foundation-and-falsification/",
+        "artifactType": "research-document",
+        "project": "visual-engineering",
+        "researchArea": "General Research",
+        "status": "active-research-package",
+        "updated": "2026-07-25",
+        "purposes": [
+          "orient",
+          "integrate",
+          "verify"
+        ],
+        "audiences": [
+          "executive",
+          "practitioner",
+          "researcher"
+        ],
+        "entryPointLabel": "Measurement foundation",
+        "order": 20
+      }
+    ]
+  }
+}

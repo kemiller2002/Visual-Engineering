@@ -1,6 +1,6 @@
 ---
 title: "Project Atlas Rosetta Stone: Cross-System Design Mechanism Map"
-project: "Project Atlas"
+project: project-atlas
 version: "0.1"
 status: "Initial Verified Crosswalk"
 date: "2026-07-18"
@@ -20,6 +20,13 @@ purpose: |
   superficial similarity.
 llm_ingest: true
 machine_readable: true
+purposes:
+  - apply
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Project Atlas Rosetta Stone

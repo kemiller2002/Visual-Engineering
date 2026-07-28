@@ -55,6 +55,14 @@ summary: |
   measured outcome is sensitive to the cost being reduced. Atlas should therefore
   model typography as a personalized adaptive control problem rather than search for
   one universally optimal typeface.
+project: project-atlas
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Research State Snapshot

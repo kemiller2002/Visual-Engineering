@@ -1,6 +1,6 @@
 ---
 title: "Project Atlas Foundational Documents and Evidence Collection 001: Microsoft Ribbon"
-project: "Project Atlas"
+project: project-atlas
 version: "0.1"
 status: "Verified Source Register and Applied Evidence Review"
 date: "2026-07-18"
@@ -18,6 +18,12 @@ purpose: |
   through an Atlas evidence framework.
 llm_ingest: true
 machine_readable: true
+purposes:
+  - verify
+  - reference
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Project Atlas Foundational Documents and Evidence Collection 001

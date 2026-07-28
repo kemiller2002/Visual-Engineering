@@ -2,10 +2,18 @@
 date: 2026-07-18
 document_type: ontology
 id: ONT-001
-project: Composition Science
+project: composition-science
 status: working
 title: Composition Science Ontology
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Composition Science Ontology v1

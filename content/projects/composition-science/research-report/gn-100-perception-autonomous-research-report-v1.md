@@ -2,7 +2,7 @@
 title: "Autonomous Research Report: Perception as the Foundation of Composition"
 id: "RPT-GN100-001"
 document_type: "research_report"
-project: "Composition Science"
+project: composition-science
 version: "1.0"
 status: "working"
 date: "2026-07-19"
@@ -28,6 +28,13 @@ evidence_level: "A-C"
 tags: [visual-perception, grouping, crowding, visual-search, working-memory, composition, autonomous-research]
 llm_ingest: true
 machine_readable: true
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Executive Summary

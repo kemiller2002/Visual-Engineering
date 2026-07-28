@@ -5,7 +5,7 @@ abstract: Component contracts, wireframes, high-fidelity visual tokens, anti-pat
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: design-specification
 researchArea: Clinical Communication Engineering
 status: proposed
@@ -13,6 +13,12 @@ version: 0.1
 tags: [clinical-communication, wireframes, components, anti-patterns]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - apply
+  - reference
+audiences:
+  - practitioner
+  - contributor
 ---
 
 # Clinical Communication Design System and Prototype Specifications

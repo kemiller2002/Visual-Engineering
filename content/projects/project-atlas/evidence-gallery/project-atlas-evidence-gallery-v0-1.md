@@ -1,3 +1,13 @@
+---
+project: project-atlas
+purposes:
+  - verify
+  - reference
+audiences:
+  - practitioner
+  - researcher
+---
+
 # Project Atlas – Evidence Gallery v0.1
 
 ## Purpose

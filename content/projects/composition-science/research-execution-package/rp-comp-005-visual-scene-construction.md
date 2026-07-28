@@ -2,7 +2,7 @@
 title: Visual Scene Construction, Predictive Processing, and Active Perception
 id: RP-COMP-005
 document_type: research_execution_package
-project: Composition Science
+project: composition-science
 version: 1.0
 status: complete
 date: 2026-07-21
@@ -29,6 +29,13 @@ related_artifacts:
   - DF-COMP-002
   - EX-COMP-011
   - EX-COMP-012
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # RP-COMP-005 — Visual Scene Construction, Predictive Processing, and Active Perception

@@ -2,6 +2,12 @@
   {
     "severity": "warning",
     "code": "missing-id",
+    "sourcePath": "agent-context/AGENT-INSTRUCTIONS.md",
+    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
+  },
+  {
+    "severity": "warning",
+    "code": "missing-id",
     "sourcePath": "content/projects/composition-science/research-note/architecture-as-a-foundation-for-composition-science.md",
     "message": "Compatibility mode inferred metadata because no canonical identifier was present."
   },
@@ -105,12 +111,6 @@
     "severity": "warning",
     "code": "missing-id",
     "sourcePath": "content/concepts/composition/index.md",
-    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "warning",
-    "code": "missing-id",
-    "sourcePath": "packages/visual-engineering-context/context/RESEARCH-INDEX.md",
     "message": "Compatibility mode inferred metadata because no canonical identifier was present."
   },
   {
@@ -416,26 +416,8 @@
   {
     "severity": "warning",
     "code": "missing-id",
-    "sourcePath": "packages/visual-engineering-context/README.md",
-    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "warning",
-    "code": "missing-id",
     "sourcePath": "agent-context/UI-ANTI-PATTERNS.md",
     "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "warning",
-    "code": "missing-id",
-    "sourcePath": "packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md",
-    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "error",
-    "code": "duplicate-url",
-    "sourcePath": "packages/visual-engineering-context/context/UI-ANTI-PATTERNS.md",
-    "message": "Duplicate output URL /research/visual-engineering-ui-anti-patterns/."
   },
   {
     "severity": "warning",
@@ -446,32 +428,8 @@
   {
     "severity": "warning",
     "code": "missing-id",
-    "sourcePath": "packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md",
-    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "error",
-    "code": "duplicate-url",
-    "sourcePath": "packages/visual-engineering-context/context/UI-DECISION-CHECKLIST.md",
-    "message": "Duplicate output URL /research/visual-engineering-ui-decision-checklist/."
-  },
-  {
-    "severity": "warning",
-    "code": "missing-id",
     "sourcePath": "agent-context/UI-FOUNDATIONS.md",
     "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "warning",
-    "code": "missing-id",
-    "sourcePath": "packages/visual-engineering-context/context/UI-FOUNDATIONS.md",
-    "message": "Compatibility mode inferred metadata because no canonical identifier was present."
-  },
-  {
-    "severity": "error",
-    "code": "duplicate-url",
-    "sourcePath": "packages/visual-engineering-context/context/UI-FOUNDATIONS.md",
-    "message": "Duplicate output URL /research/visual-engineering-ui-foundations/."
   },
   {
     "severity": "warning",

@@ -1,6 +1,6 @@
 ---
 title: "Masters vs. Modern Science 01: Michel-Eugène Chevreul"
-project: "Project Atlas"
+project: project-atlas
 series: "Masters vs. Modern Science"
 document_id: "CLR-MMS-001"
 version: 0.1
@@ -36,6 +36,13 @@ references:
   - https://cie.co.at/publications/cie-2016-colour-appearance-model-colour-management-systems-ciecam16
   - https://files.cie.co.at/x046_2019/x046-OP06.pdf
   - https://direct.mit.edu/posc/article/33/3/323/128321/Michel-Eugene-Chevreul-and-the-Phenomenology-of
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Masters vs. Modern Science 01: Michel-Eugène Chevreul

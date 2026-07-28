@@ -1,3 +1,13 @@
+---
+project: visual-engineering-knowledge-platform
+purposes:
+  - orient
+  - decide
+  - apply
+audiences:
+  - contributor
+---
+
 # Migration Plan
 
 Generated: 2026-07-22T15:10:59+00:00

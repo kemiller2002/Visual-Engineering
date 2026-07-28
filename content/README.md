@@ -1,3 +1,12 @@
+---
+project: visual-engineering
+purposes:
+  - orient
+  - reference
+audiences:
+  - contributor
+---
+
 # Structured Content Layer
 
 This directory is the canonical structured content layer for processed research artifacts.

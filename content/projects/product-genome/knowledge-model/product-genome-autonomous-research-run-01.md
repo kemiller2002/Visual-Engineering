@@ -6,7 +6,7 @@ confidence: Moderate
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: product-genome
 purpose: |
   Conduct the first autonomous evidence-driven investigation of the Product Genome branch of Project Atlas. The report tests whether recurring ideas associated with Dieter Rams, Richard Sapper, affordance theory, physical feedback, simplicity, repairability, and emotional durability can be converted into defensible and predictive product-design principles.
 references:
@@ -22,6 +22,13 @@ status: active
 summary: |
   This research run rejects minimalism as a universal product-design law and replaces it with a stronger model: products should minimize unnecessary interaction cost while preserving the complexity required by capability, safety, expertise, and context. The most defensible cross-domain principles concern compatibility between controls and user expectations, perceptible action possibilities, closed feedback loops, biomechanical fit, error-resistant constraints, and support for maintenance over time. Rams and Sapper are best understood not as opposing aesthetics but as different strategies for managing complexity. Rams tends to externalize order and suppress nonessential signals; Sapper often internalizes technical complexity while preserving direct manipulation and mechanical intelligibility. Repairability and emotional durability appear related to product lifetime, but current evidence does not justify treating either as independently sufficient. The report proposes a Product Legibility Model and a Complexity Allocation Model for future testing.
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - verify
+audiences:
+  - practitioner
+  - researcher
 ---
 
 # Product Genome Autonomous Research Report: Run 01

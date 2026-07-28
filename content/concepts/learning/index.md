@@ -1,3 +1,14 @@
+---
+purposes:
+  - reference
+  - integrate
+audiences:
+  - general
+  - practitioner
+  - researcher
+  - contributor
+---
+
 # Learning
 
 Canonical concept stub generated from repository inventory.

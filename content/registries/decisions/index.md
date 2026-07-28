@@ -1,3 +1,12 @@
+---
+purposes:
+  - reference
+  - integrate
+audiences:
+  - researcher
+  - contributor
+---
+
 # Decisions
 
 Generated decision registry placeholder.

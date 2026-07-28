@@ -18,7 +18,7 @@ priority: Critical
 date: 2026-07-21
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: product-genome
 related_projects:
   - Project Atlas
   - Product Genome
@@ -51,6 +51,14 @@ purpose: |
 summary: |
   Product Legibility can be measured, but not responsibly as a context-free aesthetic score. The evidence supports a task-, population-, and environment-specific profile built from six gates: action possibility, discoverability, interpretability, executability, feedback closure, and consequence comprehension. A single average is unsafe because severe failure in one critical dimension can be concealed by strength elsewhere. This REP replaces the proposed additive score with a gated measurement architecture, distinguishes diagnostic metrics from outcome metrics, and provides a repeatable Product Legibility Evaluation Protocol. It also finds that classic predictive laws such as Fitts' and Hick's are useful locally but cannot serve as universal product-quality laws without checking their assumptions.
 version: 1.0
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Operationalizing Product Legibility

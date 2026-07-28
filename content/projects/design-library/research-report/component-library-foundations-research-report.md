@@ -5,7 +5,7 @@ confidence: Moderate
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Design Library
+project: design-library
 purpose: |
   Establish the evidence-backed architectural foundation upon which a long-lived,
   highly redesignable web component library should later be implemented.
@@ -31,6 +31,16 @@ summary: |
   after a small set of targeted validation experiments confirms these rules in
   the project’s actual product contexts.
 version: 0.1
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
+entryPoint: true
+entryPointOrder: 10
+entryPointLabel: Research foundation
 ---
 
 # Component Library Foundations Research Report

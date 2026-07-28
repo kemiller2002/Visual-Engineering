@@ -7,7 +7,7 @@ authors:
   - OpenAI Codex
 created: 2026-07-25
 updated: 2026-07-25
-project: Visual Engineering
+project: visual-engineering
 document_type: audit
 status: working-draft
 confidence: medium
@@ -23,6 +23,12 @@ tags:
   - replication
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - reproduce
+audiences:
+  - researcher
+  - contributor
 ---
 
 # Visual Engineering Measurement Audit v0.1

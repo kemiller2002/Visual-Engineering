@@ -1,3 +1,13 @@
+---
+project: project-atlas
+purposes:
+  - reference
+  - reproduce
+audiences:
+  - researcher
+  - contributor
+---
+
 # Project Atlas -- Research Methodology v0.2
 
 ## Strategic Direction

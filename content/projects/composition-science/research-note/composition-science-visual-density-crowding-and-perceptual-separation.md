@@ -5,7 +5,7 @@ confidence: Medium-High
 date: 2026-07-19
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: composition-science
 purpose: |
   Investigate visual density, crowding, and perceptual separation to determine
   whether Composition Science can produce quantitative, predictive spacing laws.
@@ -28,6 +28,13 @@ summary: |
   viewing time, and observer capability. The report proposes a Perceptual Separation
   Envelope and a practical design-testing protocol rather than a universal pixel rule.
 version: 1.0
+purposes:
+  - integrate
+  - verify
+audiences:
+  - executive
+  - practitioner
+  - researcher
 ---
 
 # Visual Density, Crowding, and Perceptual Separation

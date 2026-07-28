@@ -1,3 +1,16 @@
+---
+project: project-atlas
+purposes:
+  - orient
+  - decide
+  - apply
+audiences:
+  - executive
+  - practitioner
+  - researcher
+  - contributor
+---
+
 # Project Atlas -- Foundation Research Plan
 
 ## Core Insight

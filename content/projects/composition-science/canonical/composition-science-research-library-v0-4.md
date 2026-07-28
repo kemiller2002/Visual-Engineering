@@ -1,5 +1,16 @@
 ---
 slug: composition-science-research-library-v0-4
+project: composition-science
+purposes:
+  - verify
+  - reference
+  - integrate
+audiences:
+  - practitioner
+  - researcher
+entryPoint: true
+entryPointOrder: 20
+entryPointLabel: Evidence library
 ---
 
 # Composition Science Research Library

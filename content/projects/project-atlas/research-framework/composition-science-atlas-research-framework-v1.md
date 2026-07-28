@@ -12,7 +12,7 @@ priority: Critical
 date: 2026-07-21
 llm_ingest: true
 machine_readable: true
-project: Composition Science
+project: composition-science
 purpose: |
   Define the canonical method by which evidence from different disciplines is collected,
   evaluated, translated, compared, and incorporated into the Composition Science knowledge system.
@@ -48,6 +48,14 @@ keywords:
   - contradiction
   - composition genome
   - research workflow
+purposes:
+  - orient
+  - integrate
+  - reference
+audiences:
+  - practitioner
+  - researcher
+  - contributor
 ---
 
 # Composition Science Atlas Research Framework

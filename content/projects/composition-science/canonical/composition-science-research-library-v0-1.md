@@ -1,3 +1,14 @@
+---
+project: composition-science
+purposes:
+  - verify
+  - reference
+  - integrate
+audiences:
+  - practitioner
+  - researcher
+---
+
 # Composition Science Research Library
 
 Version: 0.1 (Working Draft)

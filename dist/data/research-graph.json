@@ -10,6 +10,14 @@
       "sourcePath": "content/projects/design-library/decision-record/web-component-framework-adrs-v1.md"
     },
     {
+      "id": "agent-instructions",
+      "title": "Agent Instructions",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/agent-instructions/",
+      "researchArea": "General Research",
+      "sourcePath": "agent-context/AGENT-INSTRUCTIONS.md"
+    },
+    {
       "id": "ARC-WC-0001",
       "title": "Cross-Project Web Component Framework Architecture Recommendation",
       "artifactType": "research-document",
@@ -48,6 +56,14 @@
       "url": "/Visual-Engineering/research/attention/",
       "researchArea": "General Research",
       "sourcePath": "content/concepts/attention/index.md"
+    },
+    {
+      "id": "AUD-VE-EVL-001",
+      "title": "Visual Engineering Measurement Audit v0.1",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/aud-ve-evl-001-visual-engineering-measurement-audit-v0-1/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/evaluation-measurement/audit/visual-engineering-measurement-audit-v0-1.md"
     },
     {
       "id": "build-pipeline",
@@ -202,6 +218,14 @@
       "sourcePath": "content/projects/project-atlas/research-framework/composition-science-atlas-research-framework-v1.md"
     },
     {
+      "id": "distributing-visual-engineering-ui-context",
+      "title": "Distributing Visual Engineering UI Context",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/distributing-visual-engineering-ui-context/",
+      "researchArea": "General Research",
+      "sourcePath": "agent-context/README.md"
+    },
+    {
       "id": "DSP-CCE-0001",
       "title": "Clinical Communication Design System and Prototype Specifications",
       "artifactType": "research-document",
@@ -240,6 +264,14 @@
       "url": "/Visual-Engineering/research/evr-wc-0001-web-component-framework-evidence-registry/",
       "researchArea": "General Research",
       "sourcePath": "content/projects/design-library/evidence-registry/web-component-framework-evidence-registry-v1.md"
+    },
+    {
+      "id": "EVREG-BDE-001",
+      "title": "Beautiful Digital Experiences Evidence Registry",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/evreg-bde-001-beautiful-digital-experiences-evidence-registry/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/beautiful-digital-experiences/evidence-registry/beautiful-digital-experiences-evidence-registry-v0-1.md"
     },
     {
       "id": "EX-COMP-011",
@@ -330,6 +362,14 @@
       "sourcePath": "content/projects/design-library/hypothesis-registry/web-component-framework-hypothesis-registry-v1.md"
     },
     {
+      "id": "HYREG-BDE-001",
+      "title": "Beautiful Digital Experiences Hypothesis Registry",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/hyreg-bde-001-beautiful-digital-experiences-hypothesis-registry/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/beautiful-digital-experiences/hypothesis-registry/beautiful-digital-experiences-hypothesis-registry-v0-1.md"
+    },
+    {
       "id": "implementation-roadmap",
       "title": "Implementation Roadmap",
       "artifactType": "research-document",
@@ -362,12 +402,28 @@
       "sourcePath": "content/projects/composition-science/research-note/intuitive-is-just-familiar-predictive-fit-rep-v2.md"
     },
     {
+      "id": "JR-BDE-001",
+      "title": "Beautiful Digital Experiences Research Journal — Cycle 1",
+      "artifactType": "journal-entry",
+      "url": "/Visual-Engineering/research/jr-bde-001-beautiful-digital-experiences-research-journal-cycle-1/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/beautiful-digital-experiences/research-journal/2026-07-26-beautiful-digital-experiences-cycle-1.md"
+    },
+    {
       "id": "JR-CCE-0001",
       "title": "Clinical Communication Engineering Research Journal — Cycle 1",
       "artifactType": "journal-entry",
       "url": "/Visual-Engineering/research/jr-cce-0001-clinical-communication-engineering-research-journal-cycle-1/",
       "researchArea": "Clinical Communication Engineering",
       "sourcePath": "content/projects/clinical-communication-engineering/research-journal/2026-07-22-clinical-communication-engineering-research-journal.md"
+    },
+    {
+      "id": "JR-VE-EVL-001",
+      "title": "Evaluation and Measurement Research Journal — Cycle 1",
+      "artifactType": "journal-entry",
+      "url": "/Visual-Engineering/research/jr-ve-evl-001-evaluation-and-measurement-research-journal-cycle-1/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md"
     },
     {
       "id": "JR-WC-0001",
@@ -626,6 +682,30 @@
       "sourcePath": "content/projects/project-atlas/research-execution-package/rep-atlas-0004-visual-design-research-consolidation.md"
     },
     {
+      "id": "REP-BDE-0001",
+      "title": "Beautiful Digital Experiences — Territory and Evidence Foundation",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rep-bde-0001-beautiful-digital-experiences-territory-and-evidence-foundation/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/beautiful-digital-experiences/research-execution-package/rep-bde-0001-territory-and-evidence-foundation.md"
+    },
+    {
+      "id": "REP-VE-COL-001",
+      "title": "Color, Contrast, Low Vision, and Color-Vision Deficiency",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rep-ve-col-001-color-contrast-low-vision-and-color-vision-deficiency/",
+      "researchArea": "color,contrast,low-vision,color-vision-deficiency",
+      "sourcePath": "content/projects/project-atlas/research-execution-package/rep-ve-col-001-color-contrast-low-vision-and-color-vision-deficiency.md"
+    },
+    {
+      "id": "REP-VE-EVL-001",
+      "title": "Evaluation, Measurement, and Experimentation Foundation and Falsification",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rep-ve-evl-001-evaluation-measurement-and-experimentation-foundation-and-falsification/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md"
+    },
+    {
       "id": "repository-architecture",
       "title": "Repository Architecture",
       "artifactType": "research-document",
@@ -810,6 +890,30 @@
       "sourcePath": "content/projects/composition-science/research-note/composition-science-visual-density-crowding-and-perceptual-separation.md"
     },
     {
+      "id": "visual-engineering-ui-anti-patterns",
+      "title": "Visual Engineering UI Anti-Patterns",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/visual-engineering-ui-anti-patterns/",
+      "researchArea": "General Research",
+      "sourcePath": "agent-context/UI-ANTI-PATTERNS.md"
+    },
+    {
+      "id": "visual-engineering-ui-decision-checklist",
+      "title": "Visual Engineering UI Decision Checklist",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/visual-engineering-ui-decision-checklist/",
+      "researchArea": "General Research",
+      "sourcePath": "agent-context/UI-DECISION-CHECKLIST.md"
+    },
+    {
+      "id": "visual-engineering-ui-foundations",
+      "title": "Visual Engineering UI Foundations",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/visual-engineering-ui-foundations/",
+      "researchArea": "General Research",
+      "sourcePath": "agent-context/UI-FOUNDATIONS.md"
+    },
+    {
       "id": "visual-information-transfer-foundations-for-the-typography-genome",
       "title": "Visual Information Transfer: Foundations for the Typography Genome",
       "artifactType": "research-document",
@@ -868,11 +972,13 @@
   ],
   "backlinks": {
     "ADR-WC-INDEX-0001": [],
+    "agent-instructions": [],
     "ARC-WC-0001": [],
     "architecture-as-a-foundation-for-composition-science": [],
     "architecture": [],
     "atlas-0001-proximity-and-relative-separation": [],
     "attention": [],
+    "AUD-VE-EVL-001": [],
     "build-pipeline": [],
     "CHK-WC-0001": [],
     "cognition": [],
@@ -892,6 +998,7 @@
     "DF-ATLAS-COLOR-005": [],
     "DF-COMP-002": [],
     "DF-CS-ATLAS-001": [],
+    "distributing-visual-engineering-ui-context": [],
     "DSP-CCE-0001": [
       "RP-CCE-0001"
     ],
@@ -901,6 +1008,7 @@
       "RP-CCE-0001"
     ],
     "EVR-WC-0001": [],
+    "EVREG-BDE-001": [],
     "EX-COMP-011": [],
     "EX-COMP-012": [],
     "EX-WC-0001": [],
@@ -914,11 +1022,14 @@
       "RP-CCE-0001"
     ],
     "HYR-WC-0001": [],
+    "HYREG-BDE-001": [],
     "implementation-roadmap": [],
     "intake-preservation": [],
     "intuitive-is-just-familiar-research-report": [],
     "intuitive-is-just-familiar": [],
+    "JR-BDE-001": [],
     "JR-CCE-0001": [],
+    "JR-VE-EVL-001": [],
     "JR-WC-0001": [],
     "knowledge-genome": [],
     "knowledge-graph": [],
@@ -953,6 +1064,9 @@
     ],
     "REP-ATLAS-0002": [],
     "REP-ATLAS-0004": [],
+    "REP-BDE-0001": [],
+    "REP-VE-COL-001": [],
+    "REP-VE-EVL-001": [],
     "repository-architecture": [],
     "repository-manifest": [],
     "research-methodology": [],
@@ -980,6 +1094,9 @@
     "title": [],
     "typography": [],
     "visual-density-crowding-and-perceptual-separation": [],
+    "visual-engineering-ui-anti-patterns": [],
+    "visual-engineering-ui-decision-checklist": [],
+    "visual-engineering-ui-foundations": [],
     "visual-information-transfer-foundations-for-the-typography-genome": [],
     "wayfinding": [],
     "website-architecture": []

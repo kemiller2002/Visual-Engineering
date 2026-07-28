@@ -1,3 +1,13 @@
+---
+project: visual-engineering
+purposes:
+  - orient
+  - apply
+audiences:
+  - practitioner
+  - contributor
+---
+
 # Distributing Visual Engineering UI Context
 
 The files in this directory are the maintained operational synthesis. The package build combines them with a generated, source-linked index of current research.

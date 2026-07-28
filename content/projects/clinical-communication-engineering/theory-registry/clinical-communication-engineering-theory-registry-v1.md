@@ -5,13 +5,19 @@ abstract: Initial theory of clinical communication as a safety-critical transfor
 authors: [OpenAI Codex]
 created: 2026-07-22
 updated: 2026-07-22
-project: Clinical Communication Engineering
+project: clinical-communication-engineering
 document_type: theory-registry
 researchArea: Clinical Communication Engineering
 status: proposed
 tags: [clinical-communication, theory, situation-awareness]
 machine_readable: true
 llm_ingest: true
+purposes:
+  - verify
+  - reference
+  - integrate
+audiences:
+  - researcher
 ---
 
 # Clinical Communication Engineering Theory Registry
