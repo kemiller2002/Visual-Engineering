@@ -1,10 +1,10 @@
 {
   "metadata": {
-    "generated": "2026-07-28T21:32:53.497Z",
+    "generated": "2026-07-28",
     "seed": 20260728,
     "execution_class": "deterministic computational pilot",
     "warning": "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",
-    "script_sha256": "313aaa2829cb08dfa82186f6c0aaf42a7b8b3c0b0ecb8eb9e69796646d496348"
+    "script_sha256": "e6f6ebae61ef8a1ff13c657b11d16b11f3981bb85a2040861e0bdf4b16d69996"
   },
   "experiments": [
     {

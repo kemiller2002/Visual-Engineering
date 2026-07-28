@@ -75,7 +75,7 @@ const deutan = [[.367322,.860646,-.227968],[.280085,.672501,.047413],[-.01182,.0
 const tritan = [[1.255528,-.076749,-.178779],[-.078411,.930809,.147602],[.004733,.691367,.3039]];
 
 const metadata = {
-  generated: new Date().toISOString(),
+  generated: "2026-07-28",
   seed,
   execution_class: "deterministic computational pilot",
   warning: "No human participants or physical display measurements. Outputs validate analysis pipelines and generate predictions; they are not psychophysical findings.",

@@ -21,6 +21,7 @@ concepts:
   - human-factors
 related_documents:
   - ../evidence-registry/itten-color-evidence-registry-v1.md
+  - ../experiment-report/README.md
   - ../machine-readable/principles.json
   - ../machine-readable/claim-evidence-index.json
   - ../machine-readable/confidence-matrix.json
@@ -429,24 +430,37 @@ representative participants using a task-level acceptance criterion defined befo
 test. No universal ΔE threshold is specified here because threshold depends on model,
 stimulus, size, surround, duration, observer, and decision cost.
 
-## Research gaps and proposed experiments
+## Research gaps and experiment program
 
-1. **Itten extension ratios.** Preregister a factorial study varying area, luminance,
+All eight experiments below now have reproducible computational/planning pilots,
+individual result reports, continuation state, and executable protocols. This does not
+mean the empirical experiments are complete: no human participants or physical devices
+have been measured. See the [experiment program](../experiment-report/README.md).
+
+1. **Itten extension ratios — computational pilot complete, human study pending.**
+   Preregister a factorial study varying area, luminance,
    chroma, position, and semantic content; measure balance ratings separately from gaze
    and task priority.
-2. **Contextual token robustness.** Compare isolated-space distance, CAM16-UCS, spatial
+2. **Contextual token robustness — metric baseline complete, human study pending.**
+   Compare isolated-space distance, CAM16-UCS, spatial
    models, and human discrimination across real component surrounds.
-3. **HDR interface adaptation.** Measure search, legibility, discomfort, and recovery
+3. **HDR interface adaptation — recovery simulation complete, apparatus study pending.**
+   Measure search, legibility, discomfort, and recovery
    after transient highlights across field size and ambient levels.
-4. **CVD and aging intersection.** Test redundant encodings with older protan/deutan
+4. **CVD and aging intersection — simulation audit complete, representative study pending.**
+   Test redundant encodings with older protan/deutan
    observers rather than extrapolating from young normal trichromats or simulations.
-5. **Warm/cool transfer.** Run multilingual, climate-stratified experiments separating
+5. **Warm/cool transfer — power scaffold complete, multi-site study pending.**
+   Run multilingual, climate-stratified experiments separating
    thermal prediction, affect, distance, urgency, and preference.
-6. **OLED/LCD equivalence.** Match colorimetry while varying spectra, black level,
+6. **OLED/LCD equivalence — parameter sweep complete, device study pending.**
+   Match colorimetry while varying spectra, black level,
    viewing angle, local dimming, and temporal modulation to isolate causal variables.
-7. **Peripheral chromatic UI cues.** Establish size/contrast thresholds for alerts
+7. **Peripheral chromatic UI cues — sensitivity proxy complete, gaze study pending.**
+   Establish size/contrast thresholds for alerts
    under divided attention and realistic motion.
-8. **Metric validation.** Benchmark ΔE00, CAM16-UCS, Oklab, and HDR spaces against
+8. **Metric validation — baseline stress test complete, ground truth pending.**
+   Benchmark ΔE00, CAM16-UCS, Oklab, and HDR spaces against
    task-specific discrimination over modern wide-gamut displays.
 
 ## Confidence, falsification, and saturation
@@ -474,4 +488,3 @@ contested, especially spatial induction and higher-level inference. Device class
 heterogeneous, and cultural evidence is uneven across populations. The bibliography
 is curated rather than exhaustive; persistent identifiers and source roles are recorded
 for audit.
-
