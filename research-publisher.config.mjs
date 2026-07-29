@@ -2,7 +2,7 @@ export default {
   site: {
     title: "Visual Engineering Research",
     description: "Searchable visual engineering research repository",
-    baseUrl: "/Visual-Engineering/",
+    baseUrl: "/",
     language: "en",
     siteUrl: "https://visual.echelonfoundry.com/",
   } /**/,
