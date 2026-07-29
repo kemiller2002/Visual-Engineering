@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "updated": "2026-07-28",
+  "program": "Itten Modern Color Theory Experiment Program",
+  "human_participants_total": 0,
+  "physical_devices_measured_total": 0,
+  "computational_pilots_completed": 8,
+  "seed": 20260728,
+  "script": "scripts/itten-color/run-computational-pilots.mjs",
+  "script_sha256": "e6f6ebae61ef8a1ff13c657b11d16b11f3981bb85a2040861e0bdf4b16d69996",
+  "experiments": [
+    {"id":"EX-ITTEN-001","pilot":"complete","empirical":"pending","next":"calibrated human balance and gaze reliability pilot"},
+    {"id":"EX-ITTEN-002","pilot":"complete","empirical":"pending","next":"add appearance metrics and collect discrimination/matching judgments"},
+    {"id":"EX-ITTEN-003","pilot":"complete","empirical":"pending","next":"inventory and characterize HDR display and photometric instruments"},
+    {"id":"EX-ITTEN-004","pilot":"complete","empirical":"pending","next":"recruit diagnosed CVD and older participants"},
+    {"id":"EX-ITTEN-005","pilot":"complete","empirical":"pending","next":"secure cultural partners and conduct translated cognitive interviews"},
+    {"id":"EX-ITTEN-006","pilot":"complete","empirical":"pending","next":"measure multiple named OLED and LCD devices"},
+    {"id":"EX-ITTEN-007","pilot":"complete","empirical":"pending","next":"implement and latency-test gaze-contingent stimuli"},
+    {"id":"EX-ITTEN-008","pilot":"complete","empirical":"pending","next":"implement unit-tested DeltaE00, CAM16-UCS and Jzazbz"}
+  ]
+}

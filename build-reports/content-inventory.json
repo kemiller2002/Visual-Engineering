@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-07-22",
   "summary": {
-    "publishable source": 120,
+    "publishable source": 130,
     "generated output": 6,
     "archived": 2,
     "intake/unprocessed": 1,
@@ -334,11 +334,51 @@
       "classification": "publishable source"
     },
     {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-001-extension-area-salience.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-002-contextual-token-robustness.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-003-hdr-adaptation.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-004-cvd-aging-redundancy.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-005-warm-cool-cross-cultural.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-006-oled-lcd-equivalence.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-007-peripheral-chromatic-cues.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-008-color-metric-validation.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/experiment-report/README.md",
+      "classification": "publishable source"
+    },
+    {
       "path": "content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md",
       "classification": "publishable source"
     },
     {
       "path": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md",
+      "classification": "publishable source"
+    },
+    {
+      "path": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-2-experiment-pilots.md",
       "classification": "publishable source"
     },
     {

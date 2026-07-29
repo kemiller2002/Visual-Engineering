@@ -624,6 +624,28 @@
         "researchArea": "General Research"
       },
       {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": null,
         "title": "Implementation Roadmap",
         "url": "/Visual-Engineering/research/implementation-roadmap/",
@@ -1488,6 +1510,22 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "complete",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-002",
+        "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+        "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilots-complete",
         "researchArea": "General Research"
       },
       {
@@ -2403,6 +2441,182 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "proposed",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
         "researchArea": "General Research"
       },
       {
@@ -3525,6 +3739,182 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-WC-0001",
         "title": "Web Component Framework Architecture Probes",
         "url": "/Visual-Engineering/research/ex-wc-0001-web-component-framework-architecture-probes/",
@@ -3719,6 +4109,28 @@
         ],
         "audiences": [
           "researcher"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
         ],
         "entryPoint": false,
         "entryPointOrder": null,
@@ -4752,6 +5164,22 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "complete",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-002",
+        "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+        "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilots-complete",
         "researchArea": "General Research"
       },
       {
@@ -11544,6 +11972,28 @@
         "researchArea": "General Research"
       },
       {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": "JR-BDE-001",
         "title": "Beautiful Digital Experiences Research Journal — Cycle 1",
         "url": "/Visual-Engineering/research/jr-bde-001-beautiful-digital-experiences-research-journal-cycle-1/",
@@ -11610,6 +12060,196 @@
         "entryPointOrder": 10,
         "entryPointLabel": "Start here",
         "status": "active",
+        "researchArea": "General Research"
+      }
+    ],
+    "computational-pilot-complete-human-study-pending": [
+      {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "model-simulation-complete-instrumented-study-pending": [
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "simulation-audit-complete-human-study-pending": [
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "power-pilot-complete-field-study-pending": [
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "parameter-sweep-complete-device-study-pending": [
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "model-simulation-complete-gaze-study-pending": [
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      }
+    ],
+    "computational-stress-test-complete-ground-truth-study-pending": [
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
         "researchArea": "General Research"
       }
     ],
@@ -12257,6 +12897,24 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "research-draft",
+        "researchArea": "General Research"
+      }
+    ],
+    "computational-pilots-complete": [
+      {
+        "id": "RJ-VE-ITTEN-002",
+        "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+        "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilots-complete",
         "researchArea": "General Research"
       }
     ],
@@ -14428,6 +15086,204 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
         "id": "REP-VE-ITTEN-001",
         "title": "Johannes Itten Revisited — Seven Color Contrasts Through Modern Vision Science",
         "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
@@ -14465,6 +15321,22 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "complete",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "RJ-VE-ITTEN-002",
+        "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+        "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [],
+        "audiences": [],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilots-complete",
         "researchArea": "General Research"
       }
     ],
@@ -19104,6 +19976,182 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-WC-0001",
         "title": "Web Component Framework Architecture Probes",
         "url": "/Visual-Engineering/research/ex-wc-0001-web-component-framework-architecture-probes/",
@@ -20100,6 +21148,182 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-WC-0001",
         "title": "Web Component Framework Architecture Probes",
         "url": "/Visual-Engineering/research/ex-wc-0001-web-component-framework-architecture-probes/",
@@ -20119,6 +21343,28 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "verified",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
         "researchArea": "General Research"
       },
       {
@@ -20329,6 +21575,28 @@
         "entryPointOrder": 10,
         "entryPointLabel": "Project foundation",
         "status": "approved",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
         "researchArea": "General Research"
       },
       {
@@ -23463,6 +24731,182 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-WC-0001",
         "title": "Web Component Framework Architecture Probes",
         "url": "/Visual-Engineering/research/ex-wc-0001-web-component-framework-architecture-probes/",
@@ -23597,6 +25041,28 @@
         "entryPointOrder": null,
         "entryPointLabel": null,
         "status": "draft",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
         "researchArea": "General Research"
       },
       {
@@ -25819,6 +27285,182 @@
         "researchArea": "General Research"
       },
       {
+        "id": "EX-ITTEN-001",
+        "title": "Extension Ratios, Area, and Salience",
+        "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-002",
+        "title": "Contextual Color-Token Robustness",
+        "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-pilot-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-003",
+        "title": "HDR Interface Adaptation and Recovery",
+        "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-instrumented-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-004",
+        "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+        "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "simulation-audit-complete-human-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-005",
+        "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+        "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "power-pilot-complete-field-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-006",
+        "title": "OLED and LCD Appearance Equivalence",
+        "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "parameter-sweep-complete-device-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-007",
+        "title": "Peripheral Chromatic Interface Cues",
+        "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "model-simulation-complete-gaze-study-pending",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "EX-ITTEN-008",
+        "title": "Color-Difference Metric Validation",
+        "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+        "artifactType": "experiment",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "verify",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "computational-stress-test-complete-ground-truth-study-pending",
+        "researchArea": "General Research"
+      },
+      {
         "id": "EX-WC-0001",
         "title": "Web Component Framework Architecture Probes",
         "url": "/Visual-Engineering/research/ex-wc-0001-web-component-framework-architecture-probes/",
@@ -26034,6 +27676,28 @@
         ],
         "audiences": [
           "researcher"
+        ],
+        "entryPoint": false,
+        "entryPointOrder": null,
+        "entryPointLabel": null,
+        "status": "active",
+        "researchArea": "General Research"
+      },
+      {
+        "id": "IDX-VE-ITTEN-EX-001",
+        "title": "Itten Modern Color Theory Experiment Program",
+        "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+        "artifactType": "research-document",
+        "summary": "",
+        "updated": "2026-07-28",
+        "project": "itten-color-contrasts",
+        "purposes": [
+          "orient",
+          "reproduce"
+        ],
+        "audiences": [
+          "researcher",
+          "contributor"
         ],
         "entryPoint": false,
         "entryPointOrder": null,

@@ -298,6 +298,70 @@
       "sourcePath": "content/projects/composition-science/experiment-report/ex-comp-012-first-glance-vs-verification.md"
     },
     {
+      "id": "EX-ITTEN-001",
+      "title": "Extension Ratios, Area, and Salience",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-001-extension-area-salience.md"
+    },
+    {
+      "id": "EX-ITTEN-002",
+      "title": "Contextual Color-Token Robustness",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-002-contextual-token-robustness.md"
+    },
+    {
+      "id": "EX-ITTEN-003",
+      "title": "HDR Interface Adaptation and Recovery",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-003-hdr-adaptation.md"
+    },
+    {
+      "id": "EX-ITTEN-004",
+      "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-004-cvd-aging-redundancy.md"
+    },
+    {
+      "id": "EX-ITTEN-005",
+      "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-005-warm-cool-cross-cultural.md"
+    },
+    {
+      "id": "EX-ITTEN-006",
+      "title": "OLED and LCD Appearance Equivalence",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-006-oled-lcd-equivalence.md"
+    },
+    {
+      "id": "EX-ITTEN-007",
+      "title": "Peripheral Chromatic Interface Cues",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-007-peripheral-chromatic-cues.md"
+    },
+    {
+      "id": "EX-ITTEN-008",
+      "title": "Color-Difference Metric Validation",
+      "artifactType": "experiment",
+      "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-008-color-metric-validation.md"
+    },
+    {
       "id": "EX-WC-0001",
       "title": "Web Component Framework Architecture Probes",
       "artifactType": "experiment",
@@ -376,6 +440,14 @@
       "url": "/Visual-Engineering/research/hyreg-bde-001-beautiful-digital-experiences-hypothesis-registry/",
       "researchArea": "General Research",
       "sourcePath": "content/projects/beautiful-digital-experiences/hypothesis-registry/beautiful-digital-experiences-hypothesis-registry-v0-1.md"
+    },
+    {
+      "id": "IDX-VE-ITTEN-EX-001",
+      "title": "Itten Modern Color Theory Experiment Program",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/README.md"
     },
     {
       "id": "implementation-roadmap",
@@ -719,7 +791,7 @@
       "artifactType": "research-document",
       "url": "/Visual-Engineering/research/rep-ve-itten-001-johannes-itten-revisited-seven-color-contrasts-through-modern-vision-science/",
       "researchArea": "General Research",
-      "sourcePath": "content/projects/itten-color-contrasts/research-execution-package/rep-ve-itten-001.md"
+      "sourcePath": "content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md"
     },
     {
       "id": "repository-architecture",
@@ -760,6 +832,14 @@
       "url": "/Visual-Engineering/research/rj-ve-itten-001-itten-color-contrasts-research-cycle-1/",
       "researchArea": "General Research",
       "sourcePath": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md"
+    },
+    {
+      "id": "RJ-VE-ITTEN-002",
+      "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+      "artifactType": "research-document",
+      "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+      "researchArea": "General Research",
+      "sourcePath": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-2-experiment-pilots.md"
     },
     {
       "id": "RP-ATLAS-COLOR-004",
@@ -1036,6 +1116,14 @@
     "EVREG-VE-ITTEN-001": [],
     "EX-COMP-011": [],
     "EX-COMP-012": [],
+    "EX-ITTEN-001": [],
+    "EX-ITTEN-002": [],
+    "EX-ITTEN-003": [],
+    "EX-ITTEN-004": [],
+    "EX-ITTEN-005": [],
+    "EX-ITTEN-006": [],
+    "EX-ITTEN-007": [],
+    "EX-ITTEN-008": [],
     "EX-WC-0001": [],
     "executive-summary": [],
     "experiments": [],
@@ -1048,6 +1136,7 @@
     ],
     "HYR-WC-0001": [],
     "HYREG-BDE-001": [],
+    "IDX-VE-ITTEN-EX-001": [],
     "implementation-roadmap": [],
     "intake-preservation": [],
     "intuitive-is-just-familiar-research-report": [],
@@ -1098,6 +1187,7 @@
     "research-methodology": [],
     "risk-assessment": [],
     "RJ-VE-ITTEN-001": [],
+    "RJ-VE-ITTEN-002": [],
     "RP-ATLAS-COLOR-004": [],
     "RP-ATLAS-TYPO-TRANSFER-001": [],
     "RP-CCE-0001": [],

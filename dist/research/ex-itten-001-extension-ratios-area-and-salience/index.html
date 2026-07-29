@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Extension Ratios, Area, and Salience | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><link rel="stylesheet" href="/Visual-Engineering/_astro/_term_.BXadKaff.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div class="site-identity"> <span class="site-mark" aria-hidden="true">VE</span> <div> <a class="site-title" href="/Visual-Engineering/">Visual Engineering Research</a> <p class="site-description">An open index of evidence, theory, and practice</p> </div> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/Visual-Engineering/">Overview</a></li><li><a href="/Visual-Engineering/search/">Search</a></li><li><a href="/Visual-Engineering/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">experiment</span> <span data-pagefind-meta="stableId">EX-ITTEN-001</span> </p> <h1 data-pagefind-meta="title">Extension Ratios, Area, and Salience</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>EX-ITTEN-001</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div> <div><dt>Project</dt><dd data-pagefind-meta="project">itten-color-contrasts</dd></div> <div><dt>Useful for</dt><dd data-pagefind-meta="purposes">verify, reproduce</dd></div> <div><dt>Audience</dt><dd data-pagefind-meta="audiences">researcher, contributor</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">computational-pilot-complete-human-study-pending</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-28</dd></div> <div><dt>Source</dt><dd>content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-001-extension-area-salience.md</dd></div> </dl> </header> <div class="document-reading-grid"> <aside class="toc-panel"> <h2>On this page</h2> <ol> <li><a href="#ex-itten-001-extension-ratios-area-and-salience">EX-ITTEN-001 — Extension ratios, area, and salience</a></li><li><a href="#question-and-falsifier">Question and falsifier</a></li><li><a href="#work-completed">Work completed</a></li><li><a href="#pilot-results">Pilot results</a></li><li><a href="#human-experiment-ready-to-run">Human experiment ready to run</a></li><li><a href="#current-position-continuation">Current position / continuation</a></li> </ol> </aside> <section class="document-body"><h1 id="ex-itten-001--extension-ratios-area-and-salience">EX-ITTEN-001 — Extension ratios, area, and salience</h1>
+<h2 id="question-and-falsifier">Question and falsifier</h2>
+<p>Do fixed color-area ratios predict perceived balance after luminance, chroma, position,
+and semantic priority are controlled? The fixed-ratio account fails if those variables
+explain balance and attention better than complementary area ratio, or if the preferred
+ratio changes materially by task or observer.</p>
+<h2 id="work-completed">Work completed</h2>
+<p>A deterministic full-factorial pipeline test crossed four area fractions, four
+luminance differences, three chroma differences, three positions, and two semantic
+priority levels: 288 modeled conditions. The proxy was intentionally explicit:</p>
+<p><code>area^0.62 × hypot(3.2ΔL, 1.7ΔC) × center-bias × semantic-priority</code>.</p>
+<p>This tests design, data shape, reproducibility, and analysis sensitivity—not people.</p>
+<h2 id="pilot-results">Pilot results</h2>
+<p>Proxy-score correlations were area <code>r=.5161</code>, luminance difference <code>r=.7096</code>, chroma
+difference <code>r=.0704</code>, and semantic priority <code>r=.2286</code>; score range was
+<code>0.0152–1.2586</code>. Because the generating model assigned those weights, these are
+successful pipeline-recovery results, not support for the coefficients. The run
+demonstrates why area alone cannot identify “visual weight.”</p>
+<h2 id="human-experiment-ready-to-run">Human experiment ready to run</h2>
+<ul>
+<li>Design: within-participant 4 × 4 × 3 × 3 factorial subset selected with
+D-optimal balancing; include Itten ratios plus logarithmically spaced alternatives.</li>
+<li>Stimuli: calibrated, texture-free pairs and complete interface compositions; match
+or independently manipulate CAM16 lightness and chroma.</li>
+<li>Outcomes kept separate: two-alternative balance judgment, adjustment-to-balance,
+first fixation, dwell distribution, target-search accuracy, and preference.</li>
+<li>Participants: initial 60 normal trichromats plus 30 participants with diagnosed
+red–green CVD; expand after pilot variance and reliability estimates.</li>
+<li>Analysis: mixed-effects psychometric model with participant and stimulus random
+effects; compare area-only, feature, and feature-plus-semantic models by held-out
+likelihood. Do not treat gaze as balance.</li>
+<li>Controls: randomized side, gaze-calibrated center fixation, equal exposure, reading
+direction, visual acuity, age, color-vision assessment, and device calibration.</li>
+</ul>
+<h2 id="current-position--continuation">Current position / continuation</h2>
+<p><strong>Stage:</strong> computational pipeline complete; human evidence absent.<br>
+<strong>Next action:</strong> create calibrated stimulus set, preregister model comparison, obtain
+ethics/participant consent as locally required, and collect the first 15-participant
+reliability pilot.<br>
+<strong>Data:</strong> <code>../experiments/data/ex-itten-001.json</code>.<br>
+<strong>Code:</strong> <code>scripts/itten-color/run-computational-pilots.mjs</code>.</p></section> </div>  </article>  </main> <footer class="site-footer"> <p><strong>Visual Engineering Research</strong></p> <p>Research made navigable, verifiable, and reusable.</p> <p class="site-build-stamp">
+Build: <time datetime="2026-07-28T21:35:35.307Z">Jul 28, 2026, 9:35:35 PM UTC</time> </p> </footer> </body></html>
