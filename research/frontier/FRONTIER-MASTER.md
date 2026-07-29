@@ -2,7 +2,7 @@
 id: FRONTIER-MASTER
 document_type: research_frontier_master
 status: active
-generated: 2026-07-28
+generated: 2026-07-29
 ---
 
 # Repository Research Frontier

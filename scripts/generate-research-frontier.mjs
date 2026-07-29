@@ -2,6 +2,12 @@ import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
 
+import {
+  frontierIdentity,
+  isGeneratedFrontierSource,
+  slug,
+} from "./research-frontier-identity.mjs";
+
 const root = process.cwd();
 const inventoryPath = path.join(root, "build-reports/content-inventory.json");
 const outputRoot = path.join(root, "research/frontier");
@@ -17,10 +23,6 @@ const rejectedStatuses = new Set([
   "research-draft", "applied-analysis-working-draft",
   "evidence-review-working-draft",
 ]);
-
-function slug(value) {
-  return String(value || "untitled").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 100);
-}
 
 function scalar(value = "") {
   return value.trim().replace(/^["']|["']$/g, "");
@@ -150,6 +152,7 @@ const inventory = JSON.parse(fs.readFileSync(inventoryPath, "utf8"));
 const candidates = inventory.records
   .filter((record) => record.classification === "publishable source")
   .map((record) => record.path)
+  .filter((source) => !isGeneratedFrontierSource(source))
   .filter((source) => fs.existsSync(path.join(root, source)));
 
 const documents = [];
@@ -159,12 +162,16 @@ for (const source of candidates) {
   const status = slug(meta.status || "active");
   if (rejectedStatuses.has(status)) continue;
   const allSections = sections(text);
-  const title = meta.title || allSections.find((section) => section.heading !== "Document opening")?.heading || path.basename(source, ".md");
+  const visibleTitle = meta.title || allSections.find((section) => section.heading !== "Document opening")?.heading || path.basename(source, ".md");
+  const identity = frontierIdentity(source, visibleTitle);
   documents.push({
     source,
-    title,
-    documentId: meta.id || slug(title),
-    frontierSlug: `${slug(meta.id || title)}-${crypto.createHash("sha256").update(source).digest("hex").slice(0, 8)}`,
+    title: visibleTitle,
+    frontierTitle: identity.title,
+    documentId: identity.documentId,
+    frontierId: identity.id,
+    frontierSlug: identity.slug,
+    repStem: meta.id || slug(visibleTitle),
     status: meta.status || "active (inferred from publishable inventory)",
     confidence: meta.confidence || (/confidence/i.test(text) ? "stated in source; mixed" : "not explicitly stated"),
     discipline: inferDiscipline(meta, source),
@@ -192,7 +199,7 @@ for (const doc of documents) {
       unknowns: [archetype.unknown],
       evidence: evidence || "The source contains no extractable prose in the selected section; manual evidence review is required before acceptance.",
       dependencies: archetype.kind === "validation" ? [] : [idFor(doc.source, "measurement")].filter((id) => id !== idFor(doc.source, archetype.kind)),
-      suggestedRep: `REP-${slug(doc.documentId).toUpperCase().slice(0, 32)}-${archetype.kind.toUpperCase()}`,
+      suggestedRep: `REP-${slug(doc.repStem).toUpperCase().slice(0, 32)}-${archetype.kind.toUpperCase()}`,
       methodology: archetype.method,
       outputs: archetype.outputs,
       successCriteria: archetype.success,
@@ -283,13 +290,16 @@ for (const doc of documents) {
   const docRecords = records.filter((record) => record.documentId === doc.documentId && record.originDocuments[0] === doc.source).sort((a, b) => b.frontierScore - a.frontierScore);
   const unknownSections = doc.allSections.filter((section) => /uncertain|limit|future|risk|falsif|remaining|gap/i.test(section.heading));
   const body = `---
+id: ${doc.frontierId}
+slug: ${doc.frontierSlug}
+title: "${`Frontier analysis — ${doc.frontierTitle}`.replaceAll('"', '\\"')}"
 document_id: ${doc.documentId}
 document_type: document_frontier
 source_status: "${String(doc.status).replaceAll('"', '\\"')}"
 generated: ${generatedAt}
 ---
 
-# Frontier analysis — ${doc.title}
+# Frontier analysis — ${doc.frontierTitle}
 
 ## Knowledge boundary
 

@@ -4,6 +4,8 @@
     "research:validate": "research-publisher validate --config ./research-publisher.config.mjs",
     "research:build": "research-publisher build --config ./research-publisher.config.mjs",
     "research:clean": "research-publisher clean --config ./research-publisher.config.mjs",
+    "research:frontier": "node scripts/generate-research-frontier.mjs",
+    "research:frontier:test": "node --test scripts/test-generate-research-frontier.mjs",
     "context:build": "node scripts/build-ui-context.mjs",
     "context:validate": "node scripts/validate-ui-context.mjs",
     "context:test": "node scripts/test-ui-context.mjs",

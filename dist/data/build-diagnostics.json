@@ -2,16 +2,16 @@
   "schemaVersion": "1.0",
   "generatedOn": "2026-07-22",
   "performance": {
-    "documentCount": 130,
-    "parseTimeMs": 1571.206291,
-    "renderTimeMs": 1492.8579170000003,
-    "searchIndexTimeMs": 475.3006660000001,
-    "totalBuildTimeMs": 3644.5242500000004
+    "documentCount": 756,
+    "parseTimeMs": 2737.295625,
+    "renderTimeMs": 1750.7574169999998,
+    "searchIndexTimeMs": 869.1658749999997,
+    "totalBuildTimeMs": 5592.2998339999995
   },
   "summary": {
-    "totalDocuments": 130,
+    "totalDocuments": 756,
     "byArtifactType": {
-      "research-document": 82,
+      "research-document": 708,
       "concept": 17,
       "Architecture and Decision Framework": 1,
       "decision-framework": 2,
@@ -23,7 +23,7 @@
       "theory": 1
     },
     "byResearchArea": {
-      "General Research": 116,
+      "General Research": 742,
       "Composition Science": 1,
       "Clinical Communication Engineering": 8,
       "color,contrast,low-vision,color-vision-deficiency": 1,
