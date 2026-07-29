@@ -4,7 +4,7 @@ export default {
     description: "Searchable visual engineering research repository",
     baseUrl: "/Visual-Engineering/",
     language: "en",
-    siteUrl: "https://kemiller2002.github.io/Visual-Engineering",
+    siteUrl: "https://visual.echelonfoundry.com/",
   } /**/,
   repository: {
     name: "Visual-Engineering",
