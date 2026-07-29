@@ -18,7 +18,7 @@
     "ve-context": "bin/ve-context.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24 <25"
   },
   "publishConfig": {
     "access": "public",

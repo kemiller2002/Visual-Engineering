@@ -11,6 +11,9 @@
     "context:release": "node scripts/build-ui-context-release.mjs",
     "context:pack": "npm pack --dry-run --cache /tmp/visual-engineering-npm-cache ./packages/visual-engineering-context"
   },
+  "engines": {
+    "node": ">=24 <25"
+  },
   "devDependencies": {
     "research-publisher": "github:kemiller2002/research-publisher#main"
   }
