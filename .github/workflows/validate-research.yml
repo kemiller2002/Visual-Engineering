@@ -29,6 +29,7 @@ jobs:
         run: npm run research:inventory
 
       - name: Validate research
+        id: research-validate
         run: npm run research:validate
 
       - name: Build research site
@@ -36,29 +37,33 @@ jobs:
         run: npm run research:build
 
       - name: Show research-publisher diagnostics
-        if: failure() && steps.research-build.outcome == 'failure'
+        if: failure()
         shell: bash
         run: |
-          diagnostics_file="build-reports/build-diagnostics.json"
-          if [ -f "$diagnostics_file" ]; then
-            if command -v jq >/dev/null 2>&1; then
-              jq '.diagnostics[] | select(.severity == "error")' "$diagnostics_file"
-            else
-              node -e '
-              const fs = require("node:fs");
-              const report = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
-              const errors = (report.diagnostics || []).filter(
-                diagnostic => diagnostic.severity === "error"
-              );
-              console.log(JSON.stringify(errors, null, 2));
-              ' "$diagnostics_file"
-            fi
+          if [ -f "build-reports/build-diagnostics.json" ]; then
+            diagnostics_file="build-reports/build-diagnostics.json"
+          elif [ -f "build-reports/validation-diagnostics.json" ]; then
+            diagnostics_file="build-reports/validation-diagnostics.json"
           else
-            echo "research-publisher did not produce $diagnostics_file"
+            echo "research-publisher did not produce build or validation diagnostics"
+            exit 0
+          fi
+
+          if command -v jq >/dev/null 2>&1; then
+            jq '.diagnostics[] | select(.severity == "error")' "$diagnostics_file"
+          else
+            node -e '
+            const fs = require("node:fs");
+            const report = JSON.parse(fs.readFileSync(process.argv[1], "utf8"));
+            const errors = (report.diagnostics || []).filter(
+              diagnostic => diagnostic.severity === "error"
+            );
+            console.log(JSON.stringify(errors, null, 2));
+            ' "$diagnostics_file"
           fi
 
       - name: Upload research-publisher diagnostics
-        if: failure() && steps.research-build.outcome == 'failure'
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: research-publisher-diagnostics
