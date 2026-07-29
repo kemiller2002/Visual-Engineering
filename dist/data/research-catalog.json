@@ -7086,6 +7086,574 @@
     },
     {
       "schemaVersion": "1.1",
+      "id": "EX-ITTEN-001",
+      "title": "Extension Ratios, Area, and Salience",
+      "slug": "ex-itten-001-extension-ratios-area-and-salience",
+      "url": "/Visual-Engineering/research/ex-itten-001-extension-ratios-area-and-salience/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "computational-pilot-complete-human-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-001 — Extension ratios, area, and salience"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Human experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-001-extension-area-salience.md",
+      "contentHash": "a444299e14d82a1ff310fe28a8b7aedc34fd797640e9da3ca24e98c80228ca56",
+      "html": "<h1 id=\"ex-itten-001--extension-ratios-area-and-salience\">EX-ITTEN-001 — Extension ratios, area, and salience</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>Do fixed color-area ratios predict perceived balance after luminance, chroma, position,\nand semantic priority are controlled? The fixed-ratio account fails if those variables\nexplain balance and attention better than complementary area ratio, or if the preferred\nratio changes materially by task or observer.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>A deterministic full-factorial pipeline test crossed four area fractions, four\nluminance differences, three chroma differences, three positions, and two semantic\npriority levels: 288 modeled conditions. The proxy was intentionally explicit:</p>\n<p><code>area^0.62 × hypot(3.2ΔL, 1.7ΔC) × center-bias × semantic-priority</code>.</p>\n<p>This tests design, data shape, reproducibility, and analysis sensitivity—not people.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Proxy-score correlations were area <code>r=.5161</code>, luminance difference <code>r=.7096</code>, chroma\ndifference <code>r=.0704</code>, and semantic priority <code>r=.2286</code>; score range was\n<code>0.0152–1.2586</code>. Because the generating model assigned those weights, these are\nsuccessful pipeline-recovery results, not support for the coefficients. The run\ndemonstrates why area alone cannot identify “visual weight.”</p>\n<h2 id=\"human-experiment-ready-to-run\">Human experiment ready to run</h2>\n<ul>\n<li>Design: within-participant 4 × 4 × 3 × 3 factorial subset selected with\nD-optimal balancing; include Itten ratios plus logarithmically spaced alternatives.</li>\n<li>Stimuli: calibrated, texture-free pairs and complete interface compositions; match\nor independently manipulate CAM16 lightness and chroma.</li>\n<li>Outcomes kept separate: two-alternative balance judgment, adjustment-to-balance,\nfirst fixation, dwell distribution, target-search accuracy, and preference.</li>\n<li>Participants: initial 60 normal trichromats plus 30 participants with diagnosed\nred–green CVD; expand after pilot variance and reliability estimates.</li>\n<li>Analysis: mixed-effects psychometric model with participant and stimulus random\neffects; compare area-only, feature, and feature-plus-semantic models by held-out\nlikelihood. Do not treat gaze as balance.</li>\n<li>Controls: randomized side, gaze-calibrated center fixation, equal exposure, reading\ndirection, visual acuity, age, color-vision assessment, and device calibration.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> computational pipeline complete; human evidence absent.<br>\n<strong>Next action:</strong> create calibrated stimulus set, preregister model comparison, obtain\nethics/participant consent as locally required, and collect the first 15-participant\nreliability pilot.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-001.json</code>.<br>\n<strong>Code:</strong> <code>scripts/itten-color/run-computational-pilots.mjs</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-002",
+      "title": "Contextual Color-Token Robustness",
+      "slug": "ex-itten-002-contextual-color-token-robustness",
+      "url": "/Visual-Engineering/research/ex-itten-002-contextual-color-token-robustness/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "computational-pilot-complete-human-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-002 — Contextual color-token robustness"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Human experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-002-contextual-token-robustness.md",
+      "contentHash": "ce0baec5bd6fe88c62a677f53e48ff6bbcc94599197edf34cf028e2c63f6a9ac",
+      "html": "<h1 id=\"ex-itten-002--contextual-color-token-robustness\">EX-ITTEN-002 — Contextual color-token robustness</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>Which metric best predicts color discrimination in real component surrounds? Any claim\nthat one isolated metric is sufficient fails if a context-aware or spatial model\nmaterially improves held-out human judgments.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>Twelve interface colors were crossed with six backgrounds (72 pairs). The pipeline\ncomputed WCAG luminance contrast, Euclidean CIELAB difference, Euclidean Oklab\ndifference, and an explicitly labeled toy induction stress value (8% displacement away\nfrom the surround in Lab).</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Rank correlation was <code>.6357</code> for WCAG versus Lab, <code>.9398</code> for WCAG versus Oklab, and\n<code>.6791</code> for Lab versus Oklab. Of 72 pairs, 31 passed 4.5:1 and 47 passed 3:1. The toy\ninduction shift had median <code>6.1736</code> and maximum <code>9.2009</code> ΔE76.</p>\n<p>The result establishes metric disagreement in this sample, not perceptual superiority.\nWCAG contrast, Lab distance, and Oklab distance describe different constructs. The\ninduction magnitude is generated, not observed.</p>\n<h2 id=\"human-experiment-ready-to-run\">Human experiment ready to run</h2>\n<ul>\n<li>Render complete controls in six surrounds at fixed angular sizes, including thin\nstrokes, text, fills, disabled states, and alerts.</li>\n<li>Use a calibrated wide-gamut monitor with recorded primaries, transfer function,\nwhite, black, and ambient illumination.</li>\n<li>Tasks: same/different discrimination, state identification, visual search, and\nappearance matching to an adjustable isolated patch.</li>\n<li>Compare ΔE00, CAM16-UCS, Oklab, WCAG contrast, and at least one spatial appearance\nmodel against held-out accuracy and matching error.</li>\n<li>Stratify by normal color vision, protan/deutan class, and older adults. Record visual\nacuity and display viewing angle.</li>\n<li>Primary analysis: cross-validated mixed-effects logistic model; report calibration,\nnot only rank correlation.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> code and metric baseline complete; no appearance judgments collected.<br>\n<strong>Next action:</strong> add CAM16-UCS/ΔE00 reference implementations and generate calibrated\nrendered stimuli before preregistration.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-002.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-003",
+      "title": "HDR Interface Adaptation and Recovery",
+      "slug": "ex-itten-003-hdr-interface-adaptation-and-recovery",
+      "url": "/Visual-Engineering/research/ex-itten-003-hdr-interface-adaptation-and-recovery/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "model-simulation-complete-instrumented-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-003 — HDR interface adaptation and recovery"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Instrumented experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-003-hdr-adaptation.md",
+      "contentHash": "db81434192693e1c1600b4ec96a4a0b74a8ef5f4bcd53acdd0a3d545948b9e80",
+      "html": "<h1 id=\"ex-itten-003--hdr-interface-adaptation-and-recovery\">EX-ITTEN-003 — HDR interface adaptation and recovery</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>How do peak luminance, bright-field area, and ambient illumination change post-highlight\nsearch, legibility, discomfort, and recovery? A field-size/adaptation account fails if\nrecovery is invariant across physically verified exposure conditions.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>A parameter sweep crossed peak luminance <code>200/600/1000/2000 cd/m²</code>, bright-field area\n<code>1/10/40%</code>, and ambient <code>0/50/200/1000 lux</code> (48 conditions). An exponential recovery\nproxy generated initial sensitivity loss and time to 90% recovery.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Predicted 90% recovery time had median <code>9.1656 s</code>, 95th percentile <code>14.2672 s</code>, and\nmaximum <code>16.0654 s</code>. Predicted initial sensitivity loss had median <code>.1849</code> and maximum\n<code>.3864</code>. These numbers are model outputs and must not become design thresholds.</p>\n<h2 id=\"instrumented-experiment-ready-to-run\">Instrumented experiment ready to run</h2>\n<ul>\n<li>Hardware: HDR reference or characterized consumer display, spot photometer or\nspectroradiometer, lux meter, chinrest, and response box.</li>\n<li>Exposure: neutral field followed by controlled white highlight; verify emitted\nluminance, area, duration, and surround for every trial.</li>\n<li>Tasks: pre/post contrast threshold staircase, low-contrast target search, reading,\ndiscomfort rating, and pupil diameter if available.</li>\n<li>Timing: dense sampling at 0.25, 0.5, 1, 2, 4, 8, 16, and 30 seconds.</li>\n<li>Safety: conservative luminance/duration review, breaks, withdrawal rule, and\nexclusion for photosensitivity or relevant ocular conditions under ethics guidance.</li>\n<li>Analysis: hierarchical recovery curves; peak × area × ambient interactions; report\nboth threshold elevation and task error.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> simulation and parameter grid complete; no light was shown to participants.<br>\n<strong>Next action:</strong> name and characterize the physical display and measuring instrument;\nthen replace proxy parameters with a five-participant apparatus pilot.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-003.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-004",
+      "title": "Color-Vision Deficiency, Aging, and Redundant Encoding",
+      "slug": "ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding",
+      "url": "/Visual-Engineering/research/ex-itten-004-color-vision-deficiency-aging-and-redundant-encoding/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "simulation-audit-complete-human-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-004 — CVD, aging, and redundant encoding"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Human experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-004-cvd-aging-redundancy.md",
+      "contentHash": "555a9350b8211256e381af1286bd602d5fb21ba3cde59549206694294aa44397",
+      "html": "<h1 id=\"ex-itten-004--cvd-aging-and-redundant-encoding\">EX-ITTEN-004 — CVD, aging, and redundant encoding</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>Do redundant encodings preserve consequential task performance across aging and\ncongenital CVD better than color-only encodings? The redundancy principle fails if a\nwell-powered representative study finds no performance or error-resilience advantage.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>All 66 pairs from a 12-color palette were transformed through typical, protan, deutan,\nand tritan screening matrices at modeled ages 25, 65, and 80. A simple lens-yellowing\nproxy and an Oklab <code>0.08</code> screening cutoff were applied: 792 observer-pair conditions.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Modeled detectable-pair proportions declined from <code>1.000</code> to <code>.9848</code> for typical\nvision, <code>.9697</code> to <code>.9394</code> for protan simulation, <code>.9242</code> to <code>.8788</code> for deutan\nsimulation, and remained <code>.9394</code> in the simplified tritan transform. The coded\nshape-redundancy channel remained 1.0 by construction.</p>\n<p>These are audit flags only. The cutoff, matrices, yellowing transform, and perfect\nshape detection are assumptions. The result supports selecting difficult pairs for a\nstudy; it does not estimate clinical detection rates.</p>\n<h2 id=\"human-experiment-ready-to-run\">Human experiment ready to run</h2>\n<ul>\n<li>Groups: younger typical, older typical, diagnosed protan, diagnosed deutan, and older\nCVD; confirm class/severity with a validated test rather than self-report.</li>\n<li>Conditions: color only, shape only, label only, color+shape, and color+label.</li>\n<li>Tasks: urgent-state search, legend decoding, trend comparison, and prospective-memory\nalert response under time pressure.</li>\n<li>Outcomes: miss/false-alarm rate, response time, confidence calibration, and subjective\nworkload. Analyze speed and accuracy jointly.</li>\n<li>Accessibility: large-enough marks, correction lenses allowed, fatigue breaks, and\naccessible consent.</li>\n<li>Analysis: mixed-effects signal-detection model; test interaction of encoding,\nage, CVD class, mark size, and eccentricity.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> palette screening complete; representative user testing not started.<br>\n<strong>Next action:</strong> recruit through optometry/accessibility partners and run a\n10-participant usability pilot before fixing the final stimulus set.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-004.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-005",
+      "title": "Cross-Cultural Transfer of Warm and Cool Color Associations",
+      "slug": "ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations",
+      "url": "/Visual-Engineering/research/ex-itten-005-cross-cultural-transfer-of-warm-and-cool-color-associations/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "power-pilot-complete-field-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-005 — Warm/cool cross-cultural transfer"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Field experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-005-warm-cool-cross-cultural.md",
+      "contentHash": "8b0368914f8713fe4879482f81938e67c2e82fcadbba321cf2e9065712cbb4fb",
+      "html": "<h1 id=\"ex-itten-005--warmcool-cross-cultural-transfer\">EX-ITTEN-005 — Warm/cool cross-cultural transfer</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>Are hue–temperature judgments stable across language and climate, and do they predict\naffect, urgency, or distance? The universal account fails with substantial\ngroup-by-hue interactions or dissociation among thermal, affective, urgency, and depth\noutcomes.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>A fixed-seed toy power simulation examined a standardized cross-group interaction of\n<code>.25</code>, with 2,000 runs at 30, 60, 120, and 240 analyzable participants per stratum.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Estimated power was <code>.081</code>, <code>.205</code>, <code>.4915</code>, and <code>.861</code>, respectively. The provisional\nplanning value is therefore 240 analyzable participants per language/climate stratum,\nnot 120. This is only a rough planning simulation; pilot variance and the final\nmixed-effects structure must replace it.</p>\n<h2 id=\"field-experiment-ready-to-run\">Field experiment ready to run</h2>\n<ul>\n<li>Sampling: at least four language/climate strata selected prospectively; record\nmultilingualism, residence history, climate exposure, color vocabulary, education,\nand display/device characteristics.</li>\n<li>Stimuli: calibrated hue circle at crossed lightness/chroma/intensity levels; include\nachromatic controls and natural/material scenes.</li>\n<li>Separate outcomes: thermal rating, expected physical temperature, affect, arousal,\nurgency, nearness, preference, and free naming. Never collapse them into “warmth.”</li>\n<li>Translation: forward translation, independent back-translation, cognitive interview,\nand measurement-invariance testing.</li>\n<li>Design: randomized within-person stimulus trials; avoid red/blue response labels and\nculturally loaded icons.</li>\n<li>Analysis: hierarchical ordinal models; group × hue × intensity interactions;\ninvariance and leave-one-culture-out prediction.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> power scaffold complete; zero survey or participant responses collected.<br>\n<strong>Next action:</strong> secure cultural research partners, translate instruments, conduct\ncognitive interviews, then estimate variance from a 20-person-per-stratum pilot.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-005.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-006",
+      "title": "OLED and LCD Appearance Equivalence",
+      "slug": "ex-itten-006-oled-and-lcd-appearance-equivalence",
+      "url": "/Visual-Engineering/research/ex-itten-006-oled-and-lcd-appearance-equivalence/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "parameter-sweep-complete-device-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-006 — OLED/LCD appearance equivalence"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Device experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-006-oled-lcd-equivalence.md",
+      "contentHash": "421535e87c80b959a97fa3b598bab5369cdcaaeb571d7a5b892d731045b9b43f",
+      "html": "<h1 id=\"ex-itten-006--oledlcd-appearance-equivalence\">EX-ITTEN-006 — OLED/LCD appearance equivalence</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>When emitted colorimetry is matched, which spectral, black-level, reflection,\noff-axis, temporal, and local-dimming variables change appearance or performance?\nThe class-label account fails if within-class device variance rivals or exceeds the\nOLED-versus-LCD mean.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>A transparent engineering parameter sweep crossed two illustrative device profiles,\nfour ambient levels, and three white luminances (24 conditions). Effective black was\nmodeled as emitted black plus Lambertian ambient reflection.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>At 300-nit white, modeled effective contrast changed from 600,000:1 to 79.5:1 for the\nillustrative OLED profile between 0 and 1,000 lux, and from 3,750:1 to 38.3:1 for the\nLCD profile. The values are parameter consequences, not measurements of named products.\nThey demonstrate that emitted matching cannot establish viewed equivalence.</p>\n<h2 id=\"device-experiment-ready-to-run\">Device experiment ready to run</h2>\n<ul>\n<li>Minimum sample: three OLED and three LCD models, with multiple units if feasible.</li>\n<li>Instruments: spectroradiometer, imaging photometer, lux meter, temporal light meter,\nand goniometric/off-axis fixture.</li>\n<li>Match center-screen XYZ and luminance, then measure spectra, black, flare/reflection,\nviewing angle, temporal modulation, ABL, local dimming, and tone/gamut mapping.</li>\n<li>Human tasks: dark-detail detection, color matching, small-text reading, halo/local\ncontrast judgment, and discomfort under 0/50/200/1000 lux.</li>\n<li>Analysis: multilevel model with device technology and unit/model random effects.\nAttribute effects to measured variables, not the marketing class.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> apparatus equations and condition matrix complete; no devices measured.<br>\n<strong>Next action:</strong> inventory available displays/instruments, record exact model/firmware,\nwarm up and calibrate, then run repeatability measurements before participant viewing.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-006.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-007",
+      "title": "Peripheral Chromatic Interface Cues",
+      "slug": "ex-itten-007-peripheral-chromatic-interface-cues",
+      "url": "/Visual-Engineering/research/ex-itten-007-peripheral-chromatic-interface-cues/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "model-simulation-complete-gaze-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-007 — Peripheral chromatic interface cues"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Gaze-contingent experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-007-peripheral-chromatic-cues.md",
+      "contentHash": "a07d3d40f56b4e863b8437f6c97f88da4e3cf6b5b64413e607c00945091bcbee",
+      "html": "<h1 id=\"ex-itten-007--peripheral-chromatic-interface-cues\">EX-ITTEN-007 — Peripheral chromatic interface cues</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>What cue size and contrast are needed for alerts under divided attention and realistic\nmotion? The hue-fragility prediction fails if hue-only detection remains invariant with\neccentricity after retinal size and luminance are controlled.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>A proxy crossed eccentricity <code>0/5/10/20/30°</code>, size <code>.1/.25/.5/1/2°</code>, and four chroma\nlevels (100 conditions). It estimated the minimum tested size passing an arbitrary\nsensitivity criterion.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>At the lowest modeled chroma, the minimum was <code>.25°</code> foveally, <code>.5°</code> at 5°, <code>2°</code> at\n10°, and no tested size passed at 20° or 30°. At 20°, only the two highest chroma levels\npassed, both at <code>1°</code>; no condition passed at 30°. These are model predictions, not\nthresholds.</p>\n<h2 id=\"gaze-contingent-experiment-ready-to-run\">Gaze-contingent experiment ready to run</h2>\n<ul>\n<li>Apparatus: calibrated display, chinrest, high-rate eye tracker, gaze-contingent\npresentation, and controlled ambient light.</li>\n<li>Factors: eccentricity, angular size, hue direction, luminance contrast, chroma,\nduration, motion, cue redundancy, and central-task load.</li>\n<li>Use cone-contrast coordinates and verify rendered output; include protan/deutan\nobservers and older adults after the initial normal-trichromat pilot.</li>\n<li>Outcomes: detection sensitivity (d′), criterion, localization error, response time,\nfixation break, and central-task cost.</li>\n<li>Staircases estimate 75%-correct thresholds; trials with broken fixation are repeated,\nnot silently included.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> condition grid and analysis target complete; no gaze data collected.<br>\n<strong>Next action:</strong> implement gaze-contingent stimulus timing and validate end-to-end\nlatency before preregistering the 12-participant threshold pilot.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-007.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "EX-ITTEN-008",
+      "title": "Color-Difference Metric Validation",
+      "slug": "ex-itten-008-color-difference-metric-validation",
+      "url": "/Visual-Engineering/research/ex-itten-008-color-difference-metric-validation/",
+      "artifactType": "experiment",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "verify",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "computational-stress-test-complete-ground-truth-study-pending",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "EX-ITTEN-008 — Color-difference metric validation"
+        },
+        {
+          "depth": 2,
+          "text": "Question and falsifier"
+        },
+        {
+          "depth": 2,
+          "text": "Work completed"
+        },
+        {
+          "depth": 2,
+          "text": "Pilot results"
+        },
+        {
+          "depth": 2,
+          "text": "Validation experiment ready to run"
+        },
+        {
+          "depth": 2,
+          "text": "Current position / continuation"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-008-color-metric-validation.md",
+      "contentHash": "cb8e6965d75f87f74369dad32bc27245ca1acd60b706ebb00580f8612dcb45d1",
+      "html": "<h1 id=\"ex-itten-008--color-difference-metric-validation\">EX-ITTEN-008 — Color-difference metric validation</h1>\n<h2 id=\"question-and-falsifier\">Question and falsifier</h2>\n<p>Which metric predicts task-specific discrimination across modern wide-gamut and HDR\ndisplays? A universal-metric claim fails if rankings or calibration vary materially by\nregime, task, observer, or device.</p>\n<h2 id=\"work-completed\">Work completed</h2>\n<p>Three thousand fixed-seed random sRGB pairs were compared with Euclidean Lab and Oklab\nbefore and after a simple gamut-compression transform. Rank stability and relation to\nluminance difference were recorded.</p>\n<h2 id=\"pilot-results\">Pilot results</h2>\n<p>Rank stability after the mild compression was <code>.9990</code> for Lab and <code>.9987</code> for Oklab.\nCross-metric rank correlation was only <code>.7824</code>. Correlation with luminance difference\nwas <code>.3675</code> for Lab and <code>.7417</code> for Oklab in this generated corpus.</p>\n<p>The stress transform was too mild to separate within-metric robustness, but the\ncross-metric disagreement justifies empirical comparison. There is no perceptual\nground truth here, and ΔE00, CAM16-UCS, Jzazbz, and HDR viewing conditions remain to be\nimplemented.</p>\n<h2 id=\"validation-experiment-ready-to-run\">Validation experiment ready to run</h2>\n<ul>\n<li>Build a stratified pair corpus spanning hue, lightness, chroma, near-threshold and\nsuprathreshold distances, gamut edges, skin/medical/status colors, and SDR/HDR.</li>\n<li>Measure actual display spectra and luminance; record adaptation and surround.</li>\n<li>Tasks: forced-choice discrimination, suprathreshold difference scaling, appearance\nmatching, and real interface state identification.</li>\n<li>Metrics: ΔE76 baseline, ΔE00, CAM16-UCS, Oklab, Jzazbz and current refinements,\ncone-contrast, and luminance contrast.</li>\n<li>Evaluate held-out predictive likelihood, calibration error, rank correlation, and\nworst-group error rather than selecting by pooled correlation alone.</li>\n<li>Publish raw trials, transformations, calibration files, exclusions, and code.</li>\n</ul>\n<h2 id=\"current-position--continuation\">Current position / continuation</h2>\n<p><strong>Stage:</strong> reproducible baseline stress test complete; metric validation not achieved.<br>\n<strong>Next action:</strong> add reference ΔE00/CAM16-UCS/Jzazbz implementations with unit tests,\nthen construct a physically measurable stimulus corpus and preregister validation.<br>\n<strong>Data:</strong> <code>../experiments/data/ex-itten-008.json</code>.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
       "id": "EX-WC-0001",
       "title": "Web Component Framework Architecture Probes",
       "slug": "ex-wc-0001-web-component-framework-architecture-probes",
@@ -8667,6 +9235,78 @@
       "contentHash": "8998655414955a46070bcc318b51ade5b0d63859d83f404acb2acb6b306e01d4",
       "html": "<h1 id=\"beautiful-digital-experiences-hypothesis-registry-v01\">Beautiful Digital Experiences Hypothesis Registry v0.1</h1>\n<h2 id=\"status-vocabulary\">Status vocabulary</h2>\n<ul>\n<li><strong>Initialized:</strong> claim is specified but not adequately tested.</li>\n<li><strong>Provisional support:</strong> evidence bears on the predicted mechanism, with important\ntransfer limits.</li>\n<li><strong>Mixed:</strong> supporting and contradicting evidence or boundary reversals are known.</li>\n<li><strong>Narrowed:</strong> the original form was too broad and a scoped revision is active.</li>\n<li><strong>Rejected:</strong> current claim form is contradicted; history is preserved.</li>\n</ul>\n<h2 id=\"required-hypotheses\">Required hypotheses</h2>\n<h3 id=\"hy-beauty-001\">HY-BEAUTY-001</h3>\n<ul>\n<li><strong>Claim:</strong> Aesthetic quality improves perceived usability more reliably than measured\ntask performance.</li>\n<li><strong>Mechanism:</strong> halo/affect-as-information changes expectations and post-use appraisal;\nit does not necessarily change interaction structure.</li>\n<li><strong>Prediction:</strong> appearance manipulation produces a larger and more consistent effect\non perceived-usability measures than on completion, error, or time.</li>\n<li><strong>Support:</strong> EV-BDE-001, EV-BDE-002, EV-BDE-003.</li>\n<li><strong>Contradiction:</strong> some task and goal conditions show performance effects, including\nslower completion, so “no performance effect” is not the claim.</li>\n<li><strong>Boundary conditions:</strong> task stakes, goal orientation, exposure, age, domain,\nusability severity, and brand/content cues.</li>\n<li><strong>Alternatives:</strong> experiment-demand effects; perceived craftsmanship signals actual\nengineering quality; positive emotion changes persistence.</li>\n<li><strong>Test status:</strong> provisional support; <strong>confidence: medium</strong>.</li>\n<li><strong>Falsifier:</strong> robust, larger objective-performance effects across preregistered,\nrepeated, multi-domain studies.</li>\n</ul>\n<h3 id=\"hy-beauty-002\">HY-BEAUTY-002</h3>\n<ul>\n<li><strong>Claim:</strong> People prefer category-recognizable designs containing limited controlled\nnovelty.</li>\n<li><strong>Mechanism:</strong> prototypicality supports prediction and fluency; novelty supports\ninterest, identity, and informational reward.</li>\n<li><strong>Prediction:</strong> category-fit and beauty form a conditional inverted-U across novelty,\nwith the optimum varying by audience and task.</li>\n<li><strong>Support:</strong> EV-BDE-005, EV-BDE-006, EV-BDE-007, EV-BDE-008, EV-BDE-009.</li>\n<li><strong>Contradiction:</strong> EV-BDE-008 favored high prototypicality and low complexity in rapid\nscreenshots; it did not demonstrate a novelty optimum.</li>\n<li><strong>Boundary conditions:</strong> expertise, epistemic motivation, repeated use, product risk,\ncategory maturity, and cultural model.</li>\n<li><strong>Alternatives:</strong> novelty is merely production-value or prestige signaling.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n<li><strong>Falsifier:</strong> monotonic preference for prototypicality or novelty after controlling\nexecution quality and familiarity.</li>\n</ul>\n<h3 id=\"hy-beauty-003\">HY-BEAUTY-003</h3>\n<ul>\n<li><strong>Claim:</strong> Beautiful interfaces use consistency of relationships rather than identical\nrepetition.</li>\n<li><strong>Mechanism:</strong> invariant spatial, typographic, and semantic relations support\nprediction while controlled surface variation preserves information and rhythm.</li>\n<li><strong>Prediction:</strong> relationally consistent variants outperform identical repetition on\ncoherence and interest without harming task performance.</li>\n<li><strong>Support:</strong> indirect only: EV-BDE-009, EV-BDE-010 and existing Composition Science\nrelational-legibility work.</li>\n<li><strong>Contradiction:</strong> none directly tested; component sameness may improve learning in\ndense applications.</li>\n<li><strong>Boundary conditions:</strong> frequency of use, system scale, safety, localization.</li>\n<li><strong>Alternatives:</strong> quality comes from simple component consistency, not relations.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-004\">HY-BEAUTY-004</h3>\n<ul>\n<li><strong>Claim:</strong> Art direction contributes more to perceived website quality than decorative\ninterface styling.</li>\n<li><strong>Mechanism:</strong> imagery supplies high-area, semantically rich signals of specificity,\nmaterial quality, atmosphere, and budget.</li>\n<li><strong>Prediction:</strong> changing imagery quality and coherence while holding layout constant\nproduces larger effects than changing ornamental UI styling while imagery is fixed.</li>\n<li><strong>Support:</strong> no direct causal evidence registered.</li>\n<li><strong>Contradiction:</strong> application-like products with little imagery can be highly admired.</li>\n<li><strong>Boundary conditions:</strong> image-led versus task-led category, viewport, content volume.</li>\n<li><strong>Alternatives:</strong> imagery operates as brand or production-budget signal.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: very low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-005\">HY-BEAUTY-005</h3>\n<ul>\n<li><strong>Claim:</strong> Perceived polish is cumulatively produced by many resolved details.</li>\n<li><strong>Mechanism:</strong> each mismatch is weak evidence of incomplete control; repeated matches\nincrease inferred craftsmanship and reduce prediction errors.</li>\n<li><strong>Prediction:</strong> incremental detail repair yields monotonic or thresholded gains in\ncraftsmanship ratings with macro-composition held constant.</li>\n<li><strong>Support:</strong> EV-BDE-010 identifies craftsmanship as a separable perceived facet.</li>\n<li><strong>Contradiction:</strong> a dominant art-directed feature may overwhelm small defects at first\nexposure.</li>\n<li><strong>Boundary conditions:</strong> exposure duration, defect salience, expertise, task pressure.</li>\n<li><strong>Alternatives:</strong> one global latent impression causes detail ratings.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-006\">HY-BEAUTY-006</h3>\n<ul>\n<li><strong>Claim:</strong> A design can violate surface conventions and remain usable when deeper\nperceptual and semantic structure is preserved.</li>\n<li><strong>Mechanism:</strong> grouping, hierarchy, labels, mappings, feedback, and state continuity\ncarry action meaning below conventional styling.</li>\n<li><strong>Prediction:</strong> convention-breaking variants with preserved deep structure retain\ncomprehension and recovery while increasing expressive-aesthetic ratings.</li>\n<li><strong>Support:</strong> EV-BDE-009 distinguishes expressive aesthetics; EV-BDE-007 makes fluency\nexpectation-dependent.</li>\n<li><strong>Contradiction:</strong> unfamiliar controls can impose learning and accessibility costs.</li>\n<li><strong>Boundary conditions:</strong> novice/expert status, risk, frequency, assistive technology.</li>\n<li><strong>Alternatives:</strong> users transfer conventions that experimenters failed to identify.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-007\">HY-BEAUTY-007</h3>\n<ul>\n<li><strong>Claim:</strong> Beauty judgments stabilize differently when based on complete experiences\nrather than static screenshots.</li>\n<li><strong>Mechanism:</strong> interaction reveals temporal coherence, content resilience, friction,\nstate completeness, and performance.</li>\n<li><strong>Prediction:</strong> screenshot–experience agreement falls as task/state diversity grows;\nrepeated-session ratings show lower halo and greater sensitivity to craft and friction.</li>\n<li><strong>Support:</strong> EV-BDE-004 and the scope boundary in EV-BDE-008.</li>\n<li><strong>Contradiction:</strong> rapid appeal ratings can be internally stable across short exposure\ndurations.</li>\n<li><strong>Boundary conditions:</strong> site type, interaction depth, media weight, exposure interval.</li>\n<li><strong>Alternatives:</strong> rating change is mere exposure rather than better evidence.</li>\n<li><strong>Test status:</strong> provisional support; <strong>confidence: low-to-medium</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-008\">HY-BEAUTY-008</h3>\n<ul>\n<li><strong>Claim:</strong> Designers and general users differ in admired features but overlap on\ncoherence, intentionality, legibility, and execution quality.</li>\n<li><strong>Mechanism:</strong> expertise changes learned categories, attention, and novelty reward;\ncommon perceptual constraints preserve partial agreement.</li>\n<li><strong>Prediction:</strong> experts weight originality and detail more; both groups penalize severe\nincoherence and illegibility.</li>\n<li><strong>Support:</strong> EV-BDE-009 and EV-BDE-010 provide candidate shared dimensions but do not\ntest audience groups.</li>\n<li><strong>Contradiction:</strong> no direct registered evidence.</li>\n<li><strong>Boundary conditions:</strong> design education, domain expertise, culture, status signaling.</li>\n<li><strong>Alternatives:</strong> apparent expertise effects are vocabulary or response-style effects.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: very low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-009\">HY-BEAUTY-009</h3>\n<ul>\n<li><strong>Claim:</strong> Visual trends succeed partly because they satisfy recurring psychological\nor cultural needs, not only imitation.</li>\n<li><strong>Mechanism:</strong> trends package needs for novelty, nostalgia, status, tactility, clarity,\noptimism, or technical demonstration into recognizable forms.</li>\n<li><strong>Prediction:</strong> adoption explanations and preference effects cluster by need, and useful\nmechanisms survive after surface motifs decline.</li>\n<li><strong>Support:</strong> EV-BDE-005, EV-BDE-006, EV-BDE-007 provide possible psychological routes.</li>\n<li><strong>Contradiction:</strong> diffusion can occur through platform defaults and mimetic pressure\nwithout preference.</li>\n<li><strong>Boundary conditions:</strong> professional networks, tooling, economic cycle, medium.</li>\n<li><strong>Alternatives:</strong> availability, vendor promotion, and portfolio incentives.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: very low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-010\">HY-BEAUTY-010</h3>\n<ul>\n<li><strong>Claim:</strong> Durable digital designs combine stable compositional principles with\nreplaceable stylistic layers.</li>\n<li><strong>Mechanism:</strong> perceptual and semantic relationships age more slowly than culturally\ncoded surface motifs.</li>\n<li><strong>Prediction:</strong> blinded historical evaluations retain coherence/craft ratings better\nthan trend-forwardness ratings; surface restyling can preserve task structure.</li>\n<li><strong>Support:</strong> indirect Composition Science evidence only.</li>\n<li><strong>Contradiction:</strong> interaction conventions and compositional norms also age.</li>\n<li><strong>Boundary conditions:</strong> platform change, content category, brand heritage.</li>\n<li><strong>Alternatives:</strong> durability is mainly repeated exposure or prestige.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-011\">HY-BEAUTY-011</h3>\n<ul>\n<li><strong>Claim:</strong> Minimalism succeeds aesthetically only when reduction increases emphasis,\ncoherence, or perceived material quality.</li>\n<li><strong>Mechanism:</strong> removal decreases competition and increases signal contrast, but beyond\na point it removes identity, cues, and informational reward.</li>\n<li><strong>Prediction:</strong> reduced variants improve ratings only while hierarchy and specificity\nremain; sterile and ambiguous variants lose warmth, interest, or usability.</li>\n<li><strong>Support:</strong> EV-BDE-006, EV-BDE-008, EV-BDE-010.</li>\n<li><strong>Contradiction:</strong> low-complexity screenshots were preferred in EV-BDE-008, but\nminimalism was not independently manipulated.</li>\n<li><strong>Boundary conditions:</strong> information density, art direction, brand familiarity, task.</li>\n<li><strong>Alternatives:</strong> “minimal” ratings proxy fashion or luxury.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-012\">HY-BEAUTY-012</h3>\n<ul>\n<li><strong>Claim:</strong> Accessibility constraints can increase beauty when they improve hierarchy,\nclarity, contrast, and feedback.</li>\n<li><strong>Mechanism:</strong> perceptual robustness and explicit state communication can also create\ncoherence and craft; constraint can focus expression.</li>\n<li><strong>Prediction:</strong> well-art-directed accessible revisions improve inclusive performance\nwithout reducing, and sometimes increasing, aesthetic profiles.</li>\n<li><strong>Support:</strong> EV-BDE-012 defines relevant constraints; no causal beauty evidence.</li>\n<li><strong>Contradiction:</strong> some remediations may reduce a specific mood or brand expression.</li>\n<li><strong>Boundary conditions:</strong> remediation quality, disability, display, context, original\ndesign.</li>\n<li><strong>Alternatives:</strong> gains come from general redesign effort, not accessibility.</li>\n<li><strong>Test status:</strong> initialized; <strong>confidence: very low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-013\">HY-BEAUTY-013</h3>\n<ul>\n<li><strong>Claim:</strong> Beauty depends partly on fulfillment or skillful revision of category\nexpectations.</li>\n<li><strong>Mechanism:</strong> internal category models establish priors for form, trust, information\ndensity, and interaction.</li>\n<li><strong>Prediction:</strong> identical visual languages receive different beauty, trust, and\nappropriateness ratings when transferred across categories.</li>\n<li><strong>Support:</strong> EV-BDE-005, EV-BDE-007, EV-BDE-008; EV-BDE-011 shows visual cues enter\ncredibility judgments.</li>\n<li><strong>Contradiction:</strong> strong brand or expressive authorship may establish a new category\nmodel.</li>\n<li><strong>Boundary conditions:</strong> category knowledge, risk, culture, brand, novelty tolerance.</li>\n<li><strong>Alternatives:</strong> ratings follow familiarity alone or inferred production budget.</li>\n<li><strong>Test status:</strong> provisional mechanism support; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-014\">HY-BEAUTY-014</h3>\n<ul>\n<li><strong>Claim:</strong> Repeated exposure can raise liking through familiarity but also reveal\nsuperficial novelty and unresolved details.</li>\n<li><strong>Mechanism:</strong> fluency increases with exposure while task evidence updates the initial\nhalo.</li>\n<li><strong>Prediction:</strong> simple unfamiliar variants may rise, novelty-led variants may fall, and\nwell-resolved variants remain stable; changes correlate differently with task evidence.</li>\n<li><strong>Support:</strong> EV-BDE-004, EV-BDE-005, EV-BDE-006.</li>\n<li><strong>Contradiction:</strong> registered longitudinal evidence mainly shows halo attenuation, not\nall proposed trajectories.</li>\n<li><strong>Boundary conditions:</strong> exposure spacing, task variation, initial usability, mastery.</li>\n<li><strong>Alternatives:</strong> regression to the mean and memory effects.</li>\n<li><strong>Test status:</strong> mixed/initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-015\">HY-BEAUTY-015</h3>\n<ul>\n<li><strong>Claim:</strong> Visual quality cannot be evaluated accurately without realistic content,\nresponsive and interaction states, and repeated-use scenarios.</li>\n<li><strong>Mechanism:</strong> ideal screenshots omit stressors that reveal compositional resilience,\nstate completeness, accessibility, and temporal craft.</li>\n<li><strong>Prediction:</strong> rankings based on ideal heroes diverge from rankings after long content,\nerrors, localization, mobile reflow, keyboard use, and repeated tasks.</li>\n<li><strong>Support:</strong> EV-BDE-004, EV-BDE-008 boundary, EV-BDE-012.</li>\n<li><strong>Contradiction:</strong> first-impression appeal is itself a valid, stable outcome for some\ncontexts.</li>\n<li><strong>Boundary conditions:</strong> claim type; static campaign pages may need less interaction\nevidence than tools.</li>\n<li><strong>Alternatives:</strong> divergence reflects content quality rather than visual-system\nresilience.</li>\n<li><strong>Test status:</strong> narrowed: accurate <strong>complete-experience</strong> quality requires these\nstates; first-impression beauty does not. <strong>Confidence: medium on construct logic,\nlow empirically</strong>.</li>\n</ul>\n<h2 id=\"additional-hypotheses-exposed-by-cycle-1\">Additional hypotheses exposed by Cycle 1</h2>\n<h3 id=\"hy-beauty-016\">HY-BEAUTY-016</h3>\n<ul>\n<li><strong>Claim:</strong> Appropriateness moderates the conversion of coherence and expression into\ntrust and desire.</li>\n<li><strong>Mechanism:</strong> the same aesthetic cue can signal competence in one genre and\nirresponsibility in another.</li>\n<li><strong>Prediction:</strong> category-transfer manipulations create beauty–trust dissociations.</li>\n<li><strong>Status:</strong> initialized; <strong>confidence: very low</strong>.</li>\n</ul>\n<h3 id=\"hy-beauty-017\">HY-BEAUTY-017</h3>\n<ul>\n<li><strong>Claim:</strong> First-impression beauty and durable beauty are related but distinct\nconstructs.</li>\n<li><strong>Mechanism:</strong> first impressions weight global visual statistics and priors; durable\njudgments incorporate temporal coherence, friction, content, and state completion.</li>\n<li><strong>Prediction:</strong> they load on correlated but separable factors across repeated sessions.</li>\n<li><strong>Status:</strong> initialized; <strong>confidence: low</strong>.</li>\n</ul>\n<h2 id=\"revision-history\">Revision history</h2>\n<table>\n<thead>\n<tr>\n<th>Version</th>\n<th>Date</th>\n<th>Change</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>0.1</td>\n<td>2026-07-26</td>\n<td>Initialized required hypotheses 001–015 and added 016–017 from Cycle 1 uncertainty.</td>\n</tr>\n</tbody>\n</table>",
       "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "IDX-VE-ITTEN-EX-001",
+      "title": "Itten Modern Color Theory Experiment Program",
+      "slug": "idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program",
+      "url": "/Visual-Engineering/research/idx-ve-itten-ex-001-itten-modern-color-theory-experiment-program/",
+      "artifactType": "research-document",
+      "project": "itten-color-contrasts",
+      "purposes": [
+        "orient",
+        "reproduce"
+      ],
+      "audiences": [
+        "researcher",
+        "contributor"
+      ],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "active",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Itten modern color theory experiment program"
+        },
+        {
+          "depth": 2,
+          "text": "Status at handoff"
+        },
+        {
+          "depth": 2,
+          "text": "Reproduction"
+        },
+        {
+          "depth": 2,
+          "text": "Continuation order"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/experiment-report/README.md",
+      "contentHash": "982b436f8c715efb7434ac6bf2412bdf6f5b47fd5a1b41f3a15a3ceb65ccd9aa",
+      "html": "<h1 id=\"itten-modern-color-theory-experiment-program\">Itten modern color theory experiment program</h1>\n<h2 id=\"status-at-handoff\">Status at handoff</h2>\n<p>All eight proposed experiments have a completed, reproducible computational or planning\npilot. No human participant data and no physical display measurements have been\ncollected. Consequently, no report uses <code>experiment-complete</code> status.</p>\n<table>\n<thead>\n<tr>\n<th>ID</th>\n<th>Short name</th>\n<th>Completed</th>\n<th>Still required</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a href=\"EX-ITTEN-001-extension-area-salience.md\">EX-ITTEN-001</a></td>\n<td>area/salience</td>\n<td>factorial pipeline</td>\n<td>calibrated human balance/gaze study</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-002-contextual-token-robustness.md\">EX-ITTEN-002</a></td>\n<td>token robustness</td>\n<td>72-pair metric baseline</td>\n<td>appearance/discrimination judgments</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-003-hdr-adaptation.md\">EX-ITTEN-003</a></td>\n<td>HDR adaptation</td>\n<td>48-condition simulation</td>\n<td>measured HDR exposure/recovery</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-004-cvd-aging-redundancy.md\">EX-ITTEN-004</a></td>\n<td>CVD + aging</td>\n<td>792-condition audit</td>\n<td>diagnosed/older participant study</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-005-warm-cool-cross-cultural.md\">EX-ITTEN-005</a></td>\n<td>warm/cool transfer</td>\n<td>power scaffold</td>\n<td>translated multi-site field study</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-006-oled-lcd-equivalence.md\">EX-ITTEN-006</a></td>\n<td>OLED/LCD</td>\n<td>24-condition sweep</td>\n<td>multi-device instrumented study</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-007-peripheral-chromatic-cues.md\">EX-ITTEN-007</a></td>\n<td>peripheral cues</td>\n<td>100-condition proxy</td>\n<td>gaze-contingent psychophysics</td>\n</tr>\n<tr>\n<td><a href=\"EX-ITTEN-008-color-metric-validation.md\">EX-ITTEN-008</a></td>\n<td>metric validation</td>\n<td>3,000-pair stress test</td>\n<td>perceptual ground truth and more metrics</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"reproduction\">Reproduction</h2>\n<p>From the repository root:</p>\n<pre><code class=\"language-sh\">node scripts/itten-color/run-computational-pilots.mjs\n</code></pre>\n<p>The script uses seed <code>20260728</code>, writes one JSON record per experiment plus a summary to\n<code>../experiments/data/</code>, and records its SHA-256 hash in every output. Generated values\nmust not be interpreted as observed human performance.</p>\n<h2 id=\"continuation-order\">Continuation order</h2>\n<ol>\n<li>Extend EX-ITTEN-008 with verified reference metric implementations because it is\nupstream of stimulus selection for EX-ITTEN-002.</li>\n<li>Run apparatus pilots for EX-ITTEN-003 and EX-ITTEN-006 after hardware inventory.</li>\n<li>Run small reliability pilots for EX-ITTEN-001 and EX-ITTEN-007.</li>\n<li>Establish recruitment partnerships before EX-ITTEN-004 and cultural/translation\npartnerships before EX-ITTEN-005.</li>\n<li>After every new data collection, append date, protocol version, deviations,\nexclusions, raw-data checksum, analysis commit, results, inference limits, and next\naction to the relevant report and research journal.</li>\n</ol>",
+      "links": [
+        "EX-ITTEN-001-extension-area-salience.md",
+        "EX-ITTEN-002-contextual-token-robustness.md",
+        "EX-ITTEN-003-hdr-adaptation.md",
+        "EX-ITTEN-004-cvd-aging-redundancy.md",
+        "EX-ITTEN-005-warm-cool-cross-cultural.md",
+        "EX-ITTEN-006-oled-lcd-equivalence.md",
+        "EX-ITTEN-007-peripheral-chromatic-cues.md",
+        "EX-ITTEN-008-color-metric-validation.md"
+      ],
       "compatibilityMode": false
     },
     {
@@ -23050,7 +23690,7 @@
         },
         {
           "depth": 2,
-          "text": "Research gaps and proposed experiments"
+          "text": "Research gaps and experiment program"
         },
         {
           "depth": 2,
@@ -23061,10 +23701,12 @@
           "text": "Limitations"
         }
       ],
-      "sourcePath": "content/projects/itten-color-contrasts/research-execution-package/rep-ve-itten-001.md",
-      "contentHash": "8f88dfd0bf4f15fc84090bbe43dfad4b77e4a036f211d387ff3b753d5c5be2a3",
-      "html": "<h1 id=\"johannes-itten-revisited\">Johannes Itten Revisited</h1>\n<h2 id=\"executive-summary\">Executive summary</h2>\n<p>Itten’s seven contrasts survive best as <strong>phenomenological prompts</strong>, not as seven\nscientifically distinct laws. Modern evidence supports the existence of the perceptual\neffects behind hue separation, light–dark organization, complementary adaptation,\nsimultaneous induction, and chroma differences. It does not support Itten’s implied\nmechanistic independence, universal prescriptions, or fixed proportional harmonies.</p>\n<p>The decisive revisions are:</p>\n<ol>\n<li><strong>Light–dark is primary for legibility and structure.</strong> It is largely luminance and\nspatial processing, not “color contrast” in the narrow chromatic sense.</li>\n<li><strong>Hue and saturation are conditional signals.</strong> Their discriminability depends on\nlightness, chroma, adaptation, field size, eccentricity, duration, display, observer,\nand surround. Equal numeric steps in RGB, HSL, or even CIELAB do not guarantee equal\nperceptual steps.</li>\n<li><strong>Complementarity is not one relation.</strong> Cone-opponent axes, perceptual\ncomplementarity, additive cancellation, afterimage complements, and an artist’s\nsubtractive complements can disagree.</li>\n<li><strong>Simultaneous contrast is real but not a single lateral-inhibition reflex.</strong> Retinal,\ncortical, multiscale, grouping, illumination-inference, and learned-statistical\naccounts explain different portions. Induction can weaken, disappear, or reverse\ninto assimilation.</li>\n<li><strong>Warm–cool is demoted.</strong> People make measurable hue–temperature associations, but\nthis is a crossmodal, semantic, ecological, and culturally moderated mapping—not a\nphysical temperature sensed in the color.</li>\n<li><strong>Extension/proportion is retired as a color law.</strong> Area affects salience and\nbalance, but so do luminance, chromatic contrast, position, size, edges, motion,\nsemantics, task, and learned priority. No universal “yellow area balances violet\narea” ratio is defensible.</li>\n<li><strong>Accessibility requires redundancy.</strong> No palette metric replaces testing with\nrepresentative users. Meaning must not depend on color alone.</li>\n</ol>\n<p>The replacement, <strong>Visual Engineering Color Principles v1</strong>, uses eight testable\nprinciples: separate luminance from chromatic function; compute appearance in context;\ndesign for spatial scale; manage adaptation and illumination; use redundant encoding;\nmodel salience as competition; treat display output as measured behavior; and validate\ntasks across observers and environments.</p>\n<h3 id=\"decision-on-the-seven-contrasts\">Decision on the seven contrasts</h3>\n<table>\n<thead>\n<tr>\n<th>Itten contrast</th>\n<th>Scientific disposition</th>\n<th align=\"right\">Evidence</th>\n<th align=\"right\">Practical value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Hue</td>\n<td>Keep, revise</td>\n<td align=\"right\">strong for discrimination/opponency; mixed for categories</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Light–dark</td>\n<td>Keep, elevate and rename luminance/lightness</td>\n<td align=\"right\">very strong</td>\n<td align=\"right\">very high</td>\n</tr>\n<tr>\n<td>Cold–warm</td>\n<td>Demote to learned crossmodal association</td>\n<td align=\"right\">moderate, universality weak</td>\n<td align=\"right\">low–medium</td>\n</tr>\n<tr>\n<td>Complementary</td>\n<td>Split into explicit definitions</td>\n<td align=\"right\">strong for opponency/adaptation; weak for harmony</td>\n<td align=\"right\">medium</td>\n</tr>\n<tr>\n<td>Simultaneous</td>\n<td>Keep, broaden to contextual induction</td>\n<td align=\"right\">strong effect; mechanism plural</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Saturation</td>\n<td>Keep, rename chroma/colorfulness and contextualize</td>\n<td align=\"right\">strong</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Extension</td>\n<td>Retire as a color law; absorb into salience/composition</td>\n<td align=\"right\">weak for fixed ratios</td>\n<td align=\"right\">medium as heuristic</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"scope-and-method\">Scope and method</h2>\n<p>This review treats an “objective” principle as one that yields operationalized,\nrepeatable predictions under specified stimulus, observer, task, and viewing\nconditions. It does not require culture-free conscious descriptions; it does require\nmore than historical authority or preference.</p>\n<p>Cycle 1 searched primary psychophysics, vision-science, color-appearance, accessibility,\nand display standards sources, with priority given to reviews, cross-cultural tests,\nand sources exposing boundary conditions. Evidence was triangulated across mechanism,\nbehavior, and engineering standards. Claims are linked to evidence in the registry and\nmachine-readable index. This is a rigorous integrative review, not a registered\nsystematic review or meta-analysis; effect-size pooling was not attempted.</p>\n<h2 id=\"historical-review\">Historical review</h2>\n<p>Itten’s pedagogical system organizes color relations into contrast of hue, light–dark,\ncold–warm, complementary, simultaneous, saturation, and extension. Its enduring value\nis observational: it asks the maker to vary color identity, value, intensity, surround,\nand area. Its weakness is explanatory compression. The system mixes:</p>\n<ul>\n<li>stimulus dimensions (hue, lightness, saturation, area);</li>\n<li>perceptual results (simultaneous induction);</li>\n<li>special pair relations (complements);</li>\n<li>semantic associations (warm/cool);</li>\n<li>compositional judgments (balance).</li>\n</ul>\n<p>These are not comparable causal categories. Itten also worked with material color,\nwhere illuminant, pigment mixture, surface, and gloss jointly determine retinal input.\nSelf-luminous displays add transfer functions, tone mapping, local dimming, viewing\nangle, flare, gamut mapping, and potentially orders-of-magnitude more luminance.</p>\n<h2 id=\"scientific-evaluation\">Scientific evaluation</h2>\n<h3 id=\"1-contrast-of-hue--keep-but-define-the-task\">1. Contrast of hue — keep, but define the task</h3>\n<p><strong>Verdict.</strong> Hue differences are perceptually real and quantifiable, but “contrast of\nhue” is not a scalar law. Early cone signals are recombined into post-receptoral\nopponent channels; cortical population codes, adaptation, language, and categorization\nshape judgments. Categorical boundaries can affect naming and some discrimination\ntasks, but linguistic categories are neither the origin nor a complete geometry of\ncolor appearance.</p>\n<p><strong>Mechanism.</strong> L-, M-, and S-cone excitations are encoded through luminance-like and\nchromatic opponent pathways, then transformed across retinal, thalamic, and cortical\nstages. Perceptual hue is a viewing-condition-dependent attribute, not wavelength\nitself. Similar opponent organization across populations can coexist with language-\ndependent decompositions and naming.</p>\n<p><strong>Prediction.</strong> Use calibrated colorimetry and a model appropriate to the regime:\nCIELAB/ΔE00 for many reflective, reference-condition tasks; CAM16/CAM16-UCS when\nadaptation and appearance attributes matter; and an explicitly validated HDR space\nsuch as Jzazbz for high-luminance work. Oklab is useful in software workflows for\nsmoother lightness/hue interpolation, but it is not a viewing-condition model and\nshould not be presented as a universal discrimination metric.</p>\n<p><strong>Failure conditions.</strong> Equal hue-angle steps can cease to look equal when lightness or\nchroma changes, at low saturation, near gamut boundaries, with small/thin marks, in the\nperiphery, after chromatic adaptation, under changed illumination, or along a viewer’s\nconfusion lines. Viewing distance changes retinal size and therefore whether chromatic\ndetail is resolved.</p>\n<p><strong>Population.</strong> Sensory constraints are widely shared; categorization and naming vary\nwith language and color use. Aging reduces chromatic sensitivity even while adaptation\nmaintains substantial appearance stability. Congenital color-vision deficiencies\nselectively compress or remove useful chromatic dimensions.</p>\n<p><strong>Engineering rule.</strong> Never specify “different hues” alone. Specify color space,\nwhite point, luminance, size, adjacency, expected adaptation, gamut, and observer/task\ntest. For meaning, add shape, text, pattern, position, or luminance redundancy.</p>\n<h3 id=\"2-lightdark--keep-and-elevate\">2. Light–dark — keep and elevate</h3>\n<p><strong>Verdict.</strong> This is Itten’s strongest operational contrast, but it is principally a\nluminance/lightness and spatial-vision phenomenon. It underlies edge visibility,\nreading, form segmentation, and much visual hierarchy.</p>\n<p><strong>Mechanism.</strong> Retinal and cortical systems encode local differences over multiple\nspatial scales rather than acting as absolute photometers. Weber behavior is a useful\nlocal approximation; Michelson contrast is appropriate for periodic patterns; contrast\nratio is useful for adjacent interface colors. None is a universal model of\nlegibility. Center-surround responses, multiscale filtering, grouping, perceived\nillumination, and adaptation all contribute. Mach bands and simultaneous brightness\ncontrast demonstrate that perceived lightness does not map one-to-one to pixel value.</p>\n<p><strong>Failure conditions.</strong> A numerical contrast ratio does not capture font weight,\nantialiasing, polarity, glare, retinal illuminance, spatial frequency, veiling\nreflection, disability, or temporal state. At HDR levels, large bright areas alter\nadaptation and discomfort; tiny highlights behave differently from large fields.\nAmbient light raises effective black through display reflection.</p>\n<p><strong>Engineering rule.</strong> Meet current WCAG requirements as a floor: 4.5:1 for ordinary\ntext, 3:1 for large text and meaningful non-text boundaries where applicable, and do\nnot use color alone. Then validate rendered contrast on target devices at target size,\nweight, distance, ambient light, and user population. For medical, automotive, and\nsafety-critical tasks, test error and response time rather than inferring performance\nfrom conformance.</p>\n<h3 id=\"3-coldwarm--demote\">3. Cold–warm — demote</h3>\n<p><strong>Verdict.</strong> Warm/cool judgments are measurable and often systematic, but a displayed\nred patch is not sensed as physically warmer by a dedicated visual temperature\nchannel. The effect is best modeled as a learned crossmodal/semantic association with\npossible ecological regularities and embodied contributions.</p>\n<p><strong>Evidence.</strong> Controlled work finds blue and green rated cooler and red/yellow warmer,\nand perceived warmth can rise with intensity. This establishes a replicable judgment,\nnot universality or direct heat perception. Cross-cultural work on color naming and\nother temperature correspondences shows both shared structure and substantial\nexperience-, language-, and belief-dependent variation.</p>\n<p><strong>Failure conditions.</strong> Lightness, intensity, material, illumination, adjacent colors,\ncontent, climate, language, and task can moderate or override the mapping. “Warm” may\nmean inviting, energetic, near, dangerous, or literally hot; these outcomes must be\nmeasured separately.</p>\n<p><strong>Engineering rule.</strong> Use warm/cool as a hypothesis about audience association. Never\nuse it as the sole code for actual temperature, urgency, affect, or spatial depth.\nLocalize and test semantics.</p>\n<h3 id=\"4-complementary-contrast--split-the-construct\">4. Complementary contrast — split the construct</h3>\n<p><strong>Verdict.</strong> Opponency and adaptation are strongly supported. Itten’s broad\n“complementary” category is underspecified.</p>\n<p>At least four complements must be separated:</p>\n<ol>\n<li><strong>additive/colorimetric:</strong> two lights combine to an achromatic match under defined\nconditions;</li>\n<li><strong>opponent-process:</strong> directions on post-receptoral axes;</li>\n<li><strong>perceptual/afterimage:</strong> an adapted stimulus biases a subsequent appearance;</li>\n<li><strong>subtractive/pigment:</strong> mixtures determined by spectral absorption, not the same\ngeometry as additive display color.</li>\n</ol>\n<p><strong>Mechanism.</strong> Cone adaptation and opponent coding predict important portions of\nafterimages and contrast, but cortical context, normalization, and inferred scene\nstructure also matter. A color wheel’s diametric opposite is therefore not guaranteed\nto be the unique neutralizing pair, maximum-discrimination pair, or aesthetically\npreferred pair.</p>\n<p><strong>Engineering rule.</strong> Name the complement definition and color space. Do not infer\nharmony, readability, or accessibility from opposition. For small text, large chromatic\nopposition with weak luminance contrast can remain unreadable and can produce fringe or\nvibration artifacts.</p>\n<h3 id=\"5-simultaneous-contrast--keep-as-contextual-induction\">5. Simultaneous contrast — keep as contextual induction</h3>\n<p><strong>Verdict.</strong> The effect is robust: identical target coordinates can appear different\nunder different surrounds. The textbook claim that it is simply retinal lateral\ninhibition is incomplete.</p>\n<p><strong>Mechanism.</strong> Evidence supports early and rapid contributions, multiscale spatial\nfiltering, chromatic adaptation, normalization, cortical grouping, border ownership,\nillumination estimation, and statistical priors. These explanations operate at\ndifferent levels and need not be mutually exclusive.</p>\n<p><strong>Boundary and reversal.</strong> Induction generally shifts a target away from the surround,\nbut with thin elements, small fields, high spatial frequency, weak borders, or grouping,\ncolor can assimilate toward the surround. Temporal duration separates fast and slower\nprocesses. The effect depends on target/surround geometry, edge gradients, segmentation,\nadaptation, luminance, and viewing distance.</p>\n<p><strong>Modelability.</strong> Color-appearance models capture important adaptation and surround\neffects but not every spatial induction configuration. Spatial color-appearance and\nmultiscale image models are needed for pixel-level prediction. A single ΔE computed\nbetween isolated swatches is insufficient.</p>\n<p><strong>Engineering rule.</strong> Evaluate color tokens in their actual component states and\nsurrounds. Automated tests should render the full context, sample output color, and\ninclude human validation when a contextual shift can alter meaning.</p>\n<h3 id=\"6-saturation-contrast--keep-rename-and-constrain\">6. Saturation contrast — keep, rename, and constrain</h3>\n<p><strong>Verdict.</strong> Differences in chromatic strength are real. “Saturation” must not stand in\nfor purity, chroma, and colorfulness as though they were interchangeable.</p>\n<ul>\n<li><strong>Colorfulness:</strong> perceived chromatic intensity.</li>\n<li><strong>Chroma:</strong> colorfulness relative to a similarly illuminated white.</li>\n<li><strong>Saturation:</strong> colorfulness relative to perceived brightness.</li>\n</ul>\n<p><strong>Mechanism and conditions.</strong> Appearance changes with luminance, adaptation, surround,\nfield size, and display gamut. The Hunt effect describes increased colorfulness with\nluminance; related appearance effects make fixed channel values unreliable across\nconditions. OLED versus LCD is not a perceptual mechanism by itself: primaries, black\nlevel, peak luminance, spectral power distribution, automatic brightness limiting,\nviewing angle, tone mapping, and ambient reflection are the operative variables.</p>\n<p><strong>Failure conditions.</strong> Maximum encoded saturation may clip, fall outside gamut, shift\nhue during mapping, bloom, or fail for color-deficient observers. One small study found\nthat globally increasing display saturation did not significantly improve overall CVD\nvisual search, although some color pairs improved—direct evidence against “more\nsaturation fixes accessibility.”</p>\n<p><strong>Engineering rule.</strong> Use chroma as a limited emphasis budget, preserve luminance\nstructure, gamut-map perceptually, and test all interactive states. Do not encode status\nby chroma alone.</p>\n<h3 id=\"7-extensionproportion--retire-as-a-color-law\">7. Extension/proportion — retire as a color law</h3>\n<p><strong>Verdict.</strong> Area influences perceived prominence, but fixed complementary-area balance\nratios lack adequate psychophysical support and ignore stronger variables.</p>\n<p><strong>Replacement explanation.</strong> Visual priority emerges from local feature contrast across\nscale plus position, size/area, edges, orientation, motion, depth, faces/text, learned\nvalue, and the viewer’s task. Bottom-up saliency models combine competing feature maps;\ngaze in natural tasks is also strongly top-down. Fixation is not equivalent to aesthetic\nbalance, comprehension, or importance.</p>\n<p><strong>Modelability.</strong> Image saliency and task-specific priority models can estimate likely\nattention distributions, but no universal scalar “visual weight” is validated across\nlayouts and purposes. Center bias, reading direction, semantic objects, and display\ncrop confound simple area rules.</p>\n<p><strong>Engineering rule.</strong> Treat proportion as one input to a salience budget. Measure task\nsuccess and use eye tracking only as supporting process evidence. Do not convert\nItten’s historical ratios into design-system constants.</p>\n<h2 id=\"cross-model-synthesis\">Cross-model synthesis</h2>\n<table>\n<thead>\n<tr>\n<th>Model/family</th>\n<th>What it explains</th>\n<th>What it does not license</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Opponent processing</td>\n<td>post-cone chromatic coding, detection, adaptation relations</td>\n<td>a universal artist’s complement wheel or harmony</td>\n</tr>\n<tr>\n<td>Retinex / constancy accounts</td>\n<td>relational lightness/color under illumination</td>\n<td>exact appearance for every spatial display</td>\n</tr>\n<tr>\n<td>CIELAB + ΔE00</td>\n<td>standardized differences near reference conditions</td>\n<td>context-free equality or HDR validity</td>\n</tr>\n<tr>\n<td>CAM16 / CAM16-UCS</td>\n<td>viewing-condition-dependent appearance correlates</td>\n<td>complete spatial induction or semantics</td>\n</tr>\n<tr>\n<td>Oklab</td>\n<td>practical perceptual-ish interpolation for display workflows</td>\n<td>a complete appearance or accessibility model</td>\n</tr>\n<tr>\n<td>Jzazbz</td>\n<td>HDR-oriented uniform-space candidate</td>\n<td>universal thresholds without task validation</td>\n</tr>\n<tr>\n<td>Signal detection theory</td>\n<td>separates sensitivity from criterion</td>\n<td>a color appearance explanation by itself</td>\n</tr>\n<tr>\n<td>Bayesian/predictive accounts</td>\n<td>context, priors, illumination inference</td>\n<td>unconstrained post-hoc stories</td>\n</tr>\n<tr>\n<td>Gestalt/grouping</td>\n<td>segmentation, belongingness, assimilation/contrast</td>\n<td>fixed balance ratios</td>\n</tr>\n<tr>\n<td>Ecological/embodied accounts</td>\n<td>learned regularities and associations</td>\n<td>universal warm/cool meanings</td>\n</tr>\n<tr>\n<td>Saliency/active vision</td>\n<td>attentional competition and task guidance</td>\n<td>comprehension, preference, or balance from fixation alone</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"visual-engineering-color-principles-v1\">Visual Engineering Color Principles v1</h2>\n<h3 id=\"vecp-1--separate-luminance-structure-from-chromatic-coding\">VECP-1 — Separate luminance structure from chromatic coding</h3>\n<p>Compute relative luminance contrast for required boundaries and text, inspect a\ngrayscale-equivalent structure, and preserve a non-color cue for every consequential\nstate. Chromatic contrast may add information; it must not be the only carrier.</p>\n<h3 id=\"vecp-2--specify-appearance-in-context\">VECP-2 — Specify appearance in context</h3>\n<p>A color specification is a tuple:</p>\n<p><code>{source space, coordinates, white point, luminance, surround, adaptation, geometry, device/gamut, ambient, observer class, task}</code>.</p>\n<p>Store source color in a declared space; transform through a managed pipeline. Compare\nappearance with a validated model, not raw RGB/HSL distance.</p>\n<h3 id=\"vecp-3--design-at-retinal-scale\">VECP-3 — Design at retinal scale</h3>\n<p>Verify targets at actual angular size and eccentricity. Approximate visual angle as:</p>\n<p><code>θ ≈ 57.3 × size / distance</code> degrees for small angles with consistent units.</p>\n<p>Thin/high-frequency chromatic detail is especially fragile. If a cue must survive\ndistance, motion, peripheral vision, or low acuity, reinforce it with luminance, size,\nshape, and position.</p>\n<h3 id=\"vecp-4--treat-adaptation-and-illumination-as-state\">VECP-4 — Treat adaptation and illumination as state</h3>\n<p>Test light/dark themes, entry from bright/dark environments, local bright fields,\nambient reflection, and time after transitions. Do not assume a token retains its\nappearance when surround or adaptation changes.</p>\n<h3 id=\"vecp-5--encode-meaning-redundantly\">VECP-5 — Encode meaning redundantly</h3>\n<p>Consequential states require at least one independently perceivable non-color cue.\nExamples: icon plus text, line style plus hue, pattern plus fill, position plus label.\nValidate under protan, deutan, and tritan confusions, but treat simulation as an audit\naid—not evidence of lived performance.</p>\n<h3 id=\"vecp-6--allocate-salience-not-visual-weight\">VECP-6 — Allocate salience, not “visual weight”</h3>\n<p>Estimate salience using multi-scale luminance, chromatic, orientation, size, and motion\ncontrasts, then incorporate semantic/task priority. A component passes only when\nattention supports the intended task without obscuring higher-priority signals.</p>\n<h3 id=\"vecp-7--characterize-the-display-pipeline\">VECP-7 — Characterize the display pipeline</h3>\n<p>Declare target gamut, transfer function, reference white, peak and minimum luminance,\ntone/gamut mapping, and ambient assumptions. Test representative LCD/OLED devices by\nmeasured behavior. “HDR” and “OLED” are capability labels, not appearance guarantees.</p>\n<h3 id=\"vecp-8--validate-behavior-not-palettes\">VECP-8 — Validate behavior, not palettes</h3>\n<p>For high-consequence interfaces, preregister target tasks and measure accuracy, misses,\nfalse alarms, response time, and confidence across representative users and\nenvironments. Aesthetic preference and color naming are secondary outcomes unless they\nare the actual objective.</p>\n<h2 id=\"domain-guidance\">Domain guidance</h2>\n<table>\n<thead>\n<tr>\n<th>Domain</th>\n<th>Required emphasis</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>UI/mobile</td>\n<td>rendered text/non-text contrast, outdoor/low-brightness checks, redundant state cues</td>\n</tr>\n<tr>\n<td>Dashboards/data visualization</td>\n<td>direct labels, patterns/shapes, adjacent-boundary checks, palette tests at mark size</td>\n</tr>\n<tr>\n<td>Medical</td>\n<td>calibrated displays where required; no color-only alarm/diagnosis; observer/device QA; error-based validation</td>\n</tr>\n<tr>\n<td>Documentation</td>\n<td>accessible text contrast; avoid hue-only annotations; printable grayscale fallback</td>\n</tr>\n<tr>\n<td>Large displays</td>\n<td>distance/angle, off-axis behavior, ambient light, local dimming, shared viewing positions</td>\n</tr>\n<tr>\n<td>AR/VR</td>\n<td>variable real-world background, binocular/field effects, adaptation transitions, motion and peripheral cues</td>\n</tr>\n<tr>\n<td>Automotive</td>\n<td>daylight/night adaptation, glare, glance duration, peripheral detection, safety-standard testing</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"implementation-specification\">Implementation specification</h2>\n<p>Every design-system color token used for meaning SHALL include:</p>\n<ul>\n<li>role and permitted uses;</li>\n<li>source color space and coordinates;</li>\n<li>supported themes/surrounds;</li>\n<li>minimum text and non-text contrast requirements;</li>\n<li>redundant cue;</li>\n<li>target gamuts/devices;</li>\n<li>CVD audit result and human-test status;</li>\n<li>failure/rollback owner.</li>\n</ul>\n<p>Build checks SHALL:</p>\n<ol>\n<li>compute WCAG 2.2 contrast for expected adjacent pairs;</li>\n<li>reject meaning-bearing color-only states;</li>\n<li>flag out-of-gamut conversions and unintended clipping;</li>\n<li>capture actual rendered components in every state/theme;</li>\n<li>preserve results with device/browser/OS metadata.</li>\n</ol>\n<p>Build checks SHOULD compute perceptual differences in CAM16-UCS or another declared,\nvalidated space and test CVD confusion risk. Such values are diagnostics, not automatic\nproof of discriminability.</p>\n<p>For safety-critical adoption, a color distinction SHALL be validated with\nrepresentative participants using a task-level acceptance criterion defined before the\ntest. No universal ΔE threshold is specified here because threshold depends on model,\nstimulus, size, surround, duration, observer, and decision cost.</p>\n<h2 id=\"research-gaps-and-proposed-experiments\">Research gaps and proposed experiments</h2>\n<ol>\n<li><strong>Itten extension ratios.</strong> Preregister a factorial study varying area, luminance,\nchroma, position, and semantic content; measure balance ratings separately from gaze\nand task priority.</li>\n<li><strong>Contextual token robustness.</strong> Compare isolated-space distance, CAM16-UCS, spatial\nmodels, and human discrimination across real component surrounds.</li>\n<li><strong>HDR interface adaptation.</strong> Measure search, legibility, discomfort, and recovery\nafter transient highlights across field size and ambient levels.</li>\n<li><strong>CVD and aging intersection.</strong> Test redundant encodings with older protan/deutan\nobservers rather than extrapolating from young normal trichromats or simulations.</li>\n<li><strong>Warm/cool transfer.</strong> Run multilingual, climate-stratified experiments separating\nthermal prediction, affect, distance, urgency, and preference.</li>\n<li><strong>OLED/LCD equivalence.</strong> Match colorimetry while varying spectra, black level,\nviewing angle, local dimming, and temporal modulation to isolate causal variables.</li>\n<li><strong>Peripheral chromatic UI cues.</strong> Establish size/contrast thresholds for alerts\nunder divided attention and realistic motion.</li>\n<li><strong>Metric validation.</strong> Benchmark ΔE00, CAM16-UCS, Oklab, and HDR spaces against\ntask-specific discrimination over modern wide-gamut displays.</li>\n</ol>\n<h2 id=\"confidence-falsification-and-saturation\">Confidence, falsification, and saturation</h2>\n<p>High-confidence conclusions are the relational nature of appearance, the importance of\nluminance/spatial structure, sensory opponency, adaptation, contextual induction, and\nthe need for non-color redundancy. Medium-confidence conclusions concern the best\nengineering metric in particular regimes and the magnitude of warm/cool transfer.\nLow-confidence conclusions concern universal visual-balance ratios and reliable\nprediction of task attention from bottom-up image saliency.</p>\n<p>Cycle 1 challenged each major claim with known reversals: contrast versus assimilation,\nsensory organization versus linguistic re-dimensionalization, saturation enhancement\nversus CVD null results, and bottom-up salience versus task guidance. Additional broad\nsearch was producing boundary refinements rather than changing the disposition of any\nof the seven contrasts. Further value now depends more on the proposed experiments and\nformal systematic-review methods than on adding unsystematic citations.</p>\n<h2 id=\"limitations\">Limitations</h2>\n<p>This package does not reproduce Itten’s original plates or quantify his exact historical\narea ratios. It does not claim that one color space is uniformly best. It does not\nequate standards conformance with usability. Several mechanism literatures remain\ncontested, especially spatial induction and higher-level inference. Device classes are\nheterogeneous, and cultural evidence is uneven across populations. The bibliography\nis curated rather than exhaustive; persistent identifiers and source roles are recorded\nfor audit.</p>",
-      "links": [],
+      "sourcePath": "content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md",
+      "contentHash": "01bd04acb629da23acfa51086950048fe9b7bec6813bf5c17d128fd9871ae525",
+      "html": "<h1 id=\"johannes-itten-revisited\">Johannes Itten Revisited</h1>\n<h2 id=\"executive-summary\">Executive summary</h2>\n<p>Itten’s seven contrasts survive best as <strong>phenomenological prompts</strong>, not as seven\nscientifically distinct laws. Modern evidence supports the existence of the perceptual\neffects behind hue separation, light–dark organization, complementary adaptation,\nsimultaneous induction, and chroma differences. It does not support Itten’s implied\nmechanistic independence, universal prescriptions, or fixed proportional harmonies.</p>\n<p>The decisive revisions are:</p>\n<ol>\n<li><strong>Light–dark is primary for legibility and structure.</strong> It is largely luminance and\nspatial processing, not “color contrast” in the narrow chromatic sense.</li>\n<li><strong>Hue and saturation are conditional signals.</strong> Their discriminability depends on\nlightness, chroma, adaptation, field size, eccentricity, duration, display, observer,\nand surround. Equal numeric steps in RGB, HSL, or even CIELAB do not guarantee equal\nperceptual steps.</li>\n<li><strong>Complementarity is not one relation.</strong> Cone-opponent axes, perceptual\ncomplementarity, additive cancellation, afterimage complements, and an artist’s\nsubtractive complements can disagree.</li>\n<li><strong>Simultaneous contrast is real but not a single lateral-inhibition reflex.</strong> Retinal,\ncortical, multiscale, grouping, illumination-inference, and learned-statistical\naccounts explain different portions. Induction can weaken, disappear, or reverse\ninto assimilation.</li>\n<li><strong>Warm–cool is demoted.</strong> People make measurable hue–temperature associations, but\nthis is a crossmodal, semantic, ecological, and culturally moderated mapping—not a\nphysical temperature sensed in the color.</li>\n<li><strong>Extension/proportion is retired as a color law.</strong> Area affects salience and\nbalance, but so do luminance, chromatic contrast, position, size, edges, motion,\nsemantics, task, and learned priority. No universal “yellow area balances violet\narea” ratio is defensible.</li>\n<li><strong>Accessibility requires redundancy.</strong> No palette metric replaces testing with\nrepresentative users. Meaning must not depend on color alone.</li>\n</ol>\n<p>The replacement, <strong>Visual Engineering Color Principles v1</strong>, uses eight testable\nprinciples: separate luminance from chromatic function; compute appearance in context;\ndesign for spatial scale; manage adaptation and illumination; use redundant encoding;\nmodel salience as competition; treat display output as measured behavior; and validate\ntasks across observers and environments.</p>\n<h3 id=\"decision-on-the-seven-contrasts\">Decision on the seven contrasts</h3>\n<table>\n<thead>\n<tr>\n<th>Itten contrast</th>\n<th>Scientific disposition</th>\n<th align=\"right\">Evidence</th>\n<th align=\"right\">Practical value</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Hue</td>\n<td>Keep, revise</td>\n<td align=\"right\">strong for discrimination/opponency; mixed for categories</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Light–dark</td>\n<td>Keep, elevate and rename luminance/lightness</td>\n<td align=\"right\">very strong</td>\n<td align=\"right\">very high</td>\n</tr>\n<tr>\n<td>Cold–warm</td>\n<td>Demote to learned crossmodal association</td>\n<td align=\"right\">moderate, universality weak</td>\n<td align=\"right\">low–medium</td>\n</tr>\n<tr>\n<td>Complementary</td>\n<td>Split into explicit definitions</td>\n<td align=\"right\">strong for opponency/adaptation; weak for harmony</td>\n<td align=\"right\">medium</td>\n</tr>\n<tr>\n<td>Simultaneous</td>\n<td>Keep, broaden to contextual induction</td>\n<td align=\"right\">strong effect; mechanism plural</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Saturation</td>\n<td>Keep, rename chroma/colorfulness and contextualize</td>\n<td align=\"right\">strong</td>\n<td align=\"right\">high</td>\n</tr>\n<tr>\n<td>Extension</td>\n<td>Retire as a color law; absorb into salience/composition</td>\n<td align=\"right\">weak for fixed ratios</td>\n<td align=\"right\">medium as heuristic</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"scope-and-method\">Scope and method</h2>\n<p>This review treats an “objective” principle as one that yields operationalized,\nrepeatable predictions under specified stimulus, observer, task, and viewing\nconditions. It does not require culture-free conscious descriptions; it does require\nmore than historical authority or preference.</p>\n<p>Cycle 1 searched primary psychophysics, vision-science, color-appearance, accessibility,\nand display standards sources, with priority given to reviews, cross-cultural tests,\nand sources exposing boundary conditions. Evidence was triangulated across mechanism,\nbehavior, and engineering standards. Claims are linked to evidence in the registry and\nmachine-readable index. This is a rigorous integrative review, not a registered\nsystematic review or meta-analysis; effect-size pooling was not attempted.</p>\n<h2 id=\"historical-review\">Historical review</h2>\n<p>Itten’s pedagogical system organizes color relations into contrast of hue, light–dark,\ncold–warm, complementary, simultaneous, saturation, and extension. Its enduring value\nis observational: it asks the maker to vary color identity, value, intensity, surround,\nand area. Its weakness is explanatory compression. The system mixes:</p>\n<ul>\n<li>stimulus dimensions (hue, lightness, saturation, area);</li>\n<li>perceptual results (simultaneous induction);</li>\n<li>special pair relations (complements);</li>\n<li>semantic associations (warm/cool);</li>\n<li>compositional judgments (balance).</li>\n</ul>\n<p>These are not comparable causal categories. Itten also worked with material color,\nwhere illuminant, pigment mixture, surface, and gloss jointly determine retinal input.\nSelf-luminous displays add transfer functions, tone mapping, local dimming, viewing\nangle, flare, gamut mapping, and potentially orders-of-magnitude more luminance.</p>\n<h2 id=\"scientific-evaluation\">Scientific evaluation</h2>\n<h3 id=\"1-contrast-of-hue--keep-but-define-the-task\">1. Contrast of hue — keep, but define the task</h3>\n<p><strong>Verdict.</strong> Hue differences are perceptually real and quantifiable, but “contrast of\nhue” is not a scalar law. Early cone signals are recombined into post-receptoral\nopponent channels; cortical population codes, adaptation, language, and categorization\nshape judgments. Categorical boundaries can affect naming and some discrimination\ntasks, but linguistic categories are neither the origin nor a complete geometry of\ncolor appearance.</p>\n<p><strong>Mechanism.</strong> L-, M-, and S-cone excitations are encoded through luminance-like and\nchromatic opponent pathways, then transformed across retinal, thalamic, and cortical\nstages. Perceptual hue is a viewing-condition-dependent attribute, not wavelength\nitself. Similar opponent organization across populations can coexist with language-\ndependent decompositions and naming.</p>\n<p><strong>Prediction.</strong> Use calibrated colorimetry and a model appropriate to the regime:\nCIELAB/ΔE00 for many reflective, reference-condition tasks; CAM16/CAM16-UCS when\nadaptation and appearance attributes matter; and an explicitly validated HDR space\nsuch as Jzazbz for high-luminance work. Oklab is useful in software workflows for\nsmoother lightness/hue interpolation, but it is not a viewing-condition model and\nshould not be presented as a universal discrimination metric.</p>\n<p><strong>Failure conditions.</strong> Equal hue-angle steps can cease to look equal when lightness or\nchroma changes, at low saturation, near gamut boundaries, with small/thin marks, in the\nperiphery, after chromatic adaptation, under changed illumination, or along a viewer’s\nconfusion lines. Viewing distance changes retinal size and therefore whether chromatic\ndetail is resolved.</p>\n<p><strong>Population.</strong> Sensory constraints are widely shared; categorization and naming vary\nwith language and color use. Aging reduces chromatic sensitivity even while adaptation\nmaintains substantial appearance stability. Congenital color-vision deficiencies\nselectively compress or remove useful chromatic dimensions.</p>\n<p><strong>Engineering rule.</strong> Never specify “different hues” alone. Specify color space,\nwhite point, luminance, size, adjacency, expected adaptation, gamut, and observer/task\ntest. For meaning, add shape, text, pattern, position, or luminance redundancy.</p>\n<h3 id=\"2-lightdark--keep-and-elevate\">2. Light–dark — keep and elevate</h3>\n<p><strong>Verdict.</strong> This is Itten’s strongest operational contrast, but it is principally a\nluminance/lightness and spatial-vision phenomenon. It underlies edge visibility,\nreading, form segmentation, and much visual hierarchy.</p>\n<p><strong>Mechanism.</strong> Retinal and cortical systems encode local differences over multiple\nspatial scales rather than acting as absolute photometers. Weber behavior is a useful\nlocal approximation; Michelson contrast is appropriate for periodic patterns; contrast\nratio is useful for adjacent interface colors. None is a universal model of\nlegibility. Center-surround responses, multiscale filtering, grouping, perceived\nillumination, and adaptation all contribute. Mach bands and simultaneous brightness\ncontrast demonstrate that perceived lightness does not map one-to-one to pixel value.</p>\n<p><strong>Failure conditions.</strong> A numerical contrast ratio does not capture font weight,\nantialiasing, polarity, glare, retinal illuminance, spatial frequency, veiling\nreflection, disability, or temporal state. At HDR levels, large bright areas alter\nadaptation and discomfort; tiny highlights behave differently from large fields.\nAmbient light raises effective black through display reflection.</p>\n<p><strong>Engineering rule.</strong> Meet current WCAG requirements as a floor: 4.5:1 for ordinary\ntext, 3:1 for large text and meaningful non-text boundaries where applicable, and do\nnot use color alone. Then validate rendered contrast on target devices at target size,\nweight, distance, ambient light, and user population. For medical, automotive, and\nsafety-critical tasks, test error and response time rather than inferring performance\nfrom conformance.</p>\n<h3 id=\"3-coldwarm--demote\">3. Cold–warm — demote</h3>\n<p><strong>Verdict.</strong> Warm/cool judgments are measurable and often systematic, but a displayed\nred patch is not sensed as physically warmer by a dedicated visual temperature\nchannel. The effect is best modeled as a learned crossmodal/semantic association with\npossible ecological regularities and embodied contributions.</p>\n<p><strong>Evidence.</strong> Controlled work finds blue and green rated cooler and red/yellow warmer,\nand perceived warmth can rise with intensity. This establishes a replicable judgment,\nnot universality or direct heat perception. Cross-cultural work on color naming and\nother temperature correspondences shows both shared structure and substantial\nexperience-, language-, and belief-dependent variation.</p>\n<p><strong>Failure conditions.</strong> Lightness, intensity, material, illumination, adjacent colors,\ncontent, climate, language, and task can moderate or override the mapping. “Warm” may\nmean inviting, energetic, near, dangerous, or literally hot; these outcomes must be\nmeasured separately.</p>\n<p><strong>Engineering rule.</strong> Use warm/cool as a hypothesis about audience association. Never\nuse it as the sole code for actual temperature, urgency, affect, or spatial depth.\nLocalize and test semantics.</p>\n<h3 id=\"4-complementary-contrast--split-the-construct\">4. Complementary contrast — split the construct</h3>\n<p><strong>Verdict.</strong> Opponency and adaptation are strongly supported. Itten’s broad\n“complementary” category is underspecified.</p>\n<p>At least four complements must be separated:</p>\n<ol>\n<li><strong>additive/colorimetric:</strong> two lights combine to an achromatic match under defined\nconditions;</li>\n<li><strong>opponent-process:</strong> directions on post-receptoral axes;</li>\n<li><strong>perceptual/afterimage:</strong> an adapted stimulus biases a subsequent appearance;</li>\n<li><strong>subtractive/pigment:</strong> mixtures determined by spectral absorption, not the same\ngeometry as additive display color.</li>\n</ol>\n<p><strong>Mechanism.</strong> Cone adaptation and opponent coding predict important portions of\nafterimages and contrast, but cortical context, normalization, and inferred scene\nstructure also matter. A color wheel’s diametric opposite is therefore not guaranteed\nto be the unique neutralizing pair, maximum-discrimination pair, or aesthetically\npreferred pair.</p>\n<p><strong>Engineering rule.</strong> Name the complement definition and color space. Do not infer\nharmony, readability, or accessibility from opposition. For small text, large chromatic\nopposition with weak luminance contrast can remain unreadable and can produce fringe or\nvibration artifacts.</p>\n<h3 id=\"5-simultaneous-contrast--keep-as-contextual-induction\">5. Simultaneous contrast — keep as contextual induction</h3>\n<p><strong>Verdict.</strong> The effect is robust: identical target coordinates can appear different\nunder different surrounds. The textbook claim that it is simply retinal lateral\ninhibition is incomplete.</p>\n<p><strong>Mechanism.</strong> Evidence supports early and rapid contributions, multiscale spatial\nfiltering, chromatic adaptation, normalization, cortical grouping, border ownership,\nillumination estimation, and statistical priors. These explanations operate at\ndifferent levels and need not be mutually exclusive.</p>\n<p><strong>Boundary and reversal.</strong> Induction generally shifts a target away from the surround,\nbut with thin elements, small fields, high spatial frequency, weak borders, or grouping,\ncolor can assimilate toward the surround. Temporal duration separates fast and slower\nprocesses. The effect depends on target/surround geometry, edge gradients, segmentation,\nadaptation, luminance, and viewing distance.</p>\n<p><strong>Modelability.</strong> Color-appearance models capture important adaptation and surround\neffects but not every spatial induction configuration. Spatial color-appearance and\nmultiscale image models are needed for pixel-level prediction. A single ΔE computed\nbetween isolated swatches is insufficient.</p>\n<p><strong>Engineering rule.</strong> Evaluate color tokens in their actual component states and\nsurrounds. Automated tests should render the full context, sample output color, and\ninclude human validation when a contextual shift can alter meaning.</p>\n<h3 id=\"6-saturation-contrast--keep-rename-and-constrain\">6. Saturation contrast — keep, rename, and constrain</h3>\n<p><strong>Verdict.</strong> Differences in chromatic strength are real. “Saturation” must not stand in\nfor purity, chroma, and colorfulness as though they were interchangeable.</p>\n<ul>\n<li><strong>Colorfulness:</strong> perceived chromatic intensity.</li>\n<li><strong>Chroma:</strong> colorfulness relative to a similarly illuminated white.</li>\n<li><strong>Saturation:</strong> colorfulness relative to perceived brightness.</li>\n</ul>\n<p><strong>Mechanism and conditions.</strong> Appearance changes with luminance, adaptation, surround,\nfield size, and display gamut. The Hunt effect describes increased colorfulness with\nluminance; related appearance effects make fixed channel values unreliable across\nconditions. OLED versus LCD is not a perceptual mechanism by itself: primaries, black\nlevel, peak luminance, spectral power distribution, automatic brightness limiting,\nviewing angle, tone mapping, and ambient reflection are the operative variables.</p>\n<p><strong>Failure conditions.</strong> Maximum encoded saturation may clip, fall outside gamut, shift\nhue during mapping, bloom, or fail for color-deficient observers. One small study found\nthat globally increasing display saturation did not significantly improve overall CVD\nvisual search, although some color pairs improved—direct evidence against “more\nsaturation fixes accessibility.”</p>\n<p><strong>Engineering rule.</strong> Use chroma as a limited emphasis budget, preserve luminance\nstructure, gamut-map perceptually, and test all interactive states. Do not encode status\nby chroma alone.</p>\n<h3 id=\"7-extensionproportion--retire-as-a-color-law\">7. Extension/proportion — retire as a color law</h3>\n<p><strong>Verdict.</strong> Area influences perceived prominence, but fixed complementary-area balance\nratios lack adequate psychophysical support and ignore stronger variables.</p>\n<p><strong>Replacement explanation.</strong> Visual priority emerges from local feature contrast across\nscale plus position, size/area, edges, orientation, motion, depth, faces/text, learned\nvalue, and the viewer’s task. Bottom-up saliency models combine competing feature maps;\ngaze in natural tasks is also strongly top-down. Fixation is not equivalent to aesthetic\nbalance, comprehension, or importance.</p>\n<p><strong>Modelability.</strong> Image saliency and task-specific priority models can estimate likely\nattention distributions, but no universal scalar “visual weight” is validated across\nlayouts and purposes. Center bias, reading direction, semantic objects, and display\ncrop confound simple area rules.</p>\n<p><strong>Engineering rule.</strong> Treat proportion as one input to a salience budget. Measure task\nsuccess and use eye tracking only as supporting process evidence. Do not convert\nItten’s historical ratios into design-system constants.</p>\n<h2 id=\"cross-model-synthesis\">Cross-model synthesis</h2>\n<table>\n<thead>\n<tr>\n<th>Model/family</th>\n<th>What it explains</th>\n<th>What it does not license</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Opponent processing</td>\n<td>post-cone chromatic coding, detection, adaptation relations</td>\n<td>a universal artist’s complement wheel or harmony</td>\n</tr>\n<tr>\n<td>Retinex / constancy accounts</td>\n<td>relational lightness/color under illumination</td>\n<td>exact appearance for every spatial display</td>\n</tr>\n<tr>\n<td>CIELAB + ΔE00</td>\n<td>standardized differences near reference conditions</td>\n<td>context-free equality or HDR validity</td>\n</tr>\n<tr>\n<td>CAM16 / CAM16-UCS</td>\n<td>viewing-condition-dependent appearance correlates</td>\n<td>complete spatial induction or semantics</td>\n</tr>\n<tr>\n<td>Oklab</td>\n<td>practical perceptual-ish interpolation for display workflows</td>\n<td>a complete appearance or accessibility model</td>\n</tr>\n<tr>\n<td>Jzazbz</td>\n<td>HDR-oriented uniform-space candidate</td>\n<td>universal thresholds without task validation</td>\n</tr>\n<tr>\n<td>Signal detection theory</td>\n<td>separates sensitivity from criterion</td>\n<td>a color appearance explanation by itself</td>\n</tr>\n<tr>\n<td>Bayesian/predictive accounts</td>\n<td>context, priors, illumination inference</td>\n<td>unconstrained post-hoc stories</td>\n</tr>\n<tr>\n<td>Gestalt/grouping</td>\n<td>segmentation, belongingness, assimilation/contrast</td>\n<td>fixed balance ratios</td>\n</tr>\n<tr>\n<td>Ecological/embodied accounts</td>\n<td>learned regularities and associations</td>\n<td>universal warm/cool meanings</td>\n</tr>\n<tr>\n<td>Saliency/active vision</td>\n<td>attentional competition and task guidance</td>\n<td>comprehension, preference, or balance from fixation alone</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"visual-engineering-color-principles-v1\">Visual Engineering Color Principles v1</h2>\n<h3 id=\"vecp-1--separate-luminance-structure-from-chromatic-coding\">VECP-1 — Separate luminance structure from chromatic coding</h3>\n<p>Compute relative luminance contrast for required boundaries and text, inspect a\ngrayscale-equivalent structure, and preserve a non-color cue for every consequential\nstate. Chromatic contrast may add information; it must not be the only carrier.</p>\n<h3 id=\"vecp-2--specify-appearance-in-context\">VECP-2 — Specify appearance in context</h3>\n<p>A color specification is a tuple:</p>\n<p><code>{source space, coordinates, white point, luminance, surround, adaptation, geometry, device/gamut, ambient, observer class, task}</code>.</p>\n<p>Store source color in a declared space; transform through a managed pipeline. Compare\nappearance with a validated model, not raw RGB/HSL distance.</p>\n<h3 id=\"vecp-3--design-at-retinal-scale\">VECP-3 — Design at retinal scale</h3>\n<p>Verify targets at actual angular size and eccentricity. Approximate visual angle as:</p>\n<p><code>θ ≈ 57.3 × size / distance</code> degrees for small angles with consistent units.</p>\n<p>Thin/high-frequency chromatic detail is especially fragile. If a cue must survive\ndistance, motion, peripheral vision, or low acuity, reinforce it with luminance, size,\nshape, and position.</p>\n<h3 id=\"vecp-4--treat-adaptation-and-illumination-as-state\">VECP-4 — Treat adaptation and illumination as state</h3>\n<p>Test light/dark themes, entry from bright/dark environments, local bright fields,\nambient reflection, and time after transitions. Do not assume a token retains its\nappearance when surround or adaptation changes.</p>\n<h3 id=\"vecp-5--encode-meaning-redundantly\">VECP-5 — Encode meaning redundantly</h3>\n<p>Consequential states require at least one independently perceivable non-color cue.\nExamples: icon plus text, line style plus hue, pattern plus fill, position plus label.\nValidate under protan, deutan, and tritan confusions, but treat simulation as an audit\naid—not evidence of lived performance.</p>\n<h3 id=\"vecp-6--allocate-salience-not-visual-weight\">VECP-6 — Allocate salience, not “visual weight”</h3>\n<p>Estimate salience using multi-scale luminance, chromatic, orientation, size, and motion\ncontrasts, then incorporate semantic/task priority. A component passes only when\nattention supports the intended task without obscuring higher-priority signals.</p>\n<h3 id=\"vecp-7--characterize-the-display-pipeline\">VECP-7 — Characterize the display pipeline</h3>\n<p>Declare target gamut, transfer function, reference white, peak and minimum luminance,\ntone/gamut mapping, and ambient assumptions. Test representative LCD/OLED devices by\nmeasured behavior. “HDR” and “OLED” are capability labels, not appearance guarantees.</p>\n<h3 id=\"vecp-8--validate-behavior-not-palettes\">VECP-8 — Validate behavior, not palettes</h3>\n<p>For high-consequence interfaces, preregister target tasks and measure accuracy, misses,\nfalse alarms, response time, and confidence across representative users and\nenvironments. Aesthetic preference and color naming are secondary outcomes unless they\nare the actual objective.</p>\n<h2 id=\"domain-guidance\">Domain guidance</h2>\n<table>\n<thead>\n<tr>\n<th>Domain</th>\n<th>Required emphasis</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>UI/mobile</td>\n<td>rendered text/non-text contrast, outdoor/low-brightness checks, redundant state cues</td>\n</tr>\n<tr>\n<td>Dashboards/data visualization</td>\n<td>direct labels, patterns/shapes, adjacent-boundary checks, palette tests at mark size</td>\n</tr>\n<tr>\n<td>Medical</td>\n<td>calibrated displays where required; no color-only alarm/diagnosis; observer/device QA; error-based validation</td>\n</tr>\n<tr>\n<td>Documentation</td>\n<td>accessible text contrast; avoid hue-only annotations; printable grayscale fallback</td>\n</tr>\n<tr>\n<td>Large displays</td>\n<td>distance/angle, off-axis behavior, ambient light, local dimming, shared viewing positions</td>\n</tr>\n<tr>\n<td>AR/VR</td>\n<td>variable real-world background, binocular/field effects, adaptation transitions, motion and peripheral cues</td>\n</tr>\n<tr>\n<td>Automotive</td>\n<td>daylight/night adaptation, glare, glance duration, peripheral detection, safety-standard testing</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"implementation-specification\">Implementation specification</h2>\n<p>Every design-system color token used for meaning SHALL include:</p>\n<ul>\n<li>role and permitted uses;</li>\n<li>source color space and coordinates;</li>\n<li>supported themes/surrounds;</li>\n<li>minimum text and non-text contrast requirements;</li>\n<li>redundant cue;</li>\n<li>target gamuts/devices;</li>\n<li>CVD audit result and human-test status;</li>\n<li>failure/rollback owner.</li>\n</ul>\n<p>Build checks SHALL:</p>\n<ol>\n<li>compute WCAG 2.2 contrast for expected adjacent pairs;</li>\n<li>reject meaning-bearing color-only states;</li>\n<li>flag out-of-gamut conversions and unintended clipping;</li>\n<li>capture actual rendered components in every state/theme;</li>\n<li>preserve results with device/browser/OS metadata.</li>\n</ol>\n<p>Build checks SHOULD compute perceptual differences in CAM16-UCS or another declared,\nvalidated space and test CVD confusion risk. Such values are diagnostics, not automatic\nproof of discriminability.</p>\n<p>For safety-critical adoption, a color distinction SHALL be validated with\nrepresentative participants using a task-level acceptance criterion defined before the\ntest. No universal ΔE threshold is specified here because threshold depends on model,\nstimulus, size, surround, duration, observer, and decision cost.</p>\n<h2 id=\"research-gaps-and-experiment-program\">Research gaps and experiment program</h2>\n<p>All eight experiments below now have reproducible computational/planning pilots,\nindividual result reports, continuation state, and executable protocols. This does not\nmean the empirical experiments are complete: no human participants or physical devices\nhave been measured. See the <a href=\"../experiment-report/README.md\">experiment program</a>.</p>\n<ol>\n<li><strong>Itten extension ratios — computational pilot complete, human study pending.</strong>\nPreregister a factorial study varying area, luminance,\nchroma, position, and semantic content; measure balance ratings separately from gaze\nand task priority.</li>\n<li><strong>Contextual token robustness — metric baseline complete, human study pending.</strong>\nCompare isolated-space distance, CAM16-UCS, spatial\nmodels, and human discrimination across real component surrounds.</li>\n<li><strong>HDR interface adaptation — recovery simulation complete, apparatus study pending.</strong>\nMeasure search, legibility, discomfort, and recovery\nafter transient highlights across field size and ambient levels.</li>\n<li><strong>CVD and aging intersection — simulation audit complete, representative study pending.</strong>\nTest redundant encodings with older protan/deutan\nobservers rather than extrapolating from young normal trichromats or simulations.</li>\n<li><strong>Warm/cool transfer — power scaffold complete, multi-site study pending.</strong>\nRun multilingual, climate-stratified experiments separating\nthermal prediction, affect, distance, urgency, and preference.</li>\n<li><strong>OLED/LCD equivalence — parameter sweep complete, device study pending.</strong>\nMatch colorimetry while varying spectra, black level,\nviewing angle, local dimming, and temporal modulation to isolate causal variables.</li>\n<li><strong>Peripheral chromatic UI cues — sensitivity proxy complete, gaze study pending.</strong>\nEstablish size/contrast thresholds for alerts\nunder divided attention and realistic motion.</li>\n<li><strong>Metric validation — baseline stress test complete, ground truth pending.</strong>\nBenchmark ΔE00, CAM16-UCS, Oklab, and HDR spaces against\ntask-specific discrimination over modern wide-gamut displays.</li>\n</ol>\n<h2 id=\"confidence-falsification-and-saturation\">Confidence, falsification, and saturation</h2>\n<p>High-confidence conclusions are the relational nature of appearance, the importance of\nluminance/spatial structure, sensory opponency, adaptation, contextual induction, and\nthe need for non-color redundancy. Medium-confidence conclusions concern the best\nengineering metric in particular regimes and the magnitude of warm/cool transfer.\nLow-confidence conclusions concern universal visual-balance ratios and reliable\nprediction of task attention from bottom-up image saliency.</p>\n<p>Cycle 1 challenged each major claim with known reversals: contrast versus assimilation,\nsensory organization versus linguistic re-dimensionalization, saturation enhancement\nversus CVD null results, and bottom-up salience versus task guidance. Additional broad\nsearch was producing boundary refinements rather than changing the disposition of any\nof the seven contrasts. Further value now depends more on the proposed experiments and\nformal systematic-review methods than on adding unsystematic citations.</p>\n<h2 id=\"limitations\">Limitations</h2>\n<p>This package does not reproduce Itten’s original plates or quantify his exact historical\narea ratios. It does not claim that one color space is uniformly best. It does not\nequate standards conformance with usability. Several mechanism literatures remain\ncontested, especially spatial induction and higher-level inference. Device classes are\nheterogeneous, and cultural evidence is uneven across populations. The bibliography\nis curated rather than exhaustive; persistent identifiers and source roles are recorded\nfor audit.</p>",
+      "links": [
+        "../experiment-report/README.md"
+      ],
       "compatibilityMode": false
     },
     {
@@ -23437,6 +24079,67 @@
       "sourcePath": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md",
       "contentHash": "a4837d286b5210d20a36386f7a3805879db49dea51ed55fb5ed2224d415a896a",
       "html": "<h1 id=\"research-cycle-1\">Research cycle 1</h1>\n<h2 id=\"question\">Question</h2>\n<p>Which of Itten's seven contrasts remain scientifically defensible, what mechanisms and\nboundaries replace his explanations, and which claims should become engineering rules?</p>\n<h2 id=\"iterations\">Iterations</h2>\n<h3 id=\"pass-1--decomposition\">Pass 1 — decomposition</h3>\n<p>Separated Itten's taxonomy into stimulus dimensions, perceptual effects, semantic\nassociations, pair relations, and compositional judgments. This invalidated the hidden\nassumption that all seven contrasts are comparable mechanisms.</p>\n<h3 id=\"pass-2--mechanism-and-falsification\">Pass 2 — mechanism and falsification</h3>\n<p>Searched for opponent processing, appearance models, brightness/color induction,\ncategorization, aging, color-vision deficiency, HDR/ambient behavior, and saliency.\nExplicit counterevidence included induction-to-assimilation reversals, cross-language\ndepartures from Hering-style decompositions, and failure of increased saturation to\nimprove overall CVD search performance.</p>\n<h3 id=\"pass-3--engineering-translation\">Pass 3 — engineering translation</h3>\n<p>Rejected universal palette recipes. Replaced them with contextual specifications,\nrendered-state testing, retinal-scale constraints, redundant encodings, device\ncharacterization, and behavioral validation.</p>\n<h2 id=\"revisions\">Revisions</h2>\n<table>\n<thead>\n<tr>\n<th>Revision</th>\n<th>Supersedes</th>\n<th>Reason</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Warm/cool demoted to association</td>\n<td>sensory “temperature” axis</td>\n<td>measurable mappings do not establish direct thermal perception or universality</td>\n</tr>\n<tr>\n<td>Complement split four ways</td>\n<td>single complementary relation</td>\n<td>additive, opponent, afterimage, and subtractive complements can diverge</td>\n</tr>\n<tr>\n<td>Extension retired as color law</td>\n<td>fixed area harmony</td>\n<td>salience and balance depend on many interacting features and task</td>\n</tr>\n<tr>\n<td>Simultaneous broadened</td>\n<td>retinal lateral inhibition only</td>\n<td>early, cortical, grouping, multiscale, and inference evidence coexist</td>\n</tr>\n<tr>\n<td>Saturation renamed by attribute</td>\n<td>one intensity dimension</td>\n<td>colorfulness, chroma, and saturation have distinct definitions</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"saturation-decision\">Saturation decision</h2>\n<p>Further unsystematic source collection was no longer changing the seven dispositions.\nThe next meaningful gains require formal systematic searches, effect-size extraction,\nand new experiments, especially on area balance, spatial color models in UI, HDR\nadaptation, and underrepresented observer groups.</p>",
+      "links": [],
+      "compatibilityMode": false
+    },
+    {
+      "schemaVersion": "1.1",
+      "id": "RJ-VE-ITTEN-002",
+      "title": "Itten Color Contrasts — Experiment Pilot Cycle",
+      "slug": "rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle",
+      "url": "/Visual-Engineering/research/rj-ve-itten-002-itten-color-contrasts-experiment-pilot-cycle/",
+      "artifactType": "research-document",
+      "project": "itten-color-contrasts",
+      "purposes": [],
+      "audiences": [],
+      "entryPoint": false,
+      "entryPointOrder": null,
+      "entryPointLabel": null,
+      "researchArea": "General Research",
+      "discipline": [],
+      "summary": "",
+      "status": "computational-pilots-complete",
+      "version": "0.1",
+      "confidence": null,
+      "completion": null,
+      "priority": "medium",
+      "authorAgent": "unknown",
+      "created": "2026-07-28",
+      "updated": "2026-07-28",
+      "tags": [],
+      "keywords": [],
+      "relatedProjects": [],
+      "relatedDocuments": [],
+      "supersedes": [],
+      "supersededBy": [],
+      "evidenceIds": [],
+      "hypothesisIds": [],
+      "theoryIds": [],
+      "headings": [
+        {
+          "depth": 1,
+          "text": "Experiment pilot cycle"
+        },
+        {
+          "depth": 2,
+          "text": "Purpose"
+        },
+        {
+          "depth": 2,
+          "text": "Execution record"
+        },
+        {
+          "depth": 2,
+          "text": "Results checkpoint"
+        },
+        {
+          "depth": 2,
+          "text": "Where work should resume"
+        }
+      ],
+      "sourcePath": "content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-2-experiment-pilots.md",
+      "contentHash": "5cf9e54e2b2d6193638ded2ca5cfbd49cdce283cd28c164a0b025336a510edc6",
+      "html": "<h1 id=\"experiment-pilot-cycle\">Experiment pilot cycle</h1>\n<h2 id=\"purpose\">Purpose</h2>\n<p>Move every proposed experiment from an undeveloped research gap to a reproducible\npilot, an explicit result, a protocol, and a continuation state—without confusing\nmodel output with human or physical measurement.</p>\n<h2 id=\"execution-record\">Execution record</h2>\n<ul>\n<li>Script: <code>scripts/itten-color/run-computational-pilots.mjs</code></li>\n<li>Seed: <code>20260728</code></li>\n<li>Experiments: 8</li>\n<li>Latest script SHA-256:\n<code>e6f6ebae61ef8a1ff13c657b11d16b11f3981bb85a2040861e0bdf4b16d69996</code></li>\n<li>Output directory: <code>../experiments/data/</code></li>\n<li>Participant count: 0</li>\n<li>Physical devices measured: 0</li>\n<li>Human-subject conclusions promoted: 0</li>\n</ul>\n<h2 id=\"results-checkpoint\">Results checkpoint</h2>\n<table>\n<thead>\n<tr>\n<th>Experiment</th>\n<th>Completed result</th>\n<th>Interpretation boundary</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>EX-ITTEN-001</td>\n<td>288-condition salience pipeline recovered generating sensitivities</td>\n<td>cannot validate area ratios</td>\n</tr>\n<tr>\n<td>EX-ITTEN-002</td>\n<td>72 pairs showed metric-ranking disagreement</td>\n<td>cannot select a perceptual winner</td>\n</tr>\n<tr>\n<td>EX-ITTEN-003</td>\n<td>48-condition adaptation proxy generated recovery predictions</td>\n<td>values are not HDR thresholds</td>\n</tr>\n<tr>\n<td>EX-ITTEN-004</td>\n<td>792-condition CVD/aging audit flagged degradation</td>\n<td>not clinical detection rates</td>\n</tr>\n<tr>\n<td>EX-ITTEN-005</td>\n<td>toy power reached .861 at n=240/stratum</td>\n<td>final power needs empirical variance</td>\n</tr>\n<tr>\n<td>EX-ITTEN-006</td>\n<td>ambient/reflection sweep reduced modeled effective contrast</td>\n<td>no named display measured</td>\n</tr>\n<tr>\n<td>EX-ITTEN-007</td>\n<td>100-condition proxy predicted eccentricity degradation</td>\n<td>not human peripheral thresholds</td>\n</tr>\n<tr>\n<td>EX-ITTEN-008</td>\n<td>3,000-pair stress test found cross-metric rho=.7824</td>\n<td>no perceptual ground truth</td>\n</tr>\n</tbody>\n</table>\n<h2 id=\"where-work-should-resume\">Where work should resume</h2>\n<p>The immediate software task is EX-ITTEN-008: implement and unit-test ΔE00, CAM16-UCS,\nand Jzazbz so EX-ITTEN-002 stimuli can be sampled without bias toward only Lab/Oklab.\nThe immediate physical task is hardware inventory for EX-ITTEN-003/006. The immediate\nhuman-research tasks are ethics/consent review, recruitment partnerships, and\ncalibrated stimulus reliability pilots.</p>\n<p>Each experiment report includes its next action, controls, measures, analysis, and\nexplicit missing evidence. No stage should be advanced from “pending” until the raw\nmeasurements and analysis provenance are attached.</p>",
       "links": [],
       "compatibilityMode": false
     },

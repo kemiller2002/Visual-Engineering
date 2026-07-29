@@ -2,7 +2,7 @@
 
 ## Summary
 
-- publishable source: 120
+- publishable source: 130
 - generated output: 6
 - archived: 2
 - intake/unprocessed: 1
@@ -92,8 +92,18 @@
 - publishable source: `content/projects/evaluation-measurement/research-execution-package/rep-ve-evl-001-foundation-and-falsification.md`
 - publishable source: `content/projects/evaluation-measurement/research-journal/2026-07-24-evaluation-measurement-cycle-1.md`
 - publishable source: `content/projects/itten-color-contrasts/evidence-registry/itten-color-evidence-registry-v1.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-001-extension-area-salience.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-002-contextual-token-robustness.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-003-hdr-adaptation.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-004-cvd-aging-redundancy.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-005-warm-cool-cross-cultural.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-006-oled-lcd-equivalence.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-007-peripheral-chromatic-cues.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-008-color-metric-validation.md`
+- publishable source: `content/projects/itten-color-contrasts/experiment-report/README.md`
 - publishable source: `content/projects/itten-color-contrasts/research-execution-package/REP_Visual_Engineering_Johannes_Itten_Modern_Color_Theory.md`
 - publishable source: `content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-1.md`
+- publishable source: `content/projects/itten-color-contrasts/research-journal/2026-07-28-cycle-2-experiment-pilots.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-project-atlas-v1.md`
 - publishable source: `content/projects/product-genome/canonical/product-genome-research-execution-package-run-02.md`
 - publishable source: `content/projects/product-genome/knowledge-model/product-genome-autonomous-research-run-01.md`

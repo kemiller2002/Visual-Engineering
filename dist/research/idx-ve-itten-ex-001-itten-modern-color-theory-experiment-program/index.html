@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Itten Modern Color Theory Experiment Program | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><link rel="stylesheet" href="/Visual-Engineering/_astro/_term_.BXadKaff.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div class="site-identity"> <span class="site-mark" aria-hidden="true">VE</span> <div> <a class="site-title" href="/Visual-Engineering/">Visual Engineering Research</a> <p class="site-description">An open index of evidence, theory, and practice</p> </div> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/Visual-Engineering/">Overview</a></li><li><a href="/Visual-Engineering/search/">Search</a></li><li><a href="/Visual-Engineering/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">research-document</span> <span data-pagefind-meta="stableId">IDX-VE-ITTEN-EX-001</span> </p> <h1 data-pagefind-meta="title">Itten Modern Color Theory Experiment Program</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>IDX-VE-ITTEN-EX-001</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div> <div><dt>Project</dt><dd data-pagefind-meta="project">itten-color-contrasts</dd></div> <div><dt>Useful for</dt><dd data-pagefind-meta="purposes">orient, reproduce</dd></div> <div><dt>Audience</dt><dd data-pagefind-meta="audiences">researcher, contributor</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">active</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-28</dd></div> <div><dt>Source</dt><dd>content/projects/itten-color-contrasts/experiment-report/README.md</dd></div> </dl> </header> <div class="document-reading-grid"> <aside class="toc-panel"> <h2>On this page</h2> <ol> <li><a href="#itten-modern-color-theory-experiment-program">Itten modern color theory experiment program</a></li><li><a href="#status-at-handoff">Status at handoff</a></li><li><a href="#reproduction">Reproduction</a></li><li><a href="#continuation-order">Continuation order</a></li> </ol> </aside> <section class="document-body"><h1 id="itten-modern-color-theory-experiment-program">Itten modern color theory experiment program</h1>
+<h2 id="status-at-handoff">Status at handoff</h2>
+<p>All eight proposed experiments have a completed, reproducible computational or planning
+pilot. No human participant data and no physical display measurements have been
+collected. Consequently, no report uses <code>experiment-complete</code> status.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Short name</th>
+<th>Completed</th>
+<th>Still required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="EX-ITTEN-001-extension-area-salience.md">EX-ITTEN-001</a></td>
+<td>area/salience</td>
+<td>factorial pipeline</td>
+<td>calibrated human balance/gaze study</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-002-contextual-token-robustness.md">EX-ITTEN-002</a></td>
+<td>token robustness</td>
+<td>72-pair metric baseline</td>
+<td>appearance/discrimination judgments</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-003-hdr-adaptation.md">EX-ITTEN-003</a></td>
+<td>HDR adaptation</td>
+<td>48-condition simulation</td>
+<td>measured HDR exposure/recovery</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-004-cvd-aging-redundancy.md">EX-ITTEN-004</a></td>
+<td>CVD + aging</td>
+<td>792-condition audit</td>
+<td>diagnosed/older participant study</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-005-warm-cool-cross-cultural.md">EX-ITTEN-005</a></td>
+<td>warm/cool transfer</td>
+<td>power scaffold</td>
+<td>translated multi-site field study</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-006-oled-lcd-equivalence.md">EX-ITTEN-006</a></td>
+<td>OLED/LCD</td>
+<td>24-condition sweep</td>
+<td>multi-device instrumented study</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-007-peripheral-chromatic-cues.md">EX-ITTEN-007</a></td>
+<td>peripheral cues</td>
+<td>100-condition proxy</td>
+<td>gaze-contingent psychophysics</td>
+</tr>
+<tr>
+<td><a href="EX-ITTEN-008-color-metric-validation.md">EX-ITTEN-008</a></td>
+<td>metric validation</td>
+<td>3,000-pair stress test</td>
+<td>perceptual ground truth and more metrics</td>
+</tr>
+</tbody>
+</table>
+<h2 id="reproduction">Reproduction</h2>
+<p>From the repository root:</p>
+<pre><code class="language-sh">node scripts/itten-color/run-computational-pilots.mjs
+</code></pre>
+<p>The script uses seed <code>20260728</code>, writes one JSON record per experiment plus a summary to
+<code>../experiments/data/</code>, and records its SHA-256 hash in every output. Generated values
+must not be interpreted as observed human performance.</p>
+<h2 id="continuation-order">Continuation order</h2>
+<ol>
+<li>Extend EX-ITTEN-008 with verified reference metric implementations because it is
+upstream of stimulus selection for EX-ITTEN-002.</li>
+<li>Run apparatus pilots for EX-ITTEN-003 and EX-ITTEN-006 after hardware inventory.</li>
+<li>Run small reliability pilots for EX-ITTEN-001 and EX-ITTEN-007.</li>
+<li>Establish recruitment partnerships before EX-ITTEN-004 and cultural/translation
+partnerships before EX-ITTEN-005.</li>
+<li>After every new data collection, append date, protocol version, deviations,
+exclusions, raw-data checksum, analysis commit, results, inference limits, and next
+action to the relevant report and research journal.</li>
+</ol></section> </div>  </article>  </main> <footer class="site-footer"> <p><strong>Visual Engineering Research</strong></p> <p>Research made navigable, verifiable, and reusable.</p> <p class="site-build-stamp">
+Build: <time datetime="2026-07-28T21:35:35.307Z">Jul 28, 2026, 9:35:35 PM UTC</time> </p> </footer> </body></html>

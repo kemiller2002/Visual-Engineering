@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contextual Color-Token Robustness | Visual Engineering Research</title><meta name="description" content="Searchable visual engineering research repository"><style></style><link rel="stylesheet" href="/Visual-Engineering/_astro/_term_.BXadKaff.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="site-header__inner"> <div class="site-identity"> <span class="site-mark" aria-hidden="true">VE</span> <div> <a class="site-title" href="/Visual-Engineering/">Visual Engineering Research</a> <p class="site-description">An open index of evidence, theory, and practice</p> </div> </div> <nav aria-label="Primary"> <ul class="site-nav"> <li><a href="/Visual-Engineering/">Overview</a></li><li><a href="/Visual-Engineering/search/">Search</a></li><li><a href="/Visual-Engineering/collections/artifact-type/">Collections</a></li> </ul> </nav> </div> </header> <main id="main">  <article class="document-shell" data-pagefind-body> <header class="document-header"> <p class="eyebrow"> <span data-pagefind-meta="artifactType">experiment</span> <span data-pagefind-meta="stableId">EX-ITTEN-002</span> </p> <h1 data-pagefind-meta="title">Contextual Color-Token Robustness</h1>  <dl class="metadata-panel"> <div><dt>Identifier</dt><dd>EX-ITTEN-002</dd></div> <div><dt>Research Area</dt><dd data-pagefind-meta="researchArea">General Research</dd></div> <div><dt>Project</dt><dd data-pagefind-meta="project">itten-color-contrasts</dd></div> <div><dt>Useful for</dt><dd data-pagefind-meta="purposes">verify, reproduce</dd></div> <div><dt>Audience</dt><dd data-pagefind-meta="audiences">researcher, contributor</dd></div>  <div><dt>Status</dt><dd data-pagefind-meta="status">computational-pilot-complete-human-study-pending</dd></div> <div><dt>Version</dt><dd>0.1</dd></div>   <div><dt>Priority</dt><dd>medium</dd></div>  <div><dt>Updated</dt><dd>2026-07-28</dd></div> <div><dt>Source</dt><dd>content/projects/itten-color-contrasts/experiment-report/EX-ITTEN-002-contextual-token-robustness.md</dd></div> </dl> </header> <div class="document-reading-grid"> <aside class="toc-panel"> <h2>On this page</h2> <ol> <li><a href="#ex-itten-002-contextual-color-token-robustness">EX-ITTEN-002 — Contextual color-token robustness</a></li><li><a href="#question-and-falsifier">Question and falsifier</a></li><li><a href="#work-completed">Work completed</a></li><li><a href="#pilot-results">Pilot results</a></li><li><a href="#human-experiment-ready-to-run">Human experiment ready to run</a></li><li><a href="#current-position-continuation">Current position / continuation</a></li> </ol> </aside> <section class="document-body"><h1 id="ex-itten-002--contextual-color-token-robustness">EX-ITTEN-002 — Contextual color-token robustness</h1>
+<h2 id="question-and-falsifier">Question and falsifier</h2>
+<p>Which metric best predicts color discrimination in real component surrounds? Any claim
+that one isolated metric is sufficient fails if a context-aware or spatial model
+materially improves held-out human judgments.</p>
+<h2 id="work-completed">Work completed</h2>
+<p>Twelve interface colors were crossed with six backgrounds (72 pairs). The pipeline
+computed WCAG luminance contrast, Euclidean CIELAB difference, Euclidean Oklab
+difference, and an explicitly labeled toy induction stress value (8% displacement away
+from the surround in Lab).</p>
+<h2 id="pilot-results">Pilot results</h2>
+<p>Rank correlation was <code>.6357</code> for WCAG versus Lab, <code>.9398</code> for WCAG versus Oklab, and
+<code>.6791</code> for Lab versus Oklab. Of 72 pairs, 31 passed 4.5:1 and 47 passed 3:1. The toy
+induction shift had median <code>6.1736</code> and maximum <code>9.2009</code> ΔE76.</p>
+<p>The result establishes metric disagreement in this sample, not perceptual superiority.
+WCAG contrast, Lab distance, and Oklab distance describe different constructs. The
+induction magnitude is generated, not observed.</p>
+<h2 id="human-experiment-ready-to-run">Human experiment ready to run</h2>
+<ul>
+<li>Render complete controls in six surrounds at fixed angular sizes, including thin
+strokes, text, fills, disabled states, and alerts.</li>
+<li>Use a calibrated wide-gamut monitor with recorded primaries, transfer function,
+white, black, and ambient illumination.</li>
+<li>Tasks: same/different discrimination, state identification, visual search, and
+appearance matching to an adjustable isolated patch.</li>
+<li>Compare ΔE00, CAM16-UCS, Oklab, WCAG contrast, and at least one spatial appearance
+model against held-out accuracy and matching error.</li>
+<li>Stratify by normal color vision, protan/deutan class, and older adults. Record visual
+acuity and display viewing angle.</li>
+<li>Primary analysis: cross-validated mixed-effects logistic model; report calibration,
+not only rank correlation.</li>
+</ul>
+<h2 id="current-position--continuation">Current position / continuation</h2>
+<p><strong>Stage:</strong> code and metric baseline complete; no appearance judgments collected.<br>
+<strong>Next action:</strong> add CAM16-UCS/ΔE00 reference implementations and generate calibrated
+rendered stimuli before preregistration.<br>
+<strong>Data:</strong> <code>../experiments/data/ex-itten-002.json</code>.</p></section> </div>  </article>  </main> <footer class="site-footer"> <p><strong>Visual Engineering Research</strong></p> <p>Research made navigable, verifiable, and reusable.</p> <p class="site-build-stamp">
+Build: <time datetime="2026-07-28T21:35:35.307Z">Jul 28, 2026, 9:35:35 PM UTC</time> </p> </footer> </body></html>
