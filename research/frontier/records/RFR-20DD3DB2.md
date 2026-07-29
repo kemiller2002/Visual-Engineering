@@ -5,7 +5,7 @@ document_type: research_frontier_record
 status: Open
 category: Validation
 frontier_score: 493
-generated: 2026-07-28
+generated: 2026-07-29
 immutable: true
 ---
 
