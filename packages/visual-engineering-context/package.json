@@ -8,7 +8,7 @@
     "type": "git",
     "url": "git+https://github.com/kemiller2002/Visual-Engineering.git"
   },
-  "homepage": "https://kemiller2002.github.io/Visual-Engineering/",
+  "homepage": "https://visual.echelonfoundry.com/",
   "files": [
     "bin/",
     "context/",

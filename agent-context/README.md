@@ -12,7 +12,59 @@ audiences:
 
 The files in this directory are the maintained operational synthesis. The package build combines them with a generated, source-linked index of current research.
 
-## Recommended consumer setup: GitHub Pages
+## Use Visual Engineering in another project
+
+Visual Engineering is distributed through the repository's GitHub Pages deployment at
+`visual.echelonfoundry.com` rather than installed directly as a Git dependency. From
+the root of the consuming project, run:
+
+```bash
+VE_CONTEXT_TMP="$(mktemp -d)"
+curl -fsSL \
+  https://visual.echelonfoundry.com/context/visual-engineering-context-latest.tar.gz \
+  -o "$VE_CONTEXT_TMP/visual-engineering-context-latest.tar.gz"
+curl -fsSL \
+  https://visual.echelonfoundry.com/context/SHA256SUMS \
+  -o "$VE_CONTEXT_TMP/SHA256SUMS"
+(cd "$VE_CONTEXT_TMP" && shasum -a 256 -c SHA256SUMS)
+mkdir -p .visual-engineering
+tar -xzf "$VE_CONTEXT_TMP/visual-engineering-context-latest.tar.gz" \
+  --strip-components=1 \
+  -C .visual-engineering
+```
+
+Add `.visual-engineering/` to the consuming project's `.gitignore`. Then have the
+implementation agent read, in order:
+
+1. `.visual-engineering/AGENT-INSTRUCTIONS.md`
+2. `.visual-engineering/UI-FOUNDATIONS.md`
+3. `.visual-engineering/UI-DECISION-CHECKLIST.md`
+4. `.visual-engineering/UI-ANTI-PATTERNS.md`
+5. `.visual-engineering/RESEARCH-INDEX.md`
+
+For a shorter Node-based setup, use the optional npm adapter:
+
+```bash
+npm exec --yes \
+  --package=@kemiller2002/visual-engineering-context@latest \
+  -- ve-context sync
+```
+
+Do not use `npm install github:kemiller2002/Visual-Engineering`. The repository root
+is the producer workspace, while the consumable npm package lives in a nested
+directory and is not the package installed by a normal Git dependency.
+
+For reproducible production work, download and verify an immutable version from
+[GitHub Releases](https://github.com/kemiller2002/Visual-Engineering/releases)
+instead of following `latest`. For example, version `0.1.1` can be downloaded directly
+from GitHub:
+
+```bash
+curl -fsSLO \
+  https://github.com/kemiller2002/Visual-Engineering/releases/download/ui-context-v0.1.1/visual-engineering-context-0.1.1.tar.gz
+```
+
+## Recommended agent setup
 
 Add this to the consumer repository's `AGENTS.md`:
 
@@ -31,25 +83,6 @@ Before designing, implementing, or reviewing UI:
 8. Report the context version, source commit, principles applied, verification performed, and justified deviations.
 
 Do not manually copy Visual Engineering research into this repository.
-```
-
-Add `.visual-engineering/` to the consumer's `.gitignore`.
-
-Retrieve and verify the current Pages bundle:
-
-```bash
-VE_CONTEXT_TMP="$(mktemp -d)"
-curl -fsSL \
-  https://kemiller2002.github.io/Visual-Engineering/context/visual-engineering-context-latest.tar.gz \
-  -o "$VE_CONTEXT_TMP/visual-engineering-context-latest.tar.gz"
-curl -fsSL \
-  https://kemiller2002.github.io/Visual-Engineering/context/SHA256SUMS \
-  -o "$VE_CONTEXT_TMP/SHA256SUMS"
-(cd "$VE_CONTEXT_TMP" && shasum -a 256 -c SHA256SUMS)
-mkdir -p .visual-engineering
-tar -xzf "$VE_CONTEXT_TMP/visual-engineering-context-latest.tar.gz" \
-  --strip-components=1 \
-  -C .visual-engineering
 ```
 
 Pages exposes:

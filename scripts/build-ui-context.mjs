@@ -16,7 +16,7 @@ const contextVersion = process.env.VE_CONTEXT_VERSION || packageJson.version;
 const sourceCommit = process.env.GITHUB_SHA || process.env.VE_SOURCE_COMMIT || currentCommit();
 const generatedAt = process.env.VE_GENERATED_AT || new Date().toISOString();
 const repositoryUrl = "https://github.com/kemiller2002/Visual-Engineering";
-const publishedResearchUrl = "https://kemiller2002.github.io/Visual-Engineering";
+const publishedResearchUrl = "https://visual.echelonfoundry.com";
 
 function currentCommit() {
   try {
